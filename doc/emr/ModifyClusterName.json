@@ -1,0 +1,44 @@
+{
+  "name": "ModifyClusterName",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 ModifyClusterName 接口修改集群名称。",
+  "abc_id": 28143,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "区域 ID"
+    },
+    "Id": {
+      "name": "Id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "C-D7958B72E59BAB88",
+      "description_cn": "集群 ID"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "bi_hadoop",
+      "description_cn": "集群新的名称，要求和创建集群时一致。长度限制为1-64个字符，只允许包含中文、字母、数字、-、_。"
+    }
+  },
+  "res": {
+    "RequestId": "588E7707-D8C8-4618-9B74-FE54B6903A9A"
+  }
+}

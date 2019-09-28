@@ -1,0 +1,195 @@
+{
+  "name": "DescribeSystemEventHistogram",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询系统事件的时段数量分布图（柱状图）。",
+  "abc_id": 114969,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Product": {
+      "name": "Product",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "oss",
+      "description_cn": "产品的名称缩写。"
+    },
+    "EventType": {
+      "name": "EventType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Exception",
+      "description_cn": "事件类型，不同的产品事件有不同的类型。"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "BucketIngressBandwidth",
+      "description_cn": "事件名称。"
+    },
+    "Level": {
+      "name": "Level",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "CRITICAL",
+      "description_cn": "事件级别， CRITICAL（严重), WARN(警告), INFO(信息)。"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "normal",
+      "description_cn": "状态，多个用逗号分隔。"
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "12345",
+      "description_cn": "组ID。"
+    },
+    "SearchKeywords": {
+      "name": "SearchKeywords",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cms",
+      "description_cn": "搜索事件内容包含的关键字，支持 and 或者 or。\n如果想要搜索事件内容中即包括a也包括b的结果，可以搜索 a and b；\n如果想要搜索事件内容中包括a或者b的结果，可以搜索 a or b。"
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1552209685596",
+      "description_cn": "开始时间。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1552220485596",
+      "description_cn": "结束时间。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页码。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "每页显示记录条数。"
+    }
+  },
+  "res": {
+    "SystemEventHistograms": {
+      "SystemEventHistogram": [
+        {
+          "Count": 0,
+          "EndTime": 1552226750000,
+          "StartTime": 1552226740000
+        },
+        {
+          "Count": 0,
+          "EndTime": 1552226760000,
+          "StartTime": 1552226750000
+        },
+        {
+          "Count": 0,
+          "EndTime": 1552226770000,
+          "StartTime": 1552226760000
+        },
+        {
+          "Count": 0,
+          "EndTime": 1552226780000,
+          "StartTime": 1552226770000
+        },
+        {
+          "Count": 0,
+          "EndTime": 1552226790000,
+          "StartTime": 1552226780000
+        },
+        {
+          "Count": 0,
+          "EndTime": 1552226800000,
+          "StartTime": 1552226790000
+        },
+        {
+          "Count": 0,
+          "EndTime": 1552226810000,
+          "StartTime": 1552226800000
+        },
+        {
+          "Count": 0,
+          "EndTime": 1552226820000,
+          "StartTime": 1552226810000
+        },
+        {
+          "Count": 0,
+          "EndTime": 1552226827000,
+          "StartTime": 1552226820000
+        }
+      ]
+    },
+    "Message": "userId:127067667954****",
+    "RequestId": "729FDC1A-F4ED-427E-A57D-93925F35FC49",
+    "Success": true,
+    "Code": "200"
+  }
+}

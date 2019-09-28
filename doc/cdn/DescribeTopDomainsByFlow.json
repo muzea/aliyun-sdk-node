@@ -1,0 +1,111 @@
+{
+  "name": "DescribeTopDomainsByFlow",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeTopDomainsByFlow获取用户按流量排名的域名。",
+  "abc_id": 91153,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2017-12-21T08:00:00:00Z",
+      "description_cn": "获取数据起始时间点。\n\n- 日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。\n\n- 最小数据粒度为5分钟，不写默认读取当月数据。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2017-12-22T08:00:00:00Z",
+      "description_cn": "获取数据结束时间点。\n- 结束时间需大于起始时间。\n\n- 日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。"
+    },
+    "Limit": {
+      "name": "Limit",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "域名获取数量限制，默认为**20**，取值支持**1**~**100**。"
+    }
+  },
+  "res": {
+    "DomainCount": 68,
+    "DomainOnlineCount": 68,
+    "RequestId": "4E09C5D7-E1CF-4CAA-A45E-8727F4C8FD70",
+    "EndTime": "2016-03-14T07:34:00Z",
+    "TopDomains": {
+      "TopDomain": [
+        {
+          "MaxBps": 22139626,
+          "Rank": 1,
+          "TrafficPercent": 30.64191989360235,
+          "TotalTraffic": 2043859876683.9001,
+          "TotalAccess": 107784230,
+          "DomainName": "example1.com",
+          "MaxBpsTime": 1457111400
+        },
+        {
+          "MaxBps": 1008772351,
+          "Rank": 2,
+          "TrafficPercent": 25.936032624725815,
+          "TotalTraffic": 1729970466149.2002,
+          "TotalAccess": 3843128,
+          "DomainName": "example2.com",
+          "MaxBpsTime": 1457505600
+        },
+        {
+          "MaxBps": 16046911,
+          "Rank": 3,
+          "TrafficPercent": 21.686305274906182,
+          "TotalTraffic": 1446507574551.6,
+          "TotalAccess": 547567,
+          "DomainName": "example3.com",
+          "MaxBpsTime": 1456897200
+        },
+        {
+          "MaxBps": 15990893,
+          "Rank": 4,
+          "TrafficPercent": 21.261081185428147,
+          "TotalTraffic": 1418144519687.5,
+          "TotalAccess": 548380,
+          "DomainName": "example4.com",
+          "MaxBpsTime": 1457567700
+        },
+        {
+          "MaxBps": 473599,
+          "Rank": 5,
+          "TrafficPercent": 0.4308743788055894,
+          "TotalTraffic": 28739937242.500004,
+          "TotalAccess": 152150,
+          "DomainName": "example5.cn",
+          "MaxBpsTime": 1457845800
+        }
+      ]
+    },
+    "StartTime": "2016-03-01T04:00:00Z"
+  }
+}

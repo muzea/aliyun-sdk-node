@@ -1,0 +1,25 @@
+{
+  "name": "PublishKnowledge",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "KnowledgeId": {
+      "name": "KnowledgeId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

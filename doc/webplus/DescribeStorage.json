@@ -1,0 +1,18 @@
+{
+  "name": "DescribeStorage",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v1/wam/storage",
+  "summary_cn": "调用DescribeStorage查询存储。",
+  "abc_id": 127781,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    }
+  },
+  "res": {}
+}

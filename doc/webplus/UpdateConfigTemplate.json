@@ -1,0 +1,51 @@
+{
+  "name": "UpdateConfigTemplate",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT",
+  "path": "/pop/v1/wam/configTemplate",
+  "summary_cn": "调用UpdateConfigTemplate来更新配置模板。",
+  "abc_id": 128145,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "TemplateId": {
+      "name": "TemplateId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "wct-5d1eca8dd56beb2b7*****",
+      "description_cn": "模板ID"
+    },
+    "TemplateDescription": {
+      "name": "TemplateDescription",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "This is a template",
+      "description_cn": "模板描述信息"
+    },
+    "OptionSettings": {
+      "name": "OptionSettings",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[{\"path\":\"resources.ecs.autoScaling\", \"name\":\"instanceNum\",\"value\":\"10\"},     {\"path\":\"application.option\", \"name\":\"port\",\"value\":\"8081\"}]",
+      "description_cn": "自定义配置项数据，JSON数组，包含以下字段：\n- `path`：配置项路径\n- `name`：配置项名称\n- `value`：配置值"
+    }
+  },
+  "res": {}
+}

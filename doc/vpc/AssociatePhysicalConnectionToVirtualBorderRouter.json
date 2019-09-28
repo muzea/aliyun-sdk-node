@@ -1,0 +1,113 @@
+{
+  "name": "AssociatePhysicalConnectionToVirtualBorderRouter",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AssociatePhysicalConnectionToVirtualBorderRouter将VBR关联物理专线。",
+  "abc_id": 126891,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "物理专线实例所在的地域ID。"
+    },
+    "VbrId": {
+      "name": "VbrId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "vbr-bp186tnz6rijyhj******",
+      "description_cn": "边界路由器ID。"
+    },
+    "PhysicalConnectionId": {
+      "name": "PhysicalConnectionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": " pc-bp1qrb3044eqixog****",
+      "description_cn": "物理专线ID。"
+    },
+    "VlanId": {
+      "name": "VlanId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "123",
+      "description_cn": "VBR的VLAN ID。\n\n取值范围为：1-2999。\n\n> 只有物理专线的所有者可以指定该参数，同一条物理专线下的两个VBR的VLAN ID不能相同。"
+    },
+    "CircuitCode": {
+      "name": "CircuitCode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "longtel001",
+      "description_cn": "运营商为物理专线提供的电路编码。\n\n> 只有物理专线的所有者可以指定该参数。"
+    },
+    "LocalGatewayIp": {
+      "name": "LocalGatewayIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10.10.0.1",
+      "description_cn": "VBR的阿里云侧互联IP。"
+    },
+    "PeerGatewayIp": {
+      "name": "PeerGatewayIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10.10.10.9",
+      "description_cn": "VBR专线侧接口对端的IP地址。\n\n该属性只允许VBR owner指定/修改，不允许把Enabled状态的VBR的该属性改为空。"
+    },
+    "PeeringSubnetMask": {
+      "name": "PeeringSubnetMask",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "255.255.255.0",
+      "description_cn": "VBR的阿里云侧和客户侧互联IP的子网掩码。 \n\n两个IP地址必须位于同一个子网中。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "02fb3da4-130e-11e9-8e44-00xxxxxxxx",
+      "description_cn": "客户端token，用于保证请求的幂等性。\n\n由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符。"
+    }
+  },
+  "res": {
+    "RequestId": "980960B0-2969-40BF-8542-EBB34FD358AB"
+  }
+}

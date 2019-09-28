@@ -1,0 +1,33 @@
+{
+  "name": "DeleteHostAvailability",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "删除可用性监控任务。",
+  "abc_id": 114958,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Id": {
+      "name": "Id",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "Long"
+    }
+  },
+  "res": {
+    "RequestId": "57C782E6-B235-4842-AD2B-DB94961761EB",
+    "Success": true,
+    "Code": 200
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "ModifyIpControlPolicyItem",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "PolicyItemId": {
+      "name": "PolicyItemId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "CidrIp": {
+      "name": "CidrIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "IpControlId": {
+      "name": "IpControlId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

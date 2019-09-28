@@ -1,0 +1,62 @@
+{
+  "name": "SynchronizeFabricChaincode",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|PUT|GET",
+  "path": "/",
+  "summary_cn": "调用SynchronizeFabricChaincode同步链码的升级和实例化的状态。",
+  "abc_id": 127860,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "ChaincodeId": {
+      "name": "ChaincodeId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "code-sacc-1pr09q7jm****",
+      "description_cn": "链码ID"
+    },
+    "OrganizationId": {
+      "name": "OrganizationId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "peers-aaaaaa2-1eqnj5o5w****",
+      "description_cn": "组织ID"
+    }
+  },
+  "res": {
+    "Result": {
+      "ProviderId": "provider",
+      "ProviderName": "name",
+      "ChaincodeName": "mycc3",
+      "Input": "args:&quot;john&quot; args:&quot;10&quot; ",
+      "Install": false,
+      "State": "Running",
+      "Type": 1,
+      "ChannelName": "mychannel",
+      "ConsortiumId": "consortium-lianmenyumingyi-hc5d1bwl****",
+      "ChaincodeVersion": "0.1",
+      "ChaincodeId": "cc-null-c856k9i1m****",
+      "Path": "github.com/hyperledger/fabric-samples/chaincode/sacc"
+    },
+    "RequestId": "2A3ABD81-95F5-4931-ACB3-31BDAE561FC7",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

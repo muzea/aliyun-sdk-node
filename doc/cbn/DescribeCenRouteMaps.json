@@ -1,0 +1,111 @@
+{
+  "name": "DescribeCenRouteMaps",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCenRouteMaps接口查询路由策略。",
+  "abc_id": 124801,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CenId": {
+      "name": "CenId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cen-7qthudw0ll6jmc****",
+      "description_cn": "云企业网实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "111"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "列表的页码，默认值为**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时每页的行数，最大值为**50**，默认值为**10**。"
+    },
+    "RouteMapId": {
+      "name": "RouteMapId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cenrmap-abcdedfghij****",
+      "description_cn": "路由策略的ID。"
+    },
+    "CenRegionId": {
+      "name": "CenRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-beijing",
+      "description_cn": "云企业网所在的地域。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "TransmitDirection": {
+      "name": "TransmitDirection",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "RegionIn",
+      "description_cn": "路由策略应用的方向，取值：\n\n- **RegionIn**：路由传入云企业网地域网关的方向。\n\n 例如路由从本地域网络实例发布到本地域网关，或其他地域的路由发布到本地域网关。\n\n- **RegionOut**：路由传出云企业网地域网关的方向。\n\n 例如路由从本地域网关发布到本地域下其他网络实例，或发布到其他地域网关。"
+    }
+  },
+  "res": {
+    "RouteMaps": {
+      "RouteMap": [
+        {
+          "Status": "Active",
+          "CenRegionId": "cn-beijing",
+          "RouteMapId": "cenrmap-jumdfzmj5sgggl****",
+          "MapResult": "Permit",
+          "TransmitDirection": "RegionIn",
+          "CenId": "cen-nh98vzx8gfhlwn****",
+          "Priority": 20
+        }
+      ]
+    },
+    "PageNumber": 1,
+    "TotalCount": 1,
+    "PageSize": 10
+  }
+}

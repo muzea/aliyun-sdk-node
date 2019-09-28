@@ -1,0 +1,52 @@
+{
+  "name": "SubmitAnalysisJob",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": null,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false
+    },
+    "PipelineId": {
+      "name": "PipelineId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true
+    },
+    "Input": {
+      "name": "Input",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true
+    },
+    "AnalysisConfig": {
+      "name": "AnalysisConfig",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    },
+    "UserData": {
+      "name": "UserData",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    },
+    "Priority": {
+      "name": "Priority",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    }
+  },
+  "res": {}
+}

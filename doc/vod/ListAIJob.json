@@ -1,0 +1,41 @@
+{
+  "name": "ListAIJob",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ListAIJob查询AI作业。在提交AI作业后，会进行异步处理，通过此接口可以实时查询作业信息。",
+  "abc_id": 130450,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "JobIds": {
+      "name": "JobIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1236ca184c0e47098a5b665e2xxxxxx",
+      "description_cn": "作业ID列表。最多一次查10个，多个ID之间用逗号隔开。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {}
+}

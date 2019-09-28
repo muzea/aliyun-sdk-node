@@ -1,0 +1,95 @@
+{
+  "name": "UpdateAppEnv",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT",
+  "path": "/pop/v1/wam/appEnv",
+  "summary_cn": "调用此API更新一个部署环境。",
+  "abc_id": 127821,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "EnvId": {
+      "name": "EnvId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "we-5d39b8ba6786bd4b149*****",
+      "description_cn": "要更新的环境ID"
+    },
+    "EnvDescription": {
+      "name": "EnvDescription",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "This is an env.",
+      "description_cn": "环境描述信息"
+    },
+    "PkgVersionId": {
+      "name": "PkgVersionId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "wp-5d1c0a5d913567334af*****",
+      "description_cn": "部署包版本ID"
+    },
+    "OptionSettings": {
+      "name": "OptionSettings",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[{\"path\":\"resources.slb.internet\", \"name\":\"enable\",\"value\":\"true\"}]",
+      "description_cn": "自定义配置项数据，JSON数组，包含以下字段：\n- `path`：配置项路径\n- `name`：配置项名称\n- `value`：配置值"
+    },
+    "StackId": {
+      "name": "StackId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ws-6c937c98a9c0296d0c48*****",
+      "description_cn": "环境所使用的技术栈ID"
+    },
+    "DryRun": {
+      "name": "DryRun",
+      "type": "Boolean",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否模拟变更\n- 若设定该参数为true，则不会创建变更，而是输出创建环境的操作步骤；否则会创建环境，并输出变更ID\n - 默认为false"
+    },
+    "ExtraProperties": {
+      "name": "ExtraProperties",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{\"Keypair\":\"testKey\"}",
+      "description_cn": "本次变更的附加参数"
+    }
+  },
+  "res": {}
+}

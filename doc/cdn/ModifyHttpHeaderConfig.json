@@ -1,0 +1,56 @@
+{
+  "name": "ModifyHttpHeaderConfig",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "HeaderKey": {
+      "name": "HeaderKey",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "HeaderValue": {
+      "name": "HeaderValue",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "ConfigID": {
+      "name": "ConfigID",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

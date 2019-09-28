@@ -1,0 +1,62 @@
+{
+  "name": "CopyNetworkAclEntries",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CopyNetworkAclEntries接口复制网络ACL规则。",
+  "abc_id": 116595,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "网络ACL所在的地域。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "NetworkAclId": {
+      "name": "NetworkAclId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "nacl-a2do9e413e0spxxxxxxxx",
+      "description_cn": "网络ACL的ID。"
+    },
+    "SourceNetworkAclId": {
+      "name": "SourceNetworkAclId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "nacl-ghuo9ehg3e0spxxxxxxxx",
+      "description_cn": "被复制的网络ACL的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123"
+    }
+  },
+  "res": {
+    "RequestId": "6608E72F-F276-440F-ABEF-419971CEC4D1"
+  }
+}

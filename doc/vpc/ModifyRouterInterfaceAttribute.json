@@ -1,0 +1,148 @@
+{
+  "name": "ModifyRouterInterfaceAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyRouterInterfaceAttribute接口修改路由器接口的配置。",
+  "abc_id": 36036,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": " 路由器接口所在的地域。 您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "RouterInterfaceId": {
+      "name": "RouterInterfaceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ri-2zeo3xzyf38r4urz****",
+      "description_cn": " 路由器接口的ID。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "TEST",
+      "description_cn": "路由器接口的名称。\n\n长度为 2-128个字符，必须以字母或中文开头，可包含数字，点号（.），下划线（_）和短横线（-）。但不能以`http:// `或`https://`开头。  "
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "路由器接口",
+      "description_cn": "路由器接口的描述信息。  \n\n长度为 2-256个字符，必须以字母或中文开头，但不能以`http:// `或`https://`开头。  "
+    },
+    "OppositeInterfaceId": {
+      "name": "OppositeInterfaceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ri-2zeo3xzyf38r4urz****",
+      "description_cn": " 对端路由器接口ID。 "
+    },
+    "OppositeRouterId": {
+      "name": "OppositeRouterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vrt-bp1jcg5cmxjbl9xgc****",
+      "description_cn": " 对端的路由器的ID。 "
+    },
+    "OppositeRouterType": {
+      "name": "OppositeRouterType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "VRouter",
+      "description_cn": "要连接的对端路由器接口所属的路由器类型。默认值为**VBR**。\n\n取值：**VRouter|VBR**\n\n"
+    },
+    "OppositeInterfaceOwnerId": {
+      "name": "OppositeInterfaceOwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": " 对端路由器接口的所有者ID。 "
+    },
+    "HealthCheckSourceIp": {
+      "name": "HealthCheckSourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "116.62.222.XX",
+      "description_cn": " 健康检查源IP地址，必须是本端VPC内的一个未被使用的IP。 \n          \n> 物理专线接入场景下可指定该参数。\n"
+    },
+    "HealthCheckTargetIp": {
+      "name": "HealthCheckTargetIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "116.62.222.XX",
+      "description_cn": " 健康检查目的IP地址。 \n\n> 当指定了**HealthCheckSourceIp**后，该参数为必选。\n"
+    },
+    "HcThreshold": {
+      "name": "HcThreshold",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "HcRate": {
+      "name": "HcRate",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "DeleteHealthCheckIp": {
+      "name": "DeleteHealthCheckIp",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": " 是否删除该路由器接口上配置的健康检查IP。取值： \n\n- **true**：删除健康检查IP。   \n\n- **false**（默认值）：不删除健康检查IP。   \n"
+    }
+  },
+  "res": {
+    "RequestId": "980960B0-2969-40BF-8542-EBB34FD358AB"
+  }
+}

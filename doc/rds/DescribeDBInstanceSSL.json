@@ -1,0 +1,46 @@
+{
+  "name": "DescribeDBInstanceSSL",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDBInstanceSSL接口查询实例SSL设置。",
+  "abc_id": 26253,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "items": [
+      {
+        "ConnectionString": 500,
+        "SSLExpireTime": "Normal",
+        "RequireUpdate": "100.0%",
+        "RequireUpdateReason": "HighAvailability"
+      }
+    ],
+    "requestId": "C816A4BF-A6EC-4722-95F9-2055859CCFD2"
+  }
+}

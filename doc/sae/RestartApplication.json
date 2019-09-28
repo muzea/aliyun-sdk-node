@@ -1,0 +1,40 @@
+{
+  "name": "RestartApplication",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT",
+  "path": "/pop/v1/sam/app/restartApplication",
+  "summary_cn": "重启应用",
+  "abc_id": 126837,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "0099b7be-5f5b-4512-a7fc-56049ef1aa6b",
+      "description_cn": "目标应用ID"
+    },
+    "MinReadyInstances": {
+      "name": "MinReadyInstances",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "最小可用实例数。在变更期间保证可用的实例数。"
+    }
+  },
+  "res": {}
+}

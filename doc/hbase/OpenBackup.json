@@ -1,0 +1,37 @@
+{
+  "name": "OpenBackup",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true
+    },
+    "ClusterId": {
+      "name": "ClusterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "ZoneId": {
+      "name": "ZoneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true
+    }
+  },
+  "res": {}
+}

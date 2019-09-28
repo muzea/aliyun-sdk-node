@@ -1,0 +1,300 @@
+{
+  "name": "CreateApplication",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/pop/v1/sam/app/createApplication",
+  "summary_cn": "创建一个SAE应用",
+  "abc_id": 126354,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AppName": {
+      "name": "AppName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "test-app",
+      "description_cn": "应用名称。允许数字，字母以及中划线组合。必须字母打头，最大长度36个字符"
+    },
+    "NamespaceId": {
+      "name": "NamespaceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-beijing:test",
+      "description_cn": "EDAS命名空间对应ID。只支持名称为小写字母加中划线的命名空间，必须以字母开头。命名空间可从DescribeNamespaceList接口获取。"
+    },
+    "PackageType": {
+      "name": "PackageType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "FatJar",
+      "description_cn": "应用包类型。支持FatJar、War、Image。"
+    },
+    "Replicas": {
+      "name": "Replicas",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1",
+      "description_cn": "初始实例数。"
+    },
+    "AppDescription": {
+      "name": "AppDescription",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "This is a test description.",
+      "description_cn": "应用描述信息。不超过1024个字符"
+    },
+    "VpcId": {
+      "name": "VpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc-xxxxxxxxxxxxxxxxxxx",
+      "description_cn": "EDAS命名空间对应的VPC。在serverless中，一个命名空间只能对应一个VPC，且不能修改。第一次在命名空间内创建Serverless应用将形成绑定关系。多个命名空间可以对应一个VPC。不填则为命名空间绑定的VpcId。"
+    },
+    "VSwitchId": {
+      "name": "VSwitchId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vsw-xxxxxxxxxxxxxxxxxxx",
+      "description_cn": "应用实例弹性网卡所在的虚拟交换机。该交换机必须位于上述VPC内。该交换机与EDAS命名空间同样存在绑定关系。不填则为命名空间绑定的VSwitchId。"
+    },
+    "PackageVersion": {
+      "name": "PackageVersion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.0.0",
+      "description_cn": "部署的包的版本号，War FatJar类型必填。请自定义它的含义。"
+    },
+    "PackageUrl": {
+      "name": "PackageUrl",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "http://myoss.oss-cn-hangzhou.aliyuncs.com/my-buc/2019-06-30/sae-test.jar",
+      "description_cn": "部署包地址。只有FatJar或War类型应用可以配置部署包地址。"
+    },
+    "ImageUrl": {
+      "name": "ImageUrl",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "registry.cn-hangzhou.aliyuncs.com/sae_test/ali_sae_test:0.0.1",
+      "description_cn": "镜像地址。只有Image类型应用可以配置镜像地址。"
+    },
+    "Jdk": {
+      "name": "Jdk",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Open JDK 8",
+      "description_cn": "部署的包依赖的JDK版本。镜像不支持。"
+    },
+    "WebContainer": {
+      "name": "WebContainer",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "apache-tomcat-7.0.91",
+      "description_cn": "部署的包依赖的tomcat版本。镜像不支持。"
+    },
+    "Cpu": {
+      "name": "Cpu",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1000",
+      "description_cn": "每个实例所需的CPU，单位为毫核，不能为0。目前仅支持固定规格的实例类型。"
+    },
+    "Memory": {
+      "name": "Memory",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1024",
+      "description_cn": "每个实例所需的内存，单位为MB，不能为0。目前仅支持固定规格的实例类型。"
+    },
+    "Command": {
+      "name": "Command",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sleep",
+      "description_cn": "镜像启动命令。该命令必须为容器内存在的可执行的对象。例如: sleep。设置该命令将导致镜像原本的启动命令失效。"
+    },
+    "CommandArgs": {
+      "name": "CommandArgs",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1d",
+      "description_cn": "镜像启动命令参数。上述启动命令所需参数。例如: \\[\"1d\"\\]"
+    },
+    "Envs": {
+      "name": "Envs",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[{\"name\":\"envtmp\",\"value\":\"0\"}]",
+      "description_cn": "容器环境变量参数。例如: \\[{\"name\":\"envtmp\",\"value\":\"0\"}\\]"
+    },
+    "CustomHostAlias": {
+      "name": "CustomHostAlias",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[{\"hostName\":\"samplehost\",\"ip\":\"127.0.0.1\"}]",
+      "description_cn": "容器内自定义host映射。例如: \\[{\"hostName\":\"samplehost\",\"ip\":\"127.0.0.1\"}\\]"
+    },
+    "JarStartOptions": {
+      "name": "JarStartOptions",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "custom-option",
+      "description_cn": "Jar包启动应用选项。应用默认启动命令: $JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS \"$package_path\" $JarStartArgs"
+    },
+    "JarStartArgs": {
+      "name": "JarStartArgs",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "custom-args",
+      "description_cn": "Jar包启动应用参数。应用默认启动命令: $JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS \"$package_path\" $JarStartArgs"
+    },
+    "Liveness": {
+      "name": "Liveness",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{\"exec\":{\"command\":[\"sleep\",\"5s\"]},\"initialDelaySeconds\":10,\"timeoutSeconds\":11}",
+      "description_cn": "容器健康检查，健康检查失败的容器将被杀死并恢复。目前仅支持容器内下发命令的方式。{\"exec\":{\"command\":\\[\"sleep\",\"5s\"\\]},\"initialDelaySeconds\":10,\"timeoutSeconds\":11}"
+    },
+    "Readiness": {
+      "name": "Readiness",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{\"exec\":{\"command\":[\"sleep\",\"6s\"]},\"initialDelaySeconds\":15,\"timeoutSeconds\":12}",
+      "description_cn": "应用启动状态检查，多次健康检查失败的容器将被杀死并重启。不通过健康检查的容器将不会有SLB流量进入。例如: {\"exec\":{\"command\":\\[\"sleep\",\"6s\"\\]},\"initialDelaySeconds\":15,\"timeoutSeconds\":12}"
+    },
+    "Deploy": {
+      "name": "Deploy",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否立即部署生效。默认为否。"
+    },
+    "EdasContainerVersion": {
+      "name": "EdasContainerVersion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3.5.3",
+      "description_cn": "EDAS pandora应用使用的运行环境"
+    },
+    "Timezone": {
+      "name": "Timezone",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "SlsConfigs": {
+      "name": "SlsConfigs",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

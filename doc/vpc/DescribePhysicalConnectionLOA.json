@@ -1,0 +1,75 @@
+{
+  "name": "DescribePhysicalConnectionLOA",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribePhysicalConnectionLOA查询物理专线LOA信息。",
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "物理专线部署的地域。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "pc-bp1ca4wca27exxxxxxxx",
+      "description_cn": "物理专线实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "318BB676-0A2B-43A0-9AD8-F1D34E93750F",
+      "description_cn": "客户端Token鉴权。"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "companyName": "test1234",
+      "constructionTime": "2019-02-26T08:00:00Z",
+      "instanceId": "pc-bp1ca4wca27ertsucaxn0",
+      "lineType": "MSTP",
+      "loaUrl": "http://pconn-loa.oss-cn-shenzhen.aliyuncs.com/1993847644011928_pc-bp1ca4wca27ertsucaxn0_cn-hangzhou-dg-a01.pdf?Expires=1551164196&OSSAccessKeyId=dCrRKgLiFLLHAo6k&Signature=d/w0BARgZ5uJHXODnjpr1oKIEC4%3D",
+      "pmInfo": [
+        {
+          "nextPMIndex": 1,
+          "pmCertificateNo": "1234567",
+          "pmCertificateType": "Other",
+          "pmContactInfo": "18910010000",
+          "pmGender": "Male",
+          "pmName": "test"
+        }
+      ],
+      "si": "ctcu",
+      "status": "Available"
+    },
+    "message": "successful",
+    "requestId": "318BB676-0A2B-43A0-9AD8-F1D34E93750F",
+    "success": true
+  }
+}

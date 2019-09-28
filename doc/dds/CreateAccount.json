@@ -1,0 +1,63 @@
+{
+  "name": "CreateAccount",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AccountName": {
+      "name": "AccountName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "AccountPassword": {
+      "name": "AccountPassword",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "AccountDescription": {
+      "name": "AccountDescription",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

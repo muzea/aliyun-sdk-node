@@ -1,0 +1,81 @@
+{
+  "name": "DescribeDomainsBySource",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDomainsBySource查询用户名下，源站对应的所有域名名称列表。不支持模糊匹配。",
+  "abc_id": 91197,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Sources": {
+      "name": "Sources",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "aaa.source.com",
+      "description_cn": "源站，多个源站用逗号（,）隔开。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "DomainsList": {
+      "DomainsData": [
+        {
+          "Source": "aaa.source.com",
+          "Domains": {
+            "domainNames": [
+              "a1.com"
+            ]
+          },
+          "DomainInfos": {
+            "domainInfo": [
+              {
+                "DomainCname": "a1.w.kunlunar.com",
+                "Status": "online",
+                "CreateTime": "2016-07-12T11:53:19+08:00",
+                "UpdateTime": "2017-03-31T04:49:00+08:00",
+                "DomainName": "a1.com"
+              }
+            ]
+          }
+        },
+        {
+          "Source": "b.source.com",
+          "Domains": {
+            "domainNames": [
+              "b1.com"
+            ]
+          },
+          "DomainInfos": {
+            "domainInfo": [
+              {
+                "DomainCname": "b1.com.w.alikunlun.com",
+                "Status": "online",
+                "CreateTime": "2017-01-13T18:01:00+08:00",
+                "UpdateTime": "2017-01-17T21:16:16+08:00",
+                "DomainName": "b1.com"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "RequestId": "B0F074E5-A1AC-4B32-8EA2-6F450410D1E0",
+    "Sources": "aaa.source.com,b.source.com"
+  }
+}

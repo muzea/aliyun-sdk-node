@@ -1,0 +1,79 @@
+{
+  "name": "ListSnapshots",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ListSnapshots查询指定媒体截图。",
+  "abc_id": 129677,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "VideoId": {
+      "name": "VideoId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "d3e680e618708fef7cefbf2cae7cc931",
+      "description_cn": "视频ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "SnapshotType": {
+      "name": "SnapshotType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "CoverSnapshot",
+      "description_cn": "返回的截图类型。取值范围：\n\n- **CoverSnapshot（默认值）**：封面截图\n- **NormalSnapshot**：SubmitSnapshotJob接口发起的普通截图\n- **SpriteSnapshot**：SubmitSnapshotJob接口发起的雪碧截图\n- **SpriteOriginSnapshot**：组成雪碧图的原始小图"
+    },
+    "AuthTimeout": {
+      "name": "AuthTimeout",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3600",
+      "description_cn": "截图地址过期时间。默认值：**3600秒**，最小值：**3600秒 **(当指定时间小于3600秒时，默认为3600秒）。\n\n> 如果返回的是OSS地址，为降低源站安全风险，最大值为2592000(即30天)。该参数只有开启了[URL鉴权](https://help.aliyun.com/document_detail/57007.html?spm=a2c4g.11186623.2.15.52a33d21ZDBetT)才会生效。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "翻页大小。默认值：**20**，最大值：**100**。"
+    },
+    "PageNo": {
+      "name": "PageNo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "翻页页号。默认值：**1**。"
+    }
+  },
+  "res": {}
+}

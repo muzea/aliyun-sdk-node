@@ -1,0 +1,91 @@
+{
+  "name": "DescribeInstanceRamRole",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeInstanceRamRole查询一台或者多台ECS实例上的已赋予的实例RAM角色。",
+  "abc_id": 54243,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例RAM角色所在的地域。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "查询接口返回资源信息列表的页码。\n\n起始值：1。\n\n默认值：1。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页展示响应信息时设置的每页行数，单位：行。\n\n最大值：50。\n\n默认值：10。"
+    },
+    "InstanceIds": {
+      "name": "InstanceIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[\"instanceId1\", \"instanceId2\", \"instanceId3\"…]",
+      "description_cn": "指定查询的实例ID的集合。最多支持一次查询100台实例。"
+    },
+    "RamRoleName": {
+      "name": "RamRoleName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FinanceDeptOnly",
+      "description_cn": "查询赋予了某一实例RAM角色的所有ECS实例。您可以使用RAM API [ListRoles](~~28713~~)查询您已创建的实例RAM角色。"
+    }
+  },
+  "res": {
+    "RequestId": "8F4CAE3F-7892-4662-83A5-2C2FFD639553",
+    "InstanceRamRoleSets": {
+      "InstanceRamRoleSet": [
+        {
+          "InstanceId": "i-instance1",
+          "RamRoleName": "RamRoleTest"
+        }
+      ]
+    },
+    "TotalCount": 1
+  }
+}

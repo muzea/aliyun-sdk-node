@@ -1,0 +1,125 @@
+{
+  "name": "CreateScheduledTask",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateScheduledTask创建一个定时任务。",
+  "abc_id": 25957,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-qingdao",
+      "description_cn": "定时任务所属地域的ID。"
+    },
+    "ScheduledAction": {
+      "name": "ScheduledAction",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ari:acs:ess:cn-qingdao:1344371:scalingRule/cCBpdYdQuBe2cUxOdu6****",
+      "description_cn": "定时任务触发时需要执行的操作，填写伸缩规则的唯一标识符。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456123456",
+      "description_cn": ""
+    },
+    "ScheduledTaskName": {
+      "name": "ScheduledTaskName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "scheduled****",
+      "description_cn": "定时任务的显示名称。2~64个英文或中文字符，以数字、大小字母或中文开头，可包含数字、下划线（_）、连字符（-）或点号（.）。同一账号同一地域内唯一。 \n\n默认值：ScheduledScalingTaskId。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "fortest",
+      "description_cn": "定时任务的描述信息。2~200个英文或中文字符。"
+    },
+    "RecurrenceEndTime": {
+      "name": "RecurrenceEndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2014-08-17T16:55Z",
+      "description_cn": "重复执行定时任务的结束时间。 按照ISO8601标准表示，并需要使用UTC时间。\n\n格式为：YYYY-MM-DDThh:mmZ。不能填写自创建当天起365日后的时间。\n\n您需要同时指定RecurrenceType、RecurrenceValue和RecurrenceEndTime。"
+    },
+    "LaunchTime": {
+      "name": "LaunchTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2014-08-17T16:52Z",
+      "description_cn": "定时任务触发的时间点。 按照ISO8601标准表示，并需要使用UTC时间。格式为：YYYY-MM-DDThh:mmZ。不能填写自创建当天起90日后的时间。 \n\n如果指定了RecurrenceType，则此属性指定的时间点，默认为循环执行的时间点。\n\n如果未指定RecurrenceType，则按指定的日期和时间执行一次。"
+    },
+    "RecurrenceType": {
+      "name": "RecurrenceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Daily",
+      "description_cn": "重复执行定时任务的类型，取值范围： \n- Daily：每多少天重复执行一次定时任务。 \n- Weekly：每周指定几天重复执行一次定时任务。 \n- Monthly：每月内指定几天重复执行一次定时任务。 \n- Cron：按照指定的Cron表达式执行定时任务。 \n\n您需要同时指定RecurrenceType、RecurrenceValue和RecurrenceEndTime。 "
+    },
+    "RecurrenceValue": {
+      "name": "RecurrenceValue",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "重复执行定时任务的数值。 \n\n- RecurrenceType取Daily时，只能填一个值，取值范围：1~31。 \n- RecurrenceType取Weekly时，可以填入多个值，填多个值时使用英文逗号（,）分隔。比如，周日、周一、周二、周三、周四、周五、周六的值依次为：0,1,2,3,4,5,6。  \n- RecurrenceType取Monthly时，格式为A-B。A、B的取值范围为1~31，并且B必须大于等于A。 \n- RecurrenceType取Cron时，表示UTC时间，支持分、时、日、月、星期的5域表达式，支持通配符英文逗号（,）、英文问号（?）、连词符（-）、星号（*）、井号（#）、斜线（/）、L和W。  \n\n您需要同时指定RecurrenceType、RecurrenceValue和RecurrenceEndTime。"
+    },
+    "TaskEnabled": {
+      "name": "TaskEnabled",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否启动定时任务。 \n- true：启动任务。\n- false：停止任务 。\n\n默认值：true。"
+    },
+    "LaunchExpirationTime": {
+      "name": "LaunchExpirationTime",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "600",
+      "description_cn": "定时任务触发操作失败后，在此时间内重试。单位为秒，取值范围：0~21600。\n\n默认值：600。"
+    }
+  },
+  "res": {
+    "RequestId": "473469C7-AA6F-4DC5-B3DB-A3DC0DE3****",
+    "ScheduledTaskId": "edRtShc57WGXdt8TlPbr****"
+  }
+}

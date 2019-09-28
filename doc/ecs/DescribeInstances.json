@@ -1,0 +1,487 @@
+{
+  "name": "DescribeInstances",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeInstances查询一台或多台ECS实例的详细信息。",
+  "abc_id": 25506,
+  "timeout": 15000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例所属的地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "VpcId": {
+      "name": "VpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "v-vpcid1",
+      "description_cn": "专有网络VPC ID。"
+    },
+    "VSwitchId": {
+      "name": "VSwitchId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vsw-vswitchid1",
+      "description_cn": "虚拟交换机ID。"
+    },
+    "ZoneId": {
+      "name": "ZoneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou-g",
+      "description_cn": "可用区ID。"
+    },
+    "InstanceNetworkType": {
+      "name": "InstanceNetworkType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc",
+      "description_cn": "实例网络类型。取值范围： \n         \n- classic：经典网络 \n- vpc：专有网络VPC"
+    },
+    "SecurityGroupId": {
+      "name": "SecurityGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sg-securitygroupid1",
+      "description_cn": "实例所属的安全组。"
+    },
+    "InstanceIds": {
+      "name": "InstanceIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[\"i-xxxxxxxxx\", \"i-yyyyyyyyy\", … \"i-zzzzzzzzz\"]",
+      "description_cn": "实例ID。取值可以由多个实例ID组成一个JSON数组，最多支持100个ID，ID之间用半角逗号（,）隔开。 "
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "实例状态列表的页码。起始值：1。\n\n默认值：1 。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时设置的每页行数。最大值：100。\n\n默认值：10。"
+    },
+    "InnerIpAddresses": {
+      "name": "InnerIpAddresses",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[\"10.1.1.1\", \"10.1.2.1\", … \"10.1.10.1\"]",
+      "description_cn": "经典网络类型实例的内网IP列表。当InstanceNetworkType=classic时生效，取值可以由多个IP组成一个JSON数组，最多支持100个IP，IP之间用半角逗号（,）隔开。 "
+    },
+    "PrivateIpAddresses": {
+      "name": "PrivateIpAddresses",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[\"172.16.1.1\", \"172.16.2.1\", … \"172.16.10.1\"]",
+      "description_cn": "VPC网络类型实例的私有IP。当InstanceNetworkType=vpc时生效，取值可以由多个IP组成一个JSON数组，最多支持100个IP，IP之间用半角逗号（,）隔开。 "
+    },
+    "PublicIpAddresses": {
+      "name": "PublicIpAddresses",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[\"42.1.1.**\", \"42.1.2.**\", … \"42.1.10.**\"]",
+      "description_cn": "实例的公网IP列表。当InstanceNetworkType=classic时生效，取值可以由多个IP组成一个JSON数组，最多支持100个IP，IP之间用半角逗号（,）隔开。 "
+    },
+    "EipAddresses": {
+      "name": "EipAddresses",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[\"42.1.1.**\", \"42.1.2.**\", … \"42.1.10.**\"]",
+      "description_cn": "实例的弹性公网IP列表。当InstanceNetworkType=vpc时该参数生效，取值可以由多个IP组成一个JSON数组，最多支持100个IP，IP之间用半角逗号（,）隔开。 "
+    },
+    "InstanceChargeType": {
+      "name": "InstanceChargeType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PostPaid",
+      "description_cn": "实例的计费方式。取值范围： \n         \n-  PostPaid：按量付费  \n- PrePaid：包年包月"
+    },
+    "InternetChargeType": {
+      "name": "InternetChargeType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PayByTraffic",
+      "description_cn": "网络计费方式。取值范围：\n\n- PayByTraffic：按流量计费\n- <props=\"china\">PayByBandwidth：按带宽计费</props>"
+    },
+    "InstanceName": {
+      "name": "InstanceName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "*Joshua",
+      "description_cn": "实例名称，支持使用通配符*进行模糊搜索。 "
+    },
+    "ImageId": {
+      "name": "ImageId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "m-imageid1",
+      "description_cn": "镜像ID。"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Running",
+      "description_cn": "实例状态。取值范围： \n         \n- Running：运行中\n- Starting：启动中\n- Stopping：停止中\n- Stopped：已停止"
+    },
+    "LockReason": {
+      "name": "LockReason",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "security",
+      "description_cn": "资源被锁定的原因。"
+    },
+    "Filter.1.Key": {
+      "name": "Filter.1.Key",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "CreationStartTime",
+      "description_cn": ""
+    },
+    "Filter.2.Key": {
+      "name": "Filter.2.Key",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "CreationEndTime",
+      "description_cn": ""
+    },
+    "Filter.3.Key": {
+      "name": "Filter.3.Key",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ExpiredStartTime",
+      "description_cn": ""
+    },
+    "Filter.4.Key": {
+      "name": "Filter.4.Key",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ExpiredEndTime",
+      "description_cn": ""
+    },
+    "Filter.1.Value": {
+      "name": "Filter.1.Value",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2017-12-05T22:40:00Z",
+      "description_cn": ""
+    },
+    "Filter.2.Value": {
+      "name": "Filter.2.Value",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2017-12-06T22:40:00Z",
+      "description_cn": ""
+    },
+    "Filter.3.Value": {
+      "name": "Filter.3.Value",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2017-12-07T22:40:00Z",
+      "description_cn": ""
+    },
+    "Filter.4.Value": {
+      "name": "Filter.4.Value",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2017-12-08T22:40:00Z",
+      "description_cn": ""
+    },
+    "DeviceAvailable": {
+      "name": "DeviceAvailable",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": ""
+    },
+    "IoOptimized": {
+      "name": "IoOptimized",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否是I/O优化型实例。"
+    },
+    "NeedSaleCycle": {
+      "name": "NeedSaleCycle",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否返回包年包月实例售卖周期。默认值：false"
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "InstanceType": {
+      "name": "InstanceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ecs.g5.larger",
+      "description_cn": "实例的规格。"
+    },
+    "InstanceTypeFamily": {
+      "name": "InstanceTypeFamily",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ecs.g5",
+      "description_cn": "实例的规格族。"
+    },
+    "KeyPairName": {
+      "name": "KeyPairName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FinanceJoshua",
+      "description_cn": "实例使用的SSH密钥对名称。"
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rg-resourcegroupid1",
+      "description_cn": "实例所在的企业资源组ID。"
+    },
+    "HpcClusterId": {
+      "name": "HpcClusterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "hpc-hpclusterid1",
+      "description_cn": "实例所在的HPC集群ID。"
+    },
+    "RdmaIpAddresses": {
+      "name": "RdmaIpAddresses",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10.10.10.102",
+      "description_cn": "HPC实例的Rdma网络IP。"
+    },
+    "DryRun": {
+      "name": "DryRun",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否只预检此次请求。\n\n- true：发送检查请求，不会查询资源状况。检查项包括AccessKey是否有效、RAM用户的授权情况和是否填写了必需参数。如果检查不通过，则返回对应错误。如果检查通过，会返回错误码DryRunOperation。  \n- false（默认值）：发送正常请求，通过检查后返回2XX HTTP状态码并直接查询资源状况。 "
+    }
+  },
+  "res": {
+    "Instances": {
+      "Instance": [
+        {
+          "CreationTime": "2015-07-27T07:08Z",
+          "EipAddress": {},
+          "ExpiredTime": "2011-09-08T16:00Z",
+          "HostName": "iZ94t3s0jxkZ",
+          "ImageId": "centos6u5_64_20G_aliaegis_20150130.vhd",
+          "InnerIpAddress": {
+            "IpAddress": [
+              "10.170.XX.XXX"
+            ]
+          },
+          "InstanceChargeType": "PostPaid",
+          "InstanceId": "XXXXXXXXX",
+          "InstanceName": "dd性能测试",
+          "InstanceNetworkType": "classic",
+          "InstanceType": "ecs.s2.large",
+          "InternetChargeType": "PayByTraffic",
+          "InternetMaxBandwidthIn": "-1",
+          "InternetMaxBandwidthOut": "1",
+          "IoOptimized": "false",
+          "OperationLocks": {
+            "LockReason": []
+          },
+          "PublicIpAddress": {
+            "IpAddress": [
+              "120.25.XX.XXX"
+            ]
+          },
+          "RegionId": "cn-shenzhen",
+          "SecurityGroupIds": {
+            "SecurityGroupId": [
+              "sg-94kd0cyg0"
+            ]
+          },
+          "SerialNumber": "51d1353b-22bf-4567-a176-8b3e12e43135",
+          "Status": "Running",
+          "VpcAttributes": {
+            "PrivateIpAddress": {
+              "IpAddress": []
+            }
+          },
+          "ZoneId": "cn-shenzhen-a"
+        }
+      ]
+    },
+    "PageNumber": "1",
+    "PageSize": "10",
+    "RequestId": "14A07460-EBE7-47CA-9757-12CC4761D47A",
+    "TotalCount": "1"
+  }
+}

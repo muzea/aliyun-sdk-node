@@ -1,0 +1,93 @@
+{
+  "name": "DescribeLifecycleHooks",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeLifecycleHooks查询生命周期挂钩。 ",
+  "abc_id": 73843,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456123456",
+      "description_cn": ""
+    },
+    "ScalingGroupId": {
+      "name": "ScalingGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "asg-****",
+      "description_cn": "伸缩组的ID。"
+    },
+    "LifecycleHookName": {
+      "name": "LifecycleHookName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Test",
+      "description_cn": "生命周期挂钩的名称。"
+    },
+    "LifecycleHookId": {
+      "name": "LifecycleHookId",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "实例状态列表的页码。起始值：1。\n\n默认值：1。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "50",
+      "description_cn": "分页查询时设置的每页行数。最大值：50。\n\n默认值：50。"
+    }
+  },
+  "res": {
+    "lifecycleHooks": [
+      {
+        "defaultResult": "CONTINUE",
+        "heartbeatTimeout": 600,
+        "lifecycleHookId": "ash-****",
+        "lifecycleHookName": "Test",
+        "lifecycleTransition": "SCALE_OUT",
+        "notificationArn": "acs:ess:cn-hangzhou:1111111111:queue/queue1",
+        "notificationMetadata": "Test",
+        "scalingGroupId": "asg-****"
+      }
+    ],
+    "pageNumber": 1,
+    "pageSize": 50,
+    "requestId": "473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E",
+    "totalCount": 1
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "ValidateOrder",
+  "protocol": "HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "data": {
+      "name": "data",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "product": {
+      "name": "product",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Version": {
+      "name": "Version",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

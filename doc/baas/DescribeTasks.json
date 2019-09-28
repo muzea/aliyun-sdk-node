@@ -1,0 +1,30 @@
+{
+  "name": "DescribeTasks",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "获取任务列表",
+  "abc_id": 0,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "A91E641B-550F-407B-B43A-ADD7F7BC3869",
+      "ErrorCode": 200,
+      "Success": true,
+      "Result": []
+    },
+    "requestId": "A91E641B-550F-407B-B43A-ADD7F7BC3869",
+    "successResponse": true
+  }
+}

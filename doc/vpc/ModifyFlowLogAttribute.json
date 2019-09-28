@@ -1,0 +1,64 @@
+{
+  "name": "ModifyFlowLogAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": " 调用ModifyFlowLogAttribute接口编辑流日志的名称和描述。",
+  "abc_id": 87922,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-qingdao",
+      "description_cn": " 流日志的所属地域ID。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。"
+    },
+    "FlowLogId": {
+      "name": "FlowLogId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "flowlog-m5evbtbptxxxxxxxxxxxx",
+      "description_cn": "流日志ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "111"
+    },
+    "FlowLogName": {
+      "name": "FlowLogName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "myFlowlog",
+      "description_cn": "流日志名称。长度为2-128个字符，必须以字母或中文开头，可包含数字，点号（.），下划线（_）和短横线（-）。但不能以`http://`或`https://`开头。  "
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "This is my Flowlog.",
+      "description_cn": "流日志描述。长度为2-256个字符，必须以字母或中文开头，但不能以`http://`或`https://`开头。  "
+    }
+  },
+  "res": {
+    "RequestId": "62172DD5-6BAC-45DF-8D44-xxxxxxxx",
+    "FlowLogId": "flowlog-m5evbtbptxxxxxxxxxxxx"
+  }
+}

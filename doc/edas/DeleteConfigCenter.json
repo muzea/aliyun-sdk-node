@@ -1,0 +1,43 @@
+{
+  "name": "DeleteConfigCenter",
+  "protocol": "HTTPS|HTTP",
+  "method": "DELETE",
+  "path": "/pop/v5/configCenter",
+  "timeout": 2000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DataId": {
+      "name": "DataId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false
+    },
+    "Group": {
+      "name": "Group",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false
+    },
+    "LogicalRegionId": {
+      "name": "LogicalRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

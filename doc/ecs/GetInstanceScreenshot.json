@@ -1,0 +1,64 @@
+{
+  "name": "GetInstanceScreenshot",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用GetInstanceScreenshot获取实例的截屏信息。",
+  "abc_id": 85921,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-shenzhen",
+      "description_cn": "实例所在地域ID。您可以调用 [DescribeRegions](~~25609~~) 查看最新的阿里云地域列表。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "i-myInstance",
+      "description_cn": "实例ID。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。"
+    },
+    "WakeUp": {
+      "name": "WakeUp",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否唤醒处于休眠状态的实例。\n\n默认值：false"
+    }
+  },
+  "res": {
+    "RequestId": "22A1933F-AD02-4560-A6A7-53CF2231D942",
+    "InstanceId": "i-j5e42sbbthlokka11ech",
+    "Screenshot": "iVBORw0KGgoA...AAABJRU5ErkJggg=="
+  }
+}

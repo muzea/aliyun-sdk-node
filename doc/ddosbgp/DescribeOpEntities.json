@@ -1,0 +1,106 @@
+{
+  "name": "DescribeOpEntities",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CurrentPage": {
+      "name": "CurrentPage",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "OrderBy": {
+      "name": "OrderBy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OrderDir": {
+      "name": "OrderDir",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ResourceRegionId": {
+      "name": "ResourceRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

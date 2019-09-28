@@ -1,0 +1,33 @@
+{
+  "name": "DeleteContact",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "删除报警联系人。",
+  "abc_id": 114925,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ContactName": {
+      "name": "ContactName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "关某",
+      "description_cn": "报警联系人姓名。"
+    }
+  },
+  "res": {
+    "RequestId": "50D4CFE1-01E5-4543-939C-18BC01E3EC1C",
+    "Success": true,
+    "Code": "200"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "DescribeUserBandWidthData",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": null,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Version": {
+      "name": "Version",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true
+    },
+    "EnsRegionId": {
+      "name": "EnsRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    },
+    "Period": {
+      "name": "Period",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,37 @@
+{
+  "name": "DescribeLiveCertificateDetail",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeLiveCertificateDetail获取证书详细信息。",
+  "abc_id": 101810,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CertName": {
+      "name": "CertName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "certname",
+      "description_cn": "证书名称。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {}
+}

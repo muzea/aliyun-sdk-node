@@ -1,0 +1,180 @@
+{
+  "name": "DescribeIndexRecommendation",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeIndexRecommendation接口查询MongoDB实例的索引推荐详情。",
+  "abc_id": 95517,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例所属的地域ID，您可以通过调用[DescribeDBInstanceAttribute](~~62010~~)进行查询。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "TaskId": {
+      "name": "TaskId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3223069",
+      "description_cn": "任务ID，您可以通过调用[DescribeAvailableTimeRange](~~95534~~)接口查询。"
+    },
+    "NodeId": {
+      "name": "NodeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "d-bpxxxxxxxx",
+      "description_cn": "分片集群实例中Mongos节点ID或Shard节点ID。\n\n> 当**DBInstanceId**参数传入的是分片集群实例ID时，本参数才可用。"
+    },
+    "Database": {
+      "name": "Database",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "mongodbtest",
+      "description_cn": "数据库名。"
+    },
+    "Collection": {
+      "name": "Collection",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "customer",
+      "description_cn": "集合名。"
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2019-01-01T12Z",
+      "description_cn": "查询开始时间，格式为<i>HH:mm</i>Z-<i>HH</i>Z（UTC时间）。\n\n> **StartTime**取值必须晚于审计日志的开启时间。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2019-01-02T13Z",
+      "description_cn": "查询结束时间，必须晚于查询开始时间，格式为<i>HH:mm</i>Z-<i>HH</i>Z（UTC时间）。"
+    },
+    "OperationType": {
+      "name": "OperationType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "query",
+      "description_cn": "操作类型，例如**query**、**delete**、**update**等。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "每页记录数，取值： **30**、**50**、**100**，默认值为**30**。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页码，取值为大于0且不超过Integer数据类型的的最大值，默认值为**1**。"
+    }
+  },
+  "res": {
+    "Analyzations": {
+      "Analyzation": [
+        {
+          "InMemorySort": false,
+          "Sort": "{}",
+          "Operation": "query",
+          "Count": 364,
+          "AverageKeysExaminedCount": 0,
+          "Database": "mongodbtest",
+          "Query": "{\"name\":\"<val>\"}",
+          "AverageExecutionTime": 526,
+          "AverageReturnRowCount": 0,
+          "IndexRecommendations": {
+            "Recommendation": [
+              {
+                "RecmdType": "Index",
+                "Content": "db.customer.createIndex({\"name\": 1}, {background: true})"
+              }
+            ]
+          },
+          "TotalExecutionTime": 191569,
+          "LastExecutionTime": "2019-03-22T05:52:31Z",
+          "ExecutionPlan": "{\"stage\":\"COLLSCAN\"}",
+          "Namespace": "mongodbtest.customer",
+          "AverageDocsExaminedCount": 1000000,
+          "IndexCombines": {
+            "IndexCombine": [
+              "db.customer.createIndex({\"name\": 1}, {background: true})"
+            ]
+          }
+        }
+      ]
+    },
+    "TotalRecordCount": 1,
+    "PageNumber": 1,
+    "RequestId": "553CCFB2-C013-4A9D-86A9-F440BA7E365F",
+    "PageRecordCount": 1
+  }
+}

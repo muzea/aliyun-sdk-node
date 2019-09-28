@@ -1,0 +1,83 @@
+{
+  "name": "CreateTopic",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/",
+  "summary_cn": "调用 CreateTopic 创建 Topic。",
+  "abc_id": 94538,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例所属的地域 ID。"
+    },
+    "Topic": {
+      "name": "Topic",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "alikafka_topic_test",
+      "description_cn": "Topic 的名称。\n\n- 只能包含字母、数字、下划线（_）和短横线（-）。\n- 长度为 3-64 个字符，多于 64 个字符将被自动截取。\n- 一旦创建后不能再修改。"
+    },
+    "Remark": {
+      "name": "Remark",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "alikafka_topic_test",
+      "description_cn": "Topic 的备注。\n\n限制 64 个字符。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "alikafka_pre-cn-mp919o4v****",
+      "description_cn": "实例 ID。\n\n可调用 [GetInstanceList](https://help.aliyun.com/document_detail/94533.html?spm=a2c4g.11186623.2.12.774c7dc8F5cWRE#concept-94533-zh) 获取。"
+    },
+    "CompactTopic": {
+      "name": "CompactTopic",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "PartitionNum": {
+      "name": "PartitionNum",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "LocalTopic": {
+      "name": "LocalTopic",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

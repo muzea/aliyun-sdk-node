@@ -1,0 +1,74 @@
+{
+  "name": "EditPhotos",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "PhotoId": {
+      "name": "PhotoId",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "Long"
+    },
+    "StoreName": {
+      "name": "StoreName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "ShareExpireTime": {
+      "name": "ShareExpireTime",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "TakenAt": {
+      "name": "TakenAt",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Title": {
+      "name": "Title",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Remark": {
+      "name": "Remark",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "LibraryId": {
+      "name": "LibraryId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

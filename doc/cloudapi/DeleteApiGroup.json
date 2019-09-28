@@ -1,0 +1,50 @@
+{
+  "name": "DeleteApiGroup",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {}
+}

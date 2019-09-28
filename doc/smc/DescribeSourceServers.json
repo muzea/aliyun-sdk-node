@@ -1,0 +1,85 @@
+{
+  "name": "DescribeSourceServers",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询一个或多个迁移源。",
+  "abc_id": 121818,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "000000"
+    },
+    "SourceId": {
+      "name": "SourceId",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "JobId": {
+      "name": "JobId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "j-xxxxxxxxxxxxxxx",
+      "description_cn": "迁移任务ID。"
+    },
+    "State": {
+      "name": "State",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Available",
+      "description_cn": "迁移源状态。取值范围：\n\n- Unavailable（不可用，包括离线和出错）\n- Available（在线）\n- InUse（迁移中）\n- Deleting（删除中）\n"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "MySourceServer",
+      "description_cn": "迁移源名称。长度为2~128个英文或中文字符。必须以大小字母或中文开头，不能以 http:// 和 https:// 开头。可以包含数字、半角冒号（:）、下划线（_）或者连字符（-）。\n\n默认值：空。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "返回的迁移源列表的页码。起始值：1。\n\n默认值：1。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时设置的每页行数。最大值：50。\n\n默认值：10。\n"
+    }
+  },
+  "res": {}
+}

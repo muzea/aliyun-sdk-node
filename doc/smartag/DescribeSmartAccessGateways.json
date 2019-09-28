@@ -1,0 +1,184 @@
+{
+  "name": "DescribeSmartAccessGateways",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeSmartAccessGateways查询已创建的智能接入网关。",
+  "abc_id": 69815,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "智能接入网关的所属区域。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "AssociatedCcnId": {
+      "name": "AssociatedCcnId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ccn-bxuau4ezctt******",
+      "description_cn": "绑定的云连接网ID。"
+    },
+    "SmartAGId": {
+      "name": "SmartAGId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sag-c3m3n1khz58l******",
+      "description_cn": "智能接入网关ID。"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Ordered",
+      "description_cn": "智能接入网关状态，取值： \n\n- Ordered：已下单  \n\n- Delivered：已发货\n  \n- Received：已收货\n\n- Returning：退货中\n\n- ACTIVE：活跃\n\n- Init：初始化  \n"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sag",
+      "description_cn": "智能接入网关名称。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "分页查询时设置的每页行数，默认值为10，最大值为50。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "实例状态列表的页码，默认值是1。"
+    },
+    "SerialNumber": {
+      "name": "SerialNumber",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sag32a30121",
+      "description_cn": "智能接入网关的序列号。"
+    },
+    "AclIds": {
+      "name": "AclIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "acl-xhwhyuo43l0n******",
+      "description_cn": "智能接入网关实例绑定的访问控制规则。"
+    },
+    "UnboundAclIds": {
+      "name": "UnboundAclIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "acl-sjfbgngj***************",
+      "description_cn": "未关联到该ACL，多个ID用逗号隔开。"
+    },
+    "InstanceType": {
+      "name": "InstanceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sag-100wm",
+      "description_cn": "实例类型。"
+    },
+    "CanAssociateQos": {
+      "name": "CanAssociateQos",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "SmartAccessGateways": {
+      "SmartAccessGateway": [
+        {
+          "Name": "测试",
+          "SmartAGId": "sag-v0fkpk4akfz5hebved",
+          "Status": "Init",
+          "AssociatedCcnName": "xuehao",
+          "AssociatedCcnId": "ccn-bxuau4ezctts2kfxyr",
+          "CreateTime": 1523604565000,
+          "EndTime": 1526227200000,
+          "SoftwareVersion": "1.0.0",
+          "MaxBandwidth": "1M"
+        },
+        {
+          "Name": "xuehao",
+          "SmartAGId": "sag-c3m3n1khz58lbfhfw1",
+          "CidrBlock": "0.0.0.0/0",
+          "Status": "Init",
+          "AssociatedCcnName": "测试",
+          "AssociatedCcnId": "ccn-kygbldwikzdg2g9b8e",
+          "CreateTime": 1523597460000,
+          "EndTime": 1526227200000,
+          "SoftwareVersion": "1.0.0",
+          "MaxBandwidth": "3M"
+        }
+      ]
+    },
+    "TotalCount": 2,
+    "PageSize": 10,
+    "RequestId": "7F26258D-8BDE-4EC4-BB4D-4DDC64F64F77"
+  }
+}

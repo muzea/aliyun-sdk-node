@@ -1,0 +1,41 @@
+{
+  "name": "GetDefaultAITemplate",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用GetDefaultAITemplate查询默认AI模板。",
+  "abc_id": 130467,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "TemplateType": {
+      "name": "TemplateType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "AIMediaAudit",
+      "description_cn": "模板类型，取值：**AIMediaAudit(智能审核)**。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {}
+}

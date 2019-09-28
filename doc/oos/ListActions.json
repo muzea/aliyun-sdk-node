@@ -1,0 +1,46 @@
+{
+  "name": "ListActions",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/ListActions",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "OOSActionName": {
+      "name": "OOSActionName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "MaxResults": {
+      "name": "MaxResults",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "NextToken": {
+      "name": "NextToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,150 @@
+{
+  "name": "DescribeRouteServicesInCen",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeRouteServicesInCen查询云服务。",
+  "abc_id": 132079,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "",
+      "description_cn": ""
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "列表的页码，默认值为**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时每页的行数，最大值为**50**，默认值为**10**。 "
+    },
+    "CenId": {
+      "name": "CenId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cen-7qthudw0ll6jmc****",
+      "description_cn": "云企业网ID。"
+    },
+    "Host": {
+      "name": "Host",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "100.64.0.0/24",
+      "description_cn": "服务的域名或IP。"
+    },
+    "HostRegionId": {
+      "name": "HostRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "云服务的服务所在地。"
+    },
+    "AccessRegionId": {
+      "name": "AccessRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-beijing",
+      "description_cn": "云服务的访问所在地。"
+    },
+    "HostVpcId": {
+      "name": "HostVpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc-bp1t36rn9l53iwbsf****",
+      "description_cn": "服务关联的VPC。"
+    }
+  },
+  "res": {
+    "TotalCount": 3,
+    "PageNumber": 1,
+    "PageSize": 10,
+    "RouteServiceEntries": {
+      "RouteServiceEntry": [
+        {
+          "Status": "Active",
+          "CenId": "cen-xxxx",
+          "Cidrs": {
+            "Cidr": [
+              "11.161.18.0/25"
+            ]
+          },
+          "HostRegionId": "cn-hangzhou",
+          "AccessRegionId": "cn-hangzhou",
+          "Host": "11.161.18.0/25"
+        },
+        {
+          "Status": "Active",
+          "CenId": "cen-xxxx",
+          "Cidrs": {
+            "Cidr": [
+              "11.161.19.0/25"
+            ]
+          },
+          "HostRegionId": "cn-hangzhou",
+          "AccessRegionId": "cn-hangzhou",
+          "Host": "11.161.19.0/25"
+        },
+        {
+          "Status": "Active",
+          "CenId": "cen-xxxx",
+          "Cidrs": {
+            "Cidr": [
+              "11.161.20.0/25"
+            ]
+          },
+          "HostRegionId": "cn-hangzhou",
+          "AccessRegionId": "cn-hangzhou",
+          "Host": "11.161.20.0/25"
+        }
+      ]
+    }
+  }
+}

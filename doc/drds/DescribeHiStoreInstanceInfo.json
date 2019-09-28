@@ -1,0 +1,35 @@
+{
+  "name": "DescribeHiStoreInstanceInfo",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true
+    },
+    "DrdsInstanceId": {
+      "name": "DrdsInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "HistoreInstanceId": {
+      "name": "HistoreInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    }
+  },
+  "res": {}
+}

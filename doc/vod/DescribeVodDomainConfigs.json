@@ -1,0 +1,47 @@
+{
+  "name": "DescribeVodDomainConfigs",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeVodDomainConfigs查询域名配置，一次可查询多个功能配置。",
+  "abc_id": 130660,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "www.example.com",
+      "description_cn": "点播加速域名。"
+    },
+    "FunctionNames": {
+      "name": "FunctionNames",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "filetype_based_ttl_set,set_req_host_header",
+      "description_cn": "功能列表名称，多个用英文逗号分隔。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {}
+}

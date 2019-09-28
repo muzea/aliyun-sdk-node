@@ -1,0 +1,156 @@
+{
+  "name": "DescribeMetricTop",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询指定时间段内排序后的云产品时序指标监控数据。",
+  "abc_id": 114918,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Namespace": {
+      "name": "Namespace",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "acs_ecs_dashboard",
+      "description_cn": "命名空间，表明监控数据所属产品，例如 “acs_ecs_dashboard”,“acs_rds_dashboard”等。"
+    },
+    "Orderby": {
+      "name": "Orderby",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "Average",
+      "description_cn": "排序字段，即按所填字段进行排序，必填项。"
+    },
+    "Period": {
+      "name": "Period",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "60",
+      "description_cn": "时间间隔，统一用秒数来计算，例如 60, 300, 900。 如果不填写,则按照注册监控项时申明的上报周期来查询原始数据。如果填写统计周期，则查询对应的统计数据 。 "
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2019-01-30 00:00:00",
+      "description_cn": "开始时间，可以传入距离1970年1月1日0点的毫秒数，也可以传入format时间格式数据，如2015-10-20 00:00:00。 "
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2019-01-30 00:10:00",
+      "description_cn": "结束时间，可以传入距离1970年1月1日 0点的毫秒数，也可以传入format时间格式数据，如2015-10-20 00:00:00。 "
+    },
+    "Dimensions": {
+      "name": "Dimensions",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[{\"instanceId\": \"i-abcdefgh12****\"}]",
+      "description_cn": "用于查询指定资源的监控数据，是 key-value 形式的集合。常用的key-value集合为“instanceId：XXXXXX”。需要使用 JSON 字符串表示该 Map 对象，传入时请使用字符串，Dimensions字段必须按顺序传入。 "
+    },
+    "OrderDesc": {
+      "name": "OrderDesc",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "False",
+      "description_cn": "排序方式，可选值：\n\n- False，由大到小排序。\n- True，由小到大排序。"
+    },
+    "Length": {
+      "name": "Length",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1000",
+      "description_cn": "每次查询大小，用于分页查询，默认值为1000。"
+    },
+    "Express": {
+      "name": "Express",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{\"groupby\":[\"userId\",\"instanceId\"]}",
+      "description_cn": "对查询出的现有结果进行时时计算的表达式，例如` {\"groupby\":[\"instanceId\"]}`"
+    },
+    "MetricName": {
+      "name": "MetricName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cpu_idle",
+      "description_cn": "监控项名称。"
+    }
+  },
+  "res": {
+    "Period": "60",
+    "Datapoints": [
+      {
+        "order": 1,
+        "timestamp": 1551687360000,
+        "userId": "12345****",
+        "instanceId": "i-2zeehst1****",
+        "Maximum": 16.41,
+        "Minimum": 4.66,
+        "Average": 7.74,
+        "_count": 1
+      },
+      {
+        "order": 2,
+        "timestamp": 1551687360000,
+        "userId": "12345****",
+        "instanceId": "i-2zefxdy2****",
+        "Maximum": 15.74,
+        "Minimum": 5.03,
+        "Average": 7.14,
+        "_count": 1
+      }
+    ],
+    "RequestId": "1F68A4E8-4488-48E7-9189-3E1F5165E64E",
+    "Code": "200"
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "name": "SaveBatchTaskForCreatingOrderActivate",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OrderActivateParam": {
+      "name": "OrderActivateParam",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "DomainName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "SubscriptionDuration",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "RegistrantProfileId",
+          "type": "Long",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "EnableDomainProxy",
+          "type": "Boolean",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "PermitPremiumActivation",
+          "type": "Boolean",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "AliyunDns",
+          "type": "Boolean",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Dns1",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Dns2",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ZhCity",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ZhRegistrantOrganization",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Country",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ZhRegistrantName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ZhProvince",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ZhAddress",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "City",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "RegistrantOrganization",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "RegistrantName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Province",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Address",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Email",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "PostalCode",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "TelArea",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Telephone",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "TelExt",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "RegistrantType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "TrademarkDomainActivation",
+          "type": "Boolean",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "CouponNo": {
+      "name": "CouponNo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "UseCoupon": {
+      "name": "UseCoupon",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "PromotionNo": {
+      "name": "PromotionNo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "UsePromotion": {
+      "name": "UsePromotion",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

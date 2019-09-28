@@ -1,0 +1,41 @@
+{
+  "name": "ResetAntChainCertificate",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "重置证书",
+  "abc_id": 127080,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID"
+    },
+    "AntChainId": {
+      "name": "AntChainId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "pYogqb9v",
+      "description_cn": "区块链ID"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "6ED983D3-C131-4104-8BDD-1F37992258E1",
+      "Result": "success"
+    },
+    "requestId": "6ED983D3-C131-4104-8BDD-1F37992258E1",
+    "successResponse": true
+  }
+}

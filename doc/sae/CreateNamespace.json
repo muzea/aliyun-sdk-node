@@ -1,0 +1,51 @@
+{
+  "name": "CreateNamespace",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/pop/v1/paas/namespace",
+  "summary_cn": "创建命名空间",
+  "abc_id": 126169,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "NamespaceId": {
+      "name": "NamespaceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-beijing:test",
+      "description_cn": "命名空间ID"
+    },
+    "NamespaceName": {
+      "name": "NamespaceName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "name",
+      "description_cn": "命名空间名称"
+    },
+    "NamespaceDescription": {
+      "name": "NamespaceDescription",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "description",
+      "description_cn": "描述"
+    }
+  },
+  "res": {}
+}

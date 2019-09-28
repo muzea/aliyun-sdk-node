@@ -1,0 +1,70 @@
+{
+  "name": "ModifySslVpnClientCert",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifySslVpnClientCert接口修改SSL-VPN客户端证书的名称。",
+  "abc_id": 65146,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "SSL-VPN客户端证书所在的地域。 \n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "SslVpnClientCertId": {
+      "name": "SslVpnClientCertId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "vsc-bp1n8wcf134yl0osrc****",
+      "description_cn": " SSL-VPN客户端证书的ID。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "02fb3da4-130e-11e9-8e44-0016e04115b",
+      "description_cn": "客户端token，用于保证请求的幂等性。\n\n由客户端生成该参数值，要保证在不同请求间唯一，最大不值过64个 ASCII 字符。"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cert2",
+      "description_cn": "SSL-VPN客户端证书的名称。  \n\n长度为 2-128个字符，必须以字母或中文开头，可包含数字，点号（.），下划线（_）和短横线（-）。但不能以`http://` 或`https://`开头。  "
+    }
+  },
+  "res": {
+    "SslVpnClientCertId": "vsc-bp1n8wcf134yl0osrcg98",
+    "Name": "cert2",
+    "RequestId": "606998F0-B94D-48FE-8316-ACA81BB230DA"
+  }
+}

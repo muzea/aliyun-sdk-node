@@ -1,0 +1,40 @@
+{
+  "name": "DeleteAccessKey",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteAccessKey接口删除RAM用户的访问密钥。",
+  "abc_id": 28691,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "UserAccessKeyId": {
+      "name": "UserAccessKeyId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "0wNEpMMlzy7s****",
+      "description_cn": "指定要删除的`AccessKeyId`。"
+    },
+    "UserName": {
+      "name": "UserName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "zhangq****",
+      "description_cn": "指定用户名。"
+    }
+  },
+  "res": {
+    "RequestId": "04F0F334-1335-436C-A1D7-6C044FE73368"
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "name": "SetLoadBalancerUDPListenerAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用SetLoadBalancerUDPListenerAttribute修改UDP协议监听的配置。",
+  "abc_id": 27605,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "负载均衡实例的地域ID。"
+    },
+    "ListenerPort": {
+      "name": "ListenerPort",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "80",
+      "description_cn": "负载均衡实例前端使用的端口。\n\n取值：**1-65535**。"
+    },
+    "LoadBalancerId": {
+      "name": "LoadBalancerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "lb-bp1rtfnodmywb43ecu4sf-c****",
+      "description_cn": "负载均衡实例的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Bandwidth": {
+      "name": "Bandwidth",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "-1",
+      "description_cn": "监听的带宽峰值。\n\n取值：**-1|1-5120**。\n\n* **-1**：不限制带宽峰值。\n\n* **1-5120**（Mbps）：监听的带宽峰值，所有监听的带宽峰值之和不能超过实例的带宽峰值。"
+    },
+    "Scheduler": {
+      "name": "Scheduler",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "wrr",
+      "description_cn": "调度算法。取值：\n\n* **wrr**：权重值越高的后端服务器，被轮询到的次数（概率）也越高。\n\n* **wlc**：除了根据每台后端服务器设定的权重值来进行轮询，同时还考虑后端服务器的实际负载（即连接数）。\n\n 当权重值相同时，当前连接数越小的后端服务器被轮询到的次数（概率）也越高。\n\n* **rr**：按照访问顺序依次将外部请求依序分发到后端服务器。\n\n* **sch**：基于源IP地址的一致性hash，相同的源地址会调度到相同的后端服务器。\n\n* **tch**：基于四元组的一致性hash（源IP+目的IP+源端口+目的端口），相同的流会调度到相同的后端服务器。\n\n* **qch**：基于QUIC Connection ID一致性hash，相同的QUIC Connection ID会调度到相同的后端服务器。\n\n> 仅有性能保障型实例支持sch、 tch和 qch一致性hash算法。"
+    },
+    "PersistenceTimeout": {
+      "name": "PersistenceTimeout",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "HealthyThreshold": {
+      "name": "HealthyThreshold",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "4",
+      "description_cn": "健康检查连续成功多少次后，将后端服务器的健康检查状态由**fail**判定为**success**。\n\n取值：**2-10**。"
+    },
+    "UnhealthyThreshold": {
+      "name": "UnhealthyThreshold",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "4",
+      "description_cn": "健康检查连续失败多少次后，将后端服务器的健康检查状态由**success**判定为**fail**。\n\n取值：**2-10**。"
+    },
+    "HealthCheckConnectTimeout": {
+      "name": "HealthCheckConnectTimeout",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "100",
+      "description_cn": "接收来自运行状况检查的响应需要等待的时间。如果后端ECS在指定的时间内没有正确响应，则判定为健康检查失败。\n\n取值：**1-300**（秒）。\n\n> 如果**HealthCheckConnectTimeout**的值小于**HealthCheckInterval**的值，则**HealthCheckConnectTimeout**无效，超时时间为**HealthCheckInterval**的值。"
+    },
+    "HealthCheckConnectPort": {
+      "name": "HealthCheckConnectPort",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "80",
+      "description_cn": "健康检查使用的端口。\n\n取值：**1-65535**。\n\n> 在**HealthCheck**值为**on**时才会有效。"
+    },
+    "HealthCheckInterval": {
+      "name": "HealthCheckInterval",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "5",
+      "description_cn": "健康检查的时间间隔。\n\n取值：**1-50**（秒）。"
+    },
+    "healthCheckReq": {
+      "name": "healthCheckReq",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "hello",
+      "description_cn": "UDP监听健康检查的请求串，只允许包含字母、数字字符，最大长度限制为500字符。"
+    },
+    "healthCheckExp": {
+      "name": "healthCheckExp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ok",
+      "description_cn": "UDP监听健康检查的响应串，只允许包含字母、数字字符，最大长度限制为500字符。"
+    },
+    "MaxConnection": {
+      "name": "MaxConnection",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "VServerGroup": {
+      "name": "VServerGroup",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "on",
+      "description_cn": "是否使用虚拟服务器组。\n\n取值：**on | off**。\n\n> **VserverGroup**和**MasterSlaveServerGroup**只允许一个值为**on**。"
+    },
+    "VServerGroupId": {
+      "name": "VServerGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rsp-cige6******",
+      "description_cn": "虚拟服务器组ID。"
+    },
+    "MasterSlaveServerGroupId": {
+      "name": "MasterSlaveServerGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rsp-0bfuc*****",
+      "description_cn": "主备服务器组ID。\n\n> 服务器组ID和主备服务器组ID只能选择一个。"
+    },
+    "MasterSlaveServerGroup": {
+      "name": "MasterSlaveServerGroup",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "on",
+      "description_cn": "是否使用主备服务器组。\n\n取值：**on|off**。\n\n**VserverGroup**和**MasterSlaveServerGroup**只允许一个值为**on**。"
+    },
+    "AclId": {
+      "name": "AclId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "off",
+      "description_cn": "监听绑定的访问策略组ID。\n\n当**AclStatus**参数的值为**on**时，该参数必选。"
+    },
+    "AclType": {
+      "name": "AclType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "white",
+      "description_cn": "访问控制类型：\n\n* **white**： 仅转发来自所选访问控制策略组中设置的IP地址或地址段的请求，白名单适用于应用只允许特定IP访问的场景。\n设置白名单存在一定业务风险。\n\n 一旦设置白名单，就只有白名单中的IP可以访问负载均衡监听。\n\n 如果开启了白名单访问，但访问策略组中没有添加任何IP，则负载均衡监听会转发全部请求。\n\n* **black**： 来自所选访问控制策略组中设置的IP地址或地址段的所有请求都不会转发，黑名单适用于应用只限制某些特定IP访问的场景。\n如果开启了黑名单访问，但访问策略组中没有添加任何IP，则负载均衡监听会转发全部请求。\n\n当**AclStatus**参数的值为**on**时，该参数必选。"
+    },
+    "AclStatus": {
+      "name": "AclStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "off",
+      "description_cn": "是否开启访问控制功能。\n\n取值：**on | off**。"
+    },
+    "VpcIds": {
+      "name": "VpcIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "设置监听的描述信息。"
+    }
+  },
+  "res": {
+    "RequestId": "A0F0643E-D653-4F6F-A67F-205B2A92BE18"
+  }
+}

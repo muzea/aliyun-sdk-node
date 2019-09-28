@@ -1,0 +1,211 @@
+{
+  "name": "DescribeSecurityGroups",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeSecurityGroups查询您创建的安全组的基本信息，例如安全组ID和安全组描述等。返回列表按照安全组ID降序排列。",
+  "abc_id": 25556,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "VpcId": {
+      "name": "VpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc-vpcid1",
+      "description_cn": "安全组所在的专有网络ID。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "安全组列表的页码。起始值：1\n\n默认值：1 "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时设置的每页行数。最大值：50\n\n默认值：10 "
+    },
+    "SecurityGroupIds": {
+      "name": "SecurityGroupIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[\"sg-id1\", \"sg-id2\", \"sg-id2\",....]",
+      "description_cn": "安全组ID列表。一次最多支持100个安全组ID，ID之间用半角逗号（,）隔开，格式为JSON数组。"
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rg-resourcegroupid1",
+      "description_cn": "安全组所在的企业资源组ID。"
+    },
+    "NetworkType": {
+      "name": "NetworkType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc",
+      "description_cn": "网络类型。"
+    },
+    "SecurityGroupId": {
+      "name": "SecurityGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sg-securitygroupid",
+      "description_cn": "安全组ID。"
+    },
+    "SecurityGroupName": {
+      "name": "SecurityGroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test1",
+      "description_cn": "安全组名称。"
+    },
+    "IsQueryEcsCount": {
+      "name": "IsQueryEcsCount",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": ""
+    },
+    "FuzzyQuery": {
+      "name": "FuzzyQuery",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": ""
+    },
+    "DryRun": {
+      "name": "DryRun",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否只预检此次请求。\n         \n- true：发送检查请求，不会查询资源状况。检查项包括AccessKey是否有效、RAM用户的授权情况和是否填写了必需参数。如果检查不通过，则返回对应错误。如果检查通过，会返回错误码DryRunOperation。\n- false：发送正常请求，通过检查后返回2XX HTTP状态码并直接查询资源状况。\n\n默认值：false"
+    }
+  },
+  "res": {
+    "RequestId": "94D38899-626D-434A-891F-7E1F77A81525",
+    "TotalCount": 4,
+    "PageSize": "10",
+    "RegionId": "cn-hangzhou",
+    "PageNumber": "1",
+    "SecurityGroups": {
+      "SecurityGroup": [
+        {
+          "SecurityGroupId": "sg-F876FF7BA",
+          "Description": "TestByXcf"
+        },
+        {
+          "SecurityGroupId": "sg-086FFC27A",
+          "Description": "test00212"
+        },
+        {
+          "SecurityGroupId": "sg-BA4B7975B",
+          "Description": "cn-hangzhou test group"
+        },
+        {
+          "SecurityGroupId": "sg-35F20777C",
+          "Description": "cn-hangzhou test group"
+        }
+      ]
+    }
+  }
+}

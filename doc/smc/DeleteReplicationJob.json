@@ -1,0 +1,37 @@
+{
+  "name": "DeleteReplicationJob",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "删除一个迁移任务。",
+  "abc_id": 121814,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "JobId": {
+      "name": "JobId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "j-xxxxxxxxxx",
+      "description_cn": "迁移任务Id。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "000000000"
+    }
+  },
+  "res": {}
+}

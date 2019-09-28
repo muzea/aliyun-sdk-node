@@ -1,0 +1,64 @@
+{
+  "name": "ModifyMountTarget",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "ModifyMountTarget用于修改挂载点信息。 ",
+  "abc_id": 62628,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "MountTargetDomain": {
+      "name": "MountTargetDomain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1ca404a666-wxa89.cn-hangzhou.nas.aliyuncs.com",
+      "description_cn": "挂载点域名"
+    },
+    "FileSystemId": {
+      "name": "FileSystemId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1ca404a666",
+      "description_cn": "文件系统 ID"
+    },
+    "AccessGroupName": {
+      "name": "AccessGroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "classic-test",
+      "description_cn": "权限组名称"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Inactive",
+      "description_cn": "挂载点状态，枚举值包括：Active（表示启用），Inactive（表示禁用）"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,71 @@
+{
+  "name": "SetLoadBalancerDeleteProtection",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用SetLoadBalancerDeleteProtection设置实例删除保护状态。",
+  "abc_id": 122674,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "负载均衡实例的地域。\n\n您可以通过调用[DescribeRegions](~~27584~~)接口查询地域ID。"
+    },
+    "LoadBalancerId": {
+      "name": "LoadBalancerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "lb-bp1b6c719dfa08e*****",
+      "description_cn": "负载均衡实例的ID。"
+    },
+    "DeleteProtection": {
+      "name": "DeleteProtection",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "off",
+      "description_cn": "负载均衡删除保护状态。\n\n取值：**on|off**。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "791D8B68-AE0F-4174-AF54-088C8B3C5D54"
+  }
+}

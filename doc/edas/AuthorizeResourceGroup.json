@@ -1,0 +1,34 @@
+{
+  "name": "AuthorizeResourceGroup",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/pop/v5/account/authorize_res_group",
+  "timeout": 2000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "TargetUserId": {
+      "name": "TargetUserId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false
+    },
+    "ResourceGroupIds": {
+      "name": "ResourceGroupIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

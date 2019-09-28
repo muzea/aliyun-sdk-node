@@ -1,0 +1,50 @@
+{
+  "name": "GetAppInfos",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用GetAppInfos通过应用ID查询应用信息，支持批量查询。",
+  "abc_id": 130538,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AppIds": {
+      "name": "AppIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "app-xxxxx",
+      "description_cn": "应用ID列表，最多支持10个，多个使用英文逗号分隔。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ResourceRealOwnerId": {
+      "name": "ResourceRealOwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

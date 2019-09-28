@@ -1,0 +1,25 @@
+{
+  "name": "TriggerLabGatewayConfigReport",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "GwEui": {
+      "name": "GwEui",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,139 @@
+{
+  "name": "DescribeTasks",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeTasks查询一个或多个异步请求的进度。",
+  "abc_id": 25622,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "查询结果的页码，起始值为1，默认值为1。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "分页查询时设置的每页记录数，最大值100行，默认值为10。"
+    },
+    "TaskIds": {
+      "name": "TaskIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[\"t-bp10e8or********74o8x\",\"t-bp10e8or********74o8y\"]",
+      "description_cn": "任务ID，单次最多支持指定100个，ID之间使用半角逗号（,）分隔。 "
+    },
+    "TaskAction": {
+      "name": "TaskAction",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ImportImage",
+      "description_cn": "任务操作的接口名称。取值范围： \n         \n- ImportImage：导入镜像\n- ExportImage：导出镜像\n- RedeployInstance：重新部署ECS实例"
+    },
+    "TaskStatus": {
+      "name": "TaskStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Finished",
+      "description_cn": "任务状态。取值范围： \n         \n- Finished：已完成 \n- Processing：运行中 \n- Waiting：多任务排队中 \n- Deleted：已取消 \n- Paused：暂停 \n- Failed：失败\n\n默认值：无。只支持查询状态为Finished、Processing和Failed的任务，填入其他取值将不会生效。  "
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2015-11-23T15:10:00Z",
+      "description_cn": "按创建时间查询，创建时间区间的起始点。按照[ISO8601](~~25696~~)标准表示，并需要使用UTC +0时间，格式为yyyy-MM-ddTHH:mm:ssZ。 "
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2015-11-23T15:16:00Z",
+      "description_cn": "按创建时间查询，创建时间区间的终止点。按照[ISO8601](~~25696~~)标准表示，并需要使用UTC +0时间，格式为yyyy-MM-ddTHH:mm:ssZ。 "
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 2,
+    "PageSize": 2,
+    "RegionId": "cn-hangzhou",
+    "TaskSet": [
+      {
+        "Task": [
+          {
+            "CreationTime": "2015-11-24T12:50Z",
+            "FinishedTime": "2015-11-24T12:50Z",
+            "SupportCancel": true,
+            "TaskAction": "ImportImage",
+            "TaskStatus": "Finished",
+            "TaskId": "t-bp10e8orkpqm0lc74o8X"
+          },
+          {
+            "CreationTime": "2015-11-23T15:10Z",
+            "FinishedTime": "2015-11-23T15:16Z",
+            "SupportCancel": true,
+            "TaskAction": "ImportImage",
+            "TaskStatus": "Finished",
+            "TaskId": "t-23sgu0dyj"
+          }
+        ]
+      }
+    ],
+    "RequestId": "F746C690-D9EA-4F87-AF31-8E1910FAB541"
+  }
+}

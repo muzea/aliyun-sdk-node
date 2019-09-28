@@ -1,0 +1,159 @@
+{
+  "name": "ReplaceSystemDisk",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ReplaceSystemDisk更换一台ECS实例的系统盘或者操作系统。",
+  "abc_id": 25521,
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "i-instanceid1",
+      "description_cn": "指定实例的ID。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。"
+    },
+    "ImageId": {
+      "name": "ImageId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "m-imageid1",
+      "description_cn": "重置系统时使用的镜像ID。"
+    },
+    "SystemDisk.Size": {
+      "name": "SystemDisk.Size",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "80",
+      "description_cn": "新的系统盘容量，单位为GiB。取值范围：Max{20, 参数ImageId对应的镜像大小}~500\n\n默认值：Max{40, 参数ImageId对应的镜像大小}。"
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123e4567-e89b-12d3-a456-426655440000",
+      "description_cn": "保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。**ClientToken**只支持ASCII字符，且不能超过64个字符。更多详情，请参见[如何保证幂等性](~~25693~~)。"
+    },
+    "UseAdditionalService": {
+      "name": "UseAdditionalService",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否使用阿里云提供的虚拟机系统配置（Windows：NTP、KMS；Linux：NTP、YUM）。\n\n> 挂载系统盘时（即设备名为/dev/xvda）有效。"
+    },
+    "Password": {
+      "name": "Password",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "EcsV587!",
+      "description_cn": "实例的密码。长度为8至30个字符，必须同时包含大小写英文字母、数字和特殊符号中的三类字符。特殊符号可以是：\n\n```\n()`~!@#$%^&*-_+=|{}[]:;'<>,.?/\n```\n\n其中，Windows实例不能以斜线号（/）为密码首字符。\n\n> 如果传入`Password`参数，建议您使用HTTPS协议发送请求，避免密码泄露。"
+    },
+    "PasswordInherit": {
+      "name": "PasswordInherit",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否使用镜像预设的密码。使用该参数时，Password参数必须为空，同时您需要确保使用的镜像已经设置了密码。 \n\n默认值：false\n\n"
+    },
+    "KeyPairName": {
+      "name": "KeyPairName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "JoshuaCentOS",
+      "description_cn": "密钥对名称。 \n         \n- Windows系统ECS实例，忽略该参数。默认为空。即使填写了该参数，仍旧只执行Password的内容。  \n- Linux系统ECS实例的密码登录方式会被初始化成禁止。  \n         "
+    },
+    "DiskId": {
+      "name": "DiskId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "d-23b3p4***",
+      "description_cn": ""
+    },
+    "Platform": {
+      "name": "Platform",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "CentOS",
+      "description_cn": "操作系统发行版。取值为CentOS、Ubuntu等。"
+    },
+    "Architecture": {
+      "name": "Architecture",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i386",
+      "description_cn": "系统架构。取值范围：\n\n- i386\n- x86_64"
+    },
+    "SecurityEnhancementStrategy": {
+      "name": "SecurityEnhancementStrategy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Active",
+      "description_cn": "当指定的云盘为系统盘时，您可以设置是否开启安全加固，加载云安全中心插件等。取值范围： \n         \n- Active：启用安全加固，使用云安全中心免费版。该值仅支持公共镜像。  \n- DeactiveDeactive：不启用安全加固，禁止加载云安全中心插件。该值支持所有镜像。  \n         "
+    }
+  },
+  "res": {
+    "RequestId": "337568C5-64F3-4B76-8CDD-D3D8C57B5B8C",
+    "DiskId": "d-j6cam2z21u4ks3dj6flb"
+  }
+}

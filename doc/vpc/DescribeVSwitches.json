@@ -1,0 +1,172 @@
+{
+  "name": "DescribeVSwitches",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeVSwitches接口查询已创建的交换机。",
+  "abc_id": 35748,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": " 交换机所属VPC所在的地域。 您可以通过调用[DescribeRegions](https://help.aliyun.com/document_detail/36063.html?spm=a2c4g.11186623.6.617.672255b1j9oVah)接口获取地域ID。  "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "VpcId": {
+      "name": "VpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc-25eq58pl****",
+      "description_cn": " VPC的ID。 "
+    },
+    "VSwitchId": {
+      "name": "VSwitchId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vsw-23dsf3****",
+      "description_cn": " 交换机的ID。 "
+    },
+    "ZoneId": {
+      "name": "ZoneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou-d",
+      "description_cn": " 交换机所属区的ID。 您可以通过调用[DescribeZones](https://help.aliyun.com/document_detail/36064.html?spm=a2c4g.11186623.6.618.672255b1j9oVah)接口获取地域ID。  "
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "VSwitchName": {
+      "name": "VSwitchName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "VSwitch-1",
+      "description_cn": "交换机的名称。"
+    },
+    "DryRun": {
+      "name": "DryRun",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "IsDefault": {
+      "name": "IsDefault",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否查询指定地域下的默认交换机，取值： \n\n- **true**（默认值）：查询指定地域下的所有交换机。  \n\n- **false**：不查询默认交换机。  "
+    },
+    "RouteTableId": {
+      "name": "RouteTableId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vtb-bp145q7glnuzdvzu2****",
+      "description_cn": "路由表的ID。"
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1234567",
+      "description_cn": "资源组ID。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": " 列表的页码，默认值为**1**。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": " 分页查询时每页的行数，最大值为**50**，默认值为**10**。  "
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "PageSize": 10,
+    "RequestId": "9A572171-4E27-40D1-BD36-D26C9E71E29E",
+    "TotalCount": 1,
+    "VSwitches": {
+      "VSwitch": [
+        {
+          "AvailableIpAddressCount": 246,
+          "CidrBlock": "172.16.1.0/24",
+          "CreationTime": "2014-10-29T15:21:02Z",
+          "Description": "",
+          "Status": "Available",
+          "VSwitchId": "vsw-25b7pv15t",
+          "VSwitchName": "",
+          "VpcId": "vpc-257gq642n",
+          "ZoneId": "cn-beijing-a"
+        }
+      ]
+    }
+  }
+}

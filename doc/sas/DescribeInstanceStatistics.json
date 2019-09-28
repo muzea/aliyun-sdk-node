@@ -1,0 +1,72 @@
+{
+  "name": "DescribeInstanceStatistics",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用该接口获取机器的统计信息。",
+  "abc_id": 130977,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Uuid": {
+      "name": "Uuid",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "[\"ff675afd-703e-40dc-809b-0fad8b0ded28\"]",
+      "description_cn": "指定待查询的机器列表。"
+    },
+    "From": {
+      "name": "From",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "sas",
+      "description_cn": "指定数据请求来源。固定为sas。"
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "127.1.1.1",
+      "description_cn": "指定访问源IP地址。"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "zh",
+      "description_cn": "指定返回结果语言环境。\n\n- **zh**：中文\n- **en**：英文\n"
+    }
+  },
+  "res": {
+    "code": 200,
+    "requestId": "7E0618A9-D5EF-4220-9471-C42B5E92719F",
+    "success": true,
+    "data": {
+      "EntEntityListity": [
+        {
+          "Uuid": "xxx",
+          "Health": 1,
+          "Suspicious": 2,
+          "Vul": 3
+        }
+      ]
+    }
+  }
+}

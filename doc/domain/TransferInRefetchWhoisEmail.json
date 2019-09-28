@@ -1,0 +1,53 @@
+{
+  "name": "TransferInRefetchWhoisEmail",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": null,
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "test.com",
+      "description_cn": "域名"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "接口返回错误信息语言，枚举值范围：zh 中文；en 英文。默认为en"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "127.0.0.1",
+      "description_cn": "用户ip"
+    }
+  },
+  "res": {
+    "RequestId": "C01181CC-D03C-465F-B89F-C78B721567D0"
+  }
+}

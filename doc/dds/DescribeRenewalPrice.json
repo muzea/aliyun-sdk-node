@@ -1,0 +1,100 @@
+{
+  "name": "DescribeRenewalPrice",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeRenewalPrice接口查询指定MongoDB实例续费一个月的价格。",
+  "abc_id": 132060,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "BusinessInfo": {
+      "name": "BusinessInfo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{“ActivityId\":\"000000000\"}",
+      "description_cn": "附加参数，业务信息。"
+    },
+    "CouponNo": {
+      "name": "CouponNo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "youhuiquan_promotion_option_id_for_blank",
+      "description_cn": "优惠码，默认为：**youhuiquan_promotion_option_id_for_blank**。"
+    }
+  },
+  "res": {
+    "SubOrders": {
+      "SubOrder": [
+        {
+          "RuleIds": {
+            "RuleId": [
+              11111111,
+              11111111,
+              11111111
+            ]
+          },
+          "OriginalAmount": 1144.8,
+          "TradeAmount": 0,
+          "InstanceId": "dds-bpxxxxxxxx",
+          "DiscountAmount": 1144.8
+        }
+      ]
+    },
+    "RequestId": "C45C9E98-289B-42F4-84C8-03FD5E29B3EB",
+    "Order": {
+      "RuleIds": {
+        "RuleId": [
+          11111111
+        ]
+      },
+      "OriginalAmount": 1144.8,
+      "TradeAmount": 0,
+      "Coupons": {
+        "Coupon": []
+      },
+      "DiscountAmount": 1144.8,
+      "Currency": "CNY"
+    },
+    "Rules": {
+      "Rule": [
+        {
+          "Name": "demo",
+          "RuleDescId": 11111111
+        }
+      ]
+    }
+  }
+}

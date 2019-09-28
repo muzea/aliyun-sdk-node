@@ -1,0 +1,64 @@
+{
+  "name": "DescribeMountTargets",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "DescribeMountTargets用于返回挂载点描述信息。 ",
+  "abc_id": 62626,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "FileSystemId": {
+      "name": "FileSystemId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1ca404a666",
+      "description_cn": "文件系统 ID"
+    },
+    "MountTargetDomain": {
+      "name": "MountTargetDomain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1ca404a666-xog95.cn-hangzhou.nas.aliyuncs.com",
+      "description_cn": "挂载点域名"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "每个分页包含的挂载点个数（默认 10）"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "列表的分页页码（从 1 开始计数）"
+    }
+  },
+  "res": {}
+}

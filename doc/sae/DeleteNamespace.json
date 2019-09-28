@@ -1,0 +1,29 @@
+{
+  "name": "DeleteNamespace",
+  "protocol": "HTTPS|HTTP",
+  "method": "DELETE",
+  "path": "/pop/v1/paas/namespace",
+  "summary_cn": "删除命名空间",
+  "abc_id": 126172,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "NamespaceId": {
+      "name": "NamespaceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-beijing:test",
+      "description_cn": "命名空间ID"
+    }
+  },
+  "res": {}
+}

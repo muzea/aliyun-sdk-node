@@ -1,0 +1,29 @@
+{
+  "name": "ListPublishedServices",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v1/sam/service/listPublishedServices",
+  "summary_cn": "获取发布的微服务列表",
+  "abc_id": 126211,
+  "timeout": 2000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "00000000-0000-0000-0000-000000000000",
+      "description_cn": "应用ID"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,33 @@
+{
+  "name": "CheckGrant",
+  "protocol": "HTTP|HTTPS",
+  "method": "GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

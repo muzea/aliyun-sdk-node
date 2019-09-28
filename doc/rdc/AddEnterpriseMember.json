@@ -1,0 +1,48 @@
+{
+  "name": "AddEnterpriseMember",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false
+    },
+    "StaffId": {
+      "name": "StaffId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false
+    },
+    "Operator": {
+      "name": "Operator",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "Message": "",
+    "RequestId": "C135EFDE-DA3C-40D2-9D08-F523F52B9A19",
+    "Success": true,
+    "Code": 0
+  }
+}

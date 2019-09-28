@@ -1,0 +1,169 @@
+{
+  "name": "DescribeAuditRecords",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeAuditRecords接口查询MongoDB实例的审计日志。",
+  "abc_id": 62158,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例所属的地域ID，您可以通过调用[DescribeDBInstanceAttribute](~~62010~~)进行查询。"
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2019-03-13T12:11:14Z",
+      "description_cn": "查询开始时间，格式为<i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z（UTC时间）。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2019-03-13T13:11:14Z",
+      "description_cn": "查询结束时间，必须晚于查询开始时间，格式为<i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z（UTC时间）。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。\n> 当本参数传入的是分片集群实例ID时，还需要传入**NodeId**参数。"
+    },
+    "NodeId": {
+      "name": "NodeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "d-bpxxxxxxxx",
+      "description_cn": "分片集群实例中Mongos节点ID或Shard节点ID。\n\n> 当**DBInstanceId**参数传入的是分片集群实例ID时，本参数才可用。"
+    },
+    "Database": {
+      "name": "Database",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "testdatabase",
+      "description_cn": "数据库名，默认为所有数据库。"
+    },
+    "User": {
+      "name": "User",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "root",
+      "description_cn": "数据库账号，默认为所有账号。"
+    },
+    "Form": {
+      "name": "Form",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Stream",
+      "description_cn": "审计记录返回的展示类型，取值：\n- **File**：触发审计日志文件的生成，若传入这个值，只返回公共参数，需再调用[DescribeAuditFiles](~~62162~~)获取文件的下载地址。\n- **Stream**：返回数据流。\n\n默认为**Stream**。"
+    },
+    "QueryKeywords": {
+      "name": "QueryKeywords",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "slow",
+      "description_cn": "关键字查询，多个关键字以空格分隔，不超过10个关键字。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "每页记录数，取值：**30**、**50**、**100**，默认值为**30**。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页码，大于0，且不超过Integer的最大值，默认值为**1**。"
+    }
+  },
+  "res": {
+    "Items": {
+      "SQLRecord": [
+        {
+          "TotalExecutionTimes": 703,
+          "Syntax": "{ \"atype\" : \"command\", \"param\" : { \"command\" : \"find\", \"ns\" : \"123.test1\", \"args\" : { \"find\" : \"test1\", \"filter\" : { \"x\" : 1, \"y\" : 2 }, \"shardVersion\" : [ { \"$timestamp\" : { \"t\" : 0, \"i\" : 0 } }, { \"$oid\" : \"000000000000000000000000\" } ], \"$clusterTime\" : { \"clusterTime\" : { \"$timestamp\" : { \"t\" : 1552275017, \"i\" : 2 } }, \"signature\" : { \"hash\" : { \"$binary\" : \"9qfygDs61fKCvdXJqjq+f0zML0E=\", \"$type\" : \"00\" }, \"keyId\" : { \"$numberLong\" : \"6666955498811555841\" } } }, \"$client\" : { \"application\" : { \"name\" : \"MongoDB Shell\" }, \"driver\" : { \"name\" : \"MongoDB Internal Client\", \"version\" : \"3.4.10\" }, \"os\" : { \"type\" : \"Linux\", \"name\" : \"Ubuntu\", \"architecture\" : \"x86_64\", \"version\" : \"16.04\" }, \"mongos\" : { \"host\" : \"rxxxxxx.cloud.cm10:3074\", \"client\" : \"47.xxx.xxx.xx:53854\", \"version\" : \"4.0.0\" } }, \"$configServerState\" : { \"opTime\" : { \"ts\" : { \"$timestamp\" : { \"t\" : 1552275017, \"i\" : 2 } }, \"t\" : { \"$numberLong\" : \"3\" } } }, \"$db\" : \"123\" } }, \"result\": \"OK\" }",
+          "HostAddress": "11.xxx.xxx.xxx",
+          "ExecuteTime": "2019-03-11T03:30:27Z",
+          "ThreadID": "139xxxxxxxx",
+          "AccountName": "__system;",
+          "DBName": "local;"
+        },
+        {
+          "TotalExecutionTimes": 0,
+          "Syntax": "{ \"atype\" : \"createIndex\", \"param\" : { \"ns\" : \"123.test1\", \"indexName\" : \"y_1\", \"indexSpec\" : { \"v\" : 2, \"key\" : { \"y\" : 1 }, \"name\" : \"y_1\", \"ns\" : \"123.test1\" } }, \"result\": \"OK\" }",
+          "HostAddress": "",
+          "ExecuteTime": "2019-03-11T03:30:06Z",
+          "ThreadID": "140xxxxxxxx",
+          "AccountName": "__system;",
+          "DBName": "local;"
+        }
+      ]
+    },
+    "PageNumber": 1,
+    "TotalRecordCount": 2,
+    "RequestId": "3278BEB8-503B-4E46-8F7E-D26E040C9769",
+    "PageRecordCount": 30
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "DeleteNetworkOptimization",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteNetworkOptimization删除网络优化实例。",
+  "abc_id": 121715,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "网络优化实例所在的地域ID。"
+    },
+    "NetworkOptId": {
+      "name": "NetworkOptId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "opt-qjf2h3kla7xr5******",
+      "description_cn": "网络优化实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "0462613F-9831-483E-A753-B61ABE2498DA"
+  }
+}

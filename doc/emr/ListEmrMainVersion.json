@@ -1,0 +1,134 @@
+{
+  "name": "ListEmrMainVersion",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 ListEmrMainVersion 接口查询 E-MapReduce 版本列表。",
+  "abc_id": 100451,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "EmrVersion": {
+      "name": "EmrVersion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "EMR-3.15.0",
+      "description_cn": "EMR版本。"
+    },
+    "StackName": {
+      "name": "StackName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "EMR",
+      "description_cn": "软件栈名字：EMR。"
+    },
+    "StackVersion": {
+      "name": "StackVersion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3.15.1.1.0",
+      "description_cn": "软件栈版本。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "分页页数，从1开始。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页大小。"
+    }
+  },
+  "res": {
+    "emrMainVersionList": [
+      {
+        "clusterTypeInfoList": [],
+        "display": false,
+        "ecmVersion": true,
+        "emrVersion": "EMR-3.16.0",
+        "imageId": "m-bp1amnkvohr8eb6wud0f",
+        "regionId": "cn-hangzhou",
+        "stackName": "EMR",
+        "stackVersion": "3.16.0.1.2",
+        "whiteUserList": []
+      },
+      {
+        "clusterTypeInfoList": [],
+        "display": false,
+        "ecmVersion": true,
+        "emrVersion": "EMR-3.16.1",
+        "imageId": "m-bp1amnkvohr8eb6wud0f",
+        "regionId": "cn-hangzhou",
+        "stackName": "EMR",
+        "stackVersion": "3.16.0.1.3",
+        "whiteUserList": []
+      },
+      {
+        "clusterTypeInfoList": [],
+        "display": false,
+        "ecmVersion": true,
+        "emrVersion": "EMR-3.15.1",
+        "imageId": "m-bp1ddn41swc2fqjgj3ik",
+        "regionId": "cn-hangzhou",
+        "stackName": "EMR",
+        "stackVersion": "3.15.1.1.0",
+        "whiteUserList": []
+      },
+      {
+        "clusterTypeInfoList": [],
+        "display": false,
+        "ecmVersion": true,
+        "emrVersion": "EMR-3.15.2",
+        "imageId": "m-bp1hdwryap03nxpl1rcd",
+        "regionId": "cn-hangzhou",
+        "stackName": "EMR",
+        "stackVersion": "3.15.1.1.0",
+        "whiteUserList": []
+      },
+      {
+        "clusterTypeInfoList": [],
+        "display": false,
+        "ecmVersion": true,
+        "emrVersion": "EMR-3.15.3",
+        "imageId": "m-bp1hdwryap03nxpl1rcd",
+        "regionId": "cn-hangzhou",
+        "stackName": "EMR",
+        "stackVersion": "3.15.1.1.0",
+        "whiteUserList": []
+      }
+    ],
+    "pageNumber": 1,
+    "pageSize": 5,
+    "requestId": "D835118F-3198-461E-B06E-7A73C4353F59",
+    "totalCount": 140
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "SearchPipeline",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": null,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    },
+    "State": {
+      "name": "State",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    }
+  },
+  "res": {}
+}

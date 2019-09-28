@@ -1,0 +1,52 @@
+{
+  "name": "DeleteBgpPeer",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "使用DeleteBgpPeer删除指定的BGP邻居。",
+  "abc_id": 63267,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "BGP组所在的地域。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "BgpPeerId": {
+      "name": "BgpPeerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "bgp-wz977wcrmb69axxxxxxxx",
+      "description_cn": " BGP邻居的ID。  "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "02fb3da4-130e-11e9-8e44-001xxxxxxxx",
+      "description_cn": "用于保证请求的幂等性。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过 64 个 ASCII 字符。 "
+    }
+  },
+  "res": {
+    "RequestId": "0ED8D006-F706-4D23-88ED-E11ED28DCAC0"
+  }
+}

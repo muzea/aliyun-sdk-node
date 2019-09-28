@@ -1,0 +1,36 @@
+{
+  "name": "GetGroup",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用GetGroup接口获取用户组信息。",
+  "abc_id": 28701,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "GroupName": {
+      "name": "GroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "Dev-Team",
+      "description_cn": "用户组名称。\n\n格式：`^[a-zA-Z0-9\\-]+$`。"
+    }
+  },
+  "res": {
+    "RequestId": "D4065824-E422-3ED6-68B1-1AF7D5C7804C",
+    "Group": {
+      "GroupName": "Dev-Team",
+      "Comments": "开发团队",
+      "CreateDate": "2015-01-23T12:33:18Z",
+      "UpdateDate": "2015-02-11T03:15:21Z"
+    }
+  }
+}

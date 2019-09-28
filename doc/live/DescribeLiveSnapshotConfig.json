@@ -1,0 +1,78 @@
+{
+  "name": "DescribeLiveSnapshotConfig",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeLiveSnapshotConfig查询域名下的截图配置。",
+  "abc_id": 44796,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "www.yourdomain.com",
+      "description_cn": "您的加速域名。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AppName": {
+      "name": "AppName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "testApp",
+      "description_cn": "直播流所属应用名称。\n\n*表示查询针对域名的配置，不传表示查询该域名下所有的配置。"
+    },
+    "PageNum": {
+      "name": "PageNum",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "\t\n分页的页码。\n\n默认值：**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "每页大小。取值范围：**5~30**。\n\n默认值：**10**。"
+    },
+    "Order": {
+      "name": "Order",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "asc",
+      "description_cn": "排序。取值：\n\n- asc（默认值）：升序\n- desc：降序"
+    }
+  },
+  "res": {}
+}

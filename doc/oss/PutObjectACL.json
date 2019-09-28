@@ -1,0 +1,31 @@
+{
+  "name": "PutObjectACL",
+  "protocol": "HTTP|HTTPS",
+  "method": "PUT",
+  "path": "/[ObjectName]",
+  "timeout": null,
+  "reqFormat": {
+    "BucketName": {
+      "name": "BucketName",
+      "position": "domain",
+      "required": true
+    },
+    "ObjectName": {
+      "name": "ObjectName",
+      "position": "path",
+      "required": true
+    },
+    "acl": {
+      "name": "acl",
+      "position": "query",
+      "required": true,
+      "default": ""
+    },
+    "x-oss-object-acl": {
+      "name": "x-oss-object-acl",
+      "position": "header",
+      "required": false
+    }
+  },
+  "res": {}
+}

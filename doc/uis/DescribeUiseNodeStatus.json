@@ -1,0 +1,66 @@
+{
+  "name": "DescribeUiseNodeStatus",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeUiseNodeStatus接口查询UIS节点的状态信息。",
+  "abc_id": 126612,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "UisNodeId": {
+      "name": "UisNodeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "UISNODE-xxxbink187cqsgfni****",
+      "description_cn": "节点实例的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "Ip": {
+      "name": "Ip",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "140.206.225.xx",
+      "description_cn": "节点IP。"
+    }
+  },
+  "res": {
+    "IpStatusList": {
+      "IpStatus": [
+        {
+          "Ip": "140.206.225.XXX",
+          "MaxConnections": 1000,
+          "CurrentConnections": 246
+        },
+        {
+          "Ip": "180.163.202.XXX",
+          "MaxConnections": 1000,
+          "CurrentConnections": 355
+        }
+      ]
+    },
+    "RequestId": "01DEA843-F116-4881-B356-6A492E60B36D"
+  }
+}

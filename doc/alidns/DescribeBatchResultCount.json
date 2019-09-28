@@ -1,0 +1,65 @@
+{
+  "name": "DescribeBatchResultCount",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeBatchResultCount查询一次批量操作任务的执行结果。",
+  "abc_id": 90009,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "用户语言。"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": "用户端 IP。"
+    },
+    "TaskId": {
+      "name": "TaskId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456",
+      "description_cn": "任务ID。\n\n如果TaskId不为空，返回TaskId对应任务的执行结果；如果TaskId为空，返回最后一次任务的执行结果。"
+    },
+    "BatchType": {
+      "name": "BatchType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "DOMAIN_ADD",
+      "description_cn": "批量操作类型，取值：\n\n- **DOMAIN_ADD**：批量添加域名\n- **DOMAIN_DEL**：批量删除域名\n- **RR_ADD**：批量添加解析\n- **RR_DEL**：批量删除解析"
+    }
+  },
+  "res": {
+    "RequestId": "75446CC1-FC9A-4595-8D96-089D73D7A63D",
+    "Status": "0"
+  }
+}

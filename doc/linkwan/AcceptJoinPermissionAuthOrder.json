@@ -1,0 +1,29 @@
+{
+  "name": "AcceptJoinPermissionAuthOrder",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AcceptJoinPermissionAuthOrder接受专用入网凭证授权工单。",
+  "abc_id": 109934,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OrderId": {
+      "name": "OrderId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "123",
+      "description_cn": "要接受的授权工单ID。"
+    }
+  },
+  "res": {}
+}

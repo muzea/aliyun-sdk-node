@@ -1,0 +1,92 @@
+{
+  "name": "AddVServerGroupBackendServers",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AddVServerGroupBackendServers向指定的后端服务器组中添加后端服务器。",
+  "abc_id": 35218,
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "负载均衡实例的地域ID。"
+    },
+    "VServerGroupId": {
+      "name": "VServerGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rsp-cige6j5e7p",
+      "description_cn": "服务器组ID。"
+    },
+    "BackendServers": {
+      "name": "BackendServers",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "[{ \"ServerId\": \"eni-xxxxxxxxx\", \"Weight\": \"100\", \"Type\": \"eni\", \"ServerIp\": \"192.168.11.1\", \"Port\":\"80\" }, { \"ServerId\": \"eni-xxxxxxxxx\", \"Weight\": \"100\", \"Type\": \"eni\", \"ServerIp\": \"192.168.11.2\", \"Port\":\"80\" }]",
+      "description_cn": "服务器组列表。单次调用最多可添加20个后端服务器。\n\n服务器组列表需要包含以下参数：\n\n- **ServerId**：ECS实例ID。\n\n- **Port**：必选参数，表示后端服务器使用的端口。取值范围：**1~65535**。\n\n- **Weight**：后端服务器的权重，取值：0~100。默认值为100。如果值为0，则不会将请求转发给该后端服务器。\n\n- **Type**：后端服务器类型，取值：\n\n    -  **ecs**: ECS实例（默认）\n\n    - **eni**：弹性网卡实例"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "AddVServerGroupBackendServers": {
+      "RequestId": "9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C",
+      "VServerGroupId": "rsp-cige6j5e7p",
+      "BackendServers": {
+        "BackendServer": [
+          {
+            "ServerId": "vm-233",
+            "Port": "80",
+            "Weight": "100"
+          },
+          {
+            "ServerId": "vm-232",
+            "Port": "90",
+            "Weight": "100"
+          },
+          {
+            "ServerId": "vm-231",
+            "Port": "70",
+            "Weight": "100"
+          }
+        ]
+      }
+    }
+  }
+}

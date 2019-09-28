@@ -1,0 +1,174 @@
+{
+  "name": "SetAutoScaleConfig",
+  "protocol": "HTTP|HTTPS",
+  "method": "GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "ClusterId": {
+      "name": "ClusterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "MaxNodesInCluster": {
+      "name": "MaxNodesInCluster",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "EnableAutoGrow": {
+      "name": "EnableAutoGrow",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "EnableAutoShrink": {
+      "name": "EnableAutoShrink",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "GrowIntervalInMinutes": {
+      "name": "GrowIntervalInMinutes",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ShrinkIntervalInMinutes": {
+      "name": "ShrinkIntervalInMinutes",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ShrinkIdleTimes": {
+      "name": "ShrinkIdleTimes",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "GrowTimeoutInMinutes": {
+      "name": "GrowTimeoutInMinutes",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ExtraNodesGrowRatio": {
+      "name": "ExtraNodesGrowRatio",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "GrowRatio": {
+      "name": "GrowRatio",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ExcludeNodes": {
+      "name": "ExcludeNodes",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SpotStrategy": {
+      "name": "SpotStrategy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SpotPriceLimit": {
+      "name": "SpotPriceLimit",
+      "type": "Float",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Queues": {
+      "name": "Queues",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "QueueName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "InstanceTypes",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "InstanceType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "SpotStrategy",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "SpotPriceLimit",
+          "type": "Float",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "EnableAutoGrow",
+          "type": "Boolean",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "EnableAutoShrink",
+          "type": "Boolean",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {}
+}

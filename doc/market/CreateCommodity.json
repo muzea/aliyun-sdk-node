@@ -1,0 +1,34 @@
+{
+  "name": "CreateCommodity",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ApplicationId": {
+      "name": "ApplicationId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "Content": {
+      "name": "Content",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    }
+  },
+  "res": {}
+}

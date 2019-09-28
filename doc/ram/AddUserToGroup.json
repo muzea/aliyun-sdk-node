@@ -1,0 +1,40 @@
+{
+  "name": "AddUserToGroup",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AddUserToGroup接口将RAM用户添加到指定的用户组。",
+  "abc_id": 28705,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "UserName": {
+      "name": "UserName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "zhangq****",
+      "description_cn": "用户名称。"
+    },
+    "GroupName": {
+      "name": "GroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "Dev-Team",
+      "description_cn": "用户组名称。"
+    }
+  },
+  "res": {
+    "RequestId": "1B968853-B423-63A6-FE1F-45E81BC2AD61"
+  }
+}

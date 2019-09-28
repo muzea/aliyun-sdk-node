@@ -1,0 +1,368 @@
+{
+  "name": "Push",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AppKey": {
+      "name": "AppKey",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false
+    },
+    "PushType": {
+      "name": "PushType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false
+    },
+    "DeviceType": {
+      "name": "DeviceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false
+    },
+    "Target": {
+      "name": "Target",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false
+    },
+    "TargetValue": {
+      "name": "TargetValue",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false
+    },
+    "Body": {
+      "name": "Body",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "Title": {
+      "name": "Title",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "JobKey": {
+      "name": "JobKey",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SendSpeed": {
+      "name": "SendSpeed",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "StoreOffline": {
+      "name": "StoreOffline",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "PushTime": {
+      "name": "PushTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ExpireTime": {
+      "name": "ExpireTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "iOSApnsEnv": {
+      "name": "iOSApnsEnv",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "iOSRemind": {
+      "name": "iOSRemind",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "iOSRemindBody": {
+      "name": "iOSRemindBody",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "iOSBadge": {
+      "name": "iOSBadge",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "iOSBadgeAutoIncrement": {
+      "name": "iOSBadgeAutoIncrement",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "iOSSilentNotification": {
+      "name": "iOSSilentNotification",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "iOSMusic": {
+      "name": "iOSMusic",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "iOSSubtitle": {
+      "name": "iOSSubtitle",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "iOSNotificationCategory": {
+      "name": "iOSNotificationCategory",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "iOSMutableContent": {
+      "name": "iOSMutableContent",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "iOSExtParameters": {
+      "name": "iOSExtParameters",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AndroidNotifyType": {
+      "name": "AndroidNotifyType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AndroidOpenType": {
+      "name": "AndroidOpenType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AndroidActivity": {
+      "name": "AndroidActivity",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AndroidMusic": {
+      "name": "AndroidMusic",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AndroidOpenUrl": {
+      "name": "AndroidOpenUrl",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AndroidXiaoMiActivity": {
+      "name": "AndroidXiaoMiActivity",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AndroidXiaoMiNotifyTitle": {
+      "name": "AndroidXiaoMiNotifyTitle",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AndroidXiaoMiNotifyBody": {
+      "name": "AndroidXiaoMiNotifyBody",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AndroidPopupActivity": {
+      "name": "AndroidPopupActivity",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AndroidPopupTitle": {
+      "name": "AndroidPopupTitle",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AndroidPopupBody": {
+      "name": "AndroidPopupBody",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AndroidNotificationBarType": {
+      "name": "AndroidNotificationBarType",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AndroidNotificationBarPriority": {
+      "name": "AndroidNotificationBarPriority",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AndroidExtParameters": {
+      "name": "AndroidExtParameters",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AndroidRemind": {
+      "name": "AndroidRemind",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AndroidNotificationChannel": {
+      "name": "AndroidNotificationChannel",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SmsTemplateName": {
+      "name": "SmsTemplateName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SmsSignName": {
+      "name": "SmsSignName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SmsParams": {
+      "name": "SmsParams",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SmsDelaySecs": {
+      "name": "SmsDelaySecs",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SmsSendPolicy": {
+      "name": "SmsSendPolicy",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

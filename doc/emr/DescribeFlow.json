@@ -1,0 +1,191 @@
+{
+  "name": "DescribeFlow",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 DescribeFlow 接口查询工作流信息",
+  "abc_id": 100960,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "Id": {
+      "name": "Id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "F-7A39731FE7196358",
+      "description_cn": "工作流ID。"
+    },
+    "ProjectId": {
+      "name": "ProjectId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "FP-257A173659F59685",
+      "description_cn": "项目ID。"
+    }
+  },
+  "res": {
+    "alertUserGroupBizId": "",
+    "Description": "flow",
+    "Type": "EMR",
+    "CreateCluster": false,
+    "GmtCreate": 1533294723000,
+    "GmtModified": 1535449545000,
+    "HostName": "",
+    "Name": "flow",
+    "Status": "STOP_SCHEDULE",
+    "ParentFlowList": {
+      "ParentFlow": []
+    },
+    "CategoryId": "FC-020BA6E39BF0DF35",
+    "alertDingDingGroupBizId": "",
+    "ClusterId": "C-23D6879E9BBE1D65",
+    "Periodic": false,
+    "RequestId": "E909BE04-1989-4751-93E6-1327FFC71EC0",
+    "Graph": {
+      "edges": [
+        {
+          "id": "af91f6b1",
+          "index": 2,
+          "sourceAnchor": 0,
+          "source": "48d474ea",
+          "target": "f2764af5",
+          "targetAnchor": 0
+        },
+        {
+          "id": "3022d5b9",
+          "index": 4,
+          "source": "48d474ea",
+          "sourceAnchor": 0,
+          "target": "ee4ee659",
+          "targetAnchor": 0
+        },
+        {
+          "id": "cfa94eec",
+          "index": 6,
+          "source": "f2764af5",
+          "sourceAnchor": 1,
+          "target": "75ba7979",
+          "targetAnchor": 0
+        },
+        {
+          "id": "00cd608a",
+          "index": 7,
+          "source": "ee4ee659",
+          "sourceAnchor": 1,
+          "target": "75ba7979",
+          "targetAnchor": 0
+        },
+        {
+          "id": "c53a4788",
+          "index": 9,
+          "source": "75ba7979",
+          "sourceAnchor": 1,
+          "target": "ea5b3e8f",
+          "targetAnchor": 0
+        }
+      ],
+      "nodes": [
+        {
+          "id": "f2764af5",
+          "index": 0,
+          "spmAnchorId": "5176.8250060.0.i158.771e28d0IPNQGE",
+          "config": {
+            "clusterId": "C-E2544BF486038F9A"
+          },
+          "attribute": {
+            "jobType": "SHELL",
+            "jobId": "FJ-D9595F5B79ADBAD4",
+            "type": "JOB"
+          },
+          "label": "echo",
+          "shape": "shellJobNode",
+          "type": "node",
+          "y": 394.5,
+          "x": 321.25,
+          "size": "170*34"
+        },
+        {
+          "id": "48d474ea",
+          "index": 1,
+          "spmAnchorId": "0.0.0.i0.766645eb2cmNtQ",
+          "attribute": {
+            "type": "START"
+          },
+          "shape": "startControlNode",
+          "type": "node",
+          "y": 262,
+          "size": "80*34",
+          "x": 500
+        },
+        {
+          "id": "ee4ee659",
+          "index": 3,
+          "spmAnchorId": "5176.8250060.0.i11.6bb528d0eMBmZQ",
+          "attribute": {
+            "jobType": "SHELL",
+            "jobId": "FJ-7BE1062897B19D25",
+            "type": "JOB"
+          },
+          "config": {
+            "hostName": ""
+          },
+          "label": "fail_job",
+          "shape": "shellJobNode",
+          "type": "node",
+          "y": 456.5,
+          "size": "170*34",
+          "x": 518.125
+        },
+        {
+          "id": "75ba7979",
+          "index": 5,
+          "spmAnchorId": "5176.8250060.0.i11.6bb528d0eMBmZQ",
+          "attribute": {
+            "jobType": "SHELL",
+            "jobId": "FJ-D9595F5B79ADBAD4",
+            "type": "JOB"
+          },
+          "config": {
+            "hostName": "emr-header-1.cluster-71886",
+            "clusterId": "C-7CE7BC10276E24BE"
+          },
+          "label": "echo",
+          "shape": "shellJobNode",
+          "type": "node",
+          "y": 585.5,
+          "size": "170*34",
+          "x": 250.125
+        },
+        {
+          "id": "ea5b3e8f",
+          "index": 8,
+          "spmAnchorId": "5176.8250060.0.i19.6bb528d0eMBmZQ",
+          "attribute": {
+            "type": "END"
+          },
+          "shape": "endControlNode",
+          "type": "node",
+          "y": 700.5,
+          "size": "80*34",
+          "x": 239.125
+        }
+      ]
+    },
+    "Id": "F-7A39731FE7196358"
+  }
+}

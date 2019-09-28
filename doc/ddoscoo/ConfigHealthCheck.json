@@ -1,0 +1,70 @@
+{
+  "name": "ConfigHealthCheck",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ConfigHealthCheck配置四层或七层健康检查。",
+  "abc_id": 91698,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn"
+    },
+    "ForwardProtocol": {
+      "name": "ForwardProtocol",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "tcp",
+      "description_cn": "转发协议，取值： \n\n- **TCP**（四层）\n- **UDP**（四层）\n-  **HTTP**（七层）"
+    },
+    "FrontendPort": {
+      "name": "FrontendPort",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "233",
+      "description_cn": "前端端口。"
+    },
+    "HealthCheck": {
+      "name": "HealthCheck",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "{\"Type\":\"tcp\",\"Timeout\":10,\"Port\":80,\"Interval\":10,\"Up\":10,\"Down\":40}\"}",
+      "description_cn": "传入HealthCheck对象JSON串，具体结构描述如下：\n\n- **Type**，String类型，必选，协议类型。取值：**TCP**（四层）、**HTTP**（七层）。\n- **Domain**，String类型，可选，健康检查/七层健康检查/域名。\n- **Uri**，String类型，可选，健康检查/七层健康检查/检查路径。\n- **Timeout**，Integer类型，可选，健康检查/四层健康检查/响应超时时间。\n- **Port**，Integer类型，可选，健康检查/四层健康检查/检查端口。\n- **Interval**，Integer类型，可选，健康检查/四层健康检查/检查间隔。\n- **Up**，Integer类型，可选，健康检查/四层健康检查/健康阈值。\n- **Down**，Integer类型，可选，健康检查/四层健康检查/不健康阈值。\n"
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ddoscoo-cn-XXXXXX",
+      "description_cn": "要操作的实例ID。"
+    }
+  },
+  "res": {}
+}

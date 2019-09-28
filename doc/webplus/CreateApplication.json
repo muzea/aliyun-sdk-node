@@ -1,0 +1,51 @@
+{
+  "name": "CreateApplication",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/pop/v1/wam/application",
+  "summary_cn": "使用CreateApplication创建一个新应用。",
+  "abc_id": 127711,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AppName": {
+      "name": "AppName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "app1",
+      "description_cn": "新建应用的名称"
+    },
+    "AppDescription": {
+      "name": "AppDescription",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "This is an application",
+      "description_cn": "应用描述信息"
+    },
+    "CategoryName": {
+      "name": "CategoryName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Java",
+      "description_cn": "新建应用的平台类型"
+    }
+  },
+  "res": {}
+}

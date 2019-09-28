@@ -1,0 +1,88 @@
+{
+  "name": "ListCluster",
+  "protocol": "HTTPS",
+  "method": "GET",
+  "path": "/api/v2/clusters",
+  "summary_cn": "查询已拥有的集群信息",
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Header",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou"
+    },
+    "clusterId": {
+      "name": "clusterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cmy99ugusuco66x9qc6knqms",
+      "description_cn": "集群ID"
+    },
+    "displayName": {
+      "name": "displayName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "xxxxx",
+      "description_cn": "集群名称"
+    },
+    "state": {
+      "name": "state",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "RUNNING",
+      "description_cn": "集群状态 集群正在创建 STARTING； 集群正常运行 RUNNING； 集群正在扩容（增加slave节点数） EXPANDING； 集群正在变配（提交或者降低master型号） UPGRADING； 集群正在销毁 DESTROYING； 集群已经被销毁 DESTROYED； 正在缩容 REDUCING； 集群维护中 MAINTAINING；"
+    },
+    "region": {
+      "name": "region",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "集群所属地区"
+    },
+    "pageSize": {
+      "name": "pageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "分页选项，每页的集群数"
+    },
+    "pageIndex": {
+      "name": "pageIndex",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "分页选项，第几页"
+    }
+  },
+  "res": {}
+}

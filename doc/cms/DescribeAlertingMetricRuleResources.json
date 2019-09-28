@@ -1,0 +1,62 @@
+{
+  "name": "DescribeAlertingMetricRuleResources",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/",
+  "summary_cn": "查询一个报警规则下正在报警的资源。",
+  "abc_id": 114944,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "RuleId": {
+      "name": "RuleId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "alarm-uuid1234abc****",
+      "description_cn": "报警规则的ID。GroupId字段和RuleId字段至少需要填写1个字段，2个都填写时，查询同时满足两种查询条件。"
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456",
+      "description_cn": "应用分组ID。"
+    }
+  },
+  "res": {
+    "Total": 1,
+    "Resources": {
+      "Resource": [
+        {
+          "Enable": true,
+          "Resource": "userId=12****,instanceId=i-bp1a012****",
+          "RuleId": "alerRuleId****",
+          "RetryTimes": 3,
+          "LastAlertTime": 1554718182000,
+          "MetricValues": "{\"timestamp\":1554723720000,\"Value\":631}",
+          "LastModifyTime": 1554723762000,
+          "StartTime": 1545901080000,
+          "RuleName": "ruleId",
+          "Threshold": "400",
+          "GroupId": "33488"
+        }
+      ]
+    },
+    "Success": true
+  }
+}

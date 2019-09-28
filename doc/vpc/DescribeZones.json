@@ -1,0 +1,60 @@
+{
+  "name": "DescribeZones",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeZones查询指定地域中可用区的列表。",
+  "abc_id": 36064,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": " 地域ID。 您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "6FEA0CF3-D3B9-43E5-A304-D217037876A8",
+    "Zones": {
+      "Zone": [
+        {
+          "ZoneId": "cn-hangzhou-b",
+          "LocalName": "华东 1 可用区 B"
+        },
+        {
+          "ZoneId": "cn-hangzhou-d",
+          "LocalName": "华东 1 可用区 D"
+        },
+        {
+          "ZoneId": "cn-hangzhou-e",
+          "LocalName": "华东 1 可用区 E"
+        },
+        {
+          "ZoneId": "cn-hangzhou-f",
+          "LocalName": "华东 1 可用区 F"
+        },
+        {
+          "ZoneId": "cn-hangzhou-g",
+          "LocalName": "华东 1 可用区 G"
+        },
+        {
+          "ZoneId": "cn-hangzhou-h",
+          "LocalName": "华东 1 可用区 H"
+        }
+      ]
+    }
+  }
+}

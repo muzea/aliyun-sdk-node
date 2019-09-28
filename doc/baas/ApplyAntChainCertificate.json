@@ -1,0 +1,52 @@
+{
+  "name": "ApplyAntChainCertificate",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|PUT|GET",
+  "path": "/",
+  "summary_cn": "申请链接一条蚂蚁区块链，上传tls证书请求",
+  "abc_id": 127081,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID"
+    },
+    "UploadReq": {
+      "name": "UploadReq",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "LS0tLS1...",
+      "description_cn": "上传内容"
+    },
+    "AntChainId": {
+      "name": "AntChainId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "bDXK6boZ",
+      "description_cn": "区块链ID"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "D3FB9E67-0E31-4B8B-8895-3660CCE8CA62",
+      "Result": "success"
+    },
+    "requestId": "D3FB9E67-0E31-4B8B-8895-3660CCE8CA62",
+    "successResponse": true
+  }
+}

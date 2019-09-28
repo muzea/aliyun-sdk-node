@@ -1,0 +1,84 @@
+{
+  "name": "RemoveBackendServers",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用RemoveBackendServers移除后端服务器。",
+  "abc_id": 27633,
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-east-hangzhou-01",
+      "description_cn": "负载均衡实例的地域ID。"
+    },
+    "BackendServers": {
+      "name": "BackendServers",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "[{\"ServerId\":\"i-2zej4lxhjoq1icue6kup\",\"Weight\":\"100\"},{\"ServerId\":\"i-2ze1u9ywulp5pbvvc7hv\",\"Weight\":\"100\"}]",
+      "description_cn": "要移除的后端服务器。\n\n> 一次调用最多可以移除20个后端服务器。"
+    },
+    "LoadBalancerId": {
+      "name": "LoadBalancerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "lb-bp1qjwo61pqz3ahl*****",
+      "description_cn": "负载均衡实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "description_cn": ""
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "365F4154-92F6-4AE4-92F8-7FF34B540710",
+    "LoadBalancerId": "139a00604ad-cn-east-hangzhou-01",
+    "BackendServers": {
+      "BackendServer": [
+        {
+          "ServerId": "vm-233",
+          "Weight": 100
+        },
+        {
+          "ServerId": "vm-234",
+          "Weight": 100
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "ModifyDiskSpec",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyDiskSpec升级一块ESSD云盘的性能等级。",
+  "abc_id": 123780,
+  "timeout": 9000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DiskId": {
+      "name": "DiskId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "d-bp131n0q38u3a4zi*****",
+      "description_cn": "ESSD云盘的ID。"
+    },
+    "PerformanceLevel": {
+      "name": "PerformanceLevel",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "PL2",
+      "description_cn": "修改ESSD云盘的性能等级。取值范围：\n\n- PL1（默认）：单盘最高随机读写IOPS 5万。\n- PL2：单盘最高随机读写IOPS 10万。\n- PL3：单盘最高随机读写IOPS 100万。\n\n>修改后的性能等级不能低于修改前的性能等级。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "hide"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123"
+    }
+  },
+  "res": {
+    "RequestId": "473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E"
+  }
+}

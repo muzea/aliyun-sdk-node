@@ -1,0 +1,66 @@
+{
+  "name": "InvokeShellCommand",
+  "protocol": "HTTP|HTTPS",
+  "method": "GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "ClusterId": {
+      "name": "ClusterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "Command": {
+      "name": "Command",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "Instance": {
+      "name": "Instance",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Id",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "WorkingDir": {
+      "name": "WorkingDir",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Timeout": {
+      "name": "Timeout",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

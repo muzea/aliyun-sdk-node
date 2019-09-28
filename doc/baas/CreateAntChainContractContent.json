@@ -1,0 +1,94 @@
+{
+  "name": "CreateAntChainContractContent",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "创建一个合约工程的内容，可以是文件或者文件夹",
+  "abc_id": 127106,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID"
+    },
+    "ContentName": {
+      "name": "ContentName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "newFile",
+      "description_cn": "新建文件/文件夹名称"
+    },
+    "IsDirectory": {
+      "name": "IsDirectory",
+      "type": "Boolean",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "false",
+      "description_cn": "是否是文件夹"
+    },
+    "ParentContentId": {
+      "name": "ParentContentId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "R38DYDop",
+      "description_cn": "上级目录ID"
+    },
+    "ProjectId": {
+      "name": "ProjectId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "bDXK1b8Z",
+      "description_cn": "合约工程ID"
+    },
+    "Content": {
+      "name": "Content",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "\"\"",
+      "description_cn": "新建文件/文件夹内容"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "C407F102-062A-44B3-BBDC-E3B2718F633D",
+      "Result": {
+        "ContentName": "newFile",
+        "Content": "",
+        "CreateTime": 1564024964404,
+        "UpdateTime": 1564024964404,
+        "ProjectId": "bDXK1b8Z",
+        "ParentContentId": "R38DYDop",
+        "IsDirectory": false,
+        "ContentId": "R6XMn59e"
+      }
+    },
+    "requestId": "C407F102-062A-44B3-BBDC-E3B2718F633D",
+    "successResponse": true
+  }
+}

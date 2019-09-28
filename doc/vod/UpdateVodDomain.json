@@ -1,0 +1,57 @@
+{
+  "name": "UpdateVodDomain",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用UpdateVodDomain修改加速域名。",
+  "abc_id": 130576,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "点播加速域名。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "Sources": {
+      "name": "Sources",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[{\"content\":\"1.1.1.1\",\"type\":\"ipaddr\",\"priority\":\"20\",\"port\":80}]",
+      "description_cn": "回源地址列表。"
+    },
+    "TopLevelDomain": {
+      "name": "TopLevelDomain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "顶级接入域。"
+    }
+  },
+  "res": {}
+}

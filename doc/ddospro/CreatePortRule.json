@@ -1,0 +1,88 @@
+{
+  "name": "CreatePortRule",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreatePortRule接口创建非网站转发规则。",
+  "abc_id": 92114,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": ""
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn",
+      "description_cn": ""
+    },
+    "FrontPort": {
+      "name": "FrontPort",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "255",
+      "description_cn": "设置转发端口。"
+    },
+    "BackPort": {
+      "name": "BackPort",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "255",
+      "description_cn": "设置源站端口。"
+    },
+    "ProxyType": {
+      "name": "ProxyType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "tcp",
+      "description_cn": "设置转发协议，取值：\n\n- **tcp**\n- **udp**"
+    },
+    "RealServerList": {
+      "name": "RealServerList",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2.2.2.2,3.3.3.3",
+      "description_cn": "添加源站列表，以逗号分隔。"
+    },
+    "Ip": {
+      "name": "Ip",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": "要操作的高防实例IP。"
+    }
+  },
+  "res": {}
+}

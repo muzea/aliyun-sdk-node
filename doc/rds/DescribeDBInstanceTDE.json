@@ -1,0 +1,45 @@
+{
+  "name": "DescribeDBInstanceTDE",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDBInstanceTDE接口查询实例数据加密状态。",
+  "abc_id": 26255,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "TDEStatus": "Enabled",
+    "Databases": [
+      {
+        "DBName": "test02",
+        "TDEStatus": "Enabled"
+      }
+    ],
+    "requestId": "C816A4BF-A6EC-4722-95F9-2055859CCFD2"
+  }
+}

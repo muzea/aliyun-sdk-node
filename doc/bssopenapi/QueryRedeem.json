@@ -1,0 +1,61 @@
+{
+  "name": "QueryRedeem",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ExpiryTimeStart": {
+      "name": "ExpiryTimeStart",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true
+    },
+    "ExpiryTimeEnd": {
+      "name": "ExpiryTimeEnd",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true
+    },
+    "EffectiveOrNot": {
+      "name": "EffectiveOrNot",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true
+    },
+    "PageNum": {
+      "name": "PageNum",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true
+    }
+  },
+  "res": {}
+}

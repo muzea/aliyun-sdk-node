@@ -1,0 +1,34 @@
+{
+  "name": "ListCustomImages",
+  "protocol": "HTTP|HTTPS",
+  "method": "GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ImageOwnerAlias": {
+      "name": "ImageOwnerAlias",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "BaseOsTag": {
+      "name": "BaseOsTag",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

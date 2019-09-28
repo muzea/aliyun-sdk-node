@@ -1,0 +1,116 @@
+{
+  "name": "DescribeDBInstanceAttribute",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDBInstanceAttribute接口查看RDS实例的详细信息。",
+  "abc_id": 26231,
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "rm-uf6wjk5xxxxxxxxxx",
+      "description_cn": "实例ID。可以一次输入最多30个，以英文逗号（,）分隔。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Expired": {
+      "name": "Expired",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "False",
+      "description_cn": "实例过期状态，取值：\n\n* **True**：已过期；\n* **False**：未过期。"
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "Items": {
+      "DBInstanceAttribute": [
+        {
+          "Extra": {
+            "DBInstanceId": {
+              "DBInstanceId": []
+            }
+          },
+          "ConnectionString": "rm-uf6wjk5xxxxxxxxxx.mysql.rds.aliyuncs.com",
+          "AccountMaxQuantity": 99999,
+          "CurrentKernelVersion": "rds_20170714",
+          "DBInstanceCPU": "2",
+          "IPType": "IPv4",
+          "ZoneId": "cn-hangzhou-f",
+          "ReadOnlyDBInstanceIds": {
+            "ReadOnlyDBInstanceId": []
+          },
+          "ConnectionMode": "Standard",
+          "VSwitchId": "vsw-bp1w9oueixxxxx",
+          "VpcId": "vpc-bp1opxu1zkhxxxxx",
+          "Engine": "MySQL",
+          "MaintainTime": "18:00Z-22:00Z",
+          "MaxConnections": 4000,
+          "DBInstanceType": "Primary",
+          "DBInstanceMemory": 4096,
+          "EngineVersion": "5.7",
+          "DBInstanceStorageType": "cloud_ssd",
+          "DBInstanceStatus": "Running",
+          "SecurityIPMode": "normal",
+          "PayType": "Prepaid",
+          "SupportUpgradeAccountType": "No",
+          "AccountType": "Mix",
+          "LockMode": "Unlock",
+          "DBInstanceNetType": "Intranet",
+          "MaxIOPS": 600,
+          "DBInstanceClass": "mysql.n2.medium.1",
+          "DBMaxQuantity": 99999,
+          "ResourceGroupId": "rg-acfmyxxxxx",
+          "DBInstanceId": "rm-bp176xxxxx",
+          "VpcCloudInstanceId": "rm-bp176gz7xxxxx",
+          "DBInstanceClassType": "x",
+          "LatestKernelVersion": "",
+          "InstanceNetworkType": "VPC",
+          "DBInstanceStorage": 20,
+          "SupportCreateSuperAccount": "No",
+          "CreationTime": "2018-11-28T01:32:08Z",
+          "Category": "Basic",
+          "Port": "3306",
+          "InsId": 1,
+          "ExpireTime": "2018-12-28T16:00:00Z",
+          "RegionId": "cn-hangzhou",
+          "AvailabilityValue": "100.0%",
+          "SecurityIPList": "1.1.1.1"
+        }
+      ]
+    },
+    "RequestId": "CFE76192-2F85-4D18-975E-465B77C129C4"
+  }
+}

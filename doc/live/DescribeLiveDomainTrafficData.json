@@ -1,0 +1,91 @@
+{
+  "name": "DescribeLiveDomainTrafficData",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeLiveDomainTrafficData查询直播域名网络流量监控数据。",
+  "abc_id": 67409,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "区域。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test.com",
+      "description_cn": "需要查询的直播域名。\n\n> 若参数为空，默认返回所有直播域名合并后数据。\n"
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2017-12-10T20:00:00Z",
+      "description_cn": "获取数据起始时间点。\n\n日期格式按照ISO8601表示法，并使用UTC时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。\n\n- 最小数据粒度为**5**分钟。\n- 最大数据粒度为**1**天。\n- 最长可查询**90**天内的数据。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2017-12-10T21:00:00Z",
+      "description_cn": "结束时间需大于起始时间。\n\n获日期格式按照ISO8601表示法，并使用UTC时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。\n\n- 最小数据粒度为**5**分钟。\n\n- 最大数据粒度为**1**天。\n\n- 最长可查询**90**天内的数据。"
+    },
+    "Interval": {
+      "name": "Interval",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "300",
+      "description_cn": "查询数据的时间粒度，支持**300**, **3600**和**86400**秒。\n\n> 不传或传值不支持时，使用默认值**300**秒。"
+    },
+    "IspNameEn": {
+      "name": "IspNameEn",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "alibaba",
+      "description_cn": "运营商英文名，通过**DescribeCdnRegionAndIsp**接口获得，不传为所有运营商。"
+    },
+    "LocationNameEn": {
+      "name": "LocationNameEn",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "tianjin",
+      "description_cn": "区域英文名，通过**DescribeCdnRegionAndIsp**接口获得，不传为所有区域。"
+    }
+  },
+  "res": {}
+}

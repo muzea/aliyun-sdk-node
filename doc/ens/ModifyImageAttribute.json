@@ -1,0 +1,48 @@
+{
+  "name": "ModifyImageAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 1000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Version": {
+      "name": "Version",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "ImageId": {
+      "name": "ImageId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false
+    },
+    "ImageName": {
+      "name": "ImageName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false
+    },
+    "product": {
+      "name": "product",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

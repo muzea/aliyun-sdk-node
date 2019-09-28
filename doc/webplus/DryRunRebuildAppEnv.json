@@ -1,0 +1,25 @@
+{
+  "name": "DryRunRebuildAppEnv",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/pop/v1/wam/appEnv/dryRunRebuild",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "EnvId": {
+      "name": "EnvId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true
+    }
+  },
+  "res": {}
+}

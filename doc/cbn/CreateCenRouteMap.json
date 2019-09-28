@@ -1,0 +1,293 @@
+{
+  "name": "CreateCenRouteMap",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateCenRouteMap接口创建路由策略。",
+  "abc_id": 124800,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CenId": {
+      "name": "CenId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cen-7qthudw0ll6jmc****",
+      "description_cn": "云企业网的ID。"
+    },
+    "CenRegionId": {
+      "name": "CenRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "云企业网所在的地域。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "TransmitDirection": {
+      "name": "TransmitDirection",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "RegionIn",
+      "description_cn": "路由策略应用的方向，取值：\n\n- **RegionIn**：路由传入云企业网地域网关的方向。\n\n 例如路由从本地域网络实例发布到本地域网关，或其他地域的路由发布到本地域网关。\n\n- **RegionOut**：路由传出云企业网地域网关的方向。\n\n 例如路由从本地域网关发布到本地域下其他网络实例，或发布到其他地域网关。"
+    },
+    "Priority": {
+      "name": "Priority",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "3",
+      "description_cn": "路由策略的优先级，取值：**1**~**100**。优先级数字越小，优先级越高。\n\n> 同地域同策略应用方向的路由策略优先级唯一。执行路由策略时，系统从优先级数字最小的路由策略开始匹配条件语句，因此在指定路由策略优先级时，要注意符合期望的匹配顺序。"
+    },
+    "MapResult": {
+      "name": "MapResult",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "Permit",
+      "description_cn": "所有匹配条件通过后的策略行为，取值：\n\n- **Permit**：允许通过被匹配的路由。\n\n- **Deny**：拒绝通过被匹配的路由。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "111"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "abc",
+      "description_cn": "路由策略的描述。"
+    },
+    "NextPriority": {
+      "name": "NextPriority",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "关联的下一条路由策略的优先级，取值：**1**~**100**。\n\n- 当未配置关联优先级时，路由策略无关联的下一条路由策略。\n\n- 当关联优先级取值为1时，路由策略关联当前路由策略的下一条路由策略。\n\n- 当关联优先级取值非1时，路由策略关联优先级必须大于当前路由策略的优先级。\n\n仅**MapResult**取值为**Permit**时，匹配通过的路由才会继续匹配关联的下一条路由策略。\n\n"
+    },
+    "SourceInstanceIds": {
+      "name": "SourceInstanceIds",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "DestinationInstanceIds": {
+      "name": "DestinationInstanceIds",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "SourceRouteTableIds": {
+      "name": "SourceRouteTableIds",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "DestinationRouteTableIds": {
+      "name": "DestinationRouteTableIds",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "SourceRegionIds": {
+      "name": "SourceRegionIds",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "SourceChildInstanceTypes": {
+      "name": "SourceChildInstanceTypes",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "DestinationChildInstanceTypes": {
+      "name": "DestinationChildInstanceTypes",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "DestinationCidrBlocks": {
+      "name": "DestinationCidrBlocks",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "CidrMatchMode": {
+      "name": "CidrMatchMode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Include ",
+      "description_cn": "匹配前缀模式，为match语句，取值：\n\n- **Include**：模糊匹配。匹配条件中的路由前缀包含被匹配路由的路由前缀即判定为匹配成功。\n\n 例如：定义1.1.0.0/16的策略可以模糊匹配到1.1.1.0/24的路由。\n\n- **Complete**：精确匹配。匹配条件中的路由前缀必须与被匹配路由的路由前缀一致，才判定为匹配成功。 \n\n 例如：定义1.1.0.0/16的策略仅可以精确匹配到1.1.0.0/16的路由。"
+    },
+    "RouteTypes": {
+      "name": "RouteTypes",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "MatchAsns": {
+      "name": "MatchAsns",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Long"
+    },
+    "AsPathMatchMode": {
+      "name": "AsPathMatchMode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Include",
+      "description_cn": "匹配as-path模式，为match语句，取值：\n\n- **Include**：模糊匹配，匹配条件中的AS Path与被匹配路由的AS Path有重叠即判定为匹配成功。 \n\n- **Complete**：精确匹配，匹配条件中的AS Path必须与被匹配路由的AS Path一致，才判定为匹配成功。 "
+    },
+    "MatchCommunitySet": {
+      "name": "MatchCommunitySet",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "CommunityMatchMode": {
+      "name": "CommunityMatchMode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Include",
+      "description_cn": "匹配community模式，为match语句，取值：\n\n- **Include**：模糊匹配，匹配条件中的Community与被匹配路由的Community有重叠即判定为匹配成功。 \n\n- **Complete**：精确匹配，匹配条件中的Community必须与被匹配路由的Community一致，才判定为匹配成功。"
+    },
+    "OperateCommunitySet": {
+      "name": "OperateCommunitySet",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "CommunityOperateMode": {
+      "name": "CommunityOperateMode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Additive",
+      "description_cn": "操作community的模式，为action语句，取值：\n\n- **Additive**：添加。\n\n- **Replace**：替换。"
+    },
+    "Preference": {
+      "name": "Preference",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "22",
+      "description_cn": "修改路由的优先级，为action语句，取值：**1**~**100**，路由默认优先级为**50**，取值越小优先级越高。\n"
+    },
+    "SourceInstanceIdsReverseMatch": {
+      "name": "SourceInstanceIdsReverseMatch",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "路由传递源实例ID列表排除匹配模式，取值：\n\n- **false**（默认）：路由传递源实例ID在`SourceInstanceIds`中时，匹配通过。\n\n- **true**：路由传递源实例ID不在`SourceInstanceIds`中时，匹配通过。"
+    },
+    "DestinationInstanceIdsReverseMatch": {
+      "name": "DestinationInstanceIdsReverseMatch",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "路由传递目的实例ID列表排除匹配模式，取值：\n\n- **false**（默认）：路由传递目的实例ID在`DestinationInstanceIds`中时，匹配通过。\n\n- **true**：路由传递目的实例ID不在`DestinationInstanceIds`中时，匹配通过。"
+    }
+  },
+  "res": {
+    "RequestId": "62172DD5-6BAC-45DF-8D44-56SDF467BAC",
+    "RouteMapId": "cenrmap-w4yf7toozfol3q****"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "ImportKeyMaterial",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 20,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "KeyId": {
+      "name": "KeyId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "EncryptedKeyMaterial": {
+      "name": "EncryptedKeyMaterial",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "ImportToken": {
+      "name": "ImportToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "KeyMaterialExpireUnix": {
+      "name": "KeyMaterialExpireUnix",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

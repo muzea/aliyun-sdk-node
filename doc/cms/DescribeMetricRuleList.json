@@ -1,0 +1,205 @@
+{
+  "name": "DescribeMetricRuleList",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询报警规则列表。",
+  "abc_id": 114941,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "MetricName": {
+      "name": "MetricName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cpu_total",
+      "description_cn": "监控项名称，可通过查询DescribeMetricMetaList接口获得或参考[预设监控项参考](~~28619~~)。"
+    },
+    "EnableState": {
+      "name": "EnableState",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "启用状态， true：启用， false：禁用，默认为全部状态。"
+    },
+    "Namespace": {
+      "name": "Namespace",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "acs_ecs_dashboard",
+      "description_cn": "产品的数据命名空间，可通过查询DescribeMetricMetaList接口获得或参考[预设监控项参考](~~28619~~)。"
+    },
+    "Page": {
+      "name": "Page",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "分页码，默认1。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "每页显示记录条数，默认10。"
+    },
+    "AlertState": {
+      "name": "AlertState",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ALARM",
+      "description_cn": "报警规则状态：\n- OK：正常 \n- ALARM：报警\n- INSUFFICIENT_DATA：无数据"
+    },
+    "Dimensions": {
+      "name": "Dimensions",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{\"instanceId\":\"i-xy123****\"}",
+      "description_cn": "规则关联的实例信息，为json object对应的字符串，例如{\"instanceId\":\"name1\"}。可用于查询关联该实例的所有规则，应用该字段时必须指定Namespace。"
+    },
+    "RuleName": {
+      "name": "RuleName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ECSCPU报警规则",
+      "description_cn": "报警规则名称，支持模糊查询。"
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456",
+      "description_cn": "应用分组ID。"
+    },
+    "RuleIds": {
+      "name": "RuleIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "a151cd6023eacee2f0978e03863cc1697c8950812****",
+      "description_cn": "报警规则ID，支持一次查询多个，多个ID之间用逗号分隔，一次最多可批量查询20条。"
+    }
+  },
+  "res": {
+    "Alarms": {
+      "Alarm": [
+        {
+          "Period": 60,
+          "Statistics": "Average",
+          "GroupName": "组的名称",
+          "Webhook": "",
+          "Subject": "aaabbb",
+          "EffectiveInterval": "00:00-23:59",
+          "RuleName": "我的报警规则",
+          "NoEffectiveInterval": "",
+          "GroupId": "3596360",
+          "EvaluationCount": 3,
+          "MetricName": "cpu_total",
+          "Threshold": "92",
+          "State": "OK",
+          "Enable": true,
+          "SilenceTime": 86400,
+          "Dimensions": "[{}]",
+          "RuleId": "a151cd6023eacee2f0978e03863cc1697c89508e2b61****",
+          "Namespace": "acs_ecs_dashboard",
+          "ContactGroups": "测试",
+          "Escalations": {
+            "Critical": {
+              "Statistics": "Average",
+              "Threshold": "92",
+              "Times": 3,
+              "ComparisonOperator": "GreaterThanOrEqualToThreshold"
+            },
+            "Info": {},
+            "Warn": {}
+          },
+          "ComparisonOperator": ">=",
+          "Resources": "[{\"instanceId\":\"i-a2d5q7pm3f12****\"}]"
+        },
+        {
+          "Period": 60,
+          "Statistics": "Average",
+          "GroupName": "demo",
+          "Webhook": "",
+          "Subject": "${serviceType}-${metricName}-${levelDescription}通知（${dimensions}）",
+          "EffectiveInterval": "00:00-23:59",
+          "RuleName": "xxxxxxxxxxxxxxx",
+          "NoEffectiveInterval": "",
+          "GroupId": "12345",
+          "EvaluationCount": 3,
+          "MetricName": "cpu_total",
+          "Threshold": "90",
+          "State": "OK",
+          "Enable": true,
+          "SilenceTime": 86400,
+          "Dimensions": "[{}]",
+          "RuleId": "alarmRule_uuid_adbe286748952b82c6a4ebe3a07521697bb706****",
+          "Namespace": "acs_ecs_dashboard",
+          "ContactGroups": "rongfei",
+          "Escalations": {
+            "Critical": {
+              "Statistics": "Average",
+              "Threshold": "6666",
+              "Times": 3,
+              "ComparisonOperator": "GreaterThanOrEqualToThreshold"
+            },
+            "Info": {},
+            "Warn": {}
+          },
+          "ComparisonOperator": ">=",
+          "Resources": "[{\"instanceId\":\"host-fTcUci7****\"}"
+        }
+      ]
+    },
+    "RequestId": "0F05309F-8863-4B2A-8F52-C6AA00E701B4",
+    "Success": true,
+    "Code": "200",
+    "Total": 102
+  }
+}

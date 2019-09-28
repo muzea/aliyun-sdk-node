@@ -1,0 +1,325 @@
+{
+  "name": "ScrollDomainList",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "翻页遍历域名列表",
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "50",
+      "description_cn": "分页大小"
+    },
+    "EndExpirationDate": {
+      "name": "EndExpirationDate",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1541520000000",
+      "description_cn": "注册日期范围查询结束时间，UTC时间1970年1月1日0点距离现在的毫秒数"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "127.0.0.1",
+      "description_cn": "用户ip"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "接口返回信息语言，枚举值范围：zh 中文；en 英文。默认为en。"
+    },
+    "StartExpirationDate": {
+      "name": "StartExpirationDate",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1541520000000",
+      "description_cn": "到期日期范围查询开始时间，UTC时间1970年1月1日0点距离现在的毫秒数\n"
+    },
+    "ProductDomainType": {
+      "name": "ProductDomainType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "gTLD",
+      "description_cn": "域名类型，枚举值范围：New gTLD；gTLD；ccTLD;other"
+    },
+    "DomainGroupId": {
+      "name": "DomainGroupId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456",
+      "description_cn": "域名分组id"
+    },
+    "DomainStatus": {
+      "name": "DomainStatus",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "域名状态，枚举值范围：0 全部； 1 急需续费； 2 急需赎回； 3 正常； 4 正在转出万网； 5 域名持有者信息修改中； 6 未实名认证； 7 审核失败，重新实名认证； 8 审核中"
+    },
+    "EndLength": {
+      "name": "EndLength",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3",
+      "description_cn": "域名长度范围查询结束长度"
+    },
+    "Excluded": {
+      "name": "Excluded",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "排除关键字"
+    },
+    "ExcludedPrefix": {
+      "name": "ExcludedPrefix",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "开头排除关键字"
+    },
+    "ExcludedSuffix": {
+      "name": "ExcludedSuffix",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "结束排除关键字\n"
+    },
+    "Form": {
+      "name": "Form",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "组成，参见组成表"
+    },
+    "KeyWord": {
+      "name": "KeyWord",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "关键字"
+    },
+    "KeyWordPrefix": {
+      "name": "KeyWordPrefix",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "开头关键字"
+    },
+    "KeyWordSuffix": {
+      "name": "KeyWordSuffix",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "结束关键字"
+    },
+    "StartLength": {
+      "name": "StartLength",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "域名长度范围查询开始长度\n"
+    },
+    "TradeType": {
+      "name": "TradeType",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "-1",
+      "description_cn": "发布状态，枚举值范围：2 已发布一口价；3 已发布线上议价；4 已发布竞价；6 已发布带价push；-1 未发布域名交易"
+    },
+    "Suffixs": {
+      "name": "Suffixs",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "com",
+      "description_cn": "查询后缀列表，以逗号“,”隔开\n"
+    },
+    "StartRegistrationDate": {
+      "name": "StartRegistrationDate",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1541520000000",
+      "description_cn": "注册日期范围查询开始时间，UTC时间1970年1月1日0点距离现在的毫秒数\n"
+    },
+    "EndRegistrationDate": {
+      "name": "EndRegistrationDate",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1541520000000",
+      "description_cn": "注册日期范围查询结束时间，UTC时间1970年1月1日0点距离现在的毫秒数"
+    },
+    "ScrollId": {
+      "name": "ScrollId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "翻页遍历id"
+    }
+  },
+  "res": {
+    "Data": {
+      "Domain": [
+        {
+          "DnsList": {
+            "Dns": [
+              "dns15.hichina.com",
+              "dns16.hichina.com"
+            ]
+          },
+          "DomainAuditStatus": "FAILED",
+          "DomainGroupId": "-1",
+          "DomainGroupName": "未分组",
+          "DomainName": "test.com",
+          "DomainStatus": "7",
+          "DomainType": "gTLD",
+          "Email": "test@a.com",
+          "ExpirationCurrDateDiff": 85,
+          "ExpirationDate": "2019-02-15 17:30:35",
+          "ExpirationDateLong": 1550223035000,
+          "ExpirationDateStatus": "1",
+          "InstanceId": "S2017000000",
+          "Premium": false,
+          "ProductId": "2a",
+          "RegistrantOrganization": "Test",
+          "RegistrantType": "1",
+          "RegistrationDate": "2017-02-15 00:00:00",
+          "RegistrationDateLong": 1487088000000,
+          "Remark": "备注",
+          "ZhRegistrantOrganization": "测试"
+        },
+        {
+          "DnsList": {
+            "Dns": [
+              "dns11.hichina.com",
+              "dns12.hichina.com"
+            ]
+          },
+          "DomainAuditStatus": "SUCCEED",
+          "DomainGroupId": "-1",
+          "DomainGroupName": "未分组",
+          "DomainName": "test1.com",
+          "DomainStatus": "3",
+          "DomainType": "gTLD",
+          "Email": "test@a.com",
+          "ExpirationCurrDateDiff": 181,
+          "ExpirationDate": "2019-05-22 16:23:19",
+          "ExpirationDateLong": 1558513399000,
+          "ExpirationDateStatus": "1",
+          "InstanceId": "S2000000000000",
+          "Premium": false,
+          "ProductId": "2a",
+          "RegistrantOrganization": "test",
+          "RegistrantType": "1",
+          "RegistrationDate": "2018-05-22 16:23:19",
+          "RegistrationDateLong": 1526977399000,
+          "Remark": "备注",
+          "ZhRegistrantOrganization": "测试"
+        }
+      ]
+    },
+    "PageSize": 2,
+    "RequestId": "9012EED7-4B99-4BC3-B04F-4BA637A90DC7",
+    "ScrollId": "eJxlUk2P2yAQ",
+    "TotalItemNum": 539
+  }
+}

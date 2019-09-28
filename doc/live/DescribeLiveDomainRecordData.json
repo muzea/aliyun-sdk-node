@@ -1,0 +1,71 @@
+{
+  "name": "DescribeLiveDomainRecordData",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeLiveDomainRecordData查询直播域名录制时长数据。",
+  "abc_id": 68943,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "区域。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2018-01-02T00:00:00Z",
+      "description_cn": "获取数据结束时间，需大于起始时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2018-01-01T00:00:00Z",
+      "description_cn": "获取数据起始时间点。日期格式按照ISO8601表示法，并使用UTC时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。\n\n> 支持查询2018/01/01起的数据，即StartTime≥`2018-01-01T00:00:00Z`。"
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "www.example.com",
+      "description_cn": "需要查询的直播域名。\n"
+    },
+    "RecordType": {
+      "name": "RecordType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "MP4",
+      "description_cn": "录制类型，目前支持**TS**、**MP4**、**FLV**三种，不传查询所有类型。"
+    }
+  },
+  "res": {}
+}

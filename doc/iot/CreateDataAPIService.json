@@ -1,0 +1,154 @@
+{
+  "name": "CreateDataAPIService",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ApiPath": {
+      "name": "ApiPath",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "OriginSql": {
+      "name": "OriginSql",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "TemplateSql": {
+      "name": "TemplateSql",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "DisplayName": {
+      "name": "DisplayName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "FolderId": {
+      "name": "FolderId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "Desc": {
+      "name": "Desc",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "RequestParam": {
+      "name": "RequestParam",
+      "type": "RepeatList",
+      "position": "Body",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Name",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Type",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Desc",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Example",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Required",
+          "type": "Boolean",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "ResponseParam": {
+      "name": "ResponseParam",
+      "type": "RepeatList",
+      "position": "Body",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Name",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Type",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Desc",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Example",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Required",
+          "type": "Boolean",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {}
+}

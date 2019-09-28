@@ -1,0 +1,57 @@
+{
+  "name": "DeleteUis",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteUis接口删除已创建的实例。",
+  "abc_id": 125705,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例的地域。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "d7d24a21-f4ba-4454-9173-b3828dae492b",
+      "description_cn": "客户端token，用于保证请求的幂等性。\n\n由客户端生成该参数值，要保证在不同请求间唯一，最大不值过64个 ASCII 字符。"
+    },
+    "UisId": {
+      "name": "UisId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "UIS-xxxk7k971za1h6gxk****",
+      "description_cn": "要删除的实例的ID。"
+    }
+  },
+  "res": {
+    "RequestId": "0ED8D006-F706-4D23-88ED-E11ED28DCAC0"
+  }
+}

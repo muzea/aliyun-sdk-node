@@ -1,0 +1,93 @@
+{
+  "name": "SaveBatchTaskForCreatingOrderRedeem",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OrderRedeemParam": {
+      "name": "OrderRedeemParam",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "DomainName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "CurrentExpirationDate",
+          "type": "Long",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "CouponNo": {
+      "name": "CouponNo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "UseCoupon": {
+      "name": "UseCoupon",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "PromotionNo": {
+      "name": "PromotionNo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "UsePromotion": {
+      "name": "UsePromotion",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

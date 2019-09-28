@@ -1,0 +1,29 @@
+{
+  "name": "DeletePkgVersion",
+  "protocol": "HTTPS|HTTP",
+  "method": "DELETE",
+  "path": "/pop/v1/wam/pkgVersion",
+  "summary_cn": "调用DeletePkgVersion删除一个部署包版本。",
+  "abc_id": 127714,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "PkgVersionId": {
+      "name": "PkgVersionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "wp-5d1dfea63d7b4445ad6d****",
+      "description_cn": "要删除的部署包版本ID"
+    }
+  },
+  "res": {}
+}

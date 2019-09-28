@@ -1,0 +1,33 @@
+{
+  "name": "EnableEventRules",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "启用一个或者多个事件监控报警规则。",
+  "abc_id": 114994,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "RuleNames": {
+      "name": "RuleNames",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "String"
+    }
+  },
+  "res": {
+    "RequestId": "20F2896A-6684-4A04-8255-4155B1593C70",
+    "Success": true,
+    "Code": "200"
+  }
+}

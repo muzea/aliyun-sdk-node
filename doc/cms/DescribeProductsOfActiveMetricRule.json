@@ -1,0 +1,25 @@
+{
+  "name": "DescribeProductsOfActiveMetricRule",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询开通一键告警产品列表。",
+  "abc_id": 114930,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "Code": "200",
+    "Success": true,
+    "Datapoints": "rds,slb",
+    "RequestId": "F82E6667-7811-4BA0-842F-5B2DC42BBAAD"
+  }
+}

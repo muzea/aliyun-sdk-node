@@ -1,0 +1,93 @@
+{
+  "name": "DescribeRealtimeDeliveryAcc",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeRealtimeDeliveryAcc查询实时日志投递次数。",
+  "abc_id": 100466,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2016-10-20T04:00:00Z",
+      "description_cn": "获取日志起始时间点。\n\n日期格式按照ISO8601表示法，并使用UTC时间。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2016-10-20T04:00:00Z",
+      "description_cn": "结束时间需大于起始时间。起止时间和结束时间，间隔不超过一年。\n\n获取日期格式按照ISO8601表示法，并使用UTC时间。"
+    },
+    "Interval": {
+      "name": "Interval",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "300",
+      "description_cn": "查询数据的时间粒度，支持**300**、**3600**、**86400**秒。\n\n- 不传和传的值不支持时，时间跨度不超过3天，默认值**300**秒。\n\n- 超过3天不超过30天默认值**3600**秒。\n\n- 超过30天默认值**86400**秒。\n\n"
+    },
+    "Project": {
+      "name": "Project",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Project",
+      "description_cn": "实时日志投递的Project。"
+    },
+    "LogStore": {
+      "name": "LogStore",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "LogStore",
+      "description_cn": "实时日志投递的Logstore。"
+    }
+  },
+  "res": {
+    "RequestId": "684306D2-2511-4977-991D-CE97E91FD7C0",
+    "ReatTimeDeliveryAccData": {
+      "AccData": [
+        {
+          "TimeStamp": "2018-09-03T06:00:00Z",
+          "FailedNum": 0,
+          "SuccessNum": 321321
+        },
+        {
+          "TimeStamp": "2018-09-03T07:00:00Z",
+          "FailedNum": 0,
+          "SuccessNum": 32943
+        }
+      ]
+    }
+  }
+}

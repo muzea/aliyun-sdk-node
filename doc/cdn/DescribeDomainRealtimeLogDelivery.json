@@ -1,0 +1,43 @@
+{
+  "name": "DescribeDomainRealtimeLogDelivery",
+  "protocol": "HTTP|HTTPS",
+  "method": "GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDomainRealtimeLogDelivery查询域名实时日志投递信息。",
+  "abc_id": 100464,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Domain": {
+      "name": "Domain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "开启实时日志投递服务域名。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "Project": "test",
+    "Logstore": "test",
+    "Region": "cn-shanghai",
+    "Status": "online",
+    "RequestId": "2F8F3852-912F-42AC-80EB-F1CF4284DE93"
+  }
+}

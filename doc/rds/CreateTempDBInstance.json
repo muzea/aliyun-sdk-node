@@ -1,0 +1,59 @@
+{
+  "name": "CreateTempDBInstance",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateTempDBInstance接口创建临时实例。",
+  "abc_id": 26274,
+  "timeout": 12000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "BackupId": {
+      "name": "BackupId",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "603524168",
+      "description_cn": "备份集ID。\n>**BackupId**和**RestoreTime**两者至少传入一个。"
+    },
+    "RestoreTime": {
+      "name": "RestoreTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2011-06-11T16:00:00Z",
+      "description_cn": "用户指定备份保留时间内的任意时间点。格式：<i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z（UTC时间）。\n\n>* 可以设置为7天之内并且早于当前时间半小时以上的任意时间点，默认时区为UTC；\n* **BackupId**和**RestoreTime**两者至少传入一个。"
+    }
+  },
+  "res": {
+    "RequestId": "248DE93F-8647-4B9D-8287-4A4A0FE56AD5",
+    "TempDBInstanceId": "sub138xxxxx_juxxxxx"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "DescribeBackupPolicy",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeBackupPolicy查询Redis实例的备份策略，包括备份周期、备份时间等。",
+  "abc_id": 61078,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "r-bp1xxxxxxxxxxxxx",
+      "description_cn": "目标实例的ID。"
+    }
+  },
+  "res": {
+    "PreferredBackupPeriod": "Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday",
+    "RequestId": "90B82DB7-FB28-4CC2-ADBF-1F8659F30C26",
+    "PreferredNextBackupTime": "2018-10-26T19:05Z",
+    "PreferredBackupTime": "19:00Z-20:00Z",
+    "BackupRetentionPeriod": "7"
+  }
+}

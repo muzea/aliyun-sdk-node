@@ -1,0 +1,24 @@
+{
+  "name": "DeleteCategory",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": null,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false
+    },
+    "CateId": {
+      "name": "CateId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true
+    }
+  },
+  "res": {}
+}

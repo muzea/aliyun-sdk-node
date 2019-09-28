@@ -1,0 +1,66 @@
+{
+  "name": "DescribeRoleZoneInfo",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeRoleZoneInfo接口查询MongoDB实例的各节点的角色和所属的可用区",
+  "abc_id": 123802,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。"
+    }
+  },
+  "res": {
+    "ZoneInfos": {
+      "ZoneInfo": [
+        {
+          "RoleType": "Primary",
+          "NodeType": "normal",
+          "InsName": "dds-bpxxxxxxxx",
+          "ZoneId": "cn-hangzhou-e",
+          "RoleId": "83xxxxx"
+        },
+        {
+          "RoleType": "Secondary",
+          "NodeType": "normal",
+          "InsName": "dds-bpxxxxxxxx",
+          "ZoneId": "cn-hangzhou-f",
+          "RoleId": "83xxxxx"
+        },
+        {
+          "RoleType": "Hidden",
+          "NodeType": "normal",
+          "InsName": "dds-bpxxxxxxxx",
+          "ZoneId": "cn-hangzhou-b",
+          "RoleId": "83xxxxx"
+        }
+      ]
+    },
+    "RequestId": "728B9A96-E262-4AE5-915E-3A51CCE2FDA9"
+  }
+}

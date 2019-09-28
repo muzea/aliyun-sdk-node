@@ -1,0 +1,157 @@
+{
+  "name": "CreateIPv6TranslatorEntry",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "为指定的IPv6转换服务实例添加IPv6转换映射条目。",
+  "abc_id": 114603,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": " IPv6转换服务实例的地域。 您可以通过调用**DescribeRegions**接口获取地域ID。  "
+    },
+    "Ipv6TranslatorId": {
+      "name": "Ipv6TranslatorId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ipv6trans-bp1858ys57xxxxxx",
+      "description_cn": " IPv6转换服务的实例ID。 "
+    },
+    "AllocateIpv6Port": {
+      "name": "AllocateIpv6Port",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "80",
+      "description_cn": " IPv6转换服务实例分配的IPv6地址的使用端口。 "
+    },
+    "BackendIpv4Addr": {
+      "name": "BackendIpv4Addr",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "46.22.xx.xx",
+      "description_cn": " 需要提供IPv6服务的公网IPv4地址（IPv4-only的服务器的IPv4地址）。 "
+    },
+    "BackendIpv4Port": {
+      "name": "BackendIpv4Port",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "80",
+      "description_cn": "需要提供IPv6服务的公网IPv4地址的端口。"
+    },
+    "TransProtocol": {
+      "name": "TransProtocol",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "tcp",
+      "description_cn": "协议类型。取值：\n\n- **tcp**：转发TCP协议的报文。  \n- **udp**：转发UDP协议的报文。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "EntryName": {
+      "name": "EntryName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "name1",
+      "description_cn": " IPv6转换映射条目的名称。长度为 2-100个字符，必须以字母或中文开头，可包含数字，点号（.），下划线（_）和短横线（-）。但不能以http:// 或https://开头。  "
+    },
+    "EntryDescription": {
+      "name": "EntryDescription",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "description",
+      "description_cn": "IPv6转换映射条目的描述。"
+    },
+    "EntryBandwidth": {
+      "name": "EntryBandwidth",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "IPv6转换映射条目的带宽峰值。取值： \n        \n- -1（默认值）：不限制IPv6转换映射条目的带宽峰值。  \n- 1-200Mbps：改映射条目的带宽值。            \n\n> 所有IPv6转换映射条目的带宽峰值之和不能超过实例的带宽峰值。"
+    },
+    "AclStatus": {
+      "name": "AclStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "on",
+      "description_cn": "是否开启访问控制。取值：**on|off**。"
+    },
+    "AclType": {
+      "name": "AclType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "white",
+      "description_cn": "是否开启访问控制：\n\n- **white**：允许访问策略组中的IPv6地址访问后端服务。\n\n- **black**：禁止访问策略组中的IPv6地址访问后端服务。"
+    },
+    "AclId": {
+      "name": "AclId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ipv6transacl-bp1g8bhrdexnrxxxx",
+      "description_cn": "关联的访问控制策略组ID。"
+    }
+  },
+  "res": {
+    "Ipv6TranslatorEntryId": "ipv6transentry-bp1gpgeb3umme48ygihhg",
+    "RequestId": "2DCE5D25-FFC9-492A-8371-12A4E0EE2E05"
+  }
+}

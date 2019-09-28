@@ -1,0 +1,48 @@
+{
+  "name": "DescribeFabricChannelMembers",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeFabricChannelMembers查询通道的成员列表。",
+  "abc_id": 127847,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "ChannelId": {
+      "name": "ChannelId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "chan-channelx-1l1hmckuu****",
+      "description_cn": "通道ID"
+    }
+  },
+  "res": {
+    "Result": {
+      "OrganizationName": "myorg",
+      "InviteTime": "2018-07-23T01:53:53.000+0000",
+      "ChannelId": "chan-cc1-2f0l9cd394****",
+      "WithPeer": true,
+      "OrganizationDescription": "",
+      "OrganizationDomain": "zhuangADSADSDAACZXsdfadsdfaesfac1.absdasssample.cc",
+      "State": "Accepted",
+      "OrganizationId": "peers-zhuang1-2kna27h5m3c913",
+      "AcceptTime": "2018-07-24T02:35:53.000+0000"
+    },
+    "RequestId": "3E85A941-658C-40E8-9704-60513A0281CF",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

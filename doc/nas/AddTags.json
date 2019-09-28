@@ -1,0 +1,53 @@
+{
+  "name": "AddTags",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "添加或者覆盖一个或者多个标签到一个文件系统实例。",
+  "abc_id": 131580,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "FileSystemId": {
+      "name": "FileSystemId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "0addcw13cd",
+      "description_cn": "文件系统ID。"
+    }
+  },
+  "res": {}
+}

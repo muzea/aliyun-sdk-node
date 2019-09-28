@@ -1,0 +1,25 @@
+{
+  "name": "InsertServiceGroup",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/pop/v5/service/serviceGroups",
+  "timeout": 2000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "GroupName": {
+      "name": "GroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

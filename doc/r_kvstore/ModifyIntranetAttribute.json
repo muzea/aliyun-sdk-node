@@ -1,0 +1,41 @@
+{
+  "name": "ModifyIntranetAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyIntranetAttribute临时调整Redis实例的内网带宽。",
+  "abc_id": 128674,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "r-bp1xxxxxxxxxxxxx",
+      "description_cn": "实例ID。"
+    }
+  },
+  "res": {
+    "RequestId": "97AC8948-D7E4-457E-BE03-850CF04EA622"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "DescribeRdsSuperAccountInstances",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true
+    },
+    "RdsInstance": {
+      "name": "RdsInstance",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "DrdsInstanceId": {
+      "name": "DrdsInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "DbInstType": {
+      "name": "DbInstType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

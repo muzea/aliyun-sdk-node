@@ -1,0 +1,66 @@
+{
+  "name": "StartBaselineSecurityCheck",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用本接口执行基线检测任务。",
+  "abc_id": 113374,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": "访问者源IP。"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn",
+      "description_cn": "调用参数返回的内容的语言种类。支持中文（CN）和英文（EN）。"
+    },
+    "ItemIds": {
+      "name": "ItemIds",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Long"
+    },
+    "Assets": {
+      "name": "Assets",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "Type": {
+      "name": "Type",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "check",
+      "description_cn": "任务类型。"
+    }
+  },
+  "res": {
+    "RequestId": "48D2E9A9-A1B0-4295-B727-0995757C47E9"
+  }
+}

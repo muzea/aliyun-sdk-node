@@ -1,0 +1,46 @@
+{
+  "name": "ModifyResourcePoolSchedulerType",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 ModifyResourcePoolSchedulerType  接口修改资源池调度类型。",
+  "abc_id": 100760,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "ClusterId": {
+      "name": "ClusterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "C-EBD62A703A430E23",
+      "description_cn": "集群ID。"
+    },
+    "SchedulerType": {
+      "name": "SchedulerType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "CAPACITY_SCHEDULER",
+      "description_cn": "资源调度类型。"
+    }
+  },
+  "res": {
+    "code": "200",
+    "requestId": "A544317F-4A60-4532-AC96-191B9D80420A",
+    "successResponse": true
+  }
+}

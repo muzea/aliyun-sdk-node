@@ -1,0 +1,67 @@
+{
+  "name": "DescribeResourceProfiles",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeResourceProfiles获取已创建的计算资源配置信息。",
+  "abc_id": 129254,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "地域ID。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "1",
+      "description_cn": "资源参数集列表的页码。起始值：**1**。\n默认值：**1** 。\n\n\n"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时设置的每页行数。最大值：**100**。\n默认值：**10**。\n"
+    },
+    "ResourceProfileId": {
+      "name": "ResourceProfileId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3",
+      "description_cn": "资源参数集ID。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cityvisual-Instance",
+      "description_cn": "实例ID。"
+    }
+  },
+  "res": {}
+}

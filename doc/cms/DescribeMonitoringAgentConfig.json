@@ -1,0 +1,27 @@
+{
+  "name": "DescribeMonitoringAgentConfig",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询云监控插件的配置信息。",
+  "abc_id": 114954,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "UserId": "12345****",
+    "EnableInstallAgentNewECS": false,
+    "Success": true,
+    "ErrorCode": 200,
+    "EnableActiveAlert": "redisa,rds,ecs",
+    "AutoInstall": true
+  }
+}

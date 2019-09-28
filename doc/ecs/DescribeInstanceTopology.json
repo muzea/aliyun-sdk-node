@@ -1,0 +1,52 @@
+{
+  "name": "DescribeInstanceTopology",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "（Beta）调用DescribeInstanceTopology查询实例所在宿主机的拓扑结构。",
+  "abc_id": 128268,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "ECS实例所在的地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "hide"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "111"
+    },
+    "InstanceIds": {
+      "name": "InstanceIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[\"i-instanceId1\"]",
+      "description_cn": "一台或多台ECS实例的ID。支持最多100台ECS实例。"
+    }
+  },
+  "res": {
+    "RequestId": "C8B26B44-0189-443E-9816-D951F59623A9"
+  }
+}

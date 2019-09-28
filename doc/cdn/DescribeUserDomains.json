@@ -1,0 +1,218 @@
+{
+  "name": "DescribeUserDomains",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeUserDomains查询用户名下所有的域名与状态。支持域名模糊匹配过滤和域名状态过滤。",
+  "abc_id": 91188,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "5",
+      "description_cn": "分页大小。默认值：**20**；最大值：**50**。取值：**1**~**50**之间的任意整数。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "取得第几页，取值范围：**1**~**100000**。\n"
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "域名模糊匹配过滤。"
+    },
+    "DomainStatus": {
+      "name": "DomainStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "configure_failed",
+      "description_cn": "域名状态过滤。"
+    },
+    "DomainSearchType": {
+      "name": "DomainSearchType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "fuzzy_match",
+      "description_cn": "域名查询类型。\n- **fuzzy_match**：模糊匹配。\n- **pre_match**：前匹配。\n- **suf_match**：后匹配。\n- **full_match**：完全匹配。\n\n默认：**fuzzy_match**。"
+    },
+    "CdnType": {
+      "name": "CdnType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "download，web，video，video，video",
+      "description_cn": "CDN业务类型，多个用逗号（,）隔开。"
+    },
+    "CheckDomainShow": {
+      "name": "CheckDomainShow",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "检查domain是否展出。"
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "abcd1234abcd1234",
+      "description_cn": "资源组ID。"
+    },
+    "ChangeStartTime": {
+      "name": "ChangeStartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ChangeEndTime": {
+      "name": "ChangeEndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "FuncId": {
+      "name": "FuncId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "98",
+      "description_cn": "funcid，如图片鉴黄功能98。"
+    },
+    "FuncFilter": {
+      "name": "FuncFilter",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "config",
+      "description_cn": "过滤，支持**config**和**unconfig**。\n\n- **config**：开通了funcid。\n- **unconfig**：未开通funcid。"
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 16,
+    "PageSize": 5,
+    "RequestId": "AA75AADB-5E25-4970-B480-EAA1F5658483",
+    "Domains": {
+      "PageData": [
+        {
+          "CdnType": "download",
+          "DomainStatus": "configure_failed",
+          "DomainName": "example.com",
+          "GmtModified": "2015-10-28T11:05:52Z",
+          "GmtCreated": "2015-10-28T09:32:51Z",
+          "Description": "audit failed",
+          "ResourceGroupId": "abcd1234abcd1234"
+        },
+        {
+          "CdnType": "web",
+          "DomainStatus": "configure_failed",
+          "DomainName": "aadda.cdnpe.com",
+          "GmtModified": "2015-10-28T11:05:50Z",
+          "GmtCreated": "2015-10-28T09:31:59Z",
+          "ResourceGroupId": "abcd1234abcd1234"
+        },
+        {
+          "Cname": "example.com.w.alikunlun.net",
+          "CdnType": "video",
+          "DomainStatus": "online",
+          "DomainName": "example.com",
+          "GmtModified": "2015-10-27T06:26:34Z",
+          "GmtCreated": "2015-10-23T09:30:00Z",
+          "ResourceGroupId": "abcd1234abcd1234"
+        },
+        {
+          "Cname": "example.com.w.kunlunAr.com",
+          "CdnType": "video",
+          "DomainStatus": "online",
+          "DomainName": "example.com",
+          "GmtModified": "2015-10-23T09:23:29Z",
+          "GmtCreated": "2015-10-23T09:23:20Z",
+          "ResourceGroupId": "abcd1234abcd1234"
+        },
+        {
+          "Cname": "example.com.w.alikunlun.com",
+          "CdnType": "video",
+          "DomainStatus": "online",
+          "DomainName": "example.com",
+          "GmtModified": "2015-10-23T09:02:11Z",
+          "GmtCreated": "2015-10-23T09:01:57Z",
+          "ResourceGroupId": "abcd1234abcd1234"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "name": "DeleteVpnConnection",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteVpnConnection接口删除指定的IPsec连接。",
+  "abc_id": 53051,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "IPsec连接所在的地域。 \n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "VpnConnectionId": {
+      "name": "VpnConnectionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "vco-bp1bbi27hojx80nck****",
+      "description_cn": " IPsec连接的ID。  "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "02fb3da4-130e-11e9-8e44-0016e04115b",
+      "description_cn": "用于保证请求的幂等性。\n\n由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过 64 个 ASCII 字符。"
+    }
+  },
+  "res": {
+    "RequestId": "606998F0-B94D-48FE-8316-ACA81BB230DA"
+  }
+}

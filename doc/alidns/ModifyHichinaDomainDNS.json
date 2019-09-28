@@ -1,0 +1,65 @@
+{
+  "name": "ModifyHichinaDomainDNS",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyHichinaDomainDNS根据传入参数修改域名DNS服务器名称。",
+  "abc_id": 29754,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "example.com",
+      "description_cn": "域名名称。"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "用户语言。"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": "用户端IP。"
+    }
+  },
+  "res": {
+    "RequestId": "536E9CAD-DB30-4647-AC87-AA5CC38C5382",
+    "OriginalDnsServers": {
+      "DnsServer": [
+        "NS3.DNSV5.COM",
+        "NS4.DNSV5.COM"
+      ]
+    },
+    "NewDnsServers": {
+      "DnsServer": [
+        "dns9.hichina.com",
+        "dns10.hichina.com"
+      ]
+    }
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "name": "DescribeRouterInterfaces",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeRouterInterfaces接口查询指定地域内的路由器接口。",
+  "abc_id": 36035,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": " cn-hangzhou",
+      "description_cn": " 路由器接口所在的地域。 您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "IncludeReservationData": {
+      "name": "IncludeReservationData",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否包含续费数据。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": " 列表的页码，默认值为**1**。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": " 分页查询时每页的行数，最大值为**50**，默认值为**10**。  "
+    },
+    "Filter": {
+      "name": "Filter",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        }
+      ]
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 2,
+    "PageSize": 10,
+    "RequestId": "01818199-04F6-47F4-9ADF-7CC824CF57A4",
+    "RouterInterfaceSet": {
+      "RouterInterfaceType": [
+        {
+          "ChargeType": "Prepaid",
+          "HasReservationData": false,
+          "OppositeInterfaceBusinessStatus": "Normal",
+          "RouterInterfaceId": "ri-2zenfgfpyu3v93koa4sfo",
+          "OppositeInterfaceStatus": "Deleted",
+          "Spec": "Small.5",
+          "OppositeInterfaceOwnerId": "1231579085529123",
+          "CrossBorder": false,
+          "OppositeInterfaceSpec": "Negative",
+          "CreationTime": "2017-12-27T06:34:30Z",
+          "RouterType": "VRouter",
+          "Status": "Inactive",
+          "OppositeRouterType": "VRouter",
+          "OppositeRouterId": "vrt-bp1el837xkkakub7ci0tj",
+          "OppositeInterfaceId": "ri-bp1itx13bwe6f2wfh3qpj",
+          "VpcInstanceId": "vpc-2ze3tq4uxhysg717x7o4d",
+          "RouterId": "vrt-2zeazning6tbzkm5c0jj2",
+          "ConnectedTime": "2017-12-27T06:34:37Z",
+          "OppositeRegionId": "cn-hangzhou",
+          "BusinessStatus": "Normal",
+          "Role": "InitiatingSide",
+          "OppositeVpcInstanceId": "vpc-bp1iq3579f26c3gpkj92e",
+          "EndTime": "2018-01-27T16:00:00Z"
+        },
+        {
+          "ChargeType": "Prepaid",
+          "HasReservationData": false,
+          "OppositeInterfaceBusinessStatus": "Normal",
+          "RouterInterfaceId": "ri-2zegbp7nhj0mnwm6irnuo",
+          "OppositeInterfaceStatus": "Deleted",
+          "Spec": "Small.1",
+          "OppositeInterfaceOwnerId": "1231579085529123",
+          "CrossBorder": false,
+          "OppositeInterfaceSpec": "Negative",
+          "CreationTime": "2017-12-27T06:31:30Z",
+          "RouterType": "VRouter",
+          "Status": "Inactive",
+          "OppositeRouterType": "VRouter",
+          "OppositeRouterId": "vrt-bp1d3bxtdv68tfd7gfjkd",
+          "OppositeInterfaceId": "ri-bp12dxgw8gmoma1h506qf",
+          "VpcInstanceId": "vpc-2ze3tq4uxhysg717x7o4d",
+          "RouterId": "vrt-2zeazning6tbzkm5c0jj2",
+          "ConnectedTime": "2017-12-27T06:31:36Z",
+          "OppositeRegionId": "cn-hangzhou",
+          "BusinessStatus": "Normal",
+          "Role": "InitiatingSide",
+          "OppositeVpcInstanceId": "vpc-bp15k6sx6fhdz2jw4daz0",
+          "EndTime": "2018-10-27T16:00:00Z"
+        }
+      ]
+    }
+  }
+}

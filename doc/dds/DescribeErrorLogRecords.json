@@ -1,0 +1,143 @@
+{
+  "name": "DescribeErrorLogRecords",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeErrorLogRecords接口查询MongoDB实例的错误日志。",
+  "abc_id": 108228,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例所属的地域ID，您可以通过调用[DescribeDBInstanceAttribute](~~62010~~)进行查询。"
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2019-01-01T12:10Z",
+      "description_cn": " 查询开始时间，格式为<i>yyyy-MM-dd</i>T<i>HH:mm</i>Z（UTC时间）。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2019-01-02T12:10Z",
+      "description_cn": " 查询结束时间，必须晚于查询开始时间，格式为<i>yyyy-MM-dd</i>T<i>HH:mm</i>Z（UTC时间）。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。\n> 当本参数传入的是分片集群实例ID时，还需要传入**NodeId**参数。"
+    },
+    "NodeId": {
+      "name": "NodeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "d-bpxxxxxxxx",
+      "description_cn": "分片集群实例中Mongos节点ID或Shard节点ID。\n\n> 当**DBInstanceId**参数传入的是分片集群实例ID时，本参数才可用。"
+    },
+    "SQLId": {
+      "name": "SQLId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "RoleType": {
+      "name": "RoleType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "primary",
+      "description_cn": "实例中节点的角色。取值：\n- **primary**：主节点。\n- **secondary**：从节点。\n\n> 当**NodeId**参数传入的是Mongos节点ID时，本参数取值只能为**primary**。"
+    },
+    "DBName": {
+      "name": "DBName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "mongodbtest",
+      "description_cn": "数据库名。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": " 每页记录数，取值范围：**30**~**100**。 "
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页码，取值为大于0且不超过Integer数据类型的的最大值，默认值为**1**。"
+    }
+  },
+  "res": {
+    "Items": {
+      "LogRecords": [
+        {
+          "Category": "NETWORK",
+          "CreateTime": "2019-02-26T12:09:34Z",
+          "ConnInfo": "conn18xxxxxx",
+          "Content": "xxxxxxxx"
+        }
+      ]
+    },
+    "PageNumber": 1,
+    "TotalRecordCount": 2,
+    "RequestId": "68BCBEC2-1E66-471F-A1A8-E3C60C0A80B0"
+  }
+}

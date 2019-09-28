@@ -1,0 +1,86 @@
+{
+  "name": "PublishRouteEntries",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用PublishRouteEntries将加载到CEN中的VPC或VBR的路由条目发布到CEN中。",
+  "abc_id": 85470,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CenId": {
+      "name": "CenId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cen-7qthudw0ll6jmc****",
+      "description_cn": "云企业网的ID。"
+    },
+    "ChildInstanceId": {
+      "name": "ChildInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "vpc-rj9gt5nll27onu****",
+      "description_cn": "加载的网络实例ID（VPC或VBR的ID）。"
+    },
+    "ChildInstanceType": {
+      "name": "ChildInstanceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "VPC",
+      "description_cn": "网络实例类型，取值： **VPC|VBR**。"
+    },
+    "ChildInstanceRegionId": {
+      "name": "ChildInstanceRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "us-west-1",
+      "description_cn": "加载的网络实例的地域ID。"
+    },
+    "ChildInstanceRouteTableId": {
+      "name": "ChildInstanceRouteTableId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "vtb-bp174d1gje7****",
+      "description_cn": "网络实例的路由表ID。"
+    },
+    "DestinationCidrBlock": {
+      "name": "DestinationCidrBlock",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "172.16.xx.xx/24",
+      "description_cn": "要发布的网段。"
+    }
+  },
+  "res": {
+    "RequestId": "FBDB18D8-E91E-4978-8D6C-6E2E3EE10133"
+  }
+}

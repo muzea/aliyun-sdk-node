@@ -1,0 +1,57 @@
+{
+  "name": "RevokeSagInstanceFromCcn",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用RevokeSagInstanceFromCcn从云连接网撤销智能接入网关实例的加入授权。",
+  "abc_id": 137893,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "智能接入网关实例所在的地域ID。"
+    },
+    "SmartAGId": {
+      "name": "SmartAGId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "sag-hd**************",
+      "description_cn": "智能接入网关实例ID。"
+    },
+    "CcnInstanceId": {
+      "name": "CcnInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "ccn-jf********",
+      "description_cn": "云连接网实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "BCB97739-0CB5-4C94-9A5C-13051FFAB0E9"
+  }
+}

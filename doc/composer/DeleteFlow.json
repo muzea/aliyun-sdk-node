@@ -1,0 +1,29 @@
+{
+  "name": "DeleteFlow",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "删除一个工作流编排实例",
+  "abc_id": 127655,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "FlowId": {
+      "name": "FlowId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "lc-abcdefg",
+      "description_cn": "需要删除的工作流编排实例 ID"
+    }
+  },
+  "res": {}
+}

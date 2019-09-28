@@ -1,0 +1,105 @@
+{
+  "name": "ModifySiteMonitor",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "修改站点监控探测任务。",
+  "abc_id": 115049,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "TaskId": {
+      "name": "TaskId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "49f7b317-7645-4cc9-94fd-ea42e522****",
+      "description_cn": "站点监控探测任务ID。"
+    },
+    "Address": {
+      "name": "Address",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "http://www.aliyun.com",
+      "description_cn": "任务的探测URL地址或IP地址。"
+    },
+    "TaskName": {
+      "name": "TaskName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "网站探测修改",
+      "description_cn": "站点监控探测任务名称，为4-100位长度的英文字符、数字、下划线以及汉字。"
+    },
+    "Interval": {
+      "name": "Interval",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "探测频率，单位为分钟，取值范围1、5、15，单位是分钟，默认值为1分钟。"
+    },
+    "IspCities": {
+      "name": "IspCities",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[{\"city\":\"546\",\"isp\":\"465\"},{\"city\":\"572\",\"isp\":\"465\"},{\"city\":\"738\",\"isp\":\"465\"}]",
+      "description_cn": "探针的信息， 格式为jsonArray，例如`[{\"city\":\"546\",\"isp\":\"465\"},{\"city\":\"572\",\"isp\":\"465\"},{\"city\":\"738\",\"isp\":\"465\"}]`（分别对应北京、杭州、青岛)\n可以使用 DescribeISPAreaCity 接口获取探测点信息。如果为空系统则随机选择3个探点探测。\n "
+    },
+    "OptionsJson": {
+      "name": "OptionsJson",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{\"time_out\":5000}",
+      "description_cn": "监控对应协议的高级扩展选项， 不同的探测协议类型，有不同的扩展选项。"
+    },
+    "AlertIds": {
+      "name": "AlertIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "49f7c317-7645-4cc9-94fd-ea42e122****",
+      "description_cn": "关联已存在的报警规则ID。"
+    }
+  },
+  "res": {
+    "Data": {
+      "count": 1
+    },
+    "Message": "请求成功",
+    "RequestId": "B6593DD0-73E6-48EF-8019-ED4687ED378D",
+    "Success": true,
+    "Code": "200"
+  }
+}

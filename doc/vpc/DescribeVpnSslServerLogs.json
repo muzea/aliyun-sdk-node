@@ -1,0 +1,108 @@
+{
+  "name": "DescribeVpnSslServerLogs",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeVpnSslServerLogs查看SSL服务端的日志。",
+  "abc_id": 126829,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "SSL服务端所在的地域。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。"
+    },
+    "VpnSslServerId": {
+      "name": "VpnSslServerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "vss-bp155e9yclsg1xgq4****",
+      "description_cn": "SSL服务端的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "From": {
+      "name": "From",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2018020201",
+      "description_cn": "日志起始时间。"
+    },
+    "To": {
+      "name": "To",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2018020206",
+      "description_cn": "日志结束时间。"
+    },
+    "MinutePeriod": {
+      "name": "MinutePeriod",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "日志周期。\n"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "列表的页码，默认值为**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时每页的行数，最大值为**50**，默认值为**10**。"
+    }
+  },
+  "res": {
+    "Data": {
+      "Logs": []
+    },
+    "PageNumber": 1,
+    "Count": 0,
+    "PageSize": 10,
+    "IsCompleted": true,
+    "RequestId": "26641E42-66C7-4942-9FEC-F99213914F8F"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "name": "DescribeImages",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": null,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Version": {
+      "name": "Version",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true
+    },
+    "product": {
+      "name": "product",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    },
+    "EnsRegionId": {
+      "name": "EnsRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    },
+    "ImageId": {
+      "name": "ImageId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    },
+    "ImageName": {
+      "name": "ImageName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    }
+  },
+  "res": {}
+}

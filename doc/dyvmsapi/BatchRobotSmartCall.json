@@ -1,0 +1,143 @@
+{
+  "name": "BatchRobotSmartCall",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用接口BatchRobotSmartCall发起机器人外呼任务。",
+  "abc_id": 114049,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CalledShowNumber": {
+      "name": "CalledShowNumber",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "4001112222",
+      "description_cn": "被叫显号，必须是已购买的号码。\n\n支持设置1~100个被叫显号，号码之间使用英文逗号（,）分隔。\n\n您可以在[语音服务控制台](https://dyvms.console.aliyun.com/dyvms.htm#/number/normal)上查看已购买的号码。"
+    },
+    "CalledNumber": {
+      "name": "CalledNumber",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "13700000000",
+      "description_cn": "被叫号码。仅支持中国大陆号码。\n\n支持设置1~1000个被叫号码，号码之间使用英文逗号（,）分隔。"
+    },
+    "DialogId": {
+      "name": "DialogId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "1234567",
+      "description_cn": "指定机器人ID，即话术ID。表示选择哪个机器人/话术发起呼叫。\n\n请在[话术管理页面](https://dyvms.console.aliyun.com/dyvms.htm#/smart-call/saas/robot/list)中查看**话术ID**。"
+    },
+    "TaskName": {
+      "name": "TaskName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "批量任务测试\t",
+      "description_cn": "任务名称。支持中文和英文，0~30个字符。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "CorpName": {
+      "name": "CorpName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "阿里巴巴通信技术(北京)有限公司\t",
+      "description_cn": "公司名称，必须和[资质管理页面](https://dyvms.console.aliyun.com/dyvms.htm#/corp/normal)中的**公司名称**完全一致。\n\n> 如果开通了**自有线路**功能，即**isSelfLine**为**true**时，该参数为可选。反之则必须填写公司名称。"
+    },
+    "EarlyMediaAsr": {
+      "name": "EarlyMediaAsr",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "早媒体语音识别标识。默认为fasle，如果需要启用早媒体语音识别标识，请设置为true。"
+    },
+    "ScheduleTime": {
+      "name": "ScheduleTime",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1554110977000",
+      "description_cn": "预设的呼叫时间。Unix时间戳格式，单位为毫秒。\n\n> 当参数**ScheduleCall**为true时必选。"
+    },
+    "ScheduleCall": {
+      "name": "ScheduleCall",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否定时呼叫。如果设置为true，则必须设置**ScheduleTime**。"
+    },
+    "TtsParam": {
+      "name": "TtsParam",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[{“number”:”13700000000”,”params”:[“小王”,”小李”,”小周”]}]",
+      "description_cn": "TTS模板的变量值，格式为JSON。\n\n必须和具体的号码对应、TtsParam和上面的TtsParamHead变量名称一一对应。"
+    },
+    "TtsParamHead": {
+      "name": "TtsParamHead",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[“name1”,”name2”,”name3”]",
+      "description_cn": "带变量的呼叫任务，格式为JSON。变量名称列表，和下面的ttsParam配合使用"
+    },
+    "IsSelfLine": {
+      "name": "IsSelfLine",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否调用自有线路，默认为false。"
+    }
+  },
+  "res": {
+    "Message": "OK",
+    "RequestId": "D9CB3933-9FE3-4870-BA8E-2BEE91B69D23",
+    "Code": "OK",
+    "TaskId": "4001112222"
+  }
+}

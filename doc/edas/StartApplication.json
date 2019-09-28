@@ -1,0 +1,34 @@
+{
+  "name": "StartApplication",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/pop/v5/changeorder/co_start",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false
+    },
+    "EccInfo": {
+      "name": "EccInfo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

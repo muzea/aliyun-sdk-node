@@ -1,0 +1,50 @@
+{
+  "name": "AddCommonBandwidthPackageIp",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AddCommonBandwidthPackageIp接口添加EIP到共享带宽中。",
+  "abc_id": 55989,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "共享带宽所在的地域。 \n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "BandwidthPackageId": {
+      "name": "BandwidthPackageId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cbwp-2ze2ic1xd2qeqxxxxxxxx",
+      "description_cn": " 共享带宽的ID。 "
+    },
+    "IpInstanceId": {
+      "name": "IpInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "eip-2zeerraiwb7uxxxxxxxx",
+      "description_cn": "EIP实例的ID。 \n\n您可以通过调用[DescribeEipAddresses](~~36018~~)接口查询EIP实例的ID。  "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

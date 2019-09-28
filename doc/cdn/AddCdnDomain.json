@@ -1,0 +1,98 @@
+{
+  "name": "AddCdnDomain",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AddCdnDomain添加加速域名。",
+  "abc_id": 91176,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CdnType": {
+      "name": "CdnType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "web",
+      "description_cn": "加速域名的业务类型，取值：\n\n-  **web**：图片及小文件分发。\n\n- **download**：大文件下载加速。\n\n- **video**：视音频点播加速。"
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": ".yourdomain.com",
+      "description_cn": "需要接入CDN的域名。支持泛域名，以点号（.）开头，例如：.a.com"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "your resourceGroupId",
+      "description_cn": "资源组ID，不传时，自动补全默认资源组ID。\n"
+    },
+    "Sources": {
+      "name": "Sources",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[{\"content\":\"1.1.1.1\",\"type\":\"ipaddr\",\"priority\":\"20\",\"port\":80,\"weight\":\"15\"}]",
+      "description_cn": "回源地址列表。"
+    },
+    "CheckUrl": {
+      "name": "CheckUrl",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "www.yourdomain.com/test.html",
+      "description_cn": "检测url。"
+    },
+    "Scope": {
+      "name": "Scope",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "domestic",
+      "description_cn": "取值范围：**domestic**、**overseas**、**global**，默认**domestic**。"
+    },
+    "TopLevelDomain": {
+      "name": "TopLevelDomain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "www.yourTopLevelDomain",
+      "description_cn": "顶级接入域。"
+    }
+  },
+  "res": {
+    "RequestId": "15C66C7B-671A-4297-9187-2C4477247A74"
+  }
+}

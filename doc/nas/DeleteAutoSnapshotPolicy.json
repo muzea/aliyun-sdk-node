@@ -1,0 +1,31 @@
+{
+  "name": "DeleteAutoSnapshotPolicy",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "DeleteAutoSnapshotPolicy 用于删除一条自动快照策略。如果目标自动快照策略已经被应用到文件系统上，删除自动快照策略后，这些文件系统不再执行该策略。",
+  "abc_id": 126578,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false
+    },
+    "AutoSnapshotPolicyId": {
+      "name": "AutoSnapshotPolicyId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "sp-extreme-233e6ylv0",
+      "description_cn": "自动快照策略 ID。您可以调用 DescribeAutoSnapshotPolicies 查看您可用的自动快照策略。"
+    }
+  },
+  "res": {}
+}

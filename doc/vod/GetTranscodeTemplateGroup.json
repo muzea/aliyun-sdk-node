@@ -1,0 +1,42 @@
+{
+  "name": "GetTranscodeTemplateGroup",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用GetTranscodeTemplateGroup根据转码模板组ID查询转码配置的详细信息。",
+  "abc_id": 130918,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "TranscodeTemplateGroupId": {
+      "name": "TranscodeTemplateGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "a591f697c71676f73e6ae1502142d0",
+      "description_cn": "转码模板组ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123477443",
+      "description_cn": "拥有者ID"
+    }
+  },
+  "res": {}
+}

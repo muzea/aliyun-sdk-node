@@ -1,0 +1,68 @@
+{
+  "name": "DescribeBizFlow",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeBizFlow接口查询高防IP上的业务流量信息，包括入方向和出方向流量。",
+  "abc_id": 92086,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "1536496397",
+      "description_cn": "查询开始时间戳，单位为秒。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "1536498197",
+      "description_cn": "查询结束时间戳，单位为秒。"
+    },
+    "Ip": {
+      "name": "Ip",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": "要查询的高防IP。"
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": ""
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": ""
+    }
+  },
+  "res": {}
+}

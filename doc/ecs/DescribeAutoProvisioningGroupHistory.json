@@ -1,0 +1,95 @@
+{
+  "name": "DescribeAutoProvisioningGroupHistory",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeAutoProvisioningGroupHistory接口查询弹性供应组的调度任务信息。",
+  "abc_id": 122743,
+  "timeout": 8000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "弹性供应组所在地域的ID。"
+    },
+    "AutoProvisioningGroupId": {
+      "name": "AutoProvisioningGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "apg-uf6jel2bbl62wh13****",
+      "description_cn": "弹性供应组的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2019-04-01T15:10:20Z",
+      "description_cn": "查询调度历史的起始时间，和**EndTime**结合使用确定查询时段。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2019-06-20T15:10:20Z",
+      "description_cn": "查询调度历史的结束时间，和**StartTime**结合使用确定查询时段。"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 1,
+    "PageSize": 10,
+    "RequestId": "BA55349F-6E36-4E64-964B-419515D1****",
+    "AutoProvisioningGroupHistorys": {
+      "AutoProvisioningGroupHistory": [
+        {
+          "Status": "success",
+          "ActivityDetails": {
+            "ActivityDetail": []
+          },
+          "LastEventTime": "2019-06-17T08:48:00Z",
+          "StartTime": "2019-06-17T08:47:52Z",
+          "TaskId": "apg-task-uf66bqtabg10wcf6****"
+        }
+      ]
+    }
+  }
+}

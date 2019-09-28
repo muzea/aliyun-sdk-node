@@ -1,0 +1,60 @@
+{
+  "name": "GetAuditHistory",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用GetAuditHistory获取人工审核的历史记录。",
+  "abc_id": 130441,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "VideoId": {
+      "name": "VideoId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "93ab850b4f6f44eab54b6e91d24d81d4",
+      "description_cn": "视频ID。"
+    },
+    "PageNo": {
+      "name": "PageNo",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页号，默认值为**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页大小。默认值为**10**，最大值为**100**。"
+    },
+    "SortBy": {
+      "name": "SortBy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "CreationTime:Desc",
+      "description_cn": "结果排序。取值范围：\n\n- **CreationTime:Desc**（默认值）：按创建时间倒序\n- **CreationTime:Asc**"
+    }
+  },
+  "res": {}
+}

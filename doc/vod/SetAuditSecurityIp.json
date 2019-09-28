@@ -1,0 +1,50 @@
+{
+  "name": "SetAuditSecurityIp",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用SetAuditSecurityIp设置审核安全IP。",
+  "abc_id": 130329,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Ips": {
+      "name": "Ips",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "10.23.12.24",
+      "description_cn": "审核安全IP列表，每个分组最多支持100个，以逗号隔开，格式如下：\n\n- 精确IP: 10.23.12.24\n- CIDR模式: 10.23.12.24/24（无类域间路由，/24表示了地址中前缀的长度，范围`[1,32]`）"
+    },
+    "SecurityGroupName": {
+      "name": "SecurityGroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Default",
+      "description_cn": "审核安全组名称，默认为**Default**。每个用户最多支持10个安全分组。"
+    },
+    "OperateMode": {
+      "name": "OperateMode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Cover",
+      "description_cn": "操作方式，取值范围：\n\n- **Append**：默认值，追加IP白名单。\n- **Cover**：覆盖原IP白名单。\n- **Delete**：删除IP白名单。"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,93 @@
+{
+  "name": "ModifyDiskChargeType",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyDiskChargeType修改一台实例上挂载的一块或最多16块云盘的计费方式。",
+  "abc_id": 84690,
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例所属的地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "i-instanceid1",
+      "description_cn": "云盘挂载的实例ID。"
+    },
+    "DiskIds": {
+      "name": "DiskIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "[“d-xxxxxxxxx”, “d-yyyyyyyyy”, … “d-zzzzzzzzz”]",
+      "description_cn": "云盘ID列表，一个带有格式的Json Array，最多支持16个ID，用半角逗号（,）隔开。 "
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "资源主账号的 ID，亦即 UID。"
+    },
+    "AutoPay": {
+      "name": "AutoPay",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否自动支付。取值范围： \n         \n- true（默认）：自动支付。您需要确保账户余额充足，如果账户余额不足会生成异常订单，只能作废订单。 \n- false：只生成订单不扣费。如果您的账户余额不足，会生成正常的未支付订单，此订单可登录 ECS 控制台支付。 \n         "
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123e4567-e89b-12d3-a456-426655440000",
+      "description_cn": "保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。**ClientToken**只支持ASCII字符，且不能超过64个字符。更多详情，请参见[如何保证幂等性](~~25693~~)。"
+    },
+    "DiskChargeType": {
+      "name": "DiskChargeType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PostPaid",
+      "description_cn": "云盘计费方式。取值范围： \n         \n- PrePaid（默认）：按量付费数据盘转换为包年包月数据盘。 \n- PostPaid：包年包月数据盘转换为按量付费数据盘。 \n         "
+    }
+  },
+  "res": {
+    "RequestId": "04F0F334-1335-436C-A1D7-6C044FE73368",
+    "Order": 1011111111111111
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "name": "ModifyBackupPolicy",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyBackupPolicy接口修改MongoDB实例的备份策略。",
+  "abc_id": 62169,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例所属的地域ID，您可以通过调用[DescribeDBInstanceAttribute](~~62010~~)进行查询。"
+    },
+    "PreferredBackupTime": {
+      "name": "PreferredBackupTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "03:00Z-04:00Z",
+      "description_cn": "执行备份的时间，格式为<i>HH:mm</i>Z-<i>HH:mm</i>Z（UTC时间）。\n\n> 时间范围限制为1小时。"
+    },
+    "PreferredBackupPeriod": {
+      "name": "PreferredBackupPeriod",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "Monday,Wednesday,Friday,Sunday",
+      "description_cn": "备份周期，取值：\n- **Monday**：周一。\n- **Tuesday**：周二。\n- **Wednesday**：周三。\n- **Thursday**：周四。\n- **Friday**：周五。\n- **Saturday**：周六。\n- **Sunday**：周日。\n\n> 如需传入多个值，多个值用英文逗号（,）隔开。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。"
+    }
+  },
+  "res": {
+    "RequestId": "644A359C-B871-4DD3-97B5-ED91EF5809C2"
+  }
+}

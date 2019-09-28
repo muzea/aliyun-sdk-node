@@ -1,0 +1,104 @@
+{
+  "name": "DescribeRules",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeRules查询指定监听已配置的转发规则。",
+  "abc_id": 35230,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "负载均衡实例的地域ID。\n\n您可以通过调用[DescribeRegions](~~27584~~)接口查询地域ID。"
+    },
+    "LoadBalancerId": {
+      "name": "LoadBalancerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "lb-bp1ca0zt07t934wxezyxo",
+      "description_cn": "负载均衡实例ID。"
+    },
+    "ListenerPort": {
+      "name": "ListenerPort",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "90",
+      "description_cn": "负载均衡实例前端使用的监听端口。\n\n取值范围：**1~65535**。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "ListenerProtocol": {
+      "name": "ListenerProtocol",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "11D87D83-741B-4F8A-8AAD-FD6867FDE7B2",
+    "Rules": {
+      "Rule": [
+        {
+          "Url": "/image",
+          "Domain": "example.com",
+          "VServerGroupId": "rsp-bp114nimo4kl9",
+          "RuleId": "rule-bp1supbxos2u3",
+          "RuleName": "auto_named_rule",
+          "ListenerSync": "on"
+        },
+        {
+          "Domain": "test.com",
+          "VServerGroupId": "rsp-bp114nimo4kl9",
+          "RuleId": "rule-bp1efemp9suk5",
+          "RuleName": "Rule2",
+          "ListenerSync": "on"
+        },
+        {
+          "Domain": "test2.com",
+          "VServerGroupId": "rsp-bp114nimo4kl9",
+          "RuleId": "rule-bp12jzy0hvio3",
+          "RuleName": "Rule3",
+          "ListenerSync": "on"
+        }
+      ]
+    }
+  }
+}

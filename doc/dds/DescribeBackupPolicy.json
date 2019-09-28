@@ -1,0 +1,48 @@
+{
+  "name": "DescribeBackupPolicy",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeBackupPolicy接口查询MongoDB实例的备份策略。",
+  "abc_id": 62168,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例所属的地域ID，您可以通过调用[DescribeDBInstanceAttribute](~~62010~~)进行查询。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。"
+    }
+  },
+  "res": {
+    "PreferredBackupPeriod": "Monday,Wednesday,Friday,Sunday",
+    "RequestId": "C2C283A1-1CC4-4DD9-B985-3811E0244A45",
+    "BackupRetentionPeriod": "7",
+    "PreferredBackupTime": "20:00Z-21:00Z"
+  }
+}

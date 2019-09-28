@@ -1,0 +1,26 @@
+{
+  "name": "PutBucketACL",
+  "protocol": "HTTP|HTTPS",
+  "method": "PUT",
+  "path": "/",
+  "timeout": null,
+  "reqFormat": {
+    "BucketName": {
+      "name": "BucketName",
+      "position": "domain",
+      "required": true
+    },
+    "acl": {
+      "name": "acl",
+      "position": "query",
+      "required": true,
+      "default": ""
+    },
+    "x-oss-acl": {
+      "name": "x-oss-acl",
+      "position": "header",
+      "required": true
+    }
+  },
+  "res": {}
+}

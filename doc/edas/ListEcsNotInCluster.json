@@ -1,0 +1,34 @@
+{
+  "name": "ListEcsNotInCluster",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v5/resource/ecs_not_in_cluster",
+  "timeout": 2000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "NetworkMode": {
+      "name": "NetworkMode",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false
+    },
+    "VpcId": {
+      "name": "VpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,85 @@
+{
+  "name": "DescribeParameterTemplates",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeParameterTemplates接口查看数据库参数模板。",
+  "abc_id": 26284,
+  "timeout": 12000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Engine": {
+      "name": "Engine",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "MySQL",
+      "description_cn": "数据库类型，取值：\n* **mysql**：MySQL数据库；\n* **mssql**：SQL Server数据库；\n* **PostgreSQL**：PostgreSQL数据库；\n* **PPAS**：PPAS数据库；\n* **MariaDB**：MariaDB数据库。"
+    },
+    "EngineVersion": {
+      "name": "EngineVersion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "5.6",
+      "description_cn": "数据库版本号，取值：\n* MySQL数据库：**5.5/5.6/5.7/8.0**；\n* SQL Server数据库：**2008r2**；\n* PostgreSQL数据库：**9.4/10.0**；\n* PPAS数据库：**9.3/10.0**；\n* MariaDB数据库：**10.3**。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ETnLKlblzczshOTUbOCzxxxxxxx",
+      "description_cn": "用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。"
+    },
+    "Category": {
+      "name": "Category",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Basic",
+      "description_cn": "实例类别，取值：\n* **Basic**：基础版；\n* **HighAvailability **：高可用版；\n* **Finance **：金融版（仅支持中国站）。\n\n默认返回所有实例类型的参数模板。"
+    }
+  },
+  "res": {
+    "DescribeParameterTemplatesResponse": {
+      "Engine": "mssql",
+      "EngineVersion": "2008r2",
+      "ParameterCount": "1",
+      "Parameters": {
+        "TemplateRecord": {
+          "CheckingCode": "[0-100]",
+          "ForceRestart": "True",
+          "Factor": "1",
+          "ParameterDescription": "此选项设置服务器范围内的默认填充因子值。提供填充因子是为了优化索引数据存储和性能。",
+          "ParameterName": "fill factor",
+          "ParameterValue": "0",
+          "ForceModify": "True",
+          "Unit": "INT"
+        }
+      },
+      "RequestId": "7B96585A-0FF2-4979-8FE5-7D147A29FDC0"
+    }
+  }
+}

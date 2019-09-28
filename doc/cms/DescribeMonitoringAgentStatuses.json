@@ -1,0 +1,48 @@
+{
+  "name": "DescribeMonitoringAgentStatuses",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询云监控插件运行状态。",
+  "abc_id": 114946,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "InstanceIds": {
+      "name": "InstanceIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "i-12345w55tr2rcpejp****,i-23456w55tr2rcpejp****",
+      "description_cn": "要获取状态的实例ID，多个实例ID直接用英文逗号分隔。"
+    }
+  },
+  "res": {
+    "NodeStatusList": {
+      "NodeStatus": [
+        {
+          "Status": "running",
+          "InstanceId": "i-123455cpejp****",
+          "AutoInstall": true
+        },
+        {
+          "Status": "running",
+          "InstanceId": "i-123567kg04****",
+          "AutoInstall": true
+        }
+      ]
+    },
+    "Success": true,
+    "Code": 200
+  }
+}

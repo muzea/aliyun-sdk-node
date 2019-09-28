@@ -1,0 +1,296 @@
+{
+  "name": "DescribeSnapshots",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeSnapshots查询一台ECS实例或一块云盘所有的快照列表。InstanceId、DiskId和SnapshotIds不是必需参数，但是可以构建过滤器逻辑，参数之间为逻辑与（And）关系。",
+  "abc_id": 25526,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "云盘所属于的地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "hide"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-instanceid1",
+      "description_cn": "指定的实例ID。"
+    },
+    "DiskId": {
+      "name": "DiskId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "d-diskid1",
+      "description_cn": "指定的云盘设备ID。"
+    },
+    "SnapshotLinkId": {
+      "name": "SnapshotLinkId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "d-25okbh2**",
+      "description_cn": "快照链ID。"
+    },
+    "SnapshotIds": {
+      "name": "SnapshotIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[\"s-xxxxxxxxx\", \"s-yyyyyyyyy\", … \"s-zzzzzzzzz\"]",
+      "description_cn": "快照标识编码。取值可以由多个快照ID组成一个JSON数组，最多支持100个ID，ID之间用半角逗号（,）隔开。 "
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "快照列表的页码。起始值：1\n\n默认值：1 "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时设置的每页行数。最大值：100\n\n默认值：10 "
+    },
+    "SnapshotName": {
+      "name": "SnapshotName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FinanceJoshua",
+      "description_cn": "快照名称。"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "all",
+      "description_cn": "快照状态。取值范围： \n         \n- progressing：正在创建的快照\n- accomplished：创建成功的快照\n- failed：创建失败的快照\n- all（默认）：所有快照状态"
+    },
+    "SnapshotType": {
+      "name": "SnapshotType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "all",
+      "description_cn": "快照类型。取值范围： \n         \n- auto：自动快照\n- user：手动创建的快照\n- all（默认）：所有快照类型"
+    },
+    "Filter.1.Key": {
+      "name": "Filter.1.Key",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "CreationStartTime",
+      "description_cn": "查询资源时的筛选键。取值必须为CreationStartTime。"
+    },
+    "Filter.2.Key": {
+      "name": "Filter.2.Key",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "CreationEndTime",
+      "description_cn": "查询资源时的筛选键。取值必须为CreationEndTime。"
+    },
+    "Filter.1.Value": {
+      "name": "Filter.1.Value",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2017-12-05T22:40:00Z",
+      "description_cn": "查询资源时的筛选值。取值必须为资源创建的开始时间点（CreationStartTime）。"
+    },
+    "Filter.2.Value": {
+      "name": "Filter.2.Value",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2017-12-06T22:40:00Z",
+      "description_cn": "查询资源时的筛选值。取值必须为资源创建的结束时间点（CreationEndTime）。"
+    },
+    "Usage": {
+      "name": "Usage",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "none",
+      "description_cn": "有引用关系的资源类型。取值范围： \n\n- image：使用快照创建景象（[CreateImage](~~25535~~)）\n- disk：使用快照创建云盘（[CreateDisk](~~25513~~)）\n- image_disk：使用快照创建了数据盘和自定义镜像\n- none：暂无引用关系"
+    },
+    "SourceDiskType": {
+      "name": "SourceDiskType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Data",
+      "description_cn": "快照源云盘的云盘类型。取值范围： \n         \n- System：根据系统盘创建的快照\n- Data：根据数据盘创建的快照"
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "Encrypted": {
+      "name": "Encrypted",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否过滤加密快照。默认值：false "
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rg-resourcegrouid",
+      "description_cn": "资源组ID。"
+    },
+    "DryRun": {
+      "name": "DryRun",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否只预检此次请求。\n\n- true：发送检查请求，不会查询资源状况。检查项包括AccessKey是否有效、RAM用户的授权情况和是否填写了必需参数。如果检查不通过，则返回对应错误。如果检查通过，会返回错误码DryRunOperation。\n- false（默认）：发送正常请求，通过检查后返回2XX HTTP状态码并直接查询资源状况。"
+    },
+    "KMSKeyId": {
+      "name": "KMSKeyId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0e478b7a-4262-4802-b8cb-00d3fb4082**",
+      "description_cn": "数据盘对应的KMS密钥ID。"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "PageSize": 2,
+    "RequestId": "659F91C6-1949-43B0-90C4-B6342CA757D5",
+    "Snapshots": {
+      "Snapshot": [
+        {
+          "CreationTime": "2015-07-30T05:00:14Z",
+          "Progress": "100%",
+          "SnapshotId": "s-943ypfgic",
+          "SnapshotName": "auto_20150730_3",
+          "SourceDiskId": "d-944qyqjfa",
+          "SourceDiskSize": 20,
+          "SourceDiskType": "system",
+          "Status": "accomplished",
+          "Usage": "none"
+        },
+        {
+          "CreationTime": "2015-07-30T05:00:14Z",
+          "Progress": "100%",
+          "SnapshotId": "s-94osg320e",
+          "SnapshotName": "auto_20150730_3",
+          "SourceDiskId": "d-94j355jsq",
+          "SourceDiskSize": 20,
+          "SourceDiskType": "system",
+          "Status": "accomplished",
+          "Usage": "none"
+        }
+      ]
+    },
+    "TotalCount": 36
+  }
+}

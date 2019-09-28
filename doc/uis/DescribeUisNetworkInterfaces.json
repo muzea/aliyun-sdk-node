@@ -1,0 +1,97 @@
+{
+  "name": "DescribeUisNetworkInterfaces",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "DescribeUisNetworkInterfaces",
+  "abc_id": 110358,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "Uis实例所在的地域"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "UisNodeId": {
+      "name": "UisNodeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "UISNODE-xxxccvrtiviatdroh92pm",
+      "description_cn": "Uis节点ID"
+    },
+    "UisEniId": {
+      "name": "UisEniId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "UISENI-xxxfunml63xpaz0tzbev0",
+      "description_cn": "Uis弹性网卡ID"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "列表的页码，默认值为1"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时每页的行数，最大值为50，默认值为10。"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 1,
+    "PageSize": 10,
+    "NetworkInterfaces": {
+      "NetworkInterface": [
+        {
+          "Name": "TestCreateEni",
+          "Description": "TestCreateEni",
+          "UisEniId": "UISENI-xxxfunml63xpaz0tzbev0",
+          "UisNodeId": "UISNODE-xxxccvrtiviatdroh92pm",
+          "SecurityGroupID": "sg-m5eiigbzenfqcpdt6nvi",
+          "State": "active",
+          "VswitchId": "vsw-m5e1caexsmph0og6lis8h",
+          "IpAddress": "192.168.199.142",
+          "NetworkInterfaceId": "eni-m5e0hoi1xi93raqggvq3"
+        }
+      ]
+    },
+    "RequestId": "5B877E24-48C5-48F4-B3A6-43B61AC4FCBA"
+  }
+}

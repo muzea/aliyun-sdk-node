@@ -1,0 +1,54 @@
+{
+  "name": "DescribeEipGatewayInfo",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeEipGatewayInfo接口查询EIP的网关和掩码信息。",
+  "abc_id": 123053,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-zhangjiakou",
+      "description_cn": "EIP的所属地域。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "eni-bp1d66qjxb3qoin3xxxx",
+      "description_cn": "绑定EIP的弹性网卡的实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "111"
+    }
+  },
+  "res": {
+    "Message": "successful",
+    "RequestId": "0ED8D006-F706-4D23-88ED-E11ED28DCAC0",
+    "EipInfos": {
+      "EipInfo": [
+        {
+          "IP": "47.xx.xx.236",
+          "IpMask": "255.255.255.0",
+          "IpGw": "47.xx.xx.1"
+        }
+      ]
+    },
+    "Code": "200"
+  }
+}

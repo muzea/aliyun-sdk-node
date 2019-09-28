@@ -1,0 +1,69 @@
+{
+  "name": "CreateRealTimeLogDelivery",
+  "protocol": "HTTP|HTTPS",
+  "method": "GET",
+  "path": "/",
+  "summary_cn": "调用CreateRealTimeLogDelivery创建域名实时日志投递。",
+  "abc_id": 100456,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Project": {
+      "name": "Project",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "实时投递sls的ProjectName。\n"
+    },
+    "Logstore": {
+      "name": "Logstore",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "Logstore",
+      "description_cn": "实时投递sls的LogStoreName。\n"
+    },
+    "Region": {
+      "name": "Region",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "实时投递sls的Region。详情请参见[实时日志投递用户Region列表](~~27232~~)。"
+    },
+    "Domain": {
+      "name": "Domain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "开启实时日志投递服务域名。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "F32C57AA-7BF8-49AE-A2CC-9F42390F5A19"
+  }
+}

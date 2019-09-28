@@ -1,0 +1,202 @@
+{
+  "name": "ModifySecurityGroupEgressRule",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifySecurityGroupEgressRule修改安全组出方向规则的描述信息。如果您还没有增加过安全组规则，可以调用 AuthorizeSecurityGroupEgress 增加。 ",
+  "abc_id": 100568,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "源端安全组所属地域 ID。您可以调用 [DescribeRegions](~~25609~~) 查看最新的阿里云地域列表。"
+    },
+    "SecurityGroupId": {
+      "name": "SecurityGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "sg-securitygroupid1",
+      "description_cn": "源端安全组 ID。"
+    },
+    "IpProtocol": {
+      "name": "IpProtocol",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "tcp",
+      "description_cn": "传输层协议。不区分大小写。取值范围：\n\n- icmp\n- gre\n- tcp\n- udp\n- all：支持所有协议"
+    },
+    "PortRange": {
+      "name": "PortRange",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "80/80",
+      "description_cn": "源端安全组开放的传输层协议相关的端口范围。取值范围：\n\n- TCP/UDP 协议：取值范围为 1~65535。使用斜线（/）隔开起始端口和终止端口。正确示范：1/200；错误示范：200/1。\n- ICMP 协议：-1/-1 。\n- GRE 协议：-1/-1。\n- all：-1/-1 。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "DestGroupId": {
+      "name": "DestGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sg-securitygroupid22",
+      "description_cn": "目的端安全组ID。"
+    },
+    "DestGroupOwnerId": {
+      "name": "DestGroupOwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "目的端安全组所属的账号登录名称。"
+    },
+    "DestGroupOwnerAccount": {
+      "name": "DestGroupOwnerAccount",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "EcsforCloud@Alibaba.com ",
+      "description_cn": "目的端安全组所属的账号ID，亦即UID。"
+    },
+    "DestCidrIp": {
+      "name": "DestCidrIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10.0.0.0/8",
+      "description_cn": "目的端 IP 地址范围。支持 CIDR 格式和 IPv4 格式的 IP 地址范围。默认值：0.0.0.0/0"
+    },
+    "Ipv6DestCidrIp": {
+      "name": "Ipv6DestCidrIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2001:db8:1233:1a00::***",
+      "description_cn": "目的端 IP 地址范围。支持 CIDR 格式和 IPv6 格式的 IP 地址范围。"
+    },
+    "SourceCidrIp": {
+      "name": "SourceCidrIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10.0.0.0/8",
+      "description_cn": "源端 IP 地址范围。支持 CIDR 格式和 IPv4 格式的 IP 地址范围。"
+    },
+    "Ipv6SourceCidrIp": {
+      "name": "Ipv6SourceCidrIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2001:db8:1234:1a00::***",
+      "description_cn": "源端 IP 地址范围。支持 CIDR 格式和 IPv6 格式的 IP 地址范围。"
+    },
+    "SourcePortRange": {
+      "name": "SourcePortRange",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "80/80",
+      "description_cn": "源端安全组开放的传输层协议相关的端口范围。取值范围：\n\n- TCP/UDP 协议：取值范围为 1~65535。使用斜线（/）隔开起始端口和终止端口。正确示范：1/200；错误示范：200/1。\n- ICMP 协议：-1/-1。\n- GRE 协议：-1/-1。\n- all：-1/-1。"
+    },
+    "Policy": {
+      "name": "Policy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "accept",
+      "description_cn": "访问权限。取值范围：\n\n- accept：接受访问。\n- drop：拒绝访问，不发回拒绝信息。\n\n默认值：accept"
+    },
+    "Priority": {
+      "name": "Priority",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "安全组规则优先级。取值范围：1~100\n\n默认值：1"
+    },
+    "NicType": {
+      "name": "NicType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "internet",
+      "description_cn": "网卡类型。取值范围：\n\n- internet：公网网卡。\n- intranet：内网网卡。\n\n当设置安全组之间互相访问时，即指定了 DestGroupId且没有指定 DestCidrIp 时，参数 NicType 取值只能为 intranet。"
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123e4567-e89b-12d3-a456-426655440000",
+      "description_cn": "保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。**ClientToken**只支持ASCII字符，且不能超过64个字符。更多详情，请参见[如何保证幂等性](~~25693~~)。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Thisisanewsecuritygrouprule",
+      "description_cn": "安全组规则的描述信息。长度为 1~512 个字符。"
+    }
+  },
+  "res": {
+    "RequestId": "CEF72CEB-54B6-4AE8-B225-F876FF7BA984"
+  }
+}

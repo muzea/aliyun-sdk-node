@@ -1,0 +1,63 @@
+{
+  "name": "ModifyDBInstanceMaintainTime",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyDBInstanceMaintainTime接口修改MongoDB实例的可维护时间。",
+  "abc_id": 62008,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例所属的地域ID，您可以通过调用[DescribeDBInstanceAttribute](~~62010~~)进行查询。"
+    },
+    "MaintainStartTime": {
+      "name": "MaintainStartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "01:00Z",
+      "description_cn": "实例可运维时间段的开始时间，格式为<i>HH:mm</i>Z（UTC时间）。"
+    },
+    "MaintainEndTime": {
+      "name": "MaintainEndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "02:00Z",
+      "description_cn": "实例可运维时间段的结束时间，格式为<i>HH:mm</i>Z（UTC时间）。\n\n> 开始时间至结束时间的范围须为1小时，例如**MaintainStartTime**为**01:00Z**，则**MaintainEndTime**必须为**02:00Z**。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。"
+    }
+  },
+  "res": {
+    "RequestId": "A9310426-C763-42A2-A3AD-70A8DA204531"
+  }
+}

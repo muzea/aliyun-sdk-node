@@ -1,0 +1,104 @@
+{
+  "name": "DescribeDatabases",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDatabases接口查看实例下的数据库信息。",
+  "abc_id": 26260,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "DBName": {
+      "name": "DBName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "testDB01",
+      "description_cn": "数据库名称。"
+    },
+    "DBStatus": {
+      "name": "DBStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Creating",
+      "description_cn": "数据库状态，取值：\n* **Creating**：创建中；\n* **Running**：使用中；\n* **Deleting**：删除中。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "每页记录数，取值：\n* **30**；\n* **50**；\n* **100**。\n\n默认值：30。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页码，取值：大于0且不超过Integer的最大值。\n\n默认值：**1**。"
+    }
+  },
+  "res": {
+    "RequestId": "2603CA96-B17D-4903-BC04-61A2C829CD94",
+    "Databases": {
+      "Database": [
+        {
+          "Engine": "MySQL",
+          "CharacterSetName": "utf8",
+          "DBStatus": "Creating",
+          "DBDescription": "",
+          "DBInstanceId": "rdsaiiabnaiiabn",
+          "Accounts": {
+            " AccountPrivilegeInfo": []
+          },
+          "DBName": "testdb"
+        },
+        {
+          "Engine": "MySQL",
+          "CharacterSetName": "gbk",
+          "DBStatus": "Creating",
+          "DBDescription": "",
+          "DBInstanceId": "rdsaiiabnaiiabn",
+          "Accounts": {
+            " AccountPrivilegeInfo": []
+          },
+          "DBName": "testdb2"
+        }
+      ]
+    }
+  }
+}

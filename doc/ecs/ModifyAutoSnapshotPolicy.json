@@ -1,0 +1,88 @@
+{
+  "name": "ModifyAutoSnapshotPolicy",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 80000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SystemDiskPolicyEnabled": {
+      "name": "SystemDiskPolicyEnabled",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SystemDiskPolicyTimePeriod": {
+      "name": "SystemDiskPolicyTimePeriod",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SystemDiskPolicyRetentionDays": {
+      "name": "SystemDiskPolicyRetentionDays",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SystemDiskPolicyRetentionLastWeek": {
+      "name": "SystemDiskPolicyRetentionLastWeek",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "DataDiskPolicyEnabled": {
+      "name": "DataDiskPolicyEnabled",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "DataDiskPolicyTimePeriod": {
+      "name": "DataDiskPolicyTimePeriod",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "DataDiskPolicyRetentionDays": {
+      "name": "DataDiskPolicyRetentionDays",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "DataDiskPolicyRetentionLastWeek": {
+      "name": "DataDiskPolicyRetentionLastWeek",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

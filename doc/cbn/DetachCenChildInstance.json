@@ -1,0 +1,96 @@
+{
+  "name": "DetachCenChildInstance",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DetachCenChildInstance从云企业网实例中解绑指定的网络实例。",
+  "abc_id": 65915,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CenId": {
+      "name": "CenId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cen-7qthudw0ll6jmx****",
+      "description_cn": "云企业网实例的ID。"
+    },
+    "ChildInstanceId": {
+      "name": "ChildInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "vpc-bp18sth14qii3pnvx****",
+      "description_cn": "指定待解绑的网络实例ID。"
+    },
+    "ChildInstanceType": {
+      "name": "ChildInstanceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "VPC",
+      "description_cn": "网络实例的类型，取值：\n\n- **VPC**。\n\n- **VBR**。\n\n- **CCN**。"
+    },
+    "ChildInstanceRegionId": {
+      "name": "ChildInstanceRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "网络实例所在的地域。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ChildInstanceOwnerId": {
+      "name": "ChildInstanceOwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1234567890",
+      "description_cn": "网络实例所属账号的UID。"
+    },
+    "CenOwnerId": {
+      "name": "CenOwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456789",
+      "description_cn": "CEN实例所属账号的UID。"
+    }
+  },
+  "res": {
+    "RequestId": "0C2EE7A8-74D4-4081-8236-CEBDE3BBCF50"
+  }
+}

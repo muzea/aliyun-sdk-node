@@ -1,0 +1,50 @@
+{
+  "name": "DeleteCasterVideoResource",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteCasterVideoResource删除视频资源。",
+  "abc_id": 60270,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "地域。"
+    },
+    "ResourceId": {
+      "name": "ResourceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "05ab713c-676e-49c0-96ce-cc408da1b314",
+      "description_cn": "资源ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "CasterId": {
+      "name": "CasterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "80787064-1c94-4dc1-85ce-9409960a9bf0",
+      "description_cn": "导播台ID。"
+    }
+  },
+  "res": {}
+}

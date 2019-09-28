@@ -1,0 +1,71 @@
+{
+  "name": "ModifyDBInstanceConnectionString",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyDBInstanceConnectionString接口修改MongoDB实例的连接地址。",
+  "abc_id": 90263,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "CurrentConnectionString": {
+      "name": "CurrentConnectionString",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "s-bpxxxxxxxx.mongodb.rds.aliyuncs.com",
+      "description_cn": "当前连接地址，即待修改的连接地址。"
+    },
+    "NewConnectionString": {
+      "name": "NewConnectionString",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "aliyuntest111",
+      "description_cn": "新的连接地址，以小写字母开头，由字母、数字组成，长度为8~64个字符。\n\n> 仅需传入连接地址的前缀部分，前缀以外的部分不可修改。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。\n\n> 当本参数传入的是分片集群实例ID时，还需要传入**NodeId**参数。"
+    },
+    "NodeId": {
+      "name": "NodeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "s-bpxxxxxxxx",
+      "description_cn": "分片集群实例中的Mongos节点ID，每次调用仅能传入一个Mongos节点ID。\n\n> 当**DBInstanceId**参数传入的是分片集群实例ID时，本参数才可用。"
+    }
+  },
+  "res": {
+    "RequestId": "FF36A84C-0694-42D0-861D-C383E8E4FAAF"
+  }
+}

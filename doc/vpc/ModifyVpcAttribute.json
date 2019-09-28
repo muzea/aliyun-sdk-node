@@ -1,0 +1,83 @@
+{
+  "name": "ModifyVpcAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyVpcAttribute接口修改指定VPC的名称和描述信息。",
+  "abc_id": 35740,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "VPC的地域。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "111"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "This is my VPC.",
+      "description_cn": "VPC的描述信息。长度为2~256个字符，必须以字母或中文开头，但不能以`http:// `或`https://`开头。  "
+    },
+    "VpcName": {
+      "name": "VpcName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Vpc-1",
+      "description_cn": "VPC的名称。长度为2~128个字符，必须以字母或中文开头，可包含数字、点号（.）、下划线（_）和短横线（-），但不能以`http://`或`https://`开头。  "
+    },
+    "CidrBlock": {
+      "name": "CidrBlock",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "192.168.0.0/24",
+      "description_cn": "VPC的网段，支持将VPC网段在10.0.0.0/8、172.16.0.0/12和192.168.0.0/16以及它们的子网范围内放大或缩小，网段的掩码为8~24位。"
+    },
+    "VpcId": {
+      "name": "VpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "vpc-bp1qtbach57ywecf****",
+      "description_cn": " VPC的ID。 "
+    },
+    "EnableIPv6": {
+      "name": "EnableIPv6",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否开启IPv6网段。\n\n- **true**：开启。\n\n- **false**：关闭。\n\n\n\n"
+    }
+  },
+  "res": {
+    "RequestId": "43B72D30-25E1-4FA3-96A8-89374A521D1A"
+  }
+}

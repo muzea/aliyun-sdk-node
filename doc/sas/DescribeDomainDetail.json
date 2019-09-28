@@ -1,0 +1,77 @@
+{
+  "name": "DescribeDomainDetail",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用该接口获取域名资产详情。",
+  "abc_id": 130981,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "0.0.0.0",
+      "description_cn": "指定待查询的域名名称或网站名称。\n\n\n\n"
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "127.1.1.1",
+      "description_cn": "指定访问源IP地址。"
+    }
+  },
+  "res": {
+    "code": 200,
+    "data": {
+      "DomainDetailItems": [
+        {
+          "InstanceName": "iZm5e6w7dzsktt6mz4yimeZ-602888",
+          "AssetType": "0",
+          "Uuid": "d664e15e-488b-4f3c-a80f-25e3560d6085",
+          "InternetIp": "139.129.103.215",
+          "InstanceId": "i-m5e6w7dzsktt6mz4yime",
+          "IntranetIp": "172.31.13.43"
+        },
+        {
+          "InstanceName": "iZm5ehn8ugwvsp2k4xdzokZ",
+          "AssetType": "0",
+          "Uuid": "0d804403-8d36-4642-a5f1-a22905491c94",
+          "InternetIp": "120.27.11.134",
+          "InstanceId": "i-m5ehn8ugwvsp2k4xdzok",
+          "IntranetIp": "10.30.183.121"
+        },
+        {
+          "AssetType": "2",
+          "Uuid": "eip-wz98lk3q06mhqvbhcuvb5",
+          "InternetIp": "120.79.72.16",
+          "InstanceId": "eip-wz98lk3q06mhqvbhcuvb5"
+        },
+        {
+          "InstanceName": "郝浩天测试",
+          "AssetType": "1",
+          "Uuid": "lb-bp1g9dohoyin9cjhn6itt",
+          "InternetIp": "47.111.33.130",
+          "InstanceId": "lb-bp1g9dohoyin9cjhn6itt"
+        }
+      ],
+      "RootDomain": "sastst.com",
+      "Domain": "b.sastst.com"
+    },
+    "requestId": "3A85CFCF-05C8-451A-9E41-C0D5E96BA407",
+    "success": true
+  }
+}

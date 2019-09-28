@@ -1,0 +1,64 @@
+{
+  "name": "CreateInstanceAccount",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true
+    },
+    "AccountName": {
+      "name": "AccountName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "Password": {
+      "name": "Password",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "DbPrivilege": {
+      "name": "DbPrivilege",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "DbName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Privilege",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "DrdsInstanceId": {
+      "name": "DrdsInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

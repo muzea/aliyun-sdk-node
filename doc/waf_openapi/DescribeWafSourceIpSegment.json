@@ -1,0 +1,56 @@
+{
+  "name": "DescribeWafSourceIpSegment",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeWafSourceIpSegment接口获取WAF实例的回源IP网段列表。",
+  "abc_id": 102479,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "waf_elasticity-cn-0xldbqtm005",
+      "description_cn": "WAF实例ID。\n\n> 您可以通过调用[DescribePayInfo](~~86651~~)接口查看您当前WAF实例ID。"
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn"
+    },
+    "Region": {
+      "name": "Region",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn",
+      "description_cn": "WAF实例所在的地域。取值：\n- **cn**：表示中国大陆地区（默认）\n- **cn-hongkong**：表示海外地区"
+    }
+  },
+  "res": {}
+}

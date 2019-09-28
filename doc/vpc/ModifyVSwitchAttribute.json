@@ -1,0 +1,72 @@
+{
+  "name": "ModifyVSwitchAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "使用ModifyVSwitchAttribute修改指定交换机的名称和描述信息。",
+  "abc_id": 36010,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "交换机所属的地域ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "VSwitchName": {
+      "name": "VSwitchName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "VSwitch-1",
+      "description_cn": " 交换机的名称。  长度为 2-128个字符，必须以字母或中文开头，可包含数字，点号（.），下划线（_）和短横线（-）。但不能以`http:// `或`https://`开头。  "
+    },
+    "VSwitchId": {
+      "name": "VSwitchId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "vsw-25naue4gz",
+      "description_cn": " 交换机的ID。  "
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "This is my vswitch.",
+      "description_cn": "交换机的描述信息。  \n\n长度为 2-256个字符，必须以字母或中文开头，但不能以`http://` 或`https://`开头。  "
+    },
+    "Ipv6CidrBlock": {
+      "name": "Ipv6CidrBlock",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "交换机的IPv6网段，支持自定义IPv6网段的最后8位。取值：0-255（十进制）。\n\n交换机的IPv6网段掩码默认为64 位。\n"
+    }
+  },
+  "res": {
+    "RequestId": "0ED8D006-F706-4D23-88ED-E11ED28DCAC0"
+  }
+}

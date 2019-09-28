@@ -1,0 +1,41 @@
+{
+  "name": "DescribeCasterChannels",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCasterChannels查询导播台通道信息列表。",
+  "abc_id": 94774,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "地域。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "CasterId": {
+      "name": "CasterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "a2b8e671-2fe5-4642-a2ec-bf93880e1a49",
+      "description_cn": "导播台ID。"
+    }
+  },
+  "res": {}
+}

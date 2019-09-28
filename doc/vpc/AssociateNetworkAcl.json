@@ -1,0 +1,74 @@
+{
+  "name": "AssociateNetworkAcl",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AccosicateNetworkAcl接口，绑定网络ACL到交换机。",
+  "abc_id": 116587,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "网络ACL所在的地域。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "NetworkAclId": {
+      "name": "NetworkAclId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "nacl-a2do9e413e0spxxxxxxxx",
+      "description_cn": "网络ACL的ID。"
+    },
+    "Resource": {
+      "name": "Resource",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "ResourceType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ResourceId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123"
+    }
+  },
+  "res": {
+    "RequestId": "4CF20CC7-D1FC-425B-A15B-DF7C8E2131A7"
+  }
+}

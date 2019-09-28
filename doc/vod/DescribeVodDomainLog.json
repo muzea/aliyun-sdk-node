@@ -1,0 +1,79 @@
+{
+  "name": "DescribeVodDomainLog",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeVodDomainLog获取指定域名的CDN原始访问日志下载地址。",
+  "abc_id": 130658,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "example1.com",
+      "description_cn": "域名（只支持单个查询）。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "300",
+      "description_cn": "分页大小。默认值：**300**。最大值：**1000**。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页码。默认值为**1**。"
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2016-10-20T04:00:00Z",
+      "description_cn": "获取日志起始时间点。\n\n日期格式按照ISO8601表示法，并使用UTC时间。例如：2016-10-20T04:00:00Z。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2016-10-20T04:00:00Z",
+      "description_cn": "结束时间需大于起始时间。起止时间和结束时间，间隔不超过一年。\n\n获取日期格式按照ISO8601表示法，并使用UTC时间。例如：2016-10-20T04:00:00Z。"
+    }
+  },
+  "res": {}
+}

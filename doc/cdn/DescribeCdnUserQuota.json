@@ -1,0 +1,38 @@
+{
+  "name": "DescribeCdnUserQuota",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCdnUserQuota查询用户资源上限及已使用情况。",
+  "abc_id": 91172,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "DomainQuota": 20,
+    "RefreshUrlQuota": 1000,
+    "RefreshDirQuota": 500,
+    "RefreshUrlRemain": 500,
+    "RefreshDirRemain": 300,
+    "PreloadQuota": 300,
+    "PreloadRemain": 100,
+    "BlockQuota": 100,
+    "BlockRemain": 100,
+    "RequestId": "BFFCDFAD-DACC-484E-9BE6-0AF3B3A0DD23"
+  }
+}

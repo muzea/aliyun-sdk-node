@@ -1,0 +1,42 @@
+{
+  "name": "ToggleFeatures",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "StoreName": {
+      "name": "StoreName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "EnabledFeatures": {
+      "name": "EnabledFeatures",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "DisabledFeatures": {
+      "name": "DisabledFeatures",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    }
+  },
+  "res": {}
+}

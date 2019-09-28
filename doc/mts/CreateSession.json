@@ -1,0 +1,38 @@
+{
+  "name": "CreateSession",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": null,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false
+    },
+    "SessionTime": {
+      "name": "SessionTime",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true
+    },
+    "MediaId": {
+      "name": "MediaId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true
+    },
+    "EndUserId": {
+      "name": "EndUserId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true
+    }
+  },
+  "res": {}
+}

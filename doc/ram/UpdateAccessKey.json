@@ -1,0 +1,50 @@
+{
+  "name": "UpdateAccessKey",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用UpdateAccessKey接口更新RAM用户访问密钥的状态。",
+  "abc_id": 28690,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "UserAccessKeyId": {
+      "name": "UserAccessKeyId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "0wNEpMMlzy7s****",
+      "description_cn": "指定要更新的`AccessKeyId`。"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "Inactive",
+      "description_cn": "AccessKey的状态，取值为：`Active`或`Inactive`。"
+    },
+    "UserName": {
+      "name": "UserName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "zhangq****",
+      "description_cn": "指定用户名。"
+    }
+  },
+  "res": {
+    "RequestId": "04F0F334-1335-436C-A1D7-6C044FE73368"
+  }
+}

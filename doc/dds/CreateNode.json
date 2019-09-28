@@ -1,0 +1,102 @@
+{
+  "name": "CreateNode",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateNode接口为MongoDB分片集群实例增加Shard节点或Mongos节点。",
+  "abc_id": 61911,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "NodeClass": {
+      "name": "NodeClass",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "dds.shard.mid",
+      "description_cn": "Shard节点或Mongos节点的规格，规格详情请参见[实例规格表](~~57141~~)。"
+    },
+    "NodeType": {
+      "name": "NodeType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "shard",
+      "description_cn": "Node的类型，取值：\n- **shard**：Shrad节点。\n- **mongos**：Mongos节点。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "分片集群实例ID。"
+    },
+    "NodeStorage": {
+      "name": "NodeStorage",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "Node的磁盘空间，当**NodeType**参数取值为**Shard**时该参数可用，且该参数必须传入。\n- 取值范围：**10**~**2000**，单位为GB。\n- 每10GB进行递增。"
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ETnLKlblzczshOTUbOCzxxxxxxxxxx",
+      "description_cn": "用于保证请求的幂等性。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。"
+    },
+    "FromApp": {
+      "name": "FromApp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "OpenApi",
+      "description_cn": "请求来源，取值：\n- **OpenApi**：请求来源为OpenApi。\n- **mongo_buy**：请求来源为控制台。"
+    },
+    "AutoPay": {
+      "name": "AutoPay",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否自动付费。取值：\n- **true**：自动付费，请确保账号有足够的余额。\n- **false**：控制台手动付费。具体操作为：登录控制台，在右上角选择**费用**>**进入费用中心**，在**订单管理**页面找到目标订单进行支付。\n\n默认值为：**true**。\n\n> 仅包年包月的实例可传入该参数。"
+    }
+  },
+  "res": {
+    "OrderId": "2034xxxxxxxx",
+    "RequestId": "7D48FB19-20CA-4725-A870-3D8F5CE69F14"
+  }
+}

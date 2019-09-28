@@ -1,0 +1,52 @@
+{
+  "name": "GetConsumerList",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/",
+  "summary_cn": "调用 GetConsumerList 获取 Consumer Group 列表。",
+  "abc_id": 122222,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域 ID。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "alikafka_post-cn-v0h18sav****",
+      "description_cn": "实例 ID。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": true
+    },
+    "CurrentPage": {
+      "name": "CurrentPage",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

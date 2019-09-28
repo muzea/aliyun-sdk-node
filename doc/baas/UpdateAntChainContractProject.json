@@ -1,0 +1,74 @@
+{
+  "name": "UpdateAntChainContractProject",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "在联盟内更新一个合约工程的属性",
+  "abc_id": 127105,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID"
+    },
+    "ProjectId": {
+      "name": "ProjectId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "bDXK1b8Z",
+      "description_cn": "合约工程ID"
+    },
+    "ProjectName": {
+      "name": "ProjectName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "更新合约工程名称",
+      "description_cn": "合约工程名称"
+    },
+    "ProjectVersion": {
+      "name": "ProjectVersion",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "v1.1.1",
+      "description_cn": "合约工程版本"
+    },
+    "ProjectDescription": {
+      "name": "ProjectDescription",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "合约工程的版本描述",
+      "description_cn": "合约工程描述"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "9EBD381E-A19E-4875-8771-EDA08A0416D3",
+      "Result": "success"
+    },
+    "requestId": "9EBD381E-A19E-4875-8771-EDA08A0416D3",
+    "successResponse": true
+  }
+}

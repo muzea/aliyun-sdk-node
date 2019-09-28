@@ -1,0 +1,74 @@
+{
+  "name": "DescribeInstanceTypes",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeInstanceTypes查询云服务器ECS提供的实例规格资源。",
+  "abc_id": 25620,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "InstanceTypeFamily": {
+      "name": "InstanceTypeFamily",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ecs.t1",
+      "description_cn": "实例规格所属的规格族。更多详情，请参见[实例规格族](~~25378~~)。"
+    }
+  },
+  "res": {
+    "InstanceTypes": {
+      "InstanceType": [
+        {
+          "CpuCoreCount": 1,
+          "InstanceTypeFamily": "ecs.t1",
+          "EniQuantity": 1,
+          "InstanceTypeId": "ecs.t1.xsmall",
+          "InstanceFamilyLevel": "EntryLevel",
+          "GPUSpec": "",
+          "MemorySize": 0.5,
+          "GPUAmount": 0,
+          "LocalStorageCategory": ""
+        },
+        {
+          "CpuCoreCount": 1,
+          "InstanceTypeFamily": "ecs.t1",
+          "EniQuantity": 1,
+          "InstanceTypeId": "ecs.t1.small",
+          "InstanceFamilyLevel": "EntryLevel",
+          "GPUSpec": "",
+          "MemorySize": 1,
+          "GPUAmount": 0,
+          "LocalStorageCategory": ""
+        }
+      ]
+    },
+    "RequestId": "01D5A075-FB83-4DDC-9F00-24A17AB386F6"
+  }
+}

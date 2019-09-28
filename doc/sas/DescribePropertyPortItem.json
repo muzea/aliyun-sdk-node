@@ -1,0 +1,107 @@
+{
+  "name": "DescribePropertyPortItem",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用该接口获取端口信息列表。",
+  "abc_id": 131004,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "ForceFlush": {
+      "name": "ForceFlush",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否强制刷新待查询数据。"
+    },
+    "Port": {
+      "name": "Port",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "22",
+      "description_cn": "指定待查询端口。"
+    },
+    "CurrentPage": {
+      "name": "CurrentPage",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "指定返回结果的当前页码。 "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "5",
+      "description_cn": "指定列表每页显示数据条数。"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "PageInfo": {
+        "Count": 5,
+        "PageSize": 5,
+        "TotalCount": 163,
+        "CurrentPage": 1
+      },
+      "PropertyItems": [
+        {
+          "Port": "22",
+          "Proto": "tcp",
+          "Count": 495
+        },
+        {
+          "Port": "111",
+          "Proto": "tcp",
+          "Count": 43
+        },
+        {
+          "Port": "6000",
+          "Proto": "tcp",
+          "Count": 2
+        },
+        {
+          "Port": "53",
+          "Proto": "tcp",
+          "Count": 1
+        },
+        {
+          "Port": "80",
+          "Proto": "tcp",
+          "Count": 38
+        }
+      ]
+    },
+    "success": true,
+    "requestId": null,
+    "message": "successful"
+  }
+}

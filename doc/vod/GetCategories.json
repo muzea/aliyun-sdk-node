@@ -1,0 +1,84 @@
+{
+  "name": "GetCategories",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用GetCategories获取指定的分类信息，及其子分类（即下一级分类）的列表。",
+  "abc_id": 129647,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "CateId": {
+      "name": "CateId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "49339",
+      "description_cn": "分类ID，默认为根节点分类ID，即**-1**。"
+    },
+    "PageNo": {
+      "name": "PageNo",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "子分类列表页号，默认值为**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "子分类列表页大小，默认值为**10**，最大值为**100**。"
+    },
+    "SortBy": {
+      "name": "SortBy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "CreationTime:Desc",
+      "description_cn": "排序字段和排序顺序，多个用逗号分隔。按创建时间排序。取值范围：\n\n- **CreationTime:Desc**\n- **CreationTime:Asc**\n\n> 排序字段示例：[排序字段](https://help.aliyun.com/document_detail/99179.html?spm=a2c4g.11186623.2.20.7e036ad8dnvm2w#%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B)。\n获取搜索条件是前5000条的数据时，最多支持三个排序字段。\n获取搜索条件是所有数据时，仅支持一个排序字段。"
+    },
+    "Type": {
+      "name": "Type",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Video",
+      "description_cn": "素材片段类型。取值：\n\n- **Video（默认值）**：视频\n- **Image**：图片"
+    }
+  },
+  "res": {}
+}

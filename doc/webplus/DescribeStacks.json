@@ -1,0 +1,62 @@
+{
+  "name": "DescribeStacks",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v1/wam/stack",
+  "summary_cn": "调用DescribeStacks查询技术栈。",
+  "abc_id": 127782,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "RecommendedOnly": {
+      "name": "RecommendedOnly",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "仅查询推荐的技术栈"
+    },
+    "CategoryName": {
+      "name": "CategoryName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Java",
+      "description_cn": "技术栈类型名称"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "查询页面大小"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "查询页面数"
+    }
+  },
+  "res": {}
+}

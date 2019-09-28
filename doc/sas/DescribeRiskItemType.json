@@ -1,0 +1,62 @@
+{
+  "name": "DescribeRiskItemType",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查看所有云产品配置检测项的类型。",
+  "abc_id": 113373,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": "请求源IP。"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn",
+      "description_cn": "调用该接口返回的内容的语言种类。支持中文（CN）和英文（EN）。"
+    }
+  },
+  "res": {
+    "RequestId": "3B3F3A90-46A5-4023-A2D8-D68B14262F96",
+    "List": [
+      {
+        "Title": "zh-身份认证及权限",
+        "Id": 1
+      },
+      {
+        "Title": "网络访问控制",
+        "Id": 2
+      },
+      {
+        "Title": "日志审计",
+        "Id": 3
+      },
+      {
+        "Title": "数据安全",
+        "Id": 4
+      },
+      {
+        "Title": "基础安全防护",
+        "Id": 6
+      }
+    ]
+  }
+}

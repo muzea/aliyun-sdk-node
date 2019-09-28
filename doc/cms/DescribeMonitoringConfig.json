@@ -1,0 +1,27 @@
+{
+  "name": "DescribeMonitoringConfig",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询云监控插件全局配置。",
+  "abc_id": 114966,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "",
+    "ActiveAlertProducts": "rds,opensearch,ecs",
+    "EnableInstallAgentNewECS": false,
+    "Success": true,
+    "Code": 200,
+    "AutoInstall": true
+  }
+}

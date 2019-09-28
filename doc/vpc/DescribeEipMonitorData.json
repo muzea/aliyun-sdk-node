@@ -1,0 +1,70 @@
+{
+  "name": "DescribeEipMonitorData",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeEipMonitorData接口查看EIP的监控信息。",
+  "abc_id": 36060,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "EIP所属地域ID。"
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2017-01-05T02:05:05Z",
+      "description_cn": " 获取数据的起始时间。 使用UTC时间。按照ISO8601标准，格式为YYYY-MM-DDThh:mm:ssZ。 例如，北京时间2013年1月10日20点0分0秒，表示为2013-01-10T12:00:00Z。\n\n如果秒不是00，则自动取下一分钟为起始时间点。 "
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2017-01-05T01:05:10Z",
+      "description_cn": " 获取数据的结束时间。 使用UTC时间。按照ISO8601标准，格式为YYYY-MM-DDThh:mm:ssZ。 例如，北京时间2013年1月10日20点0分0秒，表示为2013-01-10T12:00:00Z。\n\n如果秒不是00，则自动取下一分钟为起始时间点。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AllocationId": {
+      "name": "AllocationId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "eip-2zeerraiwb7uj6ixxxxxxxx",
+      "description_cn": "EIP的实例ID。"
+    },
+    "Period": {
+      "name": "Period",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "60",
+      "description_cn": "每条监控数据的时间长度，单位为秒，默认值为60，取值：  [60, 600, 3600] \n\n- （EndTime–StartTime）/ Peroid必须大于200，即最多返回200条监控数据。\n\n- 如果EndTime–StartTime小于200则只返回起始时间点的监控数据。\n"
+    }
+  },
+  "res": {}
+}

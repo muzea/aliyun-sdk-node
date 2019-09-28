@@ -1,0 +1,172 @@
+{
+  "name": "DescribeIPv6Translators",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询已创建的IPv6转换服务实例列表。",
+  "abc_id": 114601,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": " IPv6转换服务实例的地域。 您可以通过调用**DescribeRegions**接口获取地域ID。  "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "Ipv6TranslatorId": {
+      "name": "Ipv6TranslatorId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ipv6trans-bp1858ysxxxxxx",
+      "description_cn": " IPv6转换服务实例的ID。 "
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ipv6_1",
+      "description_cn": " IPv6转换服务实例的名称。 "
+    },
+    "Spec": {
+      "name": "Spec",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "small",
+      "description_cn": "IPv6转换服务实例的规格。"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "active",
+      "description_cn": " IPv6转换服务实例的状态，取值：** init|provisioning|active|updating|upgrading|deleting|deleted**。"
+    },
+    "AllocateIpv6Addr": {
+      "name": "AllocateIpv6Addr",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2400:3200:1600::xxx",
+      "description_cn": " 为IPv6转换服务实例分配的IPv6地址。 "
+    },
+    "AllocateIpv4Addr": {
+      "name": "AllocateIpv4Addr",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "47.99.xx.xx,47.99.xx.xx",
+      "description_cn": " 为IPv6转换服务实例分配的IPv4地址。"
+    },
+    "PayType": {
+      "name": "PayType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Prepay",
+      "description_cn": " 为IPv6转换服务实例分配的IPv4地址。 "
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": " 列表的页码，默认值为1。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": " 分页查询时每页的行数，最大值为50，默认值为10。  "
+    },
+    "BusinessStatus": {
+      "name": "BusinessStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Normal",
+      "description_cn": "IPv6转换服务实例的业务状态。"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 1,
+    "PageSize": 10,
+    "RequestId": "3109D437-5D6D-4A28-B5F5-EF936DExxxx",
+    "Ipv6Translators": {
+      "Ipv6Translator": [
+        {
+          "Spec": "small",
+          "Ipv6TranslatorId": "ipv6trans-bp1858ysxxxxxx",
+          "AllocateIpv6Addr": "2400:3200:1600::xxx",
+          "Name": "test",
+          "Status": "active",
+          "Ipv6TranslatorEntryIds": {
+            "Ipv6TranslatorEntryId": [
+              "ipv6transentry-bp1g8bhrdexxxxx"
+            ]
+          },
+          "AllocateIpv4Addr": "47.99.xx.xx,47.99.xx.xx",
+          "BusinessStatus": "Normal",
+          "CreateTime": 1537151540000,
+          "RegionId": "cn-hangzhou",
+          "EndTime": 1539792000000,
+          "AvailableBandwidth": 1,
+          "PayType": "Prepay",
+          "Bandwidth": 1
+        }
+      ]
+    }
+  }
+}

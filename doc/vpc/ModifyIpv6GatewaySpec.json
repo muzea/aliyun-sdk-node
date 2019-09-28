@@ -1,0 +1,63 @@
+{
+  "name": "ModifyIpv6GatewaySpec",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyIpv6GatewaySpec接口修改IPv6网关的规格。",
+  "abc_id": 102199,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-huhehaote",
+      "description_cn": "IPv6网关的地域ID。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "Ipv6GatewayId": {
+      "name": "Ipv6GatewayId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ipv6gw-123456xxxxxxxx",
+      "description_cn": "IPv6网关的ID。"
+    },
+    "Spec": {
+      "name": "Spec",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "Middle",
+      "description_cn": "IPv6网关的规格，取值：\n\n- **Small**（默认值）：免费版。\n\n- **Middle**：企业版。\n\n- **Large**：企业增强版。\n\n"
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456",
+      "description_cn": "客户端token，用于保证请求的幂等性。\n\n由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "9DFEDBEE-E5AB-49E8-A2DC-CC114C67AF75"
+  }
+}

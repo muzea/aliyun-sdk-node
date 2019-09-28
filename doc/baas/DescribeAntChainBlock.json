@@ -1,0 +1,62 @@
+{
+  "name": "DescribeAntChainBlock",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|PUT|GET",
+  "path": "/",
+  "summary_cn": "根据块高查询一条蚂蚁区块链的区块信息",
+  "abc_id": 127089,
+  "timeout": 1000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID"
+    },
+    "Height": {
+      "name": "Height",
+      "type": "Long",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1234",
+      "description_cn": "查询区块高度"
+    },
+    "AntChainId": {
+      "name": "AntChainId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "pYogqb9v",
+      "description_cn": "区块链ID"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "4DDA2E72-778A-4D79-BE70-448A26A57227",
+      "Result": {
+        "AntChainId": "pYogqb9v",
+        "Version": 2,
+        "TransactionSize": 0,
+        "BlockHash": "aeec5963f8deeeae820aaf302f0c925db9fa8d07b9898dac782335f817554e47",
+        "CreateTime": 1562851727742,
+        "PreviousHash": "e11767c7b9d92563663a76f10c69e8354788001e2c9e6bd9267239a81d3bb523",
+        "Height": 1234,
+        "TransSummaryList": [],
+        "RootTxHash": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    "requestId": "4DDA2E72-778A-4D79-BE70-448A26A57227",
+    "successResponse": true
+  }
+}

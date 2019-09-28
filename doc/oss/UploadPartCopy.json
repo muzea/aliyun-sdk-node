@@ -1,0 +1,60 @@
+{
+  "name": "UploadPartCopy",
+  "protocol": "HTTP|HTTPS",
+  "method": "PUT",
+  "path": "/[ObjectName]",
+  "timeout": null,
+  "reqFormat": {
+    "BucketName": {
+      "name": "BucketName",
+      "position": "domain",
+      "required": true
+    },
+    "ObjectName": {
+      "name": "ObjectName",
+      "position": "path",
+      "required": true
+    },
+    "partNumber": {
+      "name": "partNumber",
+      "position": "query",
+      "required": true
+    },
+    "uploadId": {
+      "name": "uploadId",
+      "position": "query",
+      "required": true
+    },
+    "x-oss-copy-source": {
+      "name": "x-oss-copy-source",
+      "position": "header",
+      "required": true
+    },
+    "x-oss-copy-source-range": {
+      "name": "x-oss-copy-source-range",
+      "position": "header",
+      "required": false
+    },
+    "x-oss-copy-source-if-match": {
+      "name": "x-oss-copy-source-if-match",
+      "position": "header",
+      "required": false
+    },
+    "x-oss-copy-source-if-none-match": {
+      "name": "x-oss-copy-source-if-none-match",
+      "position": "header",
+      "required": false
+    },
+    "x-oss-copy-source-if-unmodified-since": {
+      "name": "x-oss-copy-source-if-unmodified-since",
+      "position": "header",
+      "required": false
+    },
+    "x-oss-copy-source-if-modified-since": {
+      "name": "x-oss-copy-source-if-modified-since",
+      "position": "header",
+      "required": false
+    }
+  },
+  "res": {}
+}

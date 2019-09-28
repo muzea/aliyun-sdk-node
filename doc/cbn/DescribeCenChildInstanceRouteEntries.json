@@ -1,0 +1,210 @@
+{
+  "name": "DescribeCenChildInstanceRouteEntries",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCenChildInstanceRouteEntries查询云企业网的网络实例路由条目。",
+  "abc_id": 132062,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CenId": {
+      "name": "CenId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cen-7qthudw0ll6jmc****",
+      "description_cn": "云企业网ID。"
+    },
+    "ChildInstanceId": {
+      "name": "ChildInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "vpc-bp18sth14qii3pnvo****",
+      "description_cn": "网络实例ID。"
+    },
+    "ChildInstanceType": {
+      "name": "ChildInstanceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "vpc",
+      "description_cn": "网络实例的类型，取值：\n\n- **VPC**：专有网络。\n\n- **VBR**：边界路由器。\n\n- **CCN**：云连接网。"
+    },
+    "ChildInstanceRegionId": {
+      "name": "ChildInstanceRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "网络实例所在的地域。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Active",
+      "description_cn": "路由的状态，取值：\n\n- **Active**：可用。\n\n- **Backup**：备份。\n\n- **Rejected**：拒绝。\n\n- **Prohibited**：禁止。\n\n- **All**：所有状态。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "列表的页码，默认值为**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时每页的行数，最大值为**50**，默认值为**10**。"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 4,
+    "PageSize": 10,
+    "RequestId": "17A57456-EF48-419D-9AE6-9B03D9996018",
+    "CenRouteEntries": {
+      "CenRouteEntry": [
+        {
+          "NextHopInstanceId": "vbr-bp13gtbhdp0pfqg6s****",
+          "CenRouteMapRecords": {
+            "CenRouteMapRecord": [
+              {
+                "RouteMapId": "cenrmap-4lcjxzo2zyqjd3****",
+                "RegionId": "cn-hangzhou"
+              }
+            ]
+          },
+          "OperationalMode": false,
+          "Status": "Active",
+          "AsPaths": {
+            "AsPath": []
+          },
+          "Communities": {
+            "Community": []
+          },
+          "Type": "CEN",
+          "RouteTableId": "vtb-bp1r9pvl4xen8s9ju****",
+          "NextHopRegionId": "cn-hangzhou",
+          "NextHopType": "VBR",
+          "Conflicts": {
+            "Conflict": []
+          },
+          "DestinationCidrBlock": "10.0.0.0/24"
+        },
+        {
+          "CenRouteMapRecords": {
+            "CenRouteMapRecord": []
+          },
+          "OperationalMode": false,
+          "Status": "Active",
+          "AsPaths": {
+            "AsPath": []
+          },
+          "Communities": {
+            "Community": []
+          },
+          "Type": "System",
+          "RouteTableId": "vtb-bp1r9pvl4xen8s9ju****",
+          "NextHopType": "service",
+          "Conflicts": {
+            "Conflict": []
+          },
+          "DestinationCidrBlock": "100.64.0.0/10",
+          "PublishStatus": "NonPublished"
+        },
+        {
+          "CenRouteMapRecords": {
+            "CenRouteMapRecord": []
+          },
+          "OperationalMode": true,
+          "Status": "Active",
+          "AsPaths": {
+            "AsPath": []
+          },
+          "Communities": {
+            "Community": []
+          },
+          "Type": "System",
+          "RouteTableId": "vtb-bp1r9pvl4xen8s9ju****",
+          "NextHopType": "local",
+          "Conflicts": {
+            "Conflict": []
+          },
+          "DestinationCidrBlock": "172.16.0.0/24",
+          "PublishStatus": "Published"
+        },
+        {
+          "NextHopInstanceId": "vbr-bp13gtbhdp0pfqg6s****",
+          "CenRouteMapRecords": {
+            "CenRouteMapRecord": [
+              {
+                "RouteMapId": "cenrmap-4lcjxzo2zyqjd3****",
+                "RegionId": "cn-hangzhou"
+              }
+            ]
+          },
+          "OperationalMode": false,
+          "Status": "Active",
+          "AsPaths": {
+            "AsPath": []
+          },
+          "Communities": {
+            "Community": []
+          },
+          "Type": "CEN",
+          "RouteTableId": "vtb-bp1r9pvl4xen8s9ju****",
+          "NextHopRegionId": "cn-hangzhou",
+          "NextHopType": "VBR",
+          "Conflicts": {
+            "Conflict": []
+          },
+          "DestinationCidrBlock": "192.168.2.0/24"
+        }
+      ]
+    }
+  }
+}

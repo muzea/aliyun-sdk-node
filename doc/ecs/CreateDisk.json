@@ -1,0 +1,251 @@
+{
+  "name": "CreateDisk",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateDisk创建一块按量付费或包年包月数据盘。云盘类型包括普通云盘、高效云盘、SSD云盘和ESSD云盘。",
+  "abc_id": 25513,
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "所属的地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "hide"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。 "
+    },
+    "ZoneId": {
+      "name": "ZoneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou-g",
+      "description_cn": "在指定可用区内创建一块按量付费云盘。\n\n- 如果您不设置InstanceId，则ZoneId为必填参数。\n- 您不能同时指定ZoneId和InstanceId。"
+    },
+    "SnapshotId": {
+      "name": "SnapshotId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "s-snapshotid1",
+      "description_cn": "创建云盘使用的快照。指定该参数后，Size会被忽略，实际创建的云盘大小为指定快照的大小。2013年7月15日及以前的快照不能用来创建云盘。 "
+    },
+    "DiskName": {
+      "name": "DiskName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FinanceJoshua",
+      "description_cn": "云盘名称。长度为2~128个英文或中文字符。必须以大小字母或中文开头，不能以 http:// 和 https:// 开头。可以包含数字、半角冒号（:）、下划线（_）或者连字符（-）。默认值：空。 "
+    },
+    "Size": {
+      "name": "Size",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2000",
+      "description_cn": "容量大小，以GiB为单位。指定该参数后，其取值必须≥指定快照ID的容量大小。取值范围：\n\n-   cloud：5~2000\n-   cloud_efficiency：20~32768\n-   cloud_ssd：20~32768\n-   cloud_essd：20~32768"
+    },
+    "DiskCategory": {
+      "name": "DiskCategory",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cloud_ssd",
+      "description_cn": "数据盘的云盘种类。取值范围：\n-   cloud：普通云盘\n-   cloud_efficiency：高效云盘\n-   cloud_ssd：SSD云盘\n-   cloud_essd：ESSD云盘\n\n默认值：cloud"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FinanceDisk",
+      "description_cn": "云盘描述。长度为2~256个英文或中文字符，不能以 http:// 和 https:// 开头。默认值：空。 "
+    },
+    "Encrypted": {
+      "name": "Encrypted",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否加密云盘。默认值：false"
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123e4567-e89b-12d3-a456-426655440000",
+      "description_cn": "保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。**ClientToken**只支持ASCII字符，且不能超过64个字符。更多详情，请参见[如何保证幂等性](~~25693~~)。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-bp1g6zv0ce8og******p",
+      "description_cn": "创建一块包年包月云盘，并自动挂载到指定的包年包月实例（InstanceId）上。\n\n- 设置实例ID后，会忽略您设置的ResourceGroupId、Tag.N.Key、Tag.N.Value、ClientToken和KMSKeyId参数。\n- 您不能同时指定ZoneId和InstanceId。\n\n默认值：空，代表创建的是按量付费云盘，云盘所属地由RegionId和ZoneId确定。"
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "Arn": {
+      "name": "Arn",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "AssumeRoleFor",
+          "type": "Long",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Rolearn",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "RoleType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rg-resourcegroupid1",
+      "description_cn": "云盘所在的企业资源组ID。"
+    },
+    "KMSKeyId": {
+      "name": "KMSKeyId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0e478b7a-4262-4802-b8cb-00d3fb40826X",
+      "description_cn": "云盘使用的KMS密钥ID。"
+    },
+    "PerformanceLevel": {
+      "name": "PerformanceLevel",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PL1",
+      "description_cn": "创建一块ESSD云盘时，设置云盘的性能等级。取值范围：\n\n- PL1（默认）：单盘最高随机读写IOPS 5万。\n- PL2：单盘最高随机读写IOPS 10万。\n- PL3：单盘最高随机读写IOPS 100万。\n\n有关如何选择ESSD性能等级，请参见[ESSD云盘](~~122389~~)。"
+    },
+    "AdvancedFeatures": {
+      "name": "AdvancedFeatures",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "hide"
+    },
+    "StorageSetId": {
+      "name": "StorageSetId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "StorageSetPartitionNumber": {
+      "name": "StorageSetPartitionNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E",
+    "DiskId": "d-bp131n0q38u3a4ziXXXXX"
+  }
+}

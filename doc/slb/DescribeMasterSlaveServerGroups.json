@@ -1,0 +1,83 @@
+{
+  "name": "DescribeMasterSlaveServerGroups",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeMasterSlaveServerGroups查询主备服务器组列表。",
+  "abc_id": 50508,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "负载均衡实例的地域ID。"
+    },
+    "LoadBalancerId": {
+      "name": "LoadBalancerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "lb-bp14zi0n66zpg6ohffzaa",
+      "description_cn": "负载均衡实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "IncludeListener": {
+      "name": "IncludeListener",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否返回关联的监听信息，默认值：**false**。"
+    }
+  },
+  "res": {
+    "RequestId": "265989FE-136B-4D6A-B549-FD40E7A6692D",
+    "MasterSlaveServerGroups": {
+      "MasterSlaveServerGroup": [
+        {
+          "MasterSlaveServerGroupId": "rsp-bp1nlyu1366z7",
+          "MasterSlaveServerGroupName": "主备1",
+          "AssociatedObjects": {
+            "Listeners": {
+              "Listener": []
+            }
+          }
+        }
+      ]
+    }
+  }
+}

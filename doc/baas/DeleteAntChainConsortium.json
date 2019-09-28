@@ -1,0 +1,41 @@
+{
+  "name": "DeleteAntChainConsortium",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "删除联盟",
+  "abc_id": 127071,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID"
+    },
+    "ConsortiumId": {
+      "name": "ConsortiumId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "q0oWq92P",
+      "description_cn": "联盟ID"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "F3685787-9F2F-4D60-ADD6-07A5179552CA",
+      "Result": "success"
+    },
+    "requestId": "F3685787-9F2F-4D60-ADD6-07A5179552CA",
+    "successResponse": true
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "name": "MigrateAvailableZone",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用MigrateAvailableZone接口迁移MongoDB实例的可用区。",
+  "abc_id": 116036,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。\n\n> 如果实例的网络类型为专有网络，您还需要传入**Vswitch**参数。"
+    },
+    "ZoneId": {
+      "name": "ZoneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou-b",
+      "description_cn": "迁移的目标可用区ID。\n> - 迁移的目标可用区和当前实例的可用区处于同一地域。\n- 您可以通过调用[DescribeRegions](~~61933~~)接口查询可用区ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "Vswitch": {
+      "name": "Vswitch",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vsw-bpxxxxxxxx",
+      "description_cn": "迁移的目标可用区虚拟交换机ID。\n\n> 当实例的网络类型为专有网络时，本参数才可用。"
+    },
+    "EffectiveTime": {
+      "name": "EffectiveTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Immediately",
+      "description_cn": "迁移可用区的生效时间，取值：\n- **Immediately**：立即生效。\n- **MaintainTime**：在实例的可运维时间段内生效。\n\n默认为**Immediately**。"
+    }
+  },
+  "res": {
+    "RequestId": "0FDDC511-7252-4A4A-ADDA-5CB1BF63873D"
+  }
+}

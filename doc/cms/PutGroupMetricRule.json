@@ -1,0 +1,296 @@
+{
+  "name": "PutGroupMetricRule",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "创建或者修改组报警规则。",
+  "abc_id": 114943,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "123456",
+      "description_cn": "应用分组ID。"
+    },
+    "RuleId": {
+      "name": "RuleId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "bfae2ca5b4e07d2c7278772eccda169808c7b****",
+      "description_cn": "报警规则ID，调用者统一生成，保证唯一性。"
+    },
+    "Category": {
+      "name": "Category",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ecs",
+      "description_cn": "产品名称或者产品规格缩写，如下：\n- ECS（包括阿里云和非阿里云主机），\n- RDS（云数据库RDS版），\n- ADS（分析型数据库），\n- SLB（负载均衡），\n- VPC（弹性IP），\n- APIGATEWAY（API网关），\n- CDN，\n- CS（容器服务Swarm版），\n- DCDN（全站加速），\n- DDOS，\n- EIP（弹性公网IP），\n- ELASTICSEARCH，\n- EMR（E-MapReduce），\n- ESS（弹性伸缩），\n- HBASE，\n- IOT_EDGE（iot边缘计算），\n- K8S_POD（k8s pod），\n- KVSTORE_SHARDING（Redis集群版），\n- KVSTORE_SPLITRW（Redis读写分离版），\n- KVSTORE_STANDARD（Redis标准版），\n- MEMCACHE，\n- MNS（消息服务），\n- MONGODB（MongoDB 副本实例），\n- MONGODB_CLUSTER（MongoDB集群版本），\n- MONGODB_SHARDING（MongoDB分片集群），\n- MQ_TOPIC（消息服务TOPIC），\n- OCS（旧版云数据库Memcache），\n- OPENSEARCH（开放搜索），\n- OSS（对象存储OSS），\n- POLARDB，\n- PETADATA（HybridDB for MySQL），\n- SCDN（安全加速），\n- SHAREBANDWIDTHPACKAGES（共享带宽包），\n- SLS（日志服务），\n- VPN（VPN网关)。"
+    },
+    "Namespace": {
+      "name": "Namespace",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "acs_ecs_dashboard",
+      "description_cn": "产品的数据命名空间，可查询DescribeMetricMetaList接口或参考[预设监控项参考](~~28619~~)。"
+    },
+    "MetricName": {
+      "name": "MetricName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cpu_total",
+      "description_cn": "监控项名称。可查询DescribeMetricMetaList接口或参考[预设监控项参考](~~28619~~)。"
+    },
+    "RuleName": {
+      "name": "RuleName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "报警规则1",
+      "description_cn": "报警规则名称。"
+    },
+    "Dimensions": {
+      "name": "Dimensions",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[{\"instanceId\":\"xxxxxx\"}]",
+      "description_cn": "扩展资源维度。"
+    },
+    "EffectiveInterval": {
+      "name": "EffectiveInterval",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "00:00-23:59",
+      "description_cn": "报警规则的生效时间范围。"
+    },
+    "NoEffectiveInterval": {
+      "name": "NoEffectiveInterval",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "00:00-05:30",
+      "description_cn": "报警规则非生效时间范围。"
+    },
+    "SilenceTime": {
+      "name": "SilenceTime",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "86400",
+      "description_cn": "一直处于报警状态的通知沉默周期，默认86400（1天），单位s，最小1小时。"
+    },
+    "Period": {
+      "name": "Period",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "60",
+      "description_cn": "聚合周期，单位秒。"
+    },
+    "Interval": {
+      "name": "Interval",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "60",
+      "description_cn": "报警的探测周期。"
+    },
+    "Webhook": {
+      "name": "Webhook",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "http://www.aliyun.com",
+      "description_cn": "出现报警时候触发回调URL地址。"
+    },
+    "EmailSubject": {
+      "name": "EmailSubject",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "出现报警",
+      "description_cn": "报警邮件主题。"
+    },
+    "Escalations.Critical.Statistics": {
+      "name": "Escalations.Critical.Statistics",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Average",
+      "description_cn": "Critical级别报警统计方法，每种监控项对应不同的统计方法。"
+    },
+    "Escalations.Critical.ComparisonOperator": {
+      "name": "Escalations.Critical.ComparisonOperator",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "GreaterThanOrEqualToThreshold",
+      "description_cn": "Critical级别阈值比较符，可以选择如下：\n* GreaterThanOrEqualToThreshold:大于等于\n* GreaterThanThreshold:大于\n* LessThanOrEqualToThreshold:小于等于\n* LessThanThreshold:小于\n* NotEqualToThreshold:不等\n* GreaterThanYesterday:同比昨天时间上涨\n* LessThanYesterday:同比昨天时间下降\n* GreaterThanLastWeek:同比上周同一时间上涨\n* LessThanLastWeek:同比上周同一时间下降\n* GreaterThanLastPeriod:环比上周期上涨\n* LessThanLastPeriod:环比上周期下降"
+    },
+    "Escalations.Critical.Threshold": {
+      "name": "Escalations.Critical.Threshold",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "90",
+      "description_cn": "Critical级别报警阈值。"
+    },
+    "Escalations.Critical.Times": {
+      "name": "Escalations.Critical.Times",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3",
+      "description_cn": "Critical级别报警重试次数。"
+    },
+    "Escalations.Warn.Statistics": {
+      "name": "Escalations.Warn.Statistics",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Average",
+      "description_cn": "Warn级别报警统计方法。"
+    },
+    "Escalations.Warn.ComparisonOperator": {
+      "name": "Escalations.Warn.ComparisonOperator",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "GreaterThanOrEqualToThreshold",
+      "description_cn": "Warn级别阈值比较符，可以选择如下：\n* GreaterThanOrEqualToThreshold:大于等于\n* GreaterThanThreshold:大于\n* LessThanOrEqualToThreshold:小于等于\n* LessThanThreshold:小于\n* NotEqualToThreshold:不等\n* GreaterThanYesterday:同比昨天时间上涨\n* LessThanYesterday:同比昨天时间下降\n* GreaterThanLastWeek:同比上周同一时间上涨\n* LessThanLastWeek:同比上周同一时间下降\n* GreaterThanLastPeriod:环比上周期上涨\n* LessThanLastPeriod:环比上周期下降"
+    },
+    "Escalations.Warn.Threshold": {
+      "name": "Escalations.Warn.Threshold",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "90",
+      "description_cn": "Warn级别报警阈值。"
+    },
+    "Escalations.Warn.Times": {
+      "name": "Escalations.Warn.Times",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3",
+      "description_cn": "Warn级别报警重试次数。"
+    },
+    "Escalations.Info.Statistics": {
+      "name": "Escalations.Info.Statistics",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Average",
+      "description_cn": "Info级别报警统计方法。"
+    },
+    "Escalations.Info.ComparisonOperator": {
+      "name": "Escalations.Info.ComparisonOperator",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "GreaterThanOrEqualToThreshold",
+      "description_cn": "Info级别阈值比较符，可以选择如下：\n* GreaterThanOrEqualToThreshold:大于等于\n* GreaterThanThreshold:大于\n* LessThanOrEqualToThreshold:小于等于\n* LessThanThreshold:小于\n* NotEqualToThreshold:不等\n* GreaterThanYesterday:同比昨天时间上涨\n* LessThanYesterday:同比昨天时间下降\n* GreaterThanLastWeek:同比上周同一时间上涨\n* LessThanLastWeek:同比上周同一时间下降\n* GreaterThanLastPeriod:环比上周期上涨\n* LessThanLastPeriod:环比上周期下降"
+    },
+    "Escalations.Info.Threshold": {
+      "name": "Escalations.Info.Threshold",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "90",
+      "description_cn": "Info级别报警阈值。"
+    },
+    "Escalations.Info.Times": {
+      "name": "Escalations.Info.Times",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3",
+      "description_cn": "Info级别报警重试次数。"
+    }
+  },
+  "res": {
+    "RequestId": "26C766DE-E759-4B38-8B23-28589C491CEF",
+    "Code": 200,
+    "Success": true
+  }
+}

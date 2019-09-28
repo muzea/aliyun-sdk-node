@@ -1,0 +1,172 @@
+{
+  "name": "GetPlayInfo",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用GetPlayInfo通过视频ID直接获取媒体文件（支持视频和音频）的播放地址。",
+  "abc_id": 56124,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "VideoId": {
+      "name": "VideoId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "fd1c76fc-806b-4467-a194-405528706d29",
+      "description_cn": "视频ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "Formats": {
+      "name": "Formats",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "mp4,m3u8,mp3",
+      "description_cn": "视频流格式，多个用逗号分隔，默认获取所有格式的流。支持格式：\n\n- **mp4**\n- **m3u8**\n- **mp3**\n- **mpd** (仅当转码模板中配置了mpd封装格式时才会输出，详见[转码模板配置-Container](https://help.aliyun.com/document_detail/52839.html?spm=a2c4g.11186623.2.16.f2ee58fc6Rb9V1#h2--transcodetemplate-div-id-transcodetemplate-div-37)。）"
+    },
+    "AuthTimeout": {
+      "name": "AuthTimeout",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1800",
+      "description_cn": "播放地址过期时间，单位：秒。\n\n- 如果返回的是CDN加速地址：\n\n    - 只有开启了URL鉴权播放地址才会定期失效，否则会永久有效。\n    - 最小值：**1**\n    - 最大值：**无限制**\n    - 默认值：未设置时，取值为**URL鉴权中设置的默认有效时长**。\n\n- 如果返回的是OSS源站地址：\n\n    - 只有存储权限为私有，播放地址才会定期失效，否则会永久有效。\n    - 最小值：**1**\n    - 最大值：为降低源站安全风险，最大值为**2592000（即30天）**。\n    - 默认值：未设置时，取值为**3600**。"
+    },
+    "Rand": {
+      "name": "Rand",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "abckljd",
+      "description_cn": "参数暂不可用。"
+    },
+    "AuthInfo": {
+      "name": "AuthInfo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{\"CI\":\"tUZiRCWWeU1jC\\r\\n\",\"Caller\":\"sLmbasRssnpX64NoGho2k=\\r\\n\",\"ExpireTime\":\"2019-04-24T06:19:59Z\",\"MediaId\":\"e89916f7f9dd05bb9ede9409ae2bbc90\",\"PlayDomain\":\"test.aliyun.com\",\"Signature\":\"ljCklFypCsSt=\"}",
+      "description_cn": "参数暂不可用。"
+    },
+    "Channel": {
+      "name": "Channel",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "iOS",
+      "description_cn": "参数暂不可用。"
+    },
+    "PlayerVersion": {
+      "name": "PlayerVersion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2.5.1",
+      "description_cn": "参数暂不可用。"
+    },
+    "OutputType": {
+      "name": "OutputType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cdn",
+      "description_cn": "输出地址类型。取值范围 ：\n\n- **oss**：回源地址\n- **cdn（默认）**：加速地址\n\n仅支持播放格式为mp4的oss地址。"
+    },
+    "StreamType": {
+      "name": "StreamType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "video",
+      "description_cn": "视频流类型。多个用逗号分隔，默认获取所有类型的流。支持类型：\n\n- **video**\n- **audio**\n"
+    },
+    "ReAuthInfo": {
+      "name": "ReAuthInfo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{\"uid\":\"12345\",\"rand\":\"abckljd\"}",
+      "description_cn": "CDN二次鉴权参数，为JSON字符串。当开启了CDN二次鉴权功能时，可通过该参数设置鉴权URL的uid和rand，详见[URL鉴权](https://help.aliyun.com/document_detail/57007.html?spm=a2c4g.11186623.2.22.f2ee58fc6Rb9V1)。"
+    },
+    "Definition": {
+      "name": "Definition",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FD,SD",
+      "description_cn": "视频流清晰度，多个用逗号分隔，默认获取所有清晰度的流。取值：\n\n- **FD**：流畅\n- **LD**：标清\n- **SD**：高清\n- **HD**：超清\n- **OD**：原画\n- **2K**：2K\n- **4K**：4K\n- **SQ**：普通音质\n- **HQ**：高音质\n- **AUTO**：自适应码率，仅当转码模板中配置了打包时才会有该清晰度输出，详见[转码模板配置-PackageSetting](https://help.aliyun.com/document_detail/52839.html?spm=a2c4g.11186623.2.19.f2ee58fc6Rb9V1#h2--transcodetemplate-div-id-transcodetemplate-div-37)。\n"
+    },
+    "ResultType": {
+      "name": "ResultType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Single",
+      "description_cn": "返回数据类型。取值范围 ：\n\n- **Single（默认）**：每种清晰度和格式只返回一路最新转码完成的流。\n- **Multiple**：每种清晰度和格式返回所有转码完成的流。"
+    },
+    "PlayConfig": {
+      "name": "PlayConfig",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{\"PlayDomain\":\"vod.test_domain\",\"XForwardedFor\":\"yqCD7Fp1uqChoVj/sl/p5Q==\",\"PreviewTime\":\"20\",\"MtsHlsUriToken\":\"yqCD7Fp1uqChoVjslp5Q\"}",
+      "description_cn": "播放自定义设置，为JSON字符串，支持指定域名播放设置。"
+    }
+  },
+  "res": {}
+}

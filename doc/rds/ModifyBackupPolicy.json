@@ -1,0 +1,210 @@
+{
+  "name": "ModifyBackupPolicy",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyBackupPolicy接口修改备份设置。",
+  "abc_id": 26276,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "BackupPolicyMode": {
+      "name": "BackupPolicyMode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "DataBackupPolicy",
+      "description_cn": "备份类型：\n\n* **DataBackupPolicy**：数据备份；\n* **LogBackupPolicy**：日志备份。"
+    },
+    "PreferredBackupTime": {
+      "name": "PreferredBackupTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "00:00Z-01:00Z",
+      "description_cn": "执行备份任务的时间。格式：<i>HH:mm</i>Z-<i>HH:mm</i>Z（UTC时间）。\n>**BackupPolicyMode**为**DataBackupPolicy**时，该参数必传。\n"
+    },
+    "PreferredBackupPeriod": {
+      "name": "PreferredBackupPeriod",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Monday",
+      "description_cn": "备份周期，多个取值用英文逗号（,）隔开，默认为原值。取值：\n* **Monday**：周一；\n* **Tuesday**：周二；\n* **Wednesday**：周三；\n* **Thursday**：周四；\n* **Friday**：周五；\n* **Saturday**：周六；\n* **Sunday**：周日。\n\n>**BackupPolicyMode**为**DataBackupPolicy**时，该参数必传。"
+    },
+    "BackupRetentionPeriod": {
+      "name": "BackupRetentionPeriod",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "7",
+      "description_cn": "\t\n数据备份保留天数，取值：**7~730**。默认为原值。\n\n>**BackupPolicyMode**为**LogBackupPolicy**时，该参数必传。"
+    },
+    "BackupLog": {
+      "name": "BackupLog",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Enable",
+      "description_cn": "是否开启日志备份。取值：**Enable | Disabled**。默认为原值。\n\n>**BackupPolicyMode**为**DataBackupPolicy**时，用于开启或关闭日志备份。"
+    },
+    "LogBackupRetentionPeriod": {
+      "name": "LogBackupRetentionPeriod",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "7",
+      "description_cn": "日志备份保留天数。取值：**7~730**，且不大于数据备份保留天数。\n>当开启日志备份时，可设置日志备份文件的保留天数，目前仅支持MySQL、PostgreSQL、PPAS实例设置该值。"
+    },
+    "EnableBackupLog": {
+      "name": "EnableBackupLog",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "True",
+      "description_cn": "是否开启日志备份。取值：**True | False**\n\n>**BackupPolicyMode**为**LogBackupPolicy**时，用于开启或关闭日志备份。"
+    },
+    "LocalLogRetentionHours": {
+      "name": "LocalLogRetentionHours",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "18",
+      "description_cn": "日志备份本地保留小时数。取值：**0~7*24**，0表示不保留。默认为原值。\n\n>**BackupPolicyMode**为**LogBackupPolicy**时，该参数必传。"
+    },
+    "LocalLogRetentionSpace": {
+      "name": "LocalLogRetentionSpace",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "本地日志最大循环空间使用率，超出后，则从最早的Binlog开始清理，直到空间使用率低于该比例。取值：**0~50**。默认为原值。\n\n>**BackupPolicyMode**为**LogBackupPolicy**时，该参数必传。"
+    },
+    "HighSpaceUsageProtection": {
+      "name": "HighSpaceUsageProtection",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Enable",
+      "description_cn": "\t\n实例使用空间大于80%，或者剩余空间小于5GB时，是否无条件清理Binlog。取值：**Enable | Disable**。默认为原值。\n\n>**BackupPolicyMode**为**LogBackupPolicy**时，该参数必传。"
+    },
+    "Duplication": {
+      "name": "Duplication",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Disable",
+      "description_cn": "是否开启备份文件转储至OSS。取值：**Enable | Disable**。"
+    },
+    "DuplicationContent": {
+      "name": "DuplicationContent",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "DATA",
+      "description_cn": "转储数据备份或者日志备份：\n* **DATA**：转储数据备份；\n* **LOG**：转储日志备份；\n* **DATA&amp;LOG**：转储数据备份和日志备份。\n\n>**Duplication**=**Enable**时，该参数必填。"
+    },
+    "DuplicationLocation": {
+      "name": "DuplicationLocation",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": " {\"Storage\":\"OSS\",\"Location\": {\"Bucket\": 'xxx', \"Location\":'cn-hangzhou',\"OSSEndPoint\":\"oss-test\",\"Object\":\"obje1\"}",
+      "description_cn": "用于让RAM授权RDS访问您的OSS。授权后日志文件才能转储至OSS。格式：\n\n    {\"Storage\":\"OSS\",\"Location\": {\"Bucket\": 'xxx', \"Location\":'cn-hangzhou',\"OSSEndPoint\":\"oss-test\",\"Object\":\"obje1\"}\n\n>如果**Duplication**=**Enable**，该参数必填。"
+    },
+    "LogBackupFrequency": {
+      "name": "LogBackupFrequency",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "LogInterval",
+      "description_cn": "日志备份频率，取值：\n* **LogInterval**：每30分钟备份一次。\n* 默认与数据备份频率一致；\n\n>**LogInterval**参数仅适用于SQL Server。"
+    },
+    "CompressType": {
+      "name": "CompressType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "4",
+      "description_cn": "备份压缩方式，支持库表恢复。取值：**4**。\n>支持的实例版本为MySQL 5.7 高可用版（本地SSD盘）和MySQL 5.6高可用版。\n"
+    }
+  },
+  "res": {
+    "HighSpaceUsageProtection": "Disable",
+    "DBInstanceID": "rm-bp1z3xxxxx",
+    "RequestId": "E4BF5598-ED12-4406-AAA4-F375428BE741",
+    "LocalLogRetentionHours": "18",
+    "EnableBackupLog": "1",
+    "LocalLogRetentionSpace": "30"
+  }
+}

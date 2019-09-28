@@ -1,0 +1,40 @@
+{
+  "name": "GetBucket",
+  "protocol": "HTTP|HTTPS",
+  "method": "GET",
+  "path": "/",
+  "timeout": null,
+  "reqFormat": {
+    "BucketName": {
+      "name": "BucketName",
+      "position": "domain",
+      "required": true
+    },
+    "delimiter": {
+      "name": "delimiter",
+      "position": "query",
+      "required": false
+    },
+    "marker": {
+      "name": "marker",
+      "position": "query",
+      "required": false
+    },
+    "max-keys": {
+      "name": "max-keys",
+      "position": "query",
+      "required": false
+    },
+    "prefix": {
+      "name": "prefix",
+      "position": "query",
+      "required": false
+    },
+    "encoding-type": {
+      "name": "encoding-type",
+      "position": "query",
+      "required": false
+    }
+  },
+  "res": {}
+}

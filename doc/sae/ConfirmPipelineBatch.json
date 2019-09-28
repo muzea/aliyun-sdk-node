@@ -1,0 +1,40 @@
+{
+  "name": "ConfirmPipelineBatch",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v1/sam/changeorder/ConfirmPipelineBatch",
+  "summary_cn": "是否开始一下批次",
+  "abc_id": 126614,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "PipelineId": {
+      "name": "PipelineId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "xxx-xxx-xxx-xxx",
+      "description_cn": "批次 ID"
+    },
+    "Confirm": {
+      "name": "Confirm",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "true",
+      "description_cn": "是否开始下一批次"
+    }
+  },
+  "res": {}
+}

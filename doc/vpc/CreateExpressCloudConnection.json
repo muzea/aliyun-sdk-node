@@ -1,0 +1,144 @@
+{
+  "name": "CreateExpressCloudConnection",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateExpressCloudConnection申请高速上云服务。",
+  "abc_id": 118723,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "高速上云服务实例所在的地域ID。"
+    },
+    "PeerLocation": {
+      "name": "PeerLocation",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "XX区XX大厦XX栋5楼",
+      "description_cn": "本地数据中心的地理位置。\n\n需要精确到楼层。"
+    },
+    "IdcSP": {
+      "name": "IdcSP",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "CU",
+      "description_cn": "IDC的网络服务商。"
+    },
+    "Bandwidth": {
+      "name": "Bandwidth",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "高速上云连接的带宽， 单位Mbps。\n\n取值：**2|4|6|8|10|20|50|100|200|500|1000|10000|40000**"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "doctest",
+      "description_cn": "高速上云服务的实例名称。\n\n长度为 2-128个字符，必须以字母或中文开头，可包含数字，点号（.），下划线（_）和短横线（-）。但不能以`http://` 或`https://`开头。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "高速上云服务",
+      "description_cn": "高速上云服务的描述信息。\n\n长度为 2-256个字符，必须以字母或中文开头，但不能以`http:// `或`https://`开头。"
+    },
+    "PeerCity": {
+      "name": "PeerCity",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "杭州",
+      "description_cn": "所在城市。"
+    },
+    "PortType": {
+      "name": "PortType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "100Base-T",
+      "description_cn": "物理专线接入端口类型，取值：\n\n- 100Base-T：百兆电口\n\n- 1000Base-T（默认值）：千兆电口\n\n- 1000Base-LX：千兆单模光口（10千米）\n\n- 10GBase-T：万兆电口\n\n- 10GBase-LR：万兆单模光口（10千米）"
+    },
+    "ContactTel": {
+      "name": "ContactTel",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "152XXXXXXXX",
+      "description_cn": "申请高速上云服务的联系人电话。"
+    },
+    "ContactMail": {
+      "name": "ContactMail",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "XX@example.com",
+      "description_cn": "申请高速上云连接的联系人邮件。"
+    },
+    "IDCardNo": {
+      "name": "IDCardNo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "32****************",
+      "description_cn": "申请高速上云服务的联系人身份证号。"
+    },
+    "RedundantEccId": {
+      "name": "RedundantEccId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ecc-d****",
+      "description_cn": "冗余高速上云服务专线实例ID。"
+    }
+  },
+  "res": {
+    "EccId": "ecc-bp1t9osmuln1vxfpt6gy8",
+    "RequestId": "C004F022-1CC2-4958-9937-675513A2CD7E"
+  }
+}

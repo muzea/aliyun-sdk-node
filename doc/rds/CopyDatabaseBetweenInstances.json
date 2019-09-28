@@ -1,0 +1,116 @@
+{
+  "name": "CopyDatabaseBetweenInstances",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CopyDatabaseBetweenInstances接口在实例间复制数据库。",
+  "abc_id": 88810,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "源实例ID。"
+    },
+    "TargetDBInstanceId": {
+      "name": "TargetDBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-ut5ajk3xxxxxxx",
+      "description_cn": "目标实例ID，不能与源实例ID相同。\n"
+    },
+    "DbNames": {
+      "name": "DbNames",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "{\"test1\":\"test2\"}",
+      "description_cn": "复制数据库名称列表，格式：{\"源实例数据库名称\":\"目标实例数据库名称\"}。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "PayType": {
+      "name": "PayType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "BackupId": {
+      "name": "BackupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1065238746521",
+      "description_cn": "源实例备份集ID。按备份集复制数据库时，可以通过查询备份列表接口[DescribeBackups](~~26273~~)获取备份集ID。"
+    },
+    "RestoreTime": {
+      "name": "RestoreTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2011-06-11T16:00:00Z",
+      "description_cn": "按时间点复制数据库，可以选择备份保留周期内的任意时间点。格式：<i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z（UTC时间）。"
+    },
+    "SyncUserPrivilege": {
+      "name": "SyncUserPrivilege",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "NO",
+      "description_cn": "是否复制用户和权限：\n* **YES**：表示复制用户和权限。如果目标实例中有同名的用户，则该用户将叠加源实例的同名用户的权限；\n* **NO**：表示不复制用户和权限。\n\n默认值：**NO**。"
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "803D11AF-C370-465B-AB46-CB3A642DC303"
+  }
+}

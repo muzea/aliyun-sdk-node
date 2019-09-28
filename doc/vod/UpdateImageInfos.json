@@ -1,0 +1,52 @@
+{
+  "name": "UpdateImageInfos",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用UpdateImageInfos批量修改图片信息。",
+  "abc_id": 129675,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "UpdateContent": {
+      "name": "UpdateContent",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "[{\"ImageId\":\"ff8fe57e3461416c9d40d66a267a4e09\",\"Title\":\"标题\",\"Description\":\"描述\",\"Tags\":\"标签1,标签2\"}]",
+      "description_cn": "更新内容。一次最多支持修改20个图片的视频信息。\n\n> Title、Description、Tags 更新内容中不能包含表情符。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ResourceRealOwnerId": {
+      "name": "ResourceRealOwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "346547",
+      "description_cn": "资源所有者ID。"
+    }
+  },
+  "res": {}
+}

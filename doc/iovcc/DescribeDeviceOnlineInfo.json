@@ -1,0 +1,45 @@
+{
+  "name": "DescribeDeviceOnlineInfo",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Type": {
+      "name": "Type",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false
+    },
+    "Value": {
+      "name": "Value",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false
+    },
+    "ProjectId": {
+      "name": "ProjectId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

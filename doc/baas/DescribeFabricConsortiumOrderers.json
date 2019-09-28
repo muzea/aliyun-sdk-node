@@ -1,0 +1,66 @@
+{
+  "name": "DescribeFabricConsortiumOrderers",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeFabricConsortiumOrderers获取联盟的Orderer列表。",
+  "abc_id": 127788,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "ConsortiumId": {
+      "name": "ConsortiumId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "consortium-aaaaaa-akpcsjjac2jd\t",
+      "description_cn": "联盟ID"
+    },
+    "Location": {
+      "name": "Location",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "位置"
+    }
+  },
+  "res": {
+    "Result": [
+      {
+        "OrdererName": "order1",
+        "Port": 7050,
+        "Domain": "ordasdaerer1.orzxczcZXXweqwxsczxzXcxzxXzg1.alumunum.com",
+        "CreateTime": "2018-07-01 09:00:00",
+        "UpdateTime": "2018-07-02 09:00:00",
+        "InstanceType": "ecs.n1.small"
+      },
+      {
+        "OrdererName": "order2",
+        "Port": 7050,
+        "Domain": "orderer2.org1.alumunum.com",
+        "CreateTime": "2018-07-01 09:00:00",
+        "UpdateTime": "2018-07-02 09:00:00",
+        "InstanceType": "ecs.n1.small"
+      }
+    ],
+    "RequestId": "98B37CF5-AB0C-423E-8335-81A54899577E",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

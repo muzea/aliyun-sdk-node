@@ -1,0 +1,93 @@
+{
+  "name": "DescribeAutoSnapshotPolicyEx",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeAutoSnapshotPolicyEX查询您已创建的自动快照策略。",
+  "abc_id": 25530,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "要查询的自动快照策略所在的地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AutoSnapshotPolicyId": {
+      "name": "AutoSnapshotPolicyId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "p-233e6yl**",
+      "description_cn": "自动快照策略ID。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "自动快照策略返回结果分多页展示。起始值：1\n\n默认值：1 "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页展示返回的自动快照策略时的每页行数。最大值：50\n\n默认值：10 "
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "PageSize": 2,
+    "RequestId": "659F91C6-1949-43B0-90C4-B6342CA757D5",
+    "AutoSnapshotPolicies": {
+      " AutoSnapshotPolicy": [
+        {
+          "CreationTime": "2014-07-24T13:00:52Z",
+          "AutoSnapshotPolicyId": "p-23f2i9s4t",
+          "SettingTimePoints": "[“0”, “1”]",
+          "SettingRepeatWeekdays": "[“1”, “7”]",
+          "RetentionDays": "30"
+        },
+        {
+          "CreationTime": "2014-04-21T12:08:52Z",
+          "AutoSnapshotPolicyId": "p-a1fd3g5s1",
+          "SettingTimePoints": "[“2”, “9”]",
+          "SettingRepeatWeekdays": "[“3” , “4” , “5” , “7”]",
+          "RetentionDays": "-1"
+        }
+      ]
+    },
+    "TotalCount": 2
+  }
+}

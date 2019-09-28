@@ -1,0 +1,108 @@
+{
+  "name": "ModifySmartAccessGateway",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifySmartAccessGateway修改智能接入网关的配置。",
+  "abc_id": 69833,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "智能接入网关的所属区域。"
+    },
+    "SmartAGId": {
+      "name": "SmartAGId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "sag-0ovhf732a9j0******",
+      "description_cn": "智能接入网关ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "City": {
+      "name": "City",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sag",
+      "description_cn": "智能接入网关的名称。 \n\n长度为2-128个字符，必须以字母或中文开头，可包含数字，点号（.），下划线（_）和短横线（-），但不能以`http://` 或` https://`开头。  "
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sag描述",
+      "description_cn": "智能接入网关的描述。 \n\n长度为2-256个字符，必须以字母或中文开头，但不能以`http:// `或` https:/`/开头。  "
+    },
+    "CidrBlock": {
+      "name": "CidrBlock",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "172.16.0.1/24",
+      "description_cn": "线下机构客户端用来通信的私网网段，确保各私网网段不冲突。 \n\n如果智能接入网关终端设备的LAN口配置为动态方式，则线下已开启DHCP的客户端使用的IP地址会从您指定的第一个私网网段中分配。 "
+    },
+    "SecurityLockThreshold": {
+      "name": "SecurityLockThreshold",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3",
+      "description_cn": "离线锁定功能用户设定的阈值，大于等于0。\n\n单位：秒。"
+    },
+    "RoutingStrategy": {
+      "name": "RoutingStrategy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "CE6642D4-21EB-4168-9BF9-F217953F9892"
+  }
+}

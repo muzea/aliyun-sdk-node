@@ -1,0 +1,66 @@
+{
+  "name": "DescribeRuleAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeRuleAttribute查询指定转发规则的配置详情。",
+  "abc_id": 35229,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "负载均衡实例的地域ID。\n\n您可以通过调用[DescribeRegions](~~27584~~)接口查询地域ID。"
+    },
+    "RuleId": {
+      "name": "RuleId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rule-bp1efemp9suk5",
+      "description_cn": "转发规则ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "Domain": "test.com",
+    "VServerGroupId": "rsp-bp114nimo4kl9",
+    "LoadBalancerId": "lb-bp1ca0zt07t934wxezyxo",
+    "RuleName": "Rule2",
+    "ListenerPort": 90,
+    "RequestId": "DB3C28EE-9A6C-4FFA-8759-4ED8346A675E",
+    "ListenerSync": "on"
+  }
+}

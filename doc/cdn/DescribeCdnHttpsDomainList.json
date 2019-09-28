@@ -1,0 +1,74 @@
+{
+  "name": "DescribeCdnHttpsDomainList",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCdnHttpsDomainList获取用户所有证书信息。",
+  "abc_id": 127666,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "5",
+      "description_cn": "取得第几页，取值范围为：**1**~**100000**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "分页大小，默认**20**。"
+    },
+    "Keyword": {
+      "name": "Keyword",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "com",
+      "description_cn": "搜索关键字。"
+    }
+  },
+  "res": {
+    "CertInfos": {
+      "CertInfo": [
+        {
+          "CertUpdateTime": "2019-01-08 18:33:16",
+          "CertType": "",
+          "CertName": "",
+          "DomainName": "xxx",
+          "CertStatus": "mismatch",
+          "CertExpireTime": "2018-12-26 14:45:09",
+          "CertStartTime": "2018-11-26 14:45:09",
+          "CertCommonName": "*.xxx.com"
+        }
+      ]
+    },
+    "TotalCount": 16,
+    "RequestId": "F5E8DF64-7175-4186-9B06-F002C0BBD0C5"
+  }
+}

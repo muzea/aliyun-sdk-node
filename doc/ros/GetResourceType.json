@@ -1,0 +1,29 @@
+{
+  "name": "GetResourceType",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/V2/GetResourceType",
+  "summary_cn": "查询资源类型的详细信息。",
+  "abc_id": 133644,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ResourceType": {
+      "name": "ResourceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "ALIYUN::ROS::WaitConditionHandle",
+      "description_cn": "资源类型。"
+    }
+  },
+  "res": {}
+}

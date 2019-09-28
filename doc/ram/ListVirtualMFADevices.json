@@ -1,0 +1,36 @@
+{
+  "name": "ListVirtualMFADevices",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ListVirtualMFADevices接口列出多因素认证设备。",
+  "abc_id": 28694,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    }
+  },
+  "res": {
+    "RequestId": "04F0F334-1335-436C-A1D7-6C044FE73368",
+    "VirtualMFADevices": {
+      "VirtualMFADevice": [
+        {
+          "SerialNumber": "acs:ram::1234567890123:mfa/device001"
+        },
+        {
+          "SerialNumber": "acs:ram::1234567890123:mfa/device002",
+          "ActivateDate": "2015-02-18T17:22:08Z",
+          "User": {
+            "UserId": "1227489245380721",
+            "UserName": "zhangqiang",
+            "DisplayName": "张强"
+          }
+        }
+      ]
+    }
+  }
+}

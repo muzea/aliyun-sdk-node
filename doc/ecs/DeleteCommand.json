@@ -1,0 +1,52 @@
+{
+  "name": "DeleteCommand",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteCommand删除一条云助手命令。",
+  "abc_id": 64842,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域 ID。您可以调用 [DescribeRegions](~~25609~~) 查看最新的阿里云地域列表。 "
+    },
+    "CommandId": {
+      "name": "CommandId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "c-4d34302d02424c5c8e10281e3a315***",
+      "description_cn": "命令 ID。您可以通过接口 [DescribeCommands](~~64843~~) 查询所有可用的 CommandId。 "
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。"
+    }
+  },
+  "res": {
+    "RequestId": "E69EF3CC-94CD-42E7-8926-F133B86387C0"
+  }
+}

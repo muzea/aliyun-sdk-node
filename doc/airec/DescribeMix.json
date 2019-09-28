@@ -1,0 +1,34 @@
+{
+  "name": "DescribeMix",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/openapi/instances/[InstanceId]/mixes/[Name]",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Path",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Path",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    }
+  },
+  "res": {}
+}

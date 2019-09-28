@@ -1,0 +1,163 @@
+{
+  "name": "DescribeDomainStatisticsSummary",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDomainStatisticsSummary查询用户账号下所有付费域名的请求量列表。",
+  "abc_id": 131096,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "StartDate": {
+      "name": "StartDate",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2019-07-04",
+      "description_cn": "查询的开始时间，格式：**YYYY-MM-DD**。\n\n只能查询最近90天的记录，即：StartDate >= Now - 90。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "1",
+      "description_cn": "当前页数，起始值为**1**，默认为**1**。"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "语言。"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "分页查询时设置的每页行数，最大值**100**，最小值为**1**，默认值为**20**。"
+    },
+    "EndDate": {
+      "name": "EndDate",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2019-07-04",
+      "description_cn": "查询的结束时间，格式：**YYYY-MM-DD**。\n\n默认为查询当天的时间。"
+    },
+    "OrderBy": {
+      "name": "OrderBy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Direction": {
+      "name": "Direction",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "SearchMode": {
+      "name": "SearchMode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "LIKE",
+      "description_cn": "关键词的搜索模式。取值：\n\n- 模糊搜索（默认）：**LIKE**\n- 精确搜索：**EXACT**"
+    },
+    "Keyword": {
+      "name": "Keyword",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "关键词，按照“%KeyWord%”模式搜索，不区分大小写。"
+    },
+    "Threshold": {
+      "name": "Threshold",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "12",
+      "description_cn": "查询总量阈值，也可查询相应请求量不大于threshold的数据。例如，可查询出请求量小于100次的域名。"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "Statistics": {
+      "Statistic": [
+        {
+          "Count": 837871652,
+          "DomainName": "alitest2.com"
+        },
+        {
+          "Count": 50205934,
+          "DomainName": "dns-example.com"
+        },
+        {
+          "Count": 35509014,
+          "DomainName": "ali-gslb.com"
+        },
+        {
+          "Count": 31397370,
+          "DomainName": "dns-example.cn"
+        },
+        {
+          "Count": 3896503,
+          "DomainName": "mydomi.cn"
+        }
+      ]
+    },
+    "PageSize": 5,
+    "RequestId": "CC625C21-8832-4683-BF10-C3CFB1A4FA13",
+    "TotalItems": 68,
+    "TotalPages": 14
+  }
+}

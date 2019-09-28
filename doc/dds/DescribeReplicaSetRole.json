@@ -1,0 +1,76 @@
+{
+  "name": "DescribeReplicaSetRole",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeReplicaSetRole接口查询MongoDB实例中的角色信息及连接信息。",
+  "abc_id": 62134,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。"
+    }
+  },
+  "res": {
+    "RequestId": "7762D0FF-F34D-4DAF-9D06-6C1C28CC98CD",
+    "DBInstanceId": "dds-bpxxxxxxxx",
+    "ReplicaSets": {
+      "ReplicaSet": [
+        {
+          "NetworkType": "Classic",
+          "ConnectionPort": "3717",
+          "ReplicaSetRole": "Primary",
+          "ConnectionDomain": "dds-bpxxxxxxxx.mongodb.rds.aliyuncs.com",
+          "ExpiredTime": "12xxxxx",
+          "RoleId": "55xxxxx"
+        },
+        {
+          "NetworkType": "Classic",
+          "ConnectionPort": "3717",
+          "ReplicaSetRole": "Secondary",
+          "ConnectionDomain": "dds-bpxxxxxxxx.mongodb.rds.aliyuncs.com",
+          "ExpiredTime": "12xxxxx",
+          "RoleId": "55xxxxx"
+        },
+        {
+          "NetworkType": "VPC",
+          "ConnectionPort": "3717",
+          "ReplicaSetRole": "Primary",
+          "ConnectionDomain": "dds-bpxxxxxxxx.mongodb.rds.aliyuncs.com",
+          "RoleId": "55xxxxx"
+        },
+        {
+          "NetworkType": "VPC",
+          "ConnectionPort": "3717",
+          "ReplicaSetRole": "Secondary",
+          "ConnectionDomain": "dds-bpxxxxxxxx.mongodb.rds.aliyuncs.com",
+          "RoleId": "55xxxxx"
+        }
+      ]
+    }
+  }
+}

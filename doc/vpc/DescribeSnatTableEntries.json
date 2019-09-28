@@ -1,0 +1,134 @@
+{
+  "name": "DescribeSnatTableEntries",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeSnatTableEntries接口查询已创建的SNAT条目。",
+  "abc_id": 42677,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "NAT网关所在的地域。\n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "SnatTableId": {
+      "name": "SnatTableId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "stb-8vbczigrhop8x5u3twlhd",
+      "description_cn": " SNAT表ID。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SnatEntryId": {
+      "name": "SnatEntryId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "snat-8vbae8uqh7rjpk7d2kuwt",
+      "description_cn": " SNAT条目ID。 "
+    },
+    "SourceVSwitchId": {
+      "name": "SourceVSwitchId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vsw-3xbxxxxx",
+      "description_cn": "通过SNAT功能进行公网访问的交换机ID。 "
+    },
+    "SourceCIDR": {
+      "name": "SourceCIDR",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "116.62.222.28/33",
+      "description_cn": " SNAT条目的源网段。 "
+    },
+    "SnatIp": {
+      "name": "SnatIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "116.62.222.28",
+      "description_cn": "  SNAT条目的公网IP。 "
+    },
+    "SnatEntryName": {
+      "name": "SnatEntryName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "SnatEntry-1",
+      "description_cn": "SNAT条目的名称。长度为2-128个字符，必须以字母或中文开头，但不能以`http://`或`https://`开头。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": " 列表的页码，默认值为1。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": " 分页查询时每页的行数，最大值为50，默认值为10。  "
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "PageSize": 10,
+    "RequestId": "6D7E89B1-1C5B-412B-8585-4908E222EED5",
+    "SnatTableEntries": {
+      "SnatTableEntry": [
+        {
+          "SnatEntryId": "snat-kmd6nv8fy",
+          "SnatIp": "139.xxx.xx.40",
+          "SnatTableId": "stb-gz3r3odaw",
+          "SourceCIDR": "192.168.1.0/24",
+          "SourceVSwitchId": "vsw-yrv0xxxxx",
+          "Status": "Available"
+        },
+        {
+          "SnatEntryId": "snat-bs5bezbme",
+          "SnatIp": "139.xxx.xx.40",
+          "SnatTableId": "stb-gz3r3odaw",
+          "SourceCIDR": "192.168.3.0/24",
+          "SourceVSwitchId": "vsw-3xbxxxxx",
+          "Status": "Available"
+        }
+      ]
+    }
+  }
+}

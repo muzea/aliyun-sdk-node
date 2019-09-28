@@ -1,0 +1,102 @@
+{
+  "name": "DescribeTags",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeTags查询标签列表。",
+  "abc_id": 42873,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "负载均衡实例的地域ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "LoadBalancerId": {
+      "name": "LoadBalancerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "139a00604ad-cn-east-hangzhou-01",
+      "description_cn": "负载均衡实例ID。 "
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[{\"TagKey\":\"Key1\",\"TagValue\":\"Value1\"}{\"TagKey\":\"Key2\",\"TagValue\":\"Value2\"}]",
+      "description_cn": "要查询的标签列表。"
+    },
+    "DistinctKey": {
+      "name": "DistinctKey",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否为DistinctKey。 \n\n取值：**true|false**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "50",
+      "description_cn": "单页结果数量，接口默认50，最大100。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "实例列表页码，起始值1，默认值1。"
+    }
+  },
+  "res": {
+    "RequestId": "365F4154-92F6-4AE4-92F8-7FF34B540710",
+    "TagSets": {
+      "TagSet": [
+        {
+          "TagKey": "test",
+          "TagValue": "api"
+        }
+      ],
+      "PageNumber": 1,
+      "PageSize": 50,
+      "TotalCount": 1
+    }
+  }
+}

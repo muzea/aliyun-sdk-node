@@ -1,0 +1,176 @@
+{
+  "name": "ModifyACLRule",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyACLRule修改访问控制规则。",
+  "abc_id": 114015,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "AclId": {
+      "name": "AclId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "acl-xhwhyuo43l0n*******",
+      "description_cn": "需要修改的访问控制ID。"
+    },
+    "AcrId": {
+      "name": "AcrId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "acr-u98qztgtgvhb********",
+      "description_cn": "需要修改的访问控制规则ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "规则描述信息，长度为1~512个字符。"
+    },
+    "Direction": {
+      "name": "Direction",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "in",
+      "description_cn": "规则方向。\n\n取值：**in|out**"
+    },
+    "SourceCidr": {
+      "name": "SourceCidr",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0.0.0.0/0",
+      "description_cn": "源地址，CIDR格式和IPv4格式的IP地址范围。\n\n默认值：**0.0.0.0/0 **"
+    },
+    "DestCidr": {
+      "name": "DestCidr",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0.0.0.0/0",
+      "description_cn": "目的地址，CIDR格式和IPv4格式的IP地址范围。\n\n默认值：**0.0.0.0/0**"
+    },
+    "IpProtocol": {
+      "name": "IpProtocol",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "tcp",
+      "description_cn": "协议，不区分大小写。"
+    },
+    "SourcePortRange": {
+      "name": "SourcePortRange",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "80/80",
+      "description_cn": "源端口范围，80/80。"
+    },
+    "DestPortRange": {
+      "name": "DestPortRange",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "80/80",
+      "description_cn": "目的端口范围，80/80。"
+    },
+    "Policy": {
+      "name": "Policy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "accept",
+      "description_cn": "访问权限：**accept|drop**"
+    },
+    "Priority": {
+      "name": "Priority",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "优先级，取值范围：1~100\n\n默认值：1"
+    },
+    "Type": {
+      "name": "Type",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "AcrId": "acr-u98qztgtgvhb87nsls",
+    "GmtCreate": 1553777700000,
+    "Direction": "out",
+    "Priority": 1,
+    "IpProtocol": "TCP",
+    "SourceCidr": "192.168.3.0/24",
+    "SourcePortRange": "1/65535",
+    "AclId": "acl-xhwhyuo43l0n2b832u",
+    "Policy": "drop",
+    "RequestId": "9B0F1C25-389E-4E78-9392-E89F8531F87C",
+    "DestPortRange": "1/65535",
+    "DestCidr": "10.0.0.1/32"
+  }
+}

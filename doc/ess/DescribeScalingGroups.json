@@ -1,0 +1,494 @@
+{
+  "name": "DescribeScalingGroups",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeScalingGroups查询伸缩组。",
+  "abc_id": 25938,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-qingdao",
+      "description_cn": "伸缩组所属地域的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456123456",
+      "description_cn": ""
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "伸缩组列表的页码。起始值：1。\n\n默认值：1 。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时设置的每页行数。最大值：50。\n\n默认值：10。"
+    },
+    "ScalingGroupId.1": {
+      "name": "ScalingGroupId.1",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": "ScalingGroupId.N为待查询伸缩组的ID，N的取值范围：1～20。查询结果会忽略失效的伸缩组ID，并且不报错。"
+    },
+    "ScalingGroupId.2": {
+      "name": "ScalingGroupId.2",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupId.3": {
+      "name": "ScalingGroupId.3",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupId.4": {
+      "name": "ScalingGroupId.4",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupId.5": {
+      "name": "ScalingGroupId.5",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupId.6": {
+      "name": "ScalingGroupId.6",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupId.7": {
+      "name": "ScalingGroupId.7",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupId.8": {
+      "name": "ScalingGroupId.8",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupId.9": {
+      "name": "ScalingGroupId.9",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupId.10": {
+      "name": "ScalingGroupId.10",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupId.12": {
+      "name": "ScalingGroupId.12",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupId.13": {
+      "name": "ScalingGroupId.13",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupId.14": {
+      "name": "ScalingGroupId.14",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupId.15": {
+      "name": "ScalingGroupId.15",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupId.16": {
+      "name": "ScalingGroupId.16",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupId.17": {
+      "name": "ScalingGroupId.17",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupId.18": {
+      "name": "ScalingGroupId.18",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupId.19": {
+      "name": "ScalingGroupId.19",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupId.20": {
+      "name": "ScalingGroupId.20",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupName": {
+      "name": "ScalingGroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupName.1": {
+      "name": "ScalingGroupName.1",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": "ScalingGroupName.N为待查询伸缩组的名称，N的取值范围：1～20。查询结果会忽略失效的伸缩组名称，并且不报错。"
+    },
+    "ScalingGroupName.2": {
+      "name": "ScalingGroupName.2",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupName.3": {
+      "name": "ScalingGroupName.3",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupName.4": {
+      "name": "ScalingGroupName.4",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupName.5": {
+      "name": "ScalingGroupName.5",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupName.6": {
+      "name": "ScalingGroupName.6",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupName.7": {
+      "name": "ScalingGroupName.7",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupName.8": {
+      "name": "ScalingGroupName.8",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupName.9": {
+      "name": "ScalingGroupName.9",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupName.10": {
+      "name": "ScalingGroupName.10",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupName.11": {
+      "name": "ScalingGroupName.11",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupName.12": {
+      "name": "ScalingGroupName.12",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupName.13": {
+      "name": "ScalingGroupName.13",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupName.14": {
+      "name": "ScalingGroupName.14",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupName.15": {
+      "name": "ScalingGroupName.15",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupName.16": {
+      "name": "ScalingGroupName.16",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupName.17": {
+      "name": "ScalingGroupName.17",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupName.18": {
+      "name": "ScalingGroupName.18",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupName.19": {
+      "name": "ScalingGroupName.19",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    },
+    "ScalingGroupName.20": {
+      "name": "ScalingGroupName.20",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dyrSuvBOtO1dEdIlIbp****",
+      "description_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "68386699-8B9E-4D5B-BC4C-75A28F6C2A00",
+    "TotalCount": 1,
+    "PageSize": 10,
+    "PageNumber": 1,
+    "ScalingGroups": {
+      "ScalingGroup": [
+        {
+          "ScalingGroupId": "b8pYCVbIV5k9cz4PWpbe****",
+          "ScalingGroupName": "b8pYCVbIV5k9cz4PWpbe****",
+          "RegionId": "cn-qingdao",
+          "RemovingCapacity": 0,
+          "DefaultCooldown": 300,
+          "MinSize": 1,
+          "MaxSize": 2,
+          "LifecycleState": "Inactive",
+          "ActiveScalingConfigurationId": " dyo713cNYIB4ddEVlKbc****",
+          "LoadBalancerIds": {
+            "LoadBalancerId": [
+              "147b46d767c-cn-qingdao-cm5****"
+            ]
+          },
+          "PendingCapacity": 0,
+          "TotalCapacity": 0,
+          "ActiveCapacity": 0,
+          "CreationTime": "2014-08-14T10:58Z",
+          "DBInstanceIds": {
+            "DBInstanceId": [
+              "rdsia3u3yia****",
+              "rdszzzyyuny****"
+            ]
+          },
+          "VSwitchId": "vpc-25j4g****",
+          "RemovalPolicies": {
+            "RemovalPolicy": [
+              "OldestScalingConfiguration",
+              "OldestInstance"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

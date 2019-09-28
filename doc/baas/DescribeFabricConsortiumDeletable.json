@@ -1,0 +1,59 @@
+{
+  "name": "DescribeFabricConsortiumDeletable",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|PUT|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeFabricConsortiumDeletable查询联盟是否可删除。",
+  "abc_id": 127864,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "ConsortiumId": {
+      "name": "ConsortiumId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "consortium-lianmenyumingyi-hc5d1bwl****",
+      "description_cn": "联盟ID"
+    },
+    "Location": {
+      "name": "Location",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "位置"
+    }
+  },
+  "res": {
+    "Result": {
+      "ConsortiumId": "consortium-xxxxxx",
+      "Deletable": false,
+      "CodeName": "name",
+      "Description": "desc",
+      "Domain": "domain",
+      "Name": "asset_mgmtv1.0.out",
+      "State": "Checking",
+      "RegionId": "cn-hangzhou",
+      "ZoneId": "cn-hangzhou"
+    },
+    "RequestId": "C445762C-8909-4BD8-A2BD-BB45BF2441D8",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

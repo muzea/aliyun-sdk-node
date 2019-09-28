@@ -1,0 +1,29 @@
+{
+  "name": "PauseChange",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/pop/v1/wam/change/pause",
+  "summary_cn": "调用PauseChange来暂停一个未完成的变更操作。",
+  "abc_id": 127838,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ChangeId": {
+      "name": "ChangeId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "wc-5d3fabad56fd7c14ac9*****",
+      "description_cn": "变更ID，将暂停此变更操作"
+    }
+  },
+  "res": {}
+}

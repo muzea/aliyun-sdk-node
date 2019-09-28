@@ -1,0 +1,94 @@
+{
+  "name": "ListTagResources",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ListTagResources查询一个或多个ECS资源已经绑定的标签列表。",
+  "abc_id": 110425,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "资源所属的地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "ResourceType": {
+      "name": "ResourceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "instance",
+      "description_cn": "资源类型定义。取值范围：\n\n- instance：ECS实例\n- disk：磁盘\n- snapshot：快照\n- image：镜像\n- securitygroup：安全组\n- volume：存储卷\n- eni：弹性网卡\n- ddh：专有宿主机\n- keypair：SSH密钥对\n- launchtemplate：启动模板"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "ResourceId": {
+      "name": "ResourceId",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "NextToken": {
+      "name": "NextToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "caeba0bbb2be03f84eb48b699f0a4883",
+      "description_cn": "下一个查询开始Token。"
+    }
+  },
+  "res": {
+    "TagResources": {
+      "TagResource": [
+        {
+          "ResourceType": "instance",
+          "TagValue": "FinanceJoshua",
+          "ResourceId": "i-bp1j6qtvdm8w0z1o0XXX",
+          "TagKey": "FinanceDept"
+        }
+      ]
+    },
+    "RequestId": "DE65F6B7-7566-4802-9007-96F2494AC512"
+  }
+}

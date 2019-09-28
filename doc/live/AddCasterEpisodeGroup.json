@@ -1,0 +1,111 @@
+{
+  "name": "AddCasterEpisodeGroup",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AddCasterEpisodeGroup添加导播台节目列表。",
+  "abc_id": 94748,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "XXXXX.XXX.XXX",
+      "description_cn": "域名。"
+    },
+    "Item": {
+      "name": "Item",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "ItemName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "VodUrl",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2018-03-06T19:00:00Z",
+      "description_cn": "起始时间。\n\nUTC格式，例如：`2016-06-29T19:00:00Z `。 "
+    },
+    "RepeatNum": {
+      "name": "RepeatNum",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "3",
+      "description_cn": "重复次数。其中。**0**表示不循环，**-1**表示无限循环。"
+    },
+    "SideOutputUrl": {
+      "name": "SideOutputUrl",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "http://XXXX/XXXX",
+      "description_cn": "用户自定义旁路输出地址。"
+    },
+    "CallbackUrl": {
+      "name": "CallbackUrl",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "http://XXXXXX/XXXXXXX",
+      "description_cn": "用户回调地址。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "8751ad99-2ddb-4aac-ad44-84b211021c04",
+      "description_cn": "用于保证请求的幂等性。\n\n由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符。"
+    }
+  },
+  "res": {}
+}

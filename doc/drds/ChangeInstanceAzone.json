@@ -1,0 +1,63 @@
+{
+  "name": "ChangeInstanceAzone",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true
+    },
+    "OriginAzoneId": {
+      "name": "OriginAzoneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "TargetAzoneId": {
+      "name": "TargetAzoneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "DrdsRegionId": {
+      "name": "DrdsRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "DrdsInstanceId": {
+      "name": "DrdsInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "7CBD055E-43FD-4D07-97D8-9767C07864ED",
+      "TaskId": 206709,
+      "Success": true
+    },
+    "requestId": "@guid",
+    "success": true
+  }
+}

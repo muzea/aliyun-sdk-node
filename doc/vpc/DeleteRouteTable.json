@@ -1,0 +1,43 @@
+{
+  "name": "DeleteRouteTable",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteRouteTable接口删除自定义路由表。",
+  "abc_id": 87601,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "路由表所属的VPC的地域ID。 \n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "RouteTableId": {
+      "name": "RouteTableId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "vtb-bp145q7glnuzdvzu2****",
+      "description_cn": "路由表ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "62172DD5-6BAC-45DF-8D44-xxxxxxxx"
+  }
+}

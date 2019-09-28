@@ -1,0 +1,100 @@
+{
+  "name": "ModifyDBInstanceNetworkType",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyDBInstanceNetworkType接口切换MongoDB实例的网络类型。",
+  "abc_id": 62138,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例所属的地域ID，您可以通过调用[DescribeDBInstanceAttribute](~~62010~~)进行查询。"
+    },
+    "NetworkType": {
+      "name": "NetworkType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "VPC",
+      "description_cn": "实例要切换的目标网络类型，取值：\n- **VPC**：将网络类型切换为专有网络。\n- **Classic**：将网络类型切换为经典网络。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "VpcId": {
+      "name": "VpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc-bpxxxxxxxx",
+      "description_cn": "专有网络ID。\n\n> 当**NetworkType**参数取值为**VPC**时，本参数必须传入。"
+    },
+    "VSwitchId": {
+      "name": "VSwitchId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vsw-bpxxxxxxxx",
+      "description_cn": "专有网络中的交换机ID。\n> 当**NetworkType**参数取值为**VPC**时，本参数必须传入。"
+    },
+    "RetainClassic": {
+      "name": "RetainClassic",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "True",
+      "description_cn": "切换网络类型为VPC时，设置是否保留原经典网络地址，取值：\n- **True**：保留原经典网络地址。\n- **False**：不保留原经典网络地址。\n\n> - 当**NetworkType**参数取值为**VPC**时，才可以传入本参数。\n- 当本参数取值为**True**时，还需要传入**ClassicExpiredDays**参数。"
+    },
+    "ClassicExpiredDays": {
+      "name": "ClassicExpiredDays",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "切换网络类型为VPC时，设置保留原经典网络地址的时长。 取值：**14**、**30**、**60**、**120**，单位为天。\n\n> - 当**NetworkType**参数取值为**VPC**时，才可以传入本参数。\n- 当**RetainClassic**参数取值为**True**时，本参数必须传入。"
+    }
+  },
+  "res": {
+    "RequestId": "7A9807F0-1301-4154-9849-6497E94A04DB"
+  }
+}

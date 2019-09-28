@@ -1,0 +1,133 @@
+{
+  "name": "UnicomOrderConfirm",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "TradeId": {
+      "name": "TradeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "TmsCode": {
+      "name": "TmsCode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "TmsOrderCode": {
+      "name": "TmsOrderCode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "OrderPostFee": {
+      "name": "OrderPostFee",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "OwnerUserId": {
+      "name": "OwnerUserId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "OrderItem": {
+      "name": "OrderItem",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "OrderItemId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "TradeId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "TradeItemId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ScItemName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ScItemCode",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ItemQuantity",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ItemAmount",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "SnList",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        }
+      ]
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,74 @@
+{
+  "name": "ModifyReservedInstances",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 8000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "ReservedInstanceId": {
+      "name": "ReservedInstanceId",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Configuration": {
+      "name": "Configuration",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "ZoneId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ReservedInstanceName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "InstanceType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Scope",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "InstanceAmount",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {}
+}

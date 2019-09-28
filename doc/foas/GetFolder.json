@@ -1,0 +1,45 @@
+{
+  "name": "GetFolder",
+  "protocol": "HTTPS",
+  "method": "GET",
+  "path": "/api/v2/projects/[projectName]/folders",
+  "summary_cn": "获取文件夹信息",
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Header",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou-pre ",
+      "description_cn": "集团内用户使用： cn-hangzhou-pre 公共云预发； cn-hangzhou-internal 集团内生产； cn-hangzhou-internal-pre 集团内预发；"
+    },
+    "path": {
+      "name": "path",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "/path1/path2",
+      "description_cn": "reg"
+    },
+    "projectName": {
+      "name": "projectName",
+      "type": "String",
+      "position": "Path",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "project1",
+      "description_cn": "reg"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,185 @@
+{
+  "name": "ListClusterHostComponent",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 ListClusterHostComponent 接口获取集群各个主机上安装的组件列表。",
+  "abc_id": 100647,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "ClusterId": {
+      "name": "ClusterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "C-F32FB31D82954C64",
+      "description_cn": "集群ID。"
+    },
+    "HostInstanceId": {
+      "name": "HostInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-xxx",
+      "description_cn": "主机实例ID，一般是** ecsId**。"
+    },
+    "HostName": {
+      "name": "HostName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "emr-worker-1",
+      "description_cn": "主机名。"
+    },
+    "ServiceName": {
+      "name": "ServiceName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "TEZ",
+      "description_cn": "服务名。"
+    },
+    "ComponentName": {
+      "name": "ComponentName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "TezInit",
+      "description_cn": "待查询的组件名称。"
+    },
+    "ComponentStatus": {
+      "name": "ComponentStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "STARTED",
+      "description_cn": "待查询的组件状态。"
+    },
+    "HostRole": {
+      "name": "HostRole",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "CORE",
+      "description_cn": "主机角色。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "分页查询的查询页码。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "100",
+      "description_cn": "分页查询的每页记录数。"
+    }
+  },
+  "res": {
+    "PageSize": 10,
+    "RequestId": "DF202AC2-5D5D-4288-B608-B7B1595B5C7C",
+    "PageNumber": 1,
+    "Total": 4,
+    "ComponentList": {
+      "Component": [
+        {
+          "Status": "STARTED",
+          "ComponentDisplayName": "Tez Client",
+          "PublicIp": "47.97.106.27",
+          "HostInstanceId": "i-xxx1",
+          "HostId": "124903",
+          "ServiceDisplayName": "Tez",
+          "Role": "MASTER",
+          "SerialNumber": "x11-05e5-4d36-b773-8ae4106babd4",
+          "PrivateIp": "192.168.143.231",
+          "ServiceName": "TEZ",
+          "NeedRestart": false,
+          "ComponentName": "TezInit",
+          "InstanceType": "ecs.n4.xlarge",
+          "HostName": "emr-header-1"
+        },
+        {
+          "Status": "STARTED",
+          "ComponentDisplayName": "Tomcat",
+          "PublicIp": "47.97.106.27",
+          "HostInstanceId": "i-xxx2",
+          "HostId": "124903",
+          "ServiceDisplayName": "Tez",
+          "Role": "MASTER",
+          "SerialNumber": "1xx1-05e5-x-b773-xxx",
+          "PrivateIp": "192.168.143.231",
+          "ServiceName": "TEZ",
+          "NeedRestart": false,
+          "ComponentName": "Tomcat",
+          "InstanceType": "ecs.n4.xlarge",
+          "HostName": "emr-header-1"
+        },
+        {
+          "Status": "STARTED",
+          "ComponentDisplayName": "Tez Client",
+          "PublicIp": "",
+          "HostInstanceId": "i-xxx3",
+          "HostId": "124902",
+          "ServiceDisplayName": "Tez",
+          "Role": "CORE",
+          "SerialNumber": "asd1x1-af39-1c-32b27d83d4c3",
+          "PrivateIp": "192.168.143.232",
+          "ServiceName": "TEZ",
+          "NeedRestart": false,
+          "ComponentName": "TezInit",
+          "InstanceType": "ecs.n4.xlarge",
+          "HostName": "emr-worker-1"
+        },
+        {
+          "Status": "STARTED",
+          "ComponentDisplayName": "Tez Client",
+          "PublicIp": "",
+          "HostInstanceId": "i-xxx4",
+          "HostId": "124901",
+          "ServiceDisplayName": "Tez",
+          "Role": "CORE",
+          "SerialNumber": "1cc-2762-4d84-a430-xxx",
+          "PrivateIp": "192.168.143.233",
+          "ServiceName": "TEZ",
+          "NeedRestart": false,
+          "ComponentName": "TezInit",
+          "InstanceType": "ecs.n4.xlarge",
+          "HostName": "emr-worker-2"
+        }
+      ]
+    }
+  }
+}

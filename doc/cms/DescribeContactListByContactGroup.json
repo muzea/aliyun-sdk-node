@@ -1,0 +1,49 @@
+{
+  "name": "DescribeContactListByContactGroup",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询一个报警联系人组下的报警联系人列表。",
+  "abc_id": 114920,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ContactGroupName": {
+      "name": "ContactGroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "我的组名",
+      "description_cn": "报警联系组名。"
+    }
+  },
+  "res": {
+    "RequestId": "81A6C995-D1A8-4627-B2E6-4B651446DDF9",
+    "Contacts": {
+      "Contact": [
+        {
+          "Channels": {
+            "AliIM": "关某",
+            "Mail": "test***@aliyun.com"
+          },
+          "Name": "关某",
+          "CreateTime": 1552355864000,
+          "UpdateTime": 1552356159000,
+          "Desc": "xxxx"
+        }
+      ]
+    },
+    "Success": true,
+    "Code": "200"
+  }
+}

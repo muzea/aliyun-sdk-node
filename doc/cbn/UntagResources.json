@@ -1,0 +1,59 @@
+{
+  "name": "UntagResources",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用UntagResources为指定的资源列表统一解绑并删除标签。",
+  "abc_id": 139719,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ResourceType": {
+      "name": "ResourceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cen",
+      "description_cn": "资源类型，取值：**cen**。"
+    },
+    "ResourceId": {
+      "name": "ResourceId",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "11"
+    },
+    "TagKey": {
+      "name": "TagKey",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    }
+  },
+  "res": {
+    "RequestId": "C46FF5A8-C5F0-4024-8262-B16B639225A0"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "CreateMonitorAgentProcess",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "创建进程监控。",
+  "abc_id": 114956,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "i-123****",
+      "description_cn": "实例ID。"
+    },
+    "ProcessName": {
+      "name": "ProcessName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "java",
+      "description_cn": "进程名称。"
+    },
+    "ProcessUser": {
+      "name": "ProcessUser",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "admin",
+      "description_cn": "执行进程的用户。"
+    }
+  },
+  "res": {
+    "RequestId": "971CC023-5A96-452A-BB7C-2483F948BCFD",
+    "Id": "17****",
+    "Success": true,
+    "Code": 200
+  }
+}

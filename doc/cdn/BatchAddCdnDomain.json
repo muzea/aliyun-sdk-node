@@ -1,0 +1,99 @@
+{
+  "name": "BatchAddCdnDomain",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用BatchAddCdnDomain批量添加加速域名，一个用户最多添加20个域名。",
+  "abc_id": 124881,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CdnType": {
+      "name": "CdnType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "web",
+      "description_cn": "加速域名的业务类型。 取值：\n\n- **web**：图片及小文件分发。\n\n- **download**：大文件下载加速。\n\n- **Video**：视频点播加速。"
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "需要接入CDN的域名。多个域名之间用逗号（,）隔开。\n"
+    },
+    "Sources": {
+      "name": "Sources",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "[{“content”:”1.1.1.1”,”type”:”ipaddr”,”priority”:”20”,”port”:80,”weight”:”15”}]",
+      "description_cn": "回源地址列表。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123",
+      "description_cn": "资源组ID，不传时，自动补全默认资源组ID。"
+    },
+    "CheckUrl": {
+      "name": "CheckUrl",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "url",
+      "description_cn": "检测url。"
+    },
+    "Scope": {
+      "name": "Scope",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "domestic",
+      "description_cn": "取值范围：\n\n- **domestic**\n\n- **overseas**\n\n- **global**"
+    },
+    "TopLevelDomain": {
+      "name": "TopLevelDomain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "www.yourdomain.com",
+      "description_cn": "顶级接入域。"
+    }
+  },
+  "res": {
+    "RequestId": "15C66C7B-671A-4297-9187-2C4477247A74"
+  }
+}

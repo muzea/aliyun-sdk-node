@@ -1,0 +1,77 @@
+{
+  "name": "DescribeChannelParticipants",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeChannelParticipants查询频道在线用户列表。",
+  "abc_id": 132140,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "sad123",
+      "description_cn": "应用ID。\n"
+    },
+    "ChannelId": {
+      "name": "ChannelId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "123",
+      "description_cn": "用户加入的频道。\n"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "Order": {
+      "name": "Order",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "asc",
+      "description_cn": "不输入该参数默认为**desc**取最近记录。\n\n- 递增：**asc**。\n\n- 递减：**desc**。\n"
+    },
+    "PageNum": {
+      "name": "PageNum",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "不输入默认**1**页，必须大于**0**。\n"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "不输入如默认为**10**， 必须大于**0**。\n"
+    }
+  },
+  "res": {}
+}

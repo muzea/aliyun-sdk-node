@@ -1,0 +1,55 @@
+{
+  "name": "DescribeSmartAccessGatewayVersions",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeSmartAccessGatewayVersions查询智能接入网关的软件版本。",
+  "abc_id": 69825,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": " 智能接入网关的所属区域。取值： cn-shanghai：中国大陆  "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "SmartAGId": {
+      "name": "SmartAGId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sag-d3m51apgw4po5*****",
+      "description_cn": "智能接入网关实例ID。"
+    }
+  },
+  "res": {
+    "SmartAGVersions": {
+      "SmartAGVersion": [
+        {
+          "CreateTime": 1522744623000,
+          "VersionCode": "1.0",
+          "VersionName": "testpackage1"
+        }
+      ]
+    },
+    "RequestId": "765AB188-69BF-47C6-BEDD-B9FC72BFBB00"
+  }
+}

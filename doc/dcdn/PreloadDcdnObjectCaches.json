@@ -1,0 +1,47 @@
+{
+  "name": "PreloadDcdnObjectCaches",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用PreloadDcdnObjectCaches将源站的内容主动预热到L2 Cache节点上，用户首次访问可直接命中缓存，缓解源站压力。",
+  "abc_id": 130636,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ObjectPath": {
+      "name": "ObjectPath",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "example.com/image/1.png",
+      "description_cn": "多个URL用换行符（\\n）或（\\r\\n）分隔。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "Area": {
+      "name": "Area",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "domestic",
+      "description_cn": "预热区域。取值范围：\n\n- **domestic**\n\n- **overseas**"
+    }
+  },
+  "res": {}
+}

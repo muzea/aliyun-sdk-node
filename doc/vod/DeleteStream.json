@@ -1,0 +1,48 @@
+{
+  "name": "DeleteStream",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteStream删除媒体流(视频流，音频流)信息及存储文件，并且支持批量删除。",
+  "abc_id": 129672,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "VideoId": {
+      "name": "VideoId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "de3a60c5-759c-4cd4-bb79-6cedfeefdf4d",
+      "description_cn": "视频ID。"
+    },
+    "JobIds": {
+      "name": "JobIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "f1a64a67-98f0-4423-b8bd-057d4a20aa94",
+      "description_cn": "- 媒体流转码的作业ID列表，多个用逗号分隔，最多支持同一个视频下的20个作业ID。\n- JobId通过获取播放地址接口(GetPlayInfo)返回的PlayInfo结构体中获取，每个媒体流对应的JobId不同。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

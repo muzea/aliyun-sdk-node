@@ -1,0 +1,18 @@
+{
+  "name": "DescribeInstanceSpecifications",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v1/paas/quota/instanceSpecifications",
+  "summary_cn": "获取应用实例规格信息",
+  "abc_id": 126618,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    }
+  },
+  "res": {}
+}

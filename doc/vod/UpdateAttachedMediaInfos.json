@@ -1,0 +1,52 @@
+{
+  "name": "UpdateAttachedMediaInfos",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用UpdateAttachedMediaInfos批量修改辅助媒资信息。",
+  "abc_id": 129680,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "UpdateContent": {
+      "name": "UpdateContent",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "[{\"MediaId \":\"xxxx\",\"Title\":\"标题\",\"Description\":\"描述\",\"Tags\":\"标签1,标签2\"}]",
+      "description_cn": "更新内容。一次最多支持修改20个辅助媒资信息。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ResourceRealOwnerId": {
+      "name": "ResourceRealOwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "235",
+      "description_cn": "资源所有者ID。"
+    }
+  },
+  "res": {}
+}

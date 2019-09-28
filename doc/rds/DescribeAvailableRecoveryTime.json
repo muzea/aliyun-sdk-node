@@ -1,0 +1,50 @@
+{
+  "name": "DescribeAvailableRecoveryTime",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeAvailableRecoveryTime接口查询某跨地域备份文件可恢复哪个时间段的数据。",
+  "abc_id": 121736,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "CrossBackupId": {
+      "name": "CrossBackupId",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "14377",
+      "description_cn": "跨地域备份文件ID。可以通过接口[DescribeCrossRegionBackups](~~121733~~)查看备份集ID。"
+    }
+  },
+  "res": {
+    "RecoveryEndTime": "2019-06-12T07:33:12Z",
+    "RecoveryBeginTime": "2019-06-12T05:22:29Z",
+    "RequestId": "8CCBF4BA-7CE1-47E1-B49F-E97EA200A40D",
+    "RegionId": "cn-hangzhou",
+    "CrossBackupId": 14377
+  }
+}

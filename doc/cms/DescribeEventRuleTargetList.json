@@ -1,0 +1,73 @@
+{
+  "name": "DescribeEventRuleTargetList",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "查询指定事件报警规则的报警目标。",
+  "abc_id": 114991,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "RuleName": {
+      "name": "RuleName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "testRule",
+      "description_cn": "报警规则名称。"
+    }
+  },
+  "res": {
+    "SlsParameters": {
+      "SlsParameter": [
+        {
+          "Region": "cn-hangzhou",
+          "Project": "project-test",
+          "Id": "4",
+          "LogStore": "logstore-test"
+        }
+      ]
+    },
+    "ContactParameters": {
+      "ContactParameter": [
+        {
+          "Id": "1",
+          "Level": "3",
+          "ContactGroupName": "aaaaa"
+        }
+      ]
+    },
+    "MnsParameters": {
+      "MnsParameter": [
+        {
+          "Region": "cn-hangzhou",
+          "Id": "2",
+          "Queue": "ECS-ops"
+        }
+      ]
+    },
+    "RequestId": "174513e9-7da9-4f05-9cae-98f9959e9379",
+    "ParameterCount": 1,
+    "FcParameters": {
+      "FCParameter": [
+        {
+          "Region": "cn-hangzhou",
+          "ServiceName": "MetricService-1",
+          "FunctionName": "MetricFunction-0",
+          "Id": "3"
+        }
+      ]
+    },
+    "Code": "200"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "RestartAppEnv",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/pop/v1/wam/appEnv/restart",
+  "summary_cn": "调用RestartAppEnv重启一个部署环境。",
+  "abc_id": 127829,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "EnvId": {
+      "name": "EnvId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "we-5d39b8ba6786bd4b149*****",
+      "description_cn": "环境ID，将重启此环境"
+    }
+  },
+  "res": {}
+}

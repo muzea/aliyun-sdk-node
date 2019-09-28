@@ -1,0 +1,45 @@
+{
+  "name": "DescribeInstanceSSL",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeInstanceSSL查看Redis实例是否开启了SSL加密认证。",
+  "abc_id": 128714,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "r-bp1xxxxxxxxxxxxx",
+      "description_cn": "实例ID。"
+    }
+  },
+  "res": {
+    "SSLEnabled": "Enable",
+    "SSLExpiredTime": "2020-08-05T09:05:53Z",
+    "InstanceId": "r-bp1xxxxxxxxxxxxx",
+    "RequestId": "02260F96-913E-4655-9BA5-A3651CAF3045",
+    "CertCommonName": "r-bp1xxxxxxxxxxxxx.redis.rds.aliyuncs.com"
+  }
+}

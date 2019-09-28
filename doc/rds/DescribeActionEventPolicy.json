@@ -1,0 +1,37 @@
+{
+  "name": "DescribeActionEventPolicy",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeActionEventPolicy接口查看RDS历史事件功能开启情况。",
+  "abc_id": 131028,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID，可以通过接口[DescribeRegions](~~26243~~)查看地域ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "CCECD3CD-AB2D-4F6D-BEDE-47BC90A398D2",
+    "RegionId": "cn-hangzhou",
+    "EnableEventLog": "True"
+  }
+}

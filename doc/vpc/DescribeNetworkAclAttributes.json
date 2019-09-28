@@ -1,0 +1,84 @@
+{
+  "name": "DescribeNetworkAclAttributes",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeNetworkAclAttributes接口查询网络ACL的详细信息。",
+  "abc_id": 116542,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "网络ACL所在的地域。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "NetworkAclId": {
+      "name": "NetworkAclId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "nacl-a2do9e413e0spxxxxxxxx",
+      "description_cn": "网络ACL的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123"
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123"
+    }
+  },
+  "res": {
+    "NetworkAclAttribute": {
+      "CreationTime": "2019-04-25 11:33:27",
+      "EgressAclEntries": {
+        "EgressAclEntry": [
+          {
+            "Port": "-1/-1",
+            "Policy": "accept",
+            "NetworkAclEntryId": "nae-a2d447uw4tillxxxxxxxx",
+            "DestinationCidrIp": "10.0.0.0/24",
+            "Protocol": "all"
+          }
+        ]
+      },
+      "Status": "Available",
+      "RegionId": "cn-hangzhou",
+      "IngressAclEntries": {
+        "IngressAclEntry": [
+          {
+            "SourceCidrIp": "10.0.0.0/24",
+            "Port": "-1/-1",
+            "Policy": "accept",
+            "NetworkAclEntryId": "nae-a2dk86arlydmexxxxxxxx",
+            "Protocol": "all"
+          }
+        ]
+      },
+      "NetworkAclId": "nacl-a2do9e413e0spxxxxxxxx",
+      "VpcId": "vpc-a2d33rfpl72k5xxxxxxxx",
+      "Resources": {
+        "Resource": []
+      }
+    },
+    "RequestId": "F5905F9C-0161-4E72-9CB1-1F3F3CF6268A"
+  }
+}

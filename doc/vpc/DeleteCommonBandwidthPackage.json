@@ -1,0 +1,52 @@
+{
+  "name": "DeleteCommonBandwidthPackage",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteCommonBandwidthPackage接口删除共享带宽实例。",
+  "abc_id": 56000,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "共享带宽实例所在的地域。 \n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "BandwidthPackageId": {
+      "name": "BandwidthPackageId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cbwp-2ze2ic1xd2qeqk145pn4u",
+      "description_cn": " 共享带宽实例的ID。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Force": {
+      "name": "Force",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否强制删除共享带宽实例。取值： \n          \n- **false**（默认值）：只删除不包含EIP的共享带宽。\n\n- **true**：将共享带宽实例中的EIP全部移出后，删除共享带宽。"
+    }
+  },
+  "res": {
+    "RequestId": "B400EF57-60E3-4D61-B8FB-7FA8F72DF5A6"
+  }
+}

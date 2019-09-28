@@ -1,0 +1,213 @@
+{
+  "name": "CreateGroupMetricRules",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "批量创建应用分组报警规则。",
+  "abc_id": 114940,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "123456",
+      "description_cn": "应用分组ID。"
+    },
+    "GroupMetricRules": {
+      "name": "GroupMetricRules",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Category",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "RuleName",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "RuleId",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Namespace",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "MetricName",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Dimensions",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "EffectiveInterval",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "NoEffectiveInterval",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "SilenceTime",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Period",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Interval",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Webhook",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "EmailSubject",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Critical.Statistics",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Critical.ComparisonOperator",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Critical.Threshold",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Critical.Times",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Warn.Statistics",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Warn.ComparisonOperator",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Warn.Threshold",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Warn.Times",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Info.Statistics",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Info.ComparisonOperator",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Info.Threshold",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Info.Times",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {
+    "RequestId": "65D50468-ECEF-48F1-A6E1-D952E89D9436",
+    "Success": "true",
+    "Code": "200",
+    "Resources": {
+      "AlertResult": [
+        {
+          "RuleId": "xxxx1298766",
+          "Success": "true",
+          "RuleName": "我的规则名1",
+          "Code": "200"
+        },
+        {
+          "Message": "Metric not found.",
+          "RuleId": "hyu91929****",
+          "Success": "false",
+          "RuleName": "规则Id2",
+          "Code": "404"
+        }
+      ]
+    }
+  }
+}

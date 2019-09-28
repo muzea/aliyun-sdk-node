@@ -1,0 +1,45 @@
+{
+  "name": "GetTemplate",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/V2/GetTemplate",
+  "summary_cn": "查询资源栈、更改集的详细信息。",
+  "abc_id": 133828,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "模板所属资源栈的地域ID。您可以调用[DescribeRegions](~~131035~~)查看最新的阿里云地域列表。"
+    },
+    "StackId": {
+      "name": "StackId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "4a6c9851-3b0f-4f5f-b4ca-a14bf691f2ff",
+      "description_cn": "资源栈ID。"
+    },
+    "ChangeSetId": {
+      "name": "ChangeSetId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1f6521a4-05af-4975-afe9-bc4b45ad5bd5",
+      "description_cn": "更改集ID。"
+    }
+  },
+  "res": {}
+}

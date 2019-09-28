@@ -1,0 +1,63 @@
+{
+  "name": "DeleteUisConnection",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteUisConnection接口删除隧道连接。",
+  "abc_id": 94832,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "UisConnectionId": {
+      "name": "UisConnectionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "UISCONN-xxxblu51boe75a1eb****",
+      "description_cn": "要删除的隧道连接ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "d7d24a21-f4ba-4454-9173-b3828dae492b",
+      "description_cn": "客户端token，用于保证请求的幂等性。\n\n由客户端生成该参数值，要保证在不同请求间唯一，最大不值过64个 ASCII 字符。"
+    },
+    "UisNodeId": {
+      "name": "UisNodeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "UISNODE-xxxcp0zr5m2avmn2r****",
+      "description_cn": "节点ID。"
+    }
+  },
+  "res": {
+    "requestId": "A179AE8A-A7FE-4242-A830-641720CE2785"
+  }
+}

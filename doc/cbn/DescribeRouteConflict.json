@@ -1,0 +1,113 @@
+{
+  "name": "DescribeRouteConflict",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeRouteConflict查看指定路由器（VRouter或VBR）中存在冲突的路由条目。",
+  "abc_id": 66014,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ChildInstanceId": {
+      "name": "ChildInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "vpc-bp18sth14qii3pn****",
+      "description_cn": "网络实例的ID。"
+    },
+    "ChildInstanceType": {
+      "name": "ChildInstanceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "VBR",
+      "description_cn": "指定路由器类型，取值：\n\n- **VRouter**：虚拟路由器。\n\n- **VBR**：边界路由器。"
+    },
+    "ChildInstanceRegionId": {
+      "name": "ChildInstanceRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "指定地域的ID。"
+    },
+    "ChildInstanceRouteTableId": {
+      "name": "ChildInstanceRouteTableId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "vtb-bp174d1gje79u1g4t****",
+      "description_cn": "路由表的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "当前页码。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "每页包含的条目数。"
+    },
+    "DestinationCidrBlock": {
+      "name": "DestinationCidrBlock",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "172.16.xx.xx/24",
+      "description_cn": "目标网段的CIDR地址块。"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 0,
+    "PageSize": 10,
+    "RequestId": "B6C11547-2D56-4EEC-A8D5-FDC5A53E53D0",
+    "RouteConflicts": {
+      "RouteConflict": []
+    }
+  }
+}

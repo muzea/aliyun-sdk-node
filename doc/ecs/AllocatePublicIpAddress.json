@@ -1,0 +1,69 @@
+{
+  "name": "AllocatePublicIpAddress",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AllocatePublicIpAddress为一台ECS实例分配一个公网IP地址。",
+  "abc_id": 25544,
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "i-instance1",
+      "description_cn": "需要分配IP地址的实例ID。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。"
+    },
+    "IpAddress": {
+      "name": "IpAddress",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10.1.***.159",
+      "description_cn": "实例的公网IP地址。"
+    },
+    "VlanId": {
+      "name": "VlanId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "100",
+      "description_cn": "VLAN ID。"
+    }
+  },
+  "res": {
+    "RequestId": "F2EF6A3B-E345-46B9-931E-0EA094818567",
+    "IpAddress": "10.1.149.159"
+  }
+}

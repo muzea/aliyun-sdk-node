@@ -1,0 +1,136 @@
+{
+  "name": "CreateSslVpnServer",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateSslVpnServer接口创建SSL-VPN服务端。",
+  "abc_id": 65139,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "VPN网关所在的地域。 \n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "VpnGatewayId": {
+      "name": "VpnGatewayId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "vpn-bp1hgim8by0kc9nga5lg3",
+      "description_cn": " VPN网关的ID。 "
+    },
+    "ClientIpPool": {
+      "name": "ClientIpPool",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "192.168.1.0/24",
+      "description_cn": "是给客户端虚拟网卡分配访问地址的的地址段，不是指客户端已有的内网网段。\n\n当客户端通过SSL-VPN连接访问本端时，VPN网关会从指定的客户端网段中分配一个IP地址给客户端使用。\n\n该网段不能与**LocalSubnet**地址段冲突。"
+    },
+    "LocalSubnet": {
+      "name": "LocalSubnet",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "10.0.0.0/8",
+      "description_cn": "是客户端通过SSL-VPN连接要访问的地址段。\n\n本端网段可以是VPC的网段、交换机的网段、通过专线和VPC互连的IDC的网段、云服务如RDS/OSS等的网段。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "02fb3da4-130e-11e9-8e44-0016e04115b",
+      "description_cn": "客户端token，用于保证请求的幂等性。\n\n由客户端生成该参数值，要保证在不同请求间唯一，最大不值过64个 ASCII 字符。"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sslvpnname",
+      "description_cn": "SSL-VPN服务端的名称。  长度为 2-128个字符，必须以字母或中文开头，可包含数字，点号（.），下划线（_）和短横线（-）。\n\n但不能以`http://` 或`https://`开头。  "
+    },
+    "Proto": {
+      "name": "Proto",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "UDP",
+      "description_cn": "SSL-VPN服务端所使用的协议。\n\n取值：**UDP（默认值） | TCP**"
+    },
+    "Cipher": {
+      "name": "Cipher",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "AES-128-CBC",
+      "description_cn": "SSL-VPN使用的加密算法。取值：\n\n** AES-128-CBC（默认值） |AES-192-CBC | AES-256-CBC | none **"
+    },
+    "Port": {
+      "name": "Port",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1194",
+      "description_cn": " SSL-VPN服务端所使用的端口，默认值为1194。 不能用使用以下端口:\n\n22, 2222, 22222, 9000, 9001, 9002, 7505, 80, 443, 53, 68, 123, 4510, 4560, 500, 4500"
+    },
+    "Compress": {
+      "name": "Compress",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否压缩。"
+    }
+  },
+  "res": {
+    "RequestId": "E98A9651-7098-40C7-8F85-C818D1EBBA85",
+    "SslVpnServerId": "vss-bp18q7hzj6largv4vk2fe",
+    "Name": "test"
+  }
+}

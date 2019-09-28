@@ -1,0 +1,62 @@
+{
+  "name": "DescribeCloudAssistantStatus",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCloudAssistantStatus查询一台或者多台实例是否安装了云助手客户端。",
+  "abc_id": 87346,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例所在地域ID。您可以调用 [DescribeRegions](~~25609~~) 查看最新的阿里云地域列表。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "hide"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。 "
+    }
+  },
+  "res": {
+    "InstanceCloudAssitantStatus": {
+      "InstanceCloudAssitantStatusSet": [
+        {
+          "InstanceId": "i-bp11f7trr4hbi1xxxxxx",
+          "CloudAssitantStatus": "True"
+        },
+        {
+          "InstanceId": "i-bp1iudwa5b1tqaxxxxxx",
+          "CloudAssitantStatus": "True"
+        }
+      ]
+    }
+  }
+}

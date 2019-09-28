@@ -1,0 +1,73 @@
+{
+  "name": "DescribePkgVersions",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v1/wam/pkgVersion",
+  "summary_cn": "调用DescribePkgVersions查询部署包版本。",
+  "abc_id": 127785,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "wa-5d1d9d8c85c7f86**********",
+      "description_cn": "应用ID，表示部署包版本所在的应用"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "查询页面数"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "查询页面大小"
+    },
+    "PkgVersionLabel": {
+      "name": "PkgVersionLabel",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "version-demo-tmc-1.4",
+      "description_cn": "部署包版本标签"
+    },
+    "PkgVersionSearch": {
+      "name": "PkgVersionSearch",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "tmc",
+      "description_cn": "部署包版本标签搜索关键字，将返回含有此关键字的部署包版本"
+    }
+  },
+  "res": {}
+}

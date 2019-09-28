@@ -1,0 +1,78 @@
+{
+  "name": "SetupDrdsParams",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "ParamLevel": {
+      "name": "ParamLevel",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "Data": {
+      "name": "Data",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "ParamVariableName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ParamValue",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "DbName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ParamType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ParamRanges",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "DrdsInstanceId": {
+      "name": "DrdsInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    }
+  },
+  "res": {}
+}

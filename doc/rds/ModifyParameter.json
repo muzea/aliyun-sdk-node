@@ -1,0 +1,82 @@
+{
+  "name": "ModifyParameter",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyParameter接口修改实例参数。",
+  "abc_id": 26286,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "Parameters": {
+      "name": "Parameters",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "{\"delayed_insert_timeout\":\"600\",\"max_length_for_sort_data\":\"2048\"}",
+      "description_cn": "参数及其值的JSON串，参数的值都是字符串类型。格式：{\"参数名称1\":\"参数值1\",\"参数名称2\":\"参数值2\"...}\n"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ETnLKlblzczshOTUbOCzxxxxxxxxxx",
+      "description_cn": "用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。"
+    },
+    "Forcerestart": {
+      "name": "Forcerestart",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "修改参数是否重启数据库，取值：\n* **true**：强制重启（若修改的参数当中，有需要重启的参数，则必须传入true，否则修改将不生效）。\n* **false**：不强制重启。\n\n默认值：**false**。"
+    },
+    "ParameterGroupId": {
+      "name": "ParameterGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "542BB8D6-4268-45CC-A557-B03EFD7AB30A"
+  }
+}

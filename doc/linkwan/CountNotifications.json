@@ -1,0 +1,64 @@
+{
+  "name": "CountNotifications",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CountNotifications统计符合过滤条件的通知数量。",
+  "abc_id": 109970,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "地域ID。"
+    },
+    "Category": {
+      "name": "Category",
+      "type": "RepeatList",
+      "position": "Body",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "HandleState": {
+      "name": "HandleState",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "UNHANDLED",
+      "description_cn": "根据通知处理状态过滤，传null值则不过滤处理状态。"
+    },
+    "BeginMillis": {
+      "name": "BeginMillis",
+      "type": "Long",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1514736000000",
+      "description_cn": "查询开始时间，毫秒为单位的 UNIX 时间戳。"
+    },
+    "EndMillis": {
+      "name": "EndMillis",
+      "type": "Long",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1514736000000",
+      "description_cn": "查询结束时间，毫秒为单位的 UNIX 时间戳。"
+    }
+  },
+  "res": {}
+}

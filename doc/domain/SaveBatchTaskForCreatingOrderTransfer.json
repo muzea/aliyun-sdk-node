@@ -1,0 +1,114 @@
+{
+  "name": "SaveBatchTaskForCreatingOrderTransfer",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": null,
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OrderTransferParam": {
+      "name": "OrderTransferParam",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "DomainName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "AuthorizationCode",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "RegistrantProfileId",
+          "type": "Long",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "PermitPremiumTransfer",
+          "type": "Boolean",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "127.0.0.1",
+      "description_cn": "用户ip"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "接口返回错误信息语言，枚举值范围：zh 中文；en 英文。默认为en。"
+    },
+    "CouponNo": {
+      "name": "CouponNo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "UseCoupon": {
+      "name": "UseCoupon",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "PromotionNo": {
+      "name": "PromotionNo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "UsePromotion": {
+      "name": "UsePromotion",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "TaskNo": "939b6918-be3b-4c4f-b949-93553da52dca",
+    "RequestId": "492D1868-1384-4219-8F8B-7EB44534A72A"
+  }
+}

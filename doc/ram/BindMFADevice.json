@@ -1,0 +1,60 @@
+{
+  "name": "BindMFADevice",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用BindMFADevice接口绑定多因素认证设备。",
+  "abc_id": 28696,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SerialNumber": {
+      "name": "SerialNumber",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "acs:ram::123456789012****:mfa/device002",
+      "description_cn": "指定多因素认证设备的序列号。"
+    },
+    "UserName": {
+      "name": "UserName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "zhangq****",
+      "description_cn": "指定用户名。"
+    },
+    "AuthenticationCode1": {
+      "name": "AuthenticationCode1",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "11****",
+      "description_cn": "验证第一组动态密码。"
+    },
+    "AuthenticationCode2": {
+      "name": "AuthenticationCode2",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "33****",
+      "description_cn": "验证第二组动态密码。"
+    }
+  },
+  "res": {
+    "RequestId": "04F0F334-1335-436C-A1D7-6C044FE73368"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "DescribeEnsRegions",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": null,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Version": {
+      "name": "Version",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true
+    },
+    "EnsRegionId": {
+      "name": "EnsRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    }
+  },
+  "res": {}
+}

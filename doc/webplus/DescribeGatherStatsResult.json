@@ -1,0 +1,29 @@
+{
+  "name": "DescribeGatherStatsResult",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v1/wam/appEnv/gatherStats",
+  "summary_cn": "调用DescribeGatherStatsResult查询一个收集诊断的变更信息。",
+  "abc_id": 128026,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ChangeId": {
+      "name": "ChangeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "wc-5d4134b956fd7c14ac91*****",
+      "description_cn": "变更ID，将查询此变更ID对应的诊断结果信息"
+    }
+  },
+  "res": {}
+}

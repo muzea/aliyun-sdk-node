@@ -1,0 +1,97 @@
+{
+  "name": "CreateUisNetworkInterface",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "CreateUisNetworkInterface",
+  "abc_id": 110329,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "UisNodeId": {
+      "name": "UisNodeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "UISNODE-xxxdc9wyfmpf0tik5eyik",
+      "description_cn": "指定弹性网卡绑定的Uis节点ID"
+    },
+    "VswitchId": {
+      "name": "VswitchId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "vsw-m5e1caexsmph0og6lis8h",
+      "description_cn": "指定弹性网卡所在的VswitchID"
+    },
+    "SecurityGroupId": {
+      "name": "SecurityGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "sg-m5eiigbzenfqcpdt6nvi",
+      "description_cn": "指定弹性网卡绑定的安全组ID"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "IpAddress": {
+      "name": "IpAddress",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "192.168.199.199",
+      "description_cn": "指定弹性网卡的私网IP"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "TestUisENI",
+      "description_cn": "指定弹性网卡的名称"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ENI for test",
+      "description_cn": "指定弹性网卡的描述信息"
+    }
+  },
+  "res": {
+    "UisEniId": "UISENI-xxxlcfij8zpkp17g1r9ry",
+    "RequestId": "1736145F-B482-47E4-8BBF-7EEC38CC800B"
+  }
+}

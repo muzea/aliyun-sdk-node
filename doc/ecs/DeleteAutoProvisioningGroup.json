@@ -1,0 +1,53 @@
+{
+  "name": "DeleteAutoProvisioningGroup",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteAutoProvisioningGroup接口删除一个弹性供应组。",
+  "abc_id": 122740,
+  "timeout": 8000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "弹性供应组所在地域的ID。"
+    },
+    "AutoProvisioningGroupId": {
+      "name": "AutoProvisioningGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "apg-uf6jel2bbl62wh13****",
+      "description_cn": "弹性供应组的ID。"
+    },
+    "TerminateInstances": {
+      "name": "TerminateInstances",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "删除弹性供应组时是否释放组内实例，可选值：\n\n- **true**：释放组内实例。\n- **false**：组内实例继续运行。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456"
+    }
+  },
+  "res": {
+    "RequestId": "B48A12CD-1295-4A38-A8F0-0E92C937****"
+  }
+}

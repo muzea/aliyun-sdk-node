@@ -1,0 +1,108 @@
+{
+  "name": "DescribeCenAttachedChildInstances",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCenAttachedChildInstances查看云企业网实例下已加载的网络实例。",
+  "abc_id": 65908,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CenId": {
+      "name": "CenId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cen-7qthudw0ll6jmcx****",
+      "description_cn": " 指定云企业网实例的ID。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": " 列表的页码，默认值为**1**。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": " 分页查询时每页的行数，最大值为**50**，默认值为**10**。  "
+    },
+    "ChildInstanceType": {
+      "name": "ChildInstanceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "VPC",
+      "description_cn": "加载的网络实例类型，取值：\n\n- **VPC**。\n\n- **VBR**。\n\n- **CCN**。"
+    },
+    "ChildInstanceRegionId": {
+      "name": "ChildInstanceRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "us-west-1",
+      "description_cn": "网络实例的所属地域。"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "ChildInstances": {
+      "ChildInstance": [
+        {
+          "Status": "Attached",
+          "ChildInstanceOwnerId": "123456789",
+          "ChildInstanceId": "vpc-hp3kz27b1uv9hsmm9****",
+          "ChildInstanceRegionId": "cn-huhehaote",
+          "CenId": "cen-kojok19x3j0q6k****",
+          "ChildInstanceType": "VPC"
+        },
+        {
+          "Status": "Attached",
+          "ChildInstanceOwnerId": "123456789",
+          "ChildInstanceId": "vpc-gw85r5kr8urw957sz****",
+          "ChildInstanceRegionId": "eu-central-1",
+          "CenId": "cen-kojok19x3j0q6k****",
+          "ChildInstanceType": "VPC"
+        }
+      ]
+    },
+    "TotalCount": 3,
+    "PageSize": 10,
+    "RequestId": "50F8E0AB-A225-41C0-AC88-FFB51A4F5C72"
+  }
+}

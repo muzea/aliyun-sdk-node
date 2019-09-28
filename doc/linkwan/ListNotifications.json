@@ -1,0 +1,104 @@
+{
+  "name": "ListNotifications",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ListNotifications获取通知列表。",
+  "abc_id": 109971,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Offset": {
+      "name": "Offset",
+      "type": "Long",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "0",
+      "description_cn": "查询的起始位置，从 0 开始的偏移。"
+    },
+    "Limit": {
+      "name": "Limit",
+      "type": "Long",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2",
+      "description_cn": "查询的通知数量上限，大于等于 1。"
+    },
+    "Category": {
+      "name": "Category",
+      "type": "RepeatList",
+      "position": "Body",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "HandleState": {
+      "name": "HandleState",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "HANDLED",
+      "description_cn": "根据通知处理状态过滤，传 null 则不过滤处理状态。"
+    },
+    "BeginMillis": {
+      "name": "BeginMillis",
+      "type": "Long",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1514736000000",
+      "description_cn": "时间查询，毫秒为单位的 UNIX 时间戳。"
+    },
+    "EndMillis": {
+      "name": "EndMillis",
+      "type": "Long",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1514736000000",
+      "description_cn": "时间查询，毫秒为单位的 UNIX 时间戳。"
+    },
+    "SortingField": {
+      "name": "SortingField",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "NOTICE_MILLIS",
+      "description_cn": "排序字段，可取值为**NOTICE_MILLIS**(按照通知发生时间排序)。"
+    },
+    "Ascending": {
+      "name": "Ascending",
+      "type": "Boolean",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "配合SortingField参数一起使用，**true**表示升序，**false**表示降序。"
+    }
+  },
+  "res": {}
+}

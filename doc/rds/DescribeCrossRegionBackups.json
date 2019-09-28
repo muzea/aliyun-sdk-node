@@ -1,0 +1,146 @@
+{
+  "name": "DescribeCrossRegionBackups",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCrossRegionBackups接口查看某RDS实例跨地域数据备份文件列表。",
+  "abc_id": 121733,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例所在地域ID。"
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "rm-uf6wjk5xxxxxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "CrossBackupRegion": {
+      "name": "CrossBackupRegion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "跨地域备份目的地域ID。"
+    },
+    "CrossBackupId": {
+      "name": "CrossBackupId",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "14562",
+      "description_cn": "跨地域备份文件ID。\n>**CrossBackupId**和起止时间参数（**StartTime**、**EndTime**）必须传入其中一组。"
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2019-05-30T12:10Z",
+      "description_cn": "查询开始时间。格式：<i>yyyy-MM-dd</i>T<i>HH:mm</i>Z（UTC时间）。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2019-06-15T12:10Z",
+      "description_cn": "查询结束时间。格式：<i>yyyy-MM-dd</i>T<i>HH:mm</i>Z（UTC时间）。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "每页记录数，取值：\n\n* **30**；\n* **50**；\n* **100**。\n\n默认值：30。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页码，取值：大于0且不超过Integer的最大值。\n\n默认值：**1**。"
+    }
+  },
+  "res": {
+    "Items": {
+      "Item": [
+        {
+          "CrossBackupSetFile": "cn-hangzhou_rm-bpxxxxx_hins798xxxx_data_20190611125201.tar.gz",
+          "BackupSetScale": 0,
+          "BackupType": "F",
+          "InstanceId": 7980000,
+          "CrossBackupId": 14358,
+          "BackupEndTime": "2019-06-11T04:55:02Z",
+          "BackupMethod": "P",
+          "CrossBackupSetLocation": "oss",
+          "CrossBackupSetSize": 2179643,
+          "Engine": "mysql",
+          "BackupStartTime": "2019-06-11T04:52:46Z",
+          "CrossBackupDownloadLink": "http://rdsddrbak-zb.oss-cn-zhangjiakou.aliyuncs.com/cn-hangzhou_rm-bpxxxxx_hins7986073_data_20190611125201.tar.gz?OSSAccessKeyId=LTAxxxxx&Expires=1560501641&Signature=laK0kxxxxx%3D",
+          "Category": "HighAvailability",
+          "CrossBackupRegion": "cn-zhangjiakou",
+          "RestoreRegions": {
+            "RestoreRegion": [
+              "cn-hangzhou",
+              "cn-zhangjiakou"
+            ]
+          },
+          "EngineVersion": "5.7",
+          "DBInstanceStorageType": "ssd"
+        }
+      ]
+    },
+    "TotalRecordCount": 1,
+    "PageNumber": 1,
+    "RequestId": "60912B41-7579-4B5D-B289-8856030F0A6A",
+    "RegionId": "cn-hangzhou",
+    "EndTime": "2019-06-11T08:00:00Z",
+    "StartTime": "2019-06-10T00:00:00Z",
+    "PageRecordCount": 30
+  }
+}

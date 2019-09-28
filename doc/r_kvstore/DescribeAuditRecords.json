@@ -1,0 +1,204 @@
+{
+  "name": "DescribeAuditRecords",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeAuditRecords查看Redis实例的审计日志。",
+  "abc_id": 113446,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2019-03-24T12:10:00Z",
+      "description_cn": "查询开始时间，格式：YYYY-MM-DDTHH:mm:ssZ。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2019-03-25T12:10:00Z",
+      "description_cn": "查询结束时间，必须晚于查询开始时间，格式：YYYY-MM-DDTHH:mm:ssZ。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "r-bp1xxxxxxxxxxxxx",
+      "description_cn": "需要查询的实例的ID。"
+    },
+    "NodeId": {
+      "name": "NodeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "r-bp1xxxxxxxxxxxxx-db-0",
+      "description_cn": "集群实例的子节点ID。"
+    },
+    "AccountName": {
+      "name": "AccountName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "demo",
+      "description_cn": "账号名称，默认为所有账号。"
+    },
+    "DatabaseName": {
+      "name": "DatabaseName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "demo",
+      "description_cn": "数据库名称。"
+    },
+    "QueryKeywords": {
+      "name": "QueryKeywords",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "maxclients",
+      "description_cn": "根据指定的命令查询审计日志，默认查询所有执行过的命令。\n\n> 只能传入单个关键词。"
+    },
+    "HostAddress": {
+      "name": "HostAddress",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "127.0.0.1",
+      "description_cn": "客户端IP，默认为显示所有地址。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "每页显示的最大记录数。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "当前显示的页码。"
+    }
+  },
+  "res": {
+    "Items": {
+      "SQL": [
+        {
+          "TotalExecutionTimes": "0",
+          "DatabaseName": "0",
+          "HostAddress": "127.0.0.1",
+          "ExecuteTime": "2019-03-25T03:22:08Z",
+          "SQLText": "CONFIG GET band-width",
+          "AccountName": "0",
+          "SQLType": "non_read_write"
+        },
+        {
+          "TotalExecutionTimes": "0",
+          "DatabaseName": "0",
+          "HostAddress": "127.0.0.1",
+          "ExecuteTime": "2019-03-25T03:22:08Z",
+          "SQLText": "CONFIG GET maxmemory",
+          "AccountName": "0",
+          "SQLType": "non_read_write"
+        },
+        {
+          "TotalExecutionTimes": "0",
+          "DatabaseName": "0",
+          "HostAddress": "127.0.0.1",
+          "ExecuteTime": "2019-03-25T03:22:08Z",
+          "SQLText": "CONFIG GET maxclients",
+          "AccountName": "0",
+          "SQLType": "non_read_write"
+        },
+        {
+          "TotalExecutionTimes": "0",
+          "DatabaseName": "0",
+          "HostAddress": "127.0.0.1",
+          "ExecuteTime": "2019-03-25T03:22:08Z",
+          "SQLText": "CONFIG GET qps",
+          "AccountName": "0",
+          "SQLType": "non_read_write"
+        },
+        {
+          "TotalExecutionTimes": "0",
+          "DatabaseName": "0",
+          "HostAddress": "127.0.0.1",
+          "ExecuteTime": "2019-03-25T03:22:03Z",
+          "SQLText": "CONFIG GET qps",
+          "AccountName": "0",
+          "SQLType": "non_read_write"
+        },
+        {
+          "TotalExecutionTimes": "0",
+          "DatabaseName": "0",
+          "HostAddress": "127.0.0.1",
+          "ExecuteTime": "2019-03-25T03:22:03Z",
+          "SQLText": "CONFIG GET maxclients",
+          "AccountName": "0",
+          "SQLType": "non_read_write"
+        },
+        {
+          "TotalExecutionTimes": "0",
+          "DatabaseName": "0",
+          "HostAddress": "127.0.0.1",
+          "ExecuteTime": "2019-03-25T03:22:03Z",
+          "SQLText": "CONFIG GET maxmemory",
+          "AccountName": "0",
+          "SQLType": "non_read_write"
+        }
+      ]
+    },
+    "TotalRecordCount": 36559,
+    "PageNumber": 1,
+    "PageSize": 30,
+    "RequestId": "9F5EB478-824E-4AC4-8D2B-58F31A028E7B",
+    "EndTime": "2019-03-25T12:10:00Z",
+    "StartTime": "2019-03-24T12:10:00Z",
+    "InstanceName": "r-bp1xxxxxxxxxxxxx"
+  }
+}

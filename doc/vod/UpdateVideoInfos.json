@@ -1,0 +1,41 @@
+{
+  "name": "UpdateVideoInfos",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用UpdateVideoInfos批量修改视频信息。",
+  "abc_id": 129670,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "UpdateContent": {
+      "name": "UpdateContent",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "[{\"VideoId\":\"f45cf4eba5c84d25b90233389558c39\",\"Title\":\"测试标题\",\"Description\":\"测试描述\",\"CoverURL\":\"http://sample.aliyun.com/sample.jpg\",\"CateId\":\"6163631\",\"Tags\":\"测试标签\"},{\"VideoId\":\"f45cf4eba5c84d25b90233389558c36\",\"Title\":\"测试标题\",\"Description\":\"测试描述\",\"CoverURL\":\"http://sample.aliyun.com/sample.jpg\",\"CateId\":\"6163631\",\"Tags\":\"测试标签\"}]",
+      "description_cn": "更新内容。一次最多支持修改20个视频的视频信息。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {}
+}

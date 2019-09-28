@@ -1,0 +1,236 @@
+{
+  "name": "DescribeDedicatedHosts",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDedicatedHosts查询一台或多台专有宿主机的详细信息，包括专有宿主机的物理性能指标、虚拟机器码、使用状态和已创建的ECS实例列表等。",
+  "abc_id": 93284,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "专有宿主机所属的地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-beijing"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ZoneId": {
+      "name": "ZoneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou-g",
+      "description_cn": "可用区ID。"
+    },
+    "DedicatedHostIds": {
+      "name": "DedicatedHostIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dh-xxxxxxxxxxxxxxxxx",
+      "description_cn": "专有宿主机ID列表。单次最多支持100个ID ，多个ID用一个格式类似[“dh- xxxxxxxxx”, “dh- yyyyyyyyy”, … “dh- zzzzzzzzz”]的JSON数组表示，ID之间用半角逗号（,）隔开。"
+    },
+    "DedicatedHostName": {
+      "name": "DedicatedHostName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "myDDH",
+      "description_cn": "专有宿主机的名称。"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Available",
+      "description_cn": "专有宿主机的使用状态。取值范围：\n\n- Available（默认）：可用状态。\n\n- Under-Assessment：故障潜伏期，专有宿主机可能会出故障。\n\n- Permanent-Failure：永久性故障，专有宿主机不可用。"
+    },
+    "DedicatedHostType": {
+      "name": "DedicatedHostType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ddh.g5",
+      "description_cn": "专有宿主机的规格类型。"
+    },
+    "LockReason": {
+      "name": "LockReason",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "financial"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "响应信息的页码数。\n\n默认值：1"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "响应信息的每页行数。最大值：100。\n\n默认值：10"
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rg-xxxxxxxxxxxxxxx",
+      "description_cn": ""
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "DedicatedHosts": {
+      "DedicatedHost": [
+        {
+          "DedicatedHostId": "dh-dedicatedhost1",
+          "ChargeType": "PostPaid",
+          "Description": "",
+          "ResourceGroupId": "",
+          "SupportInstanceTypeFamilies": {
+            "SupportInstanceTypeFamily": [
+              "ecs.se1ne"
+            ]
+          },
+          "Instances": {
+            "Instance": []
+          },
+          "Cores": 32,
+          "ZoneId": "cn-beijing-c",
+          "CreationTime": "2018-08-13T07:59Z",
+          "Sockets": 2,
+          "Status": "Available",
+          "DedicatedHostType": "ddh.se1ne",
+          "RegionId": "cn-beijing",
+          "DedicatedHostName": "ddh-1",
+          "SaleCycle": "",
+          "AutoReleaseTime": "",
+          "Capacity": {
+            "AvailableVcpus": 56,
+            "TotalMemory": 448,
+            "TotalVcpus": 56,
+            "AvailableLocalStorage": 0,
+            "TotalLocalStorage": 0,
+            "LocalStorageCategory": "",
+            "AvailableMemory": 448
+          },
+          "OperationLocks": {
+            "OperationLock": []
+          },
+          "MachineId": "xxxx",
+          "ExpiredTime": "2999-09-08T16:00Z"
+        },
+        {
+          "DedicatedHostId": "dh-dedicatedhost2",
+          "ChargeType": "PostPaid",
+          "Description": "",
+          "ResourceGroupId": "",
+          "SupportInstanceTypeFamilies": {
+            "SupportInstanceTypeFamily": [
+              "ecs.se1ne"
+            ]
+          },
+          "Instances": {
+            "Instance": []
+          },
+          "Cores": 32,
+          "ZoneId": "cn-beijing-c",
+          "CreationTime": "2018-08-13T07:59Z",
+          "Sockets": 2,
+          "Status": "Available",
+          "DedicatedHostType": "ddh.se1ne",
+          "RegionId": "cn-beijing",
+          "DedicatedHostName": "ddh-2",
+          "SaleCycle": "",
+          "AutoReleaseTime": "",
+          "Capacity": {
+            "AvailableVcpus": 56,
+            "TotalMemory": 448,
+            "TotalVcpus": 56,
+            "AvailableLocalStorage": 0,
+            "TotalLocalStorage": 0,
+            "LocalStorageCategory": "",
+            "AvailableMemory": 448
+          },
+          "OperationLocks": {
+            "OperationLock": []
+          },
+          "MachineId": "f9b97axxxxxxxxxxxxxxxxx",
+          "ExpiredTime": "2999-09-08T16:00Z"
+        }
+      ]
+    },
+    "TotalCount": 2,
+    "PageSize": 10,
+    "RequestId": "9D5CC4F5-921A-4E02-B971-0DAF703407BE"
+  }
+}

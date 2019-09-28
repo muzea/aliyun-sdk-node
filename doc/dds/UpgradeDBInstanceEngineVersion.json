@@ -1,0 +1,51 @@
+{
+  "name": "UpgradeDBInstanceEngineVersion",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用UpgradeDBInstanceEngineVersion接口升级MongoDB实例的数据库版本。",
+  "abc_id": 67608,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "EngineVersion": {
+      "name": "EngineVersion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "4.0",
+      "description_cn": "升级的目标数据库版本，取值：**3.4**、**4.0**。\n\n> 升级的目标数据库版本必须大于实例当前的数据库版本。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。"
+    }
+  },
+  "res": {
+    "RequestId": "C4907B00-A208-4E0C-A636-AA85140E406C"
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "name": "CheckCreateDdrDBInstance",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CheckCreateDdrDBInstance接口预检查某RDS实例是否可以用跨地域备份集进行跨地域恢复。",
+  "abc_id": 121721,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "目的实例地域ID，可以通过接口[DescribeRegions](~~26243~~)查看地域ID。"
+    },
+    "Engine": {
+      "name": "Engine",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "MySQL",
+      "description_cn": "目的数据库类型，取值：**MySQL**。\n>当前仅RDS for MySQL支持跨地域备份。"
+    },
+    "EngineVersion": {
+      "name": "EngineVersion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "5.6",
+      "description_cn": "目的数据库版本，取值：\n* **5.6**；\n* **5.7**。"
+    },
+    "DBInstanceClass": {
+      "name": "DBInstanceClass",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "rds.mysql.s1.small",
+      "description_cn": "目的实例规格，详见[实例规格表](~~26312~~)。"
+    },
+    "DBInstanceStorage": {
+      "name": "DBInstanceStorage",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "20",
+      "description_cn": "目的实例存储空间，取值： **5~2000**。\n每5G进行递增，单位：GB。详见[实例规格表](~~26312~~)。"
+    },
+    "RestoreType": {
+      "name": "RestoreType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "0",
+      "description_cn": "恢复方式，取值：\n* **0**：基于备份集恢复，您还需要传入参数**BackupSetID**；\n* **1**：基于时间点恢复，您还需要传入参数**RestoreTime**、**SourceRegion**、**SourceDBInstanceName**。\n\n默认值：**0**。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "",
+      "description_cn": ""
+    },
+    "BackupSetId": {
+      "name": "BackupSetId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "14358",
+      "description_cn": "基于备份集恢复时，使用的备份集的ID。可以通过接口[DescribeCrossRegionBackups](~~121733~~)查看备份集ID。\n>**RestoreTyp**e=**0**时必传。"
+    },
+    "BackupSetType": {
+      "name": "BackupSetType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "BackupSetRegion": {
+      "name": "BackupSetRegion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "RestoreTime": {
+      "name": "RestoreTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2019-05-30T03:29:10Z",
+      "description_cn": "基于时间点恢复时，要恢复的时间节点，需要早于当前时间。格式：<i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z（UTC时间）。\n>**RestoreType**=**1**时必传 。"
+    },
+    "SourceRegion": {
+      "name": "SourceRegion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "基于时间点恢复时，源地域的ID。\n>**RestoreType**=**1**时必传。"
+    },
+    "SourceDBInstanceName": {
+      "name": "SourceDBInstanceName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "基于时间点恢复时，源实例的ID。\n>**RestoreType**=**1**时必传。"
+    },
+    "UserBakSetURL": {
+      "name": "UserBakSetURL",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "BakSetName": {
+      "name": "BakSetName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "HostType": {
+      "name": "HostType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "IsValid": "true",
+    "RequestId": "346C62D7-8BB9-4516-93E7-25A469EAABCB"
+  }
+}

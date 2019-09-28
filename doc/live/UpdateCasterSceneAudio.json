@@ -1,0 +1,97 @@
+{
+  "name": "UpdateCasterSceneAudio",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用UpdateCasterSceneAudio更新场景音频配置。",
+  "abc_id": 94756,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "地域。"
+    },
+    "SceneId": {
+      "name": "SceneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "a2b8e671-2fe5-4642-a2ec-bf93880e19876",
+      "description_cn": "场景ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "CasterId": {
+      "name": "CasterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "a2b8e671-2fe5-4642-a2ec-bf93880e1a49",
+      "description_cn": "导播台ID。"
+    },
+    "FollowEnable": {
+      "name": "FollowEnable",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "是否启用音频跟随。 默认启用音频跟随，为空则保持最近一次配置不变。   \n\n- **0**：混音模式， \n- **1**：音频跟随视频模式"
+    },
+    "AudioLayer": {
+      "name": "AudioLayer",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "VolumeRate",
+          "type": "Float",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ValidChannel",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "FixedDelayDuration",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "MixList": {
+      "name": "MixList",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    }
+  },
+  "res": {}
+}

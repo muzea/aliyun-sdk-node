@@ -1,0 +1,42 @@
+{
+  "name": "DeleteMountTarget",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "DeleteMountTarget 用于删除已有挂载点。 ",
+  "abc_id": 62624,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "MountTargetDomain": {
+      "name": "MountTargetDomain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "174494b666-xog95.cn-hangzhou.nas.aliyuncs.com",
+      "description_cn": "挂载点域名"
+    },
+    "FileSystemId": {
+      "name": "FileSystemId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "174494b666",
+      "description_cn": "文件系统 ID"
+    }
+  },
+  "res": {}
+}

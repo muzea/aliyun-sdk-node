@@ -1,0 +1,33 @@
+{
+  "name": "GetGateway",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用GetGateway获取网关信息。",
+  "abc_id": 109911,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-shanghai",
+      "description_cn": "地域ID。"
+    },
+    "GwEui": {
+      "name": "GwEui",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "0000000000000000",
+      "description_cn": "网关唯一标识。"
+    }
+  },
+  "res": {}
+}

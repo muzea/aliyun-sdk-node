@@ -1,0 +1,75 @@
+{
+  "name": "DescribeCustomerGateways",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCustomerGateways接口查询已创建的用户网关。",
+  "abc_id": 53033,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "用户网关所在的地域。 \n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "CustomerGatewayId": {
+      "name": "CustomerGatewayId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpn-bp1q8bgx4xnkm2ogj****",
+      "description_cn": " 用户网关的ID。 "
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": " 列表的页码，默认值为**1**。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": " 分页查询时每页的行数，最大值为**50**，默认值为**10**。  "
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 1,
+    "PageSize": 10,
+    "RequestId": "E82612A9-CB90-4D7E-B394-1DB7F6509B29",
+    "CustomerGateways": {
+      "CustomerGateway": [
+        {
+          "Name": "test",
+          "CustomerGatewayId": "cgw-bp1pvpl9r9adju6l5nxck",
+          "CreateTime": 1492747187000,
+          "IpAddress": "139.196.32.xxx"
+        }
+      ]
+    }
+  }
+}

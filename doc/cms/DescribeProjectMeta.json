@@ -1,0 +1,87 @@
+{
+  "name": "DescribeProjectMeta",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询云监控支持的时序类监控项产品列表。",
+  "abc_id": 114916,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Labels": {
+      "name": "Labels",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[{\"groupFlag\":true}]",
+      "description_cn": "根据标签过滤，格式为`[{\"name\":\"标签名\",\"value\":\"标签值\"},{\"name\":\"标签名\",\"value\":\"标签值\"}]​`。\n\n支持的标签名包括product、groupFlag。\n\nproduct 标签值为产品英文名称。\n\ngroupFlag含义为该产品是否支持应用分组，标签值为true或false​ 。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "分页参数，默认1。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "分页大小，默认30"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "PageSize": 5,
+    "RequestId": "4C2061B2-3B1B-43BF-A4A4-C53426F479C0",
+    "Success": true,
+    "Code": 200,
+    "Total": 62,
+    "Resources": {
+      "Resource": [
+        {
+          "Description": "分析型数据库",
+          "Labels": "[{\"name\":\"product\",\"value\":\"ADS\"},{\"name\":\"productCategory\",\"value\":\"ads\"},{\"name\":\"groupFlag\",\"value\":\"true\"}]",
+          "Namespace": "acs_ads"
+        },
+        {
+          "Description": "智能推荐",
+          "Labels": "[{\"name\":\"product\",\"value\":\"AIRec\"},{\"name\":\"productCategory\",\"value\":\"airec\"},{\"name\":\"groupFlag\",\"value\":\"true\"}]",
+          "Namespace": "acs_airec"
+        },
+        {
+          "Description": "API网关",
+          "Labels": "[{\"name\":\"product\",\"value\":\"APIGateway\"},{\"name\":\"productCategory\",\"value\":\"apigateway\"},{\"name\":\"groupFlag\",\"value\":\"true\"}]",
+          "Namespace": "acs_apigateway_dashboard"
+        },
+        {
+          "Description": "CDN",
+          "Labels": "[{\"name\":\"product\",\"value\":\"CDN\"},{\"name\":\"productCategory\",\"value\":\"cdn\"},{\"name\":\"groupFlag\",\"value\":\"true\"}]",
+          "Namespace": "acs_cdn"
+        },
+        {
+          "Description": "云企业网",
+          "Labels": "[{\"name\":\"product\",\"value\":\"CEN\"},{\"name\":\"productCategory\",\"value\":\"cen,cen_flow,cen_vbr\"},{\"name\":\"groupFlag\",\"value\":\"true\"}]",
+          "Namespace": "acs_cen"
+        }
+      ]
+    }
+  }
+}

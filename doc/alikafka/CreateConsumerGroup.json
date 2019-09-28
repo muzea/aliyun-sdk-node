@@ -1,0 +1,45 @@
+{
+  "name": "CreateConsumerGroup",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/",
+  "summary_cn": "调用 CreateConsumerGroup 创建 Consumer Group。",
+  "abc_id": 94539,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域 ID。"
+    },
+    "ConsumerId": {
+      "name": "ConsumerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "consumer_group_test",
+      "description_cn": "Consumer Group 名称。\n\n- 只能包含字母、数字、短横线（-）、下划线（_）。\n- 长度限制在 **3-64** 个字符，多于 **64** 个字符将被自动截取。\n- 一旦创建后不能再修改。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "alikafka_pre-cn-0pp1954n****",
+      "description_cn": "实例 ID。可调用 [GetInstanceList](https://help.aliyun.com/document_detail/94533.html?spm=a2c4g.11186623.2.11.6efb754byCLl4z#concept-94533-zh) 获取。"
+    }
+  },
+  "res": {}
+}

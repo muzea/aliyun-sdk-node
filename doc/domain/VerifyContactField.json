@@ -1,0 +1,238 @@
+{
+  "name": "VerifyContactField",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": null,
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Province": {
+      "name": "Province",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Bei jing",
+      "description_cn": "省份"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "127.0.0.1",
+      "description_cn": "用户ip"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "接口返回信息的语言，枚举值范围：zh 中文；en 英文。默认为en\n"
+    },
+    "City": {
+      "name": "City",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Bei jing",
+      "description_cn": "城市"
+    },
+    "RegistrantOrganization": {
+      "name": "RegistrantOrganization",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "zhang san",
+      "description_cn": "持有者名称"
+    },
+    "Country": {
+      "name": "Country",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "CN",
+      "description_cn": "国家代码 如CN，US"
+    },
+    "RegistrantName": {
+      "name": "RegistrantName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "zhang san",
+      "description_cn": "联系人名称"
+    },
+    "Address": {
+      "name": "Address",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Rd. xitucheng",
+      "description_cn": "地址"
+    },
+    "Email": {
+      "name": "Email",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test@test.com",
+      "description_cn": "电子邮箱"
+    },
+    "PostalCode": {
+      "name": "PostalCode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10000",
+      "description_cn": "邮政编码"
+    },
+    "TelArea": {
+      "name": "TelArea",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "86",
+      "description_cn": "电话国家代码"
+    },
+    "Telephone": {
+      "name": "Telephone",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "13800000000",
+      "description_cn": "电话"
+    },
+    "TelExt": {
+      "name": "TelExt",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "01",
+      "description_cn": "分机号码"
+    },
+    "ZhRegistrantOrganization": {
+      "name": "ZhRegistrantOrganization",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "张三",
+      "description_cn": "中文持有者名称"
+    },
+    "ZhRegistrantName": {
+      "name": "ZhRegistrantName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "张三",
+      "description_cn": "中文联系人名称"
+    },
+    "ZhProvince": {
+      "name": "ZhProvince",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "北京",
+      "description_cn": "中文省份"
+    },
+    "ZhAddress": {
+      "name": "ZhAddress",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "西土城路",
+      "description_cn": "中文地址"
+    },
+    "ZhCity": {
+      "name": "ZhCity",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "北京市",
+      "description_cn": "中文城市"
+    },
+    "RegistrantType": {
+      "name": "RegistrantType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "注册者类型，取值范围：1 个人；2 企业"
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "ABAC3BAC-FCFA-4DAE-B47C-FA4105CB07C6"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "SaveSingleTaskForDisassociatingEns",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "提交解绑Ens地址任务",
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "test.luxe",
+      "description_cn": "域名"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "127.0.0.1",
+      "description_cn": "用户ip"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "接口返回错误信息语言，枚举值范围：zh 中文；en 英文。默认为en。"
+    }
+  },
+  "res": {
+    "RequestId": "E2598CAF-DBFE-494E-95EF-B42A33C178AA",
+    "TaskNo": "e893148f-6343-4ae1-9eba-6e2a4116e142"
+  }
+}

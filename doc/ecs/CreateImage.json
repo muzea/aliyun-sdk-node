@@ -1,0 +1,201 @@
+{
+  "name": "CreateImage",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateImage创建一份自定义镜像。您可以使用创建的自定义镜像创建ECS实例（RunInstances）或者更换实例的系统盘（ReplaceSystemDisk）。",
+  "abc_id": 25535,
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "镜像所在的地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "DiskDeviceMapping": {
+      "name": "DiskDeviceMapping",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Size",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "SnapshotId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Device",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "DiskType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "SnapshotId": {
+      "name": "SnapshotId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "s-snapshotid",
+      "description_cn": "根据指定的快照创建自定义镜像。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-instanceid",
+      "description_cn": "实例ID。"
+    },
+    "ImageName": {
+      "name": "ImageName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FinanceDeptJoshuaCentOS",
+      "description_cn": "镜像名称。长度为2~128个英文或中文字符。必须以大小字母或中文开头，不能以http://和https://开头。可以包含数字、半角冒号（:）、下划线（_）或者连字符（-）。\n\n默认值：空。 "
+    },
+    "ImageVersion": {
+      "name": "ImageVersion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2017011017",
+      "description_cn": ""
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FinanceDeptjoshua",
+      "description_cn": "镜像的描述信息。长度为2~256个英文或中文字符，不能以http://和https://开头。\n\n默认值：空。 "
+    },
+    "Platform": {
+      "name": "Platform",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "CentOS",
+      "description_cn": "指定数据盘快照做镜像的系统盘后，需要通过Platform确定系统盘的的操作系统发行版。取值范围：\n\n- CentOS\n- Ubuntu\n- SUSE\n- OpenSUSE\n- RedHat\n- Debian\n- CoreOS\n- Aliyun Linux\n- Windows Server 2003\n- Windows Server 2008\n- Windows Server 2012\n- Windows 7\n- Others Linux（默认）\n- Customized Linux"
+    },
+    "Architecture": {
+      "name": "Architecture",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "x86_64",
+      "description_cn": "指定数据盘快照做镜像的系统盘后，需要通过Architecture确定系统盘的系统架构。取值范围：\n\n- i386\n- x86_64（默认）"
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123e4567-e89b-12d3-a456-426655440000",
+      "description_cn": "保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。**ClientToken**只支持ASCII字符，且不能超过64个字符。更多详情，请参见[如何保证幂等性](~~25693~~)。"
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rg-resourcegroupid1",
+      "description_cn": "自定义镜像所在的企业资源组ID。"
+    }
+  },
+  "res": {
+    "RequestId": "C8B26B44-0189-443E-9816-D951F59623A9",
+    "ImageId": "m-63DFD5FB2"
+  }
+}

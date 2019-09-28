@@ -1,0 +1,105 @@
+{
+  "name": "DescribeCenRegionDomainRouteEntries",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCenRegionDomainRouteEntries查询云企业网实例中某个地域内路由条目的详细信息。",
+  "abc_id": 66009,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CenId": {
+      "name": "CenId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cen-7qthudw0ll6j****",
+      "description_cn": "指定待查询的云企业网实例的ID。"
+    },
+    "CenRegionId": {
+      "name": "CenRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "指定待查询的地域的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "111"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "列表的页码，默认值为**1**。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "分页查询时每页的行数，最大值为**50**，默认值为**10**。  "
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "111"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 2,
+    "PageSize": 10,
+    "RequestId": "73C834EF-82EF-4721-952E-75291F169A64",
+    "CenRouteEntries": {
+      "CenRouteEntry": [
+        {
+          "NextHopInstanceId": "vpc-m5ex5mr548eb5f6te****",
+          "Type": "CBN",
+          "NextHopRegionId": "cn-qingdao",
+          "NextHopType": "VPC",
+          "DestinationCidrBlock": "192.168.0.0/24"
+        },
+        {
+          "NextHopInstanceId": "vpc-rj9gt5nll27onu7wj****",
+          "Type": "CBN",
+          "NextHopRegionId": "us-west-1",
+          "NextHopType": "VPC",
+          "DestinationCidrBlock": "192.168.1.0/24"
+        }
+      ]
+    }
+  }
+}

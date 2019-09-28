@@ -1,0 +1,118 @@
+{
+  "name": "DescribeVpnGateways",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeVpnGateways接口查询已创建的VPN网关。",
+  "abc_id": 53020,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "VPN网关所在的地域。 \n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "VpcId": {
+      "name": "VpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc-bp1ub1yt9cvakoelj****",
+      "description_cn": " VPN网关所属VPC的ID。 "
+    },
+    "VpnGatewayId": {
+      "name": "VpnGatewayId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpn-bp1q8bgx4xnkm2ogj****",
+      "description_cn": "VPN网关的ID。"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "init",
+      "description_cn": "VPN网关的状态，取值：\n\n- **init** \n\n- **provisioning** \n\n- **active** \n\n- **updating** \n\n- **deleting** \n"
+    },
+    "BusinessStatus": {
+      "name": "BusinessStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Normal",
+      "description_cn": "VPN网关的付费状态。\n\n取值： **Normal | FinancialLocked **"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": " 列表的页码，默认值为**1**。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": " 分页查询时每页的行数，最大值为**50**，默认值为**10**。  "
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 1,
+    "VpnGateways": {
+      "VpnGateway": [
+        {
+          "Status": "active",
+          "VpnGatewayId": "vpn-bp1q8bgx4xnkm2ogj0fiu",
+          "BusinessStatus": "Normal",
+          "Spec": "5M",
+          "CreateTime": 1492753580000,
+          "InternetIp": "116.62.69.xxx",
+          "EndTime": 1495382400000,
+          "VSwitchId": "vsw-bp1y9ovl1cu9ou4tvma0l",
+          "VpcId": "vpc-bp1ub1yt9cvakoelj1y9c"
+        }
+      ]
+    },
+    "PageSize": 10,
+    "RequestId": "B2CD1315-CA2B-47B1-9DA5-8F1D69C48E82"
+  }
+}

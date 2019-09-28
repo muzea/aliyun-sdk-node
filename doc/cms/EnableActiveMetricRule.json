@@ -1,0 +1,34 @@
+{
+  "name": "EnableActiveMetricRule",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "启用一键报警产品。",
+  "abc_id": 114931,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Product": {
+      "name": "Product",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ecs",
+      "description_cn": "目前支持一键告警的产品：\n\n* ecs (云服务器 ECS)\n* rds (云数据库RDS版)\n* slb (负载均衡)\n* redis_standard (云数据库Redis标准版)\n* redis_sharding (云数据库Redis集群版)\n* redis_splitrw (云数据库Redis读写分离版)\n* mongodb (云数据库MongoDB版(副本集))\n* mongodb_sharding (云数据库MongoDB版(分片集群))\n* hbase (云数据库HBase版)\n* elasticsearch (Elasticsearch)\n* opensearch (OpenSearch)"
+    }
+  },
+  "res": {
+    "Code": "200",
+    "Success": true,
+    "Message": "success",
+    "RequestId": "55850888-9CCE-4FD5-B949-5F8947D63929"
+  }
+}

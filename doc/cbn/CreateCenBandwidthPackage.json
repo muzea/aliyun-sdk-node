@@ -1,0 +1,142 @@
+{
+  "name": "CreateCenBandwidthPackage",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateCenBandwidthPackage创建带宽包。",
+  "abc_id": 65919,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Bandwidth": {
+      "name": "Bandwidth",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2",
+      "description_cn": "带宽包的带宽峰值，单位为Mbps，最小值为**2**。 "
+    },
+    "GeographicRegionAId": {
+      "name": "GeographicRegionAId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "China ",
+      "description_cn": "网络实例所属的区域，取值：\n\n**China | North-America | Asia-Pacific | Europe | Australia**。"
+    },
+    "GeographicRegionBId": {
+      "name": "GeographicRegionBId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "China ",
+      "description_cn": "网络实例所属的区域，取值：\n\n**China | North-America | Asia-Pacific | Europe | Australia**。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "SSJFLAFHHFHFF-SJSJJFBWHHE-SHHFJJDBD",
+      "description_cn": "客户端token，用于保证请求的幂等性。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符。 "
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cen",
+      "description_cn": "带宽包的名称。长度为2~128个字符，必须以字母或中文开头，可包含数字、点号（.）、下划线（_）和短横线（-），但不能以`http://`或`https://`开头。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "带宽包",
+      "description_cn": "带宽包描述。"
+    },
+    "BandwidthPackageChargeType": {
+      "name": "BandwidthPackageChargeType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PREPAY",
+      "description_cn": "带宽包的付费类型，取值： \n\n- **POSTPAY**：后付费。\n\n- **PREPAY**：预付费。\n\n> 国际站仅支持预付费。 \n"
+    },
+    "Period": {
+      "name": "Period",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "带宽包的购买时长，默认值为**1**。 "
+    },
+    "PricingCycle": {
+      "name": "PricingCycle",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Month",
+      "description_cn": "带宽包的计费周期，取值：\n\n- **Month**（默认值）：按月计费。\n\n- **Year**：按年计费。"
+    },
+    "AutoPay": {
+      "name": "AutoPay",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否自动支付账单，取值：\n\n- **true**：自动支付。\n\n- **false**（默认值）：不自动支付。\n\n"
+    }
+  },
+  "res": {
+    "RequestId": "E4B345CD-2CBA-4881-AF6D-E5D9BAE1CA7B",
+    "CenBandwidthPackageOrderId": "201564200040390",
+    "CenBandwidthPackageId": "Cenbwp-stb2axpqzzko2j****"
+  }
+}

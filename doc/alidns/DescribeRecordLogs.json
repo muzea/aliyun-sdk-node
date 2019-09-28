@@ -1,0 +1,129 @@
+{
+  "name": "DescribeRecordLogs",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeRecordLogs根据传入参数获取域名的解析操作日志。",
+  "abc_id": 29780,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "example.com",
+      "description_cn": "域名名称。"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "语言。"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": "用户端IP。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "当前页数，起始值为**1**，默认为**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "分页查询时设置的每页行数，最大值**100**，默认为**20**。"
+    },
+    "KeyWord": {
+      "name": "KeyWord",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "关键字，按照“%KeyWord%”模式搜索，不区分大小写。"
+    },
+    "StartDate": {
+      "name": "StartDate",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2015-12-12T09:23Z",
+      "description_cn": "查询的开始时间，格式：**YYYY-MM-DD**。"
+    },
+    "endDate": {
+      "name": "endDate",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2015-12-12T09:23Z",
+      "description_cn": "查询的结束时间，格式：**YYYY-MM-DD**。"
+    }
+  },
+  "res": {
+    "DescribeRecordLogsResponse": {
+      "RequestId": "536E9CAD-DB30-4647-AC87-AA5CC38C5382",
+      "TotalCount": "2",
+      "PageNumber": "1",
+      "PageSize": "2",
+      "RecordLogs": {
+        "RecordLog": [
+          {
+            "ActionTime": "2015-12-12T09:23Z",
+            "Action": "暂停解析记录",
+            "Message": "MX记录 mail 默认 xxxx.top. ( TTL: 600)",
+            "ClientIp": "182.92.253.20"
+          },
+          {
+            "ActionTime": "2015-12-12T09:23Z",
+            "Action": "新增解析记录",
+            "Message": "MX记录 mail 默认 xxxx.top. ( TTL: 600)",
+            "ClientIp": "182.92.253.20"
+          }
+        ]
+      }
+    }
+  }
+}

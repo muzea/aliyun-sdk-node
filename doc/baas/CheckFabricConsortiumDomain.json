@@ -1,0 +1,42 @@
+{
+  "name": "CheckFabricConsortiumDomain",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "调用CheckFabricConsortiumDomain检查联盟域名是否可用。",
+  "abc_id": 127857,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域。"
+    },
+    "DomainCode": {
+      "name": "DomainCode",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "bank",
+      "description_cn": "联盟域名。"
+    }
+  },
+  "res": {
+    "Result": {
+      "Prompt": "OK",
+      "Domain": "bank",
+      "Valid": true
+    },
+    "RequestId": "8F80A214-89FC-4348-9B3F-15446B3DC1FA",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

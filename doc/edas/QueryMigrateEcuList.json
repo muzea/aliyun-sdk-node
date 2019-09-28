@@ -1,0 +1,25 @@
+{
+  "name": "QueryMigrateEcuList",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v5/resource/migrate_ecu_list",
+  "timeout": 2000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "LogicalRegionId": {
+      "name": "LogicalRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

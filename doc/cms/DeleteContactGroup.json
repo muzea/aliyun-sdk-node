@@ -1,0 +1,33 @@
+{
+  "name": "DeleteContactGroup",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "删除报警联系人组。",
+  "abc_id": 114921,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ContactGroupName": {
+      "name": "ContactGroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "我的报警组",
+      "description_cn": "报警联系组名称。"
+    }
+  },
+  "res": {
+    "RequestId": "F722BE59-2400-4A64-9C1A-AD886AED9A69",
+    "Success": true,
+    "Code": "200"
+  }
+}

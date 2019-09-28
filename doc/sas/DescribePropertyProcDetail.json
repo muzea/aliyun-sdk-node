@@ -1,0 +1,127 @@
+{
+  "name": "DescribePropertyProcDetail",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用该接口获取进程列表中一个进程的详细信息。",
+  "abc_id": 130985,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Remark": {
+      "name": "Remark",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0.0.0.0",
+      "description_cn": "服务器名称或IP。"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "8888",
+      "description_cn": "指定待查询进程名称。"
+    },
+    "User": {
+      "name": "User",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "root",
+      "description_cn": "指定待查询运行用户信息。"
+    },
+    "Cmdline": {
+      "name": "Cmdline",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "./8888",
+      "description_cn": "指定待查询启动参数。"
+    },
+    "Uuid": {
+      "name": "Uuid",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "c4678332-ef35-4ad4-8358-681ebbc0ccab",
+      "description_cn": "指定待查询的资产UUID。"
+    },
+    "CurrentPage": {
+      "name": "CurrentPage",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "指定返回结果的当前页码。 "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "5",
+      "description_cn": "指定列表每页显示数据条数。"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "PageInfo": {
+        "Count": 1,
+        "PageSize": 5,
+        "TotalCount": 1,
+        "CurrentPage": 1
+      },
+      "Propertys": [
+        {
+          "InstanceName": null,
+          "Pname": "startWebLogic.s",
+          "Euidname": "root",
+          "Ip": null,
+          "Pid": "12826",
+          "Uuid": "c4678332-ef35-4ad4-8358-681ebbc0ccab",
+          "Path": "/root/Oracle/Middleware/user_projects/domains/base_domain/8888",
+          "Cmdline": "./8888",
+          "Name": "8888",
+          "Create": 1565686951000,
+          "StartTime": "2019-08-07 10:09:05",
+          "User": "root",
+          "Md5": "N/A"
+        }
+      ]
+    },
+    "success": true,
+    "requestId": null,
+    "message": "successful"
+  }
+}

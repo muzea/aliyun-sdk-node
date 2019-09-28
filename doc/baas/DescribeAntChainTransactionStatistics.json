@@ -1,0 +1,120 @@
+{
+  "name": "DescribeAntChainTransactionStatistics",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|PUT|GET|TRACE|DELETE|HEAD",
+  "path": "/",
+  "summary_cn": "查询一条蚂蚁区块链的交易统计信息",
+  "abc_id": 127163,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID"
+    },
+    "Start": {
+      "name": "Start",
+      "type": "Long",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1563206400000",
+      "description_cn": "统计开始时间"
+    },
+    "End": {
+      "name": "End",
+      "type": "Long",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1563897600000",
+      "description_cn": "统计结束时间"
+    },
+    "AntChainId": {
+      "name": "AntChainId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "pYogqb9v",
+      "description_cn": "区块链ID"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "E93884AC-6C21-4FEA-8E3A-7377D33B194F",
+      "Result": [
+        {
+          "Dt": "2019-07-16",
+          "AntChainId": "pYogqb9v",
+          "CreatTime": 1563294007000,
+          "TransCount": 0,
+          "LastSumBlockHeight": 148018
+        },
+        {
+          "Dt": "2019-07-17",
+          "AntChainId": "pYogqb9v",
+          "CreatTime": 1563380401000,
+          "TransCount": 1,
+          "LastSumBlockHeight": 176768
+        },
+        {
+          "Dt": "2019-07-18",
+          "AntChainId": "pYogqb9v",
+          "CreatTime": 1563466809000,
+          "TransCount": 0,
+          "LastSumBlockHeight": 205517
+        },
+        {
+          "Dt": "2019-07-19",
+          "AntChainId": "pYogqb9v",
+          "CreatTime": 1563553209000,
+          "TransCount": 0,
+          "LastSumBlockHeight": 234268
+        },
+        {
+          "Dt": "2019-07-20",
+          "AntChainId": "pYogqb9v",
+          "CreatTime": 1563639601000,
+          "TransCount": 0,
+          "LastSumBlockHeight": 263020
+        },
+        {
+          "Dt": "2019-07-21",
+          "AntChainId": "pYogqb9v",
+          "CreatTime": 1563726001000,
+          "TransCount": 0,
+          "LastSumBlockHeight": 291772
+        },
+        {
+          "Dt": "2019-07-22",
+          "AntChainId": "pYogqb9v",
+          "CreatTime": 1563812401000,
+          "TransCount": 1,
+          "LastSumBlockHeight": 320523
+        },
+        {
+          "Dt": "2019-07-23",
+          "AntChainId": "pYogqb9v",
+          "CreatTime": 1563898810000,
+          "TransCount": 26,
+          "LastSumBlockHeight": 349284
+        }
+      ]
+    },
+    "requestId": "E93884AC-6C21-4FEA-8E3A-7377D33B194F",
+    "successResponse": true
+  }
+}

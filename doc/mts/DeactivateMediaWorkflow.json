@@ -1,0 +1,24 @@
+{
+  "name": "DeactivateMediaWorkflow",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": null,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false
+    },
+    "MediaWorkflowId": {
+      "name": "MediaWorkflowId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true
+    }
+  },
+  "res": {}
+}

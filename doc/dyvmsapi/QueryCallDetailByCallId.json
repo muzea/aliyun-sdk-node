@@ -1,0 +1,63 @@
+{
+  "name": "QueryCallDetailByCallId",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用接口QueryCallDetailByCallId查询指定通话的呼叫详情。",
+  "abc_id": 114046,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CallId": {
+      "name": "CallId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "116014888060^102816313060",
+      "description_cn": "通话的唯一识别ID。调用其他外呼接口发起通话后，返回参数中会携带**CallId**。"
+    },
+    "ProdId": {
+      "name": "ProdId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "11000000300006",
+      "description_cn": "产品ID。\n- **11000000300006**：语音通知。\n- **11010000138001**：语音验证码。\n- **11000000300005**：IVR。\n- **11000000300004**：点击拨号。\n- **11000000300009**：SIP。\n- **11030000180001**：智能外呼。"
+    },
+    "QueryDate": {
+      "name": "QueryDate",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "1553774465",
+      "description_cn": "指定通话发生的时间，格式为Unix时间戳，单位毫秒。会查询这个时间点对应的一整天的记录。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "主账号的ID，即UID。"
+    }
+  },
+  "res": {
+    "Code": "OK",
+    "Data": "",
+    "Message": "OK",
+    "RequestId": "A90E4451-FED7-49D2-87C8-00700A8C4D0D"
+  }
+}

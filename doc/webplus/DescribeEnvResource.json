@@ -1,0 +1,29 @@
+{
+  "name": "DescribeEnvResource",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v1/wam/envResource",
+  "summary_cn": "调用DescribeEnvResource查询一个环境内的所有资源。",
+  "abc_id": 128009,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "EnvId": {
+      "name": "EnvId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "we-5d22f93dcd04d705b65*****",
+      "description_cn": "环境ID，将查询此环境内的所有资源"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,52 @@
+{
+  "name": "SubmitAIMediaAuditJob",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用SubmitAIMediaAuditJob提交智能审核作业。作业在提交成功后会异步执行，不保证接口返回时作业已处理完成。",
+  "abc_id": 130445,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "TemplateId": {
+      "name": "TemplateId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "XXXXXXX",
+      "description_cn": "AI模版ID。不指定时使用智能审核默认AI模版ID。"
+    },
+    "MediaId": {
+      "name": "MediaId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "XXXXX",
+      "description_cn": "视频ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {}
+}

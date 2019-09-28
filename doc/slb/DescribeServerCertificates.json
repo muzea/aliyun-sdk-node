@@ -1,0 +1,128 @@
+{
+  "name": "DescribeServerCertificates",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeServerCertificates查询指定地域的服务器证书列表。",
+  "abc_id": 34183,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "负载均衡实例的地域。\n\n您可以通过调用[DescribeRegions](~~27584~~)接口查询地域ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ServerCertificateId": {
+      "name": "ServerCertificateId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "12315790xxxxxxx_166f8204689_1714763408_709981430",
+      "description_cn": "服务器证书ID。"
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rg-atstuj3rtoptyui",
+      "description_cn": "企业资源组ID。"
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {
+    "RequestId": "9FFF450B-CC09-4FFB-900F-E347EB7AA2CC",
+    "ServerCertificates": {
+      "ServerCertificate": [
+        {
+          "CreateTimeStamp": 1541761156000,
+          "CommonName": "*.example1.com",
+          "RegionIdAlias": "cn-hangzhou",
+          "ResourceGroupId": "rg-acfmxazb4ph6aiy",
+          "Fingerprint": "68:08:1a:f8:2c:97:69:a3:a1:e6:16:41:4b:ca:4f:5d:ee:a5:ef:0d",
+          "ServerCertificateId": "1231579085529123_166f8204689_1714763408_709981430",
+          "ExpireTimeStamp": 1558161264000,
+          "AliCloudCertificateId": "1501739",
+          "ExpireTime": "2019-05-18T06:34:24Z",
+          "RegionId": "cn-hangzhou",
+          "CreateTime": "2018-11-09T10:59:16Z",
+          "ServerCertificateName": "*.example1.com",
+          "IsAliCloudCertificate": 1,
+          "AliCloudCertificateName": "slb"
+        },
+        {
+          "CreateTimeStamp": 1481623069000,
+          "RegionIdAlias": "cn-hangzhou",
+          "ResourceGroupId": "rg-acfmxazb4ph6aiy",
+          "Fingerprint": "cd:90:1b:7b:49:4d:1d:90:f6:01:de:9a:81:7d:31:a7:38:1d:84:8d",
+          "ServerCertificateId": "1231579085529123_158f79de306",
+          "ExpireTimeStamp": 1732169065000,
+          "AliCloudCertificateId": "0",
+          "ExpireTime": "2024-11-21T06:04:25Z",
+          "RegionId": "cn-hangzhou",
+          "CreateTime": "2016-12-13T09:57:49Z",
+          "ServerCertificateName": "test_certificate",
+          "IsAliCloudCertificate": 0,
+          "AliCloudCertificateName": ""
+        }
+      ]
+    }
+  }
+}

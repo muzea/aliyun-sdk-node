@@ -1,0 +1,69 @@
+{
+  "name": "DescribeGrantRulesToCen",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeGrantRulesToCen查看网络实例对云企业网实例的授权关系。",
+  "abc_id": 65912,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzou",
+      "description_cn": "网络实例所在的地域。"
+    },
+    "CenId": {
+      "name": "CenId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cen-7qthudw0ll6jmxx****",
+      "description_cn": "云企业网实例的ID。"
+    },
+    "ProductType": {
+      "name": "ProductType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "VPC",
+      "description_cn": "产品类型。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "TotalCount": 1,
+    "PageNumber": 1,
+    "CbnGrantRules": {
+      "CbnGrantRule": [
+        {
+          "CbnInstanceId": "cbn-6ugox0vl0zff4g****",
+          "CbnOwnerId": "101664776xxxx",
+          "CreationTime": "2018-01-18T11:49:09Z"
+        }
+      ]
+    },
+    "PageSize": 10,
+    "RequestId": "330714D1-F335-4CE2-9D29-F54445937387"
+  }
+}

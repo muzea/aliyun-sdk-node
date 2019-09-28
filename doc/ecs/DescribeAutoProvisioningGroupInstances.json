@@ -1,0 +1,96 @@
+{
+  "name": "DescribeAutoProvisioningGroupInstances",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeAutoProvisioningGroupInstances查询指定弹性供应组下的实例。",
+  "abc_id": 122741,
+  "timeout": 8000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "弹性供应组所在地域的ID。"
+    },
+    "AutoProvisioningGroupId": {
+      "name": "AutoProvisioningGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "apg-uf6jel2bbl62wh13****",
+      "description_cn": "弹性供应组的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "实例状态列表的页码。起始值：**1**，默认值：**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时设置的每页行数。最大值：**100**，默认值：**10**。"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 100,
+    "PageSize": 2,
+    "RequestId": "A43735F7-30BD-4D89-AB8A-030EB24B****",
+    "Instances": {
+      "Instance": [
+        {
+          "CreationTime": "2019-06-17T15:25Z",
+          "IoOptimized": true,
+          "OsType": "linux",
+          "NetworkType": "vpc",
+          "Status": "Running",
+          "Memory": 8192,
+          "RegionId": "cn-shanghai",
+          "InstanceId": "i-uf64neea72piruk0****",
+          "CPU": 2,
+          "ZoneId": "cn-shanghai-a",
+          "InstanceType": "ecs.g5.large"
+        },
+        {
+          "CreationTime": "2019-06-17T15:25Z",
+          "IoOptimized": true,
+          "OsType": "linux",
+          "NetworkType": "vpc",
+          "Status": "Running",
+          "Memory": 8192,
+          "RegionId": "cn-shanghai",
+          "InstanceId": "i-uf64neea72piruk0****",
+          "CPU": 2,
+          "ZoneId": "cn-shanghai-a",
+          "InstanceType": "ecs.g5.large"
+        }
+      ]
+    }
+  }
+}

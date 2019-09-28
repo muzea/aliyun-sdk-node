@@ -1,0 +1,49 @@
+{
+  "name": "DeleteMonitorGroupNotifyPolicy",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "删除指定应用分组的报警通知暂停策略。",
+  "abc_id": 115015,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "资源所属的地域ID。"
+    },
+    "PolicyType": {
+      "name": "PolicyType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "PauseNotify",
+      "description_cn": "暂停通知类型，目前仅支持PauseNotify。"
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "12345",
+      "description_cn": "应用分组ID。"
+    }
+  },
+  "res": {
+    "Success": true,
+    "Code": 200,
+    "Result": 2,
+    "RequestId": "5D0D3910-5B01-4868-A2F2-A5DEA7F5150E"
+  }
+}

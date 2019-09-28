@@ -1,0 +1,60 @@
+{
+  "name": "ListFlowClusterAllHosts",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 ListFlowClusterAllHosts 接口查询给定集群可在项目设置中设置到白名单中的主机列表， 目前支持 master 和 gateway 节点。",
+  "abc_id": 101157,
+  "timeout": 8000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "区域 ID"
+    },
+    "ProjectId": {
+      "name": "ProjectId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "FP-3535FE0BE5224A47",
+      "description_cn": "项目 ID"
+    },
+    "ClusterId": {
+      "name": "ClusterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "C-F32FB31D82954C64",
+      "description_cn": "集群 ID"
+    }
+  },
+  "res": {
+    "RequestId": "2E429517-6A50-4082-9A30-47755CE9F9A5",
+    "HostList": {
+      "Host": [
+        {
+          "Status": "STARTING",
+          "Role": "MASTER",
+          "SerialNumber": "738d0af9-6ca3-46dd-a973-bab70da4bf74",
+          "PublicIp": "47.99.183.218",
+          "PrivateIp": "192.168.100.251",
+          "Memory": 8,
+          "Cpu": 4,
+          "HostInstanceId": "i-bp1agi4417dx08sig82j",
+          "HostId": "119555",
+          "HostName": "emr-header-1.cluster-500159692"
+        }
+      ]
+    }
+  }
+}

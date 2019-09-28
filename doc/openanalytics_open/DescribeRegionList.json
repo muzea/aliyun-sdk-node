@@ -1,0 +1,16 @@
+{
+  "name": "DescribeRegionList",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 6000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    }
+  },
+  "res": {}
+}

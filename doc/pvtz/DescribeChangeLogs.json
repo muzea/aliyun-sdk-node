@@ -1,0 +1,117 @@
+{
+  "name": "DescribeChangeLogs",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeChangeLogs获取变更日志。",
+  "abc_id": 66253,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Keyword": {
+      "name": "Keyword",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "关键字，按照“%KeyWord%”模式搜索，不区分大小写。"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "语言。"
+    },
+    "ZoneId": {
+      "name": "ZoneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "6726",
+      "description_cn": "Zone ID。\n\n> 若ZoneId不为空，则获取变更日志，若ZoneId为空，则获取操作记录。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "当前页数，起始值为**1**，默认为**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "100",
+      "description_cn": "分页查询时设置的每页行数，最大值**100**，默认为**20**。"
+    },
+    "StartTimestamp": {
+      "name": "StartTimestamp",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1516779348000",
+      "description_cn": "开始时间（时间戳）。"
+    },
+    "EndTimestamp": {
+      "name": "EndTimestamp",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1516779348000",
+      "description_cn": "结束时间（时间戳）。"
+    },
+    "EntityType": {
+      "name": "EntityType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PV_ZONE",
+      "description_cn": "获取的日志类型。\n\n- **PV_ZONE**为zone的操作日志。\n- **PV_RECORD**为解析记录的操作日志。\n\n其它值则忽略，获取所有日志。"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": "用户Ip。"
+    }
+  },
+  "res": {}
+}

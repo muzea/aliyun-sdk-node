@@ -1,0 +1,68 @@
+{
+  "name": "DescribeBackupPolicy",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeBackupPolicy接口查看实例备份设置。",
+  "abc_id": 26275,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "BackupPolicyMode": {
+      "name": "BackupPolicyMode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "DataBackupPolicy",
+      "description_cn": "备份类型，取值：\n* **DataBackupPolicy**：数据备份；\n* **LogBackupPolicy**：日志备份。"
+    },
+    "CompressType": {
+      "name": "CompressType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "备份压缩方式，取值：\n* **0**：不压缩；\n* **1**：zlib压缩；\n* **2**：并行zlib压缩；\n* **4**：quicklz压缩，开启了库表恢复；\n* **8**：MySQL8.0 quicklz压缩但是还未支持库表恢复。"
+    }
+  },
+  "res": {
+    "backupLog": "Enable",
+    "backupRetentionPeriod": 7,
+    "logBackupRetentionPeriod": 7,
+    "preferredBackupPeriod": "Monday,Wednesday,Friday,Sunday",
+    "preferredBackupTime": "15:00Z-16:00Z",
+    "preferredNextBackupTime": "2018-01-19T15:15Z",
+    "requestId": "B87E2AB3-B7C9-4394-9160-7F639F732031"
+  }
+}

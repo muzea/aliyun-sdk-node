@@ -1,0 +1,108 @@
+{
+  "name": "DescribeStorageSetDetails",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "（Beta）调用DescribeStorageSetDetails查询一个存储集内云盘或共享块存储的详细信息。",
+  "abc_id": 129429,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "存储集所属地域。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "StorageSetId": {
+      "name": "StorageSetId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ss-StorageSetId",
+      "description_cn": "存储集ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "111"
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123e4567-e89b-12d3-a456-426655440000",
+      "description_cn": "保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。**ClientToken**只支持ASCII字符，且不能超过64个字符。更多详情，请参见[如何保证幂等性](~~25693~~)。"
+    },
+    "StorageSetPartitionNumber": {
+      "name": "StorageSetPartitionNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3",
+      "description_cn": "存储集内的最大分区数。"
+    },
+    "DiskIds": {
+      "name": "DiskIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[\"d-111\", \"d-222\", … \"d-333\"]",
+      "description_cn": "云盘或共享块存储ID列表。取值可以由多块云盘或共享块存储ID组成一个JSON数组，最多支持100个ID，ID之间用半角逗号（,）隔开。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "存储集列表的页码。起始值：1\n\n默认值：1"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时设置的每页行数，最大值：100\n\n默认值：10"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 6,
+    "PageSize": 20,
+    "RequestId": "49765E79-0D5D-4451-B3AE-580A20831846",
+    "Disks": {
+      "Disk": [
+        {
+          "CreationTime": "2019-07-03T13:52Z",
+          "Category": "cloud_efficiency",
+          "RegionId": "cn-hangzhou",
+          "ZoneId": "cn-hangzhou-a",
+          "StorageSetId": "ss-xxxx",
+          "DiskId": "d-0xzxxxx"
+        }
+      ]
+    }
+  }
+}

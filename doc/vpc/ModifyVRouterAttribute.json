@@ -1,0 +1,65 @@
+{
+  "name": "ModifyVRouterAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyVRouterAttribute接口修改路由器的名称和描述信息。",
+  "abc_id": 35743,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "VPC所在的地域。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "VRouterId": {
+      "name": "VRouterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "vrt-bp1lhl0taikrteen8****",
+      "description_cn": " 路由器的ID。  "
+    },
+    "VRouterName": {
+      "name": "VRouterName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "VRouter-1",
+      "description_cn": "路由器的名称。  \n\n长度为 2-128个字符，必须以字母或中文开头，可包含数字，点号（.），下划线（_）和短横线（-）。但不能以`http:// `或`https://`开头。  "
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "My VRouter",
+      "description_cn": "路由器的描述信息。  \n\n长度为 2-256个字符，必须以字母或中文开头，但不能以`http:// `或`https://`开头。  "
+    }
+  },
+  "res": {
+    "RequestId": "0ED8D006-F706-4D23-88ED-E11ED28DCAC0",
+    "RouteTableId": "vtb-bp145q7glnuzdvzu21pom",
+    "VRouterId": "vrt-bp1lhl0taikrteen80oxx",
+    "VpcId": "vpc-bp15zckdt37pq72zvw30k"
+  }
+}

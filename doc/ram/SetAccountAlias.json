@@ -1,0 +1,30 @@
+{
+  "name": "SetAccountAlias",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用SetAccountAlias接口设置云账号别名。",
+  "abc_id": 28736,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AccountAlias": {
+      "name": "AccountAlias",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "myalias",
+      "description_cn": "指定云账号的别名, 长度限制为3~32个字符。\n\n限制：`^[a-z0-9](([a-z0-9]|-(?!-))*[a-z0-9])?$`。"
+    }
+  },
+  "res": {
+    "RequestId": "04F0F334-1335-436C-A1D7-6C044FE73368"
+  }
+}

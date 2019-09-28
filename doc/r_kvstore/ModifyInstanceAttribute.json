@@ -1,0 +1,61 @@
+{
+  "name": "ModifyInstanceAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyInstanceAttribute修改Redis实例的属性，包括名称和密码。",
+  "abc_id": 60929,
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "r-j6cxxxxxxxxxxxxx",
+      "description_cn": "目标实例的ID。"
+    },
+    "InstanceName": {
+      "name": "InstanceName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "newinstancename",
+      "description_cn": "新的实例名称。名称为2-80个字符，以大小写英文字母或中文开头，不支持字符`@/:=”<>{[]}`和空格。"
+    },
+    "NewPassword": {
+      "name": "NewPassword",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "uW8+nsrp",
+      "description_cn": "新的实例密码。长度为8-32位，需包含大写字母、小写字母、数字、特殊字符（支持`!@#$%^&*()_+-=`）中至少三种。"
+    }
+  },
+  "res": {
+    "RequestId": "EFC9161F-15E3-4A6E-8A99-C09916D1F464"
+  }
+}

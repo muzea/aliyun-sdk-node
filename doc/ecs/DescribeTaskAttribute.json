@@ -1,0 +1,88 @@
+{
+  "name": "DescribeTaskAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeTaskAttribute查询异步任务的详细信息。目前，可以查询的异步任务有导入镜像（ImportImage）和导出镜像（ExportImage）两种。 ",
+  "abc_id": 25623,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。 "
+    },
+    "TaskId": {
+      "name": "TaskId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "t-taskid",
+      "description_cn": "任务ID。您可以调用[DescribeTasks](~~25622~~)查看任务ID。 "
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。"
+    }
+  },
+  "res": {
+    "CreationTime": "2015-11-23T02:13Z",
+    "OperationProgressSet": {
+      "OperationProgress": [
+        {
+          "RelatedItemSet": {
+            "RelatedItem": [
+              {
+                "Name": "OSSBucket",
+                "Value": "image-temp"
+              },
+              {
+                "Name": "OSSObject",
+                "Value": "MYOSSPRE_m-23f8tcp8y_t-23ym6mvro.vhd"
+              },
+              {
+                "Name": "ImageFormat",
+                "Value": "vhd"
+              }
+            ]
+          },
+          "ErrorMsg": "",
+          "ErrorCode": "",
+          "OperationStatus": "Success"
+        }
+      ]
+    },
+    "FinishedTime": "2015-11-23T02:19Z",
+    "FailedCount": 0,
+    "SupportCancel": true,
+    "TotalCount": 1,
+    "SuccessCount": 1,
+    "RequestId": "4BE2C7FE-C7A4-4675-A153-174E032AABFB",
+    "RegionId": "cn-hangzhou",
+    "TaskAction": "ExportImage",
+    "TaskStatus": "Finished",
+    "TaskProcess": "100%",
+    "TaskId": "t-23ym6mvro"
+  }
+}

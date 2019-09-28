@@ -1,0 +1,139 @@
+{
+  "name": "DescribeFlowLogs",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeFlowLogs接口查询流日志。",
+  "abc_id": 87923,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-qingdao",
+      "description_cn": " 流日志的所属地域ID。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "111"
+    },
+    "FlowLogName": {
+      "name": "FlowLogName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "myFlowlog",
+      "description_cn": "流日志名称。长度为2-128个字符，必须以字母或中文开头，可包含数字，点号（.），下划线（_）和短横线（-）。但不能以`http://`或`https://`开头。  "
+    },
+    "FlowLogId": {
+      "name": "FlowLogId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "flowlog-m5evbtbptxxxxxxxxxxxx",
+      "description_cn": "流日志ID。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "111"
+    },
+    "ResourceType": {
+      "name": "ResourceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "NetworkInterface",
+      "description_cn": "要捕获的流量的资源类型：\n          \n- NetworkInterface：弹性网卡\n  \n- VSwitch：交换机内的所有弹性网卡\n  \n- VPC：专有网络内的所有弹性网卡\n"
+    },
+    "ResourceId": {
+      "name": "ResourceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "eni-askldfasxxxxxxxx",
+      "description_cn": "要捕获的流量的资源ID。"
+    },
+    "TrafficType": {
+      "name": "TrafficType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "All",
+      "description_cn": "采集的流量类型：\n          \n- All：全部流量\n  \n- Allow：访问控制允许的流量\n  \n- Drop：访问控制拒绝的流量\n"
+    },
+    "ProjectName": {
+      "name": "ProjectName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FlowLogProject",
+      "description_cn": "存储捕获到的流量的Project。"
+    },
+    "LogStoreName": {
+      "name": "LogStoreName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FlowLogStore",
+      "description_cn": "存储捕获到的流量的LogStore。"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "111"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "111"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "111"
+    }
+  },
+  "res": {
+    "RequestId": "04F0F334-1335-436C-A1D7-6C044FExxxxx"
+  }
+}

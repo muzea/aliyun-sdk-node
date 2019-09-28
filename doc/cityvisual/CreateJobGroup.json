@@ -1,0 +1,123 @@
+{
+  "name": "CreateJobGroup",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateJobGroup创建计算工作组信息。",
+  "abc_id": 129272,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "地域ID。"
+    },
+    "ResourceProfileId": {
+      "name": "ResourceProfileId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "6",
+      "description_cn": "资源参数集ID。"
+    },
+    "AlgoLibId": {
+      "name": "AlgoLibId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "3",
+      "description_cn": "算法库ID，"
+    },
+    "PlanedJobCount": {
+      "name": "PlanedJobCount",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "10",
+      "description_cn": "期望Job数量。"
+    },
+    "StreamPerJob": {
+      "name": "StreamPerJob",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "5",
+      "description_cn": "Job下视频流数量。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cityvisual-Instance",
+      "description_cn": "实例ID。"
+    },
+    "JobGroupParams": {
+      "name": "JobGroupParams",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "JobCount": {
+      "name": "JobCount",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3",
+      "description_cn": "Job数量。"
+    },
+    "JobGroupName": {
+      "name": "JobGroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "JobGroupName",
+      "description_cn": "工作组名称。"
+    }
+  },
+  "res": {}
+}

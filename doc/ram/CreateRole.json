@@ -1,0 +1,58 @@
+{
+  "name": "CreateRole",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateRole接口创建角色。",
+  "abc_id": 28710,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "RoleName": {
+      "name": "RoleName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "ECSAdmin",
+      "description_cn": "指定角色名，最多包含64个字符。\n\n格式：`^[a-zA-Z0-9\\.@\\-]+$`。"
+    },
+    "AssumeRolePolicyDocument": {
+      "name": "AssumeRolePolicyDocument",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"RAM\":\"acs:ram::123456789012****:root\"}}],\"Version\":\"1\"}",
+      "description_cn": "一个策略文本。指定允许扮演该角色的一个或多个主体，这个主体可以是阿里云账号、阿里云服务或身份提供商。\n>RAM用户不能扮演可信实体为阿里云服务的RAM角色。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ECS管理角色",
+      "description_cn": "角色描述，最大长度为1024个字符。"
+    }
+  },
+  "res": {
+    "RequestId": "04F0F334-1335-436C-A1D7-6C044FE73368",
+    "Role": {
+      "RoleId": "901234567890123",
+      "RoleName": "ECSAdmin",
+      "Arn": "acs:ram::1234567890123456:role/ECSAdmin",
+      "Description": "ECS管理角色",
+      "AssumeRolePolicyDocument": "{ \"Statement\": [ { \"Action\": \"sts:AssumeRole\", \"Effect\": \"Allow\", \"Principal\": { \"RAM\": \"acs:ram::123456789012345678:root\" } } ], \"Version\": \"1\" }",
+      "CreateDate": "2015-01-23T12:33:18Z"
+    }
+  }
+}

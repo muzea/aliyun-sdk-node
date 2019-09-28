@@ -1,0 +1,153 @@
+{
+  "name": "ModifyDBInstanceSpec",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyDBInstanceSpec接口变更MongoDB单节点或副本集实例的规格或存储空间。",
+  "abc_id": 61816,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例所属的地域ID，您可以通过调用[DescribeDBInstanceAttribute](~~62010~~)进行查询。\n"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "DBInstanceClass": {
+      "name": "DBInstanceClass",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dds.mongo.standard",
+      "description_cn": "实例规格，详情请参考[实例规格表](~~57141~~)。\n\n> 本参数和**DBInstanceStorage**参数两者中必须传入一项。"
+    },
+    "DBInstanceStorage": {
+      "name": "DBInstanceStorage",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "50",
+      "description_cn": "实例的存储空间。\n- 取值范围：**10**-**3000**，单位为GB，具体取值受实例规格约束，详情请参考[实例规格表](~~57141~~)。\n- 每10GB递增。\n\n> - 本参数和**DBInstanceClass**参数两者中必须传入一项。\n- 仅按量付费的副本集实例支持降配存储空间，且存储空间必须大于当前已使用的存储空间。"
+    },
+    "OrderType": {
+      "name": "OrderType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "UPGRADE",
+      "description_cn": "变配类型，取值：\n- **UPGRADE**：升级配置。\n- **DOWNGRADE**：降级配置，默认为降级配置。\n\n> 当实例付费方式为包年包月时，本参数才可用。"
+    },
+    "AutoPay": {
+      "name": "AutoPay",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否自动付费。取值：\n- **true**：自动付费，请确保账号有足够的余额。\n- **false**：控制台手动付费。具体操作为：登录控制台，在页面右上角选择**费用**>**进入费用中心**，在**订单管理**找到目标订单进行支付。\n\n默认值为：**true**。"
+    },
+    "FromApp": {
+      "name": "FromApp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "BusinessInfo": {
+      "name": "BusinessInfo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{“ActivityId\":\"000000000\"}",
+      "description_cn": "业务信息。"
+    },
+    "ReplicationFactor": {
+      "name": "ReplicationFactor",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3",
+      "description_cn": "设置实例的节点个数。\n- 副本集实例取值为**3，5，7**。\n- 单节点实例取值固定为**1**。"
+    },
+    "ReadonlyReplicas": {
+      "name": "ReadonlyReplicas",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "只读节点的个数，取值范围为**1**-**5**。"
+    },
+    "CouponNo": {
+      "name": "CouponNo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "youhuiquan_promotion_option_id_for_blank",
+      "description_cn": " 优惠码，默认为：**youhuiquan_promotion_option_id_for_blank**。"
+    },
+    "EffectiveTime": {
+      "name": "EffectiveTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Immediately",
+      "description_cn": "变更配置的生效时间，取值：\n- **Immediately**：立即生效。\n- **MaintainTime**：在实例的可运维时间段内生效。\n\n默认为**Immediately**。"
+    }
+  },
+  "res": {
+    "OrderId": "2033xxxxxxxx",
+    "RequestId": "C5662998-62BE-4C7F-961D-7DFE775DD813"
+  }
+}

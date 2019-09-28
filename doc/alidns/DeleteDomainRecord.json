@@ -1,0 +1,54 @@
+{
+  "name": "DeleteDomainRecord",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteDomainRecord根据传入参数删除解析记录。",
+  "abc_id": 29773,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "RecordId": {
+      "name": "RecordId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "9999985",
+      "description_cn": "解析记录的ID。\n\n此参数在添加解析时会返回，在获取域名解析列表时会返回。"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "语言。"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": "用户端IP。"
+    }
+  },
+  "res": {
+    "RequestId": "536E9CAD-DB30-4647-AC87-AA5CC38C5382",
+    "RecordId": "9999985"
+  }
+}

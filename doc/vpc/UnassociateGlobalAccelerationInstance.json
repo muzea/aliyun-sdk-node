@@ -1,0 +1,52 @@
+{
+  "name": "UnassociateGlobalAccelerationInstance",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用UnassociateGlobalAccelerationInstance接口解绑与全球加速实例关联的后端服务实例。",
+  "abc_id": 56833,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "全球加速实例所在的地域。 \n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "GlobalAccelerationInstanceId": {
+      "name": "GlobalAccelerationInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ga-1sxee33****",
+      "description_cn": " 全球加速实例的ID。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "InstanceType": {
+      "name": "InstanceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "EcsInstance",
+      "description_cn": "实例类型，取值：\n\n- **RemoteEcsInstance**：ECS实例\n\n- **RemoteSlbInstance**：负载均衡实例\n\n- **RemoteEniInstance**：弹性网卡实例"
+    }
+  },
+  "res": {
+    "RequestId": "BD5BCEE8-F62C-40C2-9AC3-89XXXXXXXXX"
+  }
+}

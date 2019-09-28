@@ -1,0 +1,58 @@
+{
+  "name": "AllocateInstancePublicConnection",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AllocateInstancePublicConnection接口申请实例的外网地址。",
+  "abc_id": 26234,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "ConnectionStringPrefix": {
+      "name": "ConnectionStringPrefix",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "test1.mysql.rds.aliyuncs.com",
+      "description_cn": "外网连接地址，前缀可以自定义。\n>长度5~40，不能包含汉字和非法字符（~!#%^&amp;*=+\\|{};:&#x27;&quot;,&lt;&gt;/?），建议由字母、数字、短横线（-）组成。"
+    },
+    "Port": {
+      "name": "Port",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "3306",
+      "description_cn": "外网连接端口，取值：**1000-5999**。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": " 65BDA532-28AF-4122-AA39-B382721EEE64"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "DescribeFabricConsortiumMembers",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeFabricConsortiumMembers获取联盟的组织信息。",
+  "abc_id": 127854,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "ConsortiumId": {
+      "name": "ConsortiumId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "consortium-lianmenyumingyi-hc5d1bwl****",
+      "description_cn": "联盟ID"
+    },
+    "Location": {
+      "name": "Location",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "位置"
+    }
+  },
+  "res": {
+    "Result": [
+      {
+        "OrganizationName": "测试3",
+        "Description": "测试3",
+        "Domain": "test3asdasdafreqweqwdsafsdfw3easda.abasssample.cc",
+        "JoinedTime": "2018-07-31T08:08:01.000+0000",
+        "ConsortiumId": "consortium-testthree-3i6j6d8ian5668",
+        "OrganizationId": "peers-test3-25c96n9n6jh3dc"
+      }
+    ],
+    "RequestId": "98B37CF5-AB0C-423E-8335-81A54899577E",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

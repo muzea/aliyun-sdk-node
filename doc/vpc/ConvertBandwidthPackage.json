@@ -1,0 +1,54 @@
+{
+  "name": "ConvertBandwidthPackage",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ConvertBandwidthPackage转换NAT带宽包。",
+  "abc_id": 126631,
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "NAT网关所在的地域。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。 "
+    },
+    "BandwidthPackageId": {
+      "name": "BandwidthPackageId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "bwp-bp1xea10o8qxw4f****",
+      "description_cn": "NAT网关带宽包的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123e4567-e89b-12d3-a456-426655440000",
+      "description_cn": "客户端token，用于保证请求的幂等性。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII 字符。 "
+    }
+  },
+  "res": {
+    "RequestId": "0C2EE7A8-74D4-4081-8236-CEBDE3BBCF50",
+    "ConvertInstanceId": "bwp-s6lmotmkkf567b****"
+  }
+}

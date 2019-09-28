@@ -1,0 +1,73 @@
+{
+  "name": "CreateAxgGroup",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用接口CreateAxgGroup创建G号码组。",
+  "abc_id": 110250,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "PoolKey": {
+      "name": "PoolKey",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "FC123456",
+      "description_cn": "号码池Key。请登录[号码隐私保护控制台](https://dypls.console.aliyun.com/dypls.htm#/account)，在**号码池管理**中查看号码池Key。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "测试分组",
+      "description_cn": "G号码组名称。如果未指定G号码组名称，将以G号码组的ID作为名称。\n\n取值范围为1~128个字符，支持中文和英文。"
+    },
+    "Remark": {
+      "name": "Remark",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "测试用分组",
+      "description_cn": "G号码组的备注信息。取值范围为0~256个字符，支持中文和英文。"
+    },
+    "Numbers": {
+      "name": "Numbers",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "15800000000,15900000000\t",
+      "description_cn": "向新建的G分组中添加的电话号码，多个号码之间用英文逗号（,）分隔，创建时最多添加200个号码。"
+    }
+  },
+  "res": {
+    "Message": "OK",
+    "RequestId": "635C0FDA-9EBC-43D7-B368-9F583C08A126",
+    "Code": "OK",
+    "GroupId": 2000000000001
+  }
+}

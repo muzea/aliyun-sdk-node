@@ -1,0 +1,159 @@
+{
+  "name": "QueryRobotTaskCallList",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用QueryRobotTaskCallList查询智能语音任务通话列表。",
+  "abc_id": 124876,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "主账号的ID，即UID。"
+    },
+    "PageNo": {
+      "name": "PageNo",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "分页参数，当前页数"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "分页参数，每页记录数"
+    },
+    "TaskId": {
+      "name": "TaskId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1045001",
+      "description_cn": "机器人呼叫任务的唯一任务ID。"
+    },
+    "DurationFrom": {
+      "name": "DurationFrom",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "通话时长，左边数值。"
+    },
+    "DurationTo": {
+      "name": "DurationTo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "60",
+      "description_cn": "通话时长，右边数值。"
+    },
+    "DialogCountFrom": {
+      "name": "DialogCountFrom",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "对话轮次，左边数值。"
+    },
+    "DialogCountTo": {
+      "name": "DialogCountTo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "5",
+      "description_cn": "对话轮次，右边数值。"
+    },
+    "HangupDirection": {
+      "name": "HangupDirection",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "挂断方向，0-用户，1-机器人。"
+    },
+    "CallResult": {
+      "name": "CallResult",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "200002",
+      "description_cn": "通话结果， 200002-占线，200005-无法接通，200010-关机，200011-停机，200012-呼损。"
+    },
+    "Called": {
+      "name": "Called",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1300000000",
+      "description_cn": "被叫号码。"
+    }
+  },
+  "res": {
+    "Message": "OK",
+    "RequestId": "D9CB3933-9FE3-4870-BA8E-2BEE91B69D23",
+    "Code": "OK",
+    "Data": [
+      {
+        "taskId": 1045001,
+        "caller": "0571-88996676",
+        "called": "13000000000",
+        "duration": "60",
+        "label": "邀约,有房,无车",
+        "dialogCount": "3",
+        "callResult": "无法接通",
+        "hangupDirection": "1",
+        "transferResult": "3",
+        "transferNumber": "0571-88336676",
+        "transferFailReason": "用户挂断",
+        "callId": "116950320375^103750100375",
+        "recallCurTimes": 2,
+        "callStartTime": "2019.06.14 15:22:23",
+        "callEndTime": "2019.06.14 15:22:55",
+        "sureCount": 2,
+        "denyCount": 2,
+        "rejectCount": 0,
+        "customCount": 0,
+        "konwledgeCount": 0,
+        "defaultCount": 0,
+        "knowledgeBusinessCount": 0,
+        "knowledgeCommonCount": 0
+      }
+    ]
+  }
+}

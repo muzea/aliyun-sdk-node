@@ -1,0 +1,29 @@
+{
+  "name": "GetOwnedJoinPermission",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用GetOwnedJoinPermission根据入网凭证ID获取当前用户账号所拥有的入网凭证。",
+  "abc_id": 109922,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "JoinPermissionId": {
+      "name": "JoinPermissionId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "123",
+      "description_cn": "要获取的入网凭证的ID。"
+    }
+  },
+  "res": {}
+}

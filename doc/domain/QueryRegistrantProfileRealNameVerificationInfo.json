@@ -1,0 +1,69 @@
+{
+  "name": "QueryRegistrantProfileRealNameVerificationInfo",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": null,
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "RegistrantProfileId": {
+      "name": "RegistrantProfileId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "123456",
+      "description_cn": "域名信息模板编号"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "127.0.0.1",
+      "description_cn": "用户ip"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "接口返回错误信息语言，枚举值范围：zh 中文；en 英文。默认为en"
+    },
+    "FetchImage": {
+      "name": "FetchImage",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否获取实名认证图片"
+    }
+  },
+  "res": {
+    "IdentityCredentialNo": "411111111111111",
+    "IdentityCredentialType": "SFZ",
+    "ModificationDate": "2017-05-22 19:04:49",
+    "RegistrantProfileId": 123456,
+    "RequestId": "4D73432C-7600-4779-ACBB-C3B5CA145D32",
+    "SubmissionDate": "2017-05-22 19:04:49"
+  }
+}

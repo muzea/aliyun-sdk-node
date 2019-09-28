@@ -1,0 +1,83 @@
+{
+  "name": "ModifyBgpPeerAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyBgpGroupAttribute接口修改BGP邻居的属性。",
+  "abc_id": 121505,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "BGP组所在的地域。 您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "BgpPeerId": {
+      "name": "BgpPeerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "Bgp-awjhxxxxxxxx",
+      "description_cn": "BGP邻居的ID。"
+    },
+    "BgpGroupId": {
+      "name": "BgpGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "bgpg-wz9f62v4fbgxxxxxxxx",
+      "description_cn": "BGP组的ID。 "
+    },
+    "PeerIpAddress": {
+      "name": "PeerIpAddress",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "116.62.xx.xx",
+      "description_cn": "BGP邻居的IP地址。  "
+    },
+    "EnableBfd": {
+      "name": "EnableBfd",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否开启BFD功能，取值：\n\n- **true**：开启BFD功能。\n\n- **false**：不开启BFD功能。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "02fb3da4-130e-11e9-8e44-001xxxxxxxx",
+      "description_cn": "用于保证请求的幂等性。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符。 "
+    }
+  },
+  "res": {
+    "RequestId": "0ED8D006-F706-4D23-88ED-E11ED28DCAC0"
+  }
+}

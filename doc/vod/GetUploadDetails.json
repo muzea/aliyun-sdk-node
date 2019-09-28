@@ -1,0 +1,63 @@
+{
+  "name": "GetUploadDetails",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用GetUploadDetails通过媒资ID（支持批量）获取媒资上传详情，如上传时间、已上传比例、上传来源等信息。",
+  "abc_id": 118352,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "MediaIds": {
+      "name": "MediaIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "media_ids",
+      "description_cn": "媒资ID。\n\n目前仅支持视频ID。多个用英文逗号分隔，最多支持20个。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ResourceRealOwnerId": {
+      "name": "ResourceRealOwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "5432684",
+      "description_cn": "资源所有者ID。"
+    },
+    "MediaType": {
+      "name": "MediaType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "video",
+      "description_cn": "媒体类型。默认为**video**，取值：**video(音视频)**。"
+    }
+  },
+  "res": {}
+}

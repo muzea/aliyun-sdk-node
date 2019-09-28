@@ -1,0 +1,76 @@
+{
+  "name": "ChangeDomainOfDnsProduct",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ChangeDomainOfDnsProduct更换云解析产品绑定的域名。",
+  "abc_id": 29759,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "i-7sb",
+      "description_cn": "云解析产品ID。"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "语言。"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": "用户端IP。"
+    },
+    "NewDomain": {
+      "name": "NewDomain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "newdomain.com",
+      "description_cn": "目标绑定域名，如不填写，则为解绑。"
+    },
+    "Force": {
+      "name": "Force",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否强制绑定。"
+    }
+  },
+  "res": {
+    "RequestId": "536E9CAD-DB30-4647-AC87-AA5CC38C5382",
+    "OriginalDomain": "originaldomain.com"
+  }
+}

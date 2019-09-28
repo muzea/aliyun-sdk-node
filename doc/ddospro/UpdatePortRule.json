@@ -1,0 +1,68 @@
+{
+  "name": "UpdatePortRule",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用UpdatePortRule接口更新非网站转发规则。",
+  "abc_id": 92115,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "FrontPort": {
+      "name": "FrontPort",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "255",
+      "description_cn": "设置转发端口。"
+    },
+    "RealServerList": {
+      "name": "RealServerList",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2.2.2.2,3.3.3.3",
+      "description_cn": "添加源站列表，以逗号分隔。"
+    },
+    "Ip": {
+      "name": "Ip",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": "要操作的高防实例IP。"
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": ""
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn",
+      "description_cn": ""
+    }
+  },
+  "res": {}
+}

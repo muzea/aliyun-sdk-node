@@ -1,0 +1,177 @@
+{
+  "name": "ListFlowInstance",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 ListFlowInstance 接口查询工作流实例列表。",
+  "abc_id": 101166,
+  "timeout": 8000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "ProjectId": {
+      "name": "ProjectId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "FP-7A1018ADE9179EE1",
+      "description_cn": "项目ID。"
+    },
+    "Id": {
+      "name": "Id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "x",
+      "description_cn": "已过期。"
+    },
+    "FlowId": {
+      "name": "FlowId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "F-1B4018ADE9179EE1",
+      "description_cn": "工作流ID。"
+    },
+    "FlowName": {
+      "name": "FlowName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "my_flow",
+      "description_cn": "工作流名称。"
+    },
+    "Owner": {
+      "name": "Owner",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1230404****",
+      "description_cn": "责任人ID。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FI-7CAF9709CD328EBE",
+      "description_cn": "工作流实例ID。"
+    },
+    "TimeRange": {
+      "name": "TimeRange",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{\"type\":\"date\",\"date\":\"ALL\"}",
+      "description_cn": "查询时间范围。"
+    },
+    "StatusList": {
+      "name": "StatusList",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "OrderBy": {
+      "name": "OrderBy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "id",
+      "description_cn": "排序字段名称。"
+    },
+    "OrderType": {
+      "name": "OrderType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "asc",
+      "description_cn": "排序方向：ASC/DESC。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页码。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "每页数量。"
+    }
+  },
+  "res": {
+    "FlowInstances": {
+      "FlowInstance": [
+        {
+          "Status": "FAILED",
+          "FlowId": "F-9C8D2BEC4D3803BC",
+          "Owner": "1250460021754461",
+          "GmtCreate": 1542963000000,
+          "EndTime": 1542963033000,
+          "ClusterId": "C-A6C9F4F1E9EC88D9",
+          "FlowName": "success+fail",
+          "StartTime": 1542963001000,
+          "ProjectId": "FP-17AB3389E1AD9A34",
+          "GmtModified": 1542963033000,
+          "Duration": 32000,
+          "Id": "FI-03F019530CB8D327"
+        },
+        {
+          "Status": "SUCCEEDED",
+          "FlowId": "F-FECA99A4AE794199",
+          "Owner": "205389038983463961",
+          "GmtCreate": 1542963000000,
+          "EndTime": 1542963015000,
+          "ClusterId": "C-A6C9F4F1E9EC88D9",
+          "FlowName": "success",
+          "StartTime": 1542963000000,
+          "ProjectId": "FP-17AB3389E1AD9A34",
+          "GmtModified": 1542963015000,
+          "Duration": 15000,
+          "Id": "FI-60B9DBFA5AD2432B"
+        }
+      ]
+    },
+    "PageSize": 2,
+    "RequestId": "780BB15A-9038-4330-BE6C-0A47FE5A1BBF",
+    "PageNumber": 1,
+    "Total": 50
+  }
+}

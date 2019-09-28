@@ -1,0 +1,40 @@
+{
+  "name": "DescribeNamespaceList",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v1/sam/namespace/describeNamespaceList",
+  "summary_cn": "获取命名空间列表",
+  "abc_id": 126547,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ContainCustom": {
+      "name": "ContainCustom",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "true",
+      "description_cn": "是否返回自定义命名空间"
+    },
+    "HybridCloudExclude": {
+      "name": "HybridCloudExclude",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否排除混合云命名空间"
+    }
+  },
+  "res": {}
+}

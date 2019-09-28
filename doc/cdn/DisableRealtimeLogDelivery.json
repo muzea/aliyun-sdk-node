@@ -1,0 +1,39 @@
+{
+  "name": "DisableRealtimeLogDelivery",
+  "protocol": "HTTP|HTTPS",
+  "method": "GET",
+  "path": "/",
+  "summary_cn": "调用DisableRealtimeLogDelivery暂停域名实时日志投递。",
+  "abc_id": 100467,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Domain": {
+      "name": "Domain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "暂停实时日志投递服务域名，多个以逗号（,）分隔。\n"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "9732E117-8A37-49FD-A36F-ABBB87556CA7"
+  }
+}

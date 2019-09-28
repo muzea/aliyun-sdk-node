@@ -1,0 +1,58 @@
+{
+  "name": "DeleteTransmitLine",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteTransmitLine接口删除网站防护转发线路。",
+  "abc_id": 92100,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": ""
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn",
+      "description_cn": ""
+    },
+    "Line": {
+      "name": "Line",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "CUT",
+      "description_cn": "要删除的线路，取值：\n\n- **BGP**：bgp线路\n- **CT**：电信\n- **CUT**：联通\n- **MT**：移动"
+    },
+    "Domain": {
+      "name": "Domain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "www.aliyun.com",
+      "description_cn": "要操作的域名。"
+    }
+  },
+  "res": {}
+}

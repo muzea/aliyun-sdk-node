@@ -1,0 +1,70 @@
+{
+  "name": "ModifyNatGatewaySpec",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "使用ModifyNatGatewaySpec接口修改NAT网关的规格。",
+  "abc_id": 42665,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "NAT网关的所属地域。"
+    },
+    "NatGatewayId": {
+      "name": "NatGatewayId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ngw-bp1uewa15k4iy5770ya89",
+      "description_cn": "要修改规格的NAT网关的ID。"
+    },
+    "Spec": {
+      "name": "Spec",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "Small",
+      "description_cn": "NAT网关的规格。取值：\n\n- Small(默认值)：小型\n\n- Middle：中型\n\n- Large：大型"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AutoPay": {
+      "name": "AutoPay",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "SHA234js121223xxxxx",
+      "description_cn": "用于保证请求的幂等性。\n\n由客户端生成该参数值，要保证在不同请求间唯一，最大值不能超过64个ASCII字符。      \n\n更多信息，参考[如何保证幂等性](~~36569~~)。"
+    }
+  },
+  "res": {
+    "RequestId": "DBD4E4A2-786E-4BD2-8EB6-107FFC2B5B7D"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "ListRegions",
+  "protocol": "HTTP|HTTPS",
+  "method": "GET",
+  "path": "/regions",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    }
+  },
+  "res": {}
+}

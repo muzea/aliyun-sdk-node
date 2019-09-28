@@ -1,0 +1,96 @@
+{
+  "name": "AddLiveSnapshotDetectPornConfig",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AddLiveSnapshotDetectPornConfig可按照域名和App级别配置直播流审核服务。",
+  "abc_id": 56040,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AppName": {
+      "name": "AppName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "testApp",
+      "description_cn": "\t\n直播流所属应用名称。\n\n支持*，表示全部。"
+    },
+    "OssEndpoint": {
+      "name": "OssEndpoint",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "oss.aliyunlive.com",
+      "description_cn": "OSS域名。"
+    },
+    "OssBucket": {
+      "name": "OssBucket",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "livebucket",
+      "description_cn": "OSS存储bucket名称。"
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "www.yourdomain.com",
+      "description_cn": "用户域名。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OssObject": {
+      "name": "OssObject",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "record/{AppName}/{StreamName}/{Sequence}",
+      "description_cn": "保存涉黄涉政等违规图片的对象模板。\n\n如不明确给出，默认为`{AppName}/{StreamName}/{Date}/{Hour}/{Minute}_{Second}.jpg`。"
+    },
+    "Scene": {
+      "name": "Scene",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "Interval": {
+      "name": "Interval",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "采样间隔。单位：秒。\n\n取值范围：**5~3600**。"
+    }
+  },
+  "res": {}
+}

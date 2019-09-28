@@ -1,0 +1,50 @@
+{
+  "name": "DeleteSiteMonitors",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "删除站点监控的探测任务。",
+  "abc_id": 115044,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "TaskIds": {
+      "name": "TaskIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "01adacc2-ece5-41b6-afa2-3143ab5da7a0,43bd1ead-514f-4524-813e-228ce091****",
+      "description_cn": "要删除的任务ID，多个任务ID之间用英文逗号分隔。"
+    },
+    "IsDeleteAlarms": {
+      "name": "IsDeleteAlarms",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "删除任务的同时是否删除报警规则，默认值为True。"
+    }
+  },
+  "res": {
+    "Data": {
+      "count": 0
+    },
+    "Message": "请求成功",
+    "RequestId": "123BCC5D-8B63-48EA-B747-9A8995BE7AA6",
+    "Success": true,
+    "Code": "200"
+  }
+}

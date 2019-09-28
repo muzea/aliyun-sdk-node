@@ -1,0 +1,30 @@
+{
+  "name": "BatchDeleteScdnDomainConfigs",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": null,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainNames": {
+      "name": "DomainNames",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true
+    },
+    "FunctionNames": {
+      "name": "FunctionNames",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true
+    }
+  },
+  "res": {}
+}

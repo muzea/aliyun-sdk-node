@@ -1,0 +1,52 @@
+{
+  "name": "GetMediaAuditResultDetail",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用GetMediaAuditResultDetail获取智能审核结果详情。通过此接口可实时查询审核结果详情。",
+  "abc_id": 130448,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "PageNo": {
+      "name": "PageNo",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1",
+      "description_cn": "视频内容审核结果页码，默认值为**1**，每页最多返回**20**条记录。"
+    },
+    "MediaId": {
+      "name": "MediaId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "XXXXX",
+      "description_cn": "视频ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {}
+}

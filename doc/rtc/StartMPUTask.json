@@ -1,0 +1,143 @@
+{
+  "name": "StartMPUTask",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用StartMPUTask开始任务。",
+  "abc_id": 93183,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "yourAppId",
+      "description_cn": "应用ID，创建应用后生成。"
+    },
+    "ChannelId": {
+      "name": "ChannelId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "yourChannelId",
+      "description_cn": "频道ID。"
+    },
+    "TaskId": {
+      "name": "TaskId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "yourTaskId",
+      "description_cn": "任务ID，此ID为旁路直播的标识，需保证唯一。\n\n字符只允许**A-Za-z0-9_-**，长度限制**64**字节。"
+    },
+    "MediaEncode": {
+      "name": "MediaEncode",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "编码选项，具体请参见本文中的MediaEncode枚举值。"
+    },
+    "LayoutIds": {
+      "name": "LayoutIds",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "Long"
+    },
+    "StreamURL": {
+      "name": "StreamURL",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "yourStreamURL",
+      "description_cn": "直播推流地址，生成规则请参见[推流地址与播流地址（原画）](~~87396~~)。\n\n对已开防盗链鉴权的域名，需要在推流地址中包含鉴权串。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "TaskProfile": {
+      "name": "TaskProfile",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "4IN_720P",
+      "description_cn": "任务计费配置，根据您的不同设置，进行收费。TaskProfile设置：\n\n- **4IN_720P**。\n\n- **2IN_720P**。\n\n- **1IN_720P**。\n\n- **4IN_360P**。\n\n- **2IN_360P**。\n\n- **1IN_360P**。\n\n- **Mixed_Audio**。\n\n- **1IN_Audio**。"
+    },
+    "CropMode": {
+      "name": "CropMode",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "视频的裁剪方式，默认值为**2**。\n\n- **0**：不保持比例铺满。\n\n- **1**：保持比例裁剪。\n\n- **2**：保持比例留边。"
+    },
+    "BackgroundColor": {
+      "name": "BackgroundColor",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "背景色RGB，默认是**0**（黑色）。"
+    },
+    "UserPanes": {
+      "name": "UserPanes",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "PaneId",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "UserId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "SourceType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {}
+}

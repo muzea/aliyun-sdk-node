@@ -1,0 +1,46 @@
+{
+  "name": "ActiveFlowLog",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ActiveFlowLog启动流日志。",
+  "abc_id": 134829,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-shanghai",
+      "description_cn": "流日志的地域ID。"
+    },
+    "FlowLogId": {
+      "name": "FlowLogId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "fl-l934tsa5504yuc****",
+      "description_cn": "流日志实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "CBBE5EBF-69C1-4395-B36B-26B7605F87EA"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "GetObject",
+  "protocol": "HTTP|HTTPS",
+  "method": "GET",
+  "path": "/[ObjectName]",
+  "timeout": null,
+  "reqFormat": {
+    "BucketName": {
+      "name": "BucketName",
+      "position": "domain",
+      "required": true
+    },
+    "ObjectName": {
+      "name": "ObjectName",
+      "position": "path",
+      "required": true
+    },
+    "response-content-type": {
+      "name": "response-content-type",
+      "position": "header",
+      "required": false
+    },
+    "response-content-language": {
+      "name": "response-content-language",
+      "position": "header",
+      "required": false
+    },
+    "response-expires": {
+      "name": "response-expires",
+      "position": "header",
+      "required": false
+    },
+    "response-cache-control": {
+      "name": "response-cache-control",
+      "position": "header",
+      "required": false
+    },
+    "response-content-disposition": {
+      "name": "response-content-disposition",
+      "position": "header",
+      "required": false
+    },
+    "response-content-encoding": {
+      "name": "response-content-encoding",
+      "position": "header",
+      "required": false
+    }
+  },
+  "res": {}
+}

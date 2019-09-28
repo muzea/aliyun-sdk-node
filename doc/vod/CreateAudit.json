@@ -1,0 +1,30 @@
+{
+  "name": "CreateAudit",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateAudit进行人工审核，可用于审核视频、音频等媒体信息。",
+  "abc_id": 130430,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AuditContent": {
+      "name": "AuditContent",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "[{\"VideoId\":\"93ab850b4f6f44eab54b6e91d24d81d4\",\"Status\":\"Normal\"},{\"VideoId\":\"43ab850b4f6f44eab54b6e91d24d81d3\",\"Status\":\"Blocked\",\"Reason\":\"色情视频\",\"Comment\":\"有露点镜\"}]",
+      "description_cn": "审核内容数组，一次最多支持20个视频的审核内容。需将数组转为字符串后作为参数值。"
+    }
+  },
+  "res": {}
+}

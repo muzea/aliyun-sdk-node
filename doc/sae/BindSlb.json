@@ -1,0 +1,69 @@
+{
+  "name": "BindSlb",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/pop/v1/sam/app/slb",
+  "summary_cn": "为应用绑定SLB",
+  "abc_id": 126360,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "0099b7be-5f5b-4512-a7fc-56049ef1aa6b",
+      "description_cn": "部署成功的目标应用ID"
+    },
+    "Internet": {
+      "name": "Internet",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[{\"port\":80,\"targetPort\":8080,\"protocol\":\"TCP\"}]",
+      "description_cn": "绑定公网SLB。例如: \\[{\"port\":80,\"targetPort\":8080,\"protocol\":\"TCP\"}\\]，表示将容器的8080端口通过slb的80端口暴露服务，协议为TCP，为空忽略。"
+    },
+    "Intranet": {
+      "name": "Intranet",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[{\"port\":80,\"targetPort\":8080,\"protocol\":\"TCP\"}]",
+      "description_cn": "绑定私网SLB。例如: \\[{\"port\":80,\"targetPort\":8080,\"protocol\":\"TCP\"}\\]，表示将容器的8080端口通过slb的80端口暴露服务，协议为TCP，为空忽略。"
+    },
+    "InternetSlbId": {
+      "name": "InternetSlbId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "IntranetSlbId": {
+      "name": "IntranetSlbId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

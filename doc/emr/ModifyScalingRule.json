@@ -1,0 +1,200 @@
+{
+  "name": "ModifyScalingRule",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "ScalingRuleId": {
+      "name": "ScalingRuleId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "ClusterId": {
+      "name": "ClusterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "HostGroupId": {
+      "name": "HostGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "RuleName": {
+      "name": "RuleName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "AdjustmentType": {
+      "name": "AdjustmentType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AdjustmentValue": {
+      "name": "AdjustmentValue",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Cooldown": {
+      "name": "Cooldown",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "LaunchTime": {
+      "name": "LaunchTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "LaunchExpirationTime": {
+      "name": "LaunchExpirationTime",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "RecurrenceType": {
+      "name": "RecurrenceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "RecurrenceValue": {
+      "name": "RecurrenceValue",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "RecurrenceEndTime": {
+      "name": "RecurrenceEndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SchedulerTrigger": {
+      "name": "SchedulerTrigger",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "LaunchTime",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "LaunchExpirationTime",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "RecurrenceType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "RecurrenceValue",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "RecurrenceEndTime",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "CloudWatchTrigger": {
+      "name": "CloudWatchTrigger",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "MetricName",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Period",
+          "type": "Integer",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Statistics",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "ComparisonOperator",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Threshold",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "EvaluationCount",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {}
+}

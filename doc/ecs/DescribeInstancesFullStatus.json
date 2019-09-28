@@ -1,0 +1,232 @@
+{
+  "name": "DescribeInstancesFullStatus",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeInstancesFullStatus查询一台或多台实例的全状态信息。全状态信息包括实例状态和实例系统事件状态，其中，实例状态为实例的生命周期状态，实例系统事件为维护事件的健康状态。",
+  "abc_id": 63964,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例所在地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "EventId": {
+      "name": "EventId",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Running",
+      "description_cn": "指定实例的生命周期状态。取值范围： \n- Starting：启动中 \n- Running：运行中 \n- Stopped：已停止 \n         "
+    },
+    "HealthStatus": {
+      "name": "HealthStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Maintaining",
+      "description_cn": "指定实例的健康状态。取值范围： \n- Impaired：服务损坏 \n- Warning：服务降级 \n- Maintaining：系统维护 \n- Initializing：初始化中 \n- InsufficientData：数据不足 \n- NotApplicable：不适用 \n\n以上参数取值均区分大小写。 "
+    },
+    "InstanceEventType": {
+      "name": "InstanceEventType",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "EventType": {
+      "name": "EventType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "InstanceExpiration.Stop",
+      "description_cn": "一个事件的类型。EventType参数只在未指定InstanceEventType.N参数时有效。取值范围： \n\n- SystemMaintenance.Reboot：因系统维护实例重启  \n- SystemFailure.Reboot：因系统错误实例重启  \n- InstanceFailure.Reboot：因实例错误实例重启  \n- InstanceExpiration.Stop：因包年包月期限到期，实例停止 \n- InstanceExpiration.Delete：因包年包月期限到期，实例释放 \n- AccountUnbalanced.Stop：因账号欠费，按量付费实例停止 \n- AccountUnbalanced.Delete：因账号欠费，按量付费实例释放 \n         "
+    },
+    "NotBefore.Start": {
+      "name": "NotBefore.Start",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2017-12-07T00:00:00Z",
+      "description_cn": "查询事件计划执行时间的开始时间。按照[ISO8601](~~25696~~)标准表示，并需要使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。"
+    },
+    "NotBefore.End": {
+      "name": "NotBefore.End",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2017-11-30T00:00:00Z",
+      "description_cn": "查询事件计划执行时间的结束时间。按照[ISO8601](~~25696~~)标准表示，并需要使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。"
+    },
+    "EventPublishTime.Start": {
+      "name": "EventPublishTime.Start",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2017-11-30T00:00:00Z",
+      "description_cn": "查询事件发布时间的开始时间。按照[ISO8601](~~25696~~)标准表示，并需要使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。"
+    },
+    "EventPublishTime.End": {
+      "name": "EventPublishTime.End",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2017-12-07T00:00:00Z",
+      "description_cn": "查询事件发布时间的结束时间。按照[ISO8601](~~25696~~)标准表示，并需要使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "查询结果的页码。取值范围：正整数\n\n默认值：1 "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "查询结果的分页大小。取值范围：1~100\n\n默认值：10 "
+    }
+  },
+  "res": {
+    "InstanceFullStatusSet": {
+      "InstanceFullStatusType": [
+        {
+          "InstanceId": "i-instance1",
+          "Status": {
+            "Code": 1,
+            "Name": "Running"
+          },
+          "HealthStatus": {
+            "Code": 0,
+            "Name": "Maintaining"
+          },
+          "ScheduledSystemEventSet": {
+            "ScheduledSystemEventType": [
+              {
+                "EventId": "e-event1",
+                "EventCycleStatus": {
+                  "Code": 24,
+                  "Name": "Scheduled"
+                },
+                "EventType": {
+                  "Code": 1,
+                  "Name": "SystemMaintenance.Reboot"
+                },
+                "EventPublishTime": "2017-11-30T06:32:31Z",
+                "NotBefore": "2017-12-01T06:32:31Z"
+              },
+              {
+                "EventId": "e-event2",
+                "EventCycleStatus": {
+                  "Code": 24,
+                  "Name": "Scheduled"
+                },
+                "EventType": {
+                  "Code": 34,
+                  "Name": "InstanceExpiration.Stop"
+                },
+                "EventPublishTime": "2017-11-30T00:00:00Z",
+                "NotBefore": "2017-12-07T00:00:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "InstanceId": "i-instance2",
+          "Status": {
+            "Code": 1,
+            "Name": "Running"
+          },
+          "HealthStatus": {
+            "Code": 64,
+            "Name": "Warning"
+          },
+          "ScheduledSystemEventSet": {
+            "ScheduledSystemEventType": [
+              {
+                "EventId": "e-event3",
+                "EventCycleStatus": {
+                  "Code": 24,
+                  "Name": "Scheduled"
+                },
+                "EventType": {
+                  "Code": 65,
+                  "Name": "SystemFailure.Reboot"
+                },
+                "EventPublishTime": "2017-11-30T06:32:31Z",
+                "NotBefore": "2017-12-01T06:32:31Z"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "PageSize": 10,
+    "PageNumber": 1,
+    "TotalCount": 2,
+    "RequestId": "AAC49D3E-ED6F-4F00-XXXX-377C551B1DD4"
+  }
+}

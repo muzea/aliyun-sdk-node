@@ -1,0 +1,21 @@
+{
+  "name": "GetBucketLifecycle",
+  "protocol": "HTTP|HTTPS",
+  "method": "GET",
+  "path": "/",
+  "timeout": null,
+  "reqFormat": {
+    "BucketName": {
+      "name": "BucketName",
+      "position": "domain",
+      "required": true
+    },
+    "lifecycle": {
+      "name": "lifecycle",
+      "position": "query",
+      "required": true,
+      "default": ""
+    }
+  },
+  "res": {}
+}

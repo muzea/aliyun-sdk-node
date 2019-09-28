@@ -1,0 +1,132 @@
+{
+  "name": "DescribePropertySoftwareDetail",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用该接口获取软件列表中一个软件的详细信息。",
+  "abc_id": 131011,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Remark": {
+      "name": "Remark",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0.0.0.0",
+      "description_cn": "服务器名称或IP。"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "xxxx",
+      "description_cn": "指定待查询的软件名称。"
+    },
+    "Path": {
+      "name": "Path",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "/etc/test",
+      "description_cn": "指定待查询的软件安装路径。"
+    },
+    "SoftwareVersion": {
+      "name": "SoftwareVersion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "11",
+      "description_cn": "指定待查询的软件版本信息。"
+    },
+    "Uuid": {
+      "name": "Uuid",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "50d213b4-3a35-427a-b8a5-04b0c7e1f4d2\"",
+      "description_cn": "指定待查询的资产UUID。"
+    },
+    "CurrentPage": {
+      "name": "CurrentPage",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "指定返回结果的当前页码。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "5",
+      "description_cn": " 指定列表每页显示数据条数 。"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "Propertys": [
+        {
+          "Path": "/etc/DIR_COLORS",
+          "InstanceName": null,
+          "Ip": null,
+          "Name": "aaa_base",
+          "Create": 1565539587000,
+          "InstallTime": "2017-09-07 10:54:49",
+          "Version": "11",
+          "Uuid": "4ef1115b-e423-4b4b-b930-a8be682df6ec"
+        },
+        {
+          "Path": "/etc/bash.bashrc",
+          "InstanceName": null,
+          "Ip": null,
+          "Name": "aaa_base",
+          "Create": 1565544175000,
+          "InstallTime": "2017-09-07 10:56:38",
+          "Version": "13.2+git20140911.61c1681",
+          "Uuid": "d276e6d9-72e5-477a-b4f8-6affcbdad858"
+        }
+      ],
+      "pageInfo": {
+        "Count": 2,
+        "PageSize": 2,
+        "TotalCount": 23,
+        "CurrentPage": 1
+      }
+    },
+    "success": true,
+    "requestId": null,
+    "message": "successful"
+  }
+}

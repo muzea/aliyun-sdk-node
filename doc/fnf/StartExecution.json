@@ -1,0 +1,51 @@
+{
+  "name": "StartExecution",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/",
+  "summary_cn": "调用StartExecution开始一个流程执行。",
+  "abc_id": 122628,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "FlowName": {
+      "name": "FlowName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "flow",
+      "description_cn": "开始执行的流程名称。"
+    },
+    "ExecutionName": {
+      "name": "ExecutionName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "exec",
+      "description_cn": "自定义执行的名称，如需输入请保证该流程下唯一。"
+    },
+    "Input": {
+      "name": "Input",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{}",
+      "description_cn": "本次执行的输入信息。"
+    }
+  },
+  "res": {}
+}

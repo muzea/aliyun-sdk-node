@@ -1,0 +1,78 @@
+{
+  "name": "CreateLayer7Rule",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateLayer7Rule创建7层转发规则。",
+  "abc_id": 91731,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn"
+    },
+    "RsType": {
+      "name": "RsType",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "源站类型，取值：\n\n- **0**：IP\n- **1**：域名"
+    },
+    "Rules": {
+      "name": "Rules",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "[{\"ProxyRules\":[{\"ProxyPort\":443,\"RealServers\":[\"1.1.1.1:443\"]}],\"ProxyType\":\"https\"},{\"ProxyRules\":[{\"ProxyPort\":80,\"RealServers\":[\"1.1.1.1:80\"]}],\"ProxyType\":\"http\"}]",
+      "description_cn": "传入7层规则Layer7Rule数组JSON串。具体结构描述如下：\n\n- **ProxyRules**，数组类型，必选，规则对象数组，包含以下元素：\n    - **ProxyPort**，Integer类型，必选，协议端口，取值：**80**、**443**。\n    - **RealServers**，[]String类型，必选，用户源站。例如，1.1.1.1:443。\n- **ProxyType**，String类型，必选，协议类型，取值：**http**、**https**、**websocket**、**websockets**。"
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Domain": {
+      "name": "Domain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "www.aliyun.com",
+      "description_cn": "要添加的域名。"
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "资源组ID。"
+    },
+    "InstanceIds": {
+      "name": "InstanceIds",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    }
+  },
+  "res": {}
+}

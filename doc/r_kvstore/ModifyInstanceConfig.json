@@ -1,0 +1,51 @@
+{
+  "name": "ModifyInstanceConfig",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyInstanceConfig修改Redis实例的配置参数。",
+  "abc_id": 61113,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Config": {
+      "name": "Config",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "{\"EvictionPolicy\":\"volatile-lru\",\"list-max-ziplist-entries\":512,\"zset-max-ziplist-entries\":128,\"hash-max-ziplist-entries\":512,\"hash-max-ziplist-value\":64,\"list-max-ziplist-value\":64,\"set-max-intset-entries\":512,\"zset-max-ziplist-value\":64}",
+      "description_cn": "实例的配置参数（JSON String），详情请参见[实例规格表](~~107984~~)。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "r-bp1xxxxxxxxxxxxx",
+      "description_cn": "目标实例的ID。"
+    }
+  },
+  "res": {
+    "requestId": "8D0C0AFC-E9CD-47A4-8395-5C31BF9B3E76"
+  }
+}

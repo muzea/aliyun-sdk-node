@@ -1,0 +1,60 @@
+{
+  "name": "ConfigLayer7CCTemplate",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ConfigLayer7CCTemplate为指定域名设置7层CC防护模式。",
+  "abc_id": 91777,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn"
+    },
+    "Template": {
+      "name": "Template",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "default",
+      "description_cn": "要应用的CC防护模式，取值：\n\n- **default**：正常\n- **gf_under_attack**：攻击紧急\n- **gf_sos_verify**：严格\n- **gf_sos_enhance**：超级严格"
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Domain": {
+      "name": "Domain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "www.aliyun.com",
+      "description_cn": "要操作的域名。"
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "资源组ID。"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,112 @@
+{
+  "name": "DescribeEvents",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeEvents接口查询RDS事件记录列表。",
+  "abc_id": 131025,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID，可以通过接口[DescribeRegions](~~26243~~)查看地域ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2019-06-11T15:00:00Z",
+      "description_cn": "查询开始时间。格式：<i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z（UTC时间）。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2019-06-12T15:00:00Z",
+      "description_cn": "查询结束时间，需要晚于开始时间。格式：<i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z（UTC时间）。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "每页记录数，取值：\n* **30**；\n* **50**；\n* **100**。\n\n默认值：**30**。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页码，取值：大于0且不超过Integer的最大值。\n\n默认值：**1**。"
+    }
+  },
+  "res": {
+    "EventItems": {
+      "EventItems": [
+        {
+          "EventName": "ModifySecurityIPList",
+          "EventUserType": "SYSTEM",
+          "ResourceType": "instance",
+          "EventPayload": "",
+          "EventTime": "2019-08-20T01:33:43Z",
+          "RegionId": "cn-hangzhou",
+          "EventRecordTime": "2019-08-20T01:33:57Z",
+          "EventReason": "FROM_SYSTEM",
+          "EventId": 11000048,
+          "ResourceName": "rm-bpxxxxxxx",
+          "EventType": "SecurityManagement"
+        },
+        {
+          "EventName": "ModifySecurityIPList",
+          "EventUserType": "SYSTEM",
+          "ResourceType": "instance",
+          "EventPayload": "",
+          "EventTime": "2019-08-20T01:33:43Z",
+          "RegionId": "cn-hangzhou",
+          "EventRecordTime": "2019-08-20T01:33:57Z",
+          "EventReason": "FROM_SYSTEM",
+          "EventId": 11000047,
+          "ResourceName": "rm-bpxxxxxxx",
+          "EventType": "SecurityManagement"
+        }
+      ]
+    },
+    "TotalRecordCount": 2,
+    "PageNumber": 1,
+    "PageSize": 2,
+    "RequestId": "B5FF9EE6-830E-4DBE-8498-9890A62D2875"
+  }
+}

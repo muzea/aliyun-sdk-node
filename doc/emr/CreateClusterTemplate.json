@@ -1,0 +1,514 @@
+{
+  "name": "CreateClusterTemplate",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 CreateClusterTemplate 接口创建一个 E-MapReduce 集模板，可用于数据开发初始化新集群。",
+  "abc_id": 100197,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "TemplateName": {
+      "name": "TemplateName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "templateName2",
+      "description_cn": "模版名称。"
+    },
+    "EmrVer": {
+      "name": "EmrVer",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "EMR-3.15.0",
+      "description_cn": "集群版本。"
+    },
+    "ClusterType": {
+      "name": "ClusterType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "HADOOP",
+      "description_cn": "集群类型。"
+    },
+    "HostGroup": {
+      "name": "HostGroup",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "HostGroupId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "HostGroupName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "HostGroupType",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "ClusterId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Comment",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "CreateType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ChargeType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Period",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "NodeCount",
+          "type": "Integer",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "InstanceType",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "DiskType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "DiskCapacity",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "DiskCount",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "SysDiskType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "SysDiskCapacity",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "AutoRenew",
+          "type": "Boolean",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "VSwitchId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "MultiInstanceTypes",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "ZoneId": {
+      "name": "ZoneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou-b",
+      "description_cn": "区域ID。"
+    },
+    "LogPath": {
+      "name": "LogPath",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "oss://bucket/path",
+      "description_cn": "OSS文件路径。"
+    },
+    "SecurityGroupId": {
+      "name": "SecurityGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sg-bp1id7ajv83kmqwq****",
+      "description_cn": "安全组ID。"
+    },
+    "IsOpenPublicIp": {
+      "name": "IsOpenPublicIp",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否开放公网IP。"
+    },
+    "SecurityGroupName": {
+      "name": "SecurityGroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sg-name",
+      "description_cn": "需要新创建的安全组的名字。"
+    },
+    "Period": {
+      "name": "Period",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "36",
+      "description_cn": "包年包月集群的过期时间。"
+    },
+    "AutoRenew": {
+      "name": "AutoRenew",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "自动续费。"
+    },
+    "VpcId": {
+      "name": "VpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc-bp1l4urd87xlh7i4bju4h",
+      "description_cn": "VPC ID。"
+    },
+    "VSwitchId": {
+      "name": "VSwitchId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vsw-bp10tvjyc77psy0z5h0ni",
+      "description_cn": "虚拟交换机的ID。"
+    },
+    "NetType": {
+      "name": "NetType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc",
+      "description_cn": "网络类型。"
+    },
+    "UserDefinedEmrEcsRole": {
+      "name": "UserDefinedEmrEcsRole",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "AliyunEmrEcsDefaultRole",
+      "description_cn": "调用ECS接口使用的权限名。"
+    },
+    "OptionSoftWareList": {
+      "name": "OptionSoftWareList",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "HighAvailabilityEnable": {
+      "name": "HighAvailabilityEnable",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否启用高可用。"
+    },
+    "UseLocalMetaDb": {
+      "name": "UseLocalMetaDb",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "使用本地Hive元数据库。"
+    },
+    "IoOptimized": {
+      "name": "IoOptimized",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否I/O优化。"
+    },
+    "SshEnable": {
+      "name": "SshEnable",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否开启集群机器的SSH服务。"
+    },
+    "InstanceGeneration": {
+      "name": "InstanceGeneration",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ecs-3",
+      "description_cn": "ECS实例分代。"
+    },
+    "MasterPwd": {
+      "name": "MasterPwd",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "pwd",
+      "description_cn": "Master机器密码。"
+    },
+    "KeyPairName": {
+      "name": "KeyPairName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "MetaStoreType": {
+      "name": "MetaStoreType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "MetaStoreConf": {
+      "name": "MetaStoreConf",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "BootstrapAction": {
+      "name": "BootstrapAction",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Name",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Path",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Arg",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "Configurations": {
+      "name": "Configurations",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[{\"classification\": \"core-site\",\"properties\": {\"fs.trash.interval\": \"61\"}},{\"classification\": \"hadoop-log4j\",\"properties\": {\"hadoop.log.file\": \"hadoop1.log\",\"hadoop.root.logger\": \"INFO\",\"a.b.c\": \"ABC\"}}]",
+      "description_cn": "软件自定义配置（集群启动前，可以指定一个JSON文件修改软件配置）。"
+    },
+    "EasEnable": {
+      "name": "EasEnable",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否启用高安全。"
+    },
+    "DepositType": {
+      "name": "DepositType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "HALF_MANAGED",
+      "description_cn": "集群托管类型。"
+    },
+    "MachineType": {
+      "name": "MachineType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ECS",
+      "description_cn": "无需设置，总是为ECS。"
+    },
+    "UseCustomHiveMetaDb": {
+      "name": "UseCustomHiveMetaDb",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否使用Hive统一元数据。"
+    },
+    "InitCustomHiveMetaDb": {
+      "name": "InitCustomHiveMetaDb",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "如果指定为**true**，Hive 的**hive-site**配置项**init.meta.db**会被设置为 **true**。"
+    },
+    "Config": {
+      "name": "Config",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "ServiceName",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "FileName",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "ConfigKey",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "ConfigValue",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Encrypt",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Replace",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "8CA40D40-2092-4A09-9F07-2F9C1399FB11",
+      "ClusterTemplateId": "CT-35498C56B3F12002"
+    },
+    "requestId": "8CA40D40-2092-4A09-9F07-2F9C1399FB11",
+    "successResponse": true
+  }
+}

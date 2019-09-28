@@ -1,0 +1,101 @@
+{
+  "name": "PublishVpnRouteEntry",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用PublishVpnRouteEntry发布VPN路由到VPC。",
+  "abc_id": 126794,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "VPN路由所在的地域。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。"
+    },
+    "VpnGatewayId": {
+      "name": "VpnGatewayId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "vpn-bp1a3kqjiiq9legfx****",
+      "description_cn": "VPN网关的ID。"
+    },
+    "RouteDest": {
+      "name": "RouteDest",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "10.0.0.0/24",
+      "description_cn": "VPN路由的目标网段。"
+    },
+    "NextHop": {
+      "name": "NextHop",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "vco-bp15oes1py4i66rmd****",
+      "description_cn": "VPN路由的下一跳。"
+    },
+    "RouteType": {
+      "name": "RouteType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "pbr",
+      "description_cn": "VPN路由类型，取值：\n\n- **pbr**：策略路由。\n\n- **dbr**：目的路由。"
+    },
+    "PublishVpc": {
+      "name": "PublishVpc",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "true",
+      "description_cn": "是否发布VPN路由到VPC，取值：\n\n- **true**：发布VPN路由到VPC。\n\n- **false**：不发布VPN路由到VPC。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "d7d24a21-f4ba-4454-9173-b3828dae492b\t",
+      "description_cn": "客户端token，用于保证请求的幂等性。\n\n由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符。"
+    }
+  },
+  "res": {
+    "RequestId": "CB2793A8-845F-444C-8E93-76F1BBDF9C78"
+  }
+}

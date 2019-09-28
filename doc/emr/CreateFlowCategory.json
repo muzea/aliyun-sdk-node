@@ -1,0 +1,65 @@
+{
+  "name": "CreateFlowCategory",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 CreateFlowCategory 接口创建目录文件夹",
+  "abc_id": 100873,
+  "timeout": 8000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "ProjectId": {
+      "name": "ProjectId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "F-48EB68215AEAE28D",
+      "description_cn": "项目ID。"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "myFolder",
+      "description_cn": "目录名称。"
+    },
+    "Type": {
+      "name": "Type",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "FLOW",
+      "description_cn": "类型: \n\n- FLOW（工作流）。\n- JOB（作业）。\n- ADHOC（临时查询）()"
+    },
+    "ParentId": {
+      "name": "ParentId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FC-AF08490649B8FD5E",
+      "description_cn": "父目录ID, 为空时则默认为**root**目录。"
+    }
+  },
+  "res": {
+    "RequestId": "2670BCFB-925D-4C3E-9994-8D12F7A9F538",
+    "Id": "FC-AF08490649B8FD5E"
+  }
+}

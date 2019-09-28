@@ -1,0 +1,114 @@
+{
+  "name": "DescribeAddressBook",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeAddressBook接口查询访问控制地址簿的详细信息。",
+  "abc_id": 138869,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.2.3.4",
+      "description_cn": "访问者源IP地址。"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "zh",
+      "description_cn": "指定请求和接收消息的语言类型。\n- **zh**：中文\n- **en**：英文"
+    },
+    "CurrentPage": {
+      "name": "CurrentPage",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "指定返回结果的当前页码。默认值为1。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "50",
+      "description_cn": "指定列表每页显示数据条数。可设置值最大为50。"
+    },
+    "Query": {
+      "name": "Query",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.2.3.0",
+      "description_cn": "搜索条件，指定待搜索地址簿信息。"
+    },
+    "GroupType": {
+      "name": "GroupType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ip",
+      "description_cn": "待查询地址簿类型, 可选值包括：\n\n- **ip**：IP地址簿\n\n- **domain**：域名地址簿\n\n- **port**：端口地址簿\n\n- **tag**：ECS标签地址簿"
+    },
+    "ContainPort": {
+      "name": "ContainPort",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "80",
+      "description_cn": "查询包含指定端口的地址簿, 仅当**GroupType**为**port**时有效。"
+    }
+  },
+  "res": {
+    "TotalCount": 123,
+    "PageSiNo": 1,
+    "PageSize": 1,
+    "RequestId": "B36F150A-1E27-43AA-B72C-D2AC712F09DA",
+    "Acls": [
+      {
+        "Description": "9-3IP地址簿",
+        "GroupType": "ip",
+        "AddressList": [
+          "1.1.1.1/32",
+          "0.0.0.0/0",
+          "10.0.0.217/32"
+        ],
+        "GroupName": "9-3IP地址簿",
+        "AutoAddTagEcs": 0,
+        "TagValue": "",
+        "TagRelation": "",
+        "TagList": [],
+        "ReferenceCount": 0,
+        "TagKey": "",
+        "AddressListCount": 3,
+        "GroupUuid": "a3c5e-018e-4c08-bea8-eafc95d1a54e",
+        "Global": 0
+      }
+    ]
+  }
+}

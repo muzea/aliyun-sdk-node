@@ -1,0 +1,95 @@
+{
+  "name": "DescribeMonitorItems",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeMonitorItems查询Redis监控项列表。",
+  "abc_id": 61106,
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "8BEB2618-9517-43F3-A233-E0B345125686",
+    "MonitorItems": {
+      "KVStoreMonitorItem": [
+        {
+          "Unit": "Counts/s",
+          "MonitorKey": "discard"
+        },
+        {
+          "Unit": "Counts/s",
+          "MonitorKey": "zcount"
+        },
+        {
+          "Unit": "Counts/s",
+          "MonitorKey": "select"
+        },
+        {
+          "Unit": "Counts/s",
+          "MonitorKey": "sunionstore"
+        },
+        {
+          "Unit": "Counts/s",
+          "MonitorKey": "zunionstore"
+        },
+        {
+          "Unit": "Counts/s",
+          "MonitorKey": "del"
+        },
+        {
+          "Unit": "Counts/s",
+          "MonitorKey": "zinterstore"
+        },
+        {
+          "Unit": "Counts/s",
+          "MonitorKey": "echo"
+        },
+        {
+          "Unit": "Counts/s",
+          "MonitorKey": "hscan"
+        },
+        {
+          "Unit": "Counts/s",
+          "MonitorKey": "psubscribe"
+        },
+        {
+          "Unit": "Counts/s",
+          "MonitorKey": "type"
+        },
+        {
+          "Unit": "Counts/s",
+          "MonitorKey": "sinterstore"
+        },
+        {
+          "Unit": "Counts/s",
+          "MonitorKey": "multi"
+        },
+        {
+          "Unit": "Counts/s",
+          "MonitorKey": "randomkey"
+        },
+        {
+          "Unit": "Counts/s",
+          "MonitorKey": "setex"
+        }
+      ]
+    }
+  }
+}

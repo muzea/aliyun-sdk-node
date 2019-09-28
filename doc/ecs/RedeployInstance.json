@@ -1,0 +1,60 @@
+{
+  "name": "RedeployInstance",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "当ECS实例收到系统事件通知时，调用RedeployInstance可以重新部署这台实例。",
+  "abc_id": 98687,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "i-bp1azkttqpldxgted****",
+      "description_cn": "处于运行中或者已停止状态的实例ID。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "ForceStop": {
+      "name": "ForceStop",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否强制停止运行中（Running）的实例。\n\n默认值：false。\n\n>强制停止等同于典型的服务器断电关机，实例操作系统中暂未写入磁盘的数据会丢失。建议您尽量对已停止实例做重新部署操作。"
+    }
+  },
+  "res": {
+    "RequestId": "1C488B66-B819-4D14-8711-C4EAAA13AC01",
+    "TaskId": "t-bp10e8orkpqm0lc74o8x"
+  }
+}

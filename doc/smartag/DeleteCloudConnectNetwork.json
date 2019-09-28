@@ -1,0 +1,46 @@
+{
+  "name": "DeleteCloudConnectNetwork",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteCloudConnectNetwork删除云连接网。",
+  "abc_id": 69810,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "云连接网的所属区域。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "CcnId": {
+      "name": "CcnId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "ccn-bxuau4ezctts2*****",
+      "description_cn": "云连接网ID。"
+    }
+  },
+  "res": {
+    "RequestId": "0BAAF2B9-88B8-4574-BDBE-102A90EE3FEE"
+  }
+}

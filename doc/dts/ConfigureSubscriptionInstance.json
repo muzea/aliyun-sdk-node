@@ -1,0 +1,168 @@
+{
+  "name": "ConfigureSubscriptionInstance",
+  "protocol": "HTTP",
+  "method": "POST",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SubscriptionInstanceId": {
+      "name": "SubscriptionInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "SubscriptionDataType.DDL": {
+      "name": "SubscriptionDataType.DDL",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "SubscriptionDataType.DML": {
+      "name": "SubscriptionDataType.DML",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "SubscriptionObject": {
+      "name": "SubscriptionObject",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "SubscriptionInstanceName": {
+      "name": "SubscriptionInstanceName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SourceEndpoint.InstanceType": {
+      "name": "SourceEndpoint.InstanceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SourceEndpoint.InstanceID": {
+      "name": "SourceEndpoint.InstanceID",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SourceEndpoint.IP": {
+      "name": "SourceEndpoint.IP",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SourceEndpoint.Port": {
+      "name": "SourceEndpoint.Port",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SourceEndpoint.UserName": {
+      "name": "SourceEndpoint.UserName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SourceEndpoint.Password": {
+      "name": "SourceEndpoint.Password",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SourceEndpoint.OracleSID": {
+      "name": "SourceEndpoint.OracleSID",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SourceEndpoint.DatabaseName": {
+      "name": "SourceEndpoint.DatabaseName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SourceEndpoint.OwnerID": {
+      "name": "SourceEndpoint.OwnerID",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SourceEndpoint.Role": {
+      "name": "SourceEndpoint.Role",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SubscriptionInstanceNetworkType": {
+      "name": "SubscriptionInstanceNetworkType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SubscriptionInstance.VPCId": {
+      "name": "SubscriptionInstance.VPCId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SubscriptionInstance.VSwitchId": {
+      "name": "SubscriptionInstance.VSwitchId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

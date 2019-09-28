@@ -1,0 +1,25 @@
+{
+  "name": "ListHistoryDeployVersion",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v5/app/deploy_history_version_list",
+  "timeout": 2000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

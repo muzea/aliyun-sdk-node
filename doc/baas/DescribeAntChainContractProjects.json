@@ -1,0 +1,80 @@
+{
+  "name": "DescribeAntChainContractProjects",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "获取联盟内合约工程的列表",
+  "abc_id": 127099,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "10",
+      "description_cn": "每页数量"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1",
+      "description_cn": "页面编号"
+    },
+    "ConsortiumId": {
+      "name": "ConsortiumId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "DV80nJXq",
+      "description_cn": "联盟ID"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "5EDAC16F-EA3E-4017-B223-D76220F985DF",
+      "Result": {
+        "Pagination": {
+          "TotalCount": 1,
+          "PageSize": 10,
+          "PageNumber": 1
+        },
+        "ContractProjects": [
+          {
+            "ConsortiumId": "DV80nJXq",
+            "ProjectName": "projectname",
+            "CreateTime": 1562847564000,
+            "ProjectVersion": "5",
+            "UpdateTime": 1563954499000,
+            "ProjectId": "2L9VK68g",
+            "ProjectDescription": ""
+          }
+        ]
+      }
+    },
+    "requestId": "5EDAC16F-EA3E-4017-B223-D76220F985DF",
+    "successResponse": true
+  }
+}

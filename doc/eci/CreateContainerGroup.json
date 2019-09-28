@@ -1,0 +1,760 @@
+{
+  "name": "CreateContainerGroup",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "SecurityGroupId": {
+      "name": "SecurityGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "VSwitchId": {
+      "name": "VSwitchId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "ContainerGroupName": {
+      "name": "ContainerGroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "Container": {
+      "name": "Container",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Image",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Name",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Cpu",
+          "type": "Float",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Memory",
+          "type": "Float",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "WorkingDir",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ImagePullPolicy",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Command",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        },
+        {
+          "name": "Arg",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        },
+        {
+          "name": "VolumeMount",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Port",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "EnvironmentVar",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ReadinessProbe.HttpGet.Path",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ReadinessProbe.HttpGet.Port",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ReadinessProbe.HttpGet.Scheme",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ReadinessProbe.InitialDelaySeconds",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ReadinessProbe.PeriodSeconds",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ReadinessProbe.SuccessThreshold",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ReadinessProbe.FailureThreshold",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ReadinessProbe.TimeoutSeconds",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ReadinessProbe.Exec.Command",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        },
+        {
+          "name": "LivenessProbe.HttpGet.Path",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "LivenessProbe.HttpGet.Port",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "LivenessProbe.HttpGet.Scheme",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "LivenessProbe.InitialDelaySeconds",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "LivenessProbe.PeriodSeconds",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "LivenessProbe.SuccessThreshold",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "LivenessProbe.FailureThreshold",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "LivenessProbe.TimeoutSeconds",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "LivenessProbe.Exec.Command",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        },
+        {
+          "name": "SecurityContext.Capability.Add",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        },
+        {
+          "name": "SecurityContext.ReadOnlyRootFilesystem",
+          "type": "Boolean",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "SecurityContext.RunAsUser",
+          "type": "Long",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ReadinessProbe.TcpSocket.Port",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "LivenessProbe.TcpSocket.Port",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Stdin",
+          "type": "Boolean",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "StdinOnce",
+          "type": "Boolean",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Tty",
+          "type": "Boolean",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Gpu",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "ZoneId": {
+      "name": "ZoneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "RestartPolicy": {
+      "name": "RestartPolicy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "ImageRegistryCredential": {
+      "name": "ImageRegistryCredential",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Server",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "UserName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Password",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "Volume": {
+      "name": "Volume",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Name",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "NFSVolume.Server",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "NFSVolume.Path",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "NFSVolume.ReadOnly",
+          "type": "Boolean",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ConfigFileVolume.ConfigFileToPath",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Type",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "EmptyDirVolume.Medium",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ConfigFileVolume.DefaultModel",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "DiskVolume.DiskId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "DiskVolume.FsType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "EipInstanceId": {
+      "name": "EipInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "InitContainer": {
+      "name": "InitContainer",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Name",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Image",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Cpu",
+          "type": "Float",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Memory",
+          "type": "Float",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "WorkingDir",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ImagePullPolicy",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Command",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        },
+        {
+          "name": "Arg",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        },
+        {
+          "name": "VolumeMount",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Port",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "EnvironmentVar",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "SecurityContext.Capability.Add",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        },
+        {
+          "name": "SecurityContext.ReadOnlyRootFilesystem",
+          "type": "Boolean",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "SecurityContext.RunAsUser",
+          "type": "Long",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Gpu",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "DnsConfig.NameServer": {
+      "name": "DnsConfig.NameServer",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "DnsConfig.Search": {
+      "name": "DnsConfig.Search",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "DnsConfig.Option": {
+      "name": "DnsConfig.Option",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Name",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "Cpu": {
+      "name": "Cpu",
+      "type": "Float",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "Memory": {
+      "name": "Memory",
+      "type": "Float",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "DnsPolicy": {
+      "name": "DnsPolicy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "HostAliase": {
+      "name": "HostAliase",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Ip",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Hostname",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        }
+      ]
+    },
+    "Arn": {
+      "name": "Arn",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "RoleArn",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "RoleType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "AssumeRoleFor",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "InstanceType": {
+      "name": "InstanceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "SecurityContext.Sysctl": {
+      "name": "SecurityContext.Sysctl",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Name",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "SlsEnable": {
+      "name": "SlsEnable",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "ImageSnapshotId": {
+      "name": "ImageSnapshotId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "RamRoleName": {
+      "name": "RamRoleName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "NtpServer": {
+      "name": "NtpServer",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    }
+  },
+  "res": {}
+}

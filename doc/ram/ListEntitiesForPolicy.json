@@ -1,0 +1,88 @@
+{
+  "name": "ListEntitiesForPolicy",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ListEntitiesForPolicy接口列出引用权限策略的实体。",
+  "abc_id": 28731,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "PolicyType": {
+      "name": "PolicyType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "Custom",
+      "description_cn": "指定权限策略的类型, 取值为：`System`或`Custom`。"
+    },
+    "PolicyName": {
+      "name": "PolicyName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "OSS-Administrator",
+      "description_cn": "权限策略名称。"
+    }
+  },
+  "res": {
+    "RequestId": "7B8A4E7D-6CFF-471D-84DF-195A7A241ECB",
+    "Groups": {
+      "Group": [
+        {
+          "GroupName": "QA-Team",
+          "Comments": "测试团队",
+          "AttachDate": "2015-01-23T12:33:18Z"
+        },
+        {
+          "GroupName": "Dev-Team",
+          "Comments": "开发团队",
+          "AttachDate": "2015-02-18T17:22:08Z"
+        }
+      ]
+    },
+    "Users": {
+      "User": [
+        {
+          "UserId": "1227489245380721",
+          "UserName": "zhangqiang",
+          "DisplayName": "张强",
+          "AttachDate": "2015-01-23T12:33:18Z"
+        },
+        {
+          "UserId": "1406498224724456",
+          "UserName": "lili",
+          "DisplayName": "李丽",
+          "AttachDate": "2015-02-18T17:22:08Z"
+        }
+      ]
+    },
+    "Roles": {
+      "Role": [
+        {
+          "RoleId": "1227489245380721",
+          "RoleName": "ECSAdmin",
+          "Arn": "acs:ram::1234567890123456:role/ECSAdmin",
+          "Description": "ECS管理角色",
+          "AttachDate": "2015-01-23T12:33:18Z"
+        },
+        {
+          "RoleId": "1406498224724456",
+          "RoleName": "OSSReadonlyAccess",
+          "Arn": "acs:ram::1234567890123456:role/OSSReadonlyAccess",
+          "Description": "OSS只读访问角色",
+          "AttachDate": "2015-02-18T17:22:08Z"
+        }
+      ]
+    }
+  }
+}

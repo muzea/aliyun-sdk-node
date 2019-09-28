@@ -1,0 +1,65 @@
+{
+  "name": "DescribeInstanceCrossBackupPolicy",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeInstanceCrossBackupPolicy接口查询跨地域备份设置。",
+  "abc_id": 121732,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID，可以通过接口[DescribeRegions](~~26243~~)查看地域ID。"
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "rm-uf6wjk5xxxxxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "DBInstanceStatusDesc": "ACTIVATION",
+    "LockMode": "Unlock",
+    "BackupEnabledTime": "2019-06-12T05:44:21Z",
+    "CrossBackupType": "1",
+    "LogBackupEnabled": "Enable",
+    "BackupEnabled": "Enable",
+    "RetentType": 1,
+    "DBInstanceId": "rm-bpxxxxx",
+    "DBInstanceDescription": "",
+    "Retention": 15,
+    "Engine": "mysql",
+    "LogBackupEnabledTime": "2019-06-12T05:44:21Z",
+    "CrossBackupRegion": "cn-shanghai",
+    "StorageOwner": "rds",
+    "RegionId": "cn-hangzhou",
+    "RequestId": "CB7667B2-72C8-497B-9BD8-3B343CEF51AB",
+    "EngineVersion": "5.6",
+    "StorageType": "oss",
+    "Endpoint": "",
+    "DBInstanceStatus": "1"
+  }
+}

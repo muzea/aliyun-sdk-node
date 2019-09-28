@@ -1,0 +1,66 @@
+{
+  "name": "ListFlowProjectUser",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 ListFlowProjectUser 接口查询项目用户列表",
+  "abc_id": 101216,
+  "timeout": 8000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "ProjectId": {
+      "name": "ProjectId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "FP-3535FE0BE5224A47",
+      "description_cn": "项目ID。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页码。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "每页数量。"
+    }
+  },
+  "res": {
+    "PageSize": 10,
+    "RequestId": "E2253FD1-33E7-4299-B58F-02BB65338E01",
+    "PageNumber": 1,
+    "Total": 1,
+    "Users": {
+      "User": [
+        {
+          "UserName": "mingbo-flow",
+          "OwnerId": "1250460021754461",
+          "ProjectId": "FP-E3F1523F8FC1D2E6"
+        }
+      ]
+    }
+  }
+}

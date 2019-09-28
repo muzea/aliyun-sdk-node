@@ -1,0 +1,57 @@
+{
+  "name": "DisassociateFlowLog",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DisassociateFlowLog解绑智能接入网关实例。",
+  "abc_id": 134872,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-shanghai",
+      "description_cn": "流日志的地域ID。"
+    },
+    "FlowLogId": {
+      "name": "FlowLogId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "fl-l934tsa5504yuc****",
+      "description_cn": "流日志实例ID。"
+    },
+    "SmartAGId": {
+      "name": "SmartAGId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "sag-0v3pmd7qpnvx5f****",
+      "description_cn": "智能接入网关实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "DD864F79-FDAC-4909-AFAF-84D1DCAF30A3"
+  }
+}

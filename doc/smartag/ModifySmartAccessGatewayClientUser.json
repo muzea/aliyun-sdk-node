@@ -1,0 +1,71 @@
+{
+  "name": "ModifySmartAccessGatewayClientUser",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifySmartAccessGatewayClientUser修改用户带宽。",
+  "abc_id": 120713,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-shanghai",
+      "description_cn": "智能接入网关APP实例地域。"
+    },
+    "SmartAGId": {
+      "name": "SmartAGId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "sag-kdhej*******8",
+      "description_cn": "智能接入网关APP实例ID。"
+    },
+    "UserName": {
+      "name": "UserName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "doctest",
+      "description_cn": "用户名，同一个智能接入网关APP实例下的用户名不可以重复。\n\n用户名和密码相互依赖，若指定用户名则必须指定密码，反之，若指定密码则必须指定用户名。"
+    },
+    "Bandwidth": {
+      "name": "Bandwidth",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2",
+      "description_cn": "带宽，单位Kbps，最大2000Kbps。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "5F0078B5-8AAD-4B53-8351-4C91B8EA528A",
+    "UserMail": "dd@example.com",
+    "UserName": "dd@example.com",
+    "Bandwidth": 1
+  }
+}

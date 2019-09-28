@@ -1,0 +1,15 @@
+{
+  "name": "PostObject",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST",
+  "path": "/[ObjectName]",
+  "timeout": null,
+  "reqFormat": {
+    "BucketName": {
+      "name": "BucketName",
+      "position": "domain",
+      "required": true
+    }
+  },
+  "res": {}
+}

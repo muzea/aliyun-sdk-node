@@ -1,0 +1,78 @@
+{
+  "name": "ModifyPersistenceTimeOut",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyPersistenceTimeOut接口配置会话保持时间。",
+  "abc_id": 92118,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Ip": {
+      "name": "Ip",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": "要操作的高防实例IP。"
+    },
+    "FrontPort": {
+      "name": "FrontPort",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "255",
+      "description_cn": "转发端口。"
+    },
+    "ConfigJson": {
+      "name": "ConfigJson",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "{\"persistence_timeout\":400}",
+      "description_cn": "会话保持时间配置内容（JSON字符串格式），具体结构描述如下：\n\n- **persistence_timeout**，Integer类型，必选，设置会话保持时间，单位为秒，取值范围：30-3,600。\n\n    > 此处的参数名以小写开头。"
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": ""
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn",
+      "description_cn": ""
+    },
+    "LbId": {
+      "name": "LbId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "xxxxxxx-xxxx-xxxx-xxxxxxxx",
+      "description_cn": "高防IP策略修改标识。"
+    }
+  },
+  "res": {}
+}

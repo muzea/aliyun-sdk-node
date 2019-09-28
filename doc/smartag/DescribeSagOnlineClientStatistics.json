@@ -1,0 +1,52 @@
+{
+  "name": "DescribeSagOnlineClientStatistics",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeSagOnlineClientStatistics查询当前用户智能接入网关APP实例在线连接数据。",
+  "abc_id": 120717,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-shanghai",
+      "description_cn": "智能接入网关APP实例所在的地域。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "SmartAGIds": {
+      "name": "SmartAGIds",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    }
+  },
+  "res": {
+    "RequestId": "9EC839B6-0EA5-4F19-A4B7-A9E465D057AE",
+    "SagStatistics": {
+      "Statistics": [
+        {
+          "SmartAGId": "sag-va03wf4l4idaj00***",
+          "OnlineCount": 0
+        }
+      ]
+    }
+  }
+}

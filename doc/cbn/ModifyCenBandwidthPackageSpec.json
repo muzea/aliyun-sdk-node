@@ -1,0 +1,52 @@
+{
+  "name": "ModifyCenBandwidthPackageSpec",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyCenBandwidthPackageSpec更改带宽包的带宽值。",
+  "abc_id": 65940,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CenBandwidthPackageId": {
+      "name": "CenBandwidthPackageId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cenbwp-4c2zaavbvh5x****",
+      "description_cn": "带宽包的ID。"
+    },
+    "Bandwidth": {
+      "name": "Bandwidth",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2",
+      "description_cn": "带宽包的带宽峰值，单位为Mbps，最小为**2**。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "0C2EE7A8-74D4-4081-8236-CEBDE3BBCF50"
+  }
+}

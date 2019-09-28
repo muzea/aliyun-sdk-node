@@ -1,0 +1,37 @@
+{
+  "name": "DescribeDcdnDomainCname",
+  "protocol": "HTTP|HTTPS",
+  "method": "GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDcdnDomainCname检测用户是否完成Cname，支持多个域名。",
+  "abc_id": 131078,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "需要接入CDN的域名，多个域名以逗号（,）分隔。\n"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {}
+}

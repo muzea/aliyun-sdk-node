@@ -1,0 +1,117 @@
+{
+  "name": "DescribeAppEnvs",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v1/wam/appEnv",
+  "summary_cn": "调用DescribeAppEnvs查询符合条件的部署环境。",
+  "abc_id": 127730,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "wa-5cef9f96dd351b61df0*****",
+      "description_cn": "环境所属的应用ID"
+    },
+    "EnvId": {
+      "name": "EnvId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "we-5d22b3816f48e5478fd*****",
+      "description_cn": "环境ID"
+    },
+    "IncludeTerminated": {
+      "name": "IncludeTerminated",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否包含已释放的环境"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "每页查询数据量，默认为10条"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "查询页数，默认为第1页"
+    },
+    "EnvName": {
+      "name": "EnvName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Test1",
+      "description_cn": "环境名称"
+    },
+    "EnvSearch": {
+      "name": "EnvSearch",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Test",
+      "description_cn": "环境搜索关键字"
+    },
+    "RecentUpdated": {
+      "name": "RecentUpdated",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否查询最近变更环境，默认为false"
+    },
+    "StackSearch": {
+      "name": "StackSearch",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Java",
+      "description_cn": "技术栈搜索关键字"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,93 @@
+{
+  "name": "ListClusterServiceConfigHistory",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 ListClusterServiceConfigHistory 接口查询集群指定服务的配置修改历史信息的接口。",
+  "abc_id": 100717,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "区域ID。"
+    },
+    "ClusterId": {
+      "name": "ClusterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "C-F32FB31D82954C64",
+      "description_cn": "集群ID。"
+    },
+    "ServiceName": {
+      "name": "ServiceName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "TEZ",
+      "description_cn": "服务名称。"
+    },
+    "ConfigVersion": {
+      "name": "ConfigVersion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "配置的版本。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "分页查询的查询页码。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "100",
+      "description_cn": "分页查询的每页记录数。"
+    }
+  },
+  "res": {
+    "TotalCount": 1,
+    "ConfigHistoryList": {
+      "ConfigHistory": [
+        {
+          "ConfigFileName": "tez-site",
+          "Comment": "xxx",
+          "ServiceName": "TEZ",
+          "OldValue": "640",
+          "ConfigVersion": "1543320502944",
+          "CreateTime": 1543320503000,
+          "Author": "1250460021754461",
+          "NewValue": "1280",
+          "Applied": true,
+          "ConfigItemName": "tez.am.resource.memory.mb"
+        }
+      ]
+    },
+    "PageSize": 500,
+    "RequestId": "8CC97161-4A0C-4EDB-9799-F0A51C40B070",
+    "PageNumber": 1
+  }
+}

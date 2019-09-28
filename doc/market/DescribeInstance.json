@@ -1,0 +1,52 @@
+{
+  "name": "DescribeInstance",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "OrderType": {
+      "name": "OrderType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "BeganOn": 1531191563000,
+    "ProductCode": "cmgj024069",
+    "InstanceId": "6227091",
+    "OrderId": "202249400220415",
+    "ProductSkuCode": "prepay",
+    "EndOn": 1533916800000,
+    "Status": "OPENING",
+    "ProductType": "APP",
+    "CreatedOn": 1531191676000,
+    "ProductName": "saas升级测试",
+    "SupplierName": "深红科技股份有限公司（云市场）"
+  }
+}

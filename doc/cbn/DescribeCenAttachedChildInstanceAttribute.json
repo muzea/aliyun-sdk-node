@@ -1,0 +1,82 @@
+{
+  "name": "DescribeCenAttachedChildInstanceAttribute",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCenAttachedChildInstanceAttribute查看加载到CEN中的网络实例（VPC，VBR，CCN）的详细信息。",
+  "abc_id": 95048,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CenId": {
+      "name": "CenId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cen-3cub0ges01xmvm****",
+      "description_cn": "指定云企业网实例的ID。    "
+    },
+    "ChildInstanceId": {
+      "name": "ChildInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "vpc-sa17uy0itvgxiq9gb****",
+      "description_cn": "要查询的已加载网络实例的ID。           "
+    },
+    "ChildInstanceType": {
+      "name": "ChildInstanceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "VPC",
+      "description_cn": "已加载的网络实例的类型。"
+    },
+    "ChildInstanceRegionId": {
+      "name": "ChildInstanceRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "已加载网络实例的 Region ID。                           "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "Status": "Attached",
+    "ChildInstanceOwnerId": "123456789",
+    "ChildInstanceId": "vpc-2zebdboka7d7t37vo****",
+    "RequestId": "ADD98358-D265-4060-87CB-A2427F5A8944",
+    "ChildInstanceName": "defaultvpc",
+    "ChildInstanceRegionId": "cn-beijing",
+    "CenId": "cen-5mv960yjhja0dh****",
+    "ChildInstanceAttachTime": "2018-07-30T07:53Z",
+    "ChildInstanceType": "VPC"
+  }
+}

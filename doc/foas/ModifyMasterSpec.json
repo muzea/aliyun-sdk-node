@@ -1,0 +1,44 @@
+{
+  "name": "ModifyMasterSpec",
+  "protocol": "HTTPS",
+  "method": "PUT",
+  "path": "/api/v2/clusters/[clusterId]/specification",
+  "summary_cn": "修改集群master规格",
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Header",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou"
+    },
+    "clusterId": {
+      "name": "clusterId",
+      "type": "String",
+      "position": "Path",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cmy99ugusuco66x9qc6knqms",
+      "description_cn": "集群ID"
+    },
+    "masterTargetModel": {
+      "name": "masterTargetModel",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Ecs_4c16g",
+      "description_cn": "master机器型号"
+    }
+  },
+  "res": {}
+}

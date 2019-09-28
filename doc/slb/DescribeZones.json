@@ -1,0 +1,140 @@
+{
+  "name": "DescribeZones",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeZones查询指定地域的可用区信息。",
+  "abc_id": 27585,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "所属地域ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "",
+      "description_cn": ""
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "3FF183FF-F4AA-40E8-8B5D-90788C6799C2",
+    "Zones": {
+      "Zone": [
+        {
+          "SlaveZones": {
+            "SlaveZone": [
+              {
+                "ZoneId": "cn-hangzhou-g",
+                "LocalName": "华东 1 可用区 G"
+              },
+              {
+                "ZoneId": "cn-hangzhou-d",
+                "LocalName": "华东 1 可用区 D"
+              }
+            ]
+          },
+          "ZoneId": "cn-hangzhou-b",
+          "LocalName": "华东 1 可用区 B"
+        },
+        {
+          "SlaveZones": {
+            "SlaveZone": [
+              {
+                "ZoneId": "cn-hangzhou-e",
+                "LocalName": "华东 1 可用区 E"
+              }
+            ]
+          },
+          "ZoneId": "cn-hangzhou-d",
+          "LocalName": "华东 1 可用区 D"
+        },
+        {
+          "SlaveZones": {
+            "SlaveZone": [
+              {
+                "ZoneId": "cn-hangzhou-f",
+                "LocalName": "华东 1 可用区 F"
+              },
+              {
+                "ZoneId": "cn-hangzhou-d",
+                "LocalName": "华东 1 可用区 D"
+              }
+            ]
+          },
+          "ZoneId": "cn-hangzhou-e",
+          "LocalName": "华东 1 可用区 E"
+        },
+        {
+          "SlaveZones": {
+            "SlaveZone": [
+              {
+                "ZoneId": "cn-hangzhou-e",
+                "LocalName": "华东 1 可用区 E"
+              }
+            ]
+          },
+          "ZoneId": "cn-hangzhou-f",
+          "LocalName": "华东 1 可用区 F"
+        },
+        {
+          "SlaveZones": {
+            "SlaveZone": [
+              {
+                "ZoneId": "cn-hangzhou-h",
+                "LocalName": "华东 1 可用区 H"
+              },
+              {
+                "ZoneId": "cn-hangzhou-b",
+                "LocalName": "华东 1 可用区 B"
+              }
+            ]
+          },
+          "ZoneId": "cn-hangzhou-g",
+          "LocalName": "华东 1 可用区 G"
+        },
+        {
+          "SlaveZones": {
+            "SlaveZone": [
+              {
+                "ZoneId": "cn-hangzhou-g",
+                "LocalName": "华东 1 可用区 G"
+              }
+            ]
+          },
+          "ZoneId": "cn-hangzhou-h",
+          "LocalName": "华东 1 可用区 H"
+        }
+      ]
+    }
+  }
+}

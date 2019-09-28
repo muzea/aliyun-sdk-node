@@ -1,0 +1,120 @@
+{
+  "name": "DescribeEventRuleList",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|PUT|GET",
+  "path": "/",
+  "summary_cn": "查询事件报警的列表。",
+  "abc_id": 114996,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "NamePrefix": {
+      "name": "NamePrefix",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "报警规则名前缀，支持模糊搜索。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "当前页码，默认1。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "每页显示记录条数。"
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "12345",
+      "description_cn": "应用分组ID。"
+    }
+  },
+  "res": {
+    "Datapoints": {
+      "EventRule": [
+        {
+          "Name": "aaabbb",
+          "State": "ENABLED",
+          "EventPattern": {
+            "EventTypeList": {
+              "EventTypeList": [
+                "Exception"
+              ]
+            },
+            "Product": "CloudMonitor",
+            "LevelList": {
+              "LevelList": [
+                "*"
+              ]
+            },
+            "NameList": {
+              "NameList": [
+                "Alert_SendShortMessageFailed_QuotaReached",
+                "Group_AddResourcesFailed_QuotaReached",
+                "Agent_Status_Stopped",
+                "Agent_Status_Running"
+              ]
+            }
+          },
+          "EventType": "SYSTEM"
+        },
+        {
+          "Name": "default_group_event_rule_3384581",
+          "Description": "Default group event rule",
+          "State": "ENABLED",
+          "EventPattern": {
+            "Product": "*",
+            "LevelList": {
+              "LevelList": [
+                "CRITICAL",
+                "WARN"
+              ]
+            },
+            "NameList": {
+              "NameList": [
+                "*"
+              ]
+            }
+          },
+          "EventType": "SYSTEM",
+          "GroupId": "338****"
+        }
+      ]
+    },
+    "RequestId": "D0E6D82B-16B5-422A-8136-EE5BDC01E415",
+    "Success": true,
+    "Code": "200",
+    "Total": 20
+  }
+}

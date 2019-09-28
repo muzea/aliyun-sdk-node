@@ -1,0 +1,29 @@
+{
+  "name": "GetResourceTypeTemplate",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/V2/GetResourceTypeTemplate",
+  "summary_cn": "根据资源类型查询该资源的模板。",
+  "abc_id": 133843,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ResourceType": {
+      "name": "ResourceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "ALIYUN::ECS::VPC",
+      "description_cn": "资源类型。"
+    }
+  },
+  "res": {}
+}

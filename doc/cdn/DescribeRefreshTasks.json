@@ -1,0 +1,151 @@
+{
+  "name": "DescribeRefreshTasks",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeRefreshTasks查询刷新、预热状态是否在全网生效。",
+  "abc_id": 91158,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "TaskId": {
+      "name": "TaskId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1234321",
+      "description_cn": "按任务ID查询刷新状态。"
+    },
+    "ObjectPath": {
+      "name": "ObjectPath",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "http://aaa.com/1.txt",
+      "description_cn": "按路径查询，准确匹配。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "取得第几页 取值范围为：**1**~**100000**。"
+    },
+    "ObjectType": {
+      "name": "ObjectType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "file",
+      "description_cn": "任务类型：\n\n- **file**\n\n- **path**\n\n- **preload**\n\n\n当指定**DomainName**或**TaskStatus**时，该参数为必选项。"
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "www.yourdomain.com",
+      "description_cn": "域名。"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Complete",
+      "description_cn": "任务状态：\n\n- **Complete**：完成。\n\n- **Refreshing**：刷新中。\n\n- **Failed**：刷新失败。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "分页大小，默认**20**，最大**50**。取值：**1**~**50**之前的任意整数。"
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2017-12-21T08:00:00:00Z",
+      "description_cn": "开始时间。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2017-12-22T08:00:00:00Z",
+      "description_cn": "结束时间。"
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "your resourceGroupId",
+      "description_cn": "资源组ID。"
+    }
+  },
+  "res": {
+    "Tasks": {
+      "CDNTask": [
+        {
+          "CreationTime": "2014-11-27T08:23:22Z",
+          "ObjectPath": "http://aaa.com/1.txt",
+          "Status": "Complete",
+          "TaskId": "704225667",
+          "ObjectType": "file",
+          "Process": "100%"
+        },
+        {
+          "CreationTime": "2014-11-27T08:18:38Z",
+          "ObjectPath": "http://bbb.com/1.txt",
+          "Status": "Complete",
+          "TaskId": "704222904",
+          "ObjectType": "file",
+          "Process": "100%"
+        }
+      ]
+    },
+    "PageNumber": 1,
+    "PageSize": 10,
+    "TotalCount": 2,
+    "RequestId": "174F6032-AA26-470D-B90E-36F0EB205BEE"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "DeleteFabricChaincode",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteFabricChaincode删除错误的链码。",
+  "abc_id": 127868,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "ChaincodeId": {
+      "name": "ChaincodeId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "code-sacc-1pr09q7jm****",
+      "description_cn": "链码ID"
+    }
+  },
+  "res": {
+    "RequestId": "1890FA4F-067A-4CE9-AC9B-2BD2E58FB5D3",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

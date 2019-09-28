@@ -1,0 +1,102 @@
+{
+  "name": "DescribeHighPriorityIp",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeHighPriorityIp接口查询指定的实例中目标IP地址或域名列表，并返回指定地址的节点信息。",
+  "abc_id": 99233,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域，和UIS实例上的region保持一致。"
+    },
+    "HighPriorityIp": {
+      "name": "HighPriorityIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "[{'Destination': '221.6.4.XX','AreaID':'cn-shanghai'},{'Destination': 'www.microsoft.com'}]",
+      "description_cn": "目标IP地址或域名，用逗号分隔。格式如下:\n\n`[{'Destination': 'IP','AreaID':'regionID'},{'Destination': 'domain'}]`"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "UisId": {
+      "name": "UisId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "UIS-xxxsjkn8dtiej7bbb****",
+      "description_cn": "要查询的目标地址信息的实例ID。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "列表的页码，默认值为**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时每页的行数，最大值为**50**，默认值为**10**。"
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 1,
+    "HighPriorityIps": {
+      "HighPriorityIp": [
+        {
+          "Ip": "10.45.3.X",
+          "State": "probing",
+          "DynamicOffAreaId": "",
+          "StaticOffAreaId": "cn-beijing",
+          "BoardAreaId": "cn-shanghai"
+        }
+      ]
+    },
+    "PageSize": 10,
+    "RequestId": "A35AEC0B-1820-4969-9A2E-6BFC1ADC9936"
+  }
+}

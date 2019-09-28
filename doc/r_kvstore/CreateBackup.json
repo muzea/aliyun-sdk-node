@@ -1,0 +1,42 @@
+{
+  "name": "CreateBackup",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateBackup为Redis实例创建数据备份。",
+  "abc_id": 61075,
+  "timeout": 500000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "r-bp1xxxxxxxxxxxxx",
+      "description_cn": "目标实例的ID。"
+    }
+  },
+  "res": {
+    "RequestId": "2D719BD9-A536-4D8B-BEA9-CD299DE2AE1B",
+    "BackupJobID": "1111111"
+  }
+}

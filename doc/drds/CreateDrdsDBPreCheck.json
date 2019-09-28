@@ -1,0 +1,141 @@
+{
+  "name": "CreateDrdsDBPreCheck",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true
+    },
+    "DrdsInstanceId": {
+      "name": "DrdsInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "DbName": {
+      "name": "DbName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Encode": {
+      "name": "Encode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Password": {
+      "name": "Password",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "RdsInstance": {
+      "name": "RdsInstance",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "Type": {
+      "name": "Type",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "DbInstType": {
+      "name": "DbInstType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "RdsSuperAccount": {
+      "name": "RdsSuperAccount",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "DbInstanceId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "AccountName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Password",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "InstDbName": {
+      "name": "InstDbName",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "DbInstanceId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ShardDbName",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        }
+      ]
+    },
+    "DbInstanceIsCreating": {
+      "name": "DbInstanceIsCreating",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AccountName": {
+      "name": "AccountName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,193 @@
+{
+  "name": "DescribeClusterService",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 DescribeClusterService 接口，查询集群当前安装服务的详情信息。",
+  "abc_id": 100571,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "ClusterId": {
+      "name": "ClusterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "C-F32FB31D8295****",
+      "description_cn": "待查询的集群ID。"
+    },
+    "ServiceName": {
+      "name": "ServiceName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "HDFS",
+      "description_cn": "待查询的服务名称，例如：HDFS、YARN。"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "7A23195A-BC03-4D82-BED5-90ED0D36F002",
+      "ServiceInfo": {
+        "NeedRestartHostIdList": {
+          "Service": []
+        },
+        "ServiceActionList": {
+          "ServiceAction": [
+            {
+              "ActionName": "CONFIGURE",
+              "ServiceName": "YARN",
+              "DisplayName": "CONFIGURE All Components",
+              "ComponentName": "ALL COMPONENTS"
+            },
+            {
+              "ActionName": "START",
+              "ServiceName": "YARN",
+              "DisplayName": "START All Components",
+              "ComponentName": "ALL COMPONENTS"
+            },
+            {
+              "ActionName": "STOP",
+              "ServiceName": "YARN",
+              "DisplayName": "STOP All Components",
+              "ComponentName": "ALL COMPONENTS"
+            },
+            {
+              "ActionName": "RESTART",
+              "ServiceName": "YARN",
+              "DisplayName": "RESTART All Components",
+              "ComponentName": "ALL COMPONENTS"
+            },
+            {
+              "ActionName": "RESTART",
+              "ServiceName": "YARN",
+              "DisplayName": "RESTART NodeManager",
+              "ComponentName": "NodeManager"
+            },
+            {
+              "ActionName": "RESTART",
+              "ServiceName": "YARN",
+              "DisplayName": "RESTART WebAppProxyServer",
+              "ComponentName": "WebAppProxyServer"
+            },
+            {
+              "ActionName": "RESTART",
+              "ServiceName": "YARN",
+              "DisplayName": "RESTART JobHistory",
+              "ComponentName": "JobHistory"
+            },
+            {
+              "ActionName": "RESTART",
+              "ServiceName": "YARN",
+              "DisplayName": "RESTART ResourceManager",
+              "ComponentName": "ResourceManager"
+            },
+            {
+              "ActionName": "RESTART",
+              "ServiceName": "YARN",
+              "DisplayName": "RESTART App Timeline Server",
+              "ComponentName": "TimeLineServer"
+            },
+            {
+              "Command": "refreshQueues",
+              "ActionName": "CUSTOM_COMMAND",
+              "ServiceName": "YARN",
+              "DisplayName": "Refresh Queues",
+              "ComponentName": "ResourceManager"
+            },
+            {
+              "Command": "enableCGroups",
+              "ActionName": "CUSTOM_COMMAND",
+              "ServiceName": "YARN",
+              "DisplayName": "Enable CGroups",
+              "ComponentName": "NodeManager"
+            },
+            {
+              "Command": "disableCGroups",
+              "ActionName": "CUSTOM_COMMAND",
+              "ServiceName": "YARN",
+              "DisplayName": "Disable CGroups",
+              "ComponentName": "NodeManager"
+            }
+          ]
+        },
+        "ServiceName": "YARN",
+        "NeedRestartInfo": "",
+        "NeedRestartNum": 0,
+        "ClusterServiceSummaryList": {
+          "ClusterServiceSummary": [
+            {
+              "Status": "OK",
+              "Value": "20/20 Started",
+              "Key": "NodeManager",
+              "Type": "COMPONENT",
+              "DisplayName": "NodeManager",
+              "AlertInfo": ""
+            },
+            {
+              "Status": "OK",
+              "Value": "1/1 Started",
+              "Key": "JobHistory",
+              "Type": "COMPONENT",
+              "DisplayName": "JobHistory",
+              "AlertInfo": ""
+            },
+            {
+              "Status": "OK",
+              "Value": "22/22 Installed",
+              "Key": "YarnInit",
+              "Type": "COMPONENT",
+              "DisplayName": "Yarn Client",
+              "AlertInfo": ""
+            },
+            {
+              "Status": "OK",
+              "Value": "1/1 Started",
+              "Key": "TimeLineServer",
+              "Type": "COMPONENT",
+              "DisplayName": "App Timeline Server",
+              "AlertInfo": ""
+            },
+            {
+              "Status": "OK",
+              "Value": "1/1 Started",
+              "Key": "WebAppProxyServer",
+              "Type": "COMPONENT",
+              "DisplayName": "WebAppProxyServer",
+              "AlertInfo": ""
+            },
+            {
+              "Status": "OK",
+              "Value": "2/2 Started",
+              "Key": "ResourceManager",
+              "Type": "COMPONENT",
+              "DisplayName": "ResourceManager",
+              "AlertInfo": ""
+            }
+          ]
+        },
+        "ServiceVersion": "2.7.2-1.3.1",
+        "NeedRestartComponentNameList": {
+          "Service": []
+        },
+        "ServiceStatus": "INSTALLING"
+      }
+    },
+    "requestId": "7A23195A-BC03-4D82-BED5-90ED0D36F002",
+    "successResponse": true
+  }
+}

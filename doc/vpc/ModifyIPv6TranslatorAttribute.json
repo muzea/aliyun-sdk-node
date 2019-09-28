@@ -1,0 +1,79 @@
+{
+  "name": "ModifyIPv6TranslatorAttribute",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "修改IPv6转换服务实例的名称和描述信息。",
+  "abc_id": 114608,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": " IPv6转换服务实例的地域。 您可以通过调用**DescribeRegions**接口获取地域ID。  "
+    },
+    "Ipv6TranslatorId": {
+      "name": "Ipv6TranslatorId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ipv6trans-bp1858ysxxxxxx",
+      "description_cn": " IPv6转换服务实例的ID。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sha1111",
+      "description_cn": "客户端token用于保证请求的幂等性。要保证Client Token在不同请求间唯一，最大值不超过64个ASCII字符。"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "instancename",
+      "description_cn": " IPv6转换服务实例的名称，默认为实例ID。  长度为 2-100个字符，必须以字母或中文开头，可包含数字，点号（.），下划线（_）和短横线（-）。但不能以http:// 或https://开头。  "
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "instancedescription",
+      "description_cn": " IPv6转换服务的描述信息。默认值为空。  长度为 2-100个字符，必须以字母或中文开头，可包含数字，点号（.），下划线（_）和短横线（-）。但不能以http:// 或https://开头。  "
+    }
+  },
+  "res": {
+    "RequestId": "AD006AF1-E5F8-49D3-82E2-3333F27103FF"
+  }
+}

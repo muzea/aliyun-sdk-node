@@ -1,0 +1,63 @@
+{
+  "name": "SetCasterSyncGroup",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "CasterId": {
+      "name": "CasterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "SyncGroup": {
+      "name": "SyncGroup",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Mode",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "HostResourceId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ResourceIds",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        }
+      ]
+    }
+  },
+  "res": {}
+}

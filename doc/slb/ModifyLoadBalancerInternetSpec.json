@@ -1,0 +1,101 @@
+{
+  "name": "ModifyLoadBalancerInternetSpec",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyLoadBalancerInternetSpec修改公网负载均衡实例的计费方式。",
+  "abc_id": 27578,
+  "timeout": 20000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "负载均衡实例的地域。\n\n您可以从[地域和可用区](~~40654~~)列表或通过调用[DescribeRegions](~~25609~~)接口查询地域ID。"
+    },
+    "LoadBalancerId": {
+      "name": "LoadBalancerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "lb-bp1b6c719dfa08exfuca5",
+      "description_cn": "负载均衡实例的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "",
+      "description_cn": ""
+    },
+    "InternetChargeType": {
+      "name": "InternetChargeType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "paybytraffic",
+      "description_cn": "公网类型实例的付费方式。取值：\n\n- <props=\"china\">paybybandwidth：按带宽计费。 </props>\n\n- paybytraffic：按流量计费 。\n\n> 如果不指定该参数，则表示保持原有的计费方式。"
+    },
+    "Bandwidth": {
+      "name": "Bandwidth",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "按固定带宽计费方式的公网类型实例的带宽峰值。\n\n实例中的监听共享该带宽，详情参见[共享实例带宽](~~57846~~)。\n\n取值：1~5000 Mbps（各地域的带宽峰值会有不同）。\n\n>按流量计费的实例不需要指定该参数（即**InternetChargeType**为**paybytraffic**）。"
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "AutoPay": {
+      "name": "AutoPay",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否是自动支付预付费公网实例的账单。\n\n取值：**true|false（默认）**。"
+    },
+    "Ratio": {
+      "name": "Ratio",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "E4DD2D80-8DC0-4A2E-BFBA-BE983A31AFED"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "name": "CreateQueue",
+  "protocol": "HTTPS",
+  "method": "POST",
+  "path": "/api/v2/clusters/[clusterId]/queue",
+  "summary_cn": "创建Queue",
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Header",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "cn-shanghai"
+    },
+    "clusterId": {
+      "name": "clusterId",
+      "type": "String",
+      "position": "Path",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cmy99ugusuco66x9qc6knqms",
+      "description_cn": "集群ID"
+    },
+    "queueName": {
+      "name": "queueName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "root.default",
+      "description_cn": "queue的名称"
+    },
+    "maxVcore": {
+      "name": "maxVcore",
+      "type": "Integer",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "4",
+      "description_cn": "queue拥有的最大cpu"
+    },
+    "maxMemMB": {
+      "name": "maxMemMB",
+      "type": "Integer",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "16",
+      "description_cn": "queue拥有的最大内存"
+    },
+    "gpu": {
+      "name": "gpu",
+      "type": "Integer",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "gpu处理硬件块数"
+    }
+  },
+  "res": {}
+}

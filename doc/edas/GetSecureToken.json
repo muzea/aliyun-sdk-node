@@ -1,0 +1,25 @@
+{
+  "name": "GetSecureToken",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v5/secure_token",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "NamespaceId": {
+      "name": "NamespaceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    }
+  },
+  "res": {}
+}

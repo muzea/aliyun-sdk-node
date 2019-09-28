@@ -1,0 +1,40 @@
+{
+  "name": "DescribeInstanceStatistics",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeInstanceStatistics查询指定实例的统计信息。",
+  "abc_id": 91499,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn"
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1"
+    },
+    "InstanceIds": {
+      "name": "InstanceIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "[{\"InstanceId\":\"ddoscoo-cn-XXXXX\",\"InstanceId\":\"ddoscoo-cn-YYYYY\"}]",
+      "description_cn": "要查询的实例ID数组（JSON字符串）。"
+    }
+  },
+  "res": {}
+}

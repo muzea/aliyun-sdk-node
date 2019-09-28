@@ -1,0 +1,37 @@
+{
+  "name": "CalcPlanJsonResource",
+  "protocol": "HTTPS",
+  "method": "GET",
+  "path": "/api/v2/projects/[projectName]/jobs/[jobName]/planjson-resource",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Header",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true
+    },
+    "projectName": {
+      "name": "projectName",
+      "type": "String",
+      "position": "Path",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "jobName": {
+      "name": "jobName",
+      "type": "String",
+      "position": "Path",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

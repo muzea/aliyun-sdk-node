@@ -1,0 +1,40 @@
+{
+  "name": "DescribePrice",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OrderType": {
+      "name": "OrderType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "Commodity": {
+      "name": "Commodity",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "DiscountPrice": 0,
+    "ProductCode": "cmfw019940",
+    "OriginalPrice": 300,
+    "TradePrice": 300,
+    "PromotionRules": {
+      "PromotionRule": []
+    }
+  }
+}

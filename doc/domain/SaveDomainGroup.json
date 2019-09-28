@@ -1,0 +1,71 @@
+{
+  "name": "SaveDomainGroup",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "保存域名分组",
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "接口返回错误信息语言，枚举值范围：zh 中文；en 英文。默认为en。"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "127.0.0.1",
+      "description_cn": "用户IP"
+    },
+    "DomainGroupName": {
+      "name": "DomainGroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "测试分组",
+      "description_cn": "域名分组名称"
+    },
+    "DomainGroupId": {
+      "name": "DomainGroupId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456",
+      "description_cn": "域名分组编号，当不传该参数时为创建分组，传该参数时更新域名分组名称。"
+    }
+  },
+  "res": {
+    "BeingDeleted": false,
+    "CreationDate": "2018-04-27 14:53:55",
+    "DomainGroupId": 123456,
+    "DomainGroupName": "测试分组",
+    "DomainGroupStatus": "COMPLETE",
+    "ModificationDate": "2018-04-27 14:53:55",
+    "RequestId": "3ADCCF7B-7D2B-4B2E-9154-3C0B6D43287A",
+    "TotalNumber": 0
+  }
+}

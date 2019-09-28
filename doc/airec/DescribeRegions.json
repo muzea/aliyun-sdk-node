@@ -1,0 +1,25 @@
+{
+  "name": "DescribeRegions",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/openapi/configurations/regions",
+  "timeout": 10,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AcceptLanguage": {
+      "name": "AcceptLanguage",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

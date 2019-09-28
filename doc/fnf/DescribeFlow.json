@@ -1,0 +1,29 @@
+{
+  "name": "DescribeFlow",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/",
+  "summary_cn": "调用DescribeFlow获取一个流程的相关信息。",
+  "abc_id": 122624,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "flow",
+      "description_cn": "流程名称。"
+    }
+  },
+  "res": {}
+}

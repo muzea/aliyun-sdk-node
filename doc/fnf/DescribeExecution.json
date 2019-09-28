@@ -1,0 +1,40 @@
+{
+  "name": "DescribeExecution",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/",
+  "summary_cn": "调用DescribeExecution获取一次执行的状态等信息。",
+  "abc_id": 122623,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "FlowName": {
+      "name": "FlowName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "flow",
+      "description_cn": "流程名称。"
+    },
+    "ExecutionName": {
+      "name": "ExecutionName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "exec",
+      "description_cn": "执行名称。"
+    }
+  },
+  "res": {}
+}

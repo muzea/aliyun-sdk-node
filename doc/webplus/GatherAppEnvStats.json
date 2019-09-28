@@ -1,0 +1,40 @@
+{
+  "name": "GatherAppEnvStats",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/pop/v1/wam/appEnv/gatherStats",
+  "summary_cn": "调用GatherAppEnvStats来收集一个部署环境中的诊断信息。",
+  "abc_id": 128001,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "EnvId": {
+      "name": "EnvId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "we-5d3eaaea2977ca5251e*****",
+      "description_cn": "环境ID，将收集此环境中指定实例的诊断信息"
+    },
+    "TargetInstances": {
+      "name": "TargetInstances",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[\"i-wz94zz7mx8kt5kz*****\"]",
+      "description_cn": "实例ID列表，将收集此列表中指定实例的诊断信息"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,384 @@
+{
+  "name": "DescribeClusterServiceConfig",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 DescribeClusterServiceConfig 接口查询集群指定服务的配置详情信息。",
+  "abc_id": 100572,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "ClusterId": {
+      "name": "ClusterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "C-F32FB31D82954C64",
+      "description_cn": "集群ID。"
+    },
+    "ServiceName": {
+      "name": "ServiceName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "TEZ",
+      "description_cn": "服务名称。"
+    },
+    "ConfigVersion": {
+      "name": "ConfigVersion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "配置的版本信息，可通过** DescribeClusterServiceConfigHistory **接口获取。"
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "当前配置组的ID信息。"
+    },
+    "HostInstanceId": {
+      "name": "HostInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ecsId",
+      "description_cn": "主机的**instanceId**信息，一般是对应的** ecsId **信息。"
+    },
+    "TagValue": {
+      "name": "TagValue",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "tez-site",
+      "description_cn": "待查询的配置的标签信息，可通过**DescribeClusterServiceConfigTag**接口获取。"
+    }
+  },
+  "res": {
+    "RequestId": "094585B2-13AF-4780-96B3-C8E925418B5D",
+    "Config": {
+      "Comment": "",
+      "ServiceName": "TEZ",
+      "PropertyInfoList": {
+        "PropertyInfo": [
+          {
+            "PropertyTypes": {
+              "propertyType": []
+            },
+            "Description": "",
+            "PropertyValueAttributes": {
+              "ReadOnly": false,
+              "Type": "",
+              "Maximum": "2147483647",
+              "Mimimum": "",
+              "Hidden": false,
+              "IncrememtStep": "",
+              "Entries": {
+                "ValueEntryInfo": []
+              },
+              "Unit": ""
+            },
+            "ServiceName": "TEZ",
+            "EffectWay": {},
+            "FileName": "tez-site",
+            "Value": "${fs.defaultFS}/apps/tez-0.9.1-1.0.2/,${fs.defaultFS}/apps/tez-0.9.1-1.0.2/lib/",
+            "DisplayName": "",
+            "Name": "tez.lib.uris"
+          },
+          {
+            "PropertyTypes": {
+              "propertyType": []
+            },
+            "Description": "",
+            "PropertyValueAttributes": {
+              "ReadOnly": false,
+              "Type": "",
+              "Maximum": "2147483647",
+              "Mimimum": "",
+              "Hidden": false,
+              "IncrememtStep": "",
+              "Entries": {
+                "ValueEntryInfo": []
+              },
+              "Unit": ""
+            },
+            "ServiceName": "TEZ",
+            "EffectWay": {},
+            "FileName": "tez-site",
+            "Value": "/tmp/tez/staging",
+            "DisplayName": "",
+            "Name": "tez.staging-dir"
+          },
+          {
+            "PropertyTypes": {
+              "propertyType": [
+                "MEMORY"
+              ]
+            },
+            "Description": "",
+            "PropertyValueAttributes": {
+              "ReadOnly": false,
+              "Type": "",
+              "Maximum": "2147483647",
+              "Mimimum": "",
+              "Hidden": false,
+              "IncrememtStep": "",
+              "Entries": {
+                "ValueEntryInfo": []
+              },
+              "Unit": ""
+            },
+            "ServiceName": "TEZ",
+            "EffectWay": {},
+            "FileName": "tez-site",
+            "Value": "#yarn_app_mapreduce_am_resource_mb#",
+            "DisplayName": "",
+            "Name": "tez.am.resource.memory.mb"
+          },
+          {
+            "PropertyTypes": {
+              "propertyType": [
+                "MEMORY"
+              ]
+            },
+            "Description": "",
+            "PropertyValueAttributes": {
+              "ReadOnly": false,
+              "Type": "",
+              "Maximum": "2147483647",
+              "Mimimum": "",
+              "Hidden": false,
+              "IncrememtStep": "",
+              "Entries": {
+                "ValueEntryInfo": []
+              },
+              "Unit": ""
+            },
+            "ServiceName": "TEZ",
+            "EffectWay": {},
+            "FileName": "tez-site",
+            "Value": "0.8",
+            "DisplayName": "",
+            "Name": "tez.container.max.java.heap.fraction"
+          },
+          {
+            "PropertyTypes": {
+              "propertyType": []
+            },
+            "Description": "",
+            "PropertyValueAttributes": {
+              "ReadOnly": false,
+              "Type": "",
+              "Maximum": "2147483647",
+              "Mimimum": "",
+              "Hidden": false,
+              "IncrememtStep": "",
+              "Entries": {
+                "ValueEntryInfo": []
+              },
+              "Unit": ""
+            },
+            "ServiceName": "TEZ",
+            "EffectWay": {},
+            "FileName": "tez-site",
+            "Value": "org.apache.tez.dag.history.logging.ats.ATSHistoryLoggingService",
+            "DisplayName": "",
+            "Name": "tez.history.logging.service.class"
+          },
+          {
+            "PropertyTypes": {
+              "propertyType": []
+            },
+            "Description": "Publish configuration information to Timeline server.",
+            "PropertyValueAttributes": {
+              "ReadOnly": false,
+              "Type": "",
+              "Maximum": "2147483647",
+              "Mimimum": "",
+              "Hidden": false,
+              "IncrememtStep": "",
+              "Entries": {
+                "ValueEntryInfo": []
+              },
+              "Unit": ""
+            },
+            "ServiceName": "TEZ",
+            "EffectWay": {},
+            "FileName": "tez-site",
+            "Value": "true",
+            "DisplayName": "",
+            "Name": "tez.runtime.convert.user-payload.to.history-text"
+          },
+          {
+            "PropertyTypes": {
+              "propertyType": []
+            },
+            "Description": "",
+            "PropertyValueAttributes": {
+              "ReadOnly": false,
+              "Type": "",
+              "Maximum": "2147483647",
+              "Mimimum": "",
+              "Hidden": false,
+              "IncrememtStep": "",
+              "Entries": {
+                "ValueEntryInfo": []
+              },
+              "Unit": ""
+            },
+            "ServiceName": "TEZ",
+            "EffectWay": {},
+            "FileName": "tez-site",
+            "Value": "http://emr-header-1:8090/tez-ui2/",
+            "DisplayName": "",
+            "Name": "tez.tez-ui.history-url.base"
+          },
+          {
+            "PropertyTypes": {
+              "propertyType": []
+            },
+            "Description": "",
+            "PropertyValueAttributes": {
+              "ReadOnly": false,
+              "Type": "",
+              "Maximum": "2147483647",
+              "Mimimum": "",
+              "Hidden": false,
+              "IncrememtStep": "",
+              "Entries": {
+                "ValueEntryInfo": []
+              },
+              "Unit": ""
+            },
+            "ServiceName": "TEZ",
+            "EffectWay": {},
+            "FileName": "tez-site",
+            "Value": "-Xmx512m",
+            "DisplayName": "tez.am.java.opts",
+            "Name": "tez.am.java.opts"
+          },
+          {
+            "PropertyTypes": {
+              "propertyType": []
+            },
+            "Description": "",
+            "PropertyValueAttributes": {
+              "ReadOnly": false,
+              "Type": "",
+              "Maximum": "2147483647",
+              "Mimimum": "",
+              "Hidden": false,
+              "IncrememtStep": "",
+              "Entries": {
+                "ValueEntryInfo": []
+              },
+              "Unit": ""
+            },
+            "ServiceName": "TEZ",
+            "EffectWay": {},
+            "FileName": "user_params",
+            "Value": "512",
+            "DisplayName": "tomcat_heapsize",
+            "Name": "tomcat_heapsize"
+          },
+          {
+            "PropertyTypes": {
+              "propertyType": []
+            },
+            "Description": "",
+            "PropertyValueAttributes": {
+              "ReadOnly": false,
+              "Type": "",
+              "Maximum": "2147483647",
+              "Mimimum": "",
+              "Hidden": false,
+              "IncrememtStep": "",
+              "Entries": {
+                "ValueEntryInfo": []
+              },
+              "Unit": ""
+            },
+            "ServiceName": "TEZ",
+            "EffectWay": {},
+            "FileName": "user_params",
+            "Value": "emr-header-1",
+            "DisplayName": "do_init_host",
+            "Name": "do_init_host"
+          }
+        ]
+      },
+      "ConfigVersion": "0",
+      "CreateTime": "1543312717000",
+      "Author": "1250460021754461",
+      "Applied": true,
+      "ConfigValueList": {
+        "ConfigValue": [
+          {
+            "ConfigName": "tez-site",
+            "AllowCustom": true,
+            "ConfigItemValueList": {
+              "ConfigItemValue": [
+                {
+                  "Value": "org.apache.tez.dag.history.logging.ats.ATSHistoryLoggingService",
+                  "ItemName": "tez.history.logging.service.class"
+                },
+                {
+                  "Value": "true",
+                  "ItemName": "tez.runtime.convert.user-payload.to.history-text"
+                },
+                {
+                  "Value": "640",
+                  "ItemName": "tez.am.resource.memory.mb"
+                },
+                {
+                  "Value": "http://emr-header-1:8090/tez-ui2/",
+                  "ItemName": "tez.tez-ui.history-url.base"
+                },
+                {
+                  "Value": "${fs.defaultFS}/apps/tez-0.9.1-1.0.2/,${fs.defaultFS}/apps/tez-0.9.1-1.0.2/lib/",
+                  "ItemName": "tez.lib.uris"
+                },
+                {
+                  "Value": "0.8",
+                  "ItemName": "tez.container.max.java.heap.fraction"
+                },
+                {
+                  "Value": "-Xmx512m",
+                  "ItemName": "tez.am.java.opts"
+                },
+                {
+                  "Value": "/tmp/tez/staging",
+                  "ItemName": "tez.staging-dir"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "UninstallMonitoringAgent",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "卸载非阿里云主机监控插件。",
+  "abc_id": 114949,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "host-****",
+      "description_cn": "主机实例ID。"
+    }
+  },
+  "res": {
+    "RequestId": "466902B9-2842-40B0-B796-00FE772B6EF3",
+    "Code": "200",
+    "Message": "Successfully"
+  }
+}

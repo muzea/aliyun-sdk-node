@@ -1,0 +1,60 @@
+{
+  "name": "UpdateLoginProfile",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用UpdateLoginProfile接口修改用户的登录配置。",
+  "abc_id": 28688,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "UserName": {
+      "name": "UserName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "zhangq****",
+      "description_cn": "指定用户名。"
+    },
+    "Password": {
+      "name": "Password",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "mypassword",
+      "description_cn": "指定密码，密码必须符合主账号的密码强度要求。"
+    },
+    "PasswordResetRequired": {
+      "name": "PasswordResetRequired",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "指定用户在登录时是否需要修改密码。"
+    },
+    "MFABindRequired": {
+      "name": "MFABindRequired",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "指定用户在下次登录时是否必须绑定多因素认证设备。"
+    }
+  },
+  "res": {
+    "RequestId": "04F0F334-1335-436C-A1D7-6C044FE73368"
+  }
+}

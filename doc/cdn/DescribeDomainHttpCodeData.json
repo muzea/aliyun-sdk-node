@@ -1,0 +1,157 @@
+{
+  "name": "DescribeDomainHttpCodeData",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDomainHttpCodeData获取加速域名最小5分钟粒度的HTTP返回码占比数据。",
+  "abc_id": 91056,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test.test.com",
+      "description_cn": "需要查询的加速域名，支持批量，多个域名用逗号（,）分隔。"
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2015-11-30T05:33Z",
+      "description_cn": "获取数据起始时间点。\n\n- 日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。\n\n- 最小数据粒度为5分钟，不写默认读取过去24小时数据。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2015-11-30T05:40Z",
+      "description_cn": "获取数据结束时间点。\n\n- 结束时间需大于起始时间。\n\n- 日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。"
+    },
+    "Interval": {
+      "name": "Interval",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "300",
+      "description_cn": "查询数据的时间粒度，支持**300**、 **3600**和**86400**秒。\n\n- 3天以内（不包含3天整）支持**300**、**3600**、 **86400**。\n\n- 3-31天（不包含31天整）支持**3600**和**86400**。\n\n- 31天以上支持**86400**。\n\n不传和传的值不支持时，使用默认值。"
+    }
+  },
+  "res": {
+    "HttpCodeData": {
+      "UsageData": [
+        {
+          "TimeStamp": "2015-11-30T05:40:00Z",
+          "Value": {
+            "CodeProportionData": [
+              {
+                "Proportion": "66.046511627907",
+                "Code": "200"
+              },
+              {
+                "Proportion": "4.72868217054264",
+                "Code": "206"
+              },
+              {
+                "Proportion": "0.155038759689922",
+                "Code": "302"
+              },
+              {
+                "Proportion": "0.62015503875969",
+                "Code": "304"
+              },
+              {
+                "Proportion": "28.4496124031008",
+                "Code": "500"
+              }
+            ]
+          }
+        },
+        {
+          "TimeStamp": "2015-11-30T05:35:00Z",
+          "Value": {
+            "CodeProportionData": [
+              {
+                "Proportion": "64.7822765469824",
+                "Code": "200"
+              },
+              {
+                "Proportion": "3.74331550802139",
+                "Code": "206"
+              },
+              {
+                "Proportion": "0.152788388082506",
+                "Code": "302"
+              },
+              {
+                "Proportion": "1.90985485103132",
+                "Code": "304"
+              },
+              {
+                "Proportion": "29.4117647058824",
+                "Code": "500"
+              }
+            ]
+          }
+        },
+        {
+          "TimeStamp": "2015-11-30T05:30:00Z",
+          "Value": {
+            "CodeProportionData": [
+              {
+                "Proportion": "67.1458998935037",
+                "Code": "200"
+              },
+              {
+                "Proportion": "12.6730564430245",
+                "Code": "206"
+              },
+              {
+                "Proportion": "0.053248136315229",
+                "Code": "302"
+              },
+              {
+                "Proportion": "0.958466453674121",
+                "Code": "304"
+              },
+              {
+                "Proportion": "19.1693290734824",
+                "Code": "500"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "DataInterval": "300",
+    "RequestId": "BC858082-736F-4A25-867B-E5B67C85ACF7",
+    "DomainName": "example1.com,example2.com",
+    "EndTime": "2015-11-30T05:40:00Z",
+    "StartTime": "2015-11-30T05:33:00Z"
+  }
+}

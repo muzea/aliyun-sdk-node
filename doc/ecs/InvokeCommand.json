@@ -1,0 +1,92 @@
+{
+  "name": "InvokeCommand",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用InvokeCommand为一台或多台ECS实例触发一条云助手命令。",
+  "abc_id": 64841,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。 "
+    },
+    "CommandId": {
+      "name": "CommandId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "c-e996287206324975b5fbe1d********",
+      "description_cn": "命令ID。您可以通过接口[DescribeCommands](~~64843~~)查询所有可用的CommandId。 "
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。"
+    },
+    "Timed": {
+      "name": "Timed",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "命令是否为周期执行。\n\n默认值：false "
+    },
+    "Frequency": {
+      "name": "Frequency",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0 */20 * * * *",
+      "description_cn": "周期任务的执行周期，两次周期任务的时间间隔不能低于10秒。当参数Timed的值为True时，参数Frequency为必需参数。\n\n该参数取值遵循Cron表达式，请参见[设置定时执行命令](~~64769~~)。  "
+    },
+    "Parameters": {
+      "name": "Parameters",
+      "type": "Json",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{\"name\":\"Jack\", \"accessKey\":\"LTAIdyv******aRY\"}",
+      "description_cn": "启用自定义参数功能时，执行命令时传入的自定义参数的键值对。自定义参数的个数范围：0~10\n\n- Map的键不允许为空字符串，最多支持64个字符。\n- Map的值允许为空字符串。\n- 自定义参数与原始命令内容在Base64编码后，综合长度不能超过16KB。\n- 设置的自定义参数名集合必须为创建命令时定义的参数集的子集。对于未传入的参数，您可以使用空字符串代替。\n\n您可以取消设置该参数从而禁用自定义参数。"
+    }
+  },
+  "res": {
+    "RequestId": "E69EF3CC-94CD-42E7-8926-F133B86387C0",
+    "InvokeId": "t-7d2a745b412b4601b2d47f6a768d3a14"
+  }
+}

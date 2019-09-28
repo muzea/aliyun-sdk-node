@@ -1,0 +1,149 @@
+{
+  "name": "DescribeNatGateways",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "使用DescribeNatGateways接口查询已创建的NAT网关。",
+  "abc_id": 36054,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": " NAT网关所在的地域。 您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "NatGatewayId": {
+      "name": "NatGatewayId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ngw-bp1uewa15k4iy5770xxxx",
+      "description_cn": " NAT网关的ID。 "
+    },
+    "VpcId": {
+      "name": "VpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc-bp15zckdt37pq72zxxxx",
+      "description_cn": " VPC的ID。 "
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "NAT网关名称",
+      "description_cn": "NAT网关的名称。"
+    },
+    "InstanceChargeType": {
+      "name": "InstanceChargeType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PostPaid",
+      "description_cn": "实例的付费方式。目前仅支持按量付费。\n\nPostPaid：按量付费。"
+    },
+    "Spec": {
+      "name": "Spec",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Large",
+      "description_cn": "NAT网关的规格。取值：\n\n- **Small(默认值)**：小型\n- **Middle**：中型\n- **Large**：大型\n- **XLarge.1**：超大型"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": " 列表的页码，默认值为1。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": " 分页查询时每页的行数，最大值为50，默认值为10。  "
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 1,
+    "PageSize": 10,
+    "RequestId": "1207C80C-7CAB-4874-A9A0-D19EC9F35490",
+    "NatGateways": {
+      "NatGateway": [
+        {
+          "Description": "",
+          "Spec": "Small",
+          "IpLists": {
+            "IpList": [
+              {
+                "IpAddress": "118.31.65.181",
+                "AllocationId": "eip-bp1xyg5ipmh3nledxywxf",
+                "UsingStatus": "UsedBySnatTable"
+              },
+              {
+                "IpAddress": "47.97.187.34",
+                "AllocationId": "eip-bp19eue77u20cffjcu4ea",
+                "UsingStatus": "UsedByForwardTable"
+              }
+            ]
+          },
+          "ForwardTableIds": {
+            "ForwardTableId": [
+              "ftb-bp15o9aylj19vfvgtnzoy"
+            ]
+          },
+          "VpcId": "vpc-bp15k6sx6fhdz2jw4daz0",
+          "NatGatewayId": "ngw-bp1047e2d4z7kf2kiy25t",
+          "CreationTime": "2018-01-10T09:48:29Z",
+          "BandwidthPackageIds": {
+            "BandwidthPackageId": []
+          },
+          "Name": "",
+          "Status": "Available",
+          "BusinessStatus": "Normal",
+          "RegionId": "cn-hangzhou",
+          "SnatTableIds": {
+            "SnatTableId": [
+              "stb-bp1tyr0o48w6wymur4gvn"
+            ]
+          },
+          "InstanceChargeType": "PostPaid"
+        }
+      ]
+    }
+  }
+}

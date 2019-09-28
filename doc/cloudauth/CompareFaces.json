@@ -1,0 +1,56 @@
+{
+  "name": "CompareFaces",
+  "protocol": "HTTPS",
+  "method": "POST",
+  "path": "/",
+  "timeout": 6000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "TargetImageType": {
+      "name": "TargetImageType",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SourceImageType": {
+      "name": "SourceImageType",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SourceImageValue": {
+      "name": "SourceImageValue",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "TargetImageValue": {
+      "name": "TargetImageValue",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

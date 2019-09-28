@@ -1,0 +1,25 @@
+{
+  "name": "ScaleCluster",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT",
+  "path": "/clusters/[ClusterId]",
+  "timeout": 20000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ClusterId": {
+      "name": "ClusterId",
+      "type": "String",
+      "position": "Path",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    }
+  },
+  "res": {}
+}

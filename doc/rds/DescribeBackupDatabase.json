@@ -1,0 +1,50 @@
+{
+  "name": "DescribeBackupDatabase",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeBackupDatabase接口查询备份集下的数据库列表，已下线。",
+  "abc_id": 96217,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "BackupId": {
+      "name": "BackupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "90262212",
+      "description_cn": "备份集ID。"
+    }
+  },
+  "res": {
+    "DatabaseNames": "db1,db2",
+    "RequestId": "08A3B71B-FE08-4B03-974F-CC7EA6DB1828"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "DeleteMonitoringAgentProcess",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "删除进程监控。",
+  "abc_id": 114945,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "i-KpVny6l****",
+      "description_cn": "实例ID。"
+    },
+    "ProcessName": {
+      "name": "ProcessName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "http",
+      "description_cn": "进程名称。ProcessId和ProcessName 参数必须至少填写其中一个参数。"
+    },
+    "ProcessId": {
+      "name": "ProcessId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "12345",
+      "description_cn": "进程ID。ProcessId和ProcessName 参数必须至少填写其中一个参数。"
+    }
+  },
+  "res": {
+    "Success": true,
+    "Code": 200
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "name": "UpdateAntChainMember",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "更新联盟成员属性",
+  "abc_id": 134730,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID"
+    },
+    "ConsortiumId": {
+      "name": "ConsortiumId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "AroN3X2l",
+      "description_cn": "联盟ID"
+    },
+    "MemberId": {
+      "name": "MemberId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1287126353301234",
+      "description_cn": "成员ID"
+    },
+    "MemberName": {
+      "name": "MemberName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "updatename",
+      "description_cn": "成员名称"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "5BA242B2-AB0C-4D06-94EB-23CEC4F7B95E",
+      "Result": "success"
+    },
+    "requestId": "5BA242B2-AB0C-4D06-94EB-23CEC4F7B95E",
+    "successResponse": true
+  }
+}

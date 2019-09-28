@@ -1,0 +1,58 @@
+{
+  "name": "ResetDisk",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ResetDisk使用磁盘的历史快照回滚至某一阶段的磁盘状态。",
+  "abc_id": 25520,
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DiskId": {
+      "name": "DiskId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "d-diskid1",
+      "description_cn": "指定的磁盘设备 ID。"
+    },
+    "SnapshotId": {
+      "name": "SnapshotId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "s-snapshotid1",
+      "description_cn": "需要恢复到某一磁盘阶段的历史快照 ID。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。"
+    }
+  },
+  "res": {
+    "RequestId": "F3CD6886-D8D0-4FEE-B93E-1B73239673DE"
+  }
+}

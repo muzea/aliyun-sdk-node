@@ -1,0 +1,55 @@
+{
+  "name": "DescribeDTCSecurityIpHostsForSQLServer",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDTCSecurityIpHostsForSQLServer接口查询RDS实例的分布式事务白名单信息。",
+  "abc_id": 126629,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID，可以通过接口[DescribeRegions](~~26243~~)查看。"
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "Items": {
+      "WhiteListGroups": [
+        {
+          "WhitelistGroupName": "test1",
+          "SecurityIpHosts": "192.168.1.100,k3ecstest"
+        }
+      ]
+    },
+    "IpHostPairNum": 1,
+    "RequestId": "2CA62A70-2203-45C6-8E90-8971D5ACC0C2"
+  }
+}

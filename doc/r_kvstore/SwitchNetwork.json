@@ -1,0 +1,92 @@
+{
+  "name": "SwitchNetwork",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用SwitchNetwork切换Redis实例的网络类型，支持从经典网络切换为VPC网络。",
+  "abc_id": 61005,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "r-j6cxxxxxxxxxxxxxx",
+      "description_cn": "需要切换网络类型的实例的ID。"
+    },
+    "TargetNetworkType": {
+      "name": "TargetNetworkType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "VPC",
+      "description_cn": "需要切换到的网络类型，当前仅支持经典网络切换到VPC，因此该参数仅有默认值VPC。"
+    },
+    "VpcId": {
+      "name": "VpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc-bp1xxxxxxxxxxxxxxxxxx",
+      "description_cn": "实例切换到VPC网络后所属的VPC ID。"
+    },
+    "VSwitchId": {
+      "name": "VSwitchId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vsw-sdrxxxxxxxxxxxxxxxxxx",
+      "description_cn": "实例切换网络类型后VPC内的交换机ID，如果传入了VpcId则此参数为必选。"
+    },
+    "RetainClassic": {
+      "name": "RetainClassic",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "True",
+      "description_cn": "是否保留经典网络 IP：\n* True（保留）\n* False（不保留）\n\n> 默认值为False。"
+    },
+    "ClassicExpiredDays": {
+      "name": "ClassicExpiredDays",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "保留经典网络IP的时间，单位：天。 可选值：14、30、60、120。若选择保留经典网络地址，则该参数必选。 \n\n> 切换到VPC网络后，如需修改经典网络IP的保留时间请参见[ModifyInstanceNetExpireTime](~~61010~~)。"
+    }
+  },
+  "res": {
+    "TaskId": "578678678",
+    "requestId": "F0997EE8-F4C2-4503-9168-85177ED78C70"
+  }
+}

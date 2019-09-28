@@ -1,0 +1,69 @@
+{
+  "name": "RebootInstance",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "当一台ECS实例处于已停止（Stopped）状态时，调用RebootInstance可以重启这台实例。",
+  "abc_id": 25502,
+  "timeout": 80000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "i-instance1",
+      "description_cn": "指定实例的ID。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "hide"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "ForceStop": {
+      "name": "ForceStop",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "重启ECS实例前是否强制关机策略。取值范围：\n\n-   true：重启ECS实例前强制关机。\n-   false（默认）：重启ECS实例前正常关机。"
+    },
+    "DryRun": {
+      "name": "DryRun",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否只预检此次请求。\n\n- true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数、请求格式、业务限制和ECS库存。如果检查不通过，则返回对应错误。如果检查通过，则返回错误码`DryRunOperation`。\n- false（默认）：发送正常请求，通过检查后直接重启实例。"
+    }
+  },
+  "res": {
+    "RequestId": "F2E2C40D-AB09-45A1-B5C5-EB9F5C4E4E4A"
+  }
+}

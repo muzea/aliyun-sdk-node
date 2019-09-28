@@ -1,0 +1,127 @@
+{
+  "name": "DescribeHostAvailabilityList",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询可用性监控任务列表。",
+  "abc_id": 115320,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Id": {
+      "name": "Id",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "12346",
+      "description_cn": "任务ID。"
+    },
+    "TaskName": {
+      "name": "TaskName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "我的探测",
+      "description_cn": "任务名称。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页码。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "每页记录条数。"
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "12345",
+      "description_cn": "应用分组ID。"
+    }
+  },
+  "res": {
+    "TaskList": {
+      "NodeTaskConfig": [
+        {
+          "GroupName": "我的应用组",
+          "TaskOption": {
+            "HttpMethod": "GET",
+            "HttpURI": "http://www.aliyun.com"
+          },
+          "Disabled": false,
+          "Instances": {
+            "Instance": [
+              "i-a2d5q7pm3f123y***",
+              "i-a2d5q7pm3f123x***"
+            ]
+          },
+          "Id": 123345,
+          "AlertConfig": {
+            "EscalationList": {
+              "escalationList": [
+                {
+                  "Value": "400",
+                  "MetricName": "HttpStatus",
+                  "Operator": ">",
+                  "Times": 3,
+                  "Aggregate": "Value"
+                },
+                {
+                  "Value": "500",
+                  "MetricName": "HttpLatency",
+                  "Operator": ">",
+                  "Times": 3,
+                  "Aggregate": "Average"
+                }
+              ]
+            },
+            "SilenceTime": 86400,
+            "NotifyType": 1,
+            "EndTime": 24,
+            "StartTime": 0
+          },
+          "TaskType": "HTTP",
+          "TaskName": "我的内网探测任务",
+          "GroupId": 12345,
+          "TaskScope": "GROUP"
+        }
+      ]
+    },
+    "RequestId": "CE26797C-1094-47E6-B651-73AA888F5873",
+    "Success": true,
+    "Code": 200,
+    "Total": 3
+  }
+}

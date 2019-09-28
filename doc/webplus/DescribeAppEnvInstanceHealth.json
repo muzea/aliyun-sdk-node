@@ -1,0 +1,29 @@
+{
+  "name": "DescribeAppEnvInstanceHealth",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v1/wam/appEnv/instanceHealth",
+  "summary_cn": "调用DescribeAppEnvInstanceHealth查询一个环境内所有ECS实例的健康状态。",
+  "abc_id": 127725,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "EnvId": {
+      "name": "EnvId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "we-5d244085f314934e2ab*****",
+      "description_cn": "环境ID，将查询此环境内所有实例的健康状态"
+    }
+  },
+  "res": {}
+}

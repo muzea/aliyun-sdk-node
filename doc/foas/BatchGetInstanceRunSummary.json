@@ -1,0 +1,56 @@
+{
+  "name": "BatchGetInstanceRunSummary",
+  "protocol": "HTTPS",
+  "method": "GET",
+  "path": "/api/v2/projects/[projectName]/runsummary",
+  "summary_cn": "根据作业类型和名称获BatchGetInstanceRunSummary（批量获取实例运行信息）接口用来批量获取某个项目下，某一类作业（批作业或者流作业）的多个Job的运行实例情况。",
+  "abc_id": 107056,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Header",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou-pre",
+      "description_cn": "集团内用户使用：\n- 公共云预发：cn-hangzhou-pre\n- 集团内生产：cn-hangzhou-internal\n- 集团内预发：cn-hangzhou-internal-pre\n"
+    },
+    "jobNames": {
+      "name": "jobNames",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "job1,job2",
+      "description_cn": "作业名称，逗号（,）分隔。"
+    },
+    "jobType": {
+      "name": "jobType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "FLINK_STREAM",
+      "description_cn": "作业类型，批作业使用FLINK_BATCH；流作业使用FLINK_STREAM。"
+    },
+    "projectName": {
+      "name": "projectName",
+      "type": "String",
+      "position": "Path",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "test_project",
+      "description_cn": "项目名称。"
+    }
+  },
+  "res": {}
+}

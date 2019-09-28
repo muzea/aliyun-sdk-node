@@ -1,0 +1,68 @@
+{
+  "name": "ModifySnapshotAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifySnapshotAttribute修改一份快照的名称或描述。",
+  "abc_id": 127734,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SnapshotId": {
+      "name": "SnapshotId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "s-923FE2B**",
+      "description_cn": "快照ID。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Hide"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "111"
+    },
+    "SnapshotName": {
+      "name": "SnapshotName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "NewSnapshotName-EcsGuideTest",
+      "description_cn": "快照的显示名称。长度为2~128个英文或中文字符。必须以大小字母或中文开头，不能以http://和https://开头。可以包含数字、半角冒号（:）、下划线（_）或者连字符（-）。\n\n为防止和自动快照的名称冲突，不能以auto开头。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "NewSnapshotDescription-EcsGuideTest",
+      "description_cn": "快照的描述。长度为2~256个英文或中文字符，不能以http://和https://开头。"
+    }
+  },
+  "res": {
+    "RequestId": "C8B26B44-0189-443E-9816-D951F59623A9"
+  }
+}

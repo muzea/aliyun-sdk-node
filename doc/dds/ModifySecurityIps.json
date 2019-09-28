@@ -1,0 +1,81 @@
+{
+  "name": "ModifySecurityIps",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifySecurityIps接口修改MongoDB实例的IP白名单。",
+  "abc_id": 62157,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SecurityIps": {
+      "name": "SecurityIps",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "10.23.12.24/24,10.22.22.22",
+      "description_cn": "IP白名单分组下的IP列表，多个IP地址请以英文逗号（,）隔开，不可重复，最多1000个。支持如下两种格式：\n- IP地址形式，例如：10.23.12.24。\n- CIDR形式，例如：10.23.12.24/24（无类域间路由，24表示了地址中前缀的长度，范围为1~32）。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "ModifyMode": {
+      "name": "ModifyMode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Append",
+      "description_cn": "修改方式，取值：\n- **Cover**：覆盖原白名单。\n- **Append**：追加白名单。\n- **Delete**：删除该白名单。\n\n默认取值为**Cover**。"
+    },
+    "SecurityIpGroupName": {
+      "name": "SecurityIpGroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "allowserver",
+      "description_cn": "进行修改的IP白名单所属分组名称，默认为**default**分组。"
+    },
+    "SecurityIpGroupAttribute": {
+      "name": "SecurityIpGroupAttribute",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "白名单分组属性。支持大写字母、小写字母、数字，长度最大为120个字符。\n\n默认为空字符串。"
+    }
+  },
+  "res": {
+    "RequestId": "61B05CCF-EBAB-4BF3-BA67-D77256A721E2"
+  }
+}

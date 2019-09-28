@@ -1,0 +1,71 @@
+{
+  "name": "ListRealtimeLogDeliveryDomains",
+  "protocol": "HTTP|HTTPS",
+  "method": "GET",
+  "path": "/",
+  "summary_cn": "调用ListRealtimeLogDeliveryDomains查询实时日志投递服务下所有域名。",
+  "abc_id": 100469,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Project": {
+      "name": "Project",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ProjectName",
+      "description_cn": "实时投递sls的ProjectName。"
+    },
+    "Logstore": {
+      "name": "Logstore",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "LogstoreName",
+      "description_cn": "实时投递sls的LogStoreName。"
+    },
+    "Region": {
+      "name": "Region",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ch-shanghai",
+      "description_cn": "实时投递sls的Region，详情请参见[实时日志投递用户Region列表](~~27232~~)。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "Content": {
+      "Domains": [
+        {
+          "DomainName": "a.xxx.com",
+          "Status": "online"
+        },
+        {
+          "DomainName": "b.xxx.com",
+          "Status": "offline"
+        }
+      ]
+    },
+    "RequestId": "95D5B69F-8AEC-419B-8F3A-612B35032B0D"
+  }
+}

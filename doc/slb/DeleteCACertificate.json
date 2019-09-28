@@ -1,0 +1,51 @@
+{
+  "name": "DeleteCACertificate",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteCACertificate删除CA证书。",
+  "abc_id": 34937,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "CA证书的地域。\n\n您可以通过调用[DescribeRegions](~~27584~~)接口查询地域ID。"
+    },
+    "CACertificateId": {
+      "name": "CACertificateId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "123157908xxxxxxx_15c73d77203_-986300114_-2110544xxx",
+      "description_cn": "CA证书ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": " CEF72CEB-54B6-4AE8-B225-F876FF7BA984"
+  }
+}

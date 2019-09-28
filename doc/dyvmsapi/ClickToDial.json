@@ -1,0 +1,123 @@
+{
+  "name": "ClickToDial",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用接口ClickToDial发起一次双方通话。",
+  "abc_id": 114040,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CallerShowNumber": {
+      "name": "CallerShowNumber",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "4001112221",
+      "description_cn": "主叫显号，必须是已购买的号码。\n\n您可以在[语音服务控制台](https://dyvms.console.aliyun.com/dyvms.htm#/number/normal)上查看已购买的号码。"
+    },
+    "CallerNumber": {
+      "name": "CallerNumber",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "13700000000",
+      "description_cn": "主叫号码。仅支持中国大陆号码。"
+    },
+    "CalledShowNumber": {
+      "name": "CalledShowNumber",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "4001112222",
+      "description_cn": "被叫显号，必须是已购买的号码。\n\n您可以在[语音服务控制台](https://dyvms.console.aliyun.com/dyvms.htm#/number/normal)上查看已购买的号码。"
+    },
+    "CalledNumber": {
+      "name": "CalledNumber",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "13700000001",
+      "description_cn": "被叫号码。仅支持中国大陆号码。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "RecordFlag": {
+      "name": "RecordFlag",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "通话过程是否录音。"
+    },
+    "AsrFlag": {
+      "name": "AsrFlag",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否开启实时ASR功能。"
+    },
+    "SessionTimeout": {
+      "name": "SessionTimeout",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "100",
+      "description_cn": "整个通话的最长时长，单位为秒。超过该时长后系统自动挂断电话。"
+    },
+    "AsrModelId": {
+      "name": "AsrModelId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2070aca1eff146f9a7bc826f1c3d4d33",
+      "description_cn": "ASR模型ID。请在[ASR模型管理页面](https://dyvms.console.aliyun.com/dyvms.htm#/smart-call/asr/1)查看ASR模型ID。"
+    },
+    "OutId": {
+      "name": "OutId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "abcdefgh",
+      "description_cn": "预留给调用方使用的ID, 最终会通过在回执消息中将此ID带回给调用方。\n\n字符串类型，长度为1~15个字节。"
+    }
+  },
+  "res": {
+    "Message": "OK",
+    "RequestId": "D9CB3933-9FE3-4870-BA8E-2BEE91B69D23",
+    "Code": "OK",
+    "CallId": "116012354148^102813784148"
+  }
+}

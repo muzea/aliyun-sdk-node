@@ -1,0 +1,58 @@
+{
+  "name": "EffectCasterVideoResource",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用EffectCasterVideoResource将视频资源生效至指定场景，场景引用该视频资源时有效。",
+  "abc_id": 60267,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SceneId": {
+      "name": "SceneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "05ab713c-676e-49c0-96ce-cc408da1b314",
+      "description_cn": "场景ID。"
+    },
+    "ResourceId": {
+      "name": "ResourceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "f096e8d6-0319-4c96-82bc-ecbc79cfac0d",
+      "description_cn": "资源ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "CasterId": {
+      "name": "CasterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "80787064-1c94-4dc1-85ce-9409960a9bf0",
+      "description_cn": "导播台ID。"
+    }
+  },
+  "res": {}
+}

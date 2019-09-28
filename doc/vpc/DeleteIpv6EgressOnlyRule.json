@@ -1,0 +1,53 @@
+{
+  "name": "DeleteIpv6EgressOnlyRule",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteIpv6EgressOnlyRule接口删除仅主动出规则。",
+  "abc_id": 102201,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-huhehaote",
+      "description_cn": "IPv6网关的ID。"
+    },
+    "Ipv6EgressOnlyRuleId": {
+      "name": "Ipv6EgressOnlyRuleId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ipv6py-hp3w98rmlbqp0xxxxxxxx",
+      "description_cn": "要删除的仅主动出规则ID。"
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456",
+      "description_cn": "客户端token，用于保证请求的幂等性。\n\n由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "4E40EAF1-783D-4C05-948D-DA0426C398C1"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "name": "DescribeBackups",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeBackups接口查询MongoDB实例的备份列表。",
+  "abc_id": 62172,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例所属的地域ID，您可以通过调用[DescribeDBInstanceAttribute](~~62010~~)进行查询。"
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2019-03-12T12:00Z",
+      "description_cn": "查询开始时间，格式为<i>yyyy-MM-dd</i>T<i>HH:mm</i>Z（UTC时间）。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2019-03-13T12:00Z",
+      "description_cn": "查询结束时间，必须晚于查询开始时间，格式为<i>yyyy-MM-dd</i>T<i>HH:mm</i>Z（UTC时间）。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。\n> 当本参数传入的是分片集群实例ID时，还需要传入**NodeId**参数。"
+    },
+    "NodeId": {
+      "name": "NodeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "d-bpxxxxxxxx",
+      "description_cn": "分片集群实例中Shard节点ID。\n\n> 当**DBInstanceId**参数传入的是分片集群实例ID时，本参数才可用。"
+    },
+    "BackupId": {
+      "name": "BackupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "5664xxxx",
+      "description_cn": "备份ID。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页码，取值为大于0且不超过Integer数据类型的的最大值，默认值为**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "每页记录数，取值： **30、50、100**，默认值为**30**。"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 1,
+    "PageSize": 30,
+    "RequestId": "09308D8E-136C-4053-89D8-51350248C31B",
+    "Backups": {
+      "Backup": [
+        {
+          "BackupDownloadURL": "http://xxxxx.oss-cn-hangzhou.aliyuncs.com/xxxxx/xxxxx.tar.gz",
+          "BackupIntranetDownloadURL": "http://xxxxx.oss-cn-hangzhou-internal.aliyuncs.com/xxxxx/xxxxx.tar.gz",
+          "BackupType": "FullBackup",
+          "BackupDBNames": "mongousertest",
+          "BackupEndTime": "2019-05-27T14:27:11Z",
+          "BackupMethod": "Physical",
+          "BackupMode": "Automated",
+          "BackupSize": 25849856,
+          "BackupStatus": "Success",
+          "BackupStartTime": "2019-05-27T14:24:55Z",
+          "BackupId": 11111
+        }
+      ]
+    }
+  }
+}

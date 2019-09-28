@@ -1,0 +1,54 @@
+{
+  "name": "DescribeVpnGateway",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeVpnGateway接口查询指定VPN网关的详细信息。",
+  "abc_id": 73720,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-shanghai",
+      "description_cn": " VPN网关所在的地域。 \n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "VpnGatewayId": {
+      "name": "VpnGatewayId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "vpn-bp1q8bgx4xnkm2ogj****",
+      "description_cn": " VPN网关的ID。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "Status": "active",
+    "VpnGatewayId": "vpn-bp1q8bgx4xnkm2ogj0fiu",
+    "BusinessStatus": "Normal",
+    "Spec": "5M",
+    "CreateTime": 1492753580000,
+    "RequestId": "E98A9651-7098-40C7-8F85-C818D1EBBA85",
+    "InternetIp": "116.62.69.64",
+    "EndTime": 1495382400000,
+    "VSwitchId": "vsw-bp1y9ovl1cu9ou4tvma0l",
+    "VpcId": "vpc-bp1ub1yt9cvakoelj1y9c"
+  }
+}

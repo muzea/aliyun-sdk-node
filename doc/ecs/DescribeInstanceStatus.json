@@ -1,0 +1,97 @@
+{
+  "name": "DescribeInstanceStatus",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeInstanceStatus获取一台或多台ECS实例的状态信息。",
+  "abc_id": 25505,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例所属的地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "ZoneId": {
+      "name": "ZoneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou-d",
+      "description_cn": "实例所属可用区。"
+    },
+    "ClusterId": {
+      "name": "ClusterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cls-clusterid1",
+      "description_cn": "实例所属的集群ID。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "实例状态列表的页码。起始值：1。\n\n默认值：1。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时设置的每页行数。取值范围：1~50\n\n默认值：10。"
+    }
+  },
+  "res": {
+    "RequestId": "6EF60BEC-0242-43AF-BB20-270359FB54A7",
+    "TotalCount": 2,
+    "PageNumber": 1,
+    "PageSize": 10,
+    "InstanceStatuses": {
+      "InstanceStatus": [
+        {
+          "InstanceId": "i-instance1",
+          "Status": "Running"
+        },
+        {
+          "InstanceId": "i-ae4r89pp",
+          "Status": "Stopped"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "DescribeRegions",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "获取区域列表",
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "29857326-A574-49A7-897C-E428471D79D6",
+      "ErrorCode": 200,
+      "Success": true,
+      "Result": [
+        {
+          "Title": "华北 2 (北京)",
+          "RegionId": "cn-beijing",
+          "Id": 1,
+          "Online": true
+        },
+        {
+          "Title": "华东 1 (杭州)",
+          "RegionId": "cn-hangzhou",
+          "Id": 4,
+          "Online": true
+        },
+        {
+          "Title": "华东 2 (上海)",
+          "RegionId": "cn-shanghai",
+          "Id": 5,
+          "Online": true
+        },
+        {
+          "Title": "华南 1 (深圳)",
+          "RegionId": "cn-shenzhen",
+          "Id": 6,
+          "Online": true
+        }
+      ]
+    },
+    "requestId": "29857326-A574-49A7-897C-E428471D79D6",
+    "successResponse": true
+  }
+}

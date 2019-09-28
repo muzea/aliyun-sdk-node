@@ -1,0 +1,30 @@
+{
+  "name": "DeleteLoginProfile",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteLoginProfile接口关闭指定RAM用户登录Web控制台的功能。",
+  "abc_id": 28687,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "UserName": {
+      "name": "UserName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "zhangq****",
+      "description_cn": "指定用户名。"
+    }
+  },
+  "res": {
+    "RequestId": "1C488B66-B819-4D14-8711-C4EAAA13AC01"
+  }
+}

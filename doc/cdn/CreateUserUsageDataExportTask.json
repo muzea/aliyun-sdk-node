@@ -1,0 +1,72 @@
+{
+  "name": "CreateUserUsageDataExportTask",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateUserUsageDataExportTask创建账号历史用量数据导出任务，将历史用量生成PDF文件用于下载。",
+  "abc_id": 91059,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2015-12-10T20:00:00Z",
+      "description_cn": "获取数据起始时间点，最小数据粒度为5分钟。\n\n日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。\n\n"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2015-12-10T21:00:00Z",
+      "description_cn": "获取数据结束时间点，结束时间需大于起始时间。\n\n日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。\n"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "TaskName": {
+      "name": "TaskName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "刷新",
+      "description_cn": "任务名称。"
+    },
+    "Language": {
+      "name": "Language",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "导出文件的语言，支持**zh-cn**和**en-us**，分别为简体中文和英文，默认为中文**zh-cn**。"
+    }
+  },
+  "res": {
+    "RequestId": "ED61C6C3-8241-4187-AAA7-5157AE175CEC",
+    "StartTime": "2015-12-10T20:00:00Z",
+    "EndTime": "2015-12-10T21:00:00Z",
+    "TaskId": "129456"
+  }
+}

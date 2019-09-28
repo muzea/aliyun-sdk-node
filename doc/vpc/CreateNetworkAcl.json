@@ -1,0 +1,107 @@
+{
+  "name": "CreateNetworkAcl",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateNetworkAcl接口创建网络ACL。",
+  "abc_id": 116590,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "网络ACL所在的地域。 您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "VpcId": {
+      "name": "VpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "vpc-123456",
+      "description_cn": "网络ACL关联的VPC的ID。 "
+    },
+    "NetworkAclName": {
+      "name": "NetworkAclName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "acl-1",
+      "description_cn": "网络ACL的名称。\n\n长度为2-128个字符，必须以字母或中文开头，可包含数字，下划线（_）和短横线（-），但不能以`http://`或`https://`开头。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "This is my NetworkAcl.",
+      "description_cn": "网络ACL的描述信息。 \n\n长度为2-256个字符，必须以字母或中文开头，但不能以`http://`或`https://`开头。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123",
+      "description_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123",
+      "description_cn": ""
+    }
+  },
+  "res": {
+    "NetworkAclAttribute": {
+      "CreationTime": "2019-04-25 11:33:27",
+      "EgressAclEntries": {
+        "EgressAclEntry": [
+          {
+            "Port": "-1/-1",
+            "Policy": "accept",
+            "NetworkAclEntryId": "nae-a2d447uw4tillxxxxxxxx",
+            "DestinationCidrIp": "0.0.0.0/0",
+            "Protocol": "all"
+          }
+        ]
+      },
+      "Status": "Available",
+      "RegionId": "cn-hangzhou",
+      "IngressAclEntries": {
+        "IngressAclEntry": [
+          {
+            "SourceCidrIp": "0.0.0.0/0",
+            "Port": "-1/-1",
+            "Policy": "accept",
+            "NetworkAclEntryId": "nae-a2dk86arlydmexxxxxxxx",
+            "Protocol": "all"
+          }
+        ]
+      },
+      "NetworkAclId": "nacl-a2do9e413e0spxxxxxxxx",
+      "VpcId": "vpc-a2d33rfpl72k5xxxxxxxx",
+      "Resources": {
+        "Resource": []
+      }
+    },
+    "RequestId": "AEAC0891-1E52-4A46-A29C-175FB6356FE8",
+    "NetworkAclId": "nacl-a2do9e413e0spxxxxxxxx"
+  }
+}

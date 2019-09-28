@@ -1,0 +1,46 @@
+{
+  "name": "DeleteMonitorGroupDynamicRule",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "删除指定应用分组的动态规则。",
+  "abc_id": 115021,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Category": {
+      "name": "Category",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "ecs",
+      "description_cn": "动态规则对应的云产品类型，目前动态组支持的产品有ECS、RDS、SLB。"
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "12345",
+      "description_cn": "应用分组ID。"
+    }
+  },
+  "res": {
+    "RequestId": "56B4516A-EB44-4C66-8854-0393B35F636B",
+    "Success": true,
+    "Code": 200
+  }
+}

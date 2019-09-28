@@ -1,0 +1,69 @@
+{
+  "name": "AddIPv6TranslatorAclListEntry",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "在访问控制策略组中添加IP条目。",
+  "abc_id": 114605,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "访问控制策略组的地域。 您可以通过调用DescribeRegions接口获取地域ID。  "
+    },
+    "AclId": {
+      "name": "AclId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ipv6transacl-bp1de2xxxx",
+      "description_cn": " IP条目的访问控制策略组ID。 "
+    },
+    "AclEntryIp": {
+      "name": "AclEntryIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "12ab:0:0:dc30::0102",
+      "description_cn": "访问控制策略组条目中要添加的单个IPv6地址，或者IPv6地址段，如12ab:0:0:dc30::0102或12ab:0:0:dc30::/60。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "AclEntryComment": {
+      "name": "AclEntryComment",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "clientIP1",
+      "description_cn": "访问控制策略组条目的备注信息，长度为2-100个字符，以大小字母或中文开头，可包含数字，\"_\"或\"-\"。"
+    }
+  },
+  "res": {
+    "RequestId": "8B2F5262-6B57-43F2-xxxxx",
+    "AclEntryId": "ipv6transaclentry-bp105jrsxxxx"
+  }
+}

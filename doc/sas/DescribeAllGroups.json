@@ -1,0 +1,47 @@
+{
+  "name": "DescribeAllGroups",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用该接口获取所有的分组信息。",
+  "abc_id": 130972,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "zh",
+      "description_cn": "指定返回结果语言环境。\n\n- **zh**：中文\n- **en**：英文"
+    }
+  },
+  "res": {
+    "code": 200,
+    "requestId": "7E0618A9-D5EF-4220-9471-C42B5E92719F",
+    "success": true,
+    "data": {
+      "Groups": {
+        "GroupId": 100,
+        "GroupName": "xx"
+      }
+    }
+  }
+}

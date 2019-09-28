@@ -1,0 +1,74 @@
+{
+  "name": "AttachInstanceRamRole",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AttachInstanceRamRole为一台或多台ECS实例授予 实例RAM角色。如果实例已有RAM角色，则报错提示您不能附加新的角色。 ",
+  "abc_id": 54244,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "RamRoleName": {
+      "name": "RamRoleName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "RamRoleTest",
+      "description_cn": "实例RAM角色名称。您可以使用 RAM API [ListRoles](~~28713~~)查询您已创建的实例RAM角色。"
+    },
+    "InstanceIds": {
+      "name": "InstanceIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "[“instanceId1”, “instanceId2”, “instanceId3”…]",
+      "description_cn": "实例ID的集合，最多支持100台实例。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    }
+  },
+  "res": {
+    "RequestId": "D9553E4C-6C3A-4D66-AE79-9835AF705639",
+    "AttachInstanceRamRoleResults": {
+      "AttachInstanceRamRoleResult": [
+        {
+          "Message": "success",
+          "InstanceId": "i-instance1",
+          "Code": "200"
+        }
+      ]
+    },
+    "TotalCount": 1,
+    "FailCount": 0,
+    "RamRoleName": "RamRoleTest"
+  }
+}

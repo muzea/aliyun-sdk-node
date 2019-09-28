@@ -1,0 +1,105 @@
+{
+  "name": "QuerySendDetails",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用QuerySendDetails接口查看短信发送记录和发送状态。",
+  "abc_id": 102352,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "PhoneNumber": {
+      "name": "PhoneNumber",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "15900000000",
+      "description_cn": "接收短信的手机号码。\n\n格式：\n* 国内短信：11位手机号码，例如15900000000。\n* 国际/港澳台消息：国际区号+号码，例如85200000000。\n"
+    },
+    "SendDate": {
+      "name": "SendDate",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "20181228",
+      "description_cn": "短信发送日期，支持查询最近30天的记录。\n\n格式为yyyyMMdd，例如20181225。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查看发送记录，指定每页显示的短信记录数量。\n\n取值范围为1~50。"
+    },
+    "CurrentPage": {
+      "name": "CurrentPage",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "分页查看发送记录，指定发送记录的的当前页码。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "BizId": {
+      "name": "BizId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "134523^4351232",
+      "description_cn": "发送回执ID，即发送流水号。调用发送接口SendSms或SendBatchSms发送短信时，返回值中的BizId字段。"
+    }
+  },
+  "res": {
+    "TotalCount": 2,
+    "Message": "OK",
+    "RequestId": "d0468fcf-f673-4456-aaa7-ef2e84ef40ba",
+    "SmsSendDetailDTOs": {
+      "SmsSendDetailDTO": [
+        {
+          "SendDate": "2019-03-06 15:47:05",
+          "SendStatus": 3,
+          "ReceiveDate": "2019-03-06 15:47:18",
+          "ErrCode": "DELIVERED",
+          "TemplateCode": "SMS_000000001",
+          "Content": "【测试签名】测试请忽略",
+          "PhoneNum": "15300000000"
+        },
+        {
+          "SendDate": "2019-03-06 15:47:10",
+          "SendStatus": 3,
+          "ReceiveDate": "2019-03-06 15:47:22",
+          "ErrCode": "DELIVERED",
+          "TemplateCode": "SMS_000000001",
+          "Content": "【测试签名】测试请忽略",
+          "PhoneNum": "15300000000"
+        }
+      ]
+    },
+    "Code": "OK"
+  }
+}

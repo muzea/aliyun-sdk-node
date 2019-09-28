@@ -1,0 +1,88 @@
+{
+  "name": "ReInitDisk",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ReInitDisk重新初始化一块云盘到创建时的初始状态。",
+  "abc_id": 25519,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DiskId": {
+      "name": "DiskId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "d-diskid1",
+      "description_cn": "指定的云盘ID。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。"
+    },
+    "Password": {
+      "name": "Password",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "EcsV587!",
+      "description_cn": "实例的密码。长度为8至30个字符，必须同时包含大小写英文字母、数字和特殊符号中的三类字符。特殊符号可以是：\n\n```\n()`~!@#$%^&*-_+=|{}[]:;'<>,.?/\n```\n\n其中，Windows实例不能以斜线号（/）为密码首字符。\n\n> 如果传入`Password`参数，建议您使用HTTPS协议发送请求，避免密码泄露。"
+    },
+    "KeyPairName": {
+      "name": "KeyPairName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "JoshuaCentOS",
+      "description_cn": "密钥对名称。"
+    },
+    "AutoStartInstance": {
+      "name": "AutoStartInstance",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "重新初始化云盘后是否启动实例。"
+    },
+    "SecurityEnhancementStrategy": {
+      "name": "SecurityEnhancementStrategy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Active",
+      "description_cn": "当指定的云盘为系统盘时，您可以设置是否开启安全加固，加载云服务器 ECS 安全组件云盾等。取值范围： \n         \n- Active：启用安全加固，免费安装云盾。该值仅支持公共镜像。  \n- Deactive：不启用安全加固，卸载云盾等安全组件。该值支持所有镜像。  "
+    }
+  },
+  "res": {
+    "RequestId": "F3CD6886-D8D0-4FEE-B93E-1B73239673DE"
+  }
+}

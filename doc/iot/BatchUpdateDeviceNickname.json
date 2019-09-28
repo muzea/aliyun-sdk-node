@@ -1,0 +1,62 @@
+{
+  "name": "BatchUpdateDeviceNickname",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "IotInstanceId": {
+      "name": "IotInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "DeviceNicknameInfo": {
+      "name": "DeviceNicknameInfo",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "ProductKey",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "DeviceName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Nickname",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "IotId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {}
+}

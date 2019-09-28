@@ -1,0 +1,189 @@
+{
+  "name": "DescribeInvocations",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeInvocations查询最近两周云助手命令的执行列表和状态。",
+  "abc_id": 64840,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "ECS 实例所在的地域 ID。您可以调用 [DescribeRegions](~~25609~~) 查看最新的阿里云地域列表。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "hide"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。"
+    },
+    "InvokeId": {
+      "name": "InvokeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "t-7d2a745b412b4601b2d47f6a768d3b53",
+      "description_cn": "命令进程执行 ID。"
+    },
+    "CommandId": {
+      "name": "CommandId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "c-4d34302d02424c5c8e10281e3a315a05",
+      "description_cn": "命令 ID。您可以通过接口 [DescribeCommands](~~64843~~) 查询所有可用的 CommandId。 "
+    },
+    "CommandName": {
+      "name": "CommandName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Test1",
+      "description_cn": "命令名称。"
+    },
+    "CommandType": {
+      "name": "CommandType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "RunShellScript",
+      "description_cn": "命令类型。"
+    },
+    "Timed": {
+      "name": "Timed",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "命令是否为周期执行。默认值：False"
+    },
+    "InvokeStatus": {
+      "name": "InvokeStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Finished",
+      "description_cn": "指定的命令总的执行状态。总的执行状态取决于指定命令管理的所有目标实例中的命令进程执行状态 InstanceInvokeStatus。取值范围： \n         \n- Running：命令进程进行中\n    - 周期执行：未手动停止周期执行命令前，命令进程一直为 进行中（Running）。  \n    - 单次执行：指定命令管理的所有目标实例中一旦有 进行中（Running）的命令进程，总的执行状态为 进行中（Running）。  \n            \n- Finished：命令进程执行完成 \n    - 周期执行：命令进程不可能为 执行完成（Finished）。  \n    - 单次执行：指定命令管理的所有目标实例全部执行完成，总的执行状态为 执行完成（Finished）。  或者 手动停止（Stopped）部分目标实例的命令进程，其余目标实例全部执行完成，总的执行状态为 执行完成（Finished）。   \n            \n- Failed：命令进程执行失败，命令进程出现超时情况或者其他异常 \n    - 周期执行：命令进程不可能为 执行失败（Failed）。  \n    - 单次执行：指定命令管理的所有目标实例全部执行失败，总的执行状态为 执行失败（Failed）。  \n            \n- PartialFailed：命令进程执行部分失败 \n    - 周期执行：命令进程不可能为 部分失败（PartialFailed）。  \n    - 单次执行：指定命令管理的所有目标实例中个别有 执行失败（Failed）的命令进程，总的执行状态为 部分失败（PartialFailed）。  \n            \n- Stopped：命令进程被手动停止  \n         "
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-uf614fhehhzxx",
+      "description_cn": "实例 ID。当您传入了该参数，将查询该实例所有的命令执行记录。"
+    },
+    "ContentEncoding": {
+      "name": "ContentEncoding",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "当前页码，起始值：1\n\n默认值：1 "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时设置的每页行数，最大值：50\n\n默认值：10 "
+    }
+  },
+  "res": {
+    "TotalCount": 2,
+    "PageNumber": 1,
+    "PageSize": 10,
+    "Invocations": {
+      "Invocation": [
+        {
+          "InvokeStatus": "Running",
+          "InvokeId": "t-7d2a745b412b4601b2d47f6a768d3b53",
+          "CommandName": "Test1",
+          "CommandType": "RunShellScript",
+          "Frequency": "0 */20 * * * *",
+          "InvokeInstances": {
+            "InvokeInstance": [
+              {
+                "InstanceId": "i-uf614fhehhzmx",
+                "InstanceInvokeStatus": "Finished"
+              },
+              {
+                "InstanceId": "i-uf64isakb713x",
+                "InstanceInvokeStatus": "Running"
+              }
+            ]
+          },
+          "Timed": true,
+          "CommandId": "c-7d2a745b412b4601b2d47f6a768d3a14"
+        },
+        {
+          "InvokeStatus": "Finished",
+          "InvokeId": ">t-7d2a745b412b4601b2d47f6a768d3b55",
+          "CommandName": "Test3",
+          "CommandType": "RunShellScript",
+          "InvokeInstances": {
+            "InvokeInstance": [
+              {
+                "InstanceId": "i-uf614fhehhzmx",
+                "InstanceInvokeStatus": "Finished"
+              },
+              {
+                "InstanceId": "i-uf64isakb713x",
+                "InstanceInvokeStatus": "Finished"
+              }
+            ]
+          },
+          "Timed": false,
+          "CommandId": "c-7d2a745b412b4601b2d47f6a768d3a16"
+        }
+      ]
+    },
+    "RequestId": "E69EF3CC-94CD-42E7-8926-F133B86387C0"
+  }
+}

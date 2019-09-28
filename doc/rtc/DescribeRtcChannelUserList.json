@@ -1,0 +1,77 @@
+{
+  "name": "DescribeRtcChannelUserList",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeRtcChannelUserList获取频道通信用户列表。",
+  "abc_id": 132141,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "xxx",
+      "description_cn": "应用ID。"
+    },
+    "PageNo": {
+      "name": "PageNo",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "页号。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "100",
+      "description_cn": "显示数量。"
+    },
+    "TimePoint": {
+      "name": "TimePoint",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2018-01-29T00:00:00Z",
+      "description_cn": "查询时间点日期，时间粒度为天，UTC格式。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ChannelId": {
+      "name": "ChannelId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "xx",
+      "description_cn": "频道ID。"
+    }
+  },
+  "res": {}
+}

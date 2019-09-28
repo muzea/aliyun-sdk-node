@@ -1,0 +1,60 @@
+{
+  "name": "DeleteLaunchTemplate",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteLaunchTemplate删除一个实例启动模板。",
+  "abc_id": 73760,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例启动模板所属的地域ID。您可以调用 [DescribeRegions](~~25609~~) 查看最新的阿里云地域列表。 "
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。 "
+    },
+    "LaunchTemplateId": {
+      "name": "LaunchTemplateId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "lt-bp1apo0bbbkuy0rj3***",
+      "description_cn": "启动模板ID。更多详情，请调用 [DescribeLaunchTemplates](~~73759~~)。您必须指定 `LaunchTemplateId` 或 `LaunchTemplateName` 以确定启动模板。"
+    },
+    "LaunchTemplateName": {
+      "name": "LaunchTemplateName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "JoshuaWinPostPaid",
+      "description_cn": "启动模板名称。您必须指定`LaunchTemplateId`或`LaunchTemplateName`以确定启动模板。 "
+    }
+  },
+  "res": {}
+}

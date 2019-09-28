@@ -1,0 +1,61 @@
+{
+  "name": "ModifyAuditPolicy",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyAuditPolicy接口设置MongoDB实例的审计日志开关或日志存储时长。",
+  "abc_id": 131941,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AuditStatus": {
+      "name": "AuditStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "enable",
+      "description_cn": "审计日志状态，取值：\n- **enable**：开启审计日志。\n- **disabled**：关闭审计日志。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "StoragePeriod": {
+      "name": "StoragePeriod",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "审计日志存储的天数。取值范围为**1**~**30**，默认为**30**。"
+    }
+  },
+  "res": {
+    "RequestId": "DC04D812-F18D-4568-9B88-F260D9590116"
+  }
+}

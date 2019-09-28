@@ -1,0 +1,79 @@
+{
+  "name": "RenewInstance",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用RenewInstance接口对RDS实例进行手动续费。",
+  "abc_id": 69069,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxxxxx",
+      "description_cn": "需要续费的实例ID。"
+    },
+    "Period": {
+      "name": "Period",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "12",
+      "description_cn": "预付费续费时长，单位：月。取值：\n- **1~9**\n- **12**\n- **24**\n- **36**\n- **48**\n- **60**"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ETnLKlblzczshOTUbOCzxxxxxxxxxx",
+      "description_cn": "用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。"
+    },
+    "AutoPay": {
+      "name": "AutoPay",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "True",
+      "description_cn": "续费时是否自动付费。取值：\n* **True**：自动付费。请确保账号有足够的余额。\n* **False**：控制台手动付费。具体操作为：登录控制台，在右上角选择**费用>进入费用中心**，在**订单管理**找到目标订单进行支付。\n\n默认值：**False**。"
+    },
+    "BusinessInfo": {
+      "name": "BusinessInfo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "OrderId": "20286717xxxxx",
+    "RequestId": "E10319A3-B96A-46B0-81CE-D610DC891409"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "ModifyActionEventPolicy",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyActionEventPolicy接口开启或关闭RDS历史事件功能。",
+  "abc_id": 131030,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "需要开启或关闭历史事件功能的地域ID，可以通过接口[DescribeRegions](~~26243~~)查看地域ID。"
+    },
+    "EnableEventLog": {
+      "name": "EnableEventLog",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "True",
+      "description_cn": "是否开启历史事件记录功能。取值：**True | False**"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "BAC0952C-0EB3-4DE7-A567-B83269BFE43F",
+    "RegionId": "cn-hangzhou",
+    "EnableEventLog": "True"
+  }
+}

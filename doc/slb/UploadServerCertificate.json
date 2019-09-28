@@ -1,0 +1,122 @@
+{
+  "name": "UploadServerCertificate",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用UploadServerCertificate上传服务器证书。",
+  "abc_id": 34181,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "服务器证书的地域。\n\n您可以通过调用[DescribeRegions](~~27584~~)接口查询地域ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AliCloudCertificateId": {
+      "name": "AliCloudCertificateId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "730912673xxxxxx_15d97e7709a_71445759hr_789289731",
+      "description_cn": "阿里云的云上证书ID。\n  \n 使用阿里云的云上证书，该参数必选。"
+    },
+    "AliCloudCertificateName": {
+      "name": "AliCloudCertificateName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "testcertkey",
+      "description_cn": "阿里云的云上证书名称。"
+    },
+    "ServerCertificate": {
+      "name": "ServerCertificate",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "要上传的公钥证书。"
+    },
+    "PrivateKey": {
+      "name": "PrivateKey",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "wmsad!q23",
+      "description_cn": "需要上传的私钥。  "
+    },
+    "ServerCertificateName": {
+      "name": "ServerCertificateName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "mycert01",
+      "description_cn": "要上传的服务器证书的名称。\n\n名称长度为 1~80 个英文或中文字符，必须以大小字母或中文开头，可包含数字，点号（.），下划线（_）和短横线（-）。"
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rg-atstuj3rto****",
+      "description_cn": "企业资源组ID。  "
+    }
+  },
+  "res": {
+    "CommonName": "*.example1.com",
+    "RegionIdAlias": "cn-hangzhou",
+    "ResourceGroupId": "rg-acfmxazb4ph6aiy",
+    "Fingerprint": "68:08:1a:f8:2c:97:69:a3:a1:e6:16:41:4b:ca:4f:5d:ee:a5:ef:0d",
+    "ServerCertificateId": "1231579085529123_166f8204689_1714763408_709981430",
+    "ExpireTimeStamp": 1558161264000,
+    "AliCloudCertificateId": "1501739",
+    "ExpireTime": "2019-05-18T06:34:24Z",
+    "RegionId": "cn-hangzhou",
+    "RequestId": "C87620A7-3608-48D0-BC41-A83FB4FF0EC6",
+    "ServerCertificateName": "*.example1.com",
+    "IsAliCloudCertificate": 1,
+    "AliCloudCertificateName": "slb"
+  }
+}

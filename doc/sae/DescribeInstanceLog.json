@@ -1,0 +1,29 @@
+{
+  "name": "DescribeInstanceLog",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v1/sam/instance/describeInstanceLog",
+  "summary_cn": "获取实例日志",
+  "abc_id": 126222,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "xxx",
+      "description_cn": "实例ID"
+    }
+  },
+  "res": {}
+}

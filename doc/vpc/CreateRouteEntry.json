@@ -1,0 +1,127 @@
+{
+  "name": "CreateRouteEntry",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateRouteEntry接口在VPC路由器或边界路由器（VBR）上创建自定义路由条目。",
+  "abc_id": 36012,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "路由表所属地域的ID。"
+    },
+    "DestinationCidrBlock": {
+      "name": "DestinationCidrBlock",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "192.168.0.1/24",
+      "description_cn": "自定义路由条目的目标网段，支持IPv4和IPv6的目标网段。需满足以下要求：\n          \n- 目标网段不能指向100.64.0.0/10或被100.64.0.0/10包含。  \n \n- 同一张路由表内的不同路由条目的目标网段不能相同。\n \n- 如果提供的目标网段是一个IP地址，掩码将按照32位处理。  \n\n- 如果提供的目标网段是一个IPv6地址，掩码将按照128位处理。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "RouteTableId": {
+      "name": "RouteTableId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "vtb-bp145q7glnuzd****",
+      "description_cn": " 路由表ID。 "
+    },
+    "NextHopId": {
+      "name": "NextHopId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ri-2zeo3xzyf38r4****",
+      "description_cn": "下一跳实例的ID。"
+    },
+    "PrivateIpAddress": {
+      "name": "PrivateIpAddress",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "02fb3da4-130e-11e9-8e44-001****",
+      "description_cn": "客户端token，用于保证请求的幂等性。\n\n由客户端生成该参数值，要保证在不同请求间唯一，最大不值过64个 ASCII 字符。 "
+    },
+    "RouteEntryName": {
+      "name": "RouteEntryName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "NextHopType": {
+      "name": "NextHopType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "RouterInterface",
+      "description_cn": "下一跳的类型，取值： \n\n- ** Instance**：ECS实例（默认值）  \n\n- **HaVip**：高可用虚拟IP  \n\n- **RouterInterface**：路由器接口\n\n- **NetworkInterface**：弹性网卡\n\n- **VpnGateway**：VPN网关\n\n- **IPv6Gateway**：IPv6网关"
+    },
+    "NextHopList": {
+      "name": "NextHopList",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "NextHopType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "NextHopId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Weight",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {
+    "RequestId": "12D086F6-8F31-4658-84C1-006DED011A85"
+  }
+}

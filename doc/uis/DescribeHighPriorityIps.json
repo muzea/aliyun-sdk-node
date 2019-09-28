@@ -1,0 +1,80 @@
+{
+  "name": "DescribeHighPriorityIps",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeHighPriorityIps接口查询uis实例中的目的地址（ip或者URL）列表。",
+  "abc_id": 126623,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域，和UIS实例上的region保持一致。\n\n"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "UisId": {
+      "name": "UisId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "UIS-xxxsjkn8dtiej7bbb****",
+      "description_cn": "UIS实例ID。\n\n"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "分页查询时的页码。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时的每页数量。"
+    }
+  },
+  "res": {
+    "HighPriorityIps": {
+      "HighPriorityIp": [
+        {
+          "AreaId": "us-west-1",
+          "Destination": "www.microsfot.com"
+        },
+        {
+          "AreaId": "cn-hongkong",
+          "Destination": "10.45.67.X"
+        }
+      ]
+    },
+    "RequestId": "3B2B675D-17AB-499D-9070-CE8A891CD3AD"
+  }
+}

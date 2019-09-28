@@ -1,0 +1,102 @@
+{
+  "name": "ModifyCommand",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "修改一条云助手命令相关参数以及命令内容。",
+  "abc_id": 64839,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域 ID。您可以调用 [DescribeRegions](~~25609~~) 查看最新的阿里云地域列表。 "
+    },
+    "CommandId": {
+      "name": "CommandId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "c-4d34302d02424c5c8e10281e3a315a05",
+      "description_cn": "命令 ID。您可以通过接口 [DescribeCommands](~~64843~~) 查询所有可用的 CommandId。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "AlibabaCommand",
+      "description_cn": "命令名称，支持全字符集。长度不得超过 30 个字符。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "UserGuide",
+      "description_cn": "命令描述，支持全字符集。长度不得超过100个字符。"
+    },
+    "CommandContent": {
+      "name": "CommandContent",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "c2VydmljZSB0b21jYXQgc3RhcnQ=",
+      "description_cn": "命令内容。"
+    },
+    "WorkingDir": {
+      "name": "WorkingDir",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "/home/",
+      "description_cn": "执行路径。"
+    },
+    "Timeout": {
+      "name": "Timeout",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "120",
+      "description_cn": "超时时间。"
+    }
+  },
+  "res": {
+    "RequestId": "0DE9B41E-EF0D-40A0-BB43-37749C5BDA9C"
+  }
+}

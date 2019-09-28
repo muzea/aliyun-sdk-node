@@ -1,0 +1,72 @@
+{
+  "name": "ModifyInstanceAutoRenewalAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": null,
+  "abc_id": 52728,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域名称的ID，例如：cn-hangzhou"
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": " rm-bp1842vmucoa5w874",
+      "description_cn": "实例名。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ETnLKlblzczshOTUbOCziJZNwHlYBQ",
+      "description_cn": "用于保证幂等性。"
+    },
+    "Duration": {
+      "name": "Duration",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "True",
+      "description_cn": "自动续费周期，当AutoRenew=”True”时，该值有效且必填。取值为1-12。表示实例到期时，自动续费1-12个月。"
+    },
+    "AutoRenew": {
+      "name": "AutoRenew",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "True",
+      "description_cn": "取值为：<br>AutoRenew=”True”设置自动续费;<br>AutoRenew=”False” 取消自动续费。"
+    }
+  },
+  "res": {
+    "RequestId": "1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC"
+  }
+}

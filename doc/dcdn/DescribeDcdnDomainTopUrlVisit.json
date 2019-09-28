@@ -1,0 +1,57 @@
+{
+  "name": "DescribeDcdnDomainTopUrlVisit",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDcdnDomainTopUrlVisit获取加速域名某天内的热门URL列表。",
+  "abc_id": 130641,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "加速域名，只支持一个域名。\n"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2018-10-03T16:00:00Z",
+      "description_cn": "开始获取数据的时间点。不写默认读取过去24小时数据。\n\n格式为：YYYY-MM-DDThh:mm:ssZ，查询某天的数据，建议传YYYY-MM-DDT16:00:00Z。\n"
+    },
+    "SortBy": {
+      "name": "SortBy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "pv",
+      "description_cn": "排序方式，支持**traf**和**pv**，默认**pv**。\n"
+    }
+  },
+  "res": {}
+}

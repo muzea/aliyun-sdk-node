@@ -1,0 +1,33 @@
+{
+  "name": "DeleteGateway",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteGateway删除已录入的网关。",
+  "abc_id": 109908,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "地域ID。"
+    },
+    "GwEui": {
+      "name": "GwEui",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "0000000000000000",
+      "description_cn": "网关唯一标识。"
+    }
+  },
+  "res": {}
+}

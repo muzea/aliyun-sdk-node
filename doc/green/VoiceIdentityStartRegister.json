@@ -1,0 +1,28 @@
+{
+  "name": "VoiceIdentityStartRegister",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/green/voice/auth/start/register",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "ClientInfo": {
+      "name": "ClientInfo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

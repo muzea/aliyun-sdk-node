@@ -1,0 +1,161 @@
+{
+  "name": "ImportImage",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ImportImage导入您已有的镜像文件到云服务器ECS，并作为自定义镜像出现在相应地域中。",
+  "abc_id": 25542,
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "源自定义镜像的地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "hide"
+    },
+    "DiskDeviceMapping": {
+      "name": "DiskDeviceMapping",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Format",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "OSSBucket",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "OSSObject",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "DiskImSize",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "DiskImageSize",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Device",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "ImageName": {
+      "name": "ImageName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FinanceJoshua",
+      "description_cn": "镜像名称。长度为2~128个英文或中文字符。必须以大小字母或中文开头，不能以http://和https://开头。可以包含数字、半角冒号（:）、下划线（_）或者连字符（-）。\n\n默认值：空。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FinanceDeptJoshua",
+      "description_cn": "镜像的描述信息。长度为2~256个英文或中文字符，不能以http://和https://开头。\n\n默认值：空。"
+    },
+    "Architecture": {
+      "name": "Architecture",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "x86_64",
+      "description_cn": "系统架构。取值范围： \n\n- i386\n- x86_64（默认）"
+    },
+    "OSType": {
+      "name": "OSType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "linux",
+      "description_cn": "操作系统平台类型。取值范围： \n\n- windows\n- linux（默认）"
+    },
+    "Platform": {
+      "name": "Platform",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Aliyun",
+      "description_cn": "操作系统发行版。取值范围： \n\n-   CentOS\n-   Ubuntu\n-   SUSE\n-   OpenSUSE\n-   Debian\n-   CoreOS\n-   Aliyun\n-   Windows Server 2003\n-   Windows Server 2008\n-   Windows Server 2012\n-   Others Linux（默认）\n-   Customized Linux"
+    },
+    "RoleName": {
+      "name": "RoleName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FinanceJoshua",
+      "description_cn": ""
+    },
+    "LicenseType": {
+      "name": "LicenseType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Auto",
+      "description_cn": "导入镜像后，激活操作系统采用的许可证类型。取值范围：\n\n- Auto（默认）：由阿里云检测源操作系统并分配许可证。自动模式下，系统优先搜索您设置的`Platform`是否有阿里云官方渠道的许可证并分配给导入的镜像，如果缺乏该类许可，会切换成BYOL（Bring Your Own License）方式。\n- Aliyun：根据您设置的`Platform`采用阿里云官方渠道的许可证。\n- BYOL：源操作系统自带的许可证。采用BYOL时，您必须确保您的许可证密钥支持在阿里云使用。\n\n"
+    }
+  },
+  "res": {
+    "RequestId": "C8B26B44-0189-443E-9816-D951F59623A9",
+    "ImageId": "Img-231234567",
+    "ImportTaskId": "123-345-2332-22323"
+  }
+}

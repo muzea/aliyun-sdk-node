@@ -1,0 +1,125 @@
+{
+  "name": "DescribeSlowLogs",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeSlowLogs查看慢日志统计情况。",
+  "abc_id": 26288,
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2011-05-01Z",
+      "description_cn": "查询开始日期，格式：<i>yyyy-MM-dd</i>Z。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2011-05-30Z",
+      "description_cn": "查询结束日期，不能小于查询开始日期，与查询开始日期间隔不超过31天。格式：<i>yyyy-MM-dd</i>Z。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "DBName": {
+      "name": "DBName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "RDS_MySQL",
+      "description_cn": "数据库名称。"
+    },
+    "SortKey": {
+      "name": "SortKey",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "TotalExecutionCounts",
+      "description_cn": "排序依据，取值：\n* **TotalExecutionCounts**：总执行次数最多；\n* **TotalQueryTimes**：总执行时间最多；\n* **TotalLogicalReads**：总逻辑读最多；\n* **TotalPhysicalReads**：总物理读最多。\n\n>仅SQL Server 2008 R2实例支持本参数。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "每页记录数，取值：\n* **30**；\n* **50**；\n* **100**。\n\n默认值：**30**。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页码，取值：大于0且不超过Integer的最大值。\n\n默认值：**1**。"
+    }
+  },
+  "res": {
+    "DescribeSlowLogsResponse": {
+      "RequestId": "A5409D02-D661-4BF3-8F3D-0A814D0574E7",
+      "DBInstanceID": "rm-uf6wjk5xxxxxxx",
+      "Engine": "SQLServer",
+      "StartTime": "2011-06-11Z",
+      "EndTime": "2011-12-11Z",
+      "TotalRecordCount": "1",
+      "PageNumber": "1",
+      "PageRecordCount": "1",
+      "Items": {
+        "SQLSlowLog": {
+          "SQLText": "update test.zxb set id=0 limit 1",
+          "SQLServerTotalExecutionCounts": "178",
+          "SQLServerTotalExecutionTimes": "189",
+          "TotalLogicalReadcounts": "89",
+          "TotalPhysicalReadcounts": "90",
+          "ReportTime": "2013-11-12Z"
+        }
+      }
+    }
+  }
+}

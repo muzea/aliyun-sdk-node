@@ -1,0 +1,219 @@
+{
+  "name": "RecoveryDBInstance",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用RecoveryDBInstance接口恢复数据库。",
+  "abc_id": 84685,
+  "timeout": 35000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DbNames": {
+      "name": "DbNames",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "{sourceDbName1\":\"targetDbName1\"}",
+      "description_cn": "数据库名，若指定多个数据库，按如下格式：{\"原库名1\":\"新库名1\",\"原库名2\":\"新库名2\"}\n\n>恢复到已有实例该参数必须传入。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "DBInstanceClass": {
+      "name": "DBInstanceClass",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rds.mysql.s2.large",
+      "description_cn": "新实例规格，详见[实例规格](~~26312~~)。"
+    },
+    "DBInstanceStorage": {
+      "name": "DBInstanceStorage",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "5",
+      "description_cn": "新实例存储容量。"
+    },
+    "DBInstanceDescription": {
+      "name": "DBInstanceDescription",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "PayType": {
+      "name": "PayType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Postpaid",
+      "description_cn": "新实例付费类型：\n* **Postpaid**：后付费（按量付费）；\n* **Prepaid**：预付费，（包年包月）。"
+    },
+    "InstanceNetworkType": {
+      "name": "InstanceNetworkType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "VPC",
+      "description_cn": "新实例网络类型：\n* **Classic**：经典网络；\n* **VPC**：专有网络。\n\n默认与主实例网络类型一致。"
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rm-xxxxxxxx1",
+      "description_cn": "原实例ID。\n>* 按备份集恢复（即指定BackupId参数）时，本参数不是必须。\n* 按时间点恢复（即指定RestoreTime参数）时，本参数为必须。"
+    },
+    "TargetDBInstanceId": {
+      "name": "TargetDBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "目标实例ID。"
+    },
+    "BackupId": {
+      "name": "BackupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "293044600",
+      "description_cn": "备份集ID，可通过查询备份列表接口[DescribeBackups](~~26273~~)获取。\n\n指定此参数时，**DBInstanceId**参数为可选。\n\n>**BackupId**和**RestoreTime**两者至少传入一个。"
+    },
+    "RestoreTime": {
+      "name": "RestoreTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2011-06-11T16:00:00Z",
+      "description_cn": "备份保留周期内的任意时间点。格式：<i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z（UTC时间）。\n\n指定此参数时，**DBInstanceId**参数为必须。\n\n>**BackupId**和**RestoreTime**两者至少传入一个。"
+    },
+    "VPCId": {
+      "name": "VPCId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc-xxxxxxxxxxx",
+      "description_cn": "VPC ID。"
+    },
+    "VSwitchId": {
+      "name": "VSwitchId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vsw-xxxxxxxxxxx",
+      "description_cn": "VSwitch ID，多个值用英文逗号（,）隔开。"
+    },
+    "PrivateIpAddress": {
+      "name": "PrivateIpAddress",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc-xxxxxxxxxxx",
+      "description_cn": "设置实例的内网IP，需要在指定交换机的IP地址范围内。系统默认通过**VPCId**和**VSwitchId**自动分配。"
+    },
+    "UsedTime": {
+      "name": "UsedTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Prepaid",
+      "description_cn": "指定购买时长，取值：\n* 当参数**Period**为**Year**时，UsedTime取值为**1~3**；\n* 当参数**Period**为**Month**时，UsedTime取值为**1~9**。\n\n> 若付费类型为**Prepaid**则该参数必须传入。"
+    },
+    "Period": {
+      "name": "Period",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Prepaid",
+      "description_cn": "指定预付费实例为包年或者包月类型，取值：\n* **Year**：包年；\n* **Month**：包月。\n\n> 若付费类型为**Prepaid**则该参数必须传入。"
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "DBInstanceStorageType": {
+      "name": "DBInstanceStorageType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "EFB6083A-7699-489B-8278-C0CB4793A96E"
+  }
+}

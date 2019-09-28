@@ -1,0 +1,119 @@
+{
+  "name": "ModifySecurityIps",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifySecurityIps接口修改白名单。",
+  "abc_id": 26242,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "SecurityIps": {
+      "name": "SecurityIps",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "10.23.12.24",
+      "description_cn": "该实例的[IP白名单](~~43185~~)，多个IP地址请以英文逗号（,）隔开，不可重复，最多1000个。支持如下两种格式：\n* IP地址形式，例如：10.23.12.24。\n* CIDR形式，例如：10.23.12.24/24（无类域间路由，24表示了地址中前缀的长度，范围为1~32）。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "DBInstanceIPArrayName": {
+      "name": "DBInstanceIPArrayName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "需要修改的IP白名单分组名称，默认操作“Default”分组。\n\n>单个实例最多支持50个白名单分组。"
+    },
+    "DBInstanceIPArrayAttribute": {
+      "name": "DBInstanceIPArrayAttribute",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "hidden",
+      "description_cn": "白名单分组属性，默认为空。\n>控制台不显示带有“hidden”属性的分组，带有该标签的分组通常是用于访问DTS、DRDS服务的。"
+    },
+    "SecurityIPType": {
+      "name": "SecurityIPType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "IPv4",
+      "description_cn": "IP地址类型。"
+    },
+    "WhitelistNetworkType": {
+      "name": "WhitelistNetworkType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Classic",
+      "description_cn": "白名单的网络类型，取值：\n* **Classic**：高安全白名单模式下的经典网络；\n* **VPC**：高安全白名单模式下的专有网络；\n* **MIX**：通用模式，在通用白名单模式下会添加IP到通用分组里，在高安全白名单模式下会同时添加IP到经典网络和专有网络分组里。\n\n默认值：**MIX**。"
+    },
+    "SecurityGroupId": {
+      "name": "SecurityGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rg-acfmyxxxxx",
+      "description_cn": "安全组编码。"
+    },
+    "ModifyMode": {
+      "name": "ModifyMode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Cover",
+      "description_cn": "修改方式，取值：\n* **Cover**：覆盖原IP白名单；\n* **Append**：追加IP；\n* **Delete**：删除IP。\n\n默认值：**Cover**。"
+    }
+  },
+  "res": {
+    "RequestId": " 1AD222E9-E606-4A42-BF6D-8A4442913CEF",
+    "TaskId": 115855279
+  }
+}

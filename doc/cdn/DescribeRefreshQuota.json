@@ -1,0 +1,34 @@
+{
+  "name": "DescribeRefreshQuota",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeRefreshQuota查询刷新、预热URL及目录的最大限制数量，以及当日剩余刷新、预热URL及目录的次数。",
+  "abc_id": 91156,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "DirQuota": "100",
+    "DirRemain": "99",
+    "RequestId": "42E0554B-80F4-4921-AED6-ACFB22CAAAD0",
+    "UrlQuota": "2000",
+    "UrlRemain": "1996",
+    "PreloadQuota": "500",
+    "PreloadRemain": "400"
+  }
+}

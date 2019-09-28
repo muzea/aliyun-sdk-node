@@ -1,0 +1,58 @@
+{
+  "name": "DescribeFabricOrganizationUsers",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeFabricOrganizationUsers获取组织的用户列表。",
+  "abc_id": 128017,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "OrganizationId": {
+      "name": "OrganizationId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "peers-aaaaaa2-1eqnj5o5w****",
+      "description_cn": "组织ID"
+    },
+    "Location": {
+      "name": "Location",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "位置"
+    }
+  },
+  "res": {
+    "result": {
+      "Attrs": "foo=foo1,bar=bar1",
+      "Username": "username",
+      "OrganizationId": "peers-aaaaaa2-1eqnj5o5w9dt3",
+      "ChannelName": "mychannel",
+      "CreateTime": "1544411108000",
+      "ExpireTime": "1544411108000",
+      "CallerBid": "26842",
+      "CallerUid": 212
+    },
+    "RequestId": "2537DB1B-F478-431E-A847-5DDAAE2BD251",
+    "ErrorCode": 200,
+    "Success": true
+  }
+}

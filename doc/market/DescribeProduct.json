@@ -1,0 +1,333 @@
+{
+  "name": "DescribeProduct",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Code": {
+      "name": "Code",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "AliUid": {
+      "name": "AliUid",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "QueryDraft": {
+      "name": "QueryDraft",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "Description": "<p>aaa</p>",
+    "Type": "APP",
+    "PicUrl": "https://photogallery.oss.aliyuncs.com/photo/1666562244190862/17909/ce4e8f40-1d3e-465d-b884-f78a432cde81.jpg",
+    "Code": "cmgj027381",
+    "ProductExtras": {
+      "ProductExtra": [
+        {
+          "Values": "\"aaa\"",
+          "Key": "product_advantage",
+          "Type": "HTML",
+          "Order": 0,
+          "Label": "产品亮点"
+        },
+        {
+          "Values": [
+            {
+              "Value": "[\"Windows\"]",
+              "Label": "适用系统版本"
+            },
+            {
+              "Value": "aa",
+              "Label": "版本号"
+            },
+            {
+              "Value": "应用软件类",
+              "Label": "交付方式"
+            }
+          ],
+          "Key": "product_param",
+          "Type": "LIST",
+          "Order": 15,
+          "Label": "产品参数"
+        }
+      ]
+    },
+    "Name": "V3【回归】服务类-按周期",
+    "ShortDescription": "aaa",
+    "ShopInfo": {
+      "Telephones": {
+        "Telephone": [
+          "15810167906"
+        ]
+      },
+      "Name": "凌鲲科技有限公司测试",
+      "Emails": "xiaozhe.dxz@alibaba-inc.com",
+      "WangWangs": {
+        "WangWang": [
+          {
+            "UserName": "凌鲲",
+            "Remark": "凌鲲"
+          }
+        ]
+      },
+      "Id": 1597411
+    },
+    "ProductSkus": {
+      "ProductSku": [
+        {
+          "ChargeType": "PREPAY",
+          "Name": "预付费",
+          "OrderPeriods": {
+            "OrderPeriod": [
+              {
+                "Name": "一年",
+                "PeriodType": "YEAR"
+              }
+            ]
+          },
+          "Modules": {
+            "Module": [
+              {
+                "Name": "几号数",
+                "Id": "1018040000484633",
+                "Code": "AC",
+                "Properties": {
+                  "Property": [
+                    {
+                      "Name": "几号数",
+                      "Key": "AC",
+                      "DisplayUnit": "个",
+                      "PropertyValues": {
+                        "PropertyValue": [
+                          {
+                            "Step": "1",
+                            "Type": "range_float",
+                            "Max": "999",
+                            "Min": "1"
+                          },
+                          {
+                            "Step": "1",
+                            "Type": "range_float",
+                            "Max": "999999999999999",
+                            "Min": "999"
+                          }
+                        ]
+                      },
+                      "ShowType": "number"
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "购买个数",
+                "Id": "1018040000484634",
+                "Code": "order_num",
+                "Properties": {
+                  "Property": [
+                    {
+                      "Name": "购买个数",
+                      "Key": "order_num",
+                      "DisplayUnit": "",
+                      "PropertyValues": {
+                        "PropertyValue": [
+                          {
+                            "Step": "1",
+                            "Type": "range_float",
+                            "Max": "100",
+                            "Min": "1"
+                          }
+                        ]
+                      },
+                      "ShowType": "number"
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "购买时长",
+                "Id": "1018040000484740",
+                "Code": "ord_time",
+                "Properties": {
+                  "Property": [
+                    {
+                      "Name": "购买时长",
+                      "Key": "ord_time",
+                      "DisplayUnit": "",
+                      "PropertyValues": {
+                        "PropertyValue": [
+                          {
+                            "Value": "1:Month",
+                            "Type": "single_string",
+                            "DisplayName": "1个月"
+                          },
+                          {
+                            "Value": "2:Month",
+                            "Type": "single_string",
+                            "DisplayName": "2个月"
+                          },
+                          {
+                            "Value": "3:Month",
+                            "Type": "single_string",
+                            "DisplayName": "3个月"
+                          },
+                          {
+                            "Value": "4:Month",
+                            "Type": "single_string",
+                            "DisplayName": "4个月"
+                          },
+                          {
+                            "Value": "5:Month",
+                            "Type": "single_string",
+                            "DisplayName": "5个月"
+                          },
+                          {
+                            "Value": "6:Month",
+                            "Type": "single_string",
+                            "DisplayName": "6个月"
+                          },
+                          {
+                            "Value": "7:Month",
+                            "Type": "single_string",
+                            "DisplayName": "7个月"
+                          },
+                          {
+                            "Value": "8:Month",
+                            "Type": "single_string",
+                            "DisplayName": "8个月"
+                          },
+                          {
+                            "Value": "9:Month",
+                            "Type": "single_string",
+                            "DisplayName": "9个月"
+                          },
+                          {
+                            "Value": "10:Month",
+                            "Type": "single_string",
+                            "DisplayName": "10个月"
+                          },
+                          {
+                            "Value": "11:Month",
+                            "Type": "single_string",
+                            "DisplayName": "11个月"
+                          },
+                          {
+                            "Value": "1:Year",
+                            "Type": "single_string",
+                            "DisplayName": "1年"
+                          },
+                          {
+                            "Value": "2:Year",
+                            "Type": "single_string",
+                            "DisplayName": "2年"
+                          },
+                          {
+                            "Value": "3:Year",
+                            "Type": "single_string",
+                            "DisplayName": "3年"
+                          }
+                        ]
+                      },
+                      "ShowType": "radio"
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "套餐配置",
+                "Id": "1018040000484632",
+                "Code": "package_config",
+                "Properties": {
+                  "Property": [
+                    {
+                      "Name": "套餐配置",
+                      "Key": "package_config",
+                      "DisplayUnit": "",
+                      "PropertyValues": {
+                        "PropertyValue": [
+                          {
+                            "Value": "yuncode2138100001",
+                            "Type": "single_string",
+                            "DisplayName": "{\"frontShow\":true}"
+                          },
+                          {
+                            "Value": "yuncode2138100002",
+                            "Type": "single_string",
+                            "DisplayName": "{\"frontShow\":true}"
+                          },
+                          {
+                            "Value": "yuncode2138100003",
+                            "Type": "single_string",
+                            "DisplayName": "{\"frontShow\":true}"
+                          }
+                        ]
+                      },
+                      "ShowType": "string"
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "套餐版本",
+                "Id": "1018040000484631",
+                "Code": "package_version",
+                "Properties": {
+                  "Property": [
+                    {
+                      "Name": "套餐版本",
+                      "Key": "package_version",
+                      "DisplayUnit": "",
+                      "PropertyValues": {
+                        "PropertyValue": [
+                          {
+                            "Value": "yuncode2138100001",
+                            "Type": "single_string",
+                            "DisplayName": "月版"
+                          },
+                          {
+                            "Value": "yuncode2138100002",
+                            "Type": "single_string",
+                            "DisplayName": "年版"
+                          },
+                          {
+                            "Value": "yuncode2138100003",
+                            "Type": "single_string",
+                            "DisplayName": "年月版"
+                          }
+                        ]
+                      },
+                      "ShowType": "radio"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "Constraints": "{\"AC\":{\"package_version\":{\"yuncode2138100003\":[{\"min\":1,\"max\":999999999999999,\"step\":1}]}},\"ord_time\":{\"package_version\":{\"yuncode2138100001\":[\"1:Month\",\"2:Month\",\"3:Month\",\"4:Month\",\"5:Month\",\"6:Month\",\"7:Month\",\"8:Month\",\"9:Month\",\"10:Month\",\"11:Month\"],\"yuncode2138100002\":[\"1:Year\",\"2:Year\",\"3:Year\"],\"yuncode2138100003\":[\"1:Month\",\"2:Month\",\"3:Month\",\"4:Month\",\"5:Month\",\"6:Month\",\"7:Month\",\"8:Month\",\"9:Month\",\"10:Month\",\"11:Month\",\"1:Year\",\"2:Year\",\"3:Year\"]}}}",
+          "Hidden": false,
+          "Code": "cmgj027381-prepay"
+        }
+      ]
+    },
+    "Score": 0
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "name": "DescribeMonitorGroupInstances",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询指定应用分组内包含的资源列表。",
+  "abc_id": 115035,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "12345",
+      "description_cn": "应用分组ID。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "每页显示记录条数，默认值是10。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页码，默认值是1。"
+    },
+    "Category": {
+      "name": "Category",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ECS",
+      "description_cn": "产品名称缩写，目前支持的产品有：\n\n- ECS(包括阿里云和非阿里云主机),\n- RDS（云数据库RDS版),\n- ADS（分析型数据库）,\n- SLB(负载均衡),\n- VPC（弹性IP）,\n- APIGATEWAY(API网关),\n- CDN,\n- CS（容器服务Swarm版）,\n- DCDN(全站加速),\n- DDOS,\n- EIP(弹性公网IP),\n- ELASTICSEARCH,\n- EMR(E-MapReduce),\n- ESS(弹性伸缩),\n- HBASE,\n- IOT_EDGE(iot边缘计算),\n- K8S_POD(k8s pod),\n- KVSTORE_SHARDING(Redis集群版）,\n- KVSTORE_SPLITRW(Redis读写分离版),\n- KVSTORE_STANDARD(Redis标准版),\n- MEMCACHE,MNS(消息服务),\n- MONGODB(MongoDB 副本实例),\n- MONGODB_CLUSTER(MongoDB集群版本),\n- MONGODB_SHARDING(mongodb 分片集群),\n- MQ_TOPIC(消息服务TOPIC）,\n- OCS,\n- OPENSEARCH,OSS(对象存储OSS）,\n- POLARDB,PETADATA,SCDN(安全加速),\n- SHAREBANDWIDTHPACKAGES(共享带宽包),\n- SLS（日志服务),\n- VPN(VPN网关)。"
+    },
+    "Keyword": {
+      "name": "Keyword",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "s1",
+      "description_cn": "按照实例名称模糊查询。"
+    },
+    "InstanceIds": {
+      "name": "InstanceIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-x1234568",
+      "description_cn": "按照实例ID搜索。"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "PageSize": 30,
+    "RequestId": "7670220A-0725-42EE-9252-8200C4F810D9",
+    "Success": true,
+    "Code": 200,
+    "Total": 1,
+    "Resources": {
+      "Resource": [
+        {
+          "Category": "ECS",
+          "InstanceId": "i-2ze3w55tr2rcpejp****",
+          "RegionId": "cn-beijing",
+          "InstanceName": "dynamic_group_1"
+        }
+      ]
+    }
+  }
+}

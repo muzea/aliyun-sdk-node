@@ -1,0 +1,55 @@
+{
+  "name": "SubmitFlow",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 SubmitFlow 接口提交运行工作流。",
+  "abc_id": 101244,
+  "timeout": 8000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "ProjectId": {
+      "name": "ProjectId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "257A173659F59685",
+      "description_cn": "项目ID。"
+    },
+    "FlowId": {
+      "name": "FlowId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "F-7A39731FE7196358",
+      "description_cn": "工作流ID。"
+    },
+    "Conf": {
+      "name": "Conf",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{\"cyctime\":\"1542783967503\"}",
+      "description_cn": "配置信息 {\"key\":\"value\"} 格式，其中 cyctime 表示实际调度运行的时间（长整型时间戳）。\n\n"
+    }
+  },
+  "res": {
+    "RequestId": "2670BCFB-925D-4C3E-9994-8D12F7A9F538",
+    "Id": "FI-7A39731FE7196358"
+  }
+}

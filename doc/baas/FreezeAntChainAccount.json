@@ -1,0 +1,52 @@
+{
+  "name": "FreezeAntChainAccount",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "冻结一个蚂蚁区块链上的账户",
+  "abc_id": 127095,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID"
+    },
+    "Account": {
+      "name": "Account",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "accountname",
+      "description_cn": "账户名称"
+    },
+    "AntChainId": {
+      "name": "AntChainId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1q8B5R9p",
+      "description_cn": "区块链ID"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "9F862442-F6AD-4B5F-8969-CE23DE1413CB",
+      "Result": "success"
+    },
+    "requestId": "9F862442-F6AD-4B5F-8969-CE23DE1413CB",
+    "successResponse": true
+  }
+}

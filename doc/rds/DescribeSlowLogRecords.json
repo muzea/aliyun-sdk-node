@@ -1,0 +1,125 @@
+{
+  "name": "DescribeSlowLogRecords",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeSlowLogRecords接口查看实例的慢日志明细。",
+  "abc_id": 26289,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "rm-uf6wjk5xxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2011-06-01T16:00Z",
+      "description_cn": "查询开始时间。格式：<i>yyyy-MM-dd</i>T<i>HH:mm</i>Z（UTC时间）。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2011-06-20T16:00Z",
+      "description_cn": "查询结束时间，需要大于查询开始时间，与查询开始时间间隔小于31天。格式：<i>yyyy-MM-dd</i>T<i>HH:mm</i>Z（UTC时间）。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "SQLHASH": {
+      "name": "SQLHASH",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "U2FsdGVkxxxx",
+      "description_cn": "慢日志统计里的SQL语句唯一标识符，可用于获取该SQL语句的慢日志明细。"
+    },
+    "DBName": {
+      "name": "DBName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "RDS_MySQL",
+      "description_cn": "数据库名称。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "每页记录数，取值：\n* **30**；\n* **50**；\n* **100**。\n\n默认值：**30**。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页码，取值：大于0且不超过Integer的最大值。\n\n默认值：**1**。"
+    }
+  },
+  "res": {
+    "DescribeSlowLogRecordsResponse": {
+      "RequestId": "542BB8D6-4268-45CC-A557-B03EFD7AB30A",
+      "DBInstanceID": "rm-uf6wjk5xxxxxxx",
+      "Engine": "MySQL",
+      "TotalRecordCount": "1",
+      "PageNumber": "1",
+      "PageRecordCount": "1",
+      "Items": {
+        "SQLSlowRecord": {
+          "HostAddress": "192.101.2.11",
+          "DBName": "test",
+          "SQLText": "update test.zxb set id=0 limit 1",
+          "QueryTimes": "123",
+          "LockTimes": "12",
+          "ParseRowCounts": "125",
+          "ReturnRowCounts": "1",
+          "ExecutionStartTime": "2011-06-11T15:00:08Z"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "DeletePipeline",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": null,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false
+    },
+    "PipelineId": {
+      "name": "PipelineId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true
+    }
+  },
+  "res": {}
+}

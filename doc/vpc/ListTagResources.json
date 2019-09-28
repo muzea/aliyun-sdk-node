@@ -1,0 +1,93 @@
+{
+  "name": "ListTagResources",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ListTagResources查询一个或多个 VPC、EIP 资源已经绑定的标签列表。",
+  "abc_id": 128045,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "资源所属的地域ID。"
+    },
+    "ResourceType": {
+      "name": "ResourceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "VPC",
+      "description_cn": "资源类型定义。取值范围：\n- VPC：VPC实例\n- VSWITCH：交换机实例\n- ROUTETABLE：路由表实例\n- EIP：弹性公网IP实例\n"
+    },
+    "ResourceId": {
+      "name": "ResourceId",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "NextToken": {
+      "name": "NextToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "caeba0bbb2be03f84eb48b699f0a4883\t",
+      "description_cn": "下一个查询开始Token。\n\n"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "TagResources": {
+      "TagResource": [
+        {
+          "ResourceType": "VPC",
+          "TagValue": "FinanceJoshua",
+          "ResourceId": "vpc-xxxxxxxxxxxxxxxx",
+          "TagKey": "FinanceDept"
+        }
+      ]
+    },
+    "NextToken": "caeba0bbb2be03f84eb48b699f0a4883",
+    "RequestId": "DE65F6B7-7566-4802-9007-96F2494AC512"
+  }
+}

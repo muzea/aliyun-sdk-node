@@ -1,0 +1,148 @@
+{
+  "name": "DescribeAccountAttributes",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeAccountAttributes查询您在一个阿里云地域下能创建的ECS资源配额。包括您能创建的安全组数量、弹性网卡数量、按量付费vCPU核数、抢占式实例vCPU核数、专用宿主机数量、地域网络类型以及账号是否已完成实名认证。",
+  "abc_id": 73772,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。 "
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "hide"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": ""
+    },
+    "ZoneId": {
+      "name": "ZoneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou-b",
+      "description_cn": "可用区ID。"
+    },
+    "AttributeName": {
+      "name": "AttributeName",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    }
+  },
+  "res": {
+    "AccountAttributeItems": {
+      "AccountAttributeItem": [
+        {
+          "AttributeValues": {
+            "ValueItem": [
+              {
+                "Value": "100"
+              }
+            ]
+          },
+          "AttributeName": "max-security-groups"
+        },
+        {
+          "AttributeValues": {
+            "ValueItem": [
+              {
+                "Value": "2"
+              }
+            ]
+          },
+          "AttributeName": "max-dedicated-hosts"
+        },
+        {
+          "AttributeValues": {
+            "ValueItem": [
+              {
+                "Value": "1000"
+              }
+            ]
+          },
+          "AttributeName": "max-postpaid-instance-vcpu-count"
+        },
+        {
+          "AttributeValues": {
+            "ValueItem": [
+              {
+                "Value": "1000"
+              }
+            ]
+          },
+          "AttributeName": "max-spot-instance-vcpu-count"
+        },
+        {
+          "AttributeValues": {
+            "ValueItem": [
+              {
+                "Value": "5000"
+              }
+            ]
+          },
+          "AttributeName": "max-elastic-network-interfaces"
+        },
+        {
+          "AttributeValues": {
+            "ValueItem": [
+              {
+                "Value": "yes"
+              }
+            ]
+          },
+          "AttributeName": "real-name-authentication"
+        },
+        {
+          "AttributeValues": {
+            "ValueItem": [
+              {
+                "Value": "vpc"
+              }
+            ]
+          },
+          "AttributeName": "instance-network-type"
+        },
+        {
+          "AttributeValues": {
+            "ValueItem": [
+              {
+                "Value": "ecs.f3-c16f1.4xlarge"
+              },
+              {
+                "Value": "ecs.g5.2xlarge"
+              }
+            ]
+          },
+          "AttributeName": "supported-postpaid-instance-types"
+        }
+      ]
+    },
+    "RequestId": "8CE45CD5-31FB-47C2-959D-CA8144CE9F42"
+  }
+}

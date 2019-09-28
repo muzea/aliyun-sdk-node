@@ -1,0 +1,78 @@
+{
+  "name": "SetVServerGroupAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用SetVServerGroupAttribute修改虚拟服务器组的配置。",
+  "abc_id": 35217,
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "负载均衡地域ID。"
+    },
+    "VServerGroupId": {
+      "name": "VServerGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rsp-cige6j5e7p",
+      "description_cn": "服务器组ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "VServerGroupName": {
+      "name": "VServerGroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Group1",
+      "description_cn": "虚拟服务器组名称。"
+    },
+    "BackendServers": {
+      "name": "BackendServers",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[{   \"ServerId\": \"eni-xxxxxxxxx\",   \"Weight\": \"100\",   \"Type\": \"eni\",   \"ServerIp\": \"192.168.11.1\" }, {   \"ServerId\": \"eni-xxxxxxxxx\",   \"Weight\": \"100\",   \"Type\": \"eni\",   \"ServerIp\": \"192.168.11.2\" }]",
+      "description_cn": "虚拟服务器组列表。\n\n单次调用最多可添加20个后端服务器。"
+    }
+  },
+  "res": {}
+}

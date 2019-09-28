@@ -1,0 +1,94 @@
+{
+  "name": "DescribeDomainBpsDataByTimeStamp",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDomainBpsDataByTimeStamp获取加速域名的在某个时刻的带宽数据。",
+  "abc_id": 91086,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "www.yourdomain.com",
+      "description_cn": "要查询的域名，仅支持单个查询。"
+    },
+    "TimePoint": {
+      "name": "TimePoint",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2016-08-01T22:00Z",
+      "description_cn": "查询目标时间点。\n\n- 日期格式按照ISO8601表示法，并使用UTC时间。\n\n- 格式为：YYYY-MM-DDThh:mm:ssZ。\n\n- 最小数据粒度为5分钟。"
+    },
+    "IspNames": {
+      "name": "IspNames",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "unicom,telecom",
+      "description_cn": "需要查询目标Isp列表，用逗号（,）隔开，不能为空， ISP名通过[DescribeCdnRegionAndIsp](~~91077~~)接口获得。"
+    },
+    "LocationNames": {
+      "name": "LocationNames",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "liaoning,guangxi",
+      "description_cn": "需要查询目标区域列表，用逗号（,）隔开，不能为空。Location名通过[DescribeCdnRegionAndIsp](~~91077~~)接口获得。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "TimeStamp": "2016-08-01T22:00Z",
+    "BpsDataList": {
+      "BpsDataModel": [
+        {
+          "LocationName": "Liaoning",
+          "Bps": 880996111,
+          "IspName": "telecom"
+        },
+        {
+          "LocationName": "Liaoning",
+          "Bps": 52119553,
+          "IspName": "unicom"
+        },
+        {
+          "LocationName": "Guangxi",
+          "Bps": 51295137,
+          "IspName": "telecom"
+        },
+        {
+          "LocationName": "Guangxi",
+          "Bps": 18673571,
+          "IspName": "unicom"
+        }
+      ]
+    },
+    "RequestId": "7682DE14-3B4D-48D0-9B7C-DD3C8C3E1C78",
+    "DomainName": "abc.cn"
+  }
+}

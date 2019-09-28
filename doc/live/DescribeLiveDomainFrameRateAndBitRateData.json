@@ -1,0 +1,51 @@
+{
+  "name": "DescribeLiveDomainFrameRateAndBitRateData",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeLiveDomainFrameRateAndBitRateData查询直播域名下流帧率和码率数据。",
+  "abc_id": 130665,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域。"
+    },
+    "QueryTime": {
+      "name": "QueryTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2019-02-21T08:00:00Z",
+      "description_cn": "查询时间点，UTC格式，如：2019-02-21T08:00:00Z。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "您的域名。"
+    }
+  },
+  "res": {}
+}

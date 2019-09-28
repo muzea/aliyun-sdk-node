@@ -1,0 +1,34 @@
+{
+  "name": "ScaleK8sApplication",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT",
+  "path": "/pop/v5/k8s/acs/k8s_apps",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false
+    },
+    "Replicas": {
+      "name": "Replicas",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

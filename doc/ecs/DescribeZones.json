@@ -1,0 +1,117 @@
+{
+  "name": "DescribeZones",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeZones查询一个阿里云地域下的可用区。",
+  "abc_id": 25610,
+  "timeout": 80000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "可用区所在的地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "hide"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。"
+    },
+    "Verbose": {
+      "name": "Verbose",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": ""
+    },
+    "InstanceChargeType": {
+      "name": "InstanceChargeType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PostPaid",
+      "description_cn": "可用区里支持的资源计费方式。更多详情，请参见[计费概述](~~25398~~)。取值范围： \n\n- PrePaid：包年包月 \n- PostPaid（默认）：按量付费"
+    },
+    "SpotStrategy": {
+      "name": "SpotStrategy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "NoSpot",
+      "description_cn": "按量付费实例的竞价策略。当InstanceChargeType为PostPaid时，您可以传入该参数。更多详情，请参见[抢占式实例](~~52088~~)。取值范围: \n         \n- NoSpot（默认）：正常按量付费实例  \n- SpotWithPriceLimit：设置上限价格的抢占式实例  \n- SpotAsPriceGo：系统自动出价，最高按量付费价格  \n         "
+    },
+    "AcceptLanguage": {
+      "name": "AcceptLanguage",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "zh-CN",
+      "description_cn": " 根据汉语、英语和日语筛选返回结果。更多详情，请参见[RFC7231](https://tools.ietf.org/html/rfc7231)。取值范围：  \n         \n- zh-CN \n- en-US \n- ja \n\n默认值：zh-CN。 "
+    }
+  },
+  "res": {
+    "RequestId": "A347EF0E-BBCC-4EFA-BD79-27AA3ACFD1BF",
+    "Zones": {
+      "Zone": [
+        {
+          "AvailableDiskCategories": {
+            "DiskCategories": [
+              "cloud"
+            ]
+          },
+          "AvailableResourceCreation": {
+            "ResourceTypes": [
+              "Instance",
+              "Disk"
+            ]
+          },
+          "LocalName": "",
+          "ZoneId": "cn-hangzhou-d"
+        },
+        {
+          "AvailableDiskCategories": {
+            "DiskCategories": [
+              "cloud"
+            ]
+          },
+          "AvailableResourceCreation": {
+            "ResourceTypes": [
+              "Instance",
+              "Disk"
+            ]
+          },
+          "LocalName": "",
+          "ZoneId": "cn-hangzhou-b"
+        }
+      ]
+    }
+  }
+}

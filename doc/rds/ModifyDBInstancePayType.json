@@ -1,0 +1,127 @@
+{
+  "name": "ModifyDBInstancePayType",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": null,
+  "abc_id": 52603,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": " rm-bp1842vmucoa5w874",
+      "description_cn": "实例名。"
+    },
+    "Period": {
+      "name": "Period",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "Year",
+      "description_cn": "选择的付费类型为Prepaid，需要指定续费实例为包年或者包月类型，Year：包年；Month：包月。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ETnLKlblzczshOTUbOCziJZNwHlYBQ",
+      "description_cn": "用于保证幂等性。"
+    },
+    "UsedTime": {
+      "name": "UsedTime",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "当参数Period为Year时，UsedTime可取值为[1,9]。\n当参数Period为Month时，UsedTime可取值为1、2、3。"
+    },
+    "PayType": {
+      "name": "PayType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Prepaid",
+      "description_cn": "付费类型，取值如下：\nPostpaid:按量付费；\nPrepaid：预付费。"
+    },
+    "AutoPay": {
+      "name": "AutoPay",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否自动支付。AutoPay 为 true 表示自动支付，账户余额不足的时候会生成无法支付的订单，需要登录控制台作废订单。AutoPay 为 false 时会生成未支付的订单，可登录控制台支付。取值范围：\ntrue\nfalse\n默认值：true"
+    },
+    "Resource": {
+      "name": "Resource",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "无",
+      "description_cn": "资源"
+    },
+    "AgentId": {
+      "name": "AgentId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "无",
+      "description_cn": "座席ID"
+    },
+    "BusinessInfo": {
+      "name": "BusinessInfo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "\t 无",
+      "description_cn": "无"
+    }
+  },
+  "res": {
+    "OrderId": "100789370230206",
+    "DBInstanceId": "rdsaiiabnaiiabn",
+    "RequestId": "1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC"
+  }
+}

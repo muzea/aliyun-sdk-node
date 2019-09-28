@@ -1,0 +1,52 @@
+{
+  "name": "DescribeMonitorGroupDynamicRules",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询应用分组动态规则的列表。",
+  "abc_id": 115024,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "123456",
+      "description_cn": "应用分组ID。"
+    }
+  },
+  "res": {
+    "Resource": {
+      "Resource": [
+        {
+          "Filters": {
+            "Filter": [
+              {
+                "Name": "hostName",
+                "Value": "aaa",
+                "Function": "contains"
+              }
+            ]
+          },
+          "Category": "ecs",
+          "FilterRelation": "and"
+        }
+      ]
+    },
+    "RequestId": "2170B94A-1576-4D65-900E-2093037CDAF3",
+    "Success": true,
+    "Code": 200
+  }
+}

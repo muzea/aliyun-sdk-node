@@ -1,0 +1,170 @@
+{
+  "name": "ModifyControlPolicy",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyControlPolicy接口修改访问控制策略。",
+  "abc_id": 138871,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AclAction": {
+      "name": "AclAction",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "accept",
+      "description_cn": "安全策略的流量通过云防火墙的方式。\n- **accept**：放行\n- **drop**：拒绝\n- **log**：观察"
+    },
+    "ApplicationName": {
+      "name": "ApplicationName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "HTTP",
+      "description_cn": "安全策略支持的应用类型。\n支持的应用类型有以下几种:：\n\n- **ANY**\n- **HTTP**\n- **HTTPS**\n- **MySQL**\n- **SMTP**\n- **SMTPS**\n- **RDP**\n- **VNC**\n- **SSH**\n- **Redis**\n- **MQTT**\n- **MongoDB**\n- **Memcache**\n- **SSL**\n\n> **ANY**表示策略应用在所有类型的应用中。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "安全访问控制策略的描述信息。"
+    },
+    "Destination": {
+      "name": "Destination",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "1.2.3.4/24",
+      "description_cn": "访问控制目的地址。\n\n- 当DestinationType为net时，Destination为目的CIDR。例如：1.2.3.4/24\n- 当DestinationType为group时，Destination为目的地址簿名称。例如：db_group\n- 当DestinationType为domain时，Destination为目的域名。例如：*.aliyuncs.com\n- 当DestinationType为location时，Destination为目的区域（具体区域位置编码见后文）。例如： \\[\"BJ11\", \"ZB\"\\]"
+    },
+    "DestinationType": {
+      "name": "DestinationType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "net",
+      "description_cn": "目的地址类型。\n\n- net：目的网段(CIDR)\n- group：目的地址簿\n- domain：目的域名\n- location：目的区域"
+    },
+    "Direction": {
+      "name": "Direction",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "in",
+      "description_cn": "访问控制策略的流量方向。\n\n- **in**：外对内流量访问控制\n- **out**：内对外流量访问控制"
+    },
+    "Proto": {
+      "name": "Proto",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "TCP",
+      "description_cn": "策略的安全协议。\n\n- ANY\n- TCP\n- UDP\n- ICMP"
+    },
+    "Source": {
+      "name": "Source",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "1.2.3.0/24",
+      "description_cn": "访问控制源地址。\n\n- 当SourceType为net时，Source为源CIDR。例如：1.2.3.0/24\n- 当SourceType为group时，Source为源地址簿名称。例如：db_group\n- 当SourceType为location时，Source为源区域（具体区域位置编码见后文）。例如\\[\"BJ11\", \"ZB\"\\]"
+    },
+    "AclUuid": {
+      "name": "AclUuid",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "00281255-d220-4db1-8f4f-c4df221ad84c",
+      "description_cn": "访问控制策略唯一ID。"
+    },
+    "SourceType": {
+      "name": "SourceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "net",
+      "description_cn": "源地址类型。\n\n- net：源网段(CIDR)\n- group：源地址簿\n- location：源区域"
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.2.3.5",
+      "description_cn": "访问者源IP地址。"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "zh",
+      "description_cn": "指定请求和接收消息的语言类型。\n- **zh**：中文\n- **en**：英文"
+    },
+    "DestPort": {
+      "name": "DestPort",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "80",
+      "description_cn": "控制访问策略中流量访问的目的端口。"
+    },
+    "DestPortType": {
+      "name": "DestPortType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "port",
+      "description_cn": "目的端口类型。\n\n- **port**：端口\n- **group**：端口地址簿"
+    },
+    "DestPortGroup": {
+      "name": "DestPortGroup",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "my_port_group",
+      "description_cn": "流量访问的目的端口地址簿名称。"
+    }
+  },
+  "res": {
+    "RequestId": "CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "TerminateAppEnv",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/pop/v1/wam/appEnv/terminate",
+  "summary_cn": "调用TerminateAppEnv来终止一个环境。",
+  "abc_id": 127823,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "EnvId": {
+      "name": "EnvId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "we-5d39b8ba6786bd4b149*****",
+      "description_cn": "环境ID"
+    },
+    "DryRun": {
+      "name": "DryRun",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否模拟变更\n- 若设定该参数为true，则不会创建变更，而是输出创建环境的操作步骤；否则会创建环境，并输出变更ID\n - 默认为false"
+    }
+  },
+  "res": {}
+}

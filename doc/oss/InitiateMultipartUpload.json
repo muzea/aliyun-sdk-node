@@ -1,0 +1,56 @@
+{
+  "name": "InitiateMultipartUpload",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST",
+  "path": "/[ObjectName]",
+  "timeout": null,
+  "reqFormat": {
+    "BucketName": {
+      "name": "BucketName",
+      "position": "domain",
+      "required": true
+    },
+    "ObjectName": {
+      "name": "ObjectName",
+      "position": "path",
+      "required": true
+    },
+    "uploads": {
+      "name": "uploads",
+      "position": "query",
+      "required": true,
+      "default": ""
+    },
+    "encoding-type": {
+      "name": "encoding-type",
+      "position": "query",
+      "required": false
+    },
+    "Cache-Control": {
+      "name": "Cache-Control",
+      "position": "header",
+      "required": false
+    },
+    "Content-Disposition": {
+      "name": "Content-Disposition",
+      "position": "header",
+      "required": false
+    },
+    "Content-Encoding": {
+      "name": "Content-Encoding",
+      "position": "header",
+      "required": false
+    },
+    "Expires": {
+      "name": "Expires",
+      "position": "header",
+      "required": false
+    },
+    "x-oss-server-side-encryption": {
+      "name": "x-oss-server-side-encryption",
+      "position": "header",
+      "required": false
+    }
+  },
+  "res": {}
+}

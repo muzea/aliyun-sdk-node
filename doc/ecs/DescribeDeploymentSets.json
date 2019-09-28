@@ -1,0 +1,141 @@
+{
+  "name": "DescribeDeploymentSets",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDeploymentSets查询一个或多个部署集的属性列表。",
+  "abc_id": 91313,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "部署集所属地域ID。您可以调用 [DescribeRegions](~~25609~~) 查看最新的阿里云地域列表。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "部署集列表的页码。起始值：1\n\n默认值：1 "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时设置的每页行数，最大值：100\n\n默认值：10 "
+    },
+    "DeploymentSetIds": {
+      "name": "DeploymentSetIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[\"ds-xxxxxxxxx\", \"ds-yyyyyyyyy\", … \"ds-zzzzzzzzz\"]",
+      "description_cn": "部署集ID列表。取值可以由多个部署集ID组成一个JSON数组，最多支持100个ID，ID之间用半角逗号（,）隔开。 "
+    },
+    "NetworkType": {
+      "name": "NetworkType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "null",
+      "description_cn": "部署集内的网络类型。\n\n> 为提高兼容性，请尽量使用其他参数。"
+    },
+    "Strategy": {
+      "name": "Strategy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Availability",
+      "description_cn": "部署策略。取值：Availability\n\n默认值：空。 "
+    },
+    "DeploymentSetName": {
+      "name": "DeploymentSetName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FinanceJoshua",
+      "description_cn": "部署集名称。"
+    },
+    "Granularity": {
+      "name": "Granularity",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "null",
+      "description_cn": "部署粒度。\n\n> 为提高兼容性，请尽量使用其他参数。"
+    },
+    "Domain": {
+      "name": "Domain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "null",
+      "description_cn": "部署域。\n\n> 为提高兼容性，请尽量使用其他参数。"
+    }
+  },
+  "res": {
+    "PageSize": 10,
+    "TotalCount": 1,
+    "PageNumber": 1,
+    "RequestId": "1CB9A584-9E43-408D-B5A8-DB42CDECE03B",
+    "DeploymentSets": {
+      "DeploymentSet": [
+        {
+          "DeploymentSetDescription": "default",
+          "DeploymentSetId": "ds-bp13v7bjnj9gisnlo1ow",
+          "DeploymentStrategy": "Availability",
+          "DeploymentSetName": "test default",
+          "InstanceIds": {
+            "InstanceId": [
+              "i-sdfkjsdfk",
+              "i-kiiwsch"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "name": "ModifyProtectionRuleStatus",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyProtectionRuleStatus接口启用或关闭指定的网站防篡改规则。",
+  "abc_id": 100350,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Domain": {
+      "name": "Domain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "www.aliyun.com",
+      "description_cn": "要操作的域名名称。"
+    },
+    "Defense": {
+      "name": "Defense",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "tamperproof",
+      "description_cn": "要操作的防护功能。取值：** tamperproof **。"
+    },
+    "Id": {
+      "name": "Id",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "111",
+      "description_cn": "要操作的规则ID。调用[DescribeProtectionModuleRules](~~100398~~)接口可以查询到所有规则ID。 "
+    },
+    "RuleStatus": {
+      "name": "RuleStatus",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "是否启用规则。取值： \n- **0**：关闭  \n- **1**：启用  \n          "
+    },
+    "LockVersion": {
+      "name": "LockVersion",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "并发锁版本。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "waf_elasticity-cn-0xldbqtm005",
+      "description_cn": "WAF实例ID。"
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Region": {
+      "name": "Region",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn",
+      "description_cn": "地域ID。取值： \n- **cn**：中国大陆地区（默认）\n- **cn-hongkong**：海外地区\n          "
+    }
+  },
+  "res": {}
+}

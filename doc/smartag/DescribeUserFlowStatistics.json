@@ -1,0 +1,74 @@
+{
+  "name": "DescribeUserFlowStatistics",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeUserOnlineClients查询指定智能接入网关APP实例下用户的流量统计。",
+  "abc_id": 120730,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "智能接入网关APP实例所在的地域。"
+    },
+    "SmartAGId": {
+      "name": "SmartAGId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "sag-mfkg*****",
+      "description_cn": "智能接入网关APP实例ID。"
+    },
+    "UserNames": {
+      "name": "UserNames",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "StatisticsDate": {
+      "name": "StatisticsDate",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "201905",
+      "description_cn": "统计日期，格式yyyyMM。\n\n如果不设置，默认表示当月。"
+    }
+  },
+  "res": {
+    "SagStatistics": {
+      "Statistics": [
+        {
+          "UserName": "zhanlg",
+          "TotalBytes": 555352
+        }
+      ]
+    },
+    "RequestId": "ADD09081-31A9-4E7D-B15C-135C6EBEEB63"
+  }
+}

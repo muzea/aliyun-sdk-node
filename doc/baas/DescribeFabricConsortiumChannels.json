@@ -1,0 +1,66 @@
+{
+  "name": "DescribeFabricConsortiumChannels",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|PUT|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeFabricConsortiumChannels获取联盟的通道列表。",
+  "abc_id": 128016,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "ConsortiumId": {
+      "name": "ConsortiumId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "consortium-lianmenyumingyi-hc5d1bwlulg7",
+      "description_cn": "联盟ID"
+    },
+    "Location": {
+      "name": "Location",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "位置"
+    }
+  },
+  "res": {
+    "result": {
+      "BatchTimeout": 2,
+      "BlockCount": 2,
+      "ChaincodeCount": 2,
+      "ChannelId": "chan-channelx-1l1hmckuuisxo",
+      "ChannelName": "mychannel",
+      "ConsortiumId": "consortium-lianmenyumingyi-hc5d1bwlulg7",
+      "ConsortiumName": "name",
+      "CreateTime": "1544411108000",
+      "DeleteTime": "1544411108000",
+      "Deleted": "true",
+      "OwnerBid": "26842",
+      "OwnerUid": 212,
+      "PreferredMaxBytes": 12356,
+      "State": "Running",
+      "SupportChannelConfig": "true",
+      "UpdateTime": "1544411108000"
+    },
+    "RequestId": "2537DB1B-F478-431E-A847-5DDAAE2BD251",
+    "ErrorCode": 200,
+    "Success": true
+  }
+}

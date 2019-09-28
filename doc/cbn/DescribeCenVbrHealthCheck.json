@@ -1,0 +1,111 @@
+{
+  "name": "DescribeCenVbrHealthCheck",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCenVbrHealthCheck查询指定地域内物理专线健康检查的状态。",
+  "abc_id": 111861,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "VbrInstanceRegionId": {
+      "name": "VbrInstanceRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "VBR所在的地域。您可以通过调用[DescribeRegions](~~36063~~)接口查询地域ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "CenId": {
+      "name": "CenId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cen-kojok19x3j0q****",
+      "description_cn": "云企业网实例的ID。"
+    },
+    "VbrInstanceId": {
+      "name": "VbrInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vbr-wz95o9aylj181****",
+      "description_cn": "VBR的ID。"
+    },
+    "VbrInstanceOwnerId": {
+      "name": "VbrInstanceOwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123465253556777",
+      "description_cn": "VBR所属账户的UID。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "列表的页码，默认值为**1**。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "分页查询时每页的行数，最大值为**50**，默认值为**10**。  "
+    }
+  },
+  "res": {
+    "DescribeCenVbrHealthCheckResponse": {
+      "HealthChecks": {
+        "HealthCheck": {
+          "CenId": "Cen-atlpf6evc5kqch****",
+          "VbrInstanceId": "vbr-il7ldy0ux6rb15lc2s****",
+          "HealthCheckSourceIp": "10.10.10.xx",
+          "HealthCheckTargetIp": "10.10.10.xx",
+          "Delay": "3ms",
+          "Packetloss": "5%"
+        }
+      },
+      "PageNumber": "1",
+      "TotalCount": "1",
+      "PageSize": "10",
+      "RequestId": "A278B8A6-A5B8-4FDE-9F70-95F0F6A1D68A"
+    }
+  }
+}

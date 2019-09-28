@@ -1,0 +1,53 @@
+{
+  "name": "DescribeLogicInstanceTopology",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeLogicInstanceTopology查询Redis实例的逻辑拓扑结构。",
+  "abc_id": 94665,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "r-bp1xxxxxxxxxxxxx",
+      "description_cn": "目的实例的ID。"
+    }
+  },
+  "res": {
+    "RedisShardList": {
+      "NodeInfo": [
+        {
+          "NodeId": "r-xxxxxxxxxxxxxxx-proxy-3#5425423",
+          "NodeType": "proxy",
+          "Capacity": "5120",
+          "Connection": "320000",
+          "Bandwidth": 96
+        }
+      ]
+    },
+    "InstanceId": "r-xxxxxxxxxxxxxxx",
+    "RequestId": "5F749626-2B6A-4DC2-A010-B51F7C33084E"
+  }
+}

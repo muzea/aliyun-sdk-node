@@ -1,0 +1,101 @@
+{
+  "name": "ModifyLoadBalancerPayType",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyLoadBalancerPayType将后付费实例转换为预付费实例。",
+  "abc_id": 59589,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "负载均衡实例的地域。\n\n您可以从[地域和可用区](~~40654~~)列表或通过调用[DescribeRegions](~~25609~~)接口查询地域ID。"
+    },
+    "LoadBalancerId": {
+      "name": "LoadBalancerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "lb-test",
+      "description_cn": "负载均衡实例的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "PayType": {
+      "name": "PayType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PrePay",
+      "description_cn": "实例的计费类型，取值：\n\n* **PayOnDemand**：按量付费。\n\n* <props=\"china\">**PrePay**：预付费。</props>"
+    },
+    "PricingCycle": {
+      "name": "PricingCycle",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "month",
+      "description_cn": "计费周期。\n\n取值：**year|month** 。"
+    },
+    "Duration": {
+      "name": "Duration",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "计费时长。\n\n* 如果**PricingCycle**为**month**，取值**1-9**。\n\n* 如果**PricingCycle**为**year**，取值**1-3**。"
+    },
+    "AutoPay": {
+      "name": "AutoPay",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否自动付费。取值：**true|false**\n\n- **true**：自动续费。\n\n- **false（默认值）**：不自动续费。"
+    }
+  },
+  "res": {
+    "RequestId": "B680E8A4-E2A2-4E85-80DB-A0E6D4038CF8",
+    "OrderId": 202778336800296
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "name": "DescribeFabricConsortiumMemberApproval",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeFabricConsortiumMemberApproval获取联盟成员的审批状态列表。",
+  "abc_id": 127859,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "ConsortiumId": {
+      "name": "ConsortiumId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "consortium-lianmenyumingyi-hc5d1bwlulg7",
+      "description_cn": "联盟ID"
+    },
+    "Location": {
+      "name": "Location",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "位置"
+    }
+  },
+  "res": {
+    "Result": [
+      {
+        "ConfirmTime": "1544411108000",
+        "ConsortiumName": "阿里",
+        "State": "Accepted",
+        "ConsortiumId": "10000",
+        "DomainName": "peer.apple.aliyunbaas.top",
+        "ChannelCreatePolicy": "1000",
+        "OrganizationId": "1",
+        "OrganizationName": "苹果公司"
+      },
+      {
+        "ConfirmTime": "1544411108000",
+        "ConsortiumName": "阿2里",
+        "State": "",
+        "ConsortiumId": "10100",
+        "DomainName": "peer.apple.aliyunbaas.top",
+        "ChannelCreatePolicy": "1000",
+        "OrganizationId": "12",
+        "OrganizationName": "苹果公司"
+      }
+    ],
+    "RequestId": "C445762C-8909-4BD8-A2BD-BB45BF2441D8",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

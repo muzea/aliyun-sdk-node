@@ -1,0 +1,59 @@
+{
+  "name": "ModifyDBInstanceProxyConfiguration",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyDBInstanceProxyConfiguration接口设置数据库代理，已下线。",
+  "abc_id": 86815,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "ProxyConfigurationKey": {
+      "name": "ProxyConfigurationKey",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "TransparentSwitch",
+      "description_cn": "数据库代理的**ProxyConfigurationKey**，取值：\n* **TransparentSwitch**：透明切换；\n* **PersistentConnections**：短连接优化；\n* **AttacksProtection**：防暴力破解。"
+    },
+    "ProxyConfigurationValue": {
+      "name": "ProxyConfigurationValue",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "{\"status\":\"Enable\"}",
+      "description_cn": "数据库代理的**ProxyConfigurationValue**，取值：\n* **TransparentSwitch**：透明切换，取值为：\n  * **Enable**：开启，默认值为Enable；\n  * **Disable**：关闭。如：\t{\"status\":\"Enable\"}。\n* **PersistentConnections**：短连接优化，取值为：\n  * **Enable**：开启；\n  * **Disable**：关闭，默认值为Disable。如：\t{\"status\":\"Disable\"}。\n* **AttacksProtection**：防暴力破解，取值为：\n  * **Enable**：开启；\n  *  **Disable**：关闭，默认值为Disable。如：{\"status\":\"Disable\"}。\n\n返回值格式为JSON字符串，如：\n\n\t{\"status\":\"Disable\", \"check_interval_seconds\": 60,\n                    \"max_failed_login_attempts\": 60, \"blocking_seconds\": 600}\n\n参数说明及取值范围：\n  * 对于每一个客户端，check_interval_seconds秒内最多允许max_failed_login_attempts次错误密码登录，否则将对该客户端IP禁止登录blocking_seconds秒钟。\n  * 取值范围：\ncheck_interval_seconds：**30~600**，单位为秒；\nmax_failed_login_attempts：**10~5000**，单位为次数；\nblocking_seconds：**30~3600**，单位为秒。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "9705B5D2-C5B6-4526-B779-26D755EC1B8C"
+  }
+}

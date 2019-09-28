@@ -1,0 +1,43 @@
+{
+  "name": "DescribeMonitorGroupCategories",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询指定应用分组的产品资源列表和每个产品的资源数量。",
+  "abc_id": 115028,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "12345",
+      "description_cn": "应用分组ID。"
+    }
+  },
+  "res": {
+    "MonitorGroupCategories": {
+      "MonitorGroupCategory": [
+        {
+          "Category": "ECS",
+          "Count": 1
+        }
+      ]
+    },
+    "RequestId": "9E0347B0-EBC3-4769-A78D-D96F21C6BB52",
+    "Success": true,
+    "Code": 200
+  }
+}

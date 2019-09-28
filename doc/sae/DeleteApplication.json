@@ -1,0 +1,29 @@
+{
+  "name": "DeleteApplication",
+  "protocol": "HTTPS|HTTP",
+  "method": "DELETE",
+  "path": "/pop/v1/sam/app/deleteApplication",
+  "summary_cn": "删除应用",
+  "abc_id": 126355,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "017f39b8-dfa4-4e16-a84b-1dcee4b17106",
+      "description_cn": "要删除的应用ID"
+    }
+  },
+  "res": {}
+}

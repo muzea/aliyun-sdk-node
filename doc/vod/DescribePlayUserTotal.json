@@ -1,0 +1,49 @@
+{
+  "name": "DescribePlayUserTotal",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribePlayUserTotal获取指定时间范围内的每日播放数据总量统计。",
+  "abc_id": 130526,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2016-06-30T19:00:00Z",
+      "description_cn": "结束时间，UTC格式。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2016-06-29T19:00:00Z",
+      "description_cn": "起始时间，UTC格式。\n\n支持查询2018-01-01起的数据，即StartTime大于等于2018-01-01T00:00:00Z。"
+    }
+  },
+  "res": {}
+}

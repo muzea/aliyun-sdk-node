@@ -1,0 +1,29 @@
+{
+  "name": "AbortChangeOrder",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT",
+  "path": "/pop/v1/sam/changeorder/AbortChangeOrder",
+  "summary_cn": "中止变更单",
+  "abc_id": 126927,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ChangeOrderId": {
+      "name": "ChangeOrderId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "xxx-xxxx-xxx-xxx",
+      "description_cn": "变更单ID"
+    }
+  },
+  "res": {}
+}

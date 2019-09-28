@@ -1,0 +1,85 @@
+{
+  "name": "ListStacks",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/V2/ListStacks",
+  "summary_cn": "查询资源栈列表。",
+  "abc_id": 132117,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "资源栈所属的地域ID。您可以调用[DescribeRegions](~~131035~~)查看最新的阿里云地域列表。"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时设置的每页行数，最大值 100。\n\n默认为 10。"
+    },
+    "ParentStackId": {
+      "name": "ParentStackId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "xxxx",
+      "description_cn": "父资源栈 ID。用于列出嵌套资源栈。"
+    },
+    "StackName": {
+      "name": "StackName",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "资源栈列表的页码，起始值为 1。\n\n默认值为 1。"
+    },
+    "ShowNestedStack": {
+      "name": "ShowNestedStack",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否列出嵌套资源栈。仅当指定ParentStackId时生效。"
+    }
+  },
+  "res": {}
+}

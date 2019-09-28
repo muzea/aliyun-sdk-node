@@ -1,0 +1,108 @@
+{
+  "name": "DescribeBandwidthLimitation",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeBandwidthLimitation查询带宽资源列表。",
+  "abc_id": 66182,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "目标地域 ID。您可以调用 [DescribeRegions](~~25609~~) 查看最新的阿里云地域列表。 "
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。"
+    },
+    "InstanceChargeType": {
+      "name": "InstanceChargeType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PrePaid",
+      "description_cn": "实例的计费方式。更多详情，请参见[计费概述](~~25398~~)。取值范围： \n\n- PrePaid：预付费（包年包月）  \n- PostPaid：按量付费 \n\n默认值：PostPaid "
+    },
+    "SpotStrategy": {
+      "name": "SpotStrategy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "NoSpot",
+      "description_cn": "按量付费实例的抢占策略。取值范围： \n- NoSpot：正常按量付费实例  \n- SpotWithPriceLimit：设置上限价格的抢占式实例  \n- SpotAsPriceGo：系统自动出价，最高按量付费价格  \n\n默认值：NoSpot\n\n当参数InstanceChargeType取值为PostPaid时，参数SpotStrategy才有效。 "
+    },
+    "InstanceType": {
+      "name": "InstanceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ecs.g5.large",
+      "description_cn": "实例规格。更多详情，请参见[实例规格族](~~25378~~)，也可以调用[DescribeInstanceTypes](~~25620~~)接口获得最新的规格表。 "
+    },
+    "ResourceId": {
+      "name": "ResourceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "s-946ntx4xx",
+      "description_cn": "资源ID。当您将参数OperationType设置为Upgrade或者Downgrade时，参数ResourceId为必需参数。 "
+    },
+    "OperationType": {
+      "name": "OperationType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Upgrade",
+      "description_cn": "查询不同操作方式的带宽规格限制。取值范围： \n- Upgrade：升级带宽  \n- Downgrade：降级带宽  \n- Create：新建  \n\n默认值：Create "
+    }
+  },
+  "res": {
+    " Bandwidths": {
+      " Bandwidth": [
+        {
+          "InternetChargeType": "PayByTraffic",
+          "Max": 100,
+          "Min": 0,
+          "Unit": "Mbps"
+        },
+        {
+          "InternetChargeType": "PayByTraffic",
+          "Max": 100,
+          "Min": 0,
+          "Unit": "Mbps"
+        }
+      ]
+    },
+    "RequestId": "675B6D89-A3EB-4987-BAF3-610591E0D019"
+  }
+}

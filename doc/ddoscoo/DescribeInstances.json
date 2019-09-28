@@ -1,0 +1,122 @@
+{
+  "name": "DescribeInstances",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeInstances分页查询新BGP高防实例信息列表。",
+  "abc_id": 91478,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "xx",
+      "description_cn": "地域ID。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页大小，即每页显示多少条结果。最大值是**50**。 "
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": "源IP。"
+    },
+    "PageNo": {
+      "name": "PageNo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "分页页号，即从几页开始显示。最小值是**1**。 "
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "xx",
+      "description_cn": "资源组ID。"
+    },
+    "InstanceIds": {
+      "name": "InstanceIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[\"ddoscoo-cn-XXXXX\"]",
+      "description_cn": "通过实例Id查询实例信息，传入要查询的实例Id数组（JSON字符串）。支持精确匹配。例如，\\[\"ddoscoo-cn-XXXX1\", \"ddoscoo-cn-XXXX2\"]。 \n\n>  若传入该参数，则无需传入**Ip**和**Remark**。 "
+    },
+    "Ip": {
+      "name": "Ip",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": "通过实例Ip查询实例信息，传入要查询的实例Ip地址。支持精确匹配查询。 \n\n> 若传入该参数，则无需传入**InstanceIds**和**Remark**。"
+    },
+    "Remark": {
+      "name": "Remark",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": " testRemark",
+      "description_cn": "通过实例备注查询实例信息，传入要查询的实例的备注信息。支持模糊查询。 \n\n> 若传入该参数，则无需传入**InstanceIds**和**Ip**。"
+    },
+    "Edition": {
+      "name": "Edition",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {}
+}

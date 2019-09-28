@@ -1,0 +1,51 @@
+{
+  "name": "GatherAppEnvLog",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/pop/v1/wam/appEnv/gatherLog",
+  "summary_cn": "调用GatherAppEnvLog来收集一个部署环境中指定实例的日志信息。",
+  "abc_id": 128000,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "EnvId": {
+      "name": "EnvId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "wa-5d1af9c802470221ab7*****",
+      "description_cn": "环境ID，将收集此环境中实例的日志"
+    },
+    "TargetInstances": {
+      "name": "TargetInstances",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[\"i-wz94zz7mx8kt5kz*****\"]",
+      "description_cn": "实例ID列表，将收集此列表中指定实例的日志"
+    },
+    "LogPath": {
+      "name": "LogPath",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "/home/admin/app/webplus-app.log",
+      "description_cn": "日志路径，指定要收集的日志所在路径"
+    }
+  },
+  "res": {}
+}

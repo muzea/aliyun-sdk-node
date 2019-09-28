@@ -1,0 +1,63 @@
+{
+  "name": "SmartCallOperate",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用接口SmartCallOperate在智能外呼通话中，发起指定动作。",
+  "abc_id": 116289,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CallId": {
+      "name": "CallId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "116012854210^102814279210",
+      "description_cn": "通话的唯一回执ID，由接口**SmartCall**返回。"
+    },
+    "Command": {
+      "name": "Command",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "parallelBridge",
+      "description_cn": "在智能外呼通话中，指定被叫号码发起的动作。\n\n> 当前仅支持参数**parallelBridge**，表示指定动作为被叫号码与呼叫中心坐席桥接。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "Param": {
+      "name": "Param",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Param",
+      "description_cn": "扩展字段。"
+    }
+  },
+  "res": {
+    "Code": "OK",
+    "Message": "OK",
+    "RequestId": "A90E4451-FED7-49D2-87C8-00700A8C4D0D",
+    "Status": "true"
+  }
+}

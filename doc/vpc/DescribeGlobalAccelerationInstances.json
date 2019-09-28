@@ -1,0 +1,172 @@
+{
+  "name": "DescribeGlobalAccelerationInstances",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeGlobalAccelerationInstances接口查询已创建的全球加速实例列表。",
+  "abc_id": 56829,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "全球加速实例所在的地域。 \n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "IncludeReservationData": {
+      "name": "IncludeReservationData",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否包含未生效的订购数据，默认是**false**。"
+    },
+    "GlobalAccelerationInstanceId": {
+      "name": "GlobalAccelerationInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ga-234sljmxaz****",
+      "description_cn": " 全球加速实例的ID。 "
+    },
+    "IpAddress": {
+      "name": "IpAddress",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "12.34.56.78",
+      "description_cn": "全球加速实例公网 IP。"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "GA-1",
+      "description_cn": " 全球加速实例的名称。 "
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Available",
+      "description_cn": "全球加速实例状态，取值： \n\n- **Available**：可用\n\n- **Inuse**：已分配\n   \n- **Associating**：绑定中\n   \n- **Unassociating**：解绑中   "
+    },
+    "BandwidthType": {
+      "name": "BandwidthType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Exclusive",
+      "description_cn": "实例带宽类型，取值： \n           \n- **Sharing**：查询带宽共享型实例\n  \n- **Exclusive**（默认值）：查询带宽独享型实例  "
+    },
+    "ServiceLocation": {
+      "name": "ServiceLocation",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "china-mainland",
+      "description_cn": "被加速的服务的所属区域。取值： \n\n- **china-mainland**：中国大陆\n\n- **north-america**：北美\n   \n- **asia-pacific**：亚太\n   \n- **europe**：欧洲   "
+    },
+    "ServerId": {
+      "name": "ServerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-sxjbl9x****",
+      "description_cn": "加速的后端服务器的实例ID。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": " 列表的页码，默认值为**1**。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": " 分页查询时每页的行数，最大值为**50**，默认值为**10**。  "
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 1,
+    "PageSize": 10,
+    "RequestId": "6B4EE38D-C75B-4E1F-844E-863A94430676",
+    "GlobalAccelerationInstances": {
+      "GlobalAccelerationInstance": [
+        {
+          "ChargeType": "PrePaid",
+          "GlobalAccelerationInstanceId": "ga-bp1x99kj7kl1ziw5xuwb5",
+          "HasReservationData": false,
+          "Description": "",
+          "BackendServers": {
+            "BackendServer": [
+              {
+                "ServerId": "i-2zeg83zvn5d4ed4y2r4c",
+                "RegionId": "cn-beijing",
+                "ServerType": "EcsInstance",
+                "ServerIpAddress": "172.17.109.xxx"
+              }
+            ]
+          },
+          "IpAddress": "47.98.99.xxx",
+          "InternetChargeType": "PayByBandwidth",
+          "Name": "",
+          "BandwidthType": "Exclusive",
+          "CreationTime": "2018-07-05T03:39:31Z",
+          "Status": "InUse",
+          "ServiceLocation": "china-mainland",
+          "RegionId": "cn-hangzhou",
+          "AccelerationLocation": "china-mainland",
+          "OperationLocks": {
+            "LockReason": []
+          },
+          "ExpiredTime": "2018-08-05T16:00Z",
+          "PublicIpAddresses": {
+            "PublicIpAddress": []
+          },
+          "Bandwidth": "10"
+        }
+      ]
+    }
+  }
+}

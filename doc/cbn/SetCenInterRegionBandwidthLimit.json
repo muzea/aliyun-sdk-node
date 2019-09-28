@@ -1,0 +1,74 @@
+{
+  "name": "SetCenInterRegionBandwidthLimit",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用SetCenInterRegionBandwidthLimit设置带宽包中两个地域间的跨地域互通带宽。",
+  "abc_id": 65942,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CenId": {
+      "name": "CenId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cen-7qthudw0ll6jmx****",
+      "description_cn": "云企业网实例的ID。"
+    },
+    "LocalRegionId": {
+      "name": "LocalRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "本端地域的ID。"
+    },
+    "OppositeRegionId": {
+      "name": "OppositeRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "us-west-1",
+      "description_cn": "对端地域的ID。"
+    },
+    "BandwidthLimit": {
+      "name": "BandwidthLimit",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "8",
+      "description_cn": "两个地域之间的跨地域互通带宽。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "530BC816-F575-412A-AAB2-435125D26328"
+  }
+}

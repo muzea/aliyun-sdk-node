@@ -1,0 +1,93 @@
+{
+  "name": "CreateCloudConnectNetwork",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateCloudConnectNetwork创建云连接网。",
+  "abc_id": 69809,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": " 云连接网的所属区域。取值： cn-shanghai：中国大陆  "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "IsDefault": {
+      "name": "IsDefault",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "false",
+      "description_cn": "是否默认创建。\n\n如果客户没有ccn在绑定时，会给用户默认创建一个ccn。"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ccn名称",
+      "description_cn": "云连接网的名称。 \n\n长度为2-128个字符，必须以字母或中文开头，可包含数字，点号（.），下划线（_）和短横线（-），但不能以`http:// `或 `https://`开头。  "
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ccn描述",
+      "description_cn": "云连接网的描述。 \n\n长度为2-256个字符，必须以字母或中文开头，但不能以`http:// `或 `https://`开头。  "
+    },
+    "CidrBlock": {
+      "name": "CidrBlock",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "172.16.22.0/24",
+      "description_cn": "私网网段。"
+    },
+    "SnatCidrBlock": {
+      "name": "SnatCidrBlock",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "172.16.22.3/24",
+      "description_cn": "SNAT内网网段。"
+    }
+  },
+  "res": {
+    "Name": "DocTest",
+    "Status": "Active",
+    "RequestId": "F0C4D78D-C60E-4A3B-A652-3A2835305C0B",
+    "CcnId": "ccn-l9340rlu5enstmzj5i"
+  }
+}

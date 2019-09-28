@@ -1,0 +1,68 @@
+{
+  "name": "CreateUserCertificate",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "添加证书。",
+  "abc_id": 126557,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "auto-test-AXX",
+      "description_cn": "自定义证书名称。一个用户下的证书名称不能重复。"
+    },
+    "Cert": {
+      "name": "Cert",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "---BEGIN CERTIFICATE----- MIIF...... -----END CERTIFICATE-----",
+      "description_cn": "指定证书内容。要使用PEM编码格式。"
+    },
+    "Key": {
+      "name": "Key",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "---BEGIN RSA PRIVATE KEY----- MII.... -----END RSA PRIVATE KEY-----",
+      "description_cn": "指定证书私钥内容。要使用PEM编码格式。"
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.2.3.4",
+      "description_cn": "指定请求的来源IP地址。\n"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ZH",
+      "description_cn": "指定请求和接收消息的语言类型。"
+    }
+  },
+  "res": {}
+}

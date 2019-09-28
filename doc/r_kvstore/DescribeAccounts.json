@@ -1,0 +1,74 @@
+{
+  "name": "DescribeAccounts",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeAccounts查找指定Redis实例的帐户列表信息或实例中某个账号的信息。",
+  "abc_id": 95802,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "r-bp1xxxxxxxxxxxxx",
+      "description_cn": "账号所属实例的ID。"
+    },
+    "AccountName": {
+      "name": "AccountName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "demoaccount",
+      "description_cn": "账号名。以小写字母开头，由小写字母、数字或下划线组成，长度不超过16个字符。"
+    }
+  },
+  "res": {
+    "Accounts": {
+      "Account": [
+        {
+          "DatabasePrivileges": {
+            "DatabasePrivilege": [
+              {
+                "AccountPrivilege": "RoleReadWrite"
+              }
+            ]
+          },
+          "AccountStatus": "Available",
+          "InstanceId": "r-bp1xxxxxxxxxxxxx",
+          "AccountName": "r-bp1xxxxxxxxxxxxx",
+          "PrivExceeded": "0",
+          "AccountType": "Normal"
+        }
+      ]
+    },
+    "RequestId": "6C9E114C-217C-4118-83C0-B40702221161"
+  }
+}

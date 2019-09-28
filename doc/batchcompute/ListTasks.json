@@ -1,0 +1,26 @@
+{
+  "name": "ListTasks",
+  "protocol": "HTTP|HTTPS",
+  "method": "GET",
+  "path": "/jobs/[ResourceName]/tasks",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ResourceName": {
+      "name": "ResourceName",
+      "type": "String",
+      "position": "Path",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

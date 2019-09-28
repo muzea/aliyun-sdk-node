@@ -1,0 +1,60 @@
+{
+  "name": "DescribeOssDownloads",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeOssDownloads接口查看备份数据上云任务的文件详情。",
+  "abc_id": 64568,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "MigrateTaskId": {
+      "name": "MigrateTaskId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "5625458541",
+      "description_cn": "迁移任务的ID，可以通过[DescribeMigrateTasks](~~64563~~)接口查询。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "A5409D02-D661-4BF3-8F3D-0A814D0574E7",
+    "DBInstanceId": "rm-uf6wjk5xxxxxxx",
+    "MigrateTaskId": "562154852",
+    "Items": {
+      "FileName": "test",
+      "CreateTime": "2017-05-30 T12:11:4Z",
+      "FileSize": "2MB",
+      "IsAvailable": "True",
+      "Status": "Finished",
+      "BackupMode": "FULL",
+      "Description": "Api description"
+    }
+  }
+}

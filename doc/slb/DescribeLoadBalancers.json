@@ -1,0 +1,290 @@
+{
+  "name": "DescribeLoadBalancers",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeLoadBalancers查询已创建的负载均衡实例。",
+  "abc_id": 27582,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "负载均衡实例的地域。\n\n您可以从[地域和可用区](~~40654~~)列表或通过调用[DescribeRegions](~~25609~~)接口查询地域ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ServerId": {
+      "name": "ServerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vm-231",
+      "description_cn": "添加的后端服务器（ECS实例）的ID。"
+    },
+    "AddressIPVersion": {
+      "name": "AddressIPVersion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ipv4",
+      "description_cn": "IP版本，可以设置为ipv4或者ipv6。\n\n> 目前支持创建IPv6实例且实例类型必须为性能保障型实例的可用区如下：\n华东1地域的E、F两个可用区、华北2地域的F、G两个可用区、华东2地域的所有可用区和华南1地域的D、E两个可用区。\n"
+    },
+    "LoadBalancerStatus": {
+      "name": "LoadBalancerStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "active",
+      "description_cn": "负载均衡实例状态：\n\n- inactive: 此状态的实例监听不会再转发流量。\n\n- active: 实例创建后，默认状态为active。\n\n- locked: 实例已经被锁定。"
+    },
+    "LoadBalancerId": {
+      "name": "LoadBalancerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "lb-bp1b6c719dfa08exfuca5",
+      "description_cn": "负载均衡实例ID。\n\n支持多值查询，最多可输入10个ID，以逗号分隔。"
+    },
+    "LoadBalancerName": {
+      "name": "LoadBalancerName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "abc1",
+      "description_cn": "负载均衡实例名称。\n\n支持多值查询，最多可输入10个名称，以逗号分隔。"
+    },
+    "ServerIntranetAddress": {
+      "name": "ServerIntranetAddress",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10.80.102.20",
+      "description_cn": "添加的后端服务器（ECS实例）的内网地址。\n\n支持多值查询，以逗号分隔。"
+    },
+    "AddressType": {
+      "name": "AddressType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "intranet",
+      "description_cn": "负载均衡实例的网络类型，取值：**intranet**或**internet**。"
+    },
+    "InternetChargeType": {
+      "name": "InternetChargeType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "paybybandwidth",
+      "description_cn": "公网类型实例付费方式。取值：**paybybandwidth|paybytraffic**。"
+    },
+    "VpcId": {
+      "name": "VpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc-bp1aevy8sofi8mh1qc5cm",
+      "description_cn": "负载均衡实例所属的VPC ID。"
+    },
+    "VSwitchId": {
+      "name": "VSwitchId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vsw-bp12mw1f8k3jgygk9bmlj",
+      "description_cn": "负载均衡实例所属的VSwitch ID。"
+    },
+    "NetworkType": {
+      "name": "NetworkType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc",
+      "description_cn": "私网负载均衡实例的网络类型，取值：**vpc|classic**。\n\n- vpc：专有网络实例 \n\n- classic：经典网络实例 "
+    },
+    "Address": {
+      "name": "Address",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "192.168.0.6",
+      "description_cn": "负载均衡实例的服务地址。"
+    },
+    "MasterZoneId": {
+      "name": "MasterZoneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou-b",
+      "description_cn": "负载均衡实例的主可用区ID。"
+    },
+    "SlaveZoneId": {
+      "name": "SlaveZoneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou-d",
+      "description_cn": "负载均衡实例的备可用区ID。\n\n目前对金融云用户暂时不支持多可用区功能。"
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{\"tagKey\":\"Key1\",\"tagValue\":\"Value1\"}",
+      "description_cn": "负载均衡实例绑定的Tag列表，其结构是一个json dictionary，包含TagKey和TagValue。\n\n一次请求中，List中的元素最多有10个。"
+    },
+    "PayType": {
+      "name": "PayType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PayOnDemand",
+      "description_cn": "负载均衡实例付费类型。\n\n取值：**PayOnDemand|PrePay**。"
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rg-acfmxazb4ph6aiy",
+      "description_cn": "企业资源组ID。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "分页查询时的页码。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "50",
+      "description_cn": "分页查询时设置的每页行数。"
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "Fuzzy": {
+      "name": "Fuzzy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 1,
+    "PageSize": 50,
+    "LoadBalancers": {
+      "LoadBalancer": [
+        {
+          "CreateTimeStamp": 1541679713000,
+          "LoadBalancerName": "abc1",
+          "RegionIdAlias": "cn-hangzhou",
+          "ResourceGroupId": "rg-acfmxazb4ph6aiy",
+          "AddressIPVersion": "ipv4",
+          "LoadBalancerId": "lb-bp1b6c719dfa08exfuca5",
+          "VSwitchId": "vsw-bp12mw1f8k3jgygk9bmlj",
+          "InternetChargeType": "4",
+          "VpcId": "vpc-bp1aevy8sofi8mh1qc5cm",
+          "SlaveZoneId": "cn-hangzhou-d",
+          "NetworkType": "vpc",
+          "MasterZoneId": "cn-hangzhou-b",
+          "CreateTime": "2018-11-08T20:21Z",
+          "Address": "192.168.0.6",
+          "RegionId": "cn-hangzhou",
+          "AddressType": "intranet",
+          "PayType": "PayOnDemand",
+          "LoadBalancerStatus": "active"
+        }
+      ]
+    },
+    "RequestId": "1C7445CB-C21C-4C19-9A3C-65C3190D1944"
+  }
+}

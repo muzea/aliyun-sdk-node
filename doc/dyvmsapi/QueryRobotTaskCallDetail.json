@@ -1,0 +1,87 @@
+{
+  "name": "QueryRobotTaskCallDetail",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用QueryRobotTaskCallDetail查询智能语音任务通话详情。",
+  "abc_id": 124874,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "主账号的ID，即UID。"
+    },
+    "TaskId": {
+      "name": "TaskId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1045001",
+      "description_cn": "机器人呼叫任务的唯一任务ID。"
+    },
+    "Callee": {
+      "name": "Callee",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "13000000000",
+      "description_cn": "被叫号码"
+    },
+    "QueryDate": {
+      "name": "QueryDate",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1562297550000",
+      "description_cn": "需要查询时间的时间戳。"
+    }
+  },
+  "res": {
+    "Message": "OK",
+    "RequestId": "D9CB3933-9FE3-4870-BA8E-2BEE91B69D23",
+    "Code": "OK",
+    "Data": {
+      "taskId": 1045001,
+      "caller": "0571-88996676",
+      "called": "13000000000",
+      "duration": "60",
+      "label": "邀约,有房,无车",
+      "dialogCount": "3",
+      "callResult": "无法接通",
+      "hangupDirection": "1",
+      "transferResult": "3",
+      "transferNumber": "0571-88336676",
+      "transferFailReason": "用户挂断",
+      "callId": "116950320375^103750100375",
+      "recallCurTimes": 2,
+      "callStartTime": "2019.06.14 15:22:23",
+      "callEndTime": "2019.06.14 15:22:55",
+      "sureCount": 2,
+      "denyCount": 2,
+      "rejectCount": 0,
+      "customCount": 0,
+      "konwledgeCount": 0,
+      "defaultCount": 0,
+      "knowledgeBusinessCount": 0,
+      "knowledgeCommonCount": 0
+    }
+  }
+}

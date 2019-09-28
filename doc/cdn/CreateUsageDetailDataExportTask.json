@@ -1,0 +1,102 @@
+{
+  "name": "CreateUsageDetailDataExportTask",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateUsageDetailDataExportTask创建用量详细数据导出任务，将详细用量生成excel文件用于下载。",
+  "abc_id": 91057,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2015-12-10T20:00:00Z",
+      "description_cn": "获取数据起始时间点。\n\n日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。\n"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2015-12-10T21:00:00Z",
+      "description_cn": "获取数据结束时间点。结束时间需大于起始时间。\n\n日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。\n"
+    },
+    "Type": {
+      "name": "Type",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "flow",
+      "description_cn": "需要获取的用量类型：**flow**或**vas**。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "Group": {
+      "name": "Group",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "xxx",
+      "description_cn": "域名组信息。如果该信息不为空，则忽略DomainNames字段。"
+    },
+    "DomainNames": {
+      "name": "DomainNames",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "如果域名组为空，则以该字段提供的域名为准导出数据。\n\n如果未填写该参数，则导出用户维度数据。"
+    },
+    "TaskName": {
+      "name": "TaskName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "刷新",
+      "description_cn": "任务名称。"
+    },
+    "Language": {
+      "name": "Language",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "导出文件的语言，支持**zh-cn**和**en-us**，分别为简体中文和英文，默认为中文**zh-cn**。"
+    }
+  },
+  "res": {
+    "RequestId": "ED61C6C3-8241-4187-AAA7-5157AE175CEC",
+    "StartTime": "2015-12-10T20:00:00Z",
+    "EndTime": "2015-12-10T21:00:00Z",
+    "TaskId": "123456"
+  }
+}

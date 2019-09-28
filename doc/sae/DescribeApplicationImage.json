@@ -1,0 +1,40 @@
+{
+  "name": "DescribeApplicationImage",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v1/sam/container/describeApplicationImage",
+  "summary_cn": "描述应用镜像信息",
+  "abc_id": 126243,
+  "timeout": 2000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "00000000-0000-0000-0000-000000000000",
+      "description_cn": "应用ID"
+    },
+    "ImageUrl": {
+      "name": "ImageUrl",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "registry-vpc.cn-hangzhou.aliyuncs.com/demo/demo:latest",
+      "description_cn": "镜像Url"
+    }
+  },
+  "res": {}
+}

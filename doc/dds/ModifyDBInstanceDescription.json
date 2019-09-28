@@ -1,0 +1,61 @@
+{
+  "name": "ModifyDBInstanceDescription",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyDBInstanceDescription接口修改MongoDB实例名称。",
+  "abc_id": 62009,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "DBInstanceDescription": {
+      "name": "DBInstanceDescription",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "testdata",
+      "description_cn": "实例名称。\n\n> - 不能 http:// 或者 https:// 开头。\n- 以中文、英文字母开头。\n- 可以包含中文、英文字符、下划线（_）、连接号（-）和数字，字符长度2~256个字符。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。\n> 如需修改分片集群实例中的Shard节点或Mongos节点的名称，还需要传入**NodeId**参数。"
+    },
+    "NodeId": {
+      "name": "NodeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "d-bpxxxxxxxx",
+      "description_cn": "分片集群实例中Shard节点ID或Mongos节点ID。\n\n> 当**DBInstanceId**传入的是分片集群实例ID时，本参数才可用。"
+    }
+  },
+  "res": {
+    "RequestId": "06F8F642-4009-4FFC-80C4-9D67DBF7B74E"
+  }
+}

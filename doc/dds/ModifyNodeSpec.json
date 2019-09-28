@@ -1,0 +1,112 @@
+{
+  "name": "ModifyNodeSpec",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyNodeSpec接口变更MongoDB分片集群实例中节点的规格和存储空间。",
+  "abc_id": 61923,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "NodeId": {
+      "name": "NodeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "d-bpxxxxxxxx",
+      "description_cn": "分片集群实例中Shard节点ID或Mongos节点ID，您可以通过调用[DescribeDBInstanceAttribute](~~61923~~)接口进行查询。\n\n> 当传入的值为Shard节点ID时，还需要传入**NodeStorage**参数。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "NodeClass": {
+      "name": "NodeClass",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dds.shard.standard",
+      "description_cn": "Shard节点或Mongos节点的规格，规格详情请参考[实例规格表](~~57141~~)。\n\n> 本参数和**NodeStorage**参数两者必须传入一个。"
+    },
+    "NodeStorage": {
+      "name": "NodeStorage",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "设置Shard节点的存储空间。\n- 取值范围：**10**~**2000**，单位为GB。\n- 每10GB进行递增。\n\n>- 本参数和**NodeClass**参数两者必须传入一个。\n- 当**NodeId**传入的值为Shard节点ID时，本参数才可用。"
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ETnLKlblzczshOTUbOCzxxxxxxxxxx",
+      "description_cn": "用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。"
+    },
+    "FromApp": {
+      "name": "FromApp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "OpenApi",
+      "description_cn": "请求来源，取值：\n- **OpenApi**：请求来源为OpenApi。\n- **mongo_buy**：请求来源为控制台。"
+    },
+    "AutoPay": {
+      "name": "AutoPay",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否自动付费。取值：\n- **true**：自动付费，请确保账号有足够的余额。\n- **false**：控制台手动付费。具体操作为：登录控制台，在右上角选择**费用**>进入**费用中心**，在**订单管理**找到目标订单进行支付。\n\n默认值为：**true**。"
+    },
+    "EffectiveTime": {
+      "name": "EffectiveTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Immediately",
+      "description_cn": "变更配置的生效时间，取值： \n- **Immediately**：立即生效。\n- **MaintainTime**：实例可运维时间段内生效。 \n\n默认值为**Immediately**。"
+    }
+  },
+  "res": {
+    "OrderId": "2033xxxxxxxx",
+    "RequestId": "EFFC5788-8BB5-41B5-9F15-9CFC5A0E8FCC"
+  }
+}

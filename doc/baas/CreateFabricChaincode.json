@@ -1,0 +1,118 @@
+{
+  "name": "CreateFabricChaincode",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|PUT|GET",
+  "path": "/",
+  "summary_cn": "调用CreateFabricChaincode创建链码。",
+  "abc_id": 127848,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "ChannelId": {
+      "name": "ChannelId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "chan-first-channel-1w55v3u39x2xz",
+      "description_cn": "通道ID"
+    },
+    "ConsortiumId": {
+      "name": "ConsortiumId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "consortium-aaaaaa-akpcsjjac2jd",
+      "description_cn": "联盟ID"
+    },
+    "OssBucket": {
+      "name": "OssBucket",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "https://chaincode.oss-cn-beijing.aliyuncs.com",
+      "description_cn": "Oss桶地址"
+    },
+    "OssUrl": {
+      "name": "OssUrl",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "aaaaaa1/a0cf8729-7d47-44c9-9ed5-6d2fdfc8dc2c/sacc.cc",
+      "description_cn": "Oss对象地址"
+    },
+    "OrganizationId": {
+      "name": "OrganizationId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "peers-aaaaaa1-1oxw31d046jtl",
+      "description_cn": "组织ID"
+    },
+    "EndorsePolicy": {
+      "name": "EndorsePolicy",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "OR ('aaaaaa1MSP.peer')",
+      "description_cn": "背书策略"
+    },
+    "Location": {
+      "name": "Location",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "位置信息"
+    }
+  },
+  "res": {
+    "Result": [
+      {
+        "ChaincodeName": "sacc",
+        "ChannelId": "chan-first-channel-1w55v3u39x2xz",
+        "State": "Instantiatable",
+        "ConsortiumId": "consortium-aaaaaa-akpcsjjac2jd",
+        "Creator": "aaaaaa1",
+        "CreateTime": 1544766801000,
+        "Install": "true",
+        "ChannelName": "first-channel",
+        "ChaincodeVersion": "1.0",
+        "EndorsePolicy": "OR (&#39;aaaaaa1MSP.peer&#39;)",
+        "ChaincodeId": "code-sacc-1pr09q7jmo0np"
+      }
+    ],
+    "RequestId": "50B3ACF3-CE12-433C-A834-9E8C657A4934",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "name": "UpdateOwnedLocalJoinPermission",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用UpdateOwnedLocalJoinPermission更新当前用户账号所拥有的专用入网凭证。",
+  "abc_id": 109920,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "JoinPermissionId": {
+      "name": "JoinPermissionId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "123",
+      "description_cn": "专用入网凭证ID，用来指定要更新的入网凭证。"
+    },
+    "FreqBandPlanGroupId": {
+      "name": "FreqBandPlanGroupId",
+      "type": "Long",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "201",
+      "description_cn": "专用入网凭证所采用的频段的频段ID，用于更新旧频段。"
+    },
+    "ClassMode": {
+      "name": "ClassMode",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "A",
+      "description_cn": "专用入网凭证采用的LoRaWAN Class模式，用于更新旧的 Class 模式。可取值：**A**、**B**、**C**。"
+    },
+    "JoinPermissionName": {
+      "name": "JoinPermissionName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "凭证1",
+      "description_cn": "自定义入网凭证名称，用于更新旧名称。"
+    }
+  },
+  "res": {}
+}

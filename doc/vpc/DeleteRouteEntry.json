@@ -1,0 +1,94 @@
+{
+  "name": "DeleteRouteEntry",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteRouteEntry接口删除VPC路由器或边界路由器的路由表中的路由条目。",
+  "abc_id": 36013,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "路由表所属地域的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "RouteTableId": {
+      "name": "RouteTableId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "trb-2ze3jgygk9bmsj23s****",
+      "description_cn": " 路由条目所在的路由表的ID。  "
+    },
+    "RouteEntryId": {
+      "name": "RouteEntryId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rte-bp1mnnr2al0naomnpvxxx",
+      "description_cn": "路由条目ID。"
+    },
+    "DestinationCidrBlock": {
+      "name": "DestinationCidrBlock",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0.0.0.0/0",
+      "description_cn": " 路由条目的目标网段，支持IPv4和IPv6网段。"
+    },
+    "NextHopId": {
+      "name": "NextHopId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ri-2zeo3xzyf38r4urzd****",
+      "description_cn": "下一跳实例的ID。"
+    },
+    "NextHopList": {
+      "name": "NextHopList",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "NextHopType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "NextHopId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {
+    "RequestId": "0ED8D006-F706-4D23-88ED-E11ED28DCAC0"
+  }
+}

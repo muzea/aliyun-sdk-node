@@ -1,0 +1,136 @@
+{
+  "name": "DescribeBgpPeers",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "使用DescribeBgpPeers查询指定地域下的BGP邻居。",
+  "abc_id": 63268,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "BGP组所在的地域。 \n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1333738069500000",
+      "description_cn": "所有者ID。"
+    },
+    "RouterId": {
+      "name": "RouterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vrt-acfmxazb4ph6aiy",
+      "description_cn": "路由器的ID。"
+    },
+    "BgpPeerId": {
+      "name": "BgpPeerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "bgp-2ze3un0ft1jd1xdppusul",
+      "description_cn": " BGP邻居的ID。 "
+    },
+    "BgpGroupId": {
+      "name": "BgpGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "bgpg-2zev8h2wo414sfhjgdlhh",
+      "description_cn": "指定BGP组的ID。"
+    },
+    "IsDefault": {
+      "name": "IsDefault",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否是默认BGP组。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": " 列表的页码，默认值为1。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": " 分页查询时每页的行数，最大值为50，默认值为10。  "
+    }
+  },
+  "res": {
+    "TotalCount": 2,
+    "PageSize": 10,
+    "RequestId": "16DFA5E6-9771-41B7-B079-DD7C2DF49BE6",
+    "BgpPeers": {
+      "BgpPeer": [
+        {
+          "BgpGroupId": "bgpg-2zev8h2wo414sfhjgdlhh",
+          "LocalAsn": 45104,
+          "PeerIpAddress": "11.11.11.1",
+          "Hold": 30,
+          "Description": "",
+          "AuthKey": "",
+          "IsFake": true,
+          "PeerAsn": 234,
+          "Keepalive": 10,
+          "RouteLimit": 99,
+          "BgpPeerId": "bgp-2ze3un0ft1jd1xdppusul",
+          "Name": "",
+          "Status": "Available",
+          "BgpStatus": "",
+          "RouterId": "vbr-2zecmmvg5gvu8i4telkhw",
+          "RegionId": "cn-beijing"
+        },
+        {
+          "BgpGroupId": "bgpg-2zev8h2wo414sfhjgdlhh",
+          "LocalAsn": 45104,
+          "PeerIpAddress": "11.11.11.2",
+          "Hold": 30,
+          "Description": "",
+          "AuthKey": "",
+          "IsFake": true,
+          "PeerAsn": 234,
+          "Keepalive": 10,
+          "RouteLimit": 99,
+          "BgpPeerId": "bgp-2zeu54rbreqqzyb5bg1hq",
+          "Name": "",
+          "Status": "Available",
+          "BgpStatus": "",
+          "RouterId": "vbr-2zecmmvg5gvu8i4telkhw",
+          "RegionId": "cn-beijing"
+        }
+      ]
+    }
+  }
+}

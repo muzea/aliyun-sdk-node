@@ -1,0 +1,52 @@
+{
+  "name": "DeleteDnatEntry",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteDnatEntry接口删除DNAT规则。",
+  "abc_id": 110338,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "UisNodeId": {
+      "name": "UisNodeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "UISNODE-xxxpucur6tfhpzok5****",
+      "description_cn": "DNAT规则所属的UIS节点ID。"
+    },
+    "UisDnatId": {
+      "name": "UisDnatId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "UISDNAT-xxx58s0dxe3418dqu****",
+      "description_cn": "要删除的DNAT规则ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "5DF5D97F-DB1F-4602-935C-5A050DAD3E48"
+  }
+}

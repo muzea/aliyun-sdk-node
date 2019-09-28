@@ -1,0 +1,67 @@
+{
+  "name": "DescribeFabricOrganization",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeFabricOrganization获取一个组织的详情。",
+  "abc_id": 128013,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "OrganizationId": {
+      "name": "OrganizationId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "peers-aaaaaa2-1eqnj5o5w****",
+      "description_cn": "组织ID"
+    },
+    "Location": {
+      "name": "Location",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "位置"
+    }
+  },
+  "res": {
+    "Result": {
+      "OrganizationDescription": "organization created by ruiqi.zss",
+      "Domain": "peer.aliyun.abasssample.cc",
+      "ZoneId": "cn-shanghai-a",
+      "OrganizationId": "org-ip92i26m792c9",
+      "OrganizationName": "阿里云",
+      "ConsortiumCount": 1,
+      "UserCount": 0,
+      "State": "Created",
+      "SpecName": "ecs.n1.medium",
+      "OwnerUid": 1204281570282129,
+      "CAUrl": "https://ca1.org1.alibabacloudbaas.com:31154",
+      "CreateTime": "2018-06-22T06:14:21.000+0000",
+      "CANAME": "caname",
+      "CodeName": "aliyun",
+      "OwnerName": "blockchain_baas_test",
+      "PeerCount": 2,
+      "OwnerBid": "26842"
+    },
+    "RequestId": "C445762C-8909-4BD8-A2BD-BB45BF2441D8",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

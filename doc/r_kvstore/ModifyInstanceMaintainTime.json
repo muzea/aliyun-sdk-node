@@ -1,0 +1,61 @@
+{
+  "name": "ModifyInstanceMaintainTime",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyInstanceMaintainTime修改Redis实例的可维护时间段，阿里云将在您设定的可维护时间段内对Redis实例进行例行维护。",
+  "abc_id": 61000,
+  "timeout": 50000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "MaintainStartTime": {
+      "name": "MaintainStartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "03:00Z",
+      "description_cn": "可维护时间段的开始时间，格式：`HH:mmZ`。 "
+    },
+    "MaintainEndTime": {
+      "name": "MaintainEndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "02:00Z",
+      "description_cn": "可维护时间段的结束时间，格式：`HH:mmZ`。\n\n> 开始时间和结束时间的间隔应为1小时，如：MaintainStartTime为`01:00Z`，MaintainEndTime为`02:00Z`。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "r-bp1xxxxxxxxxxxxx",
+      "description_cn": "目标实例的ID。"
+    }
+  },
+  "res": {
+    "RequestId": "8D0C0AFC-E9CD-47A4-8395-5C31BF9B3E76"
+  }
+}

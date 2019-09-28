@@ -1,0 +1,68 @@
+{
+  "name": "QueryTransferInByInstanceId",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": null,
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "S20181T0WLI85212",
+      "description_cn": "实例编号"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "接口返回错误信息语言，枚举值范围：zh 中文；en 英文。默认为en。"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "127.0.0.1",
+      "description_cn": "用户ip"
+    }
+  },
+  "res": {
+    "DomainName": "test.com",
+    "Email": "",
+    "ExpirationDate": "2018-04-12 09:51:53",
+    "InstanceId": "S20182F0RED000000",
+    "ModificationDate": "2018-03-28 09:54:39",
+    "NeedMailCheck": true,
+    "ProgressBarType": 0,
+    "RequestId": "B3E437A1-4947-4E4F-B9E2-9781AB1C8134",
+    "ResultCode": "clientCancelled",
+    "ResultDate": "2018-03-28 09:54:39",
+    "ResultMsg": "You have canceled this domain name transfer in.",
+    "SimpleTransferInStatus": "FAIL",
+    "Status": 50,
+    "SubmissionDate": "2018-03-28 09:51:53",
+    "UserId": "123456",
+    "WhoisMailStatus": true
+  }
+}

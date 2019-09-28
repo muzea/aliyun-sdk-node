@@ -1,0 +1,61 @@
+{
+  "name": "TransferInCheckMailToken",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": null,
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Token": {
+      "name": "Token",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "3bdbaa0e-faa2-4ad2-98f4-bcfeb0237054",
+      "description_cn": "邮箱中收到的Token。"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "接口返回信息语言，枚举值范围：zh 中文；en 英文。默认为en。"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "127.0.0.1",
+      "description_cn": "用户ip。"
+    }
+  },
+  "res": {
+    "FailList": {
+      "FailDomain": []
+    },
+    "RequestId": "3E5677B5-6F55-4518-9A55-A9CE57313C9D",
+    "SuccessList": {
+      "SuccessDomain": [
+        "test.com"
+      ]
+    }
+  }
+}

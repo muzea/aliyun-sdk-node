@@ -1,0 +1,103 @@
+{
+  "name": "UpdateMPULayout",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用UpdateMPULayout更新任务的布局。",
+  "abc_id": 139445,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "yourAppId",
+      "description_cn": "应用ID，控制台查询。"
+    },
+    "TaskId": {
+      "name": "TaskId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "abcde",
+      "description_cn": "任务ID，此ID为旁路直播的标识，需保证唯一。\n\n字符只允许A-Za-z0-9_-，长度限制64字节。"
+    },
+    "LayoutIds": {
+      "name": "LayoutIds",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "Long"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "CropMode": {
+      "name": "CropMode",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "视频的裁剪模式： \n\n- **0**：不保持比例铺满。\n\n- **1**：保持比例裁剪。\n\n- **2**（默认）：保持比例留边。"
+    },
+    "BackgroundColor": {
+      "name": "BackgroundColor",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "背景色RGB，默认是**0**（黑色）。"
+    },
+    "UserPanes": {
+      "name": "UserPanes",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "PaneId",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "UserId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "SourceType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {}
+}

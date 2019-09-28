@@ -1,0 +1,66 @@
+{
+  "name": "SetDomainRecordStatus",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用SetDomainRecordStatus根据传入参数设置解析记录状态。",
+  "abc_id": 29775,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "RecordId": {
+      "name": "RecordId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "9999985",
+      "description_cn": "解析记录的ID。"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "Disable",
+      "description_cn": "解析记录状态。取值：\n\n- **Enable**: 启用解析 \n- **Disable**: 暂停解析"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "语言。"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": "用户端IP。"
+    }
+  },
+  "res": {
+    "RequestId": "536E9CAD-DB30-4647-AC87-AA5CC38C5382",
+    "RecordId": "9999985",
+    "Status": "Disable"
+  }
+}

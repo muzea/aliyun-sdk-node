@@ -1,0 +1,83 @@
+{
+  "name": "ListChangeSets",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/V2/ListChangeSets",
+  "summary_cn": "查询更改集列表。",
+  "abc_id": 131283,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "更改集所属的地域ID。您可以调用[DescribeRegions](~~131035~~)查看最新的阿里云地域列表。"
+    },
+    "StackId": {
+      "name": "StackId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "4a6c9851-3b0f-4f5f-b4ca-a14bf691f2ff",
+      "description_cn": "资源栈ID。"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "ChangeSetName": {
+      "name": "ChangeSetName",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时设置的每页行数。最小值1，最大值：50。\n\n默认值：10。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "更改集列表的页码，起始值为 1。\n\n默认值为 1。"
+    },
+    "ExecutionStatus": {
+      "name": "ExecutionStatus",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    }
+  },
+  "res": {}
+}

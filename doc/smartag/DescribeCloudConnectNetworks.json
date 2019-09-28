@@ -1,0 +1,128 @@
+{
+  "name": "DescribeCloudConnectNetworks",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCloudConnectNetworks查询已创建的云连接网。",
+  "abc_id": 69811,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "云连接网的所属区域。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ccn名称",
+      "description_cn": "云连接网名称。"
+    },
+    "CcnId": {
+      "name": "CcnId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ccn-l9340rlu5enst*****",
+      "description_cn": "云连接网ID。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "4",
+      "description_cn": "分页查询时设置的每页行数，默认值为10，最大值为50。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "4",
+      "description_cn": "实例状态列表的页码，默认值是1。"
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {
+    "CloudConnectNetworks": {
+      "CloudConnectNetwork": [
+        {
+          "Name": "DocTest",
+          "AvailableCloudBoxCount": 2,
+          "AssociatedCenOwnerId": "1954105122583124",
+          "IsDefault": false,
+          "AssociatedCloudBoxCount": 3,
+          "CreateTime": 1523618639000,
+          "CcnId": "ccn-l9340rlu5enstmzj5i"
+        },
+        {
+          "Name": "CEN测试",
+          "Description": "",
+          "AvailableCloudBoxCount": 0,
+          "AssociatedCenOwnerId": "1954105122583124",
+          "IsDefault": false,
+          "AssociatedCloudBoxCount": 0,
+          "CreateTime": 1523190009000,
+          "CcnId": "ccn-oa5ftyg6t48gnhb61k"
+        }
+      ]
+    },
+    "PageNumber": 1,
+    "TotalCount": 3,
+    "PageSize": 10,
+    "RequestId": "3F2A0B80-D6D1-4764-8D77-38067DBBA345"
+  }
+}

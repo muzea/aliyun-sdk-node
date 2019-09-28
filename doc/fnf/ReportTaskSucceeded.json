@@ -1,0 +1,40 @@
+{
+  "name": "ReportTaskSucceeded",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/",
+  "summary_cn": "调用ReportTaskSucceeded汇报指定的任务执行成功。",
+  "abc_id": 131878,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "TaskToken": {
+      "name": "TaskToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "emptyString",
+      "description_cn": "汇报任务指定的令牌。"
+    },
+    "Output": {
+      "name": "Output",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "{\"key\":\"value\"}",
+      "description_cn": "汇报任务指定的输出信息。"
+    }
+  },
+  "res": {}
+}

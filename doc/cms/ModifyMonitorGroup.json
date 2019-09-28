@@ -1,0 +1,75 @@
+{
+  "name": "ModifyMonitorGroup",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "修改应用分组。",
+  "abc_id": 115034,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "12346",
+      "description_cn": "应用分组ID。"
+    },
+    "BindUrls": {
+      "name": "BindUrls",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "ServiceId": {
+      "name": "ServiceId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "GroupName": {
+      "name": "GroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "修改组名1",
+      "description_cn": "应用分组名称。"
+    },
+    "ContactGroups": {
+      "name": "ContactGroups",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "报警联系人组",
+      "description_cn": "报警联系人组。"
+    }
+  },
+  "res": {
+    "RequestId": "36FE4D3A-A907-4F2A-921C-89612FFA977B",
+    "Success": true,
+    "Code": 200
+  }
+}

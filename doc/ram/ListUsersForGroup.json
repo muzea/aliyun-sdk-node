@@ -1,0 +1,64 @@
+{
+  "name": "ListUsersForGroup",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ListUsersForGroup接口列出指定用户组所包含的RAM用户。",
+  "abc_id": 28708,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "GroupName": {
+      "name": "GroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "Dev-Team",
+      "description_cn": "用户组名称。"
+    },
+    "Marker": {
+      "name": "Marker",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "EXAMPLE",
+      "description_cn": "当请求的返回结果被截断时，可以使用`Marker`获取从当前截断位置之后的内容。"
+    },
+    "MaxItems": {
+      "name": "MaxItems",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "100",
+      "description_cn": "指定返回结果的条数。当返回结果达到`MaxItems`限制被截断时，返回参数`IsTruncated`将等于`true`。\n\n取值范围：1 ~ 1000，默认值：100。"
+    }
+  },
+  "res": {
+    "RequestId": "4B450CA1-36E8-4AA2-8461-86B42BF4CC4E",
+    "Users": {
+      "User": [
+        {
+          "UserName": "zhangqiang",
+          "DisplayName": "张强",
+          "JoinDate": "2015-01-23T12:33:18Z"
+        },
+        {
+          "UserName": "lili",
+          "DisplayName": "李丽",
+          "JoinDate": "2015-02-18T17:22:08Z"
+        }
+      ]
+    }
+  }
+}

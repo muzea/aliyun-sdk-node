@@ -1,0 +1,60 @@
+{
+  "name": "DeleteLifecycleHook",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteLifecycleHook删除一个生命周期挂钩。 ",
+  "abc_id": 73841,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456123456",
+      "description_cn": ""
+    },
+    "LifecycleHookId": {
+      "name": "LifecycleHookId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ash-****",
+      "description_cn": "生命周期挂钩的ID。"
+    },
+    "ScalingGroupId": {
+      "name": "ScalingGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dP8VqSd9ENXPc0ciVmbc****",
+      "description_cn": "伸缩组的ID。"
+    },
+    "LifecycleHookName": {
+      "name": "LifecycleHookName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "测试SCALE_IN",
+      "description_cn": "生命周期挂钩的名称。"
+    }
+  },
+  "res": {
+    "RequestId": "473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E"
+  }
+}

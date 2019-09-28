@@ -1,0 +1,145 @@
+{
+  "name": "DescribeDomainTopUrlVisit",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDomainTopUrlVisit获取加速域名某天内的热门URL列表。",
+  "abc_id": 91149,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "test.test.com",
+      "description_cn": "只支持单个域名查询。\n\n如果该参数为空，默认返回所有加速域名合并后数据。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2018-10-03T16:00:00Z",
+      "description_cn": "开始获取数据的时间点。\n\n- 格式为：YYYY-MM-DDThh:mm:ssZ。\n\n- 查询某天的数据，建议传YYYY-MM-DDT16:00:00Z。\n\n- 不写默认读取过去24小时数据。\n"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2018-10-03T16:00:00Z",
+      "description_cn": "获取数据结束时间点。\n\n- 结束时间需大于起始时间。\n\n- 日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。"
+    },
+    "SortBy": {
+      "name": "SortBy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "pv",
+      "description_cn": "排序方式，支持**traf**和**pv**，默认**pv**。"
+    }
+  },
+  "res": {
+    "Url300List": {
+      "TopUrlVisitModel": []
+    },
+    "AllUrlList": {
+      "UrlList": [
+        {
+          "VisitData": "161673",
+          "UrlDetail": "http://test.com/nn_live/nn_x64/a0.m3u8",
+          "VisitProportion": 0.35,
+          "Flow": "460486880",
+          "FlowProportion": 0.35
+        },
+        {
+          "VisitData": "37",
+          "UrlDetail": "http://test.com/nn_live/nn_x64/ZXg9MQ,,/HNJSMPP360.ts",
+          "VisitProportion": 0.35,
+          "Flow": "460486880",
+          "FlowProportion": 0.35
+        }
+      ]
+    },
+    "Url400List": {
+      "UrlList": [
+        {
+          "VisitData": "1884",
+          "UrlDetail": "http://test.com/nn_live/nn_x64/aWQ9SE5KU01QUhbGxfcGNfbGl2ZQ,,/HNJSMPP360.m3u8",
+          "VisitProportion": 0.35,
+          "Flow": "460486880",
+          "FlowProportion": 0.35
+        },
+        {
+          "VisitData": "1",
+          "UrlDetail": "http://test.com/nn_live/nn_x64/aWQ9SEEwODgmpbmRleZPTE,/HNJSMPP360.ts",
+          "VisitProportion": 0.35,
+          "Flow": "460486880",
+          "FlowProportion": 0.35
+        }
+      ]
+    },
+    "RequestId": "64D28B53-5902-409B-94F6-FD46680144FE",
+    "DomainName": "test.com",
+    "Url200List": {
+      "UrlList": [
+        {
+          "VisitData": "161673",
+          "UrlDetail": "http://test.com/nn_live/nn_x64/aWQ9SE5KU0bGxfcGNfbGl2ZQ,,/HNJSMPP360.m3u8",
+          "VisitProportion": 0.35,
+          "Flow": "460486880",
+          "FlowProportion": 0.35
+        },
+        {
+          "VisitData": "3",
+          "UrlDetail": "http://test.com/nn_live/nn_x64/aWQ9SE5KU01QUDMlPTIwMTxMDk5ZXg9MQ,,/HNJSMPP360.ts",
+          "VisitProportion": 0.35,
+          "Flow": "460486880",
+          "FlowProportion": 0.35
+        }
+      ]
+    },
+    "StartTime": "2015-12-03",
+    "Url500List": {
+      "UrlList": [
+        {
+          "VisitData": "161673",
+          "UrlDetail": "http://test.com/nn_live/nn_x64/aWQ9SE5KU0GNfbGl2ZQ,,/HNJSMPP360.m3u8",
+          "VisitProportion": 0.35,
+          "Flow": "460486880",
+          "FlowProportion": 0.35
+        },
+        {
+          "VisitData": "3",
+          "UrlDetail": "http://test.com/nn_live/nn_x64/aWQ9SE5KU01QUDZXg9MQ,,/HNJSMPP360.ts",
+          "VisitProportion": 0.35,
+          "Flow": "460486880",
+          "FlowProportion": 0.35
+        }
+      ]
+    }
+  }
+}

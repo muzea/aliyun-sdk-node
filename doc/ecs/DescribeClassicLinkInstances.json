@@ -1,0 +1,97 @@
+{
+  "name": "DescribeClassicLinkInstances",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeClassicLinkInstances查询一台或多台与专有网络 VPC 建立了连接的经典网络类型实例。",
+  "abc_id": 59018,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例所属的地域 ID。您可以调用 [DescribeRegions](~~25609~~) 查看最新的阿里云地域列表。 "
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。"
+    },
+    "VpcId": {
+      "name": "VpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc-test",
+      "description_cn": "VPC ID。目标 VPC 必须已 [开启 ClassicLink 功能](~~65413~~)。 "
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-test",
+      "description_cn": "实例 ID。最多指定 100 台实例 ID，并使用半角逗号（,）隔开。 "
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "当前页码。起始值：1\n\n默认值：1 "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时设置的每页行数。取值范围：1~100\n\n默认值：10 "
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "Links": {
+      "Link": [
+        {
+          "InstanceId": "i-test",
+          "VpcId": "vpc-test"
+        },
+        {
+          "InstanceId": "i-test1",
+          "VpcId": "vpc-test"
+        }
+      ]
+    },
+    "TotalCount": 2,
+    "PageSize": 10,
+    "RequestId": "B154D309-F3E1-4AB7-BA94-FEFCA8B89001"
+  }
+}

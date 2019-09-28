@@ -1,0 +1,39 @@
+{
+  "name": "BatchStartCdnDomain",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用BatchStartCdnDomain启用状态为停用的加速域名，将DomainStatus变更为Online。",
+  "abc_id": 91179,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainNames": {
+      "name": "DomainNames",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "需要接入CDN的域名，用逗号（,）分隔。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "0AEDAF20-4DDF-4165-8750-47FF9C1929C9"
+  }
+}

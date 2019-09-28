@@ -1,0 +1,49 @@
+{
+  "name": "GetPolicy",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用GetPolicy接口获取指定的权限策略信息。",
+  "abc_id": 28717,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "PolicyType": {
+      "name": "PolicyType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "Custom",
+      "description_cn": "指定Policy的类型, 取值`System`或`Custom`。"
+    },
+    "PolicyName": {
+      "name": "PolicyName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "OSS-Administrator",
+      "description_cn": "指定权限策略名称。"
+    }
+  },
+  "res": {
+    "RequestId": "697852FB-50D7-44D9-9774-530C31EAC572",
+    "Policy": {
+      "PolicyName": "OSS-Administrator",
+      "PolicyType": "Custom",
+      "Description": "OSS管理员权限",
+      "DefaultVersion": "v1",
+      "CreateDate": "2015-01-23T12:33:18Z",
+      "UpdateDate": "2015-01-23T12:33:18Z",
+      "AttachmentCount": 0
+    }
+  }
+}

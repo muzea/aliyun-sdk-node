@@ -1,0 +1,117 @@
+{
+  "name": "DescribeDcdnIpaUserDomains",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDcdnIpaUserDomains查询用户名下所有的IP4层应用加速域名。",
+  "abc_id": 131403,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "分页大小，默认**20**，最大**50**，取值：**1**~**50**之前的任意整数。\n"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "取得第几页，取值范围为：**1**~**100000**。\n"
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "域名模糊匹配过滤。\n"
+    },
+    "DomainStatus": {
+      "name": "DomainStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "online",
+      "description_cn": "域名状态过滤。"
+    },
+    "DomainSearchType": {
+      "name": "DomainSearchType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "fuzzy_match",
+      "description_cn": "域名查询类型，默认**fuzzy_match**。\n\n- **fuzzy_match**：模糊匹配。\n\n- **pre_match**：前匹配。\n\n- **suf_match**：后匹配。\n\n- **full_match**：完全匹配。\n\n"
+    },
+    "CheckDomainShow": {
+      "name": "CheckDomainShow",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "检查domain是否展出。"
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ResourceGroupId",
+      "description_cn": "资源组ID。\n"
+    },
+    "FuncId": {
+      "name": "FuncId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "98",
+      "description_cn": "功能ID。例如：98表示图片鉴黄功能。\n"
+    },
+    "FuncFilter": {
+      "name": "FuncFilter",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "config",
+      "description_cn": "过滤，支持**config**和**unconfig**。**config**是开通了funcid的，**unconfig**是没有开通funcid的。\n"
+    }
+  },
+  "res": {}
+}

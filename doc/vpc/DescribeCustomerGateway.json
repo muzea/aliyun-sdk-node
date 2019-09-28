@@ -1,0 +1,49 @@
+{
+  "name": "DescribeCustomerGateway",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCustomerGateway接口查询已创建的用户网关的详细信息。",
+  "abc_id": 53034,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-shanghai",
+      "description_cn": "用户网关所在的地域。 \n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "CustomerGatewayId": {
+      "name": "CustomerGatewayId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "vpn-bp1q8bgx4xnkm2ogj****",
+      "description_cn": " 用户网关的ID。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "CustomerGatewayId": "cgw-bp1pvpl9r9adju6l5nxck",
+    "Name": "test",
+    "RequestId": "A0457BC9-6C0F-4437-AB9D-FB2EABC1D6A2",
+    "CreateTime": 1492747187000,
+    "IpAddress": "139.196.32.xxx"
+  }
+}

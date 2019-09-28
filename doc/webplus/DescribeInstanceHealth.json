@@ -1,0 +1,29 @@
+{
+  "name": "DescribeInstanceHealth",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v1/wam/instance/health",
+  "summary_cn": "调用DescribeInstanceHealth查询一个给定ECS实例的健康状态。",
+  "abc_id": 127789,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "i-wz9hwvnwm5tlv3u*****",
+      "description_cn": "id为实例ID，即instanceId，标识一个ECS实例"
+    }
+  },
+  "res": {}
+}

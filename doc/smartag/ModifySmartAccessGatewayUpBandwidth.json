@@ -1,0 +1,68 @@
+{
+  "name": "ModifySmartAccessGatewayUpBandwidth",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifySmartAccessGatewayUpBandwidth修改智能接入网关参数实例。",
+  "abc_id": 131489,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "智能接入网关实例所在的地域。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "SmartAGId": {
+      "name": "SmartAGId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "sag-jsy******************",
+      "description_cn": "智能接入网关实例ID。"
+    },
+    "UpBandwidthWan": {
+      "name": "UpBandwidthWan",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "智能接入网关WAN口最大上行带宽。"
+    },
+    "UpBandwidth4G": {
+      "name": "UpBandwidth4G",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3",
+      "description_cn": "智能接入网关4G公网最大上行带宽。"
+    }
+  },
+  "res": {
+    "RequestId": "68CE10C0-2EFF-4B82-9907-10AB7E2B0A6C"
+  }
+}

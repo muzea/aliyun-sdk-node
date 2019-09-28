@@ -1,0 +1,68 @@
+{
+  "name": "ModifyInstanceVpcAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyInstanceVpcAttribute修改一台ECS实例的专有网络VPC属性。",
+  "abc_id": 25504,
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "i-bp1iudwa5b1tqaxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "VSwitchId": {
+      "name": "VSwitchId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "[vswitchid]",
+      "description_cn": "新的交换机ID。指定实例的当前交换机和新的交换机（**VSwitchId**）必须要属于同一个地域下的可用区。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "PrivateIpAddress": {
+      "name": "PrivateIpAddress",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "172.17.XX.XXX",
+      "description_cn": "新的私网IP地址。**PrivateIpAddress**依赖于**VSwitchId**，不能单独指定**PrivateIpAddress**。"
+    }
+  },
+  "res": {
+    "RequestId": "473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E"
+  }
+}

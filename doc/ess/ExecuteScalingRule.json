@@ -1,0 +1,71 @@
+{
+  "name": "ExecuteScalingRule",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ExecuteScalingRule执行一条伸缩规则。",
+  "abc_id": 25953,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ScalingRuleAri": {
+      "name": "ScalingRuleAri",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ari:acs:ess:cn-qingdao:1344371:scalingRule/cCBpdYdQuBe2cUxOdu6****",
+      "description_cn": "伸缩规则唯一标识符。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456123456",
+      "description_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123e4567-e89b-12d3-a456-426655440000",
+      "description_cn": "用于保证请求的幂等性。由客户端生成该参数值，要保证在不同请求间唯一，最大不超过64个ASCII字符。详情请参见[如何保证幂等性](~~25965~~)。 "
+    },
+    "BreachThreshold": {
+      "name": "BreachThreshold",
+      "type": "Float",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.0",
+      "description_cn": "执行步进伸缩规则时指定的当前阈值，取值范围：-9.999999E18~9.999999E18。"
+    },
+    "MetricValue": {
+      "name": "MetricValue",
+      "type": "Float",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.0",
+      "description_cn": "执行步进伸缩规则时指定的当前指标值，取值范围：-9.999999E18~9.999999E18。"
+    }
+  },
+  "res": {
+    "RequestId": "473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E",
+    "ScalingActivityId": "ebta5WbUzC8gcwUWvfch****"
+  }
+}

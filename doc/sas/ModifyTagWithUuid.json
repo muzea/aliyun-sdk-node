@@ -1,0 +1,71 @@
+{
+  "name": "ModifyTagWithUuid",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用该接口修改标签与服务器或云产品的关系。",
+  "abc_id": 130976,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "UuidList": {
+      "name": "UuidList",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "111-xx,aa-bb",
+      "description_cn": "指定待修改机器列表。"
+    },
+    "TagList": {
+      "name": "TagList",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ac,ad",
+      "description_cn": "指定待修改标签列表。"
+    },
+    "TagId": {
+      "name": "TagId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "7E0618A9-D5EF-4220-9471-C42B5E92719F",
+      "description_cn": "指定待修改标签ID。"
+    },
+    "MachineTypes": {
+      "name": "MachineTypes",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ecs",
+      "description_cn": "指定待修改的资产类型。"
+    }
+  },
+  "res": {
+    "code": 200,
+    "requestId": "7E0618A9-D5EF-4220-9471-C42B5E92719F",
+    "success": true
+  }
+}

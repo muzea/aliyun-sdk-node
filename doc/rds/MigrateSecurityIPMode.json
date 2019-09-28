@@ -1,0 +1,41 @@
+{
+  "name": "MigrateSecurityIPMode",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用MigrateSecurityIPMode接口把白名单从通用模式切换为高安全模式。",
+  "abc_id": 88242,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "DBInstanceId": "rm-uf6wjk5xxxxxxx",
+    "RequestId": "EF1E53AB-5625-49C7-ADF1-FBD0B6640D19",
+    "SecurityIPMode": "safety"
+  }
+}

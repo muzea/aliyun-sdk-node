@@ -1,0 +1,105 @@
+{
+  "name": "CreateSmartAccessGatewayClientUser",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateSmartAccessGatewayClientUser创建用户。",
+  "abc_id": 120685,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-shanghai",
+      "description_cn": "智能接入网关APP实例所在地域。"
+    },
+    "SmartAGId": {
+      "name": "SmartAGId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "sag-gnhe6sywtare5******",
+      "description_cn": "智能接入网关APP实例ID。"
+    },
+    "UserMail": {
+      "name": "UserMail",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "test@example.com",
+      "description_cn": "普通用户的邮箱地址，用于管理员向普通用户发送登录APP的账号信息。"
+    },
+    "Bandwidth": {
+      "name": "Bandwidth",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "20",
+      "description_cn": "带宽，单位Kbps，最大2000Kbps。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "UserName": {
+      "name": "UserName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "doctest",
+      "description_cn": "用户名，同一个智能接入网关APP实例下的用户名不可以重复。\n\n用户名和密码相互依赖，若指定用户名则必须指定密码，反之，若指定密码则必须指定用户名。"
+    },
+    "ClientIp": {
+      "name": "ClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10.**.**.**",
+      "description_cn": "* 如果开启，需要设置APP的IP地址。当前账号始终保持以选择的IP地址接入。\n\n  >设置APP的IP地址必须在私网网段内。\n\n* 如果关闭，系统自动从私网网段内分配可用IP地址，每次重连IP地址都会重新分配。"
+    },
+    "Password": {
+      "name": "Password",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "duuf**",
+      "description_cn": "登录智能接入网关APP的密码。\n\n用户名和密码相互依赖，若指定用户名则必须指定密码，反之，若指定密码则必须指定用户名。"
+    }
+  },
+  "res": {
+    "IsStaticIp": 0,
+    "RequestId": "72E82F5E-66E8-4C22-BF1F-5CEB7DC132E7",
+    "UserMail": "dd@example.com",
+    "UserName": "dd@example.com",
+    "Bandwidth": 2
+  }
+}

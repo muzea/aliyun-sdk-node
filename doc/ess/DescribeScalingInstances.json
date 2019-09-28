@@ -1,0 +1,320 @@
+{
+  "name": "DescribeScalingInstances",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeScalingInstances查询伸缩组内ECS实例的列表，并列出ECS实例的信息。",
+  "abc_id": 25942,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-qingdao",
+      "description_cn": "伸缩组所属地域的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456123456",
+      "description_cn": ""
+    },
+    "ScalingGroupId": {
+      "name": "ScalingGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "asg-****",
+      "description_cn": "伸缩组的ID。"
+    },
+    "ScalingConfigurationId": {
+      "name": "ScalingConfigurationId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "asc-****",
+      "description_cn": "关联伸缩配置的ID。"
+    },
+    "HealthStatus": {
+      "name": "HealthStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Healthy",
+      "description_cn": "ECS实例在伸缩组中的健康状态，未处于运行中（Running）状态的ECS实例会被判定为不健康的ECS实例，取值范围： \n\n- Healthy：健康的ECS实例。 \n- Unhealthy：不健康的ECS实例。 \n\n弹性伸缩会自动移出伸缩组中不健康的ECS实例。弹性伸缩会停止和释放自动创建的ECS实例，但不会停止和释放手工添加的ECS实例。 "
+    },
+    "LifecycleState": {
+      "name": "LifecycleState",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "InService",
+      "description_cn": "ECS实例在伸缩组中的生命周期状态，取值范围：\n \n- InService：已成功加入伸缩组并正常提供服务。 \n- Pending：正在加入伸缩组但还未完成相关配置，包括创建实例、加入负载均衡、添加RDS访问名单等过程。 \n- Removing：正在移出伸缩组。 \n         "
+    },
+    "CreationType": {
+      "name": "CreationType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "AutoCreated",
+      "description_cn": "ECS实例的创建类型，取值范围： \n\n- AutoCreated：伸缩组根据伸缩配置和伸缩规则自动创建的ECS实例。 \n- Attached：不是通过弹性伸缩服务创建，而是手工添加到伸缩组中的ECS实例。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "ECS实例列表的页码，起始值：1。\n\n默认值：1。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时设置的每页行数，最大值：50。\n\n默认值：10。"
+    },
+    "InstanceId.1": {
+      "name": "InstanceId.1",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-281vv****",
+      "description_cn": "InstanceId.N为ECS实例的ID，N的取值范围：1～20。返回查询结果时忽略失效的InstanceId，并且不报错。"
+    },
+    "InstanceId.2": {
+      "name": "InstanceId.2",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-283vv****",
+      "description_cn": ""
+    },
+    "InstanceId.3": {
+      "name": "InstanceId.3",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-283vv****",
+      "description_cn": ""
+    },
+    "InstanceId.4": {
+      "name": "InstanceId.4",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-283vv****",
+      "description_cn": ""
+    },
+    "InstanceId.5": {
+      "name": "InstanceId.5",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-283vv****",
+      "description_cn": ""
+    },
+    "InstanceId.6": {
+      "name": "InstanceId.6",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-283vv****",
+      "description_cn": ""
+    },
+    "InstanceId.7": {
+      "name": "InstanceId.7",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-283vv****",
+      "description_cn": ""
+    },
+    "InstanceId.8": {
+      "name": "InstanceId.8",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-283vv****",
+      "description_cn": ""
+    },
+    "InstanceId.9": {
+      "name": "InstanceId.9",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-283vv****",
+      "description_cn": ""
+    },
+    "InstanceId.10": {
+      "name": "InstanceId.10",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-283vv****",
+      "description_cn": ""
+    },
+    "InstanceId.11": {
+      "name": "InstanceId.11",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-283vv****",
+      "description_cn": ""
+    },
+    "InstanceId.12": {
+      "name": "InstanceId.12",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-283vv****",
+      "description_cn": ""
+    },
+    "InstanceId.13": {
+      "name": "InstanceId.13",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-283vv****",
+      "description_cn": ""
+    },
+    "InstanceId.14": {
+      "name": "InstanceId.14",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-283vv****",
+      "description_cn": ""
+    },
+    "InstanceId.15": {
+      "name": "InstanceId.15",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-283vv****",
+      "description_cn": ""
+    },
+    "InstanceId.16": {
+      "name": "InstanceId.16",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-283vv****",
+      "description_cn": ""
+    },
+    "InstanceId.17": {
+      "name": "InstanceId.17",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-283vv****",
+      "description_cn": ""
+    },
+    "InstanceId.18": {
+      "name": "InstanceId.18",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-283vv****",
+      "description_cn": ""
+    },
+    "InstanceId.19": {
+      "name": "InstanceId.19",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-283vv****",
+      "description_cn": ""
+    },
+    "InstanceId.20": {
+      "name": "InstanceId.20",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-283vv****",
+      "description_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "13305F2D-A4C2-4E6B-B7C7-0F2150842EA3",
+    "TotalCount": 1,
+    "PageNumber": 1,
+    "PageSize": 50,
+    "ScalingInstances": {
+      "ScalingInstance": [
+        {
+          "ScalingConfigurationId": "bU5uZHcAgtzwcL4IeDe****",
+          "CreationType": "AutoCreated",
+          "InstanceId": "i-28sov****",
+          "CreationTime": "2014-08-14T10:59Z",
+          "HealthStatus": "Healthy",
+          "LifecycleState": "InService",
+          "ScalingGroupId": "dE9YbOdCHqaFdFZHXVdD****"
+        }
+      ]
+    }
+  }
+}

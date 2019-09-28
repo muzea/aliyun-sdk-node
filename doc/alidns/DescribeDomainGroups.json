@@ -1,0 +1,84 @@
+{
+  "name": "DescribeDomainGroups",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDomainGroups根据传入参数获取所有分组列表。",
+  "abc_id": 29766,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "语言。"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "KeyWord": {
+      "name": "KeyWord",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Group",
+      "description_cn": "组名关键字，按照“%KeyWord%”模式搜索，不区分大小写。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "当前页数，起始值为**1**，默认为**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "分页查询时设置的每页行数，最大值**100**，默认为**20**。"
+    }
+  },
+  "res": {
+    "RequestId": "536E9CAD-DB30-4647-AC87-AA5CC38C5382",
+    "TotalCount": 1,
+    "PageNumber": 1,
+    "PageSize": 2,
+    "DomainGroups": {
+      "DomainGroup": [
+        {
+          "GroupId": "2223",
+          "GroupName": "MyGroup"
+        }
+      ]
+    }
+  }
+}

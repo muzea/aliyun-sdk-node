@@ -1,0 +1,48 @@
+{
+  "name": "DeleteCasterComponent",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteCasterComponent删除组件。",
+  "abc_id": 63164,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ComponentId": {
+      "name": "ComponentId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "21926b36-7dd2-4fde-ae25-51b5bc8e52d8",
+      "description_cn": "组件ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "CasterId": {
+      "name": "CasterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "a2b8e671-2fe5-4642-a2ec-bf93880e1a49",
+      "description_cn": "导播间ID。"
+    }
+  },
+  "res": {}
+}

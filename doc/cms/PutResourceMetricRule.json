@@ -1,0 +1,286 @@
+{
+  "name": "PutResourceMetricRule",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "对单个资源的性能指标设置阈值报警规则。",
+  "abc_id": 114934,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "RuleId": {
+      "name": "RuleId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "a151cd6023eacee2f0978e03863cc1697c89508****",
+      "description_cn": "报警规则ID，调用者统一生成，保证唯一性，已经存在的ID则修改，不存在则创建。"
+    },
+    "Namespace": {
+      "name": "Namespace",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "acs_ecs_dashboard",
+      "description_cn": "产品的数据命名空间，可通过查询DescribeMetricMetaList接口获得或参考[预设监控项参考](~~28619~~)。"
+    },
+    "MetricName": {
+      "name": "MetricName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cpu_total",
+      "description_cn": "监控项名称。可通过查询DescribeMetricMetaList接口获得或参考[预设监控项参考](~~28619~~)。"
+    },
+    "Resources": {
+      "name": "Resources",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "[{\"instanceId\":\"xxxxxxx\"}]",
+      "description_cn": "需要报警的资源。"
+    },
+    "ContactGroups": {
+      "name": "ContactGroups",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "默认报警联系组",
+      "description_cn": "报警联系人组，多个联系组之间用英文逗号分隔。"
+    },
+    "RuleName": {
+      "name": "RuleName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "我的报警规则",
+      "description_cn": "报警规则的展示名称。"
+    },
+    "Webhook": {
+      "name": "Webhook",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "http://ww.aliyun.com",
+      "description_cn": "报警发生时会回调指定的URL地址。向URL发送POST请求。"
+    },
+    "EffectiveInterval": {
+      "name": "EffectiveInterval",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "00:00-23:59",
+      "description_cn": "报警规则的生效时间范围。"
+    },
+    "NoEffectiveInterval": {
+      "name": "NoEffectiveInterval",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "00:00-06:00",
+      "description_cn": "报警规则的不生效时间范围。"
+    },
+    "SilenceTime": {
+      "name": "SilenceTime",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "86400",
+      "description_cn": "通道沉默周期，单位为秒。默认86400秒（即1天），最短为3600秒（即1小时）。监控数据持续超过报警规则阈值时，每个沉默周期内只发送1次报警通知。"
+    },
+    "Period": {
+      "name": "Period",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "60",
+      "description_cn": "监控数据的聚合周期，单位秒。默认取值为监控项对应的最小频率，通常不需要指定。"
+    },
+    "Interval": {
+      "name": "Interval",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "60",
+      "description_cn": "报警规则的探测周期，单位为秒。默认为监控项的最小频率。"
+    },
+    "EmailSubject": {
+      "name": "EmailSubject",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "出现告警了",
+      "description_cn": "报警邮件规则主题。"
+    },
+    "Escalations.Critical.Statistics": {
+      "name": "Escalations.Critical.Statistics",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Average",
+      "description_cn": "Critical级别报警统计方法。"
+    },
+    "Escalations.Critical.ComparisonOperator": {
+      "name": "Escalations.Critical.ComparisonOperator",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "GreaterThanOrEqualToThreshold",
+      "description_cn": "Critical级别阈值比较符，可以选择如下：\n\n+ GreaterThanOrEqualToThreshold:大于等于\n+ GreaterThanThreshold:大于\n+ LessThanOrEqualToThreshold:小于等于\n+ LessThanThreshold:小于\n+ NotEqualToThreshold:不等\n+ GreaterThanYesterday:同比昨天时间上涨\n+ LessThanYesterday:同比昨天时间下降\n+ GreaterThanLastWeek:同比上周同一时间上涨\n+ LessThanLastWeek:同比上周同一时间下降\n+ GreaterThanLastPeriod:环比上周期上涨\n+ LessThanLastPeriod:环比上周期下降"
+    },
+    "Escalations.Critical.Threshold": {
+      "name": "Escalations.Critical.Threshold",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "90",
+      "description_cn": "Critical级别报警阈值。"
+    },
+    "Escalations.Critical.Times": {
+      "name": "Escalations.Critical.Times",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3",
+      "description_cn": "Critical级别报警重试次数。"
+    },
+    "Escalations.Warn.Statistics": {
+      "name": "Escalations.Warn.Statistics",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Average",
+      "description_cn": "Warn级别报警统计方法。"
+    },
+    "Escalations.Warn.ComparisonOperator": {
+      "name": "Escalations.Warn.ComparisonOperator",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "GreaterThanOrEqualToThreshold",
+      "description_cn": "Warn级别阈值比较符，可以选择如下：\n+ GreaterThanOrEqualToThreshold:大于等于\n+ GreaterThanThreshold:大于\n+ LessThanOrEqualToThreshold:小于等于\n+ LessThanThreshold:小于\n+ NotEqualToThreshold:不等\n+ GreaterThanYesterday:同比昨天时间上涨\n+ LessThanYesterday:同比昨天时间下降\n+ GreaterThanLastWeek:同比上周同一时间上涨\n+ LessThanLastWeek:同比上周同一时间下降\n+ GreaterThanLastPeriod:环比上周期上涨\n+ LessThanLastPeriod:环比上周期下降"
+    },
+    "Escalations.Warn.Threshold": {
+      "name": "Escalations.Warn.Threshold",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "90",
+      "description_cn": "Warn级别报警阈值。"
+    },
+    "Escalations.Warn.Times": {
+      "name": "Escalations.Warn.Times",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3",
+      "description_cn": "Warn级别报警重试次数。"
+    },
+    "Escalations.Info.Statistics": {
+      "name": "Escalations.Info.Statistics",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Average",
+      "description_cn": "Info级别报警统计方法。"
+    },
+    "Escalations.Info.ComparisonOperator": {
+      "name": "Escalations.Info.ComparisonOperator",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "GreaterThanOrEqualToThreshold",
+      "description_cn": "Info级别阈值比较符，可以选择如下：\n+ GreaterThanOrEqualToThreshold:大于等于\n+ GreaterThanThreshold:大于\n+ LessThanOrEqualToThreshold:小于等于\n+ LessThanThreshold:小于\n+ NotEqualToThreshold:不等\n+ GreaterThanYesterday:同比昨天时间上涨\n+ LessThanYesterday:同比昨天时间下降\n+ GreaterThanLastWeek:同比上周同一时间上涨\n+ LessThanLastWeek:同比上周同一时间下降\n+ GreaterThanLastPeriod:环比上周期上涨\n+ LessThanLastPeriod:环比上周期下降"
+    },
+    "Escalations.Info.Threshold": {
+      "name": "Escalations.Info.Threshold",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "90",
+      "description_cn": "Info级别报警阈值。"
+    },
+    "Escalations.Info.Times": {
+      "name": "Escalations.Info.Times",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3",
+      "description_cn": "Info级别报警重试次数。"
+    }
+  },
+  "res": {
+    "Code": "200",
+    "Message": "success",
+    "RequestId": "65D50468-ECEF-48F1-A6E1-D952E89D9436",
+    "Success": true
+  }
+}

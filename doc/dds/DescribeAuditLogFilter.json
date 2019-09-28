@@ -1,0 +1,53 @@
+{
+  "name": "DescribeAuditLogFilter",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeAuditLogFilter接口查询MongoDB实例审计日志采集的日志类型。",
+  "abc_id": 89090,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "RoleType": {
+      "name": "RoleType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "primary",
+      "description_cn": "实例中节点的角色，取值：\n- **primary**：主节点。\n- **secondary**：从节点。"
+    }
+  },
+  "res": {
+    "Filter": "admin,slow,insert,query,update,delete,command",
+    "RoleType": "",
+    "RequestId": "D7C8BA0C-9350-487D-9B70-D69AF27FB1EB"
+  }
+}

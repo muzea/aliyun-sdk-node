@@ -1,0 +1,58 @@
+{
+  "name": "ModifyDBInstanceNetworkExpireTime",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyDBInstanceNetworkExpireTime接口修改连接地址过期时间。",
+  "abc_id": 59896,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "ConnectionString": {
+      "name": "ConnectionString",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxx.mysql.rds.aliyuncs.com",
+      "description_cn": "\t\n要延期的经典网络连接地址，经典网络连接地址有两种：\n* 经典网络内网地址；\n* 经典网络读写分离地址。"
+    },
+    "ClassicExpiredDays": {
+      "name": "ClassicExpiredDays",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "7",
+      "description_cn": "经典网络连接地址保留天数，取值：**1-120**，单位：天。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "4C467B38-3910-447D-87BC-AC049166F216"
+  }
+}

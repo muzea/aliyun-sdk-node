@@ -1,0 +1,52 @@
+{
+  "name": "DeleteMezzanines",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteMezzanines批量删除源文件信息及存储。",
+  "abc_id": 129671,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "VideoIds": {
+      "name": "VideoIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "23ab850b4f6f44eab54b6e91d24d8157,93ab850b4f6f44eab54b6e91d24d81d4",
+      "description_cn": "视频ID列表。一次最多支持20个视频ID，多个用逗号分隔。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "Force": {
+      "name": "Force",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "强制删除源文件，默认为**false**。\n\n> 当视频转码模式为不转码，即分发或异步转码时，由于源文件会作为原画用于播放，默认不可删除该视频的源文件，若需要强制删除该视频的源文件，可将值置为**true**。"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,61 @@
+{
+  "name": "ModifyInstanceMinorVersion",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyInstanceMinorVersion升级Redis实例的小版本。",
+  "abc_id": 129381,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "r-bp1xxxxxxxxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "Minorversion": {
+      "name": "Minorversion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "latest_version",
+      "description_cn": "要升级到的版本，默认值：latest_version，即最新版本。"
+    },
+    "EffectTime": {
+      "name": "EffectTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "升级执行时间，取值：\n* 0（立即执行）\n* 1（可维护时间内执行）\n\n默认值：0。"
+    }
+  },
+  "res": {
+    "RequestId": "28761557-0B33-41DF-AEEB-322DFF960395"
+  }
+}

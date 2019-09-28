@@ -1,0 +1,50 @@
+{
+  "name": "PushObjectCache",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用PushObjectCache将源站的内容主动预热到L2 Cache节点上，您首次访问可直接命中缓存，缓解源站压力。  ",
+  "abc_id": 91161,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ObjectPath": {
+      "name": "ObjectPath",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "abc.com/image/1.png",
+      "description_cn": "多个URL之间需要用换行符（\\n）或（\\r\\n）分隔。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "Area": {
+      "name": "Area",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "domestic",
+      "description_cn": "预热区域。取值：\n\n- **domestic**。\n\n- **overseas**。\n"
+    }
+  },
+  "res": {
+    "PushTaskId": "95248880",
+    "RequestId": "E5BD4B50-7A02-493A-AE0B-97B9024B4135"
+  }
+}

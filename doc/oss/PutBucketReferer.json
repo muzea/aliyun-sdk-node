@@ -1,0 +1,21 @@
+{
+  "name": "PutBucketReferer",
+  "protocol": "HTTP|HTTPS",
+  "method": "PUT",
+  "path": "/",
+  "timeout": null,
+  "reqFormat": {
+    "BucketName": {
+      "name": "BucketName",
+      "position": "domain",
+      "required": true
+    },
+    "referer": {
+      "name": "referer",
+      "position": "query",
+      "required": true,
+      "default": ""
+    }
+  },
+  "res": {}
+}

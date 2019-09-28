@@ -1,0 +1,42 @@
+{
+  "name": "DescribeDBInstanceProxyConfiguration",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDBInstanceProxyConfiguration接口查看数据库代理设置，已下线。",
+  "abc_id": 86814,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "PersistentConnectionsConfiguration": "{\"status\":\"Disable\"}",
+    "TransparentSwitchConfiguration": "{\"status\":\"Enable\"}",
+    "AttacksProtectionConfiguration": "{\"check_interval_seconds\":\"0\",\"max_failed_login_attempts\":\"0\",\"blocking_seconds\":\"0\",\"status\":\"Disable\"}",
+    "RequestId": "E9DD55F4-1A5F-48CA-BA57-DFB3CA8C4C34"
+  }
+}

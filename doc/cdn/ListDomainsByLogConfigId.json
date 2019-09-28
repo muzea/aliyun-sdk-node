@@ -1,0 +1,44 @@
+{
+  "name": "ListDomainsByLogConfigId",
+  "protocol": "HTTP|HTTPS",
+  "method": "GET",
+  "path": "/",
+  "summary_cn": "调用ListDomainsByLogConfigId查询应用某自定义日志格式的所有域名列表。",
+  "abc_id": 102944,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ConfigId": {
+      "name": "ConfigId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "123",
+      "description_cn": "自定义配置ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "9732E117-8A37-49FD-A36F-ABBB87556CA7",
+    "Domains": {
+      "Domain": [
+        "abc.com",
+        "a.b.c.com"
+      ]
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "name": "CreatePhysicalConnectionOccupancyOrder",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreatePhysicalConnectionOccupancyOrder创建初装费订单。",
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "物理专线所在的地域。"
+    },
+    "PhysicalConnectionId": {
+      "name": "PhysicalConnectionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "pc-bp1hp0wr072f6ambni141",
+      "description_cn": "物理专线的实例ID。"
+    },
+    "Period": {
+      "name": "Period",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "购买时长。"
+    },
+    "InstanceChargeType": {
+      "name": "InstanceChargeType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PostPaid",
+      "description_cn": "实例的付费方式。取值范围：\n\n\n\n- PrePaid：预付费，包年包月。选择该类付费方式时，您必须确认自己的账号支持余额支付/信用支付。\n\n- PostPaid（默认）：按量付费。"
+    },
+    "AutoPay": {
+      "name": "AutoPay",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否自动支付。取值范围：\n\n- true（默认）：自动支付。您需要确保账户余额充足，如果账户余额不足会生成异常订单，只能作废订单。\n\n- false：只生成订单不扣费。"
+    },
+    "PricingCycle": {
+      "name": "PricingCycle",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Month",
+      "description_cn": "订购的周期单位。\n\n- 年：Year。\n\n- 月：Month。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "CBCE910E-D396-4944-8764-B4047838B2D1",
+      "description_cn": "客户端Token鉴权。"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "orderId": 203167309740138
+    },
+    "httpStatusCode": 200,
+    "message": "successful",
+    "requestId": "CBCE910E-D396-4944-8764-B4047838B2D1",
+    "success": true
+  }
+}

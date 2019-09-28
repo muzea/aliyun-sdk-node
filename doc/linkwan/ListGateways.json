@@ -1,0 +1,128 @@
+{
+  "name": "ListGateways",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ListGateways根据过滤条件查询当前用户账号名下的网关信息列表。",
+  "abc_id": 109912,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Offset": {
+      "name": "Offset",
+      "type": "Long",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "0",
+      "description_cn": "本次查询的起始位置，从0开始。"
+    },
+    "Limit": {
+      "name": "Limit",
+      "type": "Long",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2",
+      "description_cn": "本次查询的网关数量上限，大于等于1。"
+    },
+    "OnlineState": {
+      "name": "OnlineState",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ONLINE",
+      "description_cn": "网关在离线状态过滤。\n\n如未传入此参数，则不限制在线状态。可取值为：**ONLINE**, **OFFLINE**。"
+    },
+    "FuzzyGwEui": {
+      "name": "FuzzyGwEui",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456",
+      "description_cn": "GwEUI模糊过滤。"
+    },
+    "FuzzyCity": {
+      "name": "FuzzyCity",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "CityName",
+      "description_cn": "城市名模糊过滤。"
+    },
+    "FuzzyName": {
+      "name": "FuzzyName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "GatewayName",
+      "description_cn": "网关名称模糊过滤。"
+    },
+    "FreqBandPlanGroupId": {
+      "name": "FreqBandPlanGroupId",
+      "type": "Long",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123",
+      "description_cn": "网关频段ID过滤。"
+    },
+    "IsEnabled": {
+      "name": "IsEnabled",
+      "type": "Boolean",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "网关启停用状态过滤。\n\n如未传入此参数，则不限制启停状态。"
+    },
+    "SortingField": {
+      "name": "SortingField",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ONLINE_STATE_CHANGED_MILLIS",
+      "description_cn": "指定排序字段，可取值为**ONLINE_STATE_CHANGED_MILLIS**。"
+    },
+    "Ascending": {
+      "name": "Ascending",
+      "type": "Boolean",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "配合**SortingField**参数一起使用，**true**表示升序，**false**表示降序。"
+    }
+  },
+  "res": {}
+}

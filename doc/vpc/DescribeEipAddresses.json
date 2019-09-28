@@ -1,0 +1,236 @@
+{
+  "name": "DescribeEipAddresses",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeEipAddresses接口查询指定地域已创建的EIP。",
+  "abc_id": 36018,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "EIP所在的地域。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "IncludeReservationData": {
+      "name": "IncludeReservationData",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否包含未生效的订购数据，默认是否。"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Available",
+      "description_cn": "EIP的状态，取值：\n\n- **Associating**：绑定中。\n\n- **Unassociating**：解绑中。\n\n- **InUse**：已分配。\n\n- **Available**：可用。\n"
+    },
+    "EipAddress": {
+      "name": "EipAddress",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "116.xx.xx.28",
+      "description_cn": "EIP的IP地址。指定后可查看指定IP地址的EIP的信息。"
+    },
+    "AllocationId": {
+      "name": "AllocationId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "eip-2zeerraiwb7ujxxxxxxxx",
+      "description_cn": " EIP的ID。 "
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rg-acfmxazb4pxxxxxxxx",
+      "description_cn": "资源组ID。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": " 列表的页码，默认值为**1**。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": " 分页查询时每页的行数，最大值为**50**，默认值为**10**。  "
+    },
+    "ISP": {
+      "name": "ISP",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "BGP",
+      "description_cn": "服务提供商，大部分是BGP。"
+    },
+    "Filter.1.Key": {
+      "name": "Filter.1.Key",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Filter.1.Name",
+      "description_cn": "要使用的过滤条件。"
+    },
+    "Filter.2.Key": {
+      "name": "Filter.2.Key",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Filter.2.Description",
+      "description_cn": "要使用的过滤条件。"
+    },
+    "Filter.1.Value": {
+      "name": "Filter.1.Value",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "value1",
+      "description_cn": "对应过滤条件的取值。"
+    },
+    "Filter.2.Value": {
+      "name": "Filter.2.Value",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "value2",
+      "description_cn": "对应过滤条件的取值。"
+    },
+    "LockReason": {
+      "name": "LockReason",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "financial",
+      "description_cn": "锁定类型，取值：\n\n- **financial**：因欠费被锁定。\n\n- **security**：因安全原因被锁定。"
+    },
+    "AssociatedInstanceType": {
+      "name": "AssociatedInstanceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "EcsInstance",
+      "description_cn": "要绑定的云产品实例的类型，取值： \n\n- **EcsInstance**（默认值）：VPC类型的ECS实例。\n\n- **SlbInstance**：VPC类型的SLB实例。\n\n- **Nat**：NAT网关。\n\n- **HaVip**：高可用虚拟IP。 \n           \n每个ECS实例、负载均衡实例和HAVIP同时只能绑定一个EIP，NAT网关可以绑定多个EIP。"
+    },
+    "AssociatedInstanceId": {
+      "name": "AssociatedInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-2zebb08phycxxxxxxxx",
+      "description_cn": " 云产品的实例ID。 "
+    },
+    "ChargeType": {
+      "name": "ChargeType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PostPaid",
+      "description_cn": "<props=\"china\">弹性公网IP的计费方式，取值：</props>\n\n<props=\"china\">**PostPaid**：按量计费。</props>\n\n<props=\"china\">**PrePaid**：包年包月。</props>\n\n\n<props=\"intl\">弹性公网IP的计费方式，取值：</props>\n\n<props=\"intl\">**PostPaid**：按量计费。</props>\n\n\n<props=\"partner\">弹性公网IP的计费方式，取值：</props>\n\n<props=\"partner\">**PostPaid**：按量计费。</props>"
+    }
+  },
+  "res": {
+    "DescribeEipAddressesResponse": {
+      "RequestId": "7EEF2D6B-D207-4197-AE37-01279C888757",
+      "PageNumber": "1",
+      "EipAddresses": {
+        "EipAddress": {
+          "ChargeType": "PostPaid",
+          "AllocationTime": "2018-01-15T11:17:30Z",
+          "ResourceGroupId": "rg-acfmxazb4ph6aiy",
+          "IpAddress": "59.110.xx.xx",
+          "AllocationId": "eip-2ze88m67qx5zxxxxx",
+          "InternetChargeType": "PayByTraffic",
+          "Status": "Available",
+          "RegionId": "cn-beijing",
+          "AvailableRegions": {
+            "AvailableRegion": "cn-beijing"
+          },
+          "Bandwidth": "1"
+        }
+      },
+      "TotalCount": "1",
+      "PageSize": "10"
+    }
+  }
+}

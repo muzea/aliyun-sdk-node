@@ -1,0 +1,70 @@
+{
+  "name": "CreateMonitorGroupInstances",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "添加资源到应用分组。",
+  "abc_id": 115031,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Instances": {
+      "name": "Instances",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Category",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "InstanceId",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "RegionId",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "InstanceName",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        }
+      ]
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "12345",
+      "description_cn": "应用分组ID。"
+    }
+  },
+  "res": {
+    "RequestId": "1BC69FEB-56CD-4555-A0E2-02536A24A946",
+    "Success": true,
+    "Code": 200
+  }
+}

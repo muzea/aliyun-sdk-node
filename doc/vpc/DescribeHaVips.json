@@ -1,0 +1,100 @@
+{
+  "name": "DescribeHaVips",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询指定地域内的高可用虚拟IP实例。",
+  "abc_id": 114611,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "HaVip实例所在的地域。\n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "列表的页码，默认值为**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时每页的行数，最大值为**50**，默认值为**10**。"
+    },
+    "Filter": {
+      "name": "Filter",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        }
+      ]
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 1,
+    "HaVips": {
+      "HaVip": [
+        {
+          "Status": "Available",
+          "Description": "",
+          "MasterInstanceId": "",
+          "AssociatedInstances": {
+            "associatedInstance": []
+          },
+          "AssociatedEipAddresses": {
+            "associatedEipAddresse": []
+          },
+          "CreateTime": "2018-07-03T14:25:26Z",
+          "RegionId": "cn-hangzhou",
+          "IpAddress": "192.168.35.27",
+          "HaVipId": "havip-bp149uyvut73dplduoq8s",
+          "VSwitchId": "vsw-bp1pkt1fba8e824ezs80a",
+          "VpcId": "vpc-bp1kcm36tevkpms97o2pm"
+        }
+      ]
+    },
+    "PageSize": 10,
+    "RequestId": "33E480C5-B46F-4CA5-B6FD-D77C746E86AB"
+  }
+}

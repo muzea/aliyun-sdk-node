@@ -1,0 +1,58 @@
+{
+  "name": "DescribeFlowJob",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 DescribeFlowJob 接口查询作业信息",
+  "abc_id": 100991,
+  "timeout": 8000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "Id": {
+      "name": "Id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "FJ-BCCAE48B90CCB37B",
+      "description_cn": "作业ID。"
+    },
+    "ProjectId": {
+      "name": "ProjectId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "FP-257A173659F59685",
+      "description_cn": "项目ID。"
+    }
+  },
+  "res": {
+    "FailAct": "STOP",
+    "CategoryId": "FC-F2495319DA05CEE5",
+    "Description": "shell",
+    "RequestId": "7D2B1B2E-8D89-49C1-8D31-097C83879D20",
+    "GmtCreate": 1538017814000,
+    "GmtModified": 1538017814000,
+    "Params": "ls -l",
+    "MaxRetry": 0,
+    "Name": "shell_copy",
+    "Type": "SHELL",
+    "ResourceList": {
+      "Resource": []
+    },
+    "RetryInterval": 15,
+    "Id": "FJ-C7FB9F1075C7D62A"
+  }
+}

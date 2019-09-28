@@ -1,0 +1,54 @@
+{
+  "name": "DescribeRegions",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeRegions接口查询当前可选的RDS地域和可用区信息。",
+  "abc_id": 26243,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "Regions": {
+      "RDSRegion": [
+        {
+          "RegionId": "cn-hangzhou",
+          "ZoneId": "cn-hangzhou-b"
+        },
+        {
+          "RegionId": "cn-qingdao",
+          "ZoneId": "cn-qingdao-b"
+        },
+        {
+          "RegionId": "cn-shenzhen",
+          "ZoneId": "cn-shenzhen-a"
+        }
+      ]
+    },
+    "RequestId": "A36D9720-7902-42A4-B8B9-014A2135E6C3"
+  }
+}

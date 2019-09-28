@@ -1,0 +1,61 @@
+{
+  "name": "ModifyAuditLogFilter",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyAuditLogFilter接口修改MongoDB实例审计日志的采集类型。",
+  "abc_id": 89033,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Filter": {
+      "name": "Filter",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "insert,query,update,delete",
+      "description_cn": "设置审计日志的采集类型。\n- **admin**：运维管控操作。\n- **slow**：慢日志。\n- **query**：查询操作。\n- **insert**：插入操作。  \n- **update**：更新操作。  \n- **delete**：删除操作。 \n- **command**：协议命令。例如aggregate聚合方法。  "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "RoleType": {
+      "name": "RoleType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "primary",
+      "description_cn": "实例中节点的角色，取值：\n- **primary**：主节点。\n- **secondary**：从节点。"
+    }
+  },
+  "res": {
+    "RequestId": "E209BE2B-F264-4B9D-81F6-A5A5FB1FBF28"
+  }
+}

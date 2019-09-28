@@ -1,0 +1,158 @@
+{
+  "name": "ModifyInstanceCrossBackupPolicy",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyInstanceCrossBackupPolicy接口修改RDS跨地域备份设置。",
+  "abc_id": 121731,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "源实例地域ID，可以通过接口[DescribeRegions](~~26243~~)查看地域ID。"
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "rm-uf6wjk5xxxxxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "CrossBackupType": {
+      "name": "CrossBackupType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "跨地域备份保存类型。默认值：**1**，表示每个备份都保存。"
+    },
+    "LogBackupEnabled": {
+      "name": "LogBackupEnabled",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "跨地域日志备份开关，取值：\n* **0**：关闭；\n* **1**：开启。"
+    },
+    "BackupEnabled": {
+      "name": "BackupEnabled",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "跨地域备份总开关（数据备份+日志备份），取值：\n* **0**：关闭；\n* **1**：开启。"
+    },
+    "CrossBackupRegion": {
+      "name": "CrossBackupRegion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "跨地域备份的目的地域ID。"
+    },
+    "StorageOwner": {
+      "name": "StorageOwner",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "StorageType": {
+      "name": "StorageType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Endpoint": {
+      "name": "Endpoint",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "RetentType": {
+      "name": "RetentType",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "跨地域备份保留方式。默认值：**1**，表示按时长保留。"
+    },
+    "Retention": {
+      "name": "Retention",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "7",
+      "description_cn": "跨地域备份保留天数，取值：**7~1825**。"
+    },
+    "RelService": {
+      "name": "RelService",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "CrossBackupType": "1",
+    "LogBackupEnabled": "Enable",
+    "BackupEnabled": "Enable",
+    "CrossBackupRegion": "cn-shanghai",
+    "RetentType": 1,
+    "RequestId": "50A6059D-6DBB-46C6-A851-1EE93C9013CF",
+    "DBInstanceId": "rm-bpxxxxx",
+    "RegionId": "cn-hangzhou",
+    "StorageType": "oss",
+    "Endpoint": "",
+    "Retention": 15
+  }
+}

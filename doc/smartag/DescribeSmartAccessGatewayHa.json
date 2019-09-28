@@ -1,0 +1,60 @@
+{
+  "name": "DescribeSmartAccessGatewayHa",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询智能接入网关的高可用配置。",
+  "abc_id": 124309,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-shanghai",
+      "description_cn": "智能接入网关实例的地域ID。"
+    },
+    "SmartAGId": {
+      "name": "SmartAGId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "sag-pno62188piyc6txxxxx",
+      "description_cn": "要查询的智能接入网关实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "SmartAGId": "sag-i8mogwi9kisigcxxxx",
+    "DeviceLevelBackupState": "OFF",
+    "LinkBackupInfoList": {
+      "LinkBackupInfoList": [
+        {
+          "LinkLevelBackupType": "StandbyMode",
+          "MainLinkId": "lte",
+          "BackupLinkState": "down",
+          "LinkLevelBackupState": "ON",
+          "BackupLinkId": "wan1",
+          "MainLinkState": "up"
+        }
+      ]
+    },
+    "RequestId": "582FE511-FEFE-42BC-BBF4-4F8ECF92E3C6"
+  }
+}

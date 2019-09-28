@@ -1,0 +1,67 @@
+{
+  "name": "ModifyBackupPolicy",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyBackupPolicy修改Redis实例的自动备份策略。",
+  "abc_id": 61077,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "PreferredBackupTime": {
+      "name": "PreferredBackupTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "00:00Z-04:00Z",
+      "description_cn": "备份时间，格式：`HH:mmZ-HH:mmZ`。 "
+    },
+    "PreferredBackupPeriod": {
+      "name": "PreferredBackupPeriod",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "Tuesday",
+      "description_cn": "备份周期：\n* Monday（周一）\n* Tuesday（周二）\n* Wednesday（周三）\n* Thursday（周四）\n* Friday（周五）\n* Saturday（周六）\n* Sunday（周日） "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "r-bp1xxxxxxxxxxxxx",
+      "description_cn": "目标实例的ID。"
+    }
+  },
+  "res": {
+    "RequestId": "8D0C0AFC-E9CD-47A4-8395-5C31BF9B3E76"
+  }
+}

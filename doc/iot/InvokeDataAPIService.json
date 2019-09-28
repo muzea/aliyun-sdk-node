@@ -1,0 +1,63 @@
+{
+  "name": "InvokeDataAPIService",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ApiSrn": {
+      "name": "ApiSrn",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "Param": {
+      "name": "Param",
+      "type": "RepeatList",
+      "position": "Body",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "ParamValue",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ParamName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ListParamType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ListParamValue",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        }
+      ]
+    }
+  },
+  "res": {}
+}

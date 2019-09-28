@@ -1,0 +1,411 @@
+{
+  "name": "DescribeDBInstances",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDBInstances接口查看RDS实例列表或被RAM授权的实例列表。",
+  "abc_id": 26232,
+  "timeout": 32000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID，可以通过接口[DescribeRegions](~~26243~~)查看。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ETnLKlblzczshOTUbOCzxxxxxxx",
+      "description_cn": "用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。"
+    },
+    "proxyId": {
+      "name": "proxyId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "API",
+      "description_cn": "代理模式ID。"
+    },
+    "Engine": {
+      "name": "Engine",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "MySQL",
+      "description_cn": "数据库类型，取值：\n* **MySQL**；\n* **SQLServer**；\n* **PostgreSQL**；\n* **PPAS**；\n* **MariaDB**。\n\n默认返回所有数据库类型。"
+    },
+    "ZoneId": {
+      "name": "ZoneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou-a",
+      "description_cn": "可用区ID。"
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rg-acfmyxxxxx",
+      "description_cn": "资源组ID。"
+    },
+    "DBInstanceStatus": {
+      "name": "DBInstanceStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Running",
+      "description_cn": "实例状态，详情请参见[实例状态表](~~26315~~)。"
+    },
+    "Expired": {
+      "name": "Expired",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "True",
+      "description_cn": "实例的过期状态，取值：\n* **True**：已过期。\n*  **False**：未过期。"
+    },
+    "SearchKey": {
+      "name": "SearchKey",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rm-uf6w",
+      "description_cn": "可基于实例ID或者实例备注模糊搜索。"
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "DBInstanceType": {
+      "name": "DBInstanceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Primary",
+      "description_cn": "实例类型，取值：\n* **Primary**：主实例；\n* **Readonly**：只读实例；\n* **Guard**：灾备实例；\n* **Temp**：临时实例。\n\n默认返回所有实例类型。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "每页记录数，取值：\n* **30**；\n* **50**；\n* **100**。\n\n默认值：**30**。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页码，取值：大于0且不超过Integer的最大值。\n\n默认值：**1**。"
+    },
+    "InstanceNetworkType": {
+      "name": "InstanceNetworkType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Classic",
+      "description_cn": "实例的网络类型，取值：\n* **VPC**：专有网络下的实例；\n* **Classic**：经典网络下的实例。\n\n默认返回所有网络类型下的实例。"
+    },
+    "VpcId": {
+      "name": "VpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc-uf6f7l4fg90xxxxxxxxxx",
+      "description_cn": "VPC ID。"
+    },
+    "VSwitchId": {
+      "name": "VSwitchId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vsw-uf6adz52c2pxxxxxxxxxx",
+      "description_cn": "交换机ID。"
+    },
+    "DBInstanceClass": {
+      "name": "DBInstanceClass",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rds.mys2.small",
+      "description_cn": "实例规格，详见[实例规格表](~~26312~~)。"
+    },
+    "EngineVersion": {
+      "name": "EngineVersion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "5.7",
+      "description_cn": "数据库版本。"
+    },
+    "PayType": {
+      "name": "PayType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Postpaid",
+      "description_cn": "付费类型，取值：\n* **Postpaid**：按量付费；\n* **Prepaid**：包年包月。"
+    },
+    "ConnectionMode": {
+      "name": "ConnectionMode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Standard",
+      "description_cn": "实例的访问模式，取值：\n* **Standard**：标准访问模式；\n* **Safe**：数据库代理模式。\n\n默认返回所有访问模式下的实例。"
+    },
+    "Tag.1.key": {
+      "name": "Tag.1.key",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Tagkey1",
+      "description_cn": "当前第一组key。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。"
+    },
+    "Tag.2.key": {
+      "name": "Tag.2.key",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Tagkey2",
+      "description_cn": "当前第二组key。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。"
+    },
+    "Tag.3.key": {
+      "name": "Tag.3.key",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Tagkey3",
+      "description_cn": "当前第三组key。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。"
+    },
+    "Tag.4.key": {
+      "name": "Tag.4.key",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Tagkey4",
+      "description_cn": "当前第四组key。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。"
+    },
+    "Tag.5.key": {
+      "name": "Tag.5.key",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Tagkey5",
+      "description_cn": "当前第五组key。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。"
+    },
+    "Tag.1.value": {
+      "name": "Tag.1.value",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Tagvalue1",
+      "description_cn": "当前第一组value。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。"
+    },
+    "Tag.2.value": {
+      "name": "Tag.2.value",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Tagvalue2",
+      "description_cn": "当前第二组value。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。"
+    },
+    "Tag.3.value": {
+      "name": "Tag.3.value",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Tagvalue3",
+      "description_cn": "当前第三组value。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。"
+    },
+    "Tag.4.value": {
+      "name": "Tag.4.value",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Tagvalue4",
+      "description_cn": "当前第四组value。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。"
+    },
+    "Tag.5.value": {
+      "name": "Tag.5.value",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Tagvalue5",
+      "description_cn": "当前第五组value。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。"
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{“key1”:”value1”}",
+      "description_cn": "查询绑定有该标签的实例，包括TagKey和TagValue。单次最多支持传入5组值，格式：{\"key1\":\"value1\",\"key2\":\"value2\"...}。"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "Items": {
+      "DBInstance": [
+        {
+          "Engine": "MySQL",
+          "DBInstanceType": "Primary",
+          "DBInstanceStatus": "Running",
+          "DBInstanceDescription": "testforRemarks",
+          "LockMode": "Unlock",
+          "RegionId": "cn-hangzhou",
+          "ZoneId": "cn-hangzhou-a",
+          "DBInstanceId": "rdsmjfirvmjfirv",
+          "PayType": "Prepaid",
+          "ExpireTime": "2014-10-10T16:00:00Z",
+          "DBInstanceNetType": "Internet",
+          "LockReason": "",
+          "MasterInstanceId": "",
+          "GuardDBInstanceId ": "",
+          "TempDBInstanceId": "",
+          "ReadOnlyDBInstanceIds": {
+            "ReadOnlyDBInstanceId": []
+          }
+        },
+        {
+          "Engine": "MySQL",
+          "DBInstanceType": "Primary",
+          "DBInstanceStatus": "Running",
+          "DBInstanceDescription": "testforcreate",
+          "LockMode": "Unlock",
+          "RegionId": "cn-hangzhou",
+          "DBInstanceId": "rdsabqumfabqumf",
+          "PayType": "Postpaid",
+          "ExpireTime": "",
+          "DBInstanceNetType": "Intranet",
+          "LockReason": "",
+          "MasterInstanceId": "",
+          "GuardDBInstanceId ": "",
+          "TempDBInstanceId": "",
+          "ReadOnlyDBInstanceIds": {
+            "ReadOnlyDBInstanceId": []
+          }
+        }
+      ]
+    },
+    "TotalRecordCount": 2,
+    "PageRecordCount": 2,
+    "RequestId": "2553A660-E4EB-4AF4-A402-8AFF70A49143"
+  }
+}

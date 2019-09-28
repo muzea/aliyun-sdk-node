@@ -1,0 +1,50 @@
+{
+  "name": "DeleteLiveDomainMapping",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteLiveDomainMapping删除直播域名播流域名和推流域名的映射关系配置。",
+  "abc_id": 88783,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "PullDomain": {
+      "name": "PullDomain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "pull.yourdomain.com",
+      "description_cn": "您的播流域名，域名类型为**liveVideo**。"
+    },
+    "PushDomain": {
+      "name": "PushDomain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "push.yourdomain.com",
+      "description_cn": "您的推流域名，域名类型为**liveEdge**。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "",
+      "description_cn": ""
+    }
+  },
+  "res": {}
+}

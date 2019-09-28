@@ -1,0 +1,71 @@
+{
+  "name": "ModifyDTCSecurityIpHostsForSQLServer",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyDTCSecurityIpHostsForSQLServer接口设置分布式事务白名单。",
+  "abc_id": 126630,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "RDS实例的地域ID，可以通过接口[DescribeRegions](~~26243~~)查看。"
+    },
+    "SecurityIpHosts": {
+      "name": "SecurityIpHosts",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "192.168.1.100,k3ecstest",
+      "description_cn": "ECS实例的IP地址和Windows系统的计算机名。格式：ip,hostname。多个实例之间以英文分号（;）隔开。\n>计算机名查看方式请参见[设置分布式事务白名单](~~124321~~)。"
+    },
+    "WhiteListGroupName": {
+      "name": "WhiteListGroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "test1",
+      "description_cn": "白名单分组名称。"
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "RDS实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "671B6D32-B907-4EFF-A3B7-94D2EAD5E3A3",
+    "DBInstanceId": "rm-uf6wjk5xxxxxxx",
+    "DTCSetResult": "Success",
+    "TaskId": 178968983
+  }
+}

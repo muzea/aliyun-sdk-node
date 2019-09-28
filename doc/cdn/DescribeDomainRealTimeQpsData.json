@@ -1,0 +1,90 @@
+{
+  "name": "DescribeDomainRealTimeQpsData",
+  "protocol": "HTTP|HTTPS",
+  "method": "GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDomainRealTimeQpsData获取域名1分钟粒度每秒访问次数数据。",
+  "abc_id": 91128,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "test.test.com",
+      "description_cn": "加速域名。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "IspNameEn": {
+      "name": "IspNameEn",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "telecom",
+      "description_cn": "运营商英文名，通过[DescribeCdnRegionAndIsp](~~91077~~)接口获得，不传为所有运营商。"
+    },
+    "LocationNameEn": {
+      "name": "LocationNameEn",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "beijing",
+      "description_cn": "区域英文名，通过[DescribeCdnRegionAndIsp](~~91077~~)接口获得，不传为所有区域。"
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2016-10-20T04:00:00Z",
+      "description_cn": "起始时间。\n\n- 日期格式按照ISO8601表示法，并使用UTC时间。\n\n- 不填默认查询从EndTime起一小时内的数据。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2016-10-20T04:00:00Z",
+      "description_cn": "结束时间。\n\n- 日期格式按照ISO8601表示法，并使用UTC时间。\n\n- 不填默认查询从StartTime起一小时内的数据。"
+    }
+  },
+  "res": {
+    "Data": {
+      "QpsModel": [
+        {
+          "TimeStamp": "2018-01-02T11:26:00Z",
+          "Qps": 1851.25
+        },
+        {
+          "TimeStamp": "2018-01-02T11:25:00Z",
+          "Qps": 8967.7
+        }
+      ]
+    },
+    "RequestId": "32DC9806-E9F9-4490-BBDC-B3A9E32FCC1D"
+  }
+}

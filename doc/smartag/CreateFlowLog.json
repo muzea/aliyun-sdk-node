@@ -1,0 +1,157 @@
+{
+  "name": "CreateFlowLog",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateFlowlog创建一个流日志。",
+  "abc_id": 134737,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-shanghai",
+      "description_cn": "流日志的地域ID。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "创建流日志",
+      "description_cn": "流日志实例描述。"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "sag-flowlog-1",
+      "description_cn": "流日志实例名称。"
+    },
+    "InactiveAging": {
+      "name": "InactiveAging",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "15",
+      "description_cn": "非活跃流输出间隔，默认15s。"
+    },
+    "OutputType": {
+      "name": "OutputType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "sls",
+      "description_cn": "流日志输出类型：\n\n- **sls**：流日志存储在阿里云日志服务。\n\n- **netflow**：流日志存储在您配置的netflow服务器。\n\n- **all**：流日志同时存储在阿里云日志服务和您配置的netflow服务器。\n\n"
+    },
+    "SlsRegionId": {
+      "name": "SlsRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "cn-hanghzou",
+      "description_cn": "日志服务的地域ID，输出类型为sls时填入。"
+    },
+    "ProjectName": {
+      "name": "ProjectName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "sag-flowlog-shanghai",
+      "description_cn": "日志服务的 Project，输出类型为sls时填入。"
+    },
+    "LogstoreName": {
+      "name": "LogstoreName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "config-operation-log",
+      "description_cn": "日志服务的日志库，当输出类型为sls时填入。"
+    },
+    "NetflowServerIp": {
+      "name": "NetflowServerIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "192.168.0.2",
+      "description_cn": "流日志输出的服务器地址，输出类型是netflow时填入。"
+    },
+    "NetflowServerPort": {
+      "name": "NetflowServerPort",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "9995",
+      "description_cn": "流日志输出的服务器端口，默认值为**9995**，输出类型是netflow时填入。"
+    },
+    "NetflowVersion": {
+      "name": "NetflowVersion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "V9",
+      "description_cn": "流日志输出时使用的Netflow协议版本号，可选**V5**、**V9**和**V10**，默认**V9**，输出类型是netflow时填入。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ActiveAging": {
+      "name": "ActiveAging",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "300",
+      "description_cn": "活跃流输出间隔，默认300s。"
+    }
+  },
+  "res": {
+    "RequestId": "650CB9E8-20F3-4538-A4FC-1DA1B36E42D9",
+    "FlowLogId": "fl-7a56mar1kfw9vj****"
+  }
+}

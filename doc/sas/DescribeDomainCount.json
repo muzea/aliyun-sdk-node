@@ -1,0 +1,36 @@
+{
+  "name": "DescribeDomainCount",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用该接口获取域名资产数量。",
+  "abc_id": 130979,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "127.1.1.1",
+      "description_cn": "指定的访问源IP地址。"
+    }
+  },
+  "res": {
+    "code": 200,
+    "data": {
+      "TotalDomainsCount": 27,
+      "RootDomainsCount": 1
+    },
+    "requestId": "6FAFB857-FE24-4226-A09F-52EA5023C987",
+    "success": true
+  }
+}

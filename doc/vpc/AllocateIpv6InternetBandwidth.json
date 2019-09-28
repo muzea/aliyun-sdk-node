@@ -1,0 +1,85 @@
+{
+  "name": "AllocateIpv6InternetBandwidth",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AllocateIpv6InternetBandwidth接口为IPv6地址购买公网带宽。",
+  "abc_id": 102213,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-huhehaote",
+      "description_cn": "IPv6网关的地域ID。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "Ipv6GatewayId": {
+      "name": "Ipv6GatewayId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ipv5gw-123456xxxxxxxx",
+      "description_cn": "IPv6网关的ID。"
+    },
+    "Ipv6AddressId": {
+      "name": "Ipv6AddressId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ipv6-123456xxxxxxxx",
+      "description_cn": "IPv6地址的实例ID。"
+    },
+    "Bandwidth": {
+      "name": "Bandwidth",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "IPv6地址的公网带宽，单位：Mbps，取值范围：**1-5000**。\n\n- 当**InternetChargeType**为**PayByBandwidth**，IPv6地址的公网带宽为1-5000。\n\n- 当**InternetChargeType**为**PayByTraffic**，IPv6地址的公网带宽范围同时受到IPv6网关规格的制约。\n\n    - Small（默认免费版），公网带宽范围为1-500。\n\n    - Medium（企业版），公网带宽范围为1-1000。\n\n    - Large（企业增强版），公网带宽范围为1-2000。\n"
+    },
+    "InternetChargeType": {
+      "name": "InternetChargeType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PayByTraffic",
+      "description_cn": "IPv6公网带宽的计费方式，取值：\n\n- **PayByTraffic**：按使用流量计费。\n\n- **PayByBandwidth**（默认值）：按带宽计费。\n"
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456",
+      "description_cn": "请求的幂等性。\n\n由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "6972A26E-99B1-4367-9890-FBDEBB0F5E7D",
+    "InternetBandwidthId": 2,
+    "Ipv6AddressId": "ipv6-hp352ungkzcknmeicfvss"
+  }
+}

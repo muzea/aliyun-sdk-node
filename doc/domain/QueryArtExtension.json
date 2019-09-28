@@ -1,0 +1,63 @@
+{
+  "name": "QueryArtExtension",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询Art扩展信息",
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "test.art",
+      "description_cn": "域名"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "接口返回错误信息语言，枚举值范围：zh 中文；en 英文。默认为en。"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "127.0.0.1",
+      "description_cn": "用户IP"
+    }
+  },
+  "res": {
+    "RequestId": "814B2AF0-ED6F-4C13-B41C-8AC0B1023583",
+    "Title": "title",
+    "Subject": "subject",
+    "Reference": "reference",
+    "ObjectType": "objectType",
+    "MaterialsAndTechniques": "materials",
+    "Maker": "maker",
+    "InscriptionsAndMarkings": "markings",
+    "Features": "features",
+    "Dimensions": "dimensions",
+    "DateOrPeriod": "2019-10-01"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "RescaleApplicationVertically",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/pop/v1/sam/app/rescaleApplicationVertically",
+  "summary_cn": "改变应用实例规格",
+  "abc_id": 126358,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "0099b7be-5f5b-4512-a7fc-56049ef1aa6b",
+      "description_cn": "目标应用ID"
+    },
+    "Cpu": {
+      "name": "Cpu",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1000",
+      "description_cn": "目标CPU规格，单位毫核。目前只支持有限几种规格。"
+    },
+    "Memory": {
+      "name": "Memory",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2048",
+      "description_cn": "目标memory规格，单位MB。目前只支持有限几种规格。"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,29 @@
+{
+  "name": "DeleteLocalJoinPermission",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteLocalJoinPermission删除当前用户账号所拥有的专用入网凭证。",
+  "abc_id": 109919,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "JoinPermissionId": {
+      "name": "JoinPermissionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "123",
+      "description_cn": "要删除的专用入网凭证的ID。"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,34 @@
+{
+  "name": "DeleteWorkGroup",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteWorkGroup删除指定的接流工作组。",
+  "abc_id": 129255,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "地域ID。"
+    },
+    "WorkGroupId": {
+      "name": "WorkGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2352",
+      "description_cn": "工作组ID。"
+    }
+  },
+  "res": {}
+}

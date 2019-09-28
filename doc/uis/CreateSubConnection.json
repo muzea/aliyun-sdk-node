@@ -1,0 +1,86 @@
+{
+  "name": "CreateSubConnection",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateSubConnection接口创建GRE连接。",
+  "abc_id": 126601,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "UisNodeId": {
+      "name": "UisNodeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "UISNODE-xxxbink187cqsgfni****",
+      "description_cn": "UIS节点ID，节点必须与节点IP对应。"
+    },
+    "Ip": {
+      "name": "Ip",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "10.34.43.xx",
+      "description_cn": "节点IP。\n\n每个节点IP只能创建一个连接。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "a gre description",
+      "description_cn": "连接描述信息。"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "gre-name",
+      "description_cn": "连接名称。"
+    },
+    "GreConfig": {
+      "name": "GreConfig",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{\"localTunnelIp\": \"10.0.xx.1\",\"customerIp\": \"39.106.5.xx\",\"customerTunnelIp\": \"10.0.xx.2\",\"customerSubnet\": \"192.168.0.0/24\"}",
+      "description_cn": "GRE的配置信息。\n\n>localTunnelIp为节点GRE Tunnel设备的IP，customerIp为终端GRE的公网IP，customerTunnelIp为终端GRE Tunnel设备的IP，customerSubnet为终端GRE的私网网段。\n"
+    }
+  },
+  "res": {
+    "UisSubConnectionId": "UISSUBCONN-xxxn30i6x2orzj5vd****",
+    "RequestId": "FC6EAEDF-72BC-4028-A622-63320AD1DEEF"
+  }
+}

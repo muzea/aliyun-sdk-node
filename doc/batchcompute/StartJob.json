@@ -1,0 +1,26 @@
+{
+  "name": "StartJob",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST",
+  "path": "/jobs/[ResourceName]/start",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ResourceName": {
+      "name": "ResourceName",
+      "type": "String",
+      "position": "Path",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

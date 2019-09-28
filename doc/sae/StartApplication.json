@@ -1,0 +1,29 @@
+{
+  "name": "StartApplication",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT",
+  "path": "/pop/v1/sam/app/startApplication",
+  "summary_cn": "启动应用",
+  "abc_id": 126359,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "0099b7be-5f5b-4512-a7fc-56049ef1aa6b",
+      "description_cn": "目标应用ID"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,58 @@
+{
+  "name": "DescribeFabricOrganizationMembers",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeFabricOrganizationMembers获取该组织所加入的联盟与联盟成员。",
+  "abc_id": 127871,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "OrganizationId": {
+      "name": "OrganizationId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "peers-aaaaaa2-1eqnj5o5w****",
+      "description_cn": "组织ID"
+    },
+    "Location": {
+      "name": "Location",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "位置信息"
+    }
+  },
+  "res": {
+    "Result": {
+      "OrganizationId": "consortium-xxxxxx",
+      "OrganizationName": "orgname",
+      "JoinedTime": "1533025590",
+      "ConsortiumName": "联盟",
+      "Description": "",
+      "Domain": "zhuangbsdadadadasdASdaefility.abasssample.cc",
+      "State": "Approved",
+      "ConsortiumId": "consortium-avengers-jkdhdif89****"
+    },
+    "RequestId": "C445762C-8909-4BD8-A2BD-BB45BF2441D8",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "name": "ConfigLayer4RuleAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ConfigLayer4RuleAttribute配置4层转发规则属性，包括会话保持和DDoS防护策略。",
+  "abc_id": 91535,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn"
+    },
+    "ForwardProtocol": {
+      "name": "ForwardProtocol",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "TCP",
+      "description_cn": "转发协议，取值：**TCP**、**UDP**。 "
+    },
+    "FrontendPort": {
+      "name": "FrontendPort",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "233",
+      "description_cn": "前端端口。"
+    },
+    "Config": {
+      "name": "Config",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "{\"Slimit\":{\"CpsEnable\":1,\"MaxconnEnable\":1,\"Cps\":1,\"Maxconn\":1},\"Sla\":{\"CpsEnable\":1,\"MaxconnEnable\":1,\"Cps\":100,\"Maxconn\":1000},\"PayloadLen\":{\"Min\":0,\"Max\":6000}}",
+      "description_cn": "配置信息，传入**TcpConfig**或**UdpConfig**对象JSON串。\n\n**TcpConfig**的具体结构描述见如下：\n\n- **PersistenceTimeout**，Integer类型，必选，会话保持的超时时间，单位为秒。默认为**0**，表示关闭。\n- **Synproxy**，String类型，必选，DDoS防护策略的虚假源，取值：**off**、**on**。\n- **NodataConn**，String类型，必选，DDoS防护策略的空连接，取值：**off**、**on**。\n- **Sla**，Struct类型，必选，目的限制配置。具体结构描述见**Sla**。\n- **Slimit**，Struct类型，必选，源限制配置。具体结构描述见**Slimit**。\n- **PayloadLen**，Struct类型，必选，包过滤配置。具体结构描述见**PayloadLen**。\n\n**UdpConfig**的具体结构描述如下：\n\n- **PersistenceTimeout**，Integer类型，必选，会话保持的超时时间，单位为秒。默认为**0**，表示关闭。\n- **Synproxy**，String类型，必选，DDoS防护策略的虚假源，取值：**off**、**on**。\n- **NodataConn**，String类型，必选，DDoS防护策略的空连接，取值：**off**、**on**。\n- **Sla**，Struct类型，必选，目的限制配置。具体结构描述见**Sla**。\n- **Slimit**，Struct类型，必选，源限制配置。具体结构描述见**Slimit**。\n- **PayloadLen**，Struct类型，必选，包过滤配置。具体结构描述见**PayloadLen**。\n\n**Sla**的具体结构描述如下：\n\n- **Cps**，Integer类型，必选，DDoS防护策略/目的新建连接限速，取值范围：100~100,000。\n- **Maxconn**，Integer类型，必选，DDoS防护策略/目的并发连接限速，取值范围：1,000~1,000,000。\n- **CpsEnable**，Integer类型，必选，是否开启Cps，取值：**0**（禁用cps）、**1**（默认，启用cps）。\n- **MaxconnEnable**，Integer类型，必选，是否开启Maxconnection，取值：**0**（禁用maxconn）、**1**（默认，启用maxconn）。\n\n**Slimit**的具体结构描述如下：\n\n- **Cps**，Integer类型，必选，DDoS防护策略/源新建连接限速，取值范围：100~100,000。\n- **Maxconn**，Integer类型，必选，DDoS防护策略/源并发连接限速，取值范围：1,000~1,000,000。\n- **CpsEnable**，Integer类型，必选，是否开启Cps，取值：**0**（禁用cps）、**1**（默认，启用cps）。\n- **MaxconnEnable**，Integer类型，必选，是否开启Maxconnection，取值：**0**（禁用maxconn）、**1**（默认，启用maxconn）。\n- **CpsMode**，Integer类型，必选，源新建连接限速开关，取值：**1**（关闭）、**2**（自动）。\n\n**PayloadLen**的具体结构描述如下：\n\n- **Min**，Integer类型，必选，DDoS防护策略/包长度过滤，包长度的最小值，取值范围为0~6,000。\n- **Max**，Integer类型，必选，DDoS防护策略/包长度过滤，包长度的最大值，取值范围为0~6,000。"
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ddoscoo-cn-XXXXX",
+      "description_cn": "要操作的实例ID。"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,40 @@
+{
+  "name": "HeadObject",
+  "protocol": "HTTP|HTTPS",
+  "method": "HEAD",
+  "path": "/[ObjectName]",
+  "timeout": null,
+  "reqFormat": {
+    "BucketName": {
+      "name": "BucketName",
+      "position": "domain",
+      "required": true
+    },
+    "ObjectName": {
+      "name": "ObjectName",
+      "position": "path",
+      "required": true
+    },
+    "If-Modified-Since": {
+      "name": "If-Modified-Since",
+      "position": "header",
+      "required": false
+    },
+    "If-Unmodified-Since": {
+      "name": "If-Unmodified-Since",
+      "position": "header",
+      "required": false
+    },
+    "If-Match": {
+      "name": "If-Match",
+      "position": "header",
+      "required": false
+    },
+    "If-None-Match": {
+      "name": "If-None-Match",
+      "position": "header",
+      "required": false
+    }
+  },
+  "res": {}
+}

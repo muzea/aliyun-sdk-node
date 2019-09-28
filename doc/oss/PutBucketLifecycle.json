@@ -1,0 +1,21 @@
+{
+  "name": "PutBucketLifecycle",
+  "protocol": "HTTP|HTTPS",
+  "method": "PUT",
+  "path": "/",
+  "timeout": null,
+  "reqFormat": {
+    "BucketName": {
+      "name": "BucketName",
+      "position": "domain",
+      "required": true
+    },
+    "lifecycle": {
+      "name": "lifecycle",
+      "position": "query",
+      "required": true,
+      "default": ""
+    }
+  },
+  "res": {}
+}

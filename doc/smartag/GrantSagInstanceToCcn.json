@@ -1,0 +1,69 @@
+{
+  "name": "GrantSagInstanceToCcn",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用GrantSagInstanceToCcn跨账号授权智能接入网关实例可以加入云连接网CCN。",
+  "abc_id": 137811,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "智能接入网关实例所属的实例ID。"
+    },
+    "SmartAGId": {
+      "name": "SmartAGId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "sag-hdh************",
+      "description_cn": "智能接入网关实例ID。"
+    },
+    "CcnInstanceId": {
+      "name": "CcnInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "ccn-jdh**********",
+      "description_cn": "云连接网实例ID。"
+    },
+    "CcnUid": {
+      "name": "CcnUid",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "123535455445666",
+      "description_cn": "云连接网实例所属的用户ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "InstanceId": "sgc-e8lgeu4w********",
+    "RequestId": "5F40561D-1EB7-48CB-AA5B-79713E003356"
+  }
+}

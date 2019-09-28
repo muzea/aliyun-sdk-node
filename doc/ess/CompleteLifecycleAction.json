@@ -1,0 +1,60 @@
+{
+  "name": "CompleteLifecycleAction",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CompleteLifecycleAction提前结束伸缩活动的等待状态。 ",
+  "abc_id": 73847,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "LifecycleHookId": {
+      "name": "LifecycleHookId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ash-****",
+      "description_cn": "生命周期挂钩的ID。"
+    },
+    "LifecycleActionToken": {
+      "name": "LifecycleActionToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "aaaa-bbbbb-cccc-ddddd",
+      "description_cn": "伸缩活动的等待状态标识符，您可以从生命周期挂钩指定的消息服务队列或主题中获取该值。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456123456",
+      "description_cn": ""
+    },
+    "LifecycleActionResult": {
+      "name": "LifecycleActionResult",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "CONTINUE",
+      "description_cn": "等待状态结束后的下一步动作，取值范围： \n\n- CONTINUE：继续响应弹性扩张活动或者继续响应弹性收缩活动。 \n- ABANDON：直接释放弹性扩张活动创建出来的ECS实例或者直接将弹性收缩活动中的ECS实例从伸缩组移除。 \n\n默认值：CONTINUE。\n\n当伸缩组发生弹性收缩活动（SCALE_IN）并触发多个生命周期挂钩时，DefaultResult为ABANDON的生命周期挂钩触发的等待状态结束时，会提前将其它对应的等待状态提前结束。其他情况下，下一步动作均以最后一个结束等待状态的下一步动作为准。  "
+    }
+  },
+  "res": {
+    "RequestId": "473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E"
+  }
+}

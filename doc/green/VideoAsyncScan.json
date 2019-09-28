@@ -1,0 +1,26 @@
+{
+  "name": "VideoAsyncScan",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/green/video/asyncscan",
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ClientInfo": {
+      "name": "ClientInfo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

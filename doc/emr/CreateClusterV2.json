@@ -1,0 +1,622 @@
+{
+  "name": "CreateClusterV2",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateClusterV2接口，创建一个E-MapReduce集群。",
+  "abc_id": 28142,
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。目前支持华东 1、华东 2、华南 1、华北 2、华北 3、美西、新加坡、德国。"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "bi_hadoop",
+      "description_cn": "集群的名字。长度限制为 1-64 个字符，只允许包含中文、字母、数字、-、_。"
+    },
+    "ZoneId": {
+      "name": "ZoneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou-b",
+      "description_cn": "可用区ID。\n\n- 华东 1（杭州）支持：cn-hangzhou-b。\n-  华北 2（北京）支持：cn-beijing-a、cn-beijing-b,cn-beijing-c。"
+    },
+    "EmrVer": {
+      "name": "EmrVer",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "EMR-3.15.0",
+      "description_cn": "EMR版本。"
+    },
+    "ClusterType": {
+      "name": "ClusterType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "HADOOP",
+      "description_cn": "集群类型。"
+    },
+    "HostGroup": {
+      "name": "HostGroup",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "ClusterId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "HostGroupId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "HostGroupName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "HostGroupType",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Comment",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "CreateType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ChargeType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Period",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "NodeCount",
+          "type": "Integer",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "InstanceType",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "DiskType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "DiskCapacity",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "DiskCount",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "SysDiskType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "SysDiskCapacity",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "AutoRenew",
+          "type": "Boolean",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "VSwitchId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "GpuDriver",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "LogPath": {
+      "name": "LogPath",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "oss//bucketname/path",
+      "description_cn": "OSS日志路径。"
+    },
+    "SecurityGroupId": {
+      "name": "SecurityGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sg-bp1id7ajv83kmqwq****",
+      "description_cn": "安全组 ID。可以在ECS中创建一个然后使用。需要确认的是，如果使用已有的安全组，会被增加上默认安全组策略：入只开放22端口，出开放所有端口。"
+    },
+    "IsOpenPublicIp": {
+      "name": "IsOpenPublicIp",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否开启公网IP。如果开启，默认会带有8MB的带宽。"
+    },
+    "SecurityGroupName": {
+      "name": "SecurityGroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "emr-sg",
+      "description_cn": "需要新建的安全组名称。如果不指定安全组ID，那么将使用这个名字创建一个新的安全组。当集群创建完成以后，可以在集群详情中看到创建的安全组ID。这个安全组将会有带有默认的安全组策略：入只开放22端口，出开放所有端口。"
+    },
+    "ChargeType": {
+      "name": "ChargeType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PostPaid",
+      "description_cn": "付费类型：\n\n- PostPaid：按量付费。\n- PrePaid：包年包月。"
+    },
+    "Period": {
+      "name": "Period",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "包年包月时间（包月数有：1、2、3、4、5、6、7、8、9、12、24、36）。ChargeType=PrePaid 时，必填。"
+    },
+    "AutoRenew": {
+      "name": "AutoRenew",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "包年包月集群是否自动续费。"
+    },
+    "AutoPayOrder": {
+      "name": "AutoPayOrder",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否自动付费。"
+    },
+    "VpcId": {
+      "name": "VpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc-bp1l4urd87xlh7i4b****",
+      "description_cn": "VPC ID，NetType=vpc时必填。"
+    },
+    "VSwitchId": {
+      "name": "VSwitchId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vsw-bp10tvjyc77psy0z5****",
+      "description_cn": "交换机ID，NetType=vpc时必填。"
+    },
+    "NetType": {
+      "name": "NetType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc",
+      "description_cn": "网络类型。"
+    },
+    "UserDefinedEmrEcsRole": {
+      "name": "UserDefinedEmrEcsRole",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "AliyunEmrEcsDefaultRole",
+      "description_cn": "用于ECS调用的EMR权限名。"
+    },
+    "OptionSoftWareList": {
+      "name": "OptionSoftWareList",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "HighAvailabilityEnable": {
+      "name": "HighAvailabilityEnable",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否开启高可用集群。如果开启高可用，需要两台Master节点。"
+    },
+    "UseLocalMetaDb": {
+      "name": "UseLocalMetaDb",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否使用本地Hive元数据库。"
+    },
+    "IoOptimized": {
+      "name": "IoOptimized",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否开启I/O优化，默认**true**。"
+    },
+    "SshEnable": {
+      "name": "SshEnable",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否开启SSH。"
+    },
+    "InstanceGeneration": {
+      "name": "InstanceGeneration",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ecs-3",
+      "description_cn": "ECS实例分代。"
+    },
+    "MasterPwd": {
+      "name": "MasterPwd",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "pwd",
+      "description_cn": "Master节点SSH访问密码。需要满足ECS的密码规则：8 - 30 个字符，且同时包含任意三项（大、小写字母、数字和特殊符号）。"
+    },
+    "KeyPairName": {
+      "name": "KeyPairName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test_pair",
+      "description_cn": "密钥对。"
+    },
+    "MetaStoreType": {
+      "name": "MetaStoreType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "local",
+      "description_cn": "可选值：local, unified, user_rds 分别代表集群内部元数据、统一元数据和用户自建RDS作为元数据。"
+    },
+    "MetaStoreConf": {
+      "name": "MetaStoreConf",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{\"dbUrl\":\"jdbc:mysql://rm-xxxxx.mysql.rds.aliyuncs.com:3306/hivemeta3?createDatabaseIfNotExist=true&characterEncoding=UTF-8\",\"dbUserName\":\"user\",\"dbPassword\":\"password\"}",
+      "description_cn": "一个JSON字段，包含dbUrl, dbUserName, dbPassword分别代表RDS的连接串、用户名和密码。dbUrl 中要带上库名"
+    },
+    "UserInfo": {
+      "name": "UserInfo",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "UserName",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "UserId",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Password",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        }
+      ]
+    },
+    "HostComponentInfo": {
+      "name": "HostComponentInfo",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "HostName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ServiceName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ComponentNameList",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        }
+      ]
+    },
+    "DepositType": {
+      "name": "DepositType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "HALF_MANAGED",
+      "description_cn": "托管类型。"
+    },
+    "MachineType": {
+      "name": "MachineType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ECS",
+      "description_cn": "机器类型。"
+    },
+    "BootstrapAction": {
+      "name": "BootstrapAction",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Name",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Path",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Arg",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "UseCustomHiveMetaDB": {
+      "name": "UseCustomHiveMetaDB",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "保留字段，无需填写。"
+    },
+    "InitCustomHiveMetaDB": {
+      "name": "InitCustomHiveMetaDB",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "保留字段，无需填写。"
+    },
+    "Config": {
+      "name": "Config",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "ServiceName",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "FileName",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "ConfigKey",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "ConfigValue",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Encrypt",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Replace",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "Configurations": {
+      "name": "Configurations",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "无需填写。"
+    },
+    "EasEnable": {
+      "name": "EasEnable",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否高安全集群。"
+    },
+    "RelatedClusterId": {
+      "name": "RelatedClusterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "C-D7958B72E59B****",
+      "description_cn": "当前集群是gateway时，其关联的主集群ID。"
+    },
+    "WhiteListType": {
+      "name": "WhiteListType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "\"\"",
+      "description_cn": "暂时无需填写。"
+    },
+    "AuthorizeContent": {
+      "name": "AuthorizeContent",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "暂时无需填写。"
+    }
+  },
+  "res": {
+    "ClusterId": "C-4DE6DA872B0E0D58",
+    "RequestId": "F4DE89FB-7054-475C-B7E2-B9A38152DA7E"
+  }
+}

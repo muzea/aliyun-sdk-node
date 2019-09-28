@@ -1,0 +1,56 @@
+{
+  "name": "DescribeSecurityIps",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeSecurityIps接口查询MongoDB实例的IP白名单。",
+  "abc_id": 62156,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。"
+    }
+  },
+  "res": {
+    "SecurityIpGroups": {
+      "SecurityIpGroup": [
+        {
+          "SecurityIpList": "114.xxx.xxx.xx",
+          "SecurityIpGroupAttribute": "",
+          "SecurityIpGroupName": "allowserver"
+        },
+        {
+          "SecurityIpList": "47.xxx.xxx.xx,100.xxx.xxx.0/24",
+          "SecurityIpGroupAttribute": "",
+          "SecurityIpGroupName": "default"
+        }
+      ]
+    },
+    "SecurityIps": "47.xxx.xxx.xx,100.xxx.xxx.0/24",
+    "RequestId": "FC724D23-2962-479E-ABB1-606C935AE7FD"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "name": "CreateProject",
+  "protocol": "HTTPS",
+  "method": "POST",
+  "path": "/api/v2/projects",
+  "summary_cn": "创建project",
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Header",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou"
+    },
+    "orderId": {
+      "name": "orderId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "stream-xxxxxx",
+      "description_cn": "仅共享模式用户需要填写，需要填写共享模式实例ID"
+    },
+    "deployType": {
+      "name": "deployType",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "public",
+      "description_cn": "集群类型：独享集群 cell；共享集群 public"
+    },
+    "clusterId": {
+      "name": "clusterId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "cmy99ugusuco66x9qc6knqms",
+      "description_cn": "集群ID"
+    },
+    "managerIds": {
+      "name": "managerIds",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "xxxxx",
+      "description_cn": "主账号id"
+    },
+    "description": {
+      "name": "description",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "xxxxxx",
+      "description_cn": "项目描述"
+    },
+    "name": {
+      "name": "name",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "xxxxxx",
+      "description_cn": "项目名称"
+    }
+  },
+  "res": {}
+}

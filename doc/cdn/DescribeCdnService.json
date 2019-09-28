@@ -1,0 +1,35 @@
+{
+  "name": "DescribeCdnService",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCdnService查询CDN服务状态。包括：当前计费类型，服务开通时间，下次生效的计费类型，当前业务状态等。",
+  "abc_id": 91168,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "ChangingAffectTime": "2014-11-27T16:00:00Z",
+    "ChangingChargeType": "PayByBandwidth",
+    "InternetChargeType": "PayByTraffic",
+    "OpeningTime": "2014-02-28T13:11:49Z",
+    "OperationLocks": {
+      "LockReason": []
+    },
+    "RequestId": "BFFCDFAD-DACC-484E-9BE6-0AF3B3A0DD23"
+  }
+}

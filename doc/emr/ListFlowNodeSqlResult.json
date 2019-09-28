@@ -1,0 +1,106 @@
+{
+  "name": "ListFlowNodeSqlResult",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 ListFlowNodeSqlResult 接口，查询节点实例 sql 结果",
+  "abc_id": 101203,
+  "timeout": 8000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "ProjectId": {
+      "name": "ProjectId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "FP-7A1018ADE917****",
+      "description_cn": "项目ID。"
+    },
+    "NodeInstanceId": {
+      "name": "NodeInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "FE4BD156E939****",
+      "description_cn": "节点实例ID。"
+    },
+    "SqlIndex": {
+      "name": "SqlIndex",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "第几个SQL结果。"
+    },
+    "Offset": {
+      "name": "Offset",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "偏移。"
+    },
+    "Length": {
+      "name": "Length",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "100",
+      "description_cn": "长度。"
+    }
+  },
+  "res": {
+    "RowList": {
+      "Row": [
+        {
+          "RowItemList": {
+            "rowItem": [
+              "1",
+              "1",
+              "1"
+            ]
+          },
+          "RowIndex": 0
+        },
+        {
+          "RowItemList": {
+            "rowItem": [
+              "1",
+              "1",
+              "1"
+            ]
+          },
+          "RowIndex": 1
+        }
+      ]
+    },
+    "RequestId": "90F14544-832D-4D81-8F8C-8F8547AE5B9D",
+    "HeaderList": {
+      "Header": [
+        "rankings.pageurl",
+        "rankings.pagerank",
+        "rankings.avgduration"
+      ]
+    },
+    "End": true
+  }
+}

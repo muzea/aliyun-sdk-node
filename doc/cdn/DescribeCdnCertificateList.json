@@ -1,0 +1,62 @@
+{
+  "name": "DescribeCdnCertificateList",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCdnCertificateList获取证书列表信息。",
+  "abc_id": 91181,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "域名。仅支持单个域名查询。"
+    }
+  },
+  "res": {
+    "CertificateListModel": {
+      "Count": 2,
+      "CertList": {
+        "Cert": [
+          {
+            "CertName": "证书1",
+            "Issuer": "xxx",
+            "LastTime": 1512388610,
+            "CertId": 1,
+            "Common": "test",
+            "Fingerprint": "xxx"
+          },
+          {
+            "CertName": "证书2",
+            "Issuer": "xxx",
+            "LastTime": 1512388659,
+            "CertId": 2,
+            "Common": "test",
+            "Fingerprint": "xxx"
+          }
+        ]
+      }
+    },
+    "RequestId": "FC0E34AC-0239-44A7-AB0E-800DE522C8DA"
+  }
+}

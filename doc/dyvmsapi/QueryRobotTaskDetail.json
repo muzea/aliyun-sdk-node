@@ -1,0 +1,66 @@
+{
+  "name": "QueryRobotTaskDetail",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用QueryRobotTaskDetail获取智能语音任务详情。",
+  "abc_id": 124878,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "主账号的ID，即UID。"
+    },
+    "Id": {
+      "name": "Id",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1045001",
+      "description_cn": "机器人呼叫任务的唯一任务ID。"
+    }
+  },
+  "res": {
+    "Message": "OK",
+    "RequestId": "D9CB3933-9FE3-4870-BA8E-2BEE91B69D23",
+    "Code": "OK",
+    "Data": {
+      "id": 1045001,
+      "taskName": "智能语音务",
+      "robotId": 1000000075003,
+      "robotName": "机器人",
+      "corpName": "广东合富房地产置业有限公司1,广东合富房地产置业有限公司2 ",
+      "caller": "057156860008,057156860006",
+      "numberStatusIdent": true,
+      "status": "INIT",
+      "scheduleType": "SINGLE",
+      "retryType": 1,
+      "recallStateCodes": "200010,200011",
+      "recallTimes": 2,
+      "recallInterval": 5,
+      "createTime": "2019-06-14 11:04:19",
+      "fireTime": "2019-06-14 11:05:23",
+      "completeTime": "2019-06-14 18:21:06",
+      "called": [
+        {
+          "fileName": "5102636f-7be6-4a2d-9ac7-755a2e140a50--robotCallApi",
+          "ossFilePath": "http://alicom-fc-media.cn-hangzhou.oss.aliyun-inc.com/5102636f-7be6-4a2d-9ac7-755a2e140a50--robotCallApi.xlsx"
+        }
+      ]
+    }
+  }
+}

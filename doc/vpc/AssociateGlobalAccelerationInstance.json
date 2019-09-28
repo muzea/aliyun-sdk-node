@@ -1,0 +1,72 @@
+{
+  "name": "AssociateGlobalAccelerationInstance",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AssociateGlobalAccelerationInstance接口为独享型实例绑定后端服务器。",
+  "abc_id": 56826,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "全球加速实例所在的地域。 您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "GlobalAccelerationInstanceId": {
+      "name": "GlobalAccelerationInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ga-lsajj32****",
+      "description_cn": "全球加速实例的ID。 "
+    },
+    "BackendServerId": {
+      "name": "BackendServerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "i-saf23****",
+      "description_cn": "后端服务实例的ID。 "
+    },
+    "BackendServerRegionId": {
+      "name": "BackendServerRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "后端服务实例所属的地域，该地域需要属于全球加速实例指定的服务区域。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "BackendServerType": {
+      "name": "BackendServerType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "EcsInstance",
+      "description_cn": "后端服务实例的类型，取值： \n\n- **EcsInstance**（默认值）：ECS实例。 \n\n- **SlbInstance**：负载均衡实例。      "
+    }
+  },
+  "res": {
+    "RequestId": "DDF2CC38-76C7-4000-909D-B2088158AEDA"
+  }
+}

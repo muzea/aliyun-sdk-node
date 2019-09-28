@@ -1,0 +1,1109 @@
+{
+  "name": "ListClusterService",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 ListClusterService 接口查询集群的服务列表信息。",
+  "abc_id": 100673,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "区域ID。"
+    },
+    "ClusterId": {
+      "name": "ClusterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "C-F32FB31D82954C64",
+      "description_cn": "集群ID。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "分页查询的查询页码。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "100",
+      "description_cn": "分页查询的每页记录数。"
+    }
+  },
+  "res": {
+    "RequestId": "3F11150E-0F33-41DC-AE2B-C3675C9743BA",
+    "ClusterServiceList": {
+      "ClusterService": [
+        {
+          "ClientType": false,
+          "ServiceActionList": {
+            "ServiceAction": [
+              {
+                "ActionName": "CONFIGURE",
+                "ServiceName": "HDFS",
+                "DisplayName": "CONFIGURE All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "START",
+                "ServiceName": "HDFS",
+                "DisplayName": "START All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "STOP",
+                "ServiceName": "HDFS",
+                "DisplayName": "STOP All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "HDFS",
+                "DisplayName": "RESTART All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "HDFS",
+                "DisplayName": "RESTART DataNode",
+                "ComponentName": "DataNode"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "HDFS",
+                "DisplayName": "RESTART HttpFS",
+                "ComponentName": "HttpFS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "HDFS",
+                "DisplayName": "RESTART KMS",
+                "ComponentName": "KMS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "HDFS",
+                "DisplayName": "RESTART NameNode",
+                "ComponentName": "NameNode"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "HDFS",
+                "DisplayName": "RESTART SecondaryNameNode",
+                "ComponentName": "SecondaryNameNode"
+              },
+              {
+                "ActionName": "CUSTOM_COMMAND",
+                "Command": "rebalance",
+                "ServiceName": "HDFS",
+                "DisplayName": "REBALANCE HDFS",
+                "ComponentName": "NameNode"
+              },
+              {
+                "ActionName": "CUSTOM_COMMAND",
+                "Command": "stop_rebalance",
+                "ServiceName": "HDFS",
+                "DisplayName": "STOP_REBALANCE HDFS",
+                "ComponentName": "NameNode"
+              }
+            ]
+          },
+          "HealthStatus": "",
+          "NotStartInfo": "Have 0 component(s) not started.",
+          "ServiceDisplayName": "HDFS",
+          "StoppedNum": 2,
+          "ServiceName": "HDFS",
+          "ServiceStatus": "INSTALLED",
+          "AbnormalNum": 0,
+          "ServiceVersion": "2.7.2",
+          "NeedRestartInfo": "",
+          "InstallStatus": true,
+          "NeedRestartNum": 0
+        },
+        {
+          "ClientType": false,
+          "ServiceActionList": {
+            "ServiceAction": [
+              {
+                "ActionName": "CONFIGURE",
+                "ServiceName": "YARN",
+                "DisplayName": "CONFIGURE All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "START",
+                "ServiceName": "YARN",
+                "DisplayName": "START All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "STOP",
+                "ServiceName": "YARN",
+                "DisplayName": "STOP All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "YARN",
+                "DisplayName": "RESTART All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "YARN",
+                "DisplayName": "RESTART JobHistory",
+                "ComponentName": "JobHistory"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "YARN",
+                "DisplayName": "RESTART NodeManager",
+                "ComponentName": "NodeManager"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "YARN",
+                "DisplayName": "RESTART ResourceManager",
+                "ComponentName": "ResourceManager"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "YARN",
+                "DisplayName": "RESTART App Timeline Server",
+                "ComponentName": "TimeLineServer"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "YARN",
+                "DisplayName": "RESTART WebAppProxyServer",
+                "ComponentName": "WebAppProxyServer"
+              },
+              {
+                "ActionName": "CUSTOM_COMMAND",
+                "Command": "refreshQueues",
+                "ServiceName": "YARN",
+                "DisplayName": "Refresh Queues",
+                "ComponentName": "ResourceManager"
+              },
+              {
+                "ActionName": "CUSTOM_COMMAND",
+                "Command": "enableCGroups",
+                "ServiceName": "YARN",
+                "DisplayName": "Enable CGroups",
+                "ComponentName": "NodeManager"
+              },
+              {
+                "ActionName": "CUSTOM_COMMAND",
+                "Command": "disableCGroups",
+                "ServiceName": "YARN",
+                "DisplayName": "Disable CGroups",
+                "ComponentName": "NodeManager"
+              }
+            ]
+          },
+          "HealthStatus": "",
+          "NotStartInfo": "",
+          "ServiceDisplayName": "YARN",
+          "StoppedNum": 0,
+          "ServiceName": "YARN",
+          "AbnormalNum": 0,
+          "ServiceStatus": "INSTALLED",
+          "ServiceVersion": "2.7.2",
+          "NeedRestartInfo": "",
+          "InstallStatus": true,
+          "NeedRestartNum": 0
+        },
+        {
+          "ClientType": false,
+          "ServiceActionList": {
+            "ServiceAction": [
+              {
+                "ActionName": "CONFIGURE",
+                "ServiceName": "HIVE",
+                "DisplayName": "CONFIGURE All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "START",
+                "ServiceName": "HIVE",
+                "DisplayName": "START All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "STOP",
+                "ServiceName": "HIVE",
+                "DisplayName": "STOP All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "HIVE",
+                "DisplayName": "RESTART All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "HIVE",
+                "DisplayName": "RESTART Hive MetaStore",
+                "ComponentName": "HiveMetaStore"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "HIVE",
+                "DisplayName": "RESTART HiveServer2",
+                "ComponentName": "HiveServer"
+              }
+            ]
+          },
+          "HealthStatus": "",
+          "NotStartInfo": "",
+          "ServiceDisplayName": "Hive",
+          "StoppedNum": 0,
+          "ServiceName": "HIVE",
+          "AbnormalNum": 0,
+          "ServiceStatus": "INSTALLED",
+          "ServiceVersion": "2.3.3",
+          "NeedRestartInfo": "",
+          "InstallStatus": true,
+          "NeedRestartNum": 0
+        },
+        {
+          "ClientType": false,
+          "ServiceActionList": {
+            "ServiceAction": [
+              {
+                "ActionName": "CONFIGURE",
+                "ServiceName": "GANGLIA",
+                "DisplayName": "CONFIGURE All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "START",
+                "ServiceName": "GANGLIA",
+                "DisplayName": "START All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "STOP",
+                "ServiceName": "GANGLIA",
+                "DisplayName": "STOP All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "GANGLIA",
+                "DisplayName": "RESTART All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "GANGLIA",
+                "DisplayName": "RESTART Gmetad",
+                "ComponentName": "GMETAD"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "GANGLIA",
+                "DisplayName": "RESTART Gmond",
+                "ComponentName": "GMOND"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "GANGLIA",
+                "DisplayName": "RESTART Httpd",
+                "ComponentName": "HTTPD"
+              }
+            ]
+          },
+          "HealthStatus": "",
+          "NotStartInfo": "",
+          "ServiceDisplayName": "Ganglia",
+          "StoppedNum": 0,
+          "ServiceName": "GANGLIA",
+          "AbnormalNum": 0,
+          "ServiceStatus": "INSTALLED",
+          "ServiceVersion": "3.7.2",
+          "NeedRestartInfo": "",
+          "InstallStatus": true,
+          "NeedRestartNum": 0
+        },
+        {
+          "ServiceActionList": {
+            "ServiceAction": []
+          },
+          "ServiceName": "ZOOKEEPER",
+          "ServiceStatus": "",
+          "HealthStatus": "",
+          "ServiceVersion": "3.4.13",
+          "NeedRestartInfo": "",
+          "InstallStatus": false,
+          "NotStartInfo": "",
+          "ServiceDisplayName": "ZooKeeper"
+        },
+        {
+          "ClientType": false,
+          "ServiceActionList": {
+            "ServiceAction": [
+              {
+                "ActionName": "CONFIGURE",
+                "ServiceName": "SPARK",
+                "DisplayName": "CONFIGURE All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "START",
+                "ServiceName": "SPARK",
+                "DisplayName": "START All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "STOP",
+                "ServiceName": "SPARK",
+                "DisplayName": "STOP All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "SPARK",
+                "DisplayName": "RESTART All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "SPARK",
+                "DisplayName": "RESTART SparkHistory",
+                "ComponentName": "SparkHistory"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "SPARK",
+                "DisplayName": "RESTART ThriftServer",
+                "ComponentName": "SparkThriftServer"
+              }
+            ]
+          },
+          "HealthStatus": "",
+          "NotStartInfo": "",
+          "ServiceDisplayName": "Spark",
+          "StoppedNum": 0,
+          "ServiceName": "SPARK",
+          "AbnormalNum": 0,
+          "ServiceStatus": "INSTALLED",
+          "ServiceVersion": "2.3.2",
+          "NeedRestartInfo": "",
+          "InstallStatus": true,
+          "NeedRestartNum": 0
+        },
+        {
+          "ServiceActionList": {
+            "ServiceAction": []
+          },
+          "ServiceName": "HBASE",
+          "ServiceStatus": "",
+          "HealthStatus": "",
+          "ServiceVersion": "1.1.1",
+          "NeedRestartInfo": "",
+          "InstallStatus": false,
+          "NotStartInfo": "",
+          "ServiceDisplayName": "HBase"
+        },
+        {
+          "ClientType": false,
+          "ServiceActionList": {
+            "ServiceAction": [
+              {
+                "ActionName": "CONFIGURE",
+                "ServiceName": "HUE",
+                "DisplayName": "CONFIGURE All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "START",
+                "ServiceName": "HUE",
+                "DisplayName": "START All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "STOP",
+                "ServiceName": "HUE",
+                "DisplayName": "STOP All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "HUE",
+                "DisplayName": "RESTART All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "HUE",
+                "DisplayName": "RESTART Hue",
+                "ComponentName": "Hue"
+              }
+            ]
+          },
+          "HealthStatus": "",
+          "NotStartInfo": "",
+          "ServiceDisplayName": "Hue",
+          "StoppedNum": 0,
+          "ServiceName": "HUE",
+          "AbnormalNum": 0,
+          "ServiceStatus": "INSTALLED",
+          "ServiceVersion": "4.1.0",
+          "NeedRestartInfo": "",
+          "InstallStatus": true,
+          "NeedRestartNum": 0
+        },
+        {
+          "ServiceActionList": {
+            "ServiceAction": []
+          },
+          "ServiceName": "ZEPPELIN",
+          "ServiceStatus": "",
+          "HealthStatus": "",
+          "ServiceVersion": "0.8.0",
+          "NeedRestartInfo": "",
+          "InstallStatus": false,
+          "NotStartInfo": "",
+          "ServiceDisplayName": "Zeppelin"
+        },
+        {
+          "ServiceActionList": {
+            "ServiceAction": []
+          },
+          "ServiceName": "OOZIE",
+          "ServiceStatus": "",
+          "HealthStatus": "",
+          "ServiceVersion": "4.2.0",
+          "NeedRestartInfo": "",
+          "InstallStatus": false,
+          "NotStartInfo": "",
+          "ServiceDisplayName": "Oozie"
+        },
+        {
+          "ClientType": false,
+          "ServiceActionList": {
+            "ServiceAction": [
+              {
+                "ActionName": "CONFIGURE",
+                "ServiceName": "TEZ",
+                "DisplayName": "CONFIGURE All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "START",
+                "ServiceName": "TEZ",
+                "DisplayName": "START All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "STOP",
+                "ServiceName": "TEZ",
+                "DisplayName": "STOP All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "TEZ",
+                "DisplayName": "RESTART All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "TEZ",
+                "DisplayName": "RESTART Tez Client",
+                "ComponentName": "TezInit"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "TEZ",
+                "DisplayName": "RESTART Tomcat",
+                "ComponentName": "Tomcat"
+              }
+            ]
+          },
+          "HealthStatus": "",
+          "NotStartInfo": "",
+          "ServiceDisplayName": "Tez",
+          "StoppedNum": 0,
+          "ServiceName": "TEZ",
+          "AbnormalNum": 0,
+          "ServiceStatus": "INSTALLED",
+          "ServiceVersion": "0.9.1",
+          "NeedRestartInfo": "",
+          "InstallStatus": true,
+          "NeedRestartNum": 0
+        },
+        {
+          "ServiceActionList": {
+            "ServiceAction": []
+          },
+          "ServiceName": "PHOENIX",
+          "ServiceStatus": "",
+          "HealthStatus": "",
+          "ServiceVersion": "4.10.0",
+          "NeedRestartInfo": "",
+          "InstallStatus": false,
+          "NotStartInfo": "",
+          "ServiceDisplayName": "Phoenix"
+        },
+        {
+          "ClientType": false,
+          "ServiceActionList": {
+            "ServiceAction": [
+              {
+                "ActionName": "CONFIGURE",
+                "ServiceName": "PRESTO",
+                "DisplayName": "CONFIGURE All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "START",
+                "ServiceName": "PRESTO",
+                "DisplayName": "START All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "STOP",
+                "ServiceName": "PRESTO",
+                "DisplayName": "STOP All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "PRESTO",
+                "DisplayName": "RESTART All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "PRESTO",
+                "DisplayName": "RESTART PrestoMaster",
+                "ComponentName": "PrestoMaster"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "PRESTO",
+                "DisplayName": "RESTART PrestoWorker",
+                "ComponentName": "PrestoWorker"
+              }
+            ]
+          },
+          "HealthStatus": "",
+          "NotStartInfo": "",
+          "ServiceDisplayName": "Presto",
+          "StoppedNum": 0,
+          "ServiceName": "PRESTO",
+          "AbnormalNum": 0,
+          "ServiceStatus": "INSTALLED",
+          "ServiceVersion": "0.208",
+          "NeedRestartInfo": "",
+          "InstallStatus": true,
+          "NeedRestartNum": 0
+        },
+        {
+          "ClientType": false,
+          "ServiceActionList": {
+            "ServiceAction": [
+              {
+                "ActionName": "CONFIGURE",
+                "ServiceName": "SQOOP",
+                "DisplayName": "CONFIGURE All Components",
+                "ComponentName": "ALL COMPONENTS"
+              }
+            ]
+          },
+          "HealthStatus": "",
+          "NotStartInfo": "",
+          "ServiceDisplayName": "Sqoop",
+          "StoppedNum": 0,
+          "ServiceName": "SQOOP",
+          "AbnormalNum": 0,
+          "ServiceStatus": "INSTALLED",
+          "ServiceVersion": "1.4.7",
+          "NeedRestartInfo": "",
+          "InstallStatus": true,
+          "NeedRestartNum": 0
+        },
+        {
+          "ClientType": false,
+          "ServiceActionList": {
+            "ServiceAction": [
+              {
+                "ActionName": "CONFIGURE",
+                "ServiceName": "PIG",
+                "DisplayName": "CONFIGURE All Components",
+                "ComponentName": "ALL COMPONENTS"
+              }
+            ]
+          },
+          "HealthStatus": "",
+          "NotStartInfo": "",
+          "ServiceDisplayName": "Pig",
+          "StoppedNum": 0,
+          "ServiceName": "PIG",
+          "AbnormalNum": 0,
+          "ServiceStatus": "INSTALLED",
+          "ServiceVersion": "0.14.0",
+          "NeedRestartInfo": "",
+          "InstallStatus": true,
+          "NeedRestartNum": 0
+        },
+        {
+          "ServiceActionList": {
+            "ServiceAction": []
+          },
+          "ServiceName": "STORM",
+          "ServiceStatus": "",
+          "HealthStatus": "",
+          "ServiceVersion": "1.1.2",
+          "NeedRestartInfo": "",
+          "InstallStatus": false,
+          "NotStartInfo": "",
+          "ServiceDisplayName": "Storm"
+        },
+        {
+          "ServiceActionList": {
+            "ServiceAction": []
+          },
+          "ServiceName": "IMPALA",
+          "ServiceStatus": "",
+          "HealthStatus": "",
+          "ServiceVersion": "2.10.0",
+          "NeedRestartInfo": "",
+          "InstallStatus": false,
+          "NotStartInfo": "",
+          "ServiceDisplayName": "Impala"
+        },
+        {
+          "ClientType": false,
+          "ServiceActionList": {
+            "ServiceAction": [
+              {
+                "ActionName": "CONFIGURE",
+                "ServiceName": "HAPROXY",
+                "DisplayName": "CONFIGURE All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "START",
+                "ServiceName": "HAPROXY",
+                "DisplayName": "START All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "STOP",
+                "ServiceName": "HAPROXY",
+                "DisplayName": "STOP All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "HAPROXY",
+                "DisplayName": "RESTART All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "HAPROXY",
+                "DisplayName": "RESTART HAProxy",
+                "ComponentName": "HAProxy"
+              }
+            ]
+          },
+          "HealthStatus": "",
+          "NotStartInfo": "",
+          "ServiceDisplayName": "HAProxy",
+          "StoppedNum": 0,
+          "ServiceName": "HAPROXY",
+          "AbnormalNum": 0,
+          "ServiceStatus": "INSTALLED",
+          "ServiceVersion": "1.5.18",
+          "NeedRestartInfo": "",
+          "InstallStatus": true,
+          "NeedRestartNum": 0
+        },
+        {
+          "ServiceActionList": {
+            "ServiceAction": []
+          },
+          "ServiceName": "KAFKA",
+          "ServiceStatus": "",
+          "HealthStatus": "",
+          "ServiceVersion": "2.11-1.1.0-1.0.0",
+          "NeedRestartInfo": "",
+          "InstallStatus": false,
+          "NotStartInfo": "",
+          "ServiceDisplayName": "Kafka"
+        },
+        {
+          "ServiceActionList": {
+            "ServiceAction": []
+          },
+          "ServiceName": "KAFKA-MANAGER",
+          "ServiceStatus": "",
+          "HealthStatus": "",
+          "ServiceVersion": "1.3.3.16-1.1.0",
+          "NeedRestartInfo": "",
+          "InstallStatus": false,
+          "NotStartInfo": "",
+          "ServiceDisplayName": "Kafka-Manager"
+        },
+        {
+          "ServiceActionList": {
+            "ServiceAction": []
+          },
+          "ServiceName": "TENSORFLOW",
+          "ServiceStatus": "",
+          "HealthStatus": "",
+          "ServiceVersion": "1.8.0",
+          "NeedRestartInfo": "",
+          "InstallStatus": false,
+          "NotStartInfo": "",
+          "ServiceDisplayName": "TensorFlow"
+        },
+        {
+          "ServiceActionList": {
+            "ServiceAction": []
+          },
+          "ServiceName": "TENSORFLOW-ON-YARN",
+          "ServiceStatus": "",
+          "HealthStatus": "",
+          "ServiceVersion": "1.0.0",
+          "NeedRestartInfo": "",
+          "InstallStatus": false,
+          "NotStartInfo": "",
+          "ServiceDisplayName": "TensorFlow-On-YARN"
+        },
+        {
+          "ServiceActionList": {
+            "ServiceAction": []
+          },
+          "ServiceName": "HAS",
+          "ServiceStatus": "",
+          "HealthStatus": "",
+          "ServiceVersion": "1.1.1",
+          "NeedRestartInfo": "",
+          "InstallStatus": false,
+          "NotStartInfo": "",
+          "ServiceDisplayName": "HAS"
+        },
+        {
+          "ClientType": false,
+          "ServiceActionList": {
+            "ServiceAction": [
+              {
+                "ActionName": "CONFIGURE",
+                "ServiceName": "APACHEDS",
+                "DisplayName": "CONFIGURE All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "START",
+                "ServiceName": "APACHEDS",
+                "DisplayName": "START All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "STOP",
+                "ServiceName": "APACHEDS",
+                "DisplayName": "STOP All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "APACHEDS",
+                "DisplayName": "RESTART All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "APACHEDS",
+                "DisplayName": "RESTART ApacheDS",
+                "ComponentName": "ApacheDS"
+              }
+            ]
+          },
+          "HealthStatus": "",
+          "NotStartInfo": "",
+          "ServiceDisplayName": "ApacheDS",
+          "StoppedNum": 0,
+          "ServiceName": "APACHEDS",
+          "AbnormalNum": 0,
+          "ServiceStatus": "INSTALLED",
+          "ServiceVersion": "2.0.0",
+          "NeedRestartInfo": "",
+          "InstallStatus": true,
+          "NeedRestartNum": 0
+        },
+        {
+          "ClientType": false,
+          "ServiceActionList": {
+            "ServiceAction": [
+              {
+                "ActionName": "CONFIGURE",
+                "ServiceName": "KNOX",
+                "DisplayName": "CONFIGURE All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "START",
+                "ServiceName": "KNOX",
+                "DisplayName": "START All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "STOP",
+                "ServiceName": "KNOX",
+                "DisplayName": "STOP All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "KNOX",
+                "DisplayName": "RESTART All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "KNOX",
+                "DisplayName": "RESTART Knox",
+                "ComponentName": "KNOX"
+              }
+            ]
+          },
+          "HealthStatus": "",
+          "NotStartInfo": "",
+          "ServiceDisplayName": "Knox",
+          "StoppedNum": 0,
+          "ServiceName": "KNOX",
+          "AbnormalNum": 0,
+          "ServiceStatus": "INSTALLED",
+          "ServiceVersion": "0.13.0",
+          "NeedRestartInfo": "",
+          "InstallStatus": true,
+          "NeedRestartNum": 0
+        },
+        {
+          "ServiceActionList": {
+            "ServiceAction": []
+          },
+          "ServiceName": "FLINK",
+          "ServiceStatus": "",
+          "HealthStatus": "",
+          "ServiceVersion": "1.4.0",
+          "NeedRestartInfo": "",
+          "InstallStatus": false,
+          "NotStartInfo": "",
+          "ServiceDisplayName": "Flink"
+        },
+        {
+          "ServiceActionList": {
+            "ServiceAction": []
+          },
+          "ServiceName": "RANGER",
+          "ServiceStatus": "",
+          "HealthStatus": "",
+          "ServiceVersion": "1.0.0",
+          "NeedRestartInfo": "",
+          "InstallStatus": false,
+          "NotStartInfo": "",
+          "ServiceDisplayName": "RANGER"
+        },
+        {
+          "ServiceActionList": {
+            "ServiceAction": []
+          },
+          "ServiceName": "DRUID",
+          "ServiceStatus": "",
+          "HealthStatus": "",
+          "ServiceVersion": "0.12.3-1.0.0",
+          "NeedRestartInfo": "",
+          "InstallStatus": false,
+          "NotStartInfo": "",
+          "ServiceDisplayName": "Druid"
+        },
+        {
+          "ServiceActionList": {
+            "ServiceAction": []
+          },
+          "ServiceName": "SUPERSET",
+          "ServiceStatus": "",
+          "HealthStatus": "",
+          "ServiceVersion": "0.26.3",
+          "NeedRestartInfo": "",
+          "InstallStatus": false,
+          "NotStartInfo": "",
+          "ServiceDisplayName": "Superset"
+        },
+        {
+          "ServiceActionList": {
+            "ServiceAction": []
+          },
+          "ServiceName": "ANALYTICS-ZOO",
+          "ServiceStatus": "",
+          "HealthStatus": "",
+          "ServiceVersion": "0.2.0",
+          "NeedRestartInfo": "",
+          "InstallStatus": false,
+          "NotStartInfo": "",
+          "ServiceDisplayName": "analytics-zoo"
+        },
+        {
+          "ServiceActionList": {
+            "ServiceAction": []
+          },
+          "ServiceName": "JUPYTER",
+          "ServiceStatus": "",
+          "HealthStatus": "",
+          "ServiceVersion": "4.4.0",
+          "NeedRestartInfo": "",
+          "InstallStatus": false,
+          "NotStartInfo": "",
+          "ServiceDisplayName": "Jupyter"
+        },
+        {
+          "ServiceActionList": {
+            "ServiceAction": []
+          },
+          "ServiceName": "LIVY",
+          "ServiceStatus": "",
+          "HealthStatus": "",
+          "ServiceVersion": "0.5.0",
+          "NeedRestartInfo": "",
+          "InstallStatus": false,
+          "NotStartInfo": "",
+          "ServiceDisplayName": "LIVY"
+        },
+        {
+          "ClientType": false,
+          "ServiceActionList": {
+            "ServiceAction": [
+              {
+                "ActionName": "CONFIGURE",
+                "ServiceName": "ILOGTAIL",
+                "DisplayName": "CONFIGURE All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "START",
+                "ServiceName": "ILOGTAIL",
+                "DisplayName": "START All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "STOP",
+                "ServiceName": "ILOGTAIL",
+                "DisplayName": "STOP All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "ILOGTAIL",
+                "DisplayName": "RESTART All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "ILOGTAIL",
+                "DisplayName": "RESTART ilogtaild",
+                "ComponentName": "Ilogtaild"
+              }
+            ]
+          },
+          "HealthStatus": "",
+          "NotStartInfo": "",
+          "ServiceDisplayName": "ILOGTAIL",
+          "StoppedNum": 0,
+          "ServiceName": "ILOGTAIL",
+          "AbnormalNum": 0,
+          "ServiceStatus": "INSTALLED",
+          "ServiceVersion": "1.0.0",
+          "NeedRestartInfo": "",
+          "InstallStatus": true,
+          "NeedRestartNum": 0
+        },
+        {
+          "ClientType": false,
+          "ServiceActionList": {
+            "ServiceAction": [
+              {
+                "ActionName": "CONFIGURE",
+                "ServiceName": "EMRFLOW",
+                "DisplayName": "CONFIGURE All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "START",
+                "ServiceName": "EMRFLOW",
+                "DisplayName": "START All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "STOP",
+                "ServiceName": "EMRFLOW",
+                "DisplayName": "STOP All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "EMRFLOW",
+                "DisplayName": "RESTART All Components",
+                "ComponentName": "ALL COMPONENTS"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "EMRFLOW",
+                "DisplayName": "RESTART Flow Agent Daemon",
+                "ComponentName": "FlowAgentDaemon"
+              },
+              {
+                "ActionName": "RESTART",
+                "ServiceName": "EMRFLOW",
+                "DisplayName": "RESTART Emr Meta Command",
+                "ComponentName": "MetaCommand"
+              },
+              {
+                "ActionName": "CUSTOM_COMMAND",
+                "Command": "do_ops",
+                "ServiceName": "EMRFLOW",
+                "DisplayName": "metacli ops",
+                "ComponentName": "MetaCommand"
+              }
+            ]
+          },
+          "HealthStatus": "",
+          "NotStartInfo": "",
+          "ServiceDisplayName": "EmrFlow",
+          "StoppedNum": 0,
+          "ServiceName": "EMRFLOW",
+          "AbnormalNum": 0,
+          "ServiceStatus": "INSTALLED",
+          "ServiceVersion": "1.2.1.0.5",
+          "NeedRestartInfo": "",
+          "InstallStatus": true,
+          "NeedRestartNum": 0
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "name": "DescribeAntChainTransaction",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|PUT|GET",
+  "path": "/",
+  "summary_cn": "根据交易哈希查询一条蚂蚁区块链的交易信息",
+  "abc_id": 127085,
+  "timeout": 1000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID"
+    },
+    "Hash": {
+      "name": "Hash",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "b3b0d2db83d3e670449d1e2a39d1d13b7e0e6080b0f9c6945f79eca68d1dd2ca",
+      "description_cn": "交易哈希"
+    },
+    "AntChainId": {
+      "name": "AntChainId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "pYogqb9v",
+      "description_cn": "区块链ID"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "7DCE6520-E5DB-4859-90AC-BDDB8A5501C6",
+      "Result": {
+        "Transaction": {
+          "Nonce": "5675407026657953619",
+          "Extentions": [],
+          "TxType": "UNFREEZE_ACCOUNT_CONTRACT",
+          "Value": "0",
+          "Gas": "4000000",
+          "Period": 1563954336850,
+          "To": "961085f3c7ef705ad587d0cbe11d7863a5a11af7451f4e9b1edadd74402addf5",
+          "From": "e7d3e769f3f593dadcb8634cc5b09fc90dd3a61c4a06a79cb0923662fe6fae6b",
+          "Hash": "b3b0d2db83d3e670449d1e2a39d1d13b7e0e6080b0f9c6945f79eca68d1dd2ca",
+          "Signatures": [
+            "5s6JhauIqAlMb6d+7..."
+          ],
+          "Timestamp": 1563954336850
+        },
+        "CreateTime": 1563954336850,
+        "BlockVersion": 10,
+        "Hash": "b3b0d2db83d3e670449d1e2a39d1d13b7e0e6080b0f9c6945f79eca68d1dd2ca",
+        "BlockHeight": 368169
+      }
+    },
+    "requestId": "7DCE6520-E5DB-4859-90AC-BDDB8A5501C6",
+    "successResponse": true
+  }
+}

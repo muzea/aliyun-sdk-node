@@ -1,0 +1,77 @@
+{
+  "name": "PutCustomMetric",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "上报自定义监控数据。",
+  "abc_id": 115004,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "MetricList": {
+      "name": "MetricList",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "GroupId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "MetricName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Dimensions",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Time",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Type",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Period",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Values",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {
+    "Message": "success",
+    "RequestId": "05B36C2C-5F6E-48D5-8B41-CE36DD7EE8E0",
+    "Code": "200"
+  }
+}

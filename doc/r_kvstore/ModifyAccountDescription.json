@@ -1,0 +1,61 @@
+{
+  "name": "ModifyAccountDescription",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyAccountDescription修改Redis账号的描述。",
+  "abc_id": 95897,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AccountName": {
+      "name": "AccountName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "demoaccount",
+      "description_cn": "账号名。以字母开头，由小写字母、数字、下划线组成，长度不超过16个字符。"
+    },
+    "AccountDescription": {
+      "name": "AccountDescription",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "this is a test account",
+      "description_cn": "账号描述。\n* 需以中文、英文字母开头，不能以http: //或https: //开头； \n* 可以包含中文、英文字母、“_”、“ -”、数字； \n* 长度为2~256个字符。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "r-bp1xxxxxxxxxxxxx",
+      "description_cn": "账号所属实例的ID。"
+    }
+  },
+  "res": {
+    "RequestId": "8D0C0AFC-E9CD-47A4-8395-5C31BF9B3E76"
+  }
+}

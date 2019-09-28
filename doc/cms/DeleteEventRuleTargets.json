@@ -1,0 +1,44 @@
+{
+  "name": "DeleteEventRuleTargets",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "删除事件报警通知目标。",
+  "abc_id": 114992,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Ids": {
+      "name": "Ids",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "RuleName": {
+      "name": "RuleName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "testRule",
+      "description_cn": "报警规则名称。"
+    }
+  },
+  "res": {
+    "RequestId": "7ADD7EFB-7555-4EC1-A3D9-F9955C189CCF",
+    "Success": true,
+    "Code": "200"
+  }
+}

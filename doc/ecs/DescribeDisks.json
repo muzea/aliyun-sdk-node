@@ -1,0 +1,414 @@
+{
+  "name": "DescribeDisks",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDisks查询一块或多块您已经创建的云盘以及本地盘。",
+  "abc_id": 25514,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "云盘所属于的地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "hide"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。"
+    },
+    "ZoneId": {
+      "name": "ZoneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou-g",
+      "description_cn": "可用区ID。"
+    },
+    "DiskIds": {
+      "name": "DiskIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[\"d-xxxxxxxxx\", \"d-yyyyyyyyy\", … \"d-zzzzzzzzz\"]",
+      "description_cn": "云盘ID。一个带有格式的JSON数组，最多100个ID，用半角逗号（,）隔开。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-instance1",
+      "description_cn": "实例ID。"
+    },
+    "DiskType": {
+      "name": "DiskType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "all",
+      "description_cn": "要查询的云盘或本地盘类型。取值范围： \n         \n- all：同时查询系统盘与数据盘 \n- system：只查询系统盘 \n- data：只查询数据盘 \n\n默认值：all "
+    },
+    "Category": {
+      "name": "Category",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "all",
+      "description_cn": "云盘种类。取值范围： \n         \n- all：所有云盘以及本地盘 \n- cloud：普通云盘 \n- cloud_efficiency：高效云盘 \n- cloud_ssd：SSD盘\n- cloud_essd：ESSD云盘\n- local_ssd_pro：I/O密集型本地盘 \n- local_hdd_pro：吞吐密集型本地盘 \n- ephemeral：（已停售）本地盘 \n- ephemeral_ssd：（已停售）本地SSD盘 \n\n默认值：all"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "All",
+      "description_cn": "云盘状态，参见[普通云盘状态](~~25689~~)。取值范围：\n\n-   In_use\n-   Available\n-   Attaching\n-   Detaching\n-   Creating\n-   ReIniting\n-   All\n\n默认值：All"
+    },
+    "SnapshotId": {
+      "name": "SnapshotId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "s-snapshotid1",
+      "description_cn": "创建云盘使用的快照ID。"
+    },
+    "Portable": {
+      "name": "Portable",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "要查询的云盘是否支持卸载，该属性为不可修改属性。取值范围：\n\n-   true：可卸载云盘，可以独立存在且可以自由在可用区内挂载和卸载\n-   false：不可卸载云盘，不可以独立存在且不可以自由在可用区内挂载和卸载\n\n这个属性为`true`的云盘才能挂载和卸载，其中：\n\n-   本地盘\n-   本地SSD盘\n-   系统盘\n-   包年包月数据盘\n\n该属性都为`false`。"
+    },
+    "DeleteWithInstance": {
+      "name": "DeleteWithInstance",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "云盘是否随实例释放。取值范围：\n\n-   true：实例释放时，这块云盘随实例一起释放\n-   false：实例释放时，这块云盘保留不释放\n\n默认值：false"
+    },
+    "DeleteAutoSnapshot": {
+      "name": "DeleteAutoSnapshot",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "删除云盘时，是否同时删除自动快照。取值范围：\n\n-   true：同时删除自动快照\n-   false：保留自动快照\n\n默认值：false"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "云盘或本地盘状态列表的页码，起始值：1 \n\n默认值：1 "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时设置的每页行数，最大值：100 \n\n默认值：10 "
+    },
+    "DiskName": {
+      "name": "DiskName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "JoshuaFinance",
+      "description_cn": "云盘或本地盘名称。"
+    },
+    "AutoSnapshotPolicyId": {
+      "name": "AutoSnapshotPolicyId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "auto_20140724_2",
+      "description_cn": "根据自动快照策略ID查询云盘。"
+    },
+    "EnableAutoSnapshot": {
+      "name": "EnableAutoSnapshot",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "云盘是否执行自动快照策略（前提是用户整体的自动快照策略已经开启）。取值范围：\n\n-   true：表示这块云盘执行自动快照策略\n-   false：表示这块云盘不执行自动快照策略\n\n默认值：false"
+    },
+    "EnableAutomatedSnapshotPolicy": {
+      "name": "EnableAutomatedSnapshotPolicy",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "云盘是否设置了自动快照策略。"
+    },
+    "DiskChargeType": {
+      "name": "DiskChargeType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PostPaid",
+      "description_cn": "云盘或本地盘的计费方式。取值范围：\n\n- PrePaid：包年包月\n- PostPaid：按量付费"
+    },
+    "LockReason": {
+      "name": "LockReason",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "recycling",
+      "description_cn": "云盘或本地盘被锁定的原因。取值范围：\n\n- financial：因欠费被锁定\n- security：因安全原因被锁定\n- recycling：抢占式实例的待释放锁定状态\n- dedicatedhostfinancial：因为专有宿主机欠费导致ECS实例被锁定"
+    },
+    "Filter.1.Key": {
+      "name": "Filter.1.Key",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "CreationStartTime",
+      "description_cn": "查询资源时的筛选键。取值必须为CreationStartTime。\n\n"
+    },
+    "Filter.2.Key": {
+      "name": "Filter.2.Key",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "CreationEndTime",
+      "description_cn": "查询资源时的筛选键。取值必须为CreationEndTime。"
+    },
+    "Filter.1.Value": {
+      "name": "Filter.1.Value",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2017-12-05T22:40:00Z",
+      "description_cn": "查询资源时的筛选值。取值必须为资源创建的开始时间点（CreationStartTime）。"
+    },
+    "Filter.2.Value": {
+      "name": "Filter.2.Value",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2017-12-06T22:40:00Z",
+      "description_cn": "查询资源时的筛选值。取值必须为资源创建的结束时间点（CreationEndTime）。"
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rg-resourcegroupid1",
+      "description_cn": "云盘或本地盘所在的企业资源组ID。"
+    },
+    "EnableShared": {
+      "name": "EnableShared",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否是共享块存储。"
+    },
+    "Encrypted": {
+      "name": "Encrypted",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否过滤加密云盘。取值范围：\n\n-   true：只筛选出加密云盘\n-   false：不做加密属性的筛选\n\n默认值：false"
+    },
+    "AdditionalAttributes": {
+      "name": "AdditionalAttributes",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "DryRun": {
+      "name": "DryRun",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否只预检此次请求。\n\n-   true：发送检查请求，不会查询资源状况。检查项包括AccessKey是否有效、RAM用户的授权情况和是否填写了必需参数。如果检查不通过，则返回对应错误。如果检查通过，会返回错误码`DryRunOperation`。\n-   false：发送正常请求，通过检查后返回2XX HTTP状态码并直接查询资源状况。\n\n默认值：false"
+    },
+    "KMSKeyId": {
+      "name": "KMSKeyId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0e478b7a-4262-4802-b8cb-00d3fb408***",
+      "description_cn": "云盘使用的KMS密钥ID。"
+    }
+  },
+  "res": {
+    "Disks": {
+      "Disk": [
+        {
+          "AttachedTime": "2014-07-23T07:47:35Z",
+          "Category": "cloud",
+          "CreationTime": "2014-07-23T02:44:07Z",
+          "DeleteAutoSnapshot": true,
+          "DeleteWithInstance": false,
+          "EnableAutoSnapshot": false,
+          "Description": "",
+          "DetachedTime": "2014-07-23T08:28:48Z",
+          "Device": "",
+          "DiskId": "d-28m5zbua0",
+          "DiskName": "",
+          "ImageId": "",
+          "InstanceId": "",
+          "OperationLocks": {
+            "OperationLock": []
+          },
+          "Portable": true,
+          "ProductCode": "",
+          "RegionId": "cn-qingdao",
+          "Size": 5,
+          "SourceSnapshotId": "",
+          "Status": "Available",
+          "Type": "data",
+          "ZoneId": "cn-qingdao-b"
+        },
+        {
+          "AttachedTime": "",
+          "Category": "cloud",
+          "CreationTime": "2014-07-23T02:44:06Z",
+          "DeleteAutoSnapshot": true,
+          "DeleteWithInstance": false,
+          "EnableAutoSnapshot": false,
+          "Description": "",
+          "DetachedTime": "",
+          "Device": "",
+          "DiskId": "d-28zfrmo13",
+          "DiskName": "",
+          "ImageId": "",
+          "InstanceId": "",
+          "OperationLocks": {
+            "OperationLock": []
+          },
+          "Portable": true,
+          "ProductCode": "",
+          "RegionId": "cn-qingdao",
+          "Size": 5,
+          "SourceSnapshotId": "",
+          "Status": "Available",
+          "Type": "data",
+          "ZoneId": "cn-qingdao-b"
+        }
+      ]
+    },
+    "PageNumber": 1,
+    "PageSize": 2,
+    "RequestId": "ACD9BBB0-A9D1-46D7-9630-B7A69889E110",
+    "TotalCount": 9
+  }
+}

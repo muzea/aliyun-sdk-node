@@ -1,0 +1,52 @@
+{
+  "name": "UpdateAntChain",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "更新一条蚂蚁区块链名字",
+  "abc_id": 127084,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID"
+    },
+    "AntChainName": {
+      "name": "AntChainName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "修改名称",
+      "description_cn": "区块链名称"
+    },
+    "AntChainId": {
+      "name": "AntChainId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "pYogqb9v",
+      "description_cn": "区块链ID"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "F6A52E53-2CCB-4C3C-A44D-45FAEBC24E47",
+      "Result": "success"
+    },
+    "requestId": "F6A52E53-2CCB-4C3C-A44D-45FAEBC24E47",
+    "successResponse": true
+  }
+}

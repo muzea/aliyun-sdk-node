@@ -1,0 +1,96 @@
+{
+  "name": "CreateRules",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateRules为指定的HTTP或HTTPS监听添加转发规则。",
+  "abc_id": 35226,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "负载均衡实例的地域ID。\n\n您可以通过调用**DescribeRegions**接口查询地域ID。"
+    },
+    "LoadBalancerId": {
+      "name": "LoadBalancerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "lb-bp1ca0zt07t934wxezyxo",
+      "description_cn": "负载均衡实例ID。"
+    },
+    "ListenerPort": {
+      "name": "ListenerPort",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "443",
+      "description_cn": "负载均衡实例前端使用的监听端口。\n\n取值范围：**1~65535**。"
+    },
+    "RuleList": {
+      "name": "RuleList",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "[{\"RuleName\":\"Rule2\",\"Domain\":\"test.com\",\"VServerGroupId\":\"rsp-bp114nimo4kl9\"}]",
+      "description_cn": "要添加的转发规则。一次请求中，最多可添加10条转发规则。每条转发规则包含以下参数：\n\n- **RuleName**（必选）：String类型。转发规则名称，长度限制为1~40，只能使用字母、数字和-/._这些字符。同一个监听内不同规则的名称必须唯一。\n- **Domain**（可选）： String类型。转发规则关联的请求域名。\n- **Url**（可选）：String类型，可选，访问路径，长度限制为1~80，只能使用字母、数字和-/.%?#&amp;这些字符。\n- **VServerGroupId**（必选）：String类型。该转发规则的目标虚拟服务器组ID。\n\nDomain和Url两者必须指定一个，也可以同时指定。Domain和Url的组合在同一个监听内必须唯一。\n"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "ListenerProtocol": {
+      "name": "ListenerProtocol",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "D63E42FB-F963-4EE5-9B32-05602BF351F3",
+    "Rules": {
+      "Rule": [
+        {
+          "RuleId": "rule-bp12jzy0hvio3",
+          "RuleName": "Rule3"
+        }
+      ]
+    }
+  }
+}

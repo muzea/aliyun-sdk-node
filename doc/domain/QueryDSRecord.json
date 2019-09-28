@@ -1,0 +1,67 @@
+{
+  "name": "QueryDSRecord",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询域名DS记录",
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "test.com",
+      "description_cn": "域名"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "接口返回错误信息语言，枚举值范围：zh 中文；en 英文。默认为en。"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "127.0.0.1",
+      "description_cn": "用户IP"
+    }
+  },
+  "res": {
+    "DSRecordList": [
+      {
+        "Algorithm": 2,
+        "Digest": "f58fa917424383934c7b0cf1a90f61d692745680fa06f5ecdbe0924e86de9598",
+        "DigestType": 2,
+        "KeyTag": 11
+      },
+      {
+        "Algorithm": 2,
+        "Digest": "a55f53655743cf37f8dd69256f9f8780fd72eef30551fe24e747956221d42095",
+        "DigestType": 2,
+        "KeyTag": 1
+      }
+    ],
+    "RequestId": "814B2AF0-ED6F-4C13-B41C-8AC0B1023583"
+  }
+}

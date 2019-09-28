@@ -1,0 +1,76 @@
+{
+  "name": "QueryDomainGroupList",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询域名分组列表",
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "接口返回错误信息语言，枚举值范围：zh 中文；en 英文。默认为en"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "127.0.0.1",
+      "description_cn": "用户ip"
+    },
+    "DomainGroupName": {
+      "name": "DomainGroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "默认分组",
+      "description_cn": "域名分组名称"
+    },
+    "ShowDeletingGroup": {
+      "name": "ShowDeletingGroup",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否展示正在删除中的域名分组，默认为false"
+    }
+  },
+  "res": {
+    "Data": {
+      "DomainGroup": [
+        {
+          "BeingDeleted": false,
+          "CreationDate": "2018-04-27 14:48:02",
+          "DomainGroupId": -1,
+          "DomainGroupName": "未分组",
+          "DomainGroupStatus": "COMPLETE",
+          "TotalNumber": 346
+        }
+      ]
+    },
+    "RequestId": "49F5586F-4D94-4909-8C6F-7DD5072ED08D"
+  }
+}

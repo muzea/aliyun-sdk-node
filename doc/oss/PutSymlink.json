@@ -1,0 +1,31 @@
+{
+  "name": "PutSymlink",
+  "protocol": "HTTP|HTTPS",
+  "method": "PUT",
+  "path": "/[ObjectName]",
+  "timeout": null,
+  "reqFormat": {
+    "BucketName": {
+      "name": "BucketName",
+      "position": "domain",
+      "required": true
+    },
+    "ObjectName": {
+      "name": "ObjectName",
+      "position": "path",
+      "required": true
+    },
+    "symlink": {
+      "name": "symlink",
+      "position": "query",
+      "required": true,
+      "default": ""
+    },
+    "x-oss-symlink-target": {
+      "name": "x-oss-symlink-target",
+      "position": "header",
+      "required": false
+    }
+  },
+  "res": {}
+}

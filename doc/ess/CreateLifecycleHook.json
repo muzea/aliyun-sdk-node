@@ -1,0 +1,147 @@
+{
+  "name": "CreateLifecycleHook",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateLifecycleHook为伸缩组创建一个或多个生命周期挂钩。",
+  "abc_id": 73839,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ScalingGroupId": {
+      "name": "ScalingGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "AG6CQdPU8OKdwLjgZcJ****",
+      "description_cn": "伸缩组的ID。"
+    },
+    "LifecycleTransition": {
+      "name": "LifecycleTransition",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "SCALE_OUT",
+      "description_cn": "生命周期挂钩适用的伸缩活动类型，取值范围： \n         \n- SCALE_OUT：伸缩组弹性扩张活动 \n- SCALE_IN：伸缩组弹性收缩活动 \n         "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456123456",
+      "description_cn": ""
+    },
+    "LifecycleHookName": {
+      "name": "LifecycleHookName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test_SCALE_OUT",
+      "description_cn": "生命周期挂钩的名称。不能与当前伸缩组其他生命周期挂钩重名，长度为2~40个英文或中文字符，以数字、大小字母或中文开头，可包含数字、下划线（_）、连字符（-）和点号（.）。\n\n默认值为生命周期挂钩ID。"
+    },
+    "DefaultResult": {
+      "name": "DefaultResult",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "CONTINUE",
+      "description_cn": "等待状态结束后的下一步动作，取值范围： \n\n- CONTINUE：继续响应弹性扩张活动或者继续响应弹性收缩活动。\n- ABANDON：直接释放弹性扩张活动创建出来的ECS实例或者直接将弹性收缩活动中的ECS实例从伸缩组移除。 \n\n默认值：CONTINUE。\n\n当伸缩组发生弹性收缩活动（SCALE_IN）并触发多个生命周期挂钩时，DefaultResult为ABANDON的生命周期挂钩触发的等待状态结束时，会提前将其它对应的等待状态提前结束。其他情况下，下一步动作均以最后一个结束等待状态的下一步动作为准。  "
+    },
+    "HeartbeatTimeout": {
+      "name": "HeartbeatTimeout",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "600",
+      "description_cn": "生命周期挂钩为伸缩组活动设置的等待时间，等待状态超时后会执行下一步动作。取值范围：30~21600，单位：秒。\n\n默认值：600。\n\n创建了生命周期挂钩后，您可以调用[RecordLifecycleActionHeartbeat](~~73846~~)延长ECS实例的等待时间，也可以调用[CompleteLifecycleAction](~~73847~~)提前结束伸缩活动的等待状态。 "
+    },
+    "NotificationMetadata": {
+      "name": "NotificationMetadata",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Test",
+      "description_cn": "伸缩活动的等待状态的固定字符串信息。参数长度不能超过128个字符。\n\n弹性伸缩每次推送消息到通知对象时，会同时发送您预先指定的NotificationMetadata参数值，便于管理和标记不同类别的通知信息。当您同时指定了NotificationArn参数时，NotificationMetadata参数方可生效。 "
+    },
+    "NotificationArn": {
+      "name": "NotificationArn",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "acs:ess:cn-hangzhou:1111111111:queue/queue1",
+      "description_cn": "生命周期挂钩通知对象标识符。支持消息服务MNS队列和主题，参数取值格式：acs:ess:{region}:{account-id}:{resource-relative-id}。 \n\n- region：伸缩组所在的地域\n- account-id：阿里云账号ID\n\n例如： \n\n- MNS队列：acs:ess:{region}:{account-id}:queue/{queuename} \n- MNS主题：acs:ess:{region}:{account-id}:topic/{topicname} \n         "
+    },
+    "LifecycleHook": {
+      "name": "LifecycleHook",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "LifecycleHookName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "LifecycleTransition",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "DefaultResult",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "HeartbeatTimeout",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "NotificationMetadata",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "NotificationArn",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {
+    "RequestId": "473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E",
+    "LifecycleHookId": "ash-****"
+  }
+}

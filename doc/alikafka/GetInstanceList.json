@@ -1,0 +1,23 @@
+{
+  "name": "GetInstanceList",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/",
+  "summary_cn": "调用 GetInstanceList 获取您在某地域下所购买的实例的信息。",
+  "abc_id": 94533,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例所属的地域 ID。\n"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,128 @@
+{
+  "name": "ListRentedJoinPermissions",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ListRentedJoinPermissions根据过滤条件，查询当前用户账号所租用的入网凭证列表（可能是专用入网凭证或泛在入网凭证）。",
+  "abc_id": 109928,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Offset": {
+      "name": "Offset",
+      "type": "Long",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "0",
+      "description_cn": "本次查询的起始位置，从 0 开始。"
+    },
+    "Limit": {
+      "name": "Limit",
+      "type": "Long",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2",
+      "description_cn": "本次查询的入网凭证数量的上限，大于等于 1。"
+    },
+    "FuzzyOwnerAliyunId": {
+      "name": "FuzzyOwnerAliyunId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "some-user",
+      "description_cn": "模糊匹配入网凭证拥有者的阿里云账号ID。"
+    },
+    "FuzzyJoinEui": {
+      "name": "FuzzyJoinEui",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "d896e0",
+      "description_cn": "模糊匹配入网凭证使用的JoinEUI。"
+    },
+    "Enabled": {
+      "name": "Enabled",
+      "type": "Boolean",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "按照凭证的启停用状态进行过滤。**true**表示启用，**false**表示停用。"
+    },
+    "BoundNodeGroup": {
+      "name": "BoundNodeGroup",
+      "type": "Boolean",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "根据入网凭证是否关联到节点分组进行过滤。**true**表示已关联，**false**表示未关联。"
+    },
+    "Type": {
+      "name": "Type",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "LOCAL",
+      "description_cn": "按照入网凭证的类型进行过滤，取值：\n\n- **LOCAL**：专用凭证\n- **ROAMING**：泛在凭证"
+    },
+    "FuzzyJoinPermissionName": {
+      "name": "FuzzyJoinPermissionName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "凭证1",
+      "description_cn": "模糊匹配入网凭证的名称。"
+    },
+    "SortingField": {
+      "name": "SortingField",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "CREATED_MILLIS",
+      "description_cn": "指定排序字段，可取值为**CREATED_MILLIS**, 表示根据创建时间排序。"
+    },
+    "Ascending": {
+      "name": "Ascending",
+      "type": "Boolean",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "配合**SortingField**参数一起使用，**true**表示升序，**false**表示降序。"
+    }
+  },
+  "res": {}
+}

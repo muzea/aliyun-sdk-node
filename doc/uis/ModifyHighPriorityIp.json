@@ -1,0 +1,68 @@
+{
+  "name": "ModifyHighPriorityIp",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyHighPriorityIp接口修改指定实例的地址列表信息。可以用来修改路由的节点信息。",
+  "abc_id": 99231,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "HighPriorityIp": {
+      "name": "HighPriorityIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "[{'Destination': '221.6.4.XX','AreaID':'cn-shanghai'},{'Destination': 'www.microsoft.com'}]",
+      "description_cn": "目标IP地址或域名，用逗号分隔。格式如下:\n\n`[{'Destination': 'IP','AreaID':'regionID'},{'Destination': 'domain'}]`。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "UisId": {
+      "name": "UisId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "UIS-xxxsjkn8dtiej7bbb****",
+      "description_cn": "要修改目标地址信息的实例ID。"
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "d7d24a21-f4ba-4454-9173-b3828dae492b",
+      "description_cn": "客户端token，用于保证请求的幂等性。\n\n由客户端生成该参数值，要保证在不同请求间唯一，最大不值过64个 ASCII 字符"
+    }
+  },
+  "res": {
+    "RequestId": "A35AEC0B-1820-4969-9A2E-6BFC1ADC9936"
+  }
+}

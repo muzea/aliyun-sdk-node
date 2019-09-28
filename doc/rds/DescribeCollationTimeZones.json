@@ -1,0 +1,38 @@
+{
+  "name": "DescribeCollationTimeZones",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCollationTimeZones接口查看支持的字符集排序规则和时区。",
+  "abc_id": 96219,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "CollationTimeZones": {
+      "CollationTimeZone": [
+        {
+          "StandardTimeOffset": "(UTC+04:30)",
+          "Description": "Kabul",
+          "TimeZone": "Afghanistan Standard Time"
+        }
+      ]
+    },
+    "RequestId": "4EAED246-DB18-4C8D-9EB5-C319626F2A77"
+  }
+}

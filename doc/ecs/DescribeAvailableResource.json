@@ -1,0 +1,219 @@
+{
+  "name": "DescribeAvailableResource",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeAvailableResource查询某一可用区的资源列表。例如，您可以在某一可用区创建实例（RunInstances）或者修改实例规格（ModifyInstanceSpec）时查询该可用区的资源列表。",
+  "abc_id": 66186,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "目标地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "DestinationResource": {
+      "name": "DestinationResource",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "InstanceType",
+      "description_cn": "要查询的资源类型。取值范围： \n         \n- Zone：可用区 \n- IoOptimized：I/O优化 \n- InstanceType：实例规格 \n- SystemDisk：系统盘 \n- DataDisk：数据盘 \n- Network：网络类型\n- ddh：专有宿主机\n         "
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "hide"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。"
+    },
+    "InstanceChargeType": {
+      "name": "InstanceChargeType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PrePaid",
+      "description_cn": "资源的计费方式。更多详情，请参见[计费概述](~~25398~~)。取值范围： \n         \n- PrePaid：包年包月 \n- PostPaid：按量付费 \n\n默认值：PostPaid。"
+    },
+    "SpotStrategy": {
+      "name": "SpotStrategy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "NoSpot",
+      "description_cn": "按量付费实例的竞价策略。取值范围： \n         \n- NoSpot：正常按量付费实例 \n- SpotWithPriceLimit：设置上限价格的抢占式实例 \n- SpotAsPriceGo：系统自动出价，最高按量付费价格 \n\n默认值：NoSpot。\n\n当参数InstanceChargeType取值为PostPaid时，参数SpotStrategy才有效。 "
+    },
+    "SpotDuration": {
+      "name": "SpotDuration",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ZoneId": {
+      "name": "ZoneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou-e",
+      "description_cn": "可用区ID。\n\n默认值：无，表示随机分配当前地域下的可用区。 "
+    },
+    "IoOptimized": {
+      "name": "IoOptimized",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "optimized",
+      "description_cn": "是否为I/O优化实例。取值范围： \n         \n- none：非I/O优化实例 \n- optimized：I/O优化实例 \n\n若参数DestinationResource取值为SystemDisk、InstanceType或者DataDisk时，参数IoOptimized不是必需参数。\n\n默认值：optimized。"
+    },
+    "DedicatedHostId": {
+      "name": "DedicatedHostId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dh-dedicatedhostid",
+      "description_cn": "专有宿主机ID。"
+    },
+    "InstanceType": {
+      "name": "InstanceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ecs.g5.large",
+      "description_cn": "实例规格。更多详情，请参见[实例规格族](~~25378~~)，也可以调用[DescribeInstanceTypes](~~25620~~)接口获得最新的规格表。\n\n当参数DestinationResource取值为SystemDisk或者DataDisk时，InstanceType为必需参数。 "
+    },
+    "SystemDiskCategory": {
+      "name": "SystemDiskCategory",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cloud_ssd",
+      "description_cn": "系统盘类型。取值范围： \n         \n- cloud：普通云盘 \n- cloud_efficiency：高效云盘 \n- cloud_ssd：SSD云盘 \n- ephemeral_ssd：本地SSD盘 \n- cloud_essd：ESSD云盘\n\n若参数DestinationResource取值为SystemDisk、InstanceType或者DataDisk时，参数SystemDiskCategory不是必需参数。\n\n默认值：cloud_efficiency。"
+    },
+    "DataDiskCategory": {
+      "name": "DataDiskCategory",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cloud_ssd",
+      "description_cn": "数据盘类型。取值范围： \n         \n- cloud：普通云盘 \n- cloud_efficiency：高效云盘 \n- cloud_ssd：SSD云盘 \n- ephemeral_ssd：本地SSD盘\n- cloud_essd：ESSD云盘"
+    },
+    "NetworkCategory": {
+      "name": "NetworkCategory",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc",
+      "description_cn": "网络类型。取值范围： \n         \n- vpc：专有网络 \n- classic：经典网络 \n         "
+    },
+    "Cores": {
+      "name": "Cores",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "实例规格的vCPU内核数目。取值参见[实例规格族](~~25378~~)。\n\n当DestinationResource取值为InstanceType时，Cores才为有效参数。 "
+    },
+    "Memory": {
+      "name": "Memory",
+      "type": "Float",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "8.0",
+      "description_cn": "实例规格的内存大小，单位为GiB。取值参见[实例规格族](~~25378~~)。\n\n当DestinationResource取值为InstanceType时，Memory才为有效参数。 "
+    },
+    "ResourceType": {
+      "name": "ResourceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Instance",
+      "description_cn": "资源类型。取值范围：\n\n- instance：ECS实例\n- disk：云盘\n- reservedinstance：预留实例券\n- ddh：专有宿主机"
+    },
+    "Scope": {
+      "name": "Scope",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "NoDisclose"
+    }
+  },
+  "res": {
+    "RequestId": "5272B7D8-F366-4781-AF7B-63E735FBC09A",
+    "AvailableZones": {
+      "AvailableZone": [
+        {
+          "Status": "Available",
+          "RegionId": "cn-hangzhou",
+          "ZoneId": "cn-hangzhou-h"
+        },
+        {
+          "Status": "Available",
+          "RegionId": "cn-hangzhou",
+          "ZoneId": "cn-hangzhou-g"
+        },
+        {
+          "Status": "Available",
+          "RegionId": "cn-hangzhou",
+          "ZoneId": "cn-hangzhou-f"
+        },
+        {
+          "Status": "Available",
+          "RegionId": "cn-hangzhou",
+          "ZoneId": "cn-hangzhou-b"
+        },
+        {
+          "Status": "Available",
+          "RegionId": "cn-hangzhou",
+          "ZoneId": "cn-hangzhou-e"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "name": "PutEventRule",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|PUT|GET",
+  "path": "/",
+  "summary_cn": "创建或者修改事件的报警规则。",
+  "abc_id": 115000,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "EventPattern": {
+      "name": "EventPattern",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Product",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "NameList",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        },
+        {
+          "name": "StatusList",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        },
+        {
+          "name": "LevelList",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        },
+        {
+          "name": "EventTypeList",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        }
+      ]
+    },
+    "RuleName": {
+      "name": "RuleName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "myRuleName",
+      "description_cn": "报警规则名称。"
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "12345",
+      "description_cn": "应用分组ID。"
+    },
+    "EventType": {
+      "name": "EventType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "SYSTEM",
+      "description_cn": "事件报警类型，可选值为：\n\n- SYSTEM（系统事件），\n- CUSTOM（自定义事件）。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "我的事件报警测试",
+      "description_cn": "报警规则描述。"
+    },
+    "State": {
+      "name": "State",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ENABLED",
+      "description_cn": "状态， 可选值为：\n\n- ENABLED（启用），\n- DISABLED（禁用）。"
+    }
+  },
+  "res": {
+    "Data": "1",
+    "RequestId": "0B963550-5605-4AC6-93D9-FA7644D19FEF",
+    "Success": true,
+    "Code": "200"
+  }
+}

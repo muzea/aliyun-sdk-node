@@ -1,0 +1,87 @@
+{
+  "name": "DescribeInstanceAttribute",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeInstanceAttribute查询Redis实例的详细信息。",
+  "abc_id": 60996,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "r-bp1xxxxxxxxxxxxx",
+      "description_cn": "实例ID。"
+    }
+  },
+  "res": {
+    "RequestId": "5553161D-11B1-43E1-9D95-523B2C82304F",
+    "Instances": {
+      "DBInstanceAttribute": [
+        {
+          "Config": "{\"maxmemory-policy\":\"volatile-lfu\",\"EvictionPolicy\":\"volatile-lru\",\"hash-max-ziplist-entries\":512,\"zset-max-ziplist-entries\":128,\"zset-max-ziplist-value\":64,\"set-max-intset-entries\":512,\"hash-max-ziplist-value\":64,\"#no_loose_disabled-commands\":\"flushall,flushdb\",\"lazyfree-lazy-eviction\":\"yes\"}",
+          "HasRenewChangeOrder": "false",
+          "InstanceId": "r-bp1xxxxxxxxxxxxx",
+          "ArchitectureType": "cluster",
+          "ZoneId": "cn-hangzhou-e",
+          "PrivateIp": "xxx.xxx.xxx.224",
+          "VSwitchId": "vsw-bp1xxxxxxxxxxxxxxxxxx",
+          "VpcId": "vpc-bp1xxxxxxxxxxxxxxxxxx",
+          "Engine": "Redis",
+          "NetworkType": "VPC",
+          "PackageType": "standard",
+          "QPS": 200000,
+          "ReplicaId": "grr-bp1xxxxxxxxxxxxx",
+          "IsRds": true,
+          "MaintainStartTime": "18:00Z",
+          "VpcAuthMode": "Close",
+          "ConnectionDomain": "cluster40.redis.rds.aliyuncs.com",
+          "EngineVersion": "4.0",
+          "InstanceName": "cluster40",
+          "Bandwidth": 96,
+          "ChargeType": "PostPaid",
+          "AuditLogRetention": "30",
+          "MaintainEndTime": "22:00Z",
+          "ReplicationMode": "cluster",
+          "InstanceType": "Redis",
+          "Tags": {
+            "Tag": []
+          },
+          "InstanceStatus": "Normal",
+          "Port": 6379,
+          "InstanceClass": "redis.logic.sharding.2g.2db.0rodb.4proxy.default",
+          "AvailabilityValue": "100.0%",
+          "RegionId": "cn-hangzhou",
+          "NodeType": "double",
+          "CreateTime": "2018-11-07T16:49:00Z",
+          "Capacity": 4096,
+          "SecurityIPList": "172.0.0.1",
+          "Connections": 20000
+        }
+      ]
+    }
+  }
+}

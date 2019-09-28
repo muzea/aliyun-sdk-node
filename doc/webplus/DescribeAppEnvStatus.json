@@ -1,0 +1,29 @@
+{
+  "name": "DescribeAppEnvStatus",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v1/wam/appEnv/status",
+  "summary_cn": "调用DescribeAppEnvStatus查询给定环境的状态。",
+  "abc_id": 127729,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "EnvId": {
+      "name": "EnvId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "we-5d244085f314934e2ab15cd7",
+      "description_cn": "环境ID，将查询此环境的状态"
+    }
+  },
+  "res": {}
+}

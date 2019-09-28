@@ -1,0 +1,76 @@
+{
+  "name": "DetachVServerGroups",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DetachVServerGroups移除一个或者多个虚拟服务器组。",
+  "abc_id": 98984,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "伸缩组所属地域的ID，如cn-hangzhou、cn-shanghai。更多详情，请参见[地域和可用区](~~40654~~)。"
+    },
+    "ScalingGroupId": {
+      "name": "ScalingGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "asg-****",
+      "description_cn": "伸缩组的ID。"
+    },
+    "VServerGroup": {
+      "name": "VServerGroup",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "LoadBalancerId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "VServerGroupAttribute",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456123456",
+      "description_cn": ""
+    },
+    "ForceDetach": {
+      "name": "ForceDetach",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否从待移除虚拟服务器组中移除当前伸缩组内的ECS实例。 \n\n- true：移除\n\n- false：不移除\n\n默认值：false。"
+    }
+  },
+  "res": {
+    "requestId": "473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E"
+  }
+}

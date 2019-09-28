@@ -1,0 +1,94 @@
+{
+  "name": "DescribeSubConnections",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeSubConnections接口查询GRE的连接。",
+  "abc_id": 126603,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "UisNodeId": {
+      "name": "UisNodeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "UISNODE-xxxbink187cqsgfn****",
+      "description_cn": "接入点ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "IP": {
+      "name": "IP",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "140.206.225.XX",
+      "description_cn": "接入点IP。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "当前页码。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "每页数量。"
+    }
+  },
+  "res": {
+    "UisSubConnections": {
+      "UisSubConnection": [
+        {
+          "Name": "lianjie1",
+          "Ip": "140.206.225.XX",
+          "Description": "1111",
+          "CreateTime": 1563420951000,
+          "UisSubConnectionId": "UISSUBCONN-xxxxpsxkme91l6kz2dgff"
+        },
+        {
+          "Name": "connection2",
+          "Ip": "180.163.202.XX",
+          "Description": "annother connection",
+          "CreateTime": 1563781819000,
+          "UisSubConnectionId": "UISSUBCONN-xxxn30i6x2orzj5vd5f79"
+        }
+      ]
+    },
+    "PageNumber": 1,
+    "TotalCount": 2,
+    "PageSize": 10
+  }
+}

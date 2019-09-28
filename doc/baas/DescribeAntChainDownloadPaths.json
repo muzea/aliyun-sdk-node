@@ -1,0 +1,46 @@
+{
+  "name": "DescribeAntChainDownloadPaths",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|PUT|GET",
+  "path": "/",
+  "summary_cn": "获取一条蚂蚁区块链相关证书下载地址",
+  "abc_id": 127079,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID"
+    },
+    "AntChainId": {
+      "name": "AntChainId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1q8B5R9p",
+      "description_cn": "区块链ID"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "E6F487D4-8606-41B5-B289-46D5EFBD3417",
+      "Result": {
+        "SdkUrl": "http://***",
+        "TrustCaUrl": "http://***trustCa",
+        "CaCrtUrl": "http://***a.crt",
+        "ClientCrtUrl": "http://***client.crt"
+      }
+    },
+    "requestId": "E6F487D4-8606-41B5-B289-46D5EFBD3417",
+    "successResponse": true
+  }
+}

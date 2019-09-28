@@ -1,0 +1,161 @@
+{
+  "name": "DescribeRouteTableList",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeRouteTableList接口查询路由表。",
+  "abc_id": 87602,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "路由表所属的VPC的地域ID。 \n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "RouterType": {
+      "name": "RouterType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "VBR",
+      "description_cn": "路由表所属的路由器类型。取值： \n\n- **VRouter（默认值）**：VPC路由器   \n\n- **VBR**：边界路由器   \n"
+    },
+    "RouterId": {
+      "name": "RouterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vrt-bp1lhl0taikrteen8****",
+      "description_cn": "路由表所属路由器的ID。"
+    },
+    "VpcId": {
+      "name": "VpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc-bp15zckdt37pq72****",
+      "description_cn": "路由表所属的VPC路由器的ID。\n\n指定该参数后，参数**RouterType**的值自动设置为**VRouter**。  "
+    },
+    "RouteTableId": {
+      "name": "RouteTableId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vtb-bp145q7glnuzdvzu2****",
+      "description_cn": " 路由表的ID。 "
+    },
+    "RouteTableName": {
+      "name": "RouteTableName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "doctest",
+      "description_cn": "路由表的名称。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": " 列表的页码，默认值为**1**。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": " 分页查询时每页的行数，最大值为**50**，默认值为**10**。  "
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rg-acfmxazb4ph****",
+      "description_cn": "资源组ID。"
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "Code": "200",
+    "Message": "successful",
+    "PageNumber": 1,
+    "PageSize": 10,
+    "RequestId": "87261511-FEB9-4BEC-85BF-70XXXXXXXXX",
+    "RouterTableList": {
+      "RouterTableListType": [
+        {
+          "CreationTime": "2018-08-03T08:14:54Z",
+          "Description": "ddd",
+          "RouteTableId": "vtb-m5evbtbptnx2bXXXXXXXXX",
+          "RouteTableName": "aaa1111",
+          "RouteTableType": "Custom",
+          "RouterId": "vrt-m5egeuhgj52xgXXXXXXXXX",
+          "RouterType": "VRouter",
+          "VSwitchIds": {
+            "VSwitchId": [
+              "vsw-m5e3r57pxkgijXXXXXXXXX"
+            ]
+          },
+          "VpcId": "vpc-m5epe3ag3qXXXXXXXXX"
+        }
+      ]
+    },
+    "Success": true,
+    "TotalCount": 1
+  }
+}

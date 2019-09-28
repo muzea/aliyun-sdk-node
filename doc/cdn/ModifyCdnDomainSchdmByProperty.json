@@ -1,0 +1,49 @@
+{
+  "name": "ModifyCdnDomainSchdmByProperty",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyCdnDomainSchdmByProperty修改加速域名。",
+  "abc_id": 127962,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "需修改加速区域的域名。"
+    },
+    "Property": {
+      "name": "Property",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "{\"coverage\":\"overseas\"}",
+      "description_cn": "调度域属性。{\"coverage\":\"overseas\"} 中coverage参数支持**domestic**、**overseas**、**global**。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "15C66C7B-671A-4297-9187-2C4477247A74"
+  }
+}

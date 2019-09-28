@@ -1,0 +1,162 @@
+{
+  "name": "ModifyVirtualBorderRouterAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyVirtualBorderRouterAttribute接口修改边界路由器（VBR）的配置。",
+  "abc_id": 36026,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "VBR所在的地域。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "VbrId": {
+      "name": "VbrId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "vbr-**************",
+      "description_cn": " 边界路由器的ID。 "
+    },
+    "VlanId": {
+      "name": "VlanId",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "12",
+      "description_cn": " VBR的VLAN ID，取值范围为：**1-2999**。 \n          \n> 只有物理专线的所有者可以指定该参数，同一条物理专线下的两个VBR的VLAN ID不能相同。\n"
+    },
+    "CircuitCode": {
+      "name": "CircuitCode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "longtel001",
+      "description_cn": "运营商为物理专线提供的电路编码。 \n          \n> 只有物理专线的所有者可以指定该参数。\n \n"
+    },
+    "LocalGatewayIp": {
+      "name": "LocalGatewayIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "116.62.xx.xx",
+      "description_cn": " VBR的阿里云侧互联IP。 "
+    },
+    "PeerGatewayIp": {
+      "name": "PeerGatewayIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "120.120.xx.xx",
+      "description_cn": "VBR专线侧接口对端的IP地址。该属性只允许VBR owner指定/修改。不允许把Enabled状态的VBR的该属性改为空。"
+    },
+    "PeeringSubnetMask": {
+      "name": "PeeringSubnetMask",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "255.255.128.0",
+      "description_cn": "  VBR的阿里云侧和客户侧互联IP的子网掩码。 两个IP地址必须位于同一个子网中。 "
+    },
+    "MinTxInterval": {
+      "name": "MinTxInterval",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "100",
+      "description_cn": "配置BFD报文的发送间隔，取值：**200-1000，单位为ms**。"
+    },
+    "MinRxInterval": {
+      "name": "MinRxInterval",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "100",
+      "description_cn": "配置BFD报文的接收间隔，取值：**200-1000，单位为ms**。"
+    },
+    "DetectMultiplier": {
+      "name": "DetectMultiplier",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3",
+      "description_cn": "检测时间倍数。即接收方允许发送方发送报文的最大连接丢包数，用来检测链路是否正常，取值：**3-10**。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "VBR",
+      "description_cn": "VBR的描述信息。\n\n长度为2-256个字符，必须以字母或中文开头，但不能以`http:// `或`https://`开头。  "
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "VBR的名称。\n\n长度为2-128个字符，必须以字母或中文开头，可包含数字，点号（.），下划线（_）和短横线（-）。但不能以`http:// `或`https://`开头。  "
+    },
+    "AssociatedPhysicalConnections": {
+      "name": "AssociatedPhysicalConnections",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "pc-kojok19xxxxxxxxx",
+      "description_cn": "物理专线ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "02fb3da4-130e-11e9-8e44-00xxxxxxxx",
+      "description_cn": "用于保证请求的幂等性。\n\n由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符。 "
+    }
+  },
+  "res": {
+    "RequestId": "980960B0-2969-40BF-8542-EBB34FD358AB"
+  }
+}

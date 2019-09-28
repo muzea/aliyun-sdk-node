@@ -1,0 +1,25 @@
+{
+  "name": "AbortMultipartUpload",
+  "protocol": "HTTP|HTTPS",
+  "method": "DELETE",
+  "path": "/[ObjectName]",
+  "timeout": null,
+  "reqFormat": {
+    "BucketName": {
+      "name": "BucketName",
+      "position": "domain",
+      "required": true
+    },
+    "ObjectName": {
+      "name": "ObjectName",
+      "position": "path",
+      "required": true
+    },
+    "uploadId": {
+      "name": "uploadId",
+      "position": "query",
+      "required": true
+    }
+  },
+  "res": {}
+}

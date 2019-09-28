@@ -1,0 +1,59 @@
+{
+  "name": "DescribeResourceUsage",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeResourceUsage接口查看实例的空间利用信息。",
+  "abc_id": 26279,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "BackupOssDataSize": "8821760",
+    "BackupOssLogSize": "44180999",
+    "RequestId": "A88722B7-DAEE-4822-BA8B-9B019FCB8D46",
+    "DBInstanceId": "rm-uf6wjk5xxxxxxx",
+    "DataSize": 2337275904,
+    "LogSize": -1,
+    "BackupSize": 53002759,
+    "SQLSize": 315052751,
+    "ColdBackupSize": -1,
+    "Engine": "MySQL",
+    "DiskUsed": 2337275904
+  }
+}

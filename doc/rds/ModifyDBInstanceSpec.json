@@ -1,0 +1,113 @@
+{
+  "name": "ModifyDBInstanceSpec",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyDBInstanceSpec接口变更RDS实例（包括常规实例和只读实例，不包括灾备实例和临时实例）的规格或存储空间。",
+  "abc_id": 26233,
+  "timeout": 120000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "待变更配置的实例ID。"
+    },
+    "PayType": {
+      "name": "PayType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "Postpaid",
+      "description_cn": "实例当前的付费类型，取值：\n* **Postpaid**：按量付费；\n* **Prepaid**：预付费。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "DBInstanceClass": {
+      "name": "DBInstanceClass",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rds.mys2.small",
+      "description_cn": "实例规格，详见[实例规格表](~~26312~~)。\n>至少指定实例规格**DBInstanceClass**和存储空间**DBInstanceStorage**其中一个参数。"
+    },
+    "DBInstanceStorage": {
+      "name": "DBInstanceStorage",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "自定义存储空间，单位：GB。每5GB进行递增，详情请参见[实例规格表](~~26312~~)。\n\n>至少指定实例规格**DBInstanceClass**和存储空间**DBInstanceStorage**其中一个参数。"
+    },
+    "EffectiveTime": {
+      "name": "EffectiveTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "MaintainTime",
+      "description_cn": "生效时间，取值：\n* **Immediate**：立即生效；\n* **MaintainTime**：在可运维时间段内生效，请参见[ModifyDBInstanceMaintainTime](~~26249~~)。\n\n默认值：**Immediate**。\n"
+    },
+    "EngineVersion": {
+      "name": "EngineVersion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "5.6",
+      "description_cn": "数据库版本号，取值：\n* MySQL：**5.5/5.6/5.7/8.0**；\n* SQLServer：**2008r2/2012/2012_ent_ha/2012_std_ha/2012_web/2016_ent_ha/2016_std_ha/2016_web/2017_ent**；\n* PostgreSQL：**9.4/10.0**；\n* PPAS：**9.3/10.0**；\n* MariaDB：**10.3**。"
+    },
+    "DBInstanceStorageType": {
+      "name": "DBInstanceStorageType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": " 3C5CFDEE-F774-4DED-89A2-1D76EC63C575 "
+  }
+}

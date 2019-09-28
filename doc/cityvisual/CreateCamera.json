@@ -1,0 +1,100 @@
+{
+  "name": "CreateCamera",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateCamera创建视频点位信息。",
+  "abc_id": 129258,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "地域ID。"
+    },
+    "WorkGroupId": {
+      "name": "WorkGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "511",
+      "description_cn": "工作组ID。"
+    },
+    "CameraId": {
+      "name": "CameraId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "003_2",
+      "description_cn": "视频点位ID。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cityvisual-xxxx",
+      "description_cn": "实例ID。"
+    },
+    "LocationInfo": {
+      "name": "LocationInfo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "{\"latitude\":\"30.245853\",\"longitude\":\"120.209947\"}",
+      "description_cn": "视频点位经纬度坐标。"
+    },
+    "InviteUri": {
+      "name": "InviteUri",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "002_1",
+      "description_cn": "实时视频点位网络url。"
+    },
+    "OssPath": {
+      "name": "OssPath",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "https://cityvisual.oss-cn-shanghai.aliyuncs.com/xxx.mp4",
+      "description_cn": "离线视频文件的OSS地址。"
+    },
+    "CameraName": {
+      "name": "CameraName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "name",
+      "description_cn": "视频点位名称。"
+    }
+  },
+  "res": {}
+}

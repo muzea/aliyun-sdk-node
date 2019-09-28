@@ -1,0 +1,98 @@
+{
+  "name": "AllocateReadWriteSplittingConnection",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AllocateReadWriteSplittingConnection接口申请读写分离地址。",
+  "abc_id": 51231,
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "主实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ConnectionStringPrefix": {
+      "name": "ConnectionStringPrefix",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rr-m5exxxxx-rw.mysql.rds.aliyuncs.com",
+      "description_cn": "读写分离地址前缀名，不可重复，由小写字母和中划线组成，需以字母开头，长度不超过30个字符。\n>默认以“实例名+rw”字符串组成前缀。"
+    },
+    "Port": {
+      "name": "Port",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3306",
+      "description_cn": "读写分离端口，取值：\n\n* MySQL：范围为3001~3999，默认为3306；\n* SQL Server：范围为1000~5999，默认为1433。"
+    },
+    "MaxDelayTime": {
+      "name": "MaxDelayTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "延迟阈值，范围是0~7200，单位：秒，默认为30。\n>当只读实例延迟超过该阈值时，读取流量不发往该实例。"
+    },
+    "NetType": {
+      "name": "NetType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Intranet",
+      "description_cn": "读写分离连接串的网络类型，取值：\n* **Internet**：外网；\n* **Intranet**：内网。\n\n默认为内网，且内网类型与主实例保持一致。"
+    },
+    "DistributionType": {
+      "name": "DistributionType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Standard",
+      "description_cn": "读权重分配模式，取值：\n* **Standard**：按规格权重自动分配；\n* **Custom**：自定义分配权重。"
+    },
+    "Weight": {
+      "name": "Weight",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{“Instanceid1“:”100”,”Instanceid2”:”200”}",
+      "description_cn": "读权重分配，即传入主实例和只读实例的读请求比例。以100进行递增，最大值为10000，格式：{“Instanceid1“:”Weight”,”Instanceid2”:”Weight”...}。\n>* 当DistributionType为Custom时，必须传入该参数；\n* 当DisrtibutionType为Standard时，传入该参数无效。"
+    }
+  },
+  "res": {
+    "RequestId": "4C467B38-3910-447D-87BC-AC049166F216"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "UpdateNamespace",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT",
+  "path": "/pop/v1/paas/namespace",
+  "summary_cn": "更新命名空间信息",
+  "abc_id": 126205,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "NamespaceId": {
+      "name": "NamespaceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-beijing:test",
+      "description_cn": "命名空间ID"
+    },
+    "NamespaceName": {
+      "name": "NamespaceName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "name",
+      "description_cn": "命名空间名称"
+    },
+    "NamespaceDescription": {
+      "name": "NamespaceDescription",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "desc",
+      "description_cn": "命名空间描述"
+    }
+  },
+  "res": {}
+}

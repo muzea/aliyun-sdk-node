@@ -1,0 +1,49 @@
+{
+  "name": "RefreshObjectCaches",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用RefreshObjectCaches刷新节点上的文件内容。刷新指定URL内容至Cache节点，支持URL批量刷新。",
+  "abc_id": 114175,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ObjectPath": {
+      "name": "ObjectPath",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "abc.com/image/1.png",
+      "description_cn": "多个URL之间需要用换行符（\\n）或（\\r\\n）分隔。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ObjectType": {
+      "name": "ObjectType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "File",
+      "description_cn": "刷新的类型， 其值可以为**File**或**Directory**。默认值：**File**。"
+    }
+  },
+  "res": {
+    "RefreshTaskId": "704222904",
+    "RequestId": "D61E4801-EAFF-4A63-AAE1-FBF6CE1CFD1C"
+  }
+}

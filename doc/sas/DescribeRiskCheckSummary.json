@@ -1,0 +1,121 @@
+{
+  "name": "DescribeRiskCheckSummary",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查看云产品检测结果汇总。",
+  "abc_id": 113375,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": "请求源IP。"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn",
+      "description_cn": "调用接口返回的内容的语种类型，支持中文和英文。"
+    }
+  },
+  "res": {
+    "RequestId": "291B49F9-1685-4005-9D34-606B6F78740F",
+    "RiskCheckSummary": {
+      "RiskCount": 1,
+      "RiskRate": 0.25,
+      "PreviousTime": 1545012926000,
+      "ItemCount": 4,
+      "AffectedAssetCount": 0,
+      "RiskLevelCount": [
+        {
+          "Count": 1,
+          "Key": "medium"
+        }
+      ],
+      "Groups": [
+        {
+          "Status": "finish",
+          "CountByStatus": [
+            {
+              "Status": "exception",
+              "Count": 2
+            }
+          ],
+          "RemainingTime": 0,
+          "Sort": 1,
+          "Title": "zh-身份认证及权限",
+          "Id": 1
+        },
+        {
+          "Status": "finish",
+          "CountByStatus": [
+            {
+              "Status": "exception",
+              "Count": 5
+            }
+          ],
+          "RemainingTime": 0,
+          "Sort": 2,
+          "Title": "网络访问控制",
+          "Id": 2
+        },
+        {
+          "Status": "finish",
+          "CountByStatus": [
+            {
+              "Status": "pass",
+              "Count": 1
+            }
+          ],
+          "RemainingTime": 0,
+          "Sort": 3,
+          "Title": "日志审计",
+          "Id": 3
+        },
+        {
+          "Status": "finish",
+          "CountByStatus": [
+            {
+              "Status": "exception",
+              "Count": 2
+            }
+          ],
+          "RemainingTime": 0,
+          "Sort": 4,
+          "Title": "数据安全",
+          "Id": 4
+        },
+        {
+          "Status": "finish",
+          "CountByStatus": [
+            {
+              "Status": "exception",
+              "Count": 2
+            }
+          ],
+          "RemainingTime": 0,
+          "Sort": 6,
+          "Title": "基础安全防护",
+          "Id": 6
+        }
+      ],
+      "PreviousCount": 0
+    }
+  }
+}

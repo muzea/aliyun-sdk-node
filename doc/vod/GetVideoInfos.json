@@ -1,0 +1,52 @@
+{
+  "name": "GetVideoInfos",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用GetVideoInfos批量获取视频信息。",
+  "abc_id": 130912,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "VideoIds": {
+      "name": "VideoIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "7753d144efd74dfd8e649c6c45fe0579,7753d144efd74dfd8e649c6c45fe0570",
+      "description_cn": "视频ID列表。多个用逗号分隔，最多支持20个。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "AdditionType": {
+      "name": "AdditionType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "aaa",
+      "description_cn": "参数暂不可用。"
+    }
+  },
+  "res": {}
+}

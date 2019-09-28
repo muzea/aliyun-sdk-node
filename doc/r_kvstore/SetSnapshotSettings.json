@@ -1,0 +1,82 @@
+{
+  "name": "SetSnapshotSettings",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "DayList": {
+      "name": "DayList",
+      "type": "Integer",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "BeginHour": {
+      "name": "BeginHour",
+      "type": "Integer",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "EndHour": {
+      "name": "EndHour",
+      "type": "Integer",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "RetentionDay": {
+      "name": "RetentionDay",
+      "type": "Integer",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "MaxAutoSnapshots": {
+      "name": "MaxAutoSnapshots",
+      "type": "Integer",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "MaxManualSnapshots": {
+      "name": "MaxManualSnapshots",
+      "type": "Integer",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

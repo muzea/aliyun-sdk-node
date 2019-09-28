@@ -1,0 +1,42 @@
+{
+  "name": "DeleteGroup",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用该接口删除服务器分组。",
+  "abc_id": 130973,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "11111",
+      "description_cn": "指定待删除的服务器分组ID。"
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "127.1.1.1",
+      "description_cn": "指定访问源IP地址。"
+    }
+  },
+  "res": {
+    "code": 200,
+    "requestId": "7E0618A9-D5EF-4220-9471-C42B5E92719F",
+    "success": true
+  }
+}

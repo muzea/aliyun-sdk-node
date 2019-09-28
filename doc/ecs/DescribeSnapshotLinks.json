@@ -1,0 +1,117 @@
+{
+  "name": "DescribeSnapshotLinks",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeSnapshotLinks查询云盘快照链。快照链是一块云盘所有快照组成的关系链，一块云盘对应一条快照链。",
+  "abc_id": 55837,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "云盘所属于的地域 ID。您可以调用 [DescribeRegions](~~25609~~) 查看最新的阿里云地域列表。 "
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-instanceid1",
+      "description_cn": "实例 ID。"
+    },
+    "DiskIds": {
+      "name": "DiskIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[\"d-xxxxxxxxx\", \"d-yyyyyyyyy\", … \"d-zzzzzzzzz\"]",
+      "description_cn": "云盘 ID。一次最多指定 100 个云盘 ID。DiskIds 参数取值格式为 JSON 数组，ID 之间用半角逗号（,）隔开。 "
+    },
+    "SnapshotLinkIds": {
+      "name": "SnapshotLinkIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[\"sl-xxxxxxxxx\", \"sl-yyyyyyyyy\", … \"sl-zzzzzzzzz\"]",
+      "description_cn": "快照链 ID。一次最多指定 100 个快照 ID。SnapshotLinkIds参数取值格式为 JSON 数组，ID 之间用半角逗号（,）隔开。 "
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "云盘状态列表的页码。起始值：1\n\n默认值：1 "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时设置的每页行数。取值范围：1~50。\n\n默认值：10 "
+    }
+  },
+  "res": {
+    "SnapshotLinks": {
+      "SnapshotLink": [
+        {
+          "SourceDiskSize": 20,
+          "TotalSize": 2097152,
+          "SourceDiskType": "data",
+          "RegionId": "cn-beijing-btc-a01",
+          "SnapshotLinkId": "d-25okbh2pj",
+          "SourceDiskId": "d-25okbh2pj",
+          "TotalCount": 1
+        },
+        {
+          "SourceDiskSize": 40,
+          "TotalSize": 2097152,
+          "SourceDiskType": "data",
+          "RegionId": "cn-beijing-btc-a01",
+          "SnapshotLinkId": "d-2ze0y1jwzpb1geqxkroq",
+          "SourceDiskId": "d-2ze0y1jwzpb1geqxkroq",
+          "TotalCount": 1
+        }
+      ]
+    },
+    "PageNumber": 1,
+    "PageSize": 2,
+    "RequestId": "ACD9BBB0-A9D1-46D7-9630-B7A69889E110",
+    "TotalCount": 9
+  }
+}

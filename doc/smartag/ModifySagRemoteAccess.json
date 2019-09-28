@@ -1,0 +1,68 @@
+{
+  "name": "ModifySagRemoteAccess",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifySagRemoteAccess修改智能接入网关设备的远程访问IP。",
+  "abc_id": 137904,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SmartAGId": {
+      "name": "SmartAGId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "sag-r79m060r6oy55******",
+      "description_cn": "智能接入网关实例ID。"
+    },
+    "SerialNumber": {
+      "name": "SerialNumber",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "sag-100-v1p7-9",
+      "description_cn": "智能接入网关设备序列号。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "RemoteAccessIp": {
+      "name": "RemoteAccessIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10.10.10.2",
+      "description_cn": "远程访问IP。"
+    }
+  },
+  "res": {
+    "RemoteAccessIp": "10.10.10.2",
+    "SerialNumber": "sag61a344ge",
+    "Message": "Successful",
+    "RequestId": "4FF203D7-462D-498E-94F9-2B2FA462DD23",
+    "Success": true,
+    "Code": "200"
+  }
+}

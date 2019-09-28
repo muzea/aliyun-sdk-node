@@ -1,0 +1,392 @@
+{
+  "name": "DescribeClusterV2",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 DescribeClusterV2接口，查询集群的基本信息，包括：付费、ECS机器概况、E-MapReduce服务服务列表等。",
+  "abc_id": 28144,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "Id": {
+      "name": "Id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "C-E331B8AC12BF****",
+      "description_cn": "集群ID。"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "ClusterInfo": {
+        "AutoScalingAllowed": true,
+        "AutoScalingEnable": false,
+        "AutoScalingSpotWithLimitAllowed": true,
+        "BootstrapActionList": {
+          "BootstrapAction": []
+        },
+        "BootstrapFailed": false,
+        "ChargeType": "PostPaid",
+        "Configurations": "",
+        "CoreNodeInService": 2,
+        "CoreNodeTotal": 2,
+        "CreateResource": "ECM_EMR",
+        "CreateType": "MANUAL",
+        "EasEnable": true,
+        "GatewayClusterInfoList": {
+          "GatewayClusterInfo": []
+        },
+        "HighAvailabilityEnable": true,
+        "HostGroupList": {
+          "HostGroup": [
+            {
+              "ChargeType": "PostPaid",
+              "CpuCore": 8,
+              "DiskCapacity": 80,
+              "DiskCount": 1,
+              "DiskType": "CLOUD_SSD",
+              "HostGroupId": "G-79AA94922DFBE2E2",
+              "HostGroupName": "主实例组",
+              "HostGroupType": "MASTER",
+              "InstanceType": "ecs.n4.2xlarge",
+              "MemoryCapacity": 16,
+              "NodeCount": 2,
+              "Nodes": {
+                "Node": [
+                  {
+                    "CreateTime": "1543804242000",
+                    "DaemonInfos": {
+                      "DaemonInfo": []
+                    },
+                    "DiskInfos": {
+                      "DiskInfo": [
+                        {
+                          "Device": "/dev/xvdb",
+                          "DiskId": "d-bp15vg2nr3x2t0f37ko9",
+                          "Size": 80,
+                          "Type": "data"
+                        },
+                        {
+                          "Device": "/dev/xvda",
+                          "DiskId": "d-bp16c7qipsxtrq97mybg",
+                          "Size": 120,
+                          "Type": "system"
+                        }
+                      ]
+                    },
+                    "EmrExpiredTime": "null",
+                    "ExpiredTime": "2099-12-31T15:59Z",
+                    "InnerIp": "192.168.128.235",
+                    "InstanceId": "i-bp16c7qipsxtrq99ixt2",
+                    "PubIp": "47.97.214.105",
+                    "Status": "NORMAL",
+                    "ZoneId": "cn-hangzhou-b"
+                  },
+                  {
+                    "CreateTime": "1543804242000",
+                    "DaemonInfos": {
+                      "DaemonInfo": []
+                    },
+                    "DiskInfos": {
+                      "DiskInfo": [
+                        {
+                          "Device": "/dev/xvdb",
+                          "DiskId": "d-bp1568nnv4ev81672qe6",
+                          "Size": 80,
+                          "Type": "data"
+                        },
+                        {
+                          "Device": "/dev/xvda",
+                          "DiskId": "d-bp16z8pr0y2vgfkghuba",
+                          "Size": 120,
+                          "Type": "system"
+                        }
+                      ]
+                    },
+                    "EmrExpiredTime": "null",
+                    "ExpiredTime": "2099-12-31T15:59Z",
+                    "InnerIp": "192.168.128.236",
+                    "InstanceId": "i-bp1ftve3lzvpm16hp7lo",
+                    "PubIp": "47.99.162.57",
+                    "Status": "NORMAL",
+                    "ZoneId": "cn-hangzhou-b"
+                  }
+                ]
+              }
+            },
+            {
+              "ChargeType": "PostPaid",
+              "CpuCore": 8,
+              "DiskCapacity": 80,
+              "DiskCount": 4,
+              "DiskType": "CLOUD_SSD",
+              "HostGroupId": "G-9D08642FB8CE8CFE",
+              "HostGroupName": "核心实例组",
+              "HostGroupType": "CORE",
+              "InstanceType": "ecs.n4.2xlarge",
+              "MemoryCapacity": 16,
+              "NodeCount": 2,
+              "Nodes": {
+                "Node": [
+                  {
+                    "CreateTime": "1543804244000",
+                    "DaemonInfos": {
+                      "DaemonInfo": []
+                    },
+                    "DiskInfos": {
+                      "DiskInfo": [
+                        {
+                          "Device": "/dev/xvde",
+                          "DiskId": "d-bp1568nnv4ev81672qe5",
+                          "Size": 80,
+                          "Type": "data"
+                        },
+                        {
+                          "Device": "/dev/xvdd",
+                          "DiskId": "d-bp1967p3xp86y3wiudgq",
+                          "Size": 80,
+                          "Type": "data"
+                        },
+                        {
+                          "Device": "/dev/xvdc",
+                          "DiskId": "d-bp11qsh4zwrwup8jm9rr",
+                          "Size": 80,
+                          "Type": "data"
+                        },
+                        {
+                          "Device": "/dev/xvdb",
+                          "DiskId": "d-bp1d1juyl8z8aeuza9co",
+                          "Size": 80,
+                          "Type": "data"
+                        },
+                        {
+                          "Device": "/dev/xvda",
+                          "DiskId": "d-bp1ftve3lzvpm16i37y1",
+                          "Size": 80,
+                          "Type": "system"
+                        }
+                      ]
+                    },
+                    "EmrExpiredTime": "null",
+                    "ExpiredTime": "2099-12-31T15:59Z",
+                    "InnerIp": "192.168.128.237",
+                    "InstanceId": "i-bp1gyhphkjplgljrsw5f",
+                    "PubIp": "",
+                    "Status": "NORMAL",
+                    "ZoneId": "cn-hangzhou-b"
+                  },
+                  {
+                    "CreateTime": "1543804247000",
+                    "DaemonInfos": {
+                      "DaemonInfo": []
+                    },
+                    "DiskInfos": {
+                      "DiskInfo": [
+                        {
+                          "Device": "/dev/xvde",
+                          "DiskId": "d-bp12zhcmd96101qhz8ko",
+                          "Size": 80,
+                          "Type": "data"
+                        },
+                        {
+                          "Device": "/dev/xvdd",
+                          "DiskId": "d-bp13rttoh3l1gj84gcas",
+                          "Size": 80,
+                          "Type": "data"
+                        },
+                        {
+                          "Device": "/dev/xvdc",
+                          "DiskId": "d-bp1cnruigppe54k6fx18",
+                          "Size": 80,
+                          "Type": "data"
+                        },
+                        {
+                          "Device": "/dev/xvdb",
+                          "DiskId": "d-bp1967p3xp86y3wiudgr",
+                          "Size": 80,
+                          "Type": "data"
+                        },
+                        {
+                          "Device": "/dev/xvda",
+                          "DiskId": "d-bp1ik6bdp8fpsr8zsebj",
+                          "Size": 80,
+                          "Type": "system"
+                        }
+                      ]
+                    },
+                    "EmrExpiredTime": "null",
+                    "ExpiredTime": "2099-12-31T15:59Z",
+                    "InnerIp": "192.168.128.238",
+                    "InstanceId": "i-bp1ftve3lzvpm16hp7lp",
+                    "PubIp": "",
+                    "Status": "NORMAL",
+                    "ZoneId": "cn-hangzhou-b"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Id": "C-E331B8AC12BF5DB4",
+        "ImageId": "m-bp118knl07yk88y8s6cj",
+        "IoOptimized": true,
+        "LocalMetaDb": true,
+        "MasterNodeInService": 2,
+        "MasterNodeTotal": 0,
+        "Name": "df-test-safe",
+        "NetType": "vpc",
+        "RegionId": "cn-hangzhou",
+        "ResizeDiskEnable": true,
+        "RunningTime": 1102,
+        "SecurityGroupId": "sg-bp1bvompzxgx7q0lg7oy",
+        "SecurityGroupName": "emr-default-securitygroup",
+        "ShowSoftwareInterface": false,
+        "SoftwareInfo": {
+          "ClusterType": "HADOOP",
+          "EmrVer": "EMR-3.16.0_pre",
+          "Softwares": {
+            "Software": [
+              {
+                "DisplayName": "HDFS",
+                "Name": "HDFS",
+                "OnlyDisplay": false,
+                "StartTpe": 1,
+                "Version": "2.7.2-1.3.2"
+              },
+              {
+                "DisplayName": "YARN",
+                "Name": "YARN",
+                "OnlyDisplay": false,
+                "StartTpe": 1,
+                "Version": "2.7.2-1.3.2"
+              },
+              {
+                "DisplayName": "Hive",
+                "Name": "HIVE",
+                "OnlyDisplay": false,
+                "StartTpe": 1,
+                "Version": "2.3.3-1.0.3"
+              },
+              {
+                "DisplayName": "Ganglia",
+                "Name": "GANGLIA",
+                "OnlyDisplay": false,
+                "StartTpe": 1,
+                "Version": "3.7.2"
+              },
+              {
+                "DisplayName": "Zookeeper",
+                "Name": "ZOOKEEPER",
+                "OnlyDisplay": false,
+                "StartTpe": 1,
+                "Version": "3.4.13"
+              },
+              {
+                "DisplayName": "Spark",
+                "Name": "SPARK",
+                "OnlyDisplay": false,
+                "StartTpe": 1,
+                "Version": "2.3.2-1.0.1"
+              },
+              {
+                "DisplayName": "HBase",
+                "Name": "HBASE",
+                "OnlyDisplay": false,
+                "StartTpe": 1,
+                "Version": "1.1.1-1.0.2"
+              },
+              {
+                "DisplayName": "HUE",
+                "Name": "HUE",
+                "OnlyDisplay": false,
+                "StartTpe": 1,
+                "Version": "4.1.0"
+              },
+              {
+                "DisplayName": "Zeppelin",
+                "Name": "ZEPPELIN",
+                "OnlyDisplay": false,
+                "StartTpe": 1,
+                "Version": "0.8.0"
+              },
+              {
+                "DisplayName": "Tez",
+                "Name": "TEZ",
+                "OnlyDisplay": false,
+                "StartTpe": 1,
+                "Version": "0.9.1-1.0.2"
+              },
+              {
+                "DisplayName": "Presto",
+                "Name": "PRESTO",
+                "OnlyDisplay": false,
+                "StartTpe": 1,
+                "Version": "0.208"
+              },
+              {
+                "DisplayName": "Sqoop",
+                "Name": "SQOOP",
+                "OnlyDisplay": false,
+                "StartTpe": 1,
+                "Version": "1.4.7-1.0.0"
+              },
+              {
+                "DisplayName": "Pig",
+                "Name": "PIG",
+                "OnlyDisplay": false,
+                "StartTpe": 1,
+                "Version": "0.14.0"
+              },
+              {
+                "DisplayName": "ApacheDS",
+                "Name": "APACHEDS",
+                "OnlyDisplay": false,
+                "StartTpe": 1,
+                "Version": "2.0.0"
+              },
+              {
+                "DisplayName": "HAS",
+                "Name": "HAS",
+                "OnlyDisplay": false,
+                "StartTpe": 1,
+                "Version": "1.1.1"
+              },
+              {
+                "DisplayName": "Knox",
+                "Name": "KNOX",
+                "OnlyDisplay": false,
+                "StartTpe": 1,
+                "Version": "0.13.0-0.0.3"
+              }
+            ]
+          }
+        },
+        "StartTime": 1543804234000,
+        "Status": "IDLE",
+        "TaskNodeInService": 0,
+        "TaskNodeTotal": 0,
+        "UserDefinedEmrEcsRole": "AliyunEmrEcsDefaultRole",
+        "UserId": "1250460021754461",
+        "VSwitchId": "vsw-bp11qjbyggil4pow064fg",
+        "VpcId": "vpc-bp1l4urd87xlh7i4bju4h",
+        "ZoneId": "cn-hangzhou-b"
+      },
+      "RequestId": "14E9C045-9B8D-4D1E-8D23-FC0027B6D947"
+    },
+    "requestId": "14E9C045-9B8D-4D1E-8D23-FC0027B6D947",
+    "successResponse": true
+  }
+}

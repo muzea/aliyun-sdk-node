@@ -1,0 +1,56 @@
+{
+  "name": "CheckRawPlanJson",
+  "protocol": "HTTPS",
+  "method": "GET",
+  "path": "/api/v2/projects/[projectName]/jobs/[jobName]/planjson/check",
+  "summary_cn": "根据项目名称和作业名称检测是否已经获取到planjson",
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Header",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou-pre",
+      "description_cn": "集团内用户使用： cn-hangzhou-pre 公共云预发； cn-hangzhou-internal 集团内生产； cn-hangzhou-internal-pre 集团内预发；"
+    },
+    "jobName": {
+      "name": "jobName",
+      "type": "String",
+      "position": "Path",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "job1",
+      "description_cn": "单个作业名称"
+    },
+    "sessionId": {
+      "name": "sessionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "j6b43mm10nnzywsixmeh8maflgt6xq5afyeuflow3fravqlby0udi605mi7sty2pem2w9nysqiztag5je4esvmgq04pdcazgdthy3u5riy6na0fz6fmgph1k6b62bvjs7kqorn69ujsk0",
+      "description_cn": "当使用CheckRawPlanJson发送请求后，会返回一个sessionId，将该sessionId填在此处"
+    },
+    "projectName": {
+      "name": "projectName",
+      "type": "String",
+      "position": "Path",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "project1",
+      "description_cn": "项目名称"
+    }
+  },
+  "res": {}
+}

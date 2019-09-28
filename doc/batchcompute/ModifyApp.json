@@ -1,0 +1,24 @@
+{
+  "name": "ModifyApp",
+  "protocol": "HTTP|HTTPS",
+  "method": "PUT",
+  "path": "/apps/[ResourceName]",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ResourceName": {
+      "name": "ResourceName",
+      "type": "String",
+      "position": "Path",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

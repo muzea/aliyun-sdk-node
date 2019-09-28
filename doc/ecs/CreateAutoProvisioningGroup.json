@@ -1,0 +1,273 @@
+{
+  "name": "CreateAutoProvisioningGroup",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateAutoProvisioningGroup接口创建一个弹性供应组。",
+  "abc_id": 122738,
+  "timeout": 8000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "弹性供应组所在地域的ID，您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "TotalTargetCapacity": {
+      "name": "TotalTargetCapacity",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "60",
+      "description_cn": "弹性供应组的目标总容量，由以下三个部分组成：\n\n- **PayAsYouGoTargetCapacity**指定的按量付费实例目标容量。\n- **SpotTargetCapacity**指定的抢占式实例目标容量。\n- **PayAsYouGoTargetCapacity**和**SpotTargetCapacity**之外的差额容量。"
+    },
+    "LaunchTemplateId": {
+      "name": "LaunchTemplateId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "lt-bp1fgzds4bdogu03****",
+      "description_cn": "弹性供应组关联的实例启动模板的ID，您可以调用[DescribeLaunchTemplates](~~73759~~)查询可用的实例启动模板。\n\n一个弹性供应组只能关联一个实例启动模板，但是可以通过**LaunchTemplateConfig**配置多个扩展启动模板。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456"
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456"
+    },
+    "AutoProvisioningGroupName": {
+      "name": "AutoProvisioningGroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "apg-test",
+      "description_cn": "弹性供应组的名称。长度为 2~128 个英文或中文字符。必须以大小字母或中文开头，不能以 http:// 和 https:// 开头。可以包含数字、半角冒号（:）、下划线（_）或者连字符（-）。"
+    },
+    "AutoProvisioningGroupType": {
+      "name": "AutoProvisioningGroupType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "maintain",
+      "description_cn": "弹性供应组的类型，可选值：\n\n- **request**：一次性，供应组仅在启动时尝试一次交付实例集群，调度失败也不再重试。\n- **maintain**：持续保持，供应组在启动时尝试交付实例集群，并持续监控实时容量和目标容量，未达到目标容量则尝试继续创建实例满足容量需求。\n\n默认值：**maintain**。"
+    },
+    "SpotAllocationStrategy": {
+      "name": "SpotAllocationStrategy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "diversified",
+      "description_cn": "抢占式实例的扩容策略，可选值：\n\n- **lowest-price**：成本优化策略，选择价格最低的实例规格创建实例。\n- **diversified**：均衡可用区分布策略，在扩展启动模板指定的可用区创建实例，尽量将实例集群均匀分布到所有可用区。\n\n默认值：**lowest-price**。"
+    },
+    "SpotInstanceInterruptionBehavior": {
+      "name": "SpotInstanceInterruptionBehavior",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "terminate",
+      "description_cn": "抢占式实例关停后的默认动作，可选值：\n\n- **stop**：停止抢占式实例。\n- **terminate**：释放抢占式实例。\n\n默认值：**stop**。"
+    },
+    "SpotInstancePoolsToUseCount": {
+      "name": "SpotInstancePoolsToUseCount",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "在**SpotAllocationStrategy**为**lowest-price**时生效，弹性供应组选择价格最低的数个实例规格创建实例。"
+    },
+    "PayAsYouGoAllocationStrategy": {
+      "name": "PayAsYouGoAllocationStrategy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "prioritized",
+      "description_cn": "按量付费实例的扩容策略，可选值：\n\n- **lowest-price**：成本优化策略，选择价格最低的实例规格创建实例。\n- **prioritized**：优先级策略，按照**LaunchTemplateConfig.N.Priority**设定的优先级创建实例。\n\n默认值：**lowest-price**。"
+    },
+    "ExcessCapacityTerminationPolicy": {
+      "name": "ExcessCapacityTerminationPolicy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "termination",
+      "description_cn": "弹性供应组超过容量时，超额的抢占式实例的关停策略，可选值：\n\n- **no-termination**：超额的抢占式实例继续运行。\n- **termination**：关停超额的抢占式实例，关停后的动作由**SpotInstanceInterruptionBehavior**指定。\n\n默认值：**no-termination**。"
+    },
+    "ValidFrom": {
+      "name": "ValidFrom",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2019-04-01T15:10:20Z",
+      "description_cn": "弹性供应组的启动时间，和**ValidUntil**结合确定有效时段。\n\n默认为立即生效。"
+    },
+    "ValidUntil": {
+      "name": "ValidUntil",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2019-06-01T15:10:20Z",
+      "description_cn": "弹性供应组的到期时间，和**ValidFrom**结合确定有效时段。\n\n默认为无限期。"
+    },
+    "TerminateInstancesWithExpiration": {
+      "name": "TerminateInstancesWithExpiration",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "弹性供应组到期时的关停策略，可选值：\n\n- **true**：关停组内抢占式实例，关停后的动作由**SpotInstanceInterruptionBehavior**指定。\n- **false**：组内抢占式实例继续运行。\n\n默认值：**false**。"
+    },
+    "TerminateInstances": {
+      "name": "TerminateInstances",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "删除弹性供应组时是否释放组内实例，可选值：\n\n- **true**：释放组内实例。\n- **false**：保留组内实例。\n\n默认值：**false**。"
+    },
+    "MaxSpotPrice": {
+      "name": "MaxSpotPrice",
+      "type": "Float",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "弹性供应组内抢占式实例的全局价格上限，同时设置**MaxSpotPrice**和**LaunchTemplateConfig.N.MaxPrice**时，以较低者为准。"
+    },
+    "PayAsYouGoTargetCapacity": {
+      "name": "PayAsYouGoTargetCapacity",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "弹性供应组内按量付费实例的目标容量。"
+    },
+    "SpotTargetCapacity": {
+      "name": "SpotTargetCapacity",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "弹性供应组内抢占式实例的目标容量。"
+    },
+    "DefaultTargetCapacityType": {
+      "name": "DefaultTargetCapacityType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Spot",
+      "description_cn": "指定差额容量的类型，**PayAsYouGoTargetCapacity**和**SpotTargetCapacity**之和小于**TotalTargetCapacity**时，您可以指定补齐差额容量的实例类型。可选值：\n\n- **PayAsYouGo**：使用按量付费实例补齐差额容量。\n- **Spot**：使用抢占式实例补齐差额容量。\n\n默认值：**Spot**。"
+    },
+    "LaunchTemplateVersion": {
+      "name": "LaunchTemplateVersion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "弹性供应组关联的实例启动模板的版本，您可以调用[DescribeLaunchTemplateVersions](~~73761~~)查询可用的实例启动模板版本。"
+    },
+    "LaunchTemplateConfig": {
+      "name": "LaunchTemplateConfig",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "InstanceType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "MaxPrice",
+          "type": "Double",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "VSwitchId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "WeightedCapacity",
+          "type": "Double",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Priority",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "弹性供应组的描述信息。"
+    }
+  },
+  "res": {
+    "CreateAutoProvisioningGroupId": "apg-sn54avj8htgvtyh8****",
+    "RequestId": "745CEC9F-0DD7-4451-9FE7-8B752F39****"
+  }
+}

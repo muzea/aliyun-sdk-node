@@ -1,0 +1,40 @@
+{
+  "name": "UpdateApplication",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT",
+  "path": "/pop/v1/wam/application",
+  "summary_cn": "调用UpdateApplication更新应用。",
+  "abc_id": 127818,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "wa-5d1af9c802470221ab7*****",
+      "description_cn": "应用ID，将更新此应用的信息"
+    },
+    "AppDescription": {
+      "name": "AppDescription",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "This is a updated Description",
+      "description_cn": "应用描述信息"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,139 @@
+{
+  "name": "DescribeSubDomainRecords",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeSubDomainRecords根据传入参数获取某个固定子域名的所有解析记录列表。",
+  "abc_id": 29778,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SubDomain": {
+      "name": "SubDomain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "www.abc.com",
+      "description_cn": "子域名名称。\n\n例如`www.abc.com`，如果输入的是abc.com，则认为是@.abc.com。"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "语言。"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": "用户端IP。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "当前页数，起始值为**1**，默认为**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "分页查询时设置的每页行数，最大值**500**，默认为**20**。"
+    },
+    "Type": {
+      "name": "Type",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "MX",
+      "description_cn": "解析记录类型。若不传值，则返回子域名对应的全部解析记录类型。\n\n解析类型包括(不区分大小写)：**A、MX、CNAME、TXT、REDIRECT_URL、FORWORD_URL、NS、AAAA、SRV**。"
+    },
+    "Line": {
+      "name": "Line",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "default",
+      "description_cn": "解析线路。"
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "域名名称。"
+    }
+  },
+  "res": {
+    "RequestId": "536E9CAD-DB30-4647-AC87-AA5CC38C5382",
+    "TotalCount": 2,
+    "PageNumber": 1,
+    "PageSize": 2,
+    "DomainRecords": {
+      "Record": [
+        {
+          "DomainName": "example.com",
+          "RecordId": "9999985",
+          "RR": "www",
+          "Type": "CNAME",
+          "Value": "mail1.hichina.com",
+          "Line": "default",
+          "TTL": 600,
+          "Status": "Enable",
+          "Locked": false,
+          "Weight": 10
+        },
+        {
+          "DomainName": "example.com",
+          "RecordId": "9999986",
+          "RR": "www",
+          "Type": "CNAME",
+          "Value": "mail2.hichina.com",
+          "Line": "default",
+          "TTL": 600,
+          "Status": "Enable",
+          "Locked": false,
+          "Weight": 10
+        }
+      ]
+    }
+  }
+}

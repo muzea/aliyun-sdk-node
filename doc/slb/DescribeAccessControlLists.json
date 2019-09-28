@@ -1,0 +1,138 @@
+{
+  "name": "DescribeAccessControlLists",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeAccessControlLists查询已创建的访问控制策略组。",
+  "abc_id": 70052,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "访问控制策略组的地域ID。\n\n您可以通过调用[DescribeRegions](~~27584~~)接口查询地域ID。\n\n"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "AclName": {
+      "name": "AclName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rule1",
+      "description_cn": "访问控制策略组名称。"
+    },
+    "AddressIPVersion": {
+      "name": "AddressIPVersion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ipv4",
+      "description_cn": "访问控制策略组绑定的实例的IP类型。取值：\n\n- **ipv4**：负载均衡实例的IP地址是IPv4类型。\n\n- **ipv6**：负载均衡实例的IP地址是IPv6类型。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时每页的行数，最大值为50，默认值为10。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "列表的页码，默认值为1。"
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rg-atstuj3rtoptyui",
+      "description_cn": "企业资源组ID。"
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {
+    "RequestId": "3CB646EF-6147-4566-A9D9-CE8FBE86F971",
+    "Acls": {
+      "Acl": [
+        {
+          "AclId": "acl-bp1j9vn2g7wm9wn0xassu",
+          "AclName": "test",
+          "AddressIPVersion": "ipv4"
+        },
+        {
+          "AclId": "acl-bp1l0kk4gxce43kzet04s",
+          "AclName": "doctest",
+          "AddressIPVersion": "ipv4"
+        }
+      ]
+    }
+  }
+}

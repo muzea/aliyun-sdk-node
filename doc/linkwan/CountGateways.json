@@ -1,0 +1,88 @@
+{
+  "name": "CountGateways",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CountGateways统计当前用户账号名下符合过滤条件的网关数量。",
+  "abc_id": 109913,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "OnlineState": {
+      "name": "OnlineState",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ONLINE",
+      "description_cn": "网关在离线状态过滤。\n\n若未传入此参数，则不限制在线状态。可取值为**ONLINE**和**OFFLINE**。"
+    },
+    "FuzzyGwEui": {
+      "name": "FuzzyGwEui",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456",
+      "description_cn": "GwEUI模糊过滤。"
+    },
+    "FuzzyCity": {
+      "name": "FuzzyCity",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "杭州",
+      "description_cn": "城市名模糊过滤。"
+    },
+    "FuzzyName": {
+      "name": "FuzzyName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "name",
+      "description_cn": "网关名称模糊过滤。"
+    },
+    "FreqBandPlanGroupId": {
+      "name": "FreqBandPlanGroupId",
+      "type": "Long",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123",
+      "description_cn": "网关频段ID过滤。"
+    },
+    "IsEnabled": {
+      "name": "IsEnabled",
+      "type": "Boolean",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "网关启停用状态过滤。\n\n若未传入此参数，则不限制启停状态。"
+    }
+  },
+  "res": {}
+}

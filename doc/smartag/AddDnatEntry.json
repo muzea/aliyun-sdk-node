@@ -1,0 +1,113 @@
+{
+  "name": "AddDnatEntry",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AddDnatEntry给智能接入网关实例添加DNAT条目。",
+  "abc_id": 125444,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "智能接入网关实例所在的地域ID。"
+    },
+    "SagId": {
+      "name": "SagId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "sag-kdhg*******",
+      "description_cn": "智能接入网关实例ID。\n\n> 目前只支持硬件版实例。"
+    },
+    "ExternalPort": {
+      "name": "ExternalPort",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "80",
+      "description_cn": "公网端口。\n\n取值范围：**1-65535**。"
+    },
+    "InternalIp": {
+      "name": "InternalIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "192.168.0.1",
+      "description_cn": "目标私网IP地址。"
+    },
+    "IpProtocol": {
+      "name": "IpProtocol",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "TCP",
+      "description_cn": "协议类型，包含以下选项：\n\n* TCP：转发TCP协议的报文。\n\n* UDP：转发UDP协议的报文。\n\n* Any：转发所有协议的报文。"
+    },
+    "InternalPort": {
+      "name": "InternalPort",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "80",
+      "description_cn": "目标私网端口号。\n\n取值范围：**1-65535**。"
+    },
+    "Type": {
+      "name": "Type",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "Intranet",
+      "description_cn": "DNAT类型，包括以下选项：\n\n* Intranet：缺省值，表示私网DNAT。\n\n* Internet：公网DNAT。"
+    },
+    "ExternalIp": {
+      "name": "ExternalIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "10.10.**.**",
+      "description_cn": "外部的公网IP地址。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "DnatEntryId": "dnat-m2obgkt5ya1puz8qh1",
+    "RequestId": "56BF6C79-C77D-41A0-86DD-A4B156E784EA"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "name": "AddClusterService",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 AddClusterService 接口，为指定的集群添加当前集群的主版本支持的某项服务。",
+  "abc_id": 100538,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "集群对应的地域ID。"
+    },
+    "Service": {
+      "name": "Service",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "ServiceName",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        }
+      ]
+    },
+    "ClusterId": {
+      "name": "ClusterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "C-F32FB31D8295****",
+      "description_cn": "待添加服务的集群ID。"
+    },
+    "Comment": {
+      "name": "Comment",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "addService",
+      "description_cn": "本次添加服务的备注信息。"
+    }
+  },
+  "res": {
+    "requestId": "EBB4D49C-4064-4818-B3AE-4C6BE5FC8264"
+  }
+}

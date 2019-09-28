@@ -1,0 +1,35 @@
+{
+  "name": "DescribeFabricConsortiumConfig",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeFabricConsortiumConfig获取“创建联盟”的参数可选值。",
+  "abc_id": 127322,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域。"
+    }
+  },
+  "res": {
+    "Result": {
+      "OrdererType": [
+        "Solo",
+        "Kafka"
+      ],
+      "ChannelPolicy": [
+        "Any"
+      ]
+    },
+    "RequestId": "1D606B42-57BD-486E-8CAB-E184A1C37E57",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

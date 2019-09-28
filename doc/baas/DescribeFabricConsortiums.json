@@ -1,0 +1,69 @@
+{
+  "name": "DescribeFabricConsortiums",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|PUT|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeFabricConsortiums获取联盟列表。",
+  "abc_id": 127863,
+  "timeout": 9000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "ConsortiumId": {
+      "name": "ConsortiumId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "consortium-lianmenyumingyi-hc5d1bwl****",
+      "description_cn": "联盟ID"
+    },
+    "Location": {
+      "name": "Location",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "位置"
+    }
+  },
+  "res": {
+    "Result": [
+      {
+        "Domain": "perf9141perf9141perf9141pef9141.asdadadewdasada.top",
+        "ConsortiumId": "10000",
+        "OrganizationCount": 2,
+        "ChannelCount": 0,
+        "ConsortiumName": "quickstart",
+        "DeleteTime": "",
+        "OwnerUid": 1204281570282129,
+        "State": "Created",
+        "RegionId": "cn-beijing",
+        "RequestId": "3A929FAC-A82D-4EAB-A0FF-D867426D8B23",
+        "CreateTime": "2018-07-16T05:31:32.000+0000",
+        "CodeName": "quickstart",
+        "OwnerName": "uid-1204281570282129",
+        "OwnerBid": "26842",
+        "ChannelPolicy": "Any",
+        "SpecName": "basic",
+        "SupportChannelConfig": true
+      }
+    ],
+    "RequestId": "C445762C-8909-4BD8-A2BD-BB45BF2441D8",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

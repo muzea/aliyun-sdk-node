@@ -1,0 +1,61 @@
+{
+  "name": "AppendObject",
+  "protocol": "HTTP|HTTPS",
+  "method": "GET",
+  "path": "/[ObjectName]",
+  "timeout": null,
+  "reqFormat": {
+    "BucketName": {
+      "name": "BucketName",
+      "position": "domain",
+      "required": true
+    },
+    "ObjectName": {
+      "name": "ObjectName",
+      "position": "path",
+      "required": true
+    },
+    "append": {
+      "name": "append",
+      "position": "query",
+      "required": true,
+      "default": ""
+    },
+    "position": {
+      "name": "position",
+      "position": "query",
+      "required": true
+    },
+    "Cache-Control": {
+      "name": "Cache-Control",
+      "position": "header",
+      "required": false
+    },
+    "Content-Disposition": {
+      "name": "Content-Disposition",
+      "position": "header",
+      "required": false
+    },
+    "Content-Encoding": {
+      "name": "Content-Encoding",
+      "position": "header",
+      "required": false
+    },
+    "Expires": {
+      "name": "Expires",
+      "position": "header",
+      "required": false
+    },
+    "x-oss-server-side-encryption": {
+      "name": "x-oss-server-side-encryption",
+      "position": "header",
+      "required": false
+    },
+    "x-oss-object-acl": {
+      "name": "x-oss-object-acl",
+      "position": "header",
+      "required": false
+    }
+  },
+  "res": {}
+}

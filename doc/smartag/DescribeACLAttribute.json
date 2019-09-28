@@ -1,0 +1,110 @@
+{
+  "name": "DescribeACLAttribute",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeACLAttribute批量查询访问控制，需要增加Name参数，支持按照Name过滤。",
+  "abc_id": 114017,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "AclId": {
+      "name": "AclId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "acl-ohlexqptfhy******",
+      "description_cn": "访问控制ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时每页的行数，最大值为50，默认值为10。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "列表的页码，默认值为1。"
+    },
+    "Direction": {
+      "name": "Direction",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "规则方向。\n\n取值：**in|out**"
+    },
+    "Order": {
+      "name": "Order",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1255444444",
+      "description_cn": "订单号。"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "Acrs": {
+      "Acr": [
+        {
+          "IpProtocol": "TCP",
+          "SourceCidr": "192.168.3.0/24",
+          "SourcePortRange": "1/65535",
+          "AclId": "acl-xhwhyuo43l0n******",
+          "AcrId": "acr-oicr94jwtpi******",
+          "Policy": "accept",
+          "DestPortRange": "1/65535",
+          "DestCidr": "10.0.0.1/32",
+          "GmtCreate": 1553077933000,
+          "Direction": "out",
+          "Priority": 1
+        }
+      ]
+    },
+    "TotalCount": 1,
+    "PageSize": 10,
+    "RequestId": "5DC67C13-B0E4-45E0-A60C-D32D3B74AB19"
+  }
+}

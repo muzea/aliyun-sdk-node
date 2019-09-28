@@ -1,0 +1,137 @@
+{
+  "name": "ApplyAntChainCertificateWithKeyAutoCreation",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|PUT|GET",
+  "path": "/",
+  "summary_cn": "申请链接一条蚂蚁区块链，自动生成证书等连接信息",
+  "abc_id": 127082,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID"
+    },
+    "ConsortiumId": {
+      "name": "ConsortiumId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "DV80nJXq",
+      "description_cn": "联盟ID"
+    },
+    "Password": {
+      "name": "Password",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "password",
+      "description_cn": "SSL密钥密码\n"
+    },
+    "CountryName": {
+      "name": "CountryName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "countryName",
+      "description_cn": "城市名（L）"
+    },
+    "StateOrProvinceName": {
+      "name": "StateOrProvinceName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "stateOrProvinceName",
+      "description_cn": "省名（ST）\n"
+    },
+    "LocalityName": {
+      "name": "LocalityName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "localityName",
+      "description_cn": "国家名（C）"
+    },
+    "OrganizationName": {
+      "name": "OrganizationName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "organizationName  ",
+      "description_cn": "机构名（O）"
+    },
+    "OrganizationUnitName": {
+      "name": "OrganizationUnitName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "organizationUnitName  ",
+      "description_cn": "组织单位名（OU）\n"
+    },
+    "CommonName": {
+      "name": "CommonName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "commonName",
+      "description_cn": "通用名称（CN）"
+    },
+    "AntChainId": {
+      "name": "AntChainId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1q8B5R9p",
+      "description_cn": "区块链ID"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "3E1894AF-FEE7-4C6C-8C2A-2B3EE0105B07",
+      "Result": {
+        "PrivateKey": "-----BEGIN ENCRYPTED PRIVATE KEY-----\nMII***A=\n-----END ENCRYPTED PRIVATE KEY-----\n",
+        "DownloadPath": {
+          "SdkUrl": "http://***",
+          "TrustCaUrl": "http://***trustCa",
+          "CaCrtUrl": "http://***ca.crt",
+          "ClientCrtUrl": "http://***client.crt"
+        }
+      }
+    },
+    "requestId": "3E1894AF-FEE7-4C6C-8C2A-2B3EE0105B07",
+    "successResponse": true
+  }
+}

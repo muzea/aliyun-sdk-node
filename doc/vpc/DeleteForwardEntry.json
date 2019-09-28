@@ -1,0 +1,52 @@
+{
+  "name": "DeleteForwardEntry",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteForwardEntry接口删除指定的DNAT条目。",
+  "abc_id": 36050,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "NAT网关所在的地域。\n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "ForwardTableId": {
+      "name": "ForwardTableId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ftb-8vbx8xu2lqj9qb334h0ow",
+      "description_cn": " DNAT列表ID。  "
+    },
+    "ForwardEntryId": {
+      "name": "ForwardEntryId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "fwd-8vbn3bc8roygjp0gy3xk7",
+      "description_cn": " DNAT条目ID。  "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "0ED8D006-F706-4D23-88ED-E11ED28DCAC0"
+  }
+}

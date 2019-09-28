@@ -1,0 +1,103 @@
+{
+  "name": "SingleCallByVoice",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用接口SingleCallByVoice发起语音文件类型的语音通知。",
+  "abc_id": 114036,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CalledShowNumber": {
+      "name": "CalledShowNumber",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "4001112222",
+      "description_cn": "被叫显号，必须是已购买的号码。\n\n您可以在[语音服务控制台](https://dyvms.console.aliyun.com/dyvms.htm#/number/normal)上查看已购买的号码。"
+    },
+    "CalledNumber": {
+      "name": "CalledNumber",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "13700000000",
+      "description_cn": "被叫号码。仅支持中国大陆号码。"
+    },
+    "VoiceCode": {
+      "name": "VoiceCode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2d4c-4e78-8d2a-afbb06cf6216.wav",
+      "description_cn": "语音文件的语音ID，可以在[文本转语音模板页面](https://dyvms.console.aliyun.com/dyvms.htm#/file/notify)查看语音ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "PlayTimes": {
+      "name": "PlayTimes",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3",
+      "description_cn": "语音文件的播放次数，取值范围为1~3。"
+    },
+    "Volume": {
+      "name": "Volume",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "100",
+      "description_cn": "语音文件播放的音量。取值范围为0~100，默认为100。"
+    },
+    "Speed": {
+      "name": "Speed",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "100",
+      "description_cn": "> 该参数为废弃参数，暂不支持使用。"
+    },
+    "OutId": {
+      "name": "OutId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "abcdefgh",
+      "description_cn": "预留给调用方使用的ID, 最终会通过在回执消息中将此ID带回给调用方。\n\n字符串类型，长度为1~15个字节。"
+    }
+  },
+  "res": {
+    "Message": "OK",
+    "RequestId": "E50FFA85-0B79-4421-A7BD-00B0A271966F",
+    "Code": "OK",
+    "CallId": "116004767703^102806207703"
+  }
+}

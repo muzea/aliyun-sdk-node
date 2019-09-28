@@ -1,0 +1,113 @@
+{
+  "name": "SingleCallByTts",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用接口SingleCallByTts发起语音通知，播放的音频为文本转语音模板转换后的音频文件。",
+  "abc_id": 114035,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CalledShowNumber": {
+      "name": "CalledShowNumber",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "4001112222",
+      "description_cn": "被叫显号，必须是已购买的号码。\n\n您可以在[语音服务控制台](https://dyvms.console.aliyun.com/dyvms.htm#/number/normal)上查看已购买的号码。"
+    },
+    "CalledNumber": {
+      "name": "CalledNumber",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "13700000000",
+      "description_cn": "被叫号码。仅支持中国大陆号码。"
+    },
+    "TtsCode": {
+      "name": "TtsCode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "TTS_10001",
+      "description_cn": "文本转语音（TTS）模板ID。可以在[文本转语音模板页面](https://dyvms.console.aliyun.com/dyvms.htm#/template)查看模板ID。\n\n> 必须是已审核通过的文本转语音模板。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "TtsParam": {
+      "name": "TtsParam",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{“AckNum”:”123456”}",
+      "description_cn": "文本转语音（TTS）模板变量转换关系，格式为JSON。"
+    },
+    "PlayTimes": {
+      "name": "PlayTimes",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3",
+      "description_cn": "语音通知的播放次数，取值范围为1~3。"
+    },
+    "Volume": {
+      "name": "Volume",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "100",
+      "description_cn": "语音通知的播放音量。取值范围为0~100，默认为100。"
+    },
+    "Speed": {
+      "name": "Speed",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "5",
+      "description_cn": "> 该参数为废弃参数，暂不支持使用。"
+    },
+    "OutId": {
+      "name": "OutId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "abcdefgh",
+      "description_cn": "预留给调用方使用的ID, 最终会通过在回执消息中将此ID带回给调用方。\n\n字符串类型，长度为1~15个字节。"
+    }
+  },
+  "res": {
+    "Message": "OK",
+    "RequestId": "D9CB3933-9FE3-4870-BA8E-2BEE91B69D23",
+    "Code": "OK",
+    "CallId": "116012354148^102813784148"
+  }
+}

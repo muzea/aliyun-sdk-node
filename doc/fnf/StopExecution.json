@@ -1,0 +1,62 @@
+{
+  "name": "StopExecution",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/",
+  "summary_cn": "调用StopExecution停止一个正在执行中的流程。",
+  "abc_id": 122627,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "FlowName": {
+      "name": "FlowName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "flow",
+      "description_cn": "需要停止的流程名称。"
+    },
+    "ExecutionName": {
+      "name": "ExecutionName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "exec",
+      "description_cn": "需要停止的执行名称，可通过ListExecuiton、StartExecution的返回值获取。"
+    },
+    "Cause": {
+      "name": "Cause",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "for test",
+      "description_cn": "停止错误原因。"
+    },
+    "Error": {
+      "name": "Error",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "nill",
+      "description_cn": "停止错误代码。"
+    }
+  },
+  "res": {}
+}

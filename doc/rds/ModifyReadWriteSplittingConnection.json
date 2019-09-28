@@ -1,0 +1,88 @@
+{
+  "name": "ModifyReadWriteSplittingConnection",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyReadWriteSplittingConnection接口修改读写分离链路的延迟阈值和各个实例的读权重。",
+  "abc_id": 57004,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "主实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ConnectionStringPrefix": {
+      "name": "ConnectionStringPrefix",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rm-m5xxxxxxxx.mysql.rds.aliyuncs.com",
+      "description_cn": "读写分离地址前缀名，不可重复，由小写字母和中划线组成，需以字母开头，长度不超过30个字符。\n>默认以“实例名+rw”字符串组成前缀。"
+    },
+    "Port": {
+      "name": "Port",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3306",
+      "description_cn": "读写分离地址端口号。"
+    },
+    "MaxDelayTime": {
+      "name": "MaxDelayTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "12",
+      "description_cn": "延迟阈值，单位为秒。当只读实例延迟时间超过该阈值时，读取流量不发往该实例。不传该参数则保持原值。\n>* 参数**MaxDelayTime**不适用于SQL Server 2017集群版实例；\n* 至少传入**MaxDelayTime**或**DistributionType**中的一个。"
+    },
+    "DistributionType": {
+      "name": "DistributionType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Standard",
+      "description_cn": "读权重分配模式，取值：\n* **Standard**：按规格权重自动分配；\n* **Custom**：自定义分配权重。\n\n>至少传入**MaxDelayTime**或**DistributionType**中的一个。"
+    },
+    "Weight": {
+      "name": "Weight",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{“Instanceid1“:”100”,”Instanceid2”:”200”}",
+      "description_cn": "读权重分配，即传入主实例和只读实例的读请求权重。以100递增，最大值为10000，格式：{“Instanceid1“:”Weight”,”Instanceid2”:”Weight”...}。\n\n>* 当**DistributionType**为**Custom**时，必须传入该参数；\n* 当**DisrtibutionType**为**Standard**时，传入该参数无效。"
+    }
+  },
+  "res": {
+    "RequestID": "5A77D650-27A1-4E08-AD9E-59008EDB6927"
+  }
+}

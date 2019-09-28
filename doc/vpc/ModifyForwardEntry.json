@@ -1,0 +1,110 @@
+{
+  "name": "ModifyForwardEntry",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyForwardEntry接口修改指定的DNAT条目。",
+  "abc_id": 36056,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": " cn-hangzhou",
+      "description_cn": "NAT网关所在的地域。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "ForwardEntryId": {
+      "name": "ForwardEntryId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "fwd-8vbn3bc8roygjp0gy3xk7",
+      "description_cn": " DNAT条目的ID。 "
+    },
+    "ForwardTableId": {
+      "name": "ForwardTableId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ftb-8vbx8xu2lqj9qb334h0ow",
+      "description_cn": " DNAT列表的ID。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ExternalIp": {
+      "name": "ExternalIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "116.62.222.28",
+      "description_cn": " 公网IP地址。 "
+    },
+    "ExternalPort": {
+      "name": "ExternalPort",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "80",
+      "description_cn": "公网端口。取值范围：1-65535。"
+    },
+    "InternalIp": {
+      "name": "InternalIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10.34.56.78",
+      "description_cn": "目标私网IP。"
+    },
+    "InternalPort": {
+      "name": "InternalPort",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "80",
+      "description_cn": "目标私网端口。取值范围：1-65535。"
+    },
+    "IpProtocol": {
+      "name": "IpProtocol",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "TCP",
+      "description_cn": "协议类型。取值：\n           \n- **TCP**：转发TCP协议的报文。\n   \n- **UDP**：转发UDP协议的报文。\n   \n- **Any**：转发所有协议的报文。   "
+    },
+    "ForwardEntryName": {
+      "name": "ForwardEntryName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "2315DEB7-5E92-423A-91F7-4C1EC9AD97C3"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "name": "StopInstance",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用StopInstance停止运行一台实例。",
+  "abc_id": 25501,
+  "timeout": 80000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "i-instanceid1",
+      "description_cn": "指定的实例ID。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "ConfirmStop": {
+      "name": "ConfirmStop",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否确认关机。仅对i1型实例规格族生效，且为i1型的实例规格族的必选参数。\n\n默认值：false。"
+    },
+    "ForceStop": {
+      "name": "ForceStop",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "停止实例时的是否强制关机策略。取值范围：\n\n-   true：强制关机。\n-   false（默认）：正常关机流程。\n"
+    },
+    "StoppedMode": {
+      "name": "StoppedMode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "keepcharging",
+      "description_cn": "停止ECS实例后，实例依然计费。取值：KeepCharging\n\n开通[默认VPC内实例停机不收费](~~63353~~)功能后，您可以通过设置`StoppedMode=KeepCharging`保持停机收费，ECS实例停止后会继续计费，并为您保留ECS实例规格库存和公网IP地址。"
+    },
+    "DryRun": {
+      "name": "DryRun",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Hibernate": {
+      "name": "Hibernate",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "1C488B66-B819-4D14-8711-C4EAAA13AC01"
+  }
+}

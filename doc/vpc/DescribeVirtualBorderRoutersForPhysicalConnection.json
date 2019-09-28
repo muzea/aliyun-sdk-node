@@ -1,0 +1,112 @@
+{
+  "name": "DescribeVirtualBorderRoutersForPhysicalConnection",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeVirtualBorderRoutersForPhysicalConnection接口查询指定物理专线下的边界路由器（VBR），包括物理专线所有者的VBR和其他账号的VBR。",
+  "abc_id": 36025,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": " 物理专线所在的地域。 您可以通过调用[DescribeRegions](~~36063~~) 接口获取地域ID。  "
+    },
+    "PhysicalConnectionId": {
+      "name": "PhysicalConnectionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "pc-119mfj****",
+      "description_cn": " 物理专线的ID。 "
+    },
+    "Filter": {
+      "name": "Filter",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        }
+      ]
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": " 列表的页码，默认值为**1**。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": " 分页查询时每页的行数，最大值为**50**，默认值为**10**。  "
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 2,
+    "PageSize": 10,
+    "RequestId": "03E8CB87-5876-4034-BBB2-6E0851281C37",
+    "VirtualBorderRouterForPhysicalConnectionSet": {
+      "VirtualBorderRouterForPhysicalConnectionType": [
+        {
+          "ActivationTime": "2018-03-06T11:16:34Z",
+          "CreationTime": "2018-03-06T11:16:34Z",
+          "CircuitCode": "",
+          "VlanId": 10,
+          "RecoveryTime": "",
+          "VbrOwnerUid": "1231579085xxxxxx529123",
+          "TerminationTime": "",
+          "VbrId": "vbr-2zecmmvg5gvu8xxxxw"
+        },
+        {
+          "ActivationTime": "2018-01-04T13:34:18Z",
+          "CreationTime": "2018-01-04T13:34:18Z",
+          "CircuitCode": "",
+          "VlanId": 100,
+          "RecoveryTime": "",
+          "VbrOwnerUid": "1231579085xxx",
+          "TerminationTime": "",
+          "VbrId": "vbr-2zee2e2cwetx4k0txxxxakw"
+        }
+      ]
+    }
+  }
+}

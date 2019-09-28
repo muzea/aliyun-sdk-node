@@ -1,0 +1,90 @@
+{
+  "name": "UpdateUser",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用UpdateUser接口更新用户的基本信息。",
+  "abc_id": 28682,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "UserName": {
+      "name": "UserName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "zhangq****",
+      "description_cn": "指定用户名。"
+    },
+    "NewUserName": {
+      "name": "NewUserName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "xiaoq****",
+      "description_cn": "指定新用户名。\n\n格式：`^[a-zA-Z0-9\\.@\\-_]+$`。"
+    },
+    "NewDisplayName": {
+      "name": "NewDisplayName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "xiaoq****",
+      "description_cn": "指定新显示名称。"
+    },
+    "NewMobilePhone": {
+      "name": "NewMobilePhone",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "86-1860000****",
+      "description_cn": "指定RAM用户新手机号。\n\n格式：国际区号-号码。"
+    },
+    "NewEmail": {
+      "name": "NewEmail",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "xiaoq****@example.com",
+      "description_cn": "指定RAM用户的新邮箱。"
+    },
+    "NewComments": {
+      "name": "NewComments",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "这是一位云计算工程师",
+      "description_cn": "指定新备注, 最大长度128个字符。"
+    }
+  },
+  "res": {
+    "RequestId": "04F0F334-1335-436C-A1D7-6C044FE73368",
+    "User": {
+      "UserId": "1227489245380721",
+      "UserName": "xiaoqiang",
+      "DisplayName": "张强",
+      "MobilePhone": "86-18600008888",
+      "Email": "zhangqiang@example.com",
+      "Comments": "这是一位云计算工程师",
+      "CreateDate": "2015-01-23T12:33:18Z",
+      "UpdateDate": "2015-02-11T03:15:21Z"
+    }
+  }
+}

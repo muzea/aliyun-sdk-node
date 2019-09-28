@@ -1,0 +1,186 @@
+{
+  "name": "DescribeVpcs",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeVpcs接口查询已创建的VPC。",
+  "abc_id": 35739,
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": " VPC所在的地域。 \n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "VpcId": {
+      "name": "VpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc-257gq64****",
+      "description_cn": "VPC的ID。 \n\n最多支持指定20个VPC ID，多个VPC ID之间用半角逗号隔开。 "
+    },
+    "VpcName": {
+      "name": "VpcName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Vpc-1",
+      "description_cn": "VPC的名称。"
+    },
+    "IsDefault": {
+      "name": "IsDefault",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": " 是否查询指定地域下的默认VPC，取值： \n\n- **true**（默认值）：查询指定地域下的所有VPC。  \n\n- **false**：不查询默认VPC。  \n"
+    },
+    "DryRun": {
+      "name": "DryRun",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rg-acfmxazb4p****",
+      "description_cn": "要查询的VPC所属资源组ID。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": " 列表的页码，默认值为**1**。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": " 分页查询时每页的行数，最大值为**50**，默认值为**10**。  "
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "Vpcs": {
+      "Vpc": [
+        {
+          "VpcName": "",
+          "Description": "",
+          "IsDefault": false,
+          "ResourceGroupId": "rg-acfmxazb4ph6aiy",
+          "UserCidrs": {
+            "UserCidr": []
+          },
+          "NatGatewayIds": {
+            "NatGatewayIds": []
+          },
+          "RouterTableIds": {
+            "RouterTableIds": [
+              "vtb-bp1krxxzp0c29fmontbal"
+            ]
+          },
+          "VpcId": "vpc-bp1qpo0kug3a20qqe9h7v",
+          "VRouterId": "vrt-bp1jcg5cmxjbl9xgc58bw",
+          "CreationTime": "2018-12-06T06:11:55Z",
+          "Status": "Available",
+          "CidrBlock": "172.16.0.0/12",
+          "VSwitchIds": {
+            "VSwitchId": []
+          },
+          "RegionId": "cn-hangzhou",
+          "Ipv6CidrBlock": ""
+        },
+        {
+          "VpcName": "kttest",
+          "Description": "",
+          "IsDefault": false,
+          "ResourceGroupId": "rg-acfmxazb4ph6aiy",
+          "UserCidrs": {
+            "UserCidr": []
+          },
+          "NatGatewayIds": {
+            "NatGatewayIds": []
+          },
+          "RouterTableIds": {
+            "RouterTableIds": [
+              "vtb-bp1blq1oh0ybfnpm1bh20"
+            ]
+          },
+          "VpcId": "vpc-bp1aevy8sofi8mh1qc5cm",
+          "VRouterId": "vrt-bp149ve7yeyvio4ncklxz",
+          "CreationTime": "2018-11-08T08:54:03Z",
+          "Status": "Available",
+          "CidrBlock": "192.168.0.0/16",
+          "VSwitchIds": {
+            "VSwitchId": [
+              "vsw-bp12mw1f8k3jgygk9bmlj"
+            ]
+          },
+          "RegionId": "cn-hangzhou",
+          "Ipv6CidrBlock": ""
+        }
+      ]
+    },
+    "TotalCount": 2,
+    "PageSize": 10,
+    "RequestId": "C6532AA8-D0F7-497F-A8EE-094126D441F5"
+  }
+}

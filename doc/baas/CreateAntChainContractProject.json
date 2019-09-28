@@ -1,0 +1,82 @@
+{
+  "name": "CreateAntChainContractProject",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "在联盟内创建一个合约工程",
+  "abc_id": 127101,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "区域ID"
+    },
+    "ProjectName": {
+      "name": "ProjectName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "projectname",
+      "description_cn": "项目名称"
+    },
+    "ProjectVersion": {
+      "name": "ProjectVersion",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "v1.0.0",
+      "description_cn": "项目版本"
+    },
+    "ConsortiumId": {
+      "name": "ConsortiumId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "DV80nJXq",
+      "description_cn": "联盟ID"
+    },
+    "ProjectDescription": {
+      "name": "ProjectDescription",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "project description",
+      "description_cn": "工程描述"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "4261A4C3-B8B5-4555-AEBC-944C3EAB23DB",
+      "Result": {
+        "ConsortiumId": "DV80nJXq",
+        "ProjectName": "projectname",
+        "CreateTime": 1563951889044,
+        "ProjectVersion": "v1.0.0",
+        "UpdateTime": 1563951889140,
+        "ProjectId": "R38DAbop",
+        "ProjectDescription": "project description"
+      }
+    },
+    "requestId": "4261A4C3-B8B5-4555-AEBC-944C3EAB23DB",
+    "successResponse": true
+  }
+}

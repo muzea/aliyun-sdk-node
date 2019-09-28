@@ -1,0 +1,90 @@
+{
+  "name": "DescribePropertySoftwareItem",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用该接口获取软件列表.。",
+  "abc_id": 131012,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "ForceFlush": {
+      "name": "ForceFlush",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否强制刷新待查询数据。"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "xxx",
+      "description_cn": "指定待查询的软件名称。"
+    },
+    "CurrentPage": {
+      "name": "CurrentPage",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "指定返回结果的当前页码。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "指定列表每页显示数据条数 。"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "PropertyItems": [
+        {
+          "Name": "a11y-profile-manager-indicator",
+          "Count": 1
+        },
+        {
+          "Name": "aaa_base",
+          "Count": 23
+        }
+      ],
+      "PageInfo": {
+        "Count": 2,
+        "PageSize": 2,
+        "TotalCount": 5037,
+        "CurrentPage": 1
+      }
+    },
+    "success": true,
+    "requestId": null,
+    "message": "successful"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "DeleteFlow",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 DeleteFlow 接口删除工作流",
+  "abc_id": 100906,
+  "timeout": 8000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "ProjectId": {
+      "name": "ProjectId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "FP-257A173659F59685",
+      "description_cn": "项目ID。"
+    },
+    "Id": {
+      "name": "Id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "F-7A39731FE7196358",
+      "description_cn": "工作流ID。"
+    }
+  },
+  "res": {
+    "RequestId": "ECC2D0D1-B6D5-468D-B698-30E8805EB574",
+    "Data": true
+  }
+}

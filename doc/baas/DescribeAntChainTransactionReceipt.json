@@ -1,0 +1,59 @@
+{
+  "name": "DescribeAntChainTransactionReceipt",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "根据交易哈希查询一条蚂蚁区块链的交易回执信息",
+  "abc_id": 127158,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID"
+    },
+    "Hash": {
+      "name": "Hash",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "b3b0d2db83d3e670449d1e2a39d1d13b7e0e6080b0f9c6945f79eca68d1dd2ca",
+      "description_cn": "交易哈希"
+    },
+    "AntChainId": {
+      "name": "AntChainId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "pYogqb9v",
+      "description_cn": "区块链ID"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "9EC8FDC1-ED32-4EC0-AEC2-AFAA906ADBAB",
+      "Result": {
+        "Data": "",
+        "Logs": [
+          ""
+        ],
+        "GasUsed": "20000",
+        "Result": 0
+      }
+    },
+    "requestId": "9EC8FDC1-ED32-4EC0-AEC2-AFAA906ADBAB",
+    "successResponse": true
+  }
+}

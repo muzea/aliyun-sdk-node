@@ -1,0 +1,58 @@
+{
+  "name": "ModifyDBInstanceHAConfig",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyDBInstanceHAConfig接口修改实例的高可用模式和数据复制方式。",
+  "abc_id": 26250,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SyncMode": {
+      "name": "SyncMode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "Sync",
+      "description_cn": "[数据复制方式](~~26183~~)，取值：\n* **Sync**：强同步；\n* **Semi-sync**：半同步；\n* **Async**：异步。\n\n>* 对于SQL Server 2012/2016双机高可用版，值为**Sync**或**Async**；\n* 对于SQL Server 2017集群版，值为**Semi-sync**。"
+    },
+    "HAMode": {
+      "name": "HAMode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "RPO",
+      "description_cn": "高可用模式，取值：\n* **RPO**：数据一致性优先，实例会尽可能保障数据的可靠性，即数据丢失量最少。对于数据一致性要求比较高的用户应该使用RPO模式；\n* **RTO**：实例可用性优先，实例会尽快恢复服务，即可用时间最长。对于数据库在线时间要求比较高的用户应该使用RTO模式。"
+    },
+    "DbInstanceId": {
+      "name": "DbInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "D4D4BE8A-DD46-440A-BFCD-EE31DA81C9DD"
+  }
+}

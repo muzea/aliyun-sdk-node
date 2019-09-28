@@ -1,0 +1,198 @@
+{
+  "name": "PutEventRuleTargets",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "添加或者修改规则的发送目标。",
+  "abc_id": 114990,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "RuleName": {
+      "name": "RuleName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "testEventRule",
+      "description_cn": "报警规则名称。"
+    },
+    "FcParameters": {
+      "name": "FcParameters",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Id",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Region",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ServiceName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "FunctionName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "ContactParameters": {
+      "name": "ContactParameters",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Id",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ContactGroupName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Level",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "MnsParameters": {
+      "name": "MnsParameters",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Id",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Region",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Queue",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "WebhookParameters": {
+      "name": "WebhookParameters",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Id",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Protocol",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Url",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Method",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "SlsParameters": {
+      "name": "SlsParameters",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Id",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Region",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Project",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "LogStore",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {
+    "RequestId": "409C64DA-CF14-45DF-B463-471C790DD15A",
+    "Success": true,
+    "Code": "200"
+  }
+}

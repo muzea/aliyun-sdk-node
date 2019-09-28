@@ -1,0 +1,133 @@
+{
+  "name": "DescribeFlowLogs",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeFlowLogs查询流日志。",
+  "abc_id": 134922,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "流日志地域ID。"
+    },
+    "FlowLogId": {
+      "name": "FlowLogId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "fl-7a56mar1kfw9vj****",
+      "description_cn": "流日志实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "FlowLogName": {
+      "name": "FlowLogName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "DDE",
+      "description_cn": "流日志实例名称。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "流日志1",
+      "description_cn": "流日志实例描述。"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Active",
+      "description_cn": "流日志实例状态：\n\n- **Active**：已启动。\n\n- **Inactive**：未启动。"
+    },
+    "OutputType": {
+      "name": "OutputType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sls",
+      "description_cn": "流日志输出类型：\n\n- **sls**：流日志存储在阿里云日志服务。\n\n- **netflow**：流日志存储在您配置的netflow服务器。\n\n- **all**：流日志同时存储在阿里云日志服务和您配置的netflow服务器。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "指定分页查询时每页的行数，最大值为**50**，默认值为**10**。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "流日志实例列表的页码，起始值为**1**，默认值为**1**。"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "FlowLogs": {
+      "FlowLogSetType": [
+        {
+          "Name": "test111",
+          "InactiveAging": 15,
+          "Status": "Active",
+          "NetflowVersion": "V9",
+          "ProjectName": "sag-flowlog-shanghai",
+          "SlsRegionId": "cn-shanghai",
+          "ActiveAging": 300,
+          "FlowLogId": "fl-l934tsa5504yuc****",
+          "OutputType": "sls",
+          "TotalSagNum": 35,
+          "NetflowServerPort": 9995,
+          "LogstoreName": "sag-shanghai"
+        }
+      ]
+    },
+    "TotalCount": 1,
+    "PageSize": 20,
+    "RequestId": "44F4E2D0-77F7-4DEC-969B-061688946143"
+  }
+}

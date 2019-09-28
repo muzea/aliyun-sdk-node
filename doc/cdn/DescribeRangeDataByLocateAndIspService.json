@@ -1,0 +1,173 @@
+{
+  "name": "DescribeRangeDataByLocateAndIspService",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeRangeDataByLocateAndIspService获取加速域名的在某个时刻不同Locate（节点）和Isp（运营商）上的带宽数据。",
+  "abc_id": 91152,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainNames": {
+      "name": "DomainNames",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "abc.com",
+      "description_cn": "要查询的域名，仅支持单个。"
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2017-12-22T07:00:00:00Z",
+      "description_cn": "获取数据开始时间点。\n\n- 日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。\n\n- 最小数据粒度为5分钟。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2017-12-22T08:00:00:00Z",
+      "description_cn": "获取数据结束时间点。\n\n- 结束时间大于开始时间。\n\n- 日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mmZ。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "IspNames": {
+      "name": "IspNames",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "unicom,telecom",
+      "description_cn": "需要查询目标Isp（运营商）列表，用逗号（,）隔开，不能为空。\n\nISP名通过[DescribeCdnRegionAndIsp](~~91077~~)接口获得。"
+    },
+    "LocationNames": {
+      "name": "LocationNames",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "liaoning,guangxi",
+      "description_cn": "需要查询目标区域列表，用逗号（,）隔开，不能为空。\n\nLocation（区域）名通过[DescribeCdnRegionAndIsp](~~91077~~)接口获得。"
+    }
+  },
+  "res": {
+    "JsonResult": [
+      {
+        "1472659200": {
+          "天津市": {
+            "电信": {
+              "bandwidth": 9889849.592,
+              "pv": 5739,
+              "hit_rate": 0,
+              "http_codes": {
+                "200": 5675,
+                "206": 5,
+                "302": 5,
+                "304": 45,
+                "400": 1,
+                "403": 8,
+                "404": 0,
+                "405": 0,
+                "408": 0,
+                "412": 0,
+                "416": 0,
+                "500": 0,
+                "501": 0,
+                "502": 0,
+                "503": 0,
+                "504": 0,
+                "000": 0
+              },
+              "rt": 0
+            },
+            "联通": {},
+            "移动": {}
+          },
+          "北京市": {
+            "电信": {
+              "bandwidth": 9889849.592,
+              "pv": 5739,
+              "hit_rate": 0,
+              "http_codes": {
+                "200": 5675,
+                "206": 5,
+                "302": 5,
+                "304": 45,
+                "400": 1,
+                "403": 8,
+                "404": 0,
+                "405": 0,
+                "408": 0,
+                "412": 0,
+                "416": 0,
+                "500": 0,
+                "501": 0,
+                "502": 0,
+                "503": 0,
+                "504": 0,
+                "000": 0
+              },
+              "rt": 0
+            },
+            "联通": {},
+            "移动": {}
+          }
+        },
+        "1472659500": {
+          "天津市": {
+            "电信": {
+              "bandwidth": 7024681.44,
+              "pv": 5819,
+              "hit_rate": 0,
+              "http_codes": {
+                "200": 5716,
+                "206": 11,
+                "302": 3,
+                "304": 72,
+                "400": 1,
+                "403": 16,
+                "404": 0,
+                "405": 0,
+                "408": 0,
+                "412": 0,
+                "416": 0,
+                "500": 0,
+                "501": 0,
+                "502": 0,
+                "503": 0,
+                "504": 0,
+                "000": 0
+              },
+              "rt": 0
+            },
+            "联通": {},
+            "移动": {}
+          }
+        }
+      }
+    ],
+    "RequestId": "16A96B9A-F203-4EC5-8E43-CB92E68F4CD8"
+  }
+}

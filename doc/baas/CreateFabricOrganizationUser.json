@@ -1,0 +1,78 @@
+{
+  "name": "CreateFabricOrganizationUser",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|PUT|GET",
+  "path": "/",
+  "summary_cn": "调用CreateFabricOrganizationUser创建组织用户。",
+  "abc_id": 128019,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "Username": {
+      "name": "Username",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "username",
+      "description_cn": "用户名"
+    },
+    "OrganizationId": {
+      "name": "OrganizationId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "peers-yidio-1tuigx42b****",
+      "description_cn": "组织ID"
+    },
+    "Password": {
+      "name": "Password",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "password",
+      "description_cn": "密码"
+    },
+    "Attrs": {
+      "name": "Attrs",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "foo=foo1,bar=bar1",
+      "description_cn": "ABAC属性"
+    }
+  },
+  "res": {
+    "result": {
+      "OrganizationId": "peers-yidio-1tuigx42b****",
+      "CreateTime": "1999-05-10 09:00:00",
+      "ExpireTime": "2000-05-10 09:00:00",
+      "Fullname": "阿里巴巴集团",
+      "Username": "username",
+      "Password": "pwd"
+    },
+    "RequestId": "2537DB1B-F478-431E-A847-5DDAAE2BD251",
+    "ErrorCode": 200,
+    "Success": true
+  }
+}

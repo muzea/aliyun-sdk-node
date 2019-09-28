@@ -1,0 +1,50 @@
+{
+  "name": "DeleteAddressBook",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteAddressBook接口删除访问控制地址簿。",
+  "abc_id": 138865,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "GroupUuid": {
+      "name": "GroupUuid",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "0657ab9d-fe8b-4174-b2a6-6baf358ea4ad",
+      "description_cn": "地址簿唯一ID。指定待删除地址簿的ID。"
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.2.3.4",
+      "description_cn": "访问者源IP地址。"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "zh",
+      "description_cn": "指定请求和接收消息的语言类型。\n- **zh**：中文\n- **en**：英文"
+    }
+  },
+  "res": {
+    "RequestId": "850A84D6-0DE4-4797-A1E8-00090125EEB1"
+  }
+}

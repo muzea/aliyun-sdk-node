@@ -1,0 +1,54 @@
+{
+  "name": "DescribeOrder",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OrderId": {
+      "name": "OrderId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "Quantity": 1,
+    "OrderStatus": "NORMAL",
+    "ProductCode": "cmgj024069",
+    "TotalPrice": 0,
+    "OrderId": "202249400220415",
+    "ProductSkuCode": "cmgj024069-prepay",
+    "OriginalPrice": 10,
+    "PeriodType": "MONTH",
+    "PaymentPrice": 0,
+    "CouponPrice": 0,
+    "SupplierCompanyName": "深红科技股份有限公司（云市场）",
+    "PayStatus": "PAID",
+    "InstanceIds": {
+      "InstanceId": [
+        "6227091"
+      ]
+    },
+    "PaidOn": 1531191675000,
+    "AliUid": 1903130499330569,
+    "OrderType": "NEW",
+    "CreatedOn": 1531191564000,
+    "SupplierTelephones": {
+      "Telephone": [
+        "13811954301",
+        "18601405072"
+      ]
+    },
+    "ProductName": "saas升级测试",
+    "AccountQuantity": 0
+  }
+}

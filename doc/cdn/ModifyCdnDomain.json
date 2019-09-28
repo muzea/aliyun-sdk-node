@@ -1,0 +1,68 @@
+{
+  "name": "ModifyCdnDomain",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyCdnDomain修改加速域名。",
+  "abc_id": 91195,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "www.yourdomain.com",
+      "description_cn": "接入CDN的域名。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Sources": {
+      "name": "Sources",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[{\"content\":\"1.1.1.1\",\"type\":\"ipaddr\",\"priority\":\"20\",\"port\":80,\"weight\":\"15\"}]",
+      "description_cn": "回源地址列表。"
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "abcdabcd",
+      "description_cn": "资源组ID。"
+    },
+    "TopLevelDomain": {
+      "name": "TopLevelDomain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "your.top.domain.com",
+      "description_cn": "顶级接入域，只有白名单用户CDN_TOP_LEVEL_DOMAIN_GREY_USER_LIST设置才有效。"
+    }
+  },
+  "res": {
+    "RequestId": "94E3559F-7B6A-4A5E-AFFD-44E2A208A249"
+  }
+}

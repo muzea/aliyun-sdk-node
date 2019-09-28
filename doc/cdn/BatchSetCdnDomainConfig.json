@@ -1,0 +1,49 @@
+{
+  "name": "BatchSetCdnDomainConfig",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用BatchSetCdnDomainConfig进行域名批量配置。",
+  "abc_id": 90915,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainNames": {
+      "name": "DomainNames",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "加速域名，多个用逗号（,）分隔。\n"
+    },
+    "Functions": {
+      "name": "Functions",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "[{\"functionArgs\":[{\"argName\":\"domain_name\",\"argValue\":\"api.hellodtworld.com\"}],\"functionName\":\"set_req_host_header\"}]",
+      "description_cn": "功能列表。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "04F0F334-1335-436C-A1D7-6C044FE73368"
+  }
+}

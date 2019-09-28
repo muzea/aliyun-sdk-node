@@ -1,0 +1,192 @@
+{
+  "name": "CreateFabricConsortium",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateFabricConsortium创建联盟。",
+  "abc_id": 128012,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "OrdererType": {
+      "name": "OrdererType",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "Kafka",
+      "description_cn": "Orderer类型"
+    },
+    "ConsortiumName": {
+      "name": "ConsortiumName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "aaaaa",
+      "description_cn": "联盟名"
+    },
+    "Domain": {
+      "name": "Domain",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "helloworld",
+      "description_cn": "域名"
+    },
+    "ChannelPolicy": {
+      "name": "ChannelPolicy",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "Any",
+      "description_cn": "创建通道策略"
+    },
+    "SpecName": {
+      "name": "SpecName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "basic",
+      "description_cn": "规格"
+    },
+    "Location": {
+      "name": "Location",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "位置信息"
+    },
+    "ZoneId": {
+      "name": "ZoneId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "random",
+      "description_cn": "区域"
+    },
+    "ConsortiumDescription": {
+      "name": "ConsortiumDescription",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "some",
+      "description_cn": "联盟描述"
+    },
+    "OrderersCount": {
+      "name": "OrderersCount",
+      "type": "Integer",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "Orderer数量"
+    },
+    "PeersCount": {
+      "name": "PeersCount",
+      "type": "Integer",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "Peer数量"
+    },
+    "Organization": {
+      "name": "Organization",
+      "type": "RepeatList",
+      "position": "Body",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "OrganizationId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "PaymentDurationUnit": {
+      "name": "PaymentDurationUnit",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "month",
+      "description_cn": "周期单位"
+    },
+    "PaymentDuration": {
+      "name": "PaymentDuration",
+      "type": "Integer",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "计费周期"
+    }
+  },
+  "res": {
+    "result": {
+      "CodeName": "阿里巴巴集团区块链联盟",
+      "ClusterState": "Pending",
+      "ConsortiumId": "c-93k8d34jy79y79",
+      "CreateTime": "1999-05-10 09:00:00",
+      "OwnerBid": 12312,
+      "OrdererCount": 1,
+      "OrdererType": "kafka",
+      "ConsortiumName": "阿里巴巴集团",
+      "OrganizationCount": 3,
+      "ChannelCount": 0,
+      "ChannelPolicy": "ANY",
+      "Description": "string",
+      "Domain": "domain",
+      "MemberCount": 2,
+      "ServiceState": "Pending"
+    },
+    "RequestId": "2537DB1B-F478-431E-A847-5DDAAE2BD251",
+    "ErrorCode": 200,
+    "Success": true
+  }
+}

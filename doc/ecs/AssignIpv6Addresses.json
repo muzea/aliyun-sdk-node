@@ -1,0 +1,70 @@
+{
+  "name": "AssignIpv6Addresses",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AssignIpv6Addresses为弹性网卡分配一个或多个IPv6地址。",
+  "abc_id": 98610,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "弹性网卡所在地域的 ID。您可以调用 [DescribeRegions](~~25609~~) 查看最新的阿里云地域列表。 "
+    },
+    "NetworkInterfaceId": {
+      "name": "NetworkInterfaceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "eni-test",
+      "description_cn": "弹性网卡 ID。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。"
+    },
+    "Ipv6Address": {
+      "name": "Ipv6Address",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "Ipv6AddressCount": {
+      "name": "Ipv6AddressCount",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "为弹性网卡指定随机生成的 IPv6 地址数量。\n> 您不能同时指定参数 Ipv6Addresses.N 和 Ipv6AddressCount。"
+    }
+  },
+  "res": {
+    "RequestId": "A94E0C9F-B39E-4A87-BFFC-6DC7840xxxxx"
+  }
+}

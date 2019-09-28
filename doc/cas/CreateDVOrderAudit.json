@@ -1,0 +1,118 @@
+{
+  "name": "CreateDVOrderAudit",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "提交DV订单。",
+  "abc_id": 126513,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cas-cn-1111",
+      "description_cn": "\t\n指定证书实例名称。"
+    },
+    "Domain": {
+      "name": "Domain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "*.com",
+      "description_cn": "指定域名。如果有多个域名，要用半角逗号分开。"
+    },
+    "DomainVerifyType": {
+      "name": "DomainVerifyType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "DNS",
+      "description_cn": "指定域名授权验证类型。取值为FILE或DNS，注意是大写。"
+    },
+    "Username": {
+      "name": "Username",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "AXXX",
+      "description_cn": "\t\n指定用户姓名。"
+    },
+    "Email": {
+      "name": "Email",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "*@xx.com",
+      "description_cn": "\t\n指定用户邮箱。"
+    },
+    "Mobile": {
+      "name": "Mobile",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "12345XXXXXX",
+      "description_cn": "\t\n指定手机号码。"
+    },
+    "Province": {
+      "name": "Province",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "zhejiang",
+      "description_cn": "\t\n指定省份。建议用拼音。"
+    },
+    "City": {
+      "name": "City",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "hangzhou",
+      "description_cn": "\t\n指定城市。建议用拼音。"
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.2.3.4",
+      "description_cn": "指定请求的来源IP地址。"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "zh",
+      "description_cn": "指定请求和接收消息的语言类型。"
+    }
+  },
+  "res": {}
+}

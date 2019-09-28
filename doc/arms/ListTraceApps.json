@@ -1,0 +1,23 @@
+{
+  "name": "ListTraceApps",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 ListTraceApps 列出指定地域下的全部应用监控任务。",
+  "abc_id": 130704,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域 ID"
+    }
+  },
+  "res": {}
+}

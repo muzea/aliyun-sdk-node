@@ -1,0 +1,64 @@
+{
+  "name": "UpdateFCTrigger",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "TriggerARN": {
+      "name": "TriggerARN",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SourceARN": {
+      "name": "SourceARN",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "FunctionARN": {
+      "name": "FunctionARN",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "RoleARN": {
+      "name": "RoleARN",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Notes": {
+      "name": "Notes",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,56 @@
+{
+  "name": "QuerySubsId",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用接口QuerySubsId查询绑定唯一标识SubsId。",
+  "abc_id": 123235,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "PhoneNoX": {
+      "name": "PhoneNoX",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "17000000000",
+      "description_cn": "绑定关系中的隐私号码，即X号码。"
+    },
+    "PoolKey": {
+      "name": "PoolKey",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "FC123456",
+      "description_cn": "号码池Key。可登录号码隐私保护控制台，在号码池管理中查看号码池Key。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    }
+  },
+  "res": {
+    "Message": "OK",
+    "SubsId": "117809",
+    "RequestId": "F3BC6628-7976-41BA-87D0-D152BAB2A9C8",
+    "Code": "OK"
+  }
+}

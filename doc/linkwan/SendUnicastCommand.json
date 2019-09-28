@@ -1,0 +1,84 @@
+{
+  "name": "SendUnicastCommand",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用SendUnicastCommand发送单播信息。",
+  "abc_id": 134271,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DevEui": {
+      "name": "DevEui",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "0000000000000000",
+      "description_cn": "目标节点。"
+    },
+    "FPort": {
+      "name": "FPort",
+      "type": "Integer",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "0",
+      "description_cn": "fPort。"
+    },
+    "Content": {
+      "name": "Content",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "xxx",
+      "description_cn": "要发送的内容。"
+    },
+    "MaxRetries": {
+      "name": "MaxRetries",
+      "type": "Integer",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "最大重发次数，默认为**0**。"
+    },
+    "CleanUp": {
+      "name": "CleanUp",
+      "type": "Boolean",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否清空该节点的堆积指令，并下发该指令。默认为**false**。"
+    },
+    "Comfirmed": {
+      "name": "Comfirmed",
+      "type": "Boolean",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否是confirmed指令，默认为**false**。"
+    }
+  },
+  "res": {}
+}

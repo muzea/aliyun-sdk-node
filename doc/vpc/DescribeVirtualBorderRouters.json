@@ -1,0 +1,100 @@
+{
+  "name": "DescribeVirtualBorderRouters",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeVirtualBorderRouters接口查询已创建的边界路由器（VBR）。",
+  "abc_id": 36024,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "VBR所在的地域。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": " 列表的页码，默认值为**1**。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": " 分页查询时每页的行数，最大值为**50**，默认值为**10**。  "
+    },
+    "Filter": {
+      "name": "Filter",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        }
+      ]
+    }
+  },
+  "res": {
+    "DescribeVirtualBorderRoutersResponse": {
+      "RequestId": "AE65530E-8436-4FB1-8217-DCD35712AC89",
+      "PageNumber": "1",
+      "VirtualBorderRouterSet": {
+        "VirtualBorderRouterType": {
+          "LocalGatewayIp": "10.1.1.1",
+          "PeerGatewayIp": "10.2.2.2",
+          "PhysicalConnectionOwnerUid": "123157908XXXXXXXX",
+          "VlanId": "10",
+          "PhysicalConnectionStatus": "Enabled",
+          "PhysicalConnectionId": "pc-2zeoaxkq3jot5p7XXXXy",
+          "RouteTableId": "vtb-2ze9hmd6yofwvb1dd79j9",
+          "PeeringSubnetMask": "255.0.0.0",
+          "CreationTime": "2018-03-06T11:16:34Z",
+          "ActivationTime": "2018-03-06T11:16:34Z",
+          "Status": "active",
+          "PhysicalConnectionBusinessStatus": "Normal",
+          "VlanInterfaceId": "ri-2zeum6rgu0586gjrocikm",
+          "AccessPointId": "ap-cn-beijing-dx-A",
+          "VbrId": "vbr-2zecmmvg5gvu8i4XXX"
+        }
+      },
+      "TotalCount": "1",
+      "PageSize": "10"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "DescribeApplicationConfig",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v1/sam/app/describeApplicationConfig",
+  "summary_cn": "获取应用配置信息。",
+  "abc_id": 125723,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "7171a6ca-d1cd-4928-8642-7d5cfe69a26c",
+      "description_cn": "应用ID。"
+    }
+  },
+  "res": {}
+}

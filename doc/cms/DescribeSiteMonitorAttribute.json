@@ -1,0 +1,82 @@
+{
+  "name": "DescribeSiteMonitorAttribute",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询站点监控详细信息。",
+  "abc_id": 115042,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "TaskId": {
+      "name": "TaskId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "a1ecd34a-8157-44d9-b065-14950837****",
+      "description_cn": "要查询的任务ID。"
+    },
+    "IncludeAlert": {
+      "name": "IncludeAlert",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "任务详情的返回是否包含报警规则。"
+    }
+  },
+  "res": {
+    "Message": "请求成功",
+    "RequestId": "baac6ca7-8152-4156-987a-653a1533f0e5",
+    "SiteMonitors": {
+      "OptionJson": {
+        "http_method": "get",
+        "response_content": "xxxx",
+        "time_out": 30000
+      },
+      "Interval": 1,
+      "Address": "http://www.aliyun.com",
+      "TaskId": "a1ecd34a-8157-44d9-b060-1****",
+      "TaskName": "aaa-bbb-ccc",
+      "TaskState": 1,
+      "TaskType": "HTTP",
+      "IspCities": {
+        "IspCity": [
+          {
+            "Isp": "465",
+            "IspName": "阿里巴巴",
+            "CityName": "杭州市",
+            "City": "546"
+          },
+          {
+            "Isp": "465",
+            "IspName": "阿里巴巴",
+            "CityName": "青岛市",
+            "City": "572"
+          },
+          {
+            "Isp": "465",
+            "IspName": "阿里巴巴",
+            "CityName": "北京市",
+            "City": "738"
+          }
+        ]
+      }
+    },
+    "Success": true,
+    "Code": "200"
+  }
+}

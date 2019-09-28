@@ -1,0 +1,48 @@
+{
+  "name": "ModifyDBInstanceConnectionMode",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyDBInstanceConnectionMode接口开启或关闭数据库代理，已下线。",
+  "abc_id": 26239,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxx",
+      "description_cn": "实例名。"
+    },
+    "ConnectionMode": {
+      "name": "ConnectionMode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "Performance",
+      "description_cn": "Performance为标准访问模式；Safe为高安全访问模式。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "D4D4BE8A-DD46-440A-BFCD-EE31DA81C9DD"
+  }
+}

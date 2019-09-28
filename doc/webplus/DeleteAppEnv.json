@@ -1,0 +1,29 @@
+{
+  "name": "DeleteAppEnv",
+  "protocol": "HTTPS|HTTP",
+  "method": "DELETE",
+  "path": "/pop/v1/wam/appEnv",
+  "summary_cn": "调用DeleteAppEnv删除一个环境。",
+  "abc_id": 127722,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "EnvId": {
+      "name": "EnvId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "we-5d39b8ba6786bd4b149*****",
+      "description_cn": "要删除的环境ID"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,53 @@
+{
+  "name": "DescribeFabricOrganizations",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeFabricOrganizations获取组织列表。",
+  "abc_id": 127849,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "Location": {
+      "name": "Location",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "位置"
+    }
+  },
+  "res": {
+    "Result": {
+      "OrganizationDescription": "perf9141pe rf9141perf 9141perf9 141perf9141perf9141perf9 141pe rf9141perf91 41perf914 1perf9141perf 9141perf9141perf9141perf9141",
+      "Domain": "perf9141perf9adsadasdasdasdadaasd141perf9141pef9141.abasssample.cc",
+      "ZoneId": "cn-shanghai-a",
+      "OrganizationId": "org-perf9141-7digc71bg",
+      "OrganizationName": "organization ConsortiumId ConsortiumId ads ConsortiumId sdaConsortiumId",
+      "ConsortiumCount": 0,
+      "UserCount": 0,
+      "SpecName": "ecs.n1.medium",
+      "State": "Created",
+      "RegionId": "cn-shanghai",
+      "RequestId": "BEB5EB54-414E-4EF9-8C8A-F1AE2EF7BA2D",
+      "CreateTime": "2018-07-02T08:22:26.000+0000",
+      "CodeName": "perf9141",
+      "PeerCount": 2
+    },
+    "RequestId": "7D27692E-C501-4B1D-878C-0B869DD3D9E6",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

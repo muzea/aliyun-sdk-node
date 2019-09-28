@@ -1,0 +1,71 @@
+{
+  "name": "GetVideoPlayAuth",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用GetVideoPlayAuth获取视频播放时所需的播放凭证。",
+  "abc_id": 52833,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "VideoId": {
+      "name": "VideoId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "dfde02284a5c46618b1722a097adaf4a",
+      "description_cn": "视频ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "AuthInfoTimeout": {
+      "name": "AuthInfoTimeout",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3600",
+      "description_cn": "播放凭证过期时间，默认为**100**秒，取值范围`[100,3600]`。"
+    },
+    "ReAuthInfo": {
+      "name": "ReAuthInfo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "PlayConfig": {
+      "name": "PlayConfig",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{\"PlayDomain\":\"vod.test_domain\"}",
+      "description_cn": "媒体播放时的自定义设置字段，为JSON字符串，目前该接口仅支持指定域名播放的设置。"
+    }
+  },
+  "res": {}
+}

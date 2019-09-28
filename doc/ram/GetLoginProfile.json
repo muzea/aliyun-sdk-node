@@ -1,0 +1,36 @@
+{
+  "name": "GetLoginProfile",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用GetLoginProfile接口查看一个RAM用户的登录配置。",
+  "abc_id": 28686,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "UserName": {
+      "name": "UserName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "zhangq****",
+      "description_cn": "指定用户名。"
+    }
+  },
+  "res": {
+    "RequestId": "04F0F334-1335-436C-A1D7-6C044FE73368",
+    "LoginProfile": {
+      "UserName": "zhangqiang",
+      "PasswordResetRequired": true,
+      "MFABindRequired": true,
+      "CreateDate": "2015-01-23T12:33:18Z"
+    }
+  }
+}

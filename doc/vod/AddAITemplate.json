@@ -1,0 +1,63 @@
+{
+  "name": "AddAITemplate",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AddAITemplate添加AI模板。",
+  "abc_id": 130451,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "TemplateType": {
+      "name": "TemplateType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "AIMediaAudit",
+      "description_cn": "模板类型，取值范围：**AIMediaAudit(智能审核)**。"
+    },
+    "TemplateConfig": {
+      "name": "TemplateConfig",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "XXXXX",
+      "description_cn": "模板详细配置，JSON字符串，具体值详见[AITemplateConfig](https://help.aliyun.com/document_detail/89863.html?spm=a2c4g.11186623.2.15.286a5046RmMdjh#AITemplateConfig)。"
+    },
+    "TemplateName": {
+      "name": "TemplateName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "AI-media-test",
+      "description_cn": "模板名称，最大128字节。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,40 @@
+{
+  "name": "UpdateOwnedLocalJoinPermissionEnablingState",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用UpdateOwnedLocalJoinPermissionEnablingState启用、停用当前用户账号所拥有的专用入网凭证。",
+  "abc_id": 109921,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "JoinPermissionId": {
+      "name": "JoinPermissionId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "123",
+      "description_cn": "要操作的专用入网凭证ID。"
+    },
+    "Enabled": {
+      "name": "Enabled",
+      "type": "Boolean",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "true",
+      "description_cn": "**true**为启用，**false**为停用。"
+    }
+  },
+  "res": {}
+}

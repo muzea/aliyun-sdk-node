@@ -1,0 +1,67 @@
+{
+  "name": "AddVodDomain",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AddVodDomain添加点播加速域名。每次只能提交一个加速域名，一个用户最多添加20个域名。",
+  "abc_id": 130572,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "需要接入点播的加速域名。\n\n支持泛域名，以符号“.”开头，如：.example.com。"
+    },
+    "Sources": {
+      "name": "Sources",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "[{\"content\":\"1.1.1.1\",\"type\":\"ipaddr\",\"priority\":\"20\",\"port\":80}]",
+      "description_cn": "回源地址列表。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "CheckUrl": {
+      "name": "CheckUrl",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "check_url",
+      "description_cn": "检查域名是否能正常访问url。"
+    },
+    "Scope": {
+      "name": "Scope",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "domestic",
+      "description_cn": "国际用户、国内L3及以上用户设置有效。取值范围：**domestic**(中国大陆，默认)，**overseas**(港澳台及海外)，**global**(全球加速)。"
+    }
+  },
+  "res": {}
+}

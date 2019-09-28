@@ -1,0 +1,62 @@
+{
+  "name": "GetExecutionHistory",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/",
+  "summary_cn": "调用GetExecutionHistory获取执行过程中的每个步骤详细信息。",
+  "abc_id": 123078,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "FlowName": {
+      "name": "FlowName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "flow",
+      "description_cn": "流程名称。"
+    },
+    "ExecutionName": {
+      "name": "ExecutionName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "exec",
+      "description_cn": "执行名称。"
+    },
+    "NextToken": {
+      "name": "NextToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "flow_xxx",
+      "description_cn": "event查询开始名称，根据本接口返回获取。"
+    },
+    "Limit": {
+      "name": "Limit",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "5",
+      "description_cn": "查询数量。"
+    }
+  },
+  "res": {}
+}

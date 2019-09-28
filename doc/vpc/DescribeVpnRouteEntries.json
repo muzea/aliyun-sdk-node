@@ -1,0 +1,83 @@
+{
+  "name": "DescribeVpnRouteEntries",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeVpnRouteEntries查询VPN目的路由。",
+  "abc_id": 126791,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "VPN目的路由所在的地域。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。"
+    },
+    "VpnGatewayId": {
+      "name": "VpnGatewayId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "vpn-bp1a3kqjiiq9legfx****",
+      "description_cn": "VPN网关的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "列表的页码，默认值为**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时每页的行数，最大值为**50**，默认值为**10**。"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 1,
+    "VpnRouteEntries": {
+      "VpnRouteEntry": [
+        {
+          "RouteDest": "10.0.0.0/24",
+          "VpnInstanceId": "vpn-bp1cmw7jh1nfe43m9****",
+          "State": "normal",
+          "Weight": 100,
+          "CreateTime": 1563874074000,
+          "NextHop": "vco-bp1tui07ob10fmuro****"
+        }
+      ]
+    },
+    "PageSize": 10,
+    "RequestId": "BF3995A6-FA4F-4C74-B90F-89ECF4BFF4D5"
+  }
+}

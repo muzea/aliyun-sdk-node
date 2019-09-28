@@ -1,0 +1,56 @@
+{
+  "name": "UpdateGroup",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用UpdateGroup接口更新用户组信息。",
+  "abc_id": 28702,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "GroupName": {
+      "name": "GroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "Dev-Team",
+      "description_cn": "指定用户组名称。\n\n格式：`^[a-zA-Z0-9\\-]+$`。"
+    },
+    "NewGroupName": {
+      "name": "NewGroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "NewDev-Team",
+      "description_cn": "新的用户组名称。\n\n格式：`^[a-zA-Z0-9\\-]+$`。"
+    },
+    "NewComments": {
+      "name": "NewComments",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "开发团队",
+      "description_cn": "新的备注信息，最大长度128个字符。"
+    }
+  },
+  "res": {
+    "RequestId": "EC6647CC-0A36-EC7A-BA72-CC81BF3DE182",
+    "Group": {
+      "GroupName": "NewDev-Team",
+      "Comments": "开发团队",
+      "CreateDate": "2015-01-23T12:33:18Z",
+      "UpdateDate": "2015-01-23T12:33:18Z"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "name": "DescribeAntChainCertificateApplications",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "查看联盟成员申请连接一条蚂蚁区块链的信息",
+  "abc_id": 127096,
+  "timeout": 1000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1",
+      "description_cn": "状态"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "20",
+      "description_cn": "每页数量"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1",
+      "description_cn": "页面编号"
+    },
+    "AntChainId": {
+      "name": "AntChainId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1q8B5R9p",
+      "description_cn": "区块链ID"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "B232A84E-7944-4EB0-83D0-9D409E12E0A8",
+      "Result": {
+        "Pagination": {
+          "TotalCount": 1,
+          "PageSize": 20,
+          "PageNumber": 1
+        },
+        "CertificateApplications": [
+          {
+            "Status": 1,
+            "AntChainId": "1q8B5R9p",
+            "Username": "uid-1287126353308684",
+            "Createtime": 1563949275000,
+            "Updatetime": 1563949275000,
+            "Bid": "26842"
+          }
+        ]
+      }
+    },
+    "requestId": "B232A84E-7944-4EB0-83D0-9D409E12E0A8",
+    "successResponse": true
+  }
+}

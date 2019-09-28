@@ -1,0 +1,82 @@
+{
+  "name": "SwitchDBInstanceHA",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用SwitchDBInstanceHA接口切换RDS实例的主备实例。",
+  "abc_id": 26251,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "rm-uf6wjk5xxxxxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "NodeId": {
+      "name": "NodeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "349054",
+      "description_cn": "备实例的唯一标识，通过接口[DescribeDBInstanceHAConfig](~~26244~~)可查询该值。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "Operation": {
+      "name": "Operation",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Force": {
+      "name": "Force",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "No",
+      "description_cn": "切换方式，取值：\n* **Yes**：强制；\n* **No**：非强制。\n\n默认值：**No**。"
+    },
+    "EffectiveTime": {
+      "name": "EffectiveTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Immediate",
+      "description_cn": "生效时间，取值：\n* **Immediate**：立即执行；\n* **MaintainTime**：可维护时间内执行。\n\n默认值：**Immediate**。"
+    }
+  },
+  "res": {
+    "RequestId": "1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "AcceptFabricInvitation",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|PUT|GET",
+  "path": "/",
+  "summary_cn": "调用AcceptFabricInvitation接受加入联盟的邀请。",
+  "abc_id": 127843,
+  "timeout": 1000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域。"
+    },
+    "Code": {
+      "name": "Code",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "secrettoken",
+      "description_cn": "邀请码。"
+    },
+    "IsAccepted": {
+      "name": "IsAccepted",
+      "type": "Boolean",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否接受。"
+    }
+  },
+  "res": {
+    "RequestId": "52CC8D5B-79A8-4769-BC7B-8940556ADA49",
+    "ErrorCode": 200,
+    "Success": true
+  }
+}

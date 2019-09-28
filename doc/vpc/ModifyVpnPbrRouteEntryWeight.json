@@ -1,0 +1,123 @@
+{
+  "name": "ModifyVpnPbrRouteEntryWeight",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyVpnPbrRouteEntryWeight接口修改VPN策略路由的权重值。",
+  "abc_id": 126806,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "VPN策略路由所在的地域。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。"
+    },
+    "VpnGatewayId": {
+      "name": "VpnGatewayId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "vpn-bp1a3kqjiiq9legfx****",
+      "description_cn": "VPN网关的ID。"
+    },
+    "RouteSource": {
+      "name": "RouteSource",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "192.168.1.0/24",
+      "description_cn": "策略路由的源网段。"
+    },
+    "RouteDest": {
+      "name": "RouteDest",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "10.0.0.0/24",
+      "description_cn": "策略路由的目标网段。"
+    },
+    "NextHop": {
+      "name": "NextHop",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "vco-bp15oes1py4i66rmd****\t",
+      "description_cn": "策略路由的下一跳。"
+    },
+    "Weight": {
+      "name": "Weight",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "0",
+      "description_cn": "VPN策略路由在修改之前设置的权重值，取值：**0**|**100**。"
+    },
+    "NewWeight": {
+      "name": "NewWeight",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "100",
+      "description_cn": "要设置的权重值，取值：**0**|**100**。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "d7d24a21-f4ba-4454-9173-b3828dae492b",
+      "description_cn": "客户端token，用于保证请求的幂等性。\n\n由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符。"
+    },
+    "OverlayMode": {
+      "name": "OverlayMode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Ipsec",
+      "description_cn": "覆盖模式。"
+    }
+  },
+  "res": {
+    "RequestId": "E82612A9-CB90-4D7E-B394-1DB7F6509B29"
+  }
+}

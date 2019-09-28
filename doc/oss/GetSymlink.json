@@ -1,0 +1,26 @@
+{
+  "name": "GetSymlink",
+  "protocol": "HTTP|HTTPS",
+  "method": "GET",
+  "path": "/[ObjectName]",
+  "timeout": null,
+  "reqFormat": {
+    "BucketName": {
+      "name": "BucketName",
+      "position": "domain",
+      "required": true
+    },
+    "ObjectName": {
+      "name": "ObjectName",
+      "position": "path",
+      "required": true
+    },
+    "symlink": {
+      "name": "symlink",
+      "position": "query",
+      "required": true,
+      "default": ""
+    }
+  },
+  "res": {}
+}

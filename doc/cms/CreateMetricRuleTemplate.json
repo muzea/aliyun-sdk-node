@@ -1,0 +1,165 @@
+{
+  "name": "CreateMetricRuleTemplate",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "创建报警规则模板。",
+  "abc_id": 114984,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "我的报警模板",
+      "description_cn": "报警规则模板名称。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "模板描述",
+      "description_cn": "报警规则描述信息。"
+    },
+    "AlertTemplates": {
+      "name": "AlertTemplates",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "MetricName",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "RuleName",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Category",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Namespace",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Period",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Selector",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Critical.Statistics",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Critical.ComparisonOperator",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Critical.Threshold",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Critical.Times",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Warn.Statistics",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Warn.ComparisonOperator",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Warn.Threshold",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Warn.Times",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Info.Statistics",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Info.ComparisonOperator",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Info.Threshold",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Info.Times",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {
+    "RequestId": "9763ED1A-4D09-41BF-851E-310421750204",
+    "Success": true,
+    "Code": 200
+  }
+}

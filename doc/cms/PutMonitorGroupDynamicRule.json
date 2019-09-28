@@ -1,0 +1,64 @@
+{
+  "name": "PutMonitorGroupDynamicRule",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "创建或者修改一个应用分组的动态规则，满足规则描述的资源会自动添加到应用分组中。",
+  "abc_id": 115019,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "GroupRules": {
+      "name": "GroupRules",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Category",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "FilterRelation",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Filters",
+          "type": "RepeatList",
+          "required": true,
+          "docRequired": false
+        }
+      ]
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1234",
+      "description_cn": "应用分组ID。"
+    }
+  },
+  "res": {
+    "RequestId": "3E73F1AB-D195-438A-BCA7-2F4355789C58",
+    "Success": true,
+    "Code": 200
+  }
+}

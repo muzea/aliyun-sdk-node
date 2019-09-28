@@ -1,0 +1,72 @@
+{
+  "name": "OpenScdnService",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": null,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Bandwidth": {
+      "name": "Bandwidth",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true
+    },
+    "ProtectType": {
+      "name": "ProtectType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true
+    },
+    "DDoSBasic": {
+      "name": "DDoSBasic",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true
+    },
+    "ElasticProtection": {
+      "name": "ElasticProtection",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true
+    },
+    "CcProtection": {
+      "name": "CcProtection",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true
+    },
+    "DomainCount": {
+      "name": "DomainCount",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true
+    },
+    "StartDate": {
+      "name": "StartDate",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    },
+    "EndDate": {
+      "name": "EndDate",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    }
+  },
+  "res": {}
+}

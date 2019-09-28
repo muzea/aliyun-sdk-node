@@ -1,0 +1,63 @@
+{
+  "name": "DescribeUserOnlineClientStatistics",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeUserOnlineClientStatistics查询指定智能接入网关APP实例用户数统计。",
+  "abc_id": 120719,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-shanghai",
+      "description_cn": "智能接入网关APP实例所在的地域。"
+    },
+    "UserNames": {
+      "name": "UserNames",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "SmartAGId": {
+      "name": "SmartAGId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sag-sfjg*****",
+      "description_cn": "智能接入网关APP实例ID。"
+    }
+  },
+  "res": {
+    "RequestId": "14846A6A-2192-4F6A-B272-B8BD68EBC89B",
+    "UserStatistics": {
+      "Statistics": [
+        {
+          "UserName": "doctest",
+          "OnlineCount": 0
+        }
+      ]
+    }
+  }
+}

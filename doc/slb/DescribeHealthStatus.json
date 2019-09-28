@@ -1,0 +1,90 @@
+{
+  "name": "DescribeHealthStatus",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeHealthStatus查询后端服务器的健康状态。",
+  "abc_id": 27635,
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "负载均衡实例的地域ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ListenerPort": {
+      "name": "ListenerPort",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "80",
+      "description_cn": "负载均衡实例前端使用的端口。\n\n取值：**1-65535**\n\n> 不设置该参数表示获取所有端口的健康检查状态。"
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "ListenerProtocol": {
+      "name": "ListenerProtocol",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "https",
+      "description_cn": "负载均衡实例前端使用的协议。"
+    },
+    "LoadBalancerId": {
+      "name": "LoadBalancerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "lb-bp1qjwo61pqz3ahltv0mw",
+      "description_cn": "负载均衡实例ID。"
+    }
+  },
+  "res": {
+    "BackendServers": {
+      "BackendServer": [
+        {
+          "ServerHealthStatus": "abnormal",
+          "ServerId": "i-bp1do02x7n4nua4k72um",
+          "Port": 80,
+          "ListenerPort": 443
+        }
+      ]
+    },
+    "RequestId": "196EC328-B566-4226-B435-8697723205EF"
+  }
+}

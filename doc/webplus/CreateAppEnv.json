@@ -1,0 +1,137 @@
+{
+  "name": "CreateAppEnv",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/pop/v1/wam/appEnv",
+  "summary_cn": "调用CreateAppEnv创建一个部署环境。",
+  "abc_id": 127617,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "EnvName": {
+      "name": "EnvName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "envTest",
+      "description_cn": "环境名称"
+    },
+    "EnvDescription": {
+      "name": "EnvDescription",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "this is an env",
+      "description_cn": "环境描述信息"
+    },
+    "StackId": {
+      "name": "StackId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ws-6c937c98a9c0296d0c48*****",
+      "description_cn": "环境使用的技术栈ID，若指定了源环境ID或配置模板ID，此参数将被忽略，否则必须指定此参数"
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "wa-6c937c98a9c0296d0c48*****",
+      "description_cn": "应用ID"
+    },
+    "PkgVersionId": {
+      "name": "PkgVersionId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "wp-6c937c98a9c0296d0c48*****",
+      "description_cn": "部署包版本ID"
+    },
+    "OptionSettings": {
+      "name": "OptionSettings",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[{\"path\":\"resources.ecs.autoScaling\", \"name\":\"instanceNum\",\"value\":\"10\"},     {\"path\":\"application.option\", \"name\":\"port\",\"value\":\"8081\"}]",
+      "description_cn": "自定义配置项数据，JSON数组，包含以下字段：\n- `path`：配置项路径\n- `name`：配置项名称\n- `value`：配置值"
+    },
+    "ProfileName": {
+      "name": "ProfileName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "HighAvailability",
+      "description_cn": "初始化配置类型，可选以下值：\n - `HighAvailability`：高可用，该配置会将实例数设置为2，同时启用公网SLB\n - `StandAlone`：低成本，该配置会将实例数设置为1"
+    },
+    "SourceEnvId": {
+      "name": "SourceEnvId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "we-6c937c98a9c0296d0c48*****",
+      "description_cn": "源环境ID，新创建的环境将克隆此环境的技术栈，配置项和部署包版本。\n"
+    },
+    "TemplateId": {
+      "name": "TemplateId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "wct-5d1c0a5d913567334af*****",
+      "description_cn": "源模版ID"
+    },
+    "DryRun": {
+      "name": "DryRun",
+      "type": "Boolean",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否模拟变更\n- 若设定该参数为true，则不会创建变更，而是输出创建环境的操作步骤；否则会创建环境，并输出变更ID\n - 默认为false"
+    },
+    "ExtraProperties": {
+      "name": "ExtraProperties",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

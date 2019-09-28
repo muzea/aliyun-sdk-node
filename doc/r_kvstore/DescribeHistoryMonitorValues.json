@@ -1,0 +1,105 @@
+{
+  "name": "DescribeHistoryMonitorValues",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeHistoryMonitorValues查看Redis实例的历史监控信息。",
+  "abc_id": 61107,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2018-10-18T12:00:00Z",
+      "description_cn": "历史监控开始时间点；采用ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。 "
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2018-10-19T12:00:00Z",
+      "description_cn": "历史监控结束时间点；采用ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。结束时间必须晚于开始时间。 "
+    },
+    "IntervalForHistory": {
+      "name": "IntervalForHistory",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "01m",
+      "description_cn": "历史监控数据间隔，单位m（分钟），唯一值`01m`。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "r-bp1xxxxxxxxxxxxx",
+      "description_cn": "目标实例的ID。"
+    },
+    "MonitorKeys": {
+      "name": "MonitorKeys",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "hscan",
+      "description_cn": "监控项。可调用[DescribeMonitorItems](~~61106~~)查询。 "
+    },
+    "NodeId": {
+      "name": "NodeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "r-bp1xxxxxxxxxxxxx-db-0#6xxxxx5",
+      "description_cn": "传入集群实例中特定子节点的ID查询该节点的监控信息。"
+    }
+  },
+  "res": {
+    "monitorHistory": {
+      "2018-07-09T12:00:13Z": {
+        "quotaMemory": 1073741824,
+        "UsedMemory": 5823152
+      },
+      "2018-07-09T12:13:15Z": {
+        "quotaMemory": 1073741824,
+        "UsedMemory": 5823152
+      },
+      "2018-07-09T12:14:15Z": {
+        "quotaMemory": 1073741824,
+        "UsedMemory": 5823152
+      }
+    },
+    "requestId": "F0997EE8-F4C2-4503-9168-85177ED78C70"
+  }
+}

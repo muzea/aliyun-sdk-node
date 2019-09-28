@@ -1,0 +1,202 @@
+{
+  "name": "RevokeSecurityGroupEgress",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用RevokeSecurityGroupEgress删除一条安全组出方向规则，撤销安全组出方向的访问权限。",
+  "abc_id": 25561,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "源端安全组所属地域 ID。您可以调用 [DescribeRegions](~~25609~~) 查看最新的阿里云地域列表。 "
+    },
+    "SecurityGroupId": {
+      "name": "SecurityGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "sg-securitygroupid1",
+      "description_cn": "源端安全组 ID。"
+    },
+    "IpProtocol": {
+      "name": "IpProtocol",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "all",
+      "description_cn": "传输层协议。不区分大小写。取值范围： \n         \n- icmp\n- gre\n- tcp\n- udp\n- all：支持所有协议"
+    },
+    "PortRange": {
+      "name": "PortRange",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "1/200",
+      "description_cn": "目的端安全组开放的传输层协议相关的端口范围。取值范围： \n         \n- TCP/UDP 协议：取值范围为 1~65535。使用斜线（/）隔开起始端口和终止端口。正确示范：1/200；错误示范：200/1。\n- ICMP 协议：-1/-1。\n- GRE 协议：-1/-1。\n- all：-1/-1。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "DestGroupId": {
+      "name": "DestGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sg-securitygroupid2",
+      "description_cn": "需要撤销访问权限的目的端安全组 ID。\n\n必须设置 DestGroupId 或者 DestCidrIp 参数。\n\n如果指定了 DestGroupId 没有指定参数 DestCidrIp，则参数 NicType 取值只能为 intranet。如果同时指定了 DestGroupId 和 DestCidrIp，则默认以 DestCidrIp 为准。 "
+    },
+    "DestGroupOwnerId": {
+      "name": "DestGroupOwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "跨账户删除安全组规则时，目的端安全组所属的阿里云账户 ID。 \n\n- 如果 DestGroupOwnerId 及 DestGroupOwnerAccount 均未设置，则认为是撤销您其他安全组的访问权限。  \n- 如果您已经设置参数 DestCidrIp，则参数 DestGroupOwnerId 无效。  \n         "
+    },
+    "DestGroupOwnerAccount": {
+      "name": "DestGroupOwnerAccount",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FinanceJoshua",
+      "description_cn": "跨账户删除安全组规则时，目的端安全组所属的阿里云账户。 \n\n- 如果 DestGroupOwnerAccount 及 DestGroupOwnerId 均未设置，则认为是撤销您其他安全组的访问权限。 \n- 如果已经设置参数 DestCidrIp，则参数 DestGroupOwnerAccount 无效。  \n         "
+    },
+    "DestCidrIp": {
+      "name": "DestCidrIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0.0.0.0/0",
+      "description_cn": "目的端 IP 地址范围。支持 CIDR 格式和 IPv4 格式的 IP 地址范围。默认值：无。"
+    },
+    "Ipv6DestCidrIp": {
+      "name": "Ipv6DestCidrIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2001:db8:1233:1a00::***",
+      "description_cn": "目的端 IPv6 CIDR 地址段。支持 CIDR 格式和 IPv6 格式的 IP 地址范围。\n\n默认值：无。\n\n> 仅支持 VPC 类型的 IP 地址。\n"
+    },
+    "SourceCidrIp": {
+      "name": "SourceCidrIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0.0.0.0/0",
+      "description_cn": "源端 IP 地址范围。支持 CIDR 格式和 IPv4 格式的 IP 地址范围。默认值：无。"
+    },
+    "Ipv6SourceCidrIp": {
+      "name": "Ipv6SourceCidrIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2001:db8:1234:1a00::***",
+      "description_cn": "源端 IPv6 CIDR 地址段。支持 CIDR 格式和 IPv6 格式的 IP 地址范围。 \n\n\n默认值：无。\n\n> 仅支持 VPC 类型的 IP 地址。"
+    },
+    "SourcePortRange": {
+      "name": "SourcePortRange",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1/200",
+      "description_cn": "源端安全组开放的传输层协议相关的端口范围。取值范围： \n         \n- TCP/UDP 协议：取值范围为 1~65535。使用斜线（/）隔开起始端口和终止端口。正确示范：1/200；错误示范：200/1。\n- ICMP 协议：-1/-1。\n- GRE 协议：-1/-1。\n- all：-1/-1。"
+    },
+    "Policy": {
+      "name": "Policy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "accept",
+      "description_cn": "访问权限。取值范围： \n         \n- accept：接受访问。\n- drop：拒绝访问，不发回拒绝信息。\n\n默认值：accept"
+    },
+    "Priority": {
+      "name": "Priority",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "安全组规则优先级。取值范围：1~100 默认值：1 "
+    },
+    "NicType": {
+      "name": "NicType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "intranet",
+      "description_cn": "网卡类型。取值范围： \n         \n- internet：公网网卡。\n- intranet：内网网卡。\n\n当撤销安全组之间互相访问时，即指定了 DestGroupId 且没有指定 DestCidrIp 时，参数 NicType 取值只能为 intranet。 默认值：internet"
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E",
+      "description_cn": "保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。**ClientToken**只支持ASCII字符，且不能超过64个字符。更多详情，请参见[如何保证幂等性](~~25693~~)。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FinanceJoshuaTest",
+      "description_cn": "安全组规则的描述。"
+    }
+  },
+  "res": {
+    "RequestId": "CEF72CEB-54B6-4AE8-B225-F876FF7BA984"
+  }
+}

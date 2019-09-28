@@ -1,0 +1,141 @@
+{
+  "name": "DescribeDomainRealTimeHttpCodeData",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDomainRealTimeHttpCodeData获取加速域名1分钟粒度的HTTP返回码占比数据。",
+  "abc_id": 91123,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "需要查询的加速域名，支持批量，多个域名用逗号（,）分隔。\n"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2015-11-30T05:39:00Z",
+      "description_cn": "获取数据起始时间点。\n\n- 日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。\n\n- 不写默认读取过去1小时数据。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2015-11-30T05:40:00Z",
+      "description_cn": "获取数据结束时间点。\n- 结束时间需大于起始时间。\n\n- 日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。\n"
+    },
+    "IspNameEn": {
+      "name": "IspNameEn",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "beijing",
+      "description_cn": "运营商英文名，通过[DescribeCdnRegionAndIsp](~~91077~~)接口获得，不传为所有运营商。\n"
+    },
+    "LocationNameEn": {
+      "name": "LocationNameEn",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "unicom",
+      "description_cn": "区域英文名，通过[DescribeCdnRegionAndIsp](~~91077~~)接口获得，不传为所有区域。\n"
+    }
+  },
+  "res": {
+    "RealTimeHttpCodeData": {
+      "UsageData": [
+        {
+          "TimeStamp": "2015-11-30T05:40:00Z",
+          "Value": {
+            "RealTimeCodeProportionData": [
+              {
+                "Proportion": "66.046511627907",
+                "Code": "200"
+              },
+              {
+                "Proportion": "4.72868217054264",
+                "Code": "206"
+              },
+              {
+                "Proportion": "0.155038759689922",
+                "Code": "302"
+              },
+              {
+                "Proportion": "0.62015503875969",
+                "Code": "304"
+              },
+              {
+                "Proportion": "28.4496124031008",
+                "Code": "500"
+              }
+            ]
+          }
+        },
+        {
+          "TimeStamp": "2015-11-30T05:39:00Z",
+          "Value": {
+            "RealTimeCodeProportionData": [
+              {
+                "Proportion": "66.046511627907",
+                "Code": "200"
+              },
+              {
+                "Proportion": "4.72868217054264",
+                "Code": "206"
+              },
+              {
+                "Proportion": "0.155038759689922",
+                "Code": "302"
+              },
+              {
+                "Proportion": "0.62015503875969",
+                "Code": "304"
+              },
+              {
+                "Proportion": "28.4496124031008",
+                "Code": "500"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "DataInterval": "60",
+    "RequestId": "BC858082-736F-4A25-867B-E5B67C85ACF7",
+    "DomainName": "example1.com,example2.com",
+    "EndTime": "2015-11-30T05:40:00Z",
+    "StartTime": "2015-11-30T05:33:00Z"
+  }
+}

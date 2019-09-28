@@ -1,0 +1,129 @@
+{
+  "name": "CreateFabricOrganization",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|PUT|GET",
+  "path": "/",
+  "summary_cn": "调用CreateFabricOrganization创建组织。",
+  "abc_id": 128018,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "Location": {
+      "name": "Location",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "区域"
+    },
+    "Domain": {
+      "name": "Domain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "domain",
+      "description_cn": "域名"
+    },
+    "SpecName": {
+      "name": "SpecName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "basic",
+      "description_cn": "规格名"
+    },
+    "OrganizationName": {
+      "name": "OrganizationName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "name",
+      "description_cn": "名称"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "description",
+      "description_cn": "描述"
+    },
+    "PeersCount": {
+      "name": "PeersCount",
+      "type": "Integer",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "节点数据量"
+    },
+    "PaymentDuration": {
+      "name": "PaymentDuration",
+      "type": "Integer",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "12",
+      "description_cn": "计费周期"
+    },
+    "PaymentDurationUnit": {
+      "name": "PaymentDurationUnit",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "周期单位"
+    }
+  },
+  "res": {
+    "result": {
+      "CodeName": "阿里巴巴集团区块链联盟",
+      "ClusterState": "Pending",
+      "OrganizationId": "c-93k8d34jy79y79",
+      "CreateTime": "1999-05-10 09:00:00",
+      "OwnerBid": 12312,
+      "OrganizationName": "阿里巴巴集团",
+      "SpecName": "basic",
+      "ConsortiumCount": 0,
+      "PeerCount": 3,
+      "Description": "string",
+      "Domain": "domain",
+      "UserCount": 2,
+      "ServiceState": "Pending"
+    },
+    "RequestId": "2537DB1B-F478-431E-A847-5DDAAE2BD251",
+    "ErrorCode": 200,
+    "Success": true
+  }
+}

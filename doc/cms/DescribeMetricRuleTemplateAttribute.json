@@ -1,0 +1,88 @@
+{
+  "name": "DescribeMetricRuleTemplateAttribute",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询报警模板的详情。",
+  "abc_id": 114979,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "我的模板",
+      "description_cn": "报警模板的名称。"
+    },
+    "TemplateId": {
+      "name": "TemplateId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123",
+      "description_cn": "报警模板的ID。"
+    }
+  },
+  "res": {
+    "Resource": {
+      "RestVersion": 0,
+      "Name": "nametest",
+      "Description": "nametestDesc",
+      "AlertTemplates": {
+        "AlertTemplate": [
+          {
+            "Category": "ecs",
+            "MetricName": "cpu_total",
+            "Namespace": "acs_ecs_dashboard",
+            "RuleName": "cpu_total",
+            "Escalations": {
+              "Critical": {},
+              "Info": {},
+              "Warn": {
+                "Statistics": "Average",
+                "Threshold": "90.0",
+                "Times": 1,
+                "ComparisonOperator": "GreaterThanOrEqualToThreshold"
+              }
+            }
+          },
+          {
+            "Category": "rds",
+            "MetricName": "AvgLogSize",
+            "Namespace": "acs_rds_dashboard",
+            "RuleName": "AvgLogSize",
+            "Escalations": {
+              "Critical": {},
+              "Info": {},
+              "Warn": {
+                "Statistics": "Average",
+                "Threshold": "12.0",
+                "Times": 1,
+                "ComparisonOperator": "GreaterThanOrEqualToThreshold"
+              }
+            }
+          }
+        ]
+      },
+      "TemplateId": 45
+    },
+    "RequestId": "C14F2566-B4AC-4C3E-AC7D-0A1D16CF33DE",
+    "Success": true,
+    "Code": 200
+  }
+}

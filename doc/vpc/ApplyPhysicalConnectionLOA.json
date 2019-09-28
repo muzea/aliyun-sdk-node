@@ -1,0 +1,157 @@
+{
+  "name": "ApplyPhysicalConnectionLOA",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ApplyPhysicalConnectionLOA申请LOA。",
+  "abc_id": 114594,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "专线实例所属的地域ID。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "pc-bp1qrb3044eqixxxxxxxx",
+      "description_cn": "物理专线实例ID。"
+    },
+    "CompanyName": {
+      "name": "CompanyName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "company",
+      "description_cn": "物理专线接入的客户公司名称。"
+    },
+    "LineType": {
+      "name": "LineType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "SDH",
+      "description_cn": "物理专线类型。"
+    },
+    "Si": {
+      "name": "Si",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "阿里",
+      "description_cn": "物理专线施工单位。"
+    },
+    "ConstructionTime": {
+      "name": "ConstructionTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2019-02-28T16:00:00.000Z",
+      "description_cn": "施工单位入场时间。"
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "A47BD386-7FDE-4xxx4-8D22-C62xxxxxxxx",
+      "description_cn": "客户端鉴权。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "Bandwidth": {
+      "name": "Bandwidth",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3",
+      "description_cn": "物理专线带宽值。"
+    },
+    "PeerLocation": {
+      "name": "PeerLocation",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "杭州",
+      "description_cn": "物理专线部署地理位置。"
+    },
+    "PMInfo": {
+      "name": "PMInfo",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "PMName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "PMContactInfo",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "PMCertificateType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "PMCertificateNo",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "PMGender",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {
+    "code": "200",
+    "httpStatusCode": 200,
+    "message": "successful",
+    "requestId": "A47BD386-7FDE-42C4-8D22-C6223D18AA1C",
+    "success": true
+  }
+}

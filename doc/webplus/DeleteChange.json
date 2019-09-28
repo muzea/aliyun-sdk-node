@@ -1,0 +1,29 @@
+{
+  "name": "DeleteChange",
+  "protocol": "HTTPS|HTTP",
+  "method": "DELETE",
+  "path": "/pop/v1/wam/change",
+  "summary_cn": "调用DeleteChange删除一个变更。",
+  "abc_id": 127710,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ChangeId": {
+      "name": "ChangeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "wc-5d3a963d5802611c4dd*****",
+      "description_cn": "变更ID，将删除此变更"
+    }
+  },
+  "res": {}
+}

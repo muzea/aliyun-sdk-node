@@ -1,0 +1,86 @@
+{
+  "name": "CreateProtectionModuleRule",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateProtectionModuleRule接口新增一条防护规则。",
+  "abc_id": 100349,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Domain": {
+      "name": "Domain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "www.aliyun.com",
+      "description_cn": "要操作的域名名称。"
+    },
+    "Defense": {
+      "name": "Defense",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "tamperproof",
+      "description_cn": "要操作的防护功能。取值：\n- **tamperproof**：新增网站防篡改规则\n- **antifraud**：新增数据风控规则\n- **antifraud_js**：新增数据风控JS规则"
+    },
+    "Rule": {
+      "name": "Rule",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "{\\\"name\\\":\\\"test\\\",\\\"uri\\\":\\\"http://xx.aliyun.com/example/\\\"}",
+      "description_cn": "要添加的规则内容。按照Rule构造成Json后转换成字符串作为入参，根据要添加的规则类型不同，需要传入的参数不同。具体结构说明如下。\n\n- 添加网站防篡改规则（**Defense**为**tamperproof**）时，传入以下参数：\n\n    - **uri**，String类型，必选，要防护的URI。\n    - **name**，String类型，必选，自定义规则名称。\n    - **status**，Integer类型，可选，是否启用规则。取值：\n\n        > 新增防篡改规则时无需填写，更改防篡改规则时必须填写。\n\n        - **0**：关闭\n        - **1**：启用\n\n- 添加数据风控规则（**Defense**为**antifraud**或**antifraud_js**）时，传入以下参数：\n\n    - **uri**，String类型，必选，要防护的URI。\n"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "waf_elasticity-cn-0xldbqtm005",
+      "description_cn": "WAF实例ID。\n\n> 您可以调用[DescribePayInfo](~~86651~~)接口查看当前WAF实例ID。"
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Region": {
+      "name": "Region",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn",
+      "description_cn": "地域ID。取值： \n- **cn**：中国大陆地区（默认）\n- **cn-hongkong**：海外地区"
+    }
+  },
+  "res": {}
+}

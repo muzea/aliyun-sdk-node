@@ -1,0 +1,114 @@
+{
+  "name": "CreateMigrateTask",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateMigrateTask接口将OSS上的备份文件还原到RDS实例，实现数据上云。",
+  "abc_id": 64559,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "DBName": {
+      "name": "DBName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "testDB",
+      "description_cn": "目标数据库名称。"
+    },
+    "BackupMode": {
+      "name": "BackupMode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "FULL",
+      "description_cn": "迁移上云任务类型，取值：\n* **FULL**：通过全量备份文件执去执行还原操作。\n* **UPDF**：通过增量文件或者日志文件去还原增量部分的数据。"
+    },
+    "IsOnlineDB": {
+      "name": "IsOnlineDB",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "True",
+      "description_cn": "是否将还原后的数据库带上线，便于用户访问，取值：\n\n* **True**：将数据库带上线。\n* **False**：不将数据库带上线。\n\n>目前SQL Server 2008 R2 版本该值恒定为**True**。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "CheckDBMode": {
+      "name": "CheckDBMode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "AsyncExecuteDBCheck",
+      "description_cn": "打开数据库后一致性检查方法，取值：\n* **SyncExecuteDBCheck**：同步执行DB检查；\n* **AsyncExecuteDBCheck**：异步执行DB检查。\n\n默认值为**AsyncExecuteDBCheck**（兼容 SQL Server 2008 R2）。\n> 当 **IsOnlineDB**=**True**时，该值有效。"
+    },
+    "OssObjectPositions": {
+      "name": "OssObjectPositions",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "oss-ap-southeast-1.aliyuncs.com:rdsmssqlsingapore:autotest_2008R2_TestMigration_FULL.bak",
+      "description_cn": "OSS的组成部分。\n\n取值由3段组成，用英文冒号（:）分隔： \n* OSS Endpoint地址：oss-ap-southeast-1.aliyuncs.com；\n* OSS Bucket名字：rdsmssqlsingapore；\n* OSS上的备份文件Key：autotest_2008R2_TestMigration_FULL.bak。\n\n>* 该参数对于 SQL Server 2008 R2 版本实例是可选参数。\n* 该参数对于 SQL Server 2008 R2 以上版本实例是必传参数。"
+    },
+    "OSSUrls": {
+      "name": "OSSUrls",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "check_cdn_oss.sh www.xxxxxx.mobi ",
+      "description_cn": "备份文件所在OSS共享URL地址（Encode编码后的URL）。\n\n有多个地址时，先使用“|”隔开，再编码后传入参数。\n\n> SQL Server 2008 R2 必须传入该参数。"
+    },
+    "MigrateTaskId": {
+      "name": "MigrateTaskId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "无",
+      "description_cn": "迁移任务ID：\n* **BackupMode**=**FULL**时，该值为空。（兼容RDS for SQLServer 2008 R2）；\n* **BackupMode**=**UPDF**时，该值为对应FULL任务的ID。\n\n默认值为FULL。\n>* **IsOnlineDB**=**True**时，**BackupMode**必须取值为**FULL**；\n* **IsOnlineDB**=**False**时，**BackupMode**必须为**UPDF**。"
+    }
+  },
+  "res": {
+    "BackupMode": "FULL",
+    "requestId": "8DA8956A-53DA-423E-9540-387428ED37FF-5711",
+    "DBInstanceId": "rm-bp1842vmucoa5w874",
+    "DBName": "test02",
+    "MigrateIaskId": " dtsvb9449b6mhbm",
+    "TaskId": "123"
+  }
+}

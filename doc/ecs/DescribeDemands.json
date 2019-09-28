@@ -1,0 +1,167 @@
+{
+  "name": "DescribeDemands",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDemands查询报备资源的交付及使用状态。您可通过该接口查询客户经理为您报备的资源详情，包括报备资源类型、资源的交付情况、资源的消费情况。",
+  "abc_id": 110606,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "目标地域 ID。您可以调用 [DescribeRegions](~~25609~~) 查看最新的阿里云地域列表。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": ""
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "报备单列表的页码。起始值：1\n\n默认值：1"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时设置的每页行数。最大值：100\n\n默认值：10"
+    },
+    "DryRun": {
+      "name": "DryRun",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否只预检此次请求。\n- true：发送检查请求，不会查询报备单状况。检查项包括AccessKey是否有效、RAM用户的授权情况和是否填写了必需参数。如果检查不通过，则返回对应错误。如果检查通过，会返回错误码DryRunOperation。\n- false（默认值）：发送正常请求，通过检查后返回2XX HTTP状态码并直接查询报备单状况。"
+    },
+    "ZoneId": {
+      "name": "ZoneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou-g",
+      "description_cn": "可用区ID。"
+    },
+    "InstanceTypeFamily": {
+      "name": "InstanceTypeFamily",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ecs.g5",
+      "description_cn": "报备实例的规格族。"
+    },
+    "InstanceType": {
+      "name": "InstanceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ecs.g5.large",
+      "description_cn": "报备实例的规格。"
+    },
+    "InstanceChargeType": {
+      "name": "InstanceChargeType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PostPaid",
+      "description_cn": "实例的计费方式。取值范围：\n\n- PostPaid：按量付费\n- PrePaid：包年包月"
+    },
+    "DemandStatus": {
+      "name": "DemandStatus",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 1,
+    "Demands": {
+      "Demand": [
+        {
+          "Period": "3",
+          "DemandTime": "2019-02-26T12:00Z",
+          "InstanceTypeFamily": "ecs.n1",
+          "AvailableAmount": 50,
+          "ZoneId": "cn-hangzhou-g",
+          "UsedAmount": 0,
+          "InstanceType": "ecs.n1.small",
+          "DemandStatus": "Expired",
+          "EndTime": "2019-03-03T15:00Z",
+          "TotalAmount": 50,
+          "SupplyInfos": {
+            "SupplyInfo": [
+              {
+                "Amount": 50,
+                "SupplyEndTime": "2019-03-03T15:00Z",
+                "SupplyStartTime": "2019-03-01T14:00Z",
+                "SupplyStatus": "Delivering"
+              }
+            ]
+          },
+          "StartTime": "2019-02-27T12:00Z",
+          "InstanceChargeType": "PrePaid",
+          "PeriodUnit": "Month"
+        }
+      ]
+    },
+    "PageSize": 10,
+    "RegionId": "cn-hangzhou",
+    "RequestId": "A6CCD8FE-A074-4F7B-B206-7D0478EABADX"
+  }
+}

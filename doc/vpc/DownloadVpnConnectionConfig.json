@@ -1,0 +1,68 @@
+{
+  "name": "DownloadVpnConnectionConfig",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DownloadVpnConnectionConfig接口获取IPsec连接的配置信息。",
+  "abc_id": 53053,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-shanghai",
+      "description_cn": "IPsec连接所在的地域。 \n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "VpnConnectionId": {
+      "name": "VpnConnectionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "vco-bp1bbi27hojx80nck****",
+      "description_cn": " IPsec连接的ID。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "0C68048B-0F70-40DA-B8AE-1B79B5CF62E3",
+    "VpnConnectionConfig": {
+      "RemoteSubnet": "1.1.1.0/24,1.1.2.0/24",
+      "Local": "139.196.32.167",
+      "IpsecConfig": {
+        "IpsecLifetime": 86400,
+        "IpsecAuthAlg": "sha1",
+        "IpsecPfs": "group2",
+        "IpsecEncAlg": "aes"
+      },
+      "Remote": "116.62.69.64",
+      "LocalSubnet": "2.2.2.0/24",
+      "IkeConfig": {
+        "IkeEncAlg": "aes",
+        "IkePfs": "group2",
+        "RemoteId": "116.62.69.64",
+        "IkeAuthAlg": "sha1",
+        "Psk": "pgw6dy7d1i8in7x5",
+        "IkeMode": "main",
+        "IkeLifetime": 86400,
+        "IkeVersion": "ikev1",
+        "LocalId": "139.196.32.167"
+      }
+    }
+  }
+}

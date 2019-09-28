@@ -1,0 +1,53 @@
+{
+  "name": "ModifyBandwidthPackageSpec",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "使用ModifyBandwidthPackageSpec接口修改指定NAT带宽包的带宽。",
+  "abc_id": 36055,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "NAT带宽包所在的地域。 \n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "BandwidthPackageId": {
+      "name": "BandwidthPackageId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "bwp-s6lmotmkkxxxxxxxx",
+      "description_cn": " NAT带宽包的ID。 "
+    },
+    "Bandwidth": {
+      "name": "Bandwidth",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "5",
+      "description_cn": " NAT带宽包的带宽。取值范围：5-1000。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123"
+    }
+  },
+  "res": {
+    "RequestId": "54ED4074-3F89-4F11-B166-837DD3E20FE3"
+  }
+}

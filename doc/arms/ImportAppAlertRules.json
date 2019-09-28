@@ -1,0 +1,76 @@
+{
+  "name": "ImportAppAlertRules",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 ImportAppAlertRules 导入应用报警规则。",
+  "abc_id": 130672,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域 ID"
+    },
+    "Pids": {
+      "name": "Pids",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "xxxxxxxxx",
+      "description_cn": "Pids"
+    },
+    "TemplateAlertId": {
+      "name": "TemplateAlertId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "324324234",
+      "description_cn": "报警模板 ID"
+    },
+    "ContactGroupIds": {
+      "name": "ContactGroupIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "1234",
+      "description_cn": "报警联系人分组 ID"
+    },
+    "IsAutoStart": {
+      "name": "IsAutoStart",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否自动开始"
+    },
+    "TemplageAlertConfig": {
+      "name": "TemplageAlertConfig",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

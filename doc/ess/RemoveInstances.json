@@ -1,0 +1,59 @@
+{
+  "name": "RemoveInstances",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用RemoveInstances从一个伸缩组里移出ECS实例。",
+  "abc_id": 25955,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ScalingGroupId": {
+      "name": "ScalingGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "AG6CQdPU8OKdwLjgZcJ****",
+      "description_cn": "伸缩组的ID。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456123456",
+      "description_cn": ""
+    },
+    "RemovePolicy": {
+      "name": "RemovePolicy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "release",
+      "description_cn": "指定被移出实例的动作，取值范围： \n\n- recycle：实例进入停机不收费状态。\n\n    > 仅在ScalingPolicy为recycle时生效。 \n\n- release：实例被释放。\n\n默认值：release。"
+    }
+  },
+  "res": {
+    "ScalingActivityId": "bybj9OcaOT4ucPMbFhcq****",
+    "RequestId": "473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E"
+  }
+}

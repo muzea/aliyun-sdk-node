@@ -1,0 +1,18 @@
+{
+  "name": "DescribeRegions",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v1/paas/regionConfig",
+  "summary_cn": "使用 DescribeRegions 查询可用地域。",
+  "abc_id": 126213,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    }
+  },
+  "res": {}
+}

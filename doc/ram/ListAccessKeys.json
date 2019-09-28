@@ -1,0 +1,44 @@
+{
+  "name": "ListAccessKeys",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ListAccessKeys接口列出指定用户的访问密钥。",
+  "abc_id": 28692,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "UserName": {
+      "name": "UserName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "zhangq****",
+      "description_cn": "指定用户，RAM用户访问时不提供此参数则表示列出自己的访问密钥。"
+    }
+  },
+  "res": {
+    "RequestId": "4B450CA1-36E8-4AA2-8461-86B42BF4CC4E",
+    "AccessKeys": {
+      "AccessKey": [
+        {
+          "AccessKeyId": "0wNEpMMlzy7szvai",
+          "Status": "Active",
+          "CreateDate": "2015-01-23T12:33:18Z"
+        },
+        {
+          "AccessKeyId": "WnIWUruvfaDT37vQ",
+          "Status": "Inactive",
+          "CreateDate": "2015-03-24T21:12:21Z"
+        }
+      ]
+    }
+  }
+}

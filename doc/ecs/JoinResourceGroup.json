@@ -1,0 +1,72 @@
+{
+  "name": "JoinResourceGroup",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用JoinResourceGroup将一个ECS资源或者服务加入另一个资源组。",
+  "abc_id": 92260,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "资源所在的地域ID。您可以调用 [**DescribeRegions**](~~25609~~) 查看最新的阿里云地域列表。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "ResourceType": {
+      "name": "ResourceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "instance",
+      "description_cn": "ECS资源的类型。取值范围： instance（实例）|disk（磁盘）|snapshot（快照）|image（镜像）|securitygroup（安全组）|ddh（专有宿主机）|eni（弹性网卡）|keypair（密钥对）|launchtemplate（启动模板） \n\n以上参数取值均大小写敏感。 "
+    },
+    "ResourceId": {
+      "name": "ResourceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-instanceid1",
+      "description_cn": "资源类型的ID标识符。例如，当ResourceType=instance时，则ResourceId可以理解为InstanceId。 "
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rg-resourcegroupid1",
+      "description_cn": "目标资源组ID。"
+    }
+  },
+  "res": {
+    "RequestId": "C0003E8B-B930-4F59-ADC0-0E20xxxxxxxx"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "name": "DescribeUserUsageDataExportTask",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeUserUsageDataExportTask列出用户最近三个月的用量导出任务信息。",
+  "abc_id": 91062,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "分页大小。默认值：**20**；最大值：**50**。取值：**1**~**50**之间的任意整数。\n"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "取得第几页，取值范围：**1**~**100000**。\n"
+    }
+  },
+  "res": {
+    "RequestId": "A91BE91F-0B34-4CBF-8E0F-A2977E15AA52",
+    "UsageDataPerPage": {
+      "PageSize": 10,
+      "TotalCount": 10,
+      "PageNumber": 1,
+      "Data": {
+        "TaskId": 11,
+        "UpdateTime": "2018-10-09T06:35:46Z",
+        "DownloadUrl": "example.com",
+        "CreateTime": "2018-10-09T06:33:38Z",
+        "Status": "success"
+      },
+      "TaskConfig": {
+        "StartTime": "2018-07-31T16:00:00Z",
+        "EndTime": "2018-08-31T15:59:59Z"
+      }
+    }
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "name": "DescribeBackups",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeBackups接口查看备份集列表。",
+  "abc_id": 26273,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "BackupId": {
+      "name": "BackupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "327329803",
+      "description_cn": "备份集ID。"
+    },
+    "BackupLocation": {
+      "name": "BackupLocation",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "BackupStatus": {
+      "name": "BackupStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Success",
+      "description_cn": "备份集状态。取值：\n* **Success**：已完成备份；\n* **Failed**：备份失败。"
+    },
+    "BackupMode": {
+      "name": "BackupMode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Automated",
+      "description_cn": "备份模式，取值：\n* **Automated**：系统自动备份；\n* **Manual**：手动备份。"
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2011-06-01T16:00Z",
+      "description_cn": "查询开始时间。格式：<i>yyyy-MM-dd</i>T<i>HH:mm</i>Z（UTC时间）。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2011-06-15T16:00Z",
+      "description_cn": "查询结束时间，需要大于查询开始时间。格式：<i>yyyy-MM-dd</i>T<i>HH:mm</i>Z（UTC时间）。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "每页记录数，取值：\n* **30**；\n* **50**；\n* **100**。\n\n默认值：**30**。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页码，取值：大于0且不超过Integer的最大值。\n\n默认值：**1**。"
+    }
+  },
+  "res": {
+    "Items": {
+      "Backup": [
+        {
+          "StoreStatus": "Disabled",
+          "HostInstanceID": 5882781,
+          "BackupLocation": "OSS",
+          "BackupIntranetDownloadURL": "http://rdsbak-hz-v3.oss-cn-hangzhou-internal.aliyuncs.com/custins10430291/hins5882781_data_20190213201955.tar.gz?OSSAccessKeyId=xxxxxxxx&Expires=1231230&Signature=zIBwxxxxxxx5ga3p%2BVxxxxxxxx%3D",
+          "BackupType": "FullBackup",
+          "DBInstanceId": "rdsaiiabnaiiabn",
+          "BackupEndTime": "2019-02-13T12:22:53Z",
+          "BackupMethod": "Physical",
+          "BackupId": 321020562,
+          "BackupStartTime": "2019-02-13T12:20:37Z",
+          "BackupDownloadURL": "http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/custins10430291/hins5882781_data_20190213201955.tar.gz?OSSAccessKeyId=xxxxxxx&Expires=1231230&Signature=zIBwxxxxxxxxUs5ga3p%2BVxxxxxxxk%3D",
+          "MetaStatus": "",
+          "BackupDBNames": "spdb,sys,test20181221,test-20181228,test_20181115,test_20181116",
+          "BackupMode": "Automated",
+          "BackupSize": 2167808,
+          "BackupStatus": "Success",
+          "BackupScale": "DBInstance"
+        }
+      ]
+    },
+    "TotalBackupSize": "8672256",
+    "PageNumber": 1,
+    "TotalRecordCount": 1,
+    "RequestId": "B0E0F374-919F-4BD9-BCAC-AE68122A0D68",
+    "PageRecordCount": 1
+  }
+}

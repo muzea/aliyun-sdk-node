@@ -1,0 +1,124 @@
+{
+  "name": "DescribeVpnConnections",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeVpnConnections接口查询已创建的IPsec连接。",
+  "abc_id": 53043,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "IPsec连接所在的地域。 \n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "VpnGatewayId": {
+      "name": "VpnGatewayId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpn-bp1q8bgx4xnkx****",
+      "description_cn": " VPN网关的ID。 "
+    },
+    "CustomerGatewayId": {
+      "name": "CustomerGatewayId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cgw-bp1mvj4g9kogw****",
+      "description_cn": "用户网关的ID。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": " 列表的页码，默认值为**1**。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": " 分页查询时每页的行数，最大值为**50**，默认值为**10**。  "
+    },
+    "VpnConnectionId": {
+      "name": "VpnConnectionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vco-bp15oes1py4i6****",
+      "description_cn": "IPsec连接的ID。"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "VpnConnections": {
+      "VpnConnection": [
+        {
+          "Name": "vpn连接测试",
+          "CustomerGatewayId": "cgw-bp1pvpl9r9adju6l5nxck",
+          "RemoteSubnet": "2.2.2.0/24",
+          "IpsecConfig": {
+            "IpsecLifetime": 86400,
+            "IpsecAuthAlg": "sha1",
+            "IpsecPfs": "group2",
+            "IpsecEncAlg": "aes"
+          },
+          "EffectImmediately": true,
+          "VpnGatewayId": "vpn-bp1q8bgx4xnkm2ogj0fiu",
+          "CreateTime": 1492753817000,
+          "VpnConnectionId": "vco-bp10lz7aejumd2vxoqgev",
+          "status": "ipsec_sa_established",
+          "LocalSubnet": "1.1.1.0/24,1.1.2.0/24",
+          "IkeConfig": {
+            "IkeEncAlg": "aes",
+            "RemoteId": "139.196.32.167",
+            "IkePfs": "group2",
+            "IkeAuthAlg": "sha1",
+            "Psk": "pgw6dy7d1i8in7x5",
+            "IkeMode": "main",
+            "IkeLifetime": 86400,
+            "IkeVersion": "ikev1",
+            "LocalId": "116.62.69.64"
+          }
+        }
+      ]
+    },
+    "TotalCount": 1,
+    "PageSize": 10,
+    "RequestId": "54A4B3D0-DF4D-4C54-B8DC-5DC8DD49C939"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "ExecuteChangeSet",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/V2/ExecuteChangeSet",
+  "summary_cn": "执行更改集。",
+  "abc_id": 131266,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "更改集所属的地域ID。您可以调用[DescribeRegions](~~131035~~)查看最新的阿里云地域列表。"
+    },
+    "ChangeSetId": {
+      "name": "ChangeSetId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1f6521a4-05af-4975-afe9-bc4b45ad5bd5",
+      "description_cn": "更改集ID。"
+    }
+  },
+  "res": {}
+}

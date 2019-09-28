@@ -1,0 +1,121 @@
+{
+  "name": "DescribeMonitoringAgentHosts",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询所有的已安装和未安装云监控插件的主机列表。",
+  "abc_id": 114952,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "KeyWord": {
+      "name": "KeyWord",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "host1",
+      "description_cn": "模糊搜索关键字。"
+    },
+    "HostName": {
+      "name": "HostName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "hostNam1",
+      "description_cn": "主机名称。"
+    },
+    "InstanceIds": {
+      "name": "InstanceIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-a3d1q1pm2f9yr29e****",
+      "description_cn": "实例ID。"
+    },
+    "SerialNumbers": {
+      "name": "SerialNumbers",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "a1ab31a3-1234-40f2-9e95-c8caa8f0****",
+      "description_cn": "序列号搜索。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页数。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "每页显示记录条数。"
+    },
+    "InstanceRegionId": {
+      "name": "InstanceRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例的regionId。"
+    }
+  },
+  "res": {
+    "PageTotal": 1,
+    "PageNumber": 1,
+    "PageSize": 100,
+    "Hosts": {
+      "Host": [
+        {
+          "AgentVersion": "2.1.55",
+          "SerialNumber": "x12335-6cc8-4a22-9f21-1a00a719****",
+          "NetworkType": "vpc",
+          "Region": "ap-south-1",
+          "InstanceTypeFamily": "ecs.n4",
+          "isAliyunHost": true,
+          "IpGroup": "12.23.XX.XX",
+          "AliUid": "127067667954****",
+          "InstanceId": "i-a2d5q7pm3f9yr212****",
+          "OperatingSystem": "Linux",
+          "HostName": "sitemonitor-mengmai-1"
+        }
+      ]
+    },
+    "Success": true,
+    "Code": 200,
+    "Total": 2
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "name": "BatchSetCdnDomainServerCertificate",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用BatchSetCdnDomainServerCertificate批量设置域名下证书功能是否启用及修改证书信息。",
+  "abc_id": 128575,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "指定证书所属加速域名，属于https加速类型，多个域名用逗号（,）隔开。"
+    },
+    "SSLProtocol": {
+      "name": "SSLProtocol",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "on",
+      "description_cn": "HTTPS证书是否启用。\n\n- **on**：启用。\n\n- **off**：不启用。\n\n默认取值：**off**。\n"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "CertName": {
+      "name": "CertName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "yourCertName",
+      "description_cn": "证书名称。"
+    },
+    "CertType": {
+      "name": "CertType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cas",
+      "description_cn": "**upload**为上传证书，**cas**为证书中心证书。"
+    },
+    "SSLPub": {
+      "name": "SSLPub",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "yourSSLPub",
+      "description_cn": "安全证书内容，不启用证书则无需输入，配置证书请输入证书内容。"
+    },
+    "SSLPri": {
+      "name": "SSLPri",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "yourSSLPri",
+      "description_cn": "私钥内容，不启用证书则无需输入，配置证书请输入私钥内容。"
+    },
+    "Region": {
+      "name": "Region",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "your region",
+      "description_cn": "地域。"
+    },
+    "ForceSet": {
+      "name": "ForceSet",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "设置为1时，忽略证书名称重复的校验，覆盖原有同名证书信息。"
+    }
+  },
+  "res": {
+    "RequestId": "0AEDAF20-4DDF-4165-8750-47FF9C1929C9"
+  }
+}

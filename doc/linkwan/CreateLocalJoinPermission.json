@@ -1,0 +1,62 @@
+{
+  "name": "CreateLocalJoinPermission",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateLocalJoinPermission创建专用入网凭证。当前用户账号将成为该凭证的拥有者，拥有该凭证。",
+  "abc_id": 109917,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "FreqBandPlanGroupId": {
+      "name": "FreqBandPlanGroupId",
+      "type": "Long",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "101",
+      "description_cn": "专用入网凭证所采用的频段的频段ID。"
+    },
+    "ClassMode": {
+      "name": "ClassMode",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "A",
+      "description_cn": "专用入网凭证采用的LoRaWAN Class模式。可取值：**A**、**B**、**C**。"
+    },
+    "UseDefaultJoinEui": {
+      "name": "UseDefaultJoinEui",
+      "type": "Boolean",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "true",
+      "description_cn": "专用入网凭证是否使用阿里云统一JoinEUI。"
+    },
+    "JoinPermissionName": {
+      "name": "JoinPermissionName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "test",
+      "description_cn": "自定义专用入网凭证名称。"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,80 @@
+{
+  "name": "AttachKeyPair",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AttachKeyPair绑定一个SSH密钥对到一台或多台Linux实例。",
+  "abc_id": 51775,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "SSH密钥对所在的地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。 "
+    },
+    "KeyPairName": {
+      "name": "KeyPairName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "FinanceJoshuaV25",
+      "description_cn": "SSH密钥对名称。"
+    },
+    "InstanceIds": {
+      "name": "InstanceIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "[\"i-xxxxxxxxx\", \"i-yyyyyyyyy\", … \"i-zzzzzzzzz\"]",
+      "description_cn": "绑定SSH密钥对的实例ID。取值可以由多台实例ID组成一个JSON数组，最多支持50个ID，ID之间用半角逗号（,）隔开。 "
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    }
+  },
+  "res": {
+    "TotalCount": 2,
+    "RequestId": "4ADF7A06-66BD-4FBF-A2ED-2364E41D8C06",
+    "Results": {
+      "Result": [
+        {
+          "Message": "successful",
+          "InstanceId": "i-m5eg7be9ndloji64jknv",
+          "Success": true,
+          "Code": "200"
+        },
+        {
+          "Message": "successful",
+          "InstanceId": "i-m5e25x2mwr0hk33dwv0h",
+          "Success": true,
+          "Code": "200"
+        }
+      ]
+    },
+    "FailCount": 0
+  }
+}

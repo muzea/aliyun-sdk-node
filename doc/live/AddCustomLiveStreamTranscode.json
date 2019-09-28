@@ -1,0 +1,181 @@
+{
+  "name": "AddCustomLiveStreamTranscode",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AddCustomLiveStreamTranscode添加自定义转码配置信息。",
+  "abc_id": 66944,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "所属区域。"
+    },
+    "App": {
+      "name": "App",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "AppName",
+      "description_cn": "直播流所属应用名称。\n\n可包含数字、大小写字母、下划线(\"_\")或短横线(\"-\")。"
+    },
+    "Template": {
+      "name": "Template",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "LDtest",
+      "description_cn": "转码模板自定义名称。\n取值要求：数字、大小写字母或短横线(\"-\")。\n<note>不能与标准的转码模板命名重复。</note>\n"
+    },
+    "TemplateType": {
+      "name": "TemplateType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "h264",
+      "description_cn": "自定义转码模版类型。目前支持：\n\n- **h264**(自定义H264标准模版)\n\n- **h264-nbhd**(自定义H264窄带高清™模版)\n\n- **h265** (自定义H265标准模版)\n\n- **h265-nbhd** (自定义H265窄带高清模版)\n\n- **audio纯音频模板**"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "Domain": {
+      "name": "Domain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "live.aliyunlive.com",
+      "description_cn": "您的加速域名。"
+    },
+    "Height": {
+      "name": "Height",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "720",
+      "description_cn": "转码视频宽度。\n\n- 取值范围：Width≥ 100\n\n- max(Height,Width) ≤ 2560\n\n- min(Height,Width) ≤ 1440\n\n<note>265窄带高清模板不得超过1280*720</note>\n"
+    },
+    "Width": {
+      "name": "Width",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "576",
+      "description_cn": "转码视频宽度。\n\n- 取值要求：Width ≥ 100\n\n- max(Height,Width) ≤ 2560\n\n- min(Height,Width) ≤ 1440\n\n<note>265窄带高清模板不得超过1280*720</note>\n"
+    },
+    "FPS": {
+      "name": "FPS",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "转码视频帧率。单位：fps，取值范围：1~60。"
+    },
+    "VideoBitrate": {
+      "name": "VideoBitrate",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "720",
+      "description_cn": "转码视频比特率。单位：kbps，取值范围：1~6000。\n\n<note>转码视频会尽量接近您所设定的比特率, 但转码视频的实际比特率不能保证和您所设定的完全一致, 尤其是当您设定的比特率过大或过小时。</note>\n"
+    },
+    "AudioBitrate": {
+      "name": "AudioBitrate",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "512",
+      "description_cn": "转码音频比特率。单位: kbps，取值范围：1 ≤AudioBitrate ≤ 1000。"
+    },
+    "Gop": {
+      "name": "Gop",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "视频GOP。单位: 帧，取值要求：1 ≤ Gop ≤ 3000。"
+    },
+    "Profile": {
+      "name": "Profile",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "视频GOP。取值：\n\n- **1**：baseline\n- **2**：main\n- **3**：high"
+    },
+    "AudioProfile": {
+      "name": "AudioProfile",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "aac_low",
+      "description_cn": "音频编码Profile。可选值 \n- aac_low\n- aac_he\n- aac_he_v2\n- aac_ld，采样率不能超过44100\n"
+    },
+    "AudioCodec": {
+      "name": "AudioCodec",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "aac",
+      "description_cn": "音频编码器。可选值：**aac** | **mp3**。"
+    },
+    "AudioRate": {
+      "name": "AudioRate",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "96000",
+      "description_cn": "音频采样率。取值：**22050~96000**。\n\n>如果是 aac_ld, 则采样率不能超过44100"
+    },
+    "AudioChannelNum": {
+      "name": "AudioChannelNum",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "音频声道数。可选值：**1** | **2** 。"
+    }
+  },
+  "res": {}
+}

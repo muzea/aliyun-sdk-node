@@ -1,0 +1,93 @@
+{
+  "name": "SendSms",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用SendSms发送短信。",
+  "abc_id": 101414,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "PhoneNumbers": {
+      "name": "PhoneNumbers",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "15900000000",
+      "description_cn": "接收短信的手机号码。\n\n格式：\n* 国内短信：11位手机号码，例如15951955195。\n* 国际/港澳台消息：国际区号+号码，例如85200000000。\n\n支持对多个手机号码发送短信，手机号码之间以英文逗号（,）分隔。上限为1000个手机号码。批量调用相对于单条调用及时性稍有延迟。\n\n<note>验证码类型短信，建议使用单独发送的方式。</note>"
+    },
+    "SignName": {
+      "name": "SignName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "阿里云",
+      "description_cn": "短信签名名称。请在控制台**签名管理**页面**签名名称**一列查看。\n\n<note>必须是已添加、并通过审核的短信签名。</note>"
+    },
+    "TemplateCode": {
+      "name": "TemplateCode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "SMS_153055065",
+      "description_cn": "短信模板ID。请在控制台**模板管理**页面**模板CODE**一列查看。\n\n<note>必须是已添加、并通过审核的短信签名；且发送国际/港澳台消息时，请使用国际/港澳台短信模版。</note>"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "TemplateParam": {
+      "name": "TemplateParam",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{\"code\":\"1111\"}",
+      "description_cn": "短信模板变量对应的实际值，JSON格式。\n\n<note>如果JSON中需要带换行符，请参照标准的JSON协议处理。</note>"
+    },
+    "SmsUpExtendCode": {
+      "name": "SmsUpExtendCode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "90999",
+      "description_cn": "上行短信扩展码，无特殊需要此字段的用户请忽略此字段。"
+    },
+    "OutId": {
+      "name": "OutId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "abcdefgh",
+      "description_cn": "外部流水扩展字段。"
+    }
+  },
+  "res": {
+    "Message": "OK",
+    "RequestId": "873043ac-bcda-44db-9052-2e204c6ed20f",
+    "BizId": "607300000000000000^0",
+    "Code": "OK"
+  }
+}

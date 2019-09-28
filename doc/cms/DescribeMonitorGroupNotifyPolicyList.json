@@ -1,0 +1,81 @@
+{
+  "name": "DescribeMonitorGroupNotifyPolicyList",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询应用分组的报警通知暂停策略列表。",
+  "abc_id": 115017,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "资源所属的地域ID。"
+    },
+    "PolicyType": {
+      "name": "PolicyType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "PauseNotify",
+      "description_cn": "禁用的类型，目前只能选择PauseNotify。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页码，默认值为1。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "100",
+      "description_cn": "每页记录条数，默认值为10。"
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "12346",
+      "description_cn": "应用分组ID。"
+    }
+  },
+  "res": {
+    "NotifyPolicyList": {
+      "NotifyPolicy": [
+        {
+          "Type": "PauseNotify",
+          "EndTime": 1551763581273,
+          "Id": 7995,
+          "StartTime": 1551761781273,
+          "GroupId": "13263"
+        }
+      ]
+    },
+    "Success": true,
+    "Code": "200",
+    "Total": 1
+  }
+}

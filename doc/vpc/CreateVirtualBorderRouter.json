@@ -1,0 +1,135 @@
+{
+  "name": "CreateVirtualBorderRouter",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateVirtualBorderRouter接口新建边界路由器（VBR）。",
+  "abc_id": 36023,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": " 物理专线所在的地域。 您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "PhysicalConnectionId": {
+      "name": "PhysicalConnectionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "pc-xxxxxxxxx",
+      "description_cn": " 物理专线的ID。 "
+    },
+    "VlanId": {
+      "name": "VlanId",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": " VBR的VLAN ID，取值范围为：**[1,2999]**。 \n          \n> 只有物理专线的所有者可以指定该参数，同一条物理专线下的两个VBR的VLAN ID不能相同。 "
+    },
+    "VbrOwnerId": {
+      "name": "VbrOwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": " VBR所有者的账号ID。 默认为当前用户的账号ID，即为物理专线的所有者创建VBR。 "
+    },
+    "CircuitCode": {
+      "name": "CircuitCode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "longtel001",
+      "description_cn": "运营商为物理专线提供的电路编码。 \n          \n> 只有物理专线的所有者可以指定该参数。\n"
+    },
+    "LocalGatewayIp": {
+      "name": "LocalGatewayIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "116.62.222.XX",
+      "description_cn": " VBR的阿里云侧互联IP。 "
+    },
+    "PeerGatewayIp": {
+      "name": "PeerGatewayIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "116.62.222.XX",
+      "description_cn": "VBR专线侧接口对端的IP地址。该属性只允许VBR owner指定/修改。为专线所有者创建VBR时必填，为其他账号创建VBR时不可填。"
+    },
+    "PeeringSubnetMask": {
+      "name": "PeeringSubnetMask",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "255.255.255.252",
+      "description_cn": "  VBR的阿里云侧和客户侧互联IP的子网掩码。 两个IP地址必须位于同一个子网中。 "
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "VBR描述信息",
+      "description_cn": "VBR的描述信息。  \n\n长度为 2-256个字符，必须以字母或中文开头，但不能以`http://` 或`https://`开头。  "
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "VBR的名称。  \n\n长度为 2-128个字符，必须以字母或中文开头，可包含数字，点号（.），下划线（_）和短横线（-）。但不能以`http:// `或`https://`开头。  "
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "02fb3da4-130e-11e9-8e44-0016e04115b",
+      "description_cn": "客户端token，用于保证请求的幂等性。 \n\n由客户端生成该参数值，要保证在不同请求间唯一，最大不值过64个 ASCII 字符。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "CreateRouterInterfaceResponse": {
+      "RequestId": "980960B0-2969-40BF-8542-EBB34FD358AB",
+      "VbrId": "vbr-2zecmmvg5gvu8i4telkhw"
+    }
+  }
+}

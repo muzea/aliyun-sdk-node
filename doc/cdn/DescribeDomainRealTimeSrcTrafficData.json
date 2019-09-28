@@ -1,0 +1,75 @@
+{
+  "name": "DescribeDomainRealTimeSrcTrafficData",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDomainRealTimeSrcTrafficData获取加速域名的1分钟回源流量监控数据，单位：bit。",
+  "abc_id": 91144,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "如果该参数为空，默认返回所有加速域名合并后数据。\n\n可以输入需要查询的加速域名。支持批量域名查询，多个域名用逗号（,）分隔。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2015-12-10T20:00:00Z",
+      "description_cn": "获取数据起始时间点。\n\n- 日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。\n\n- 不写默认读取过去1小时数据。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2015-12-10T20:01:00Z",
+      "description_cn": "获取数据结束时间点。\n- 结束时间需大于起始时间。\n\n- 日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。\n"
+    }
+  },
+  "res": {
+    "DomainName": "example.com",
+    "DataInterval": "60",
+    "RealTimeSrcTrafficDataPerInterval": {
+      "DataModule": [
+        {
+          "TimeStamp": "2015-12-10T20:00:00Z",
+          "Value": "0"
+        },
+        {
+          "TimeStamp": "2015-12-10T20:01:00Z",
+          "Value": "0"
+        }
+      ]
+    },
+    "RequestId": "A666D44F-19D6-490E-97CF-1A64AB962C57",
+    "StartTime": "2015-12-10T20:00:00Z",
+    "EndTime": "2015-12-10T20:01:00Z"
+  }
+}

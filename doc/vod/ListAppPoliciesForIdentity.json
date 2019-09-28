@@ -1,0 +1,63 @@
+{
+  "name": "ListAppPoliciesForIdentity",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ListAppPoliciesForIdentity列出指定账号身份（RAM子账号或RAM角色）被授予的应用权限的列表。",
+  "abc_id": 130545,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "IdentityName": {
+      "name": "IdentityName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "xxxxx",
+      "description_cn": "- 类型为RamUser时，传入RAM子账号ID。\n- 类型为RamRole时，传入角色名称。"
+    },
+    "IdentityType": {
+      "name": "IdentityType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "RamUser",
+      "description_cn": "身份类型。取值：**RamUser**（RAM子账号）, **RamRole**（RAM角色）。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "app-xxxxxx",
+      "description_cn": "应用ID。"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,94 @@
+{
+  "name": "DescribePrice",
+  "protocol": "HTTP|HTTPS",
+  "method": "GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "Commodities": {
+      "name": "Commodities",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "NodeType",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "InstanceType",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Amount",
+          "type": "Integer",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Period",
+          "type": "Integer",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "NetworkType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "SystemDiskCategory",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "SystemDiskSize",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "PriceUnit": {
+      "name": "PriceUnit",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "ChargeType": {
+      "name": "ChargeType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OrderType": {
+      "name": "OrderType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

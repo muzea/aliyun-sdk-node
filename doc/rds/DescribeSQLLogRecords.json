@@ -1,0 +1,154 @@
+{
+  "name": "DescribeSQLLogRecords",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeSQLLogRecords接口查询实例的SQL审计日志。",
+  "abc_id": 26294,
+  "timeout": 50000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2011-06-01T15:00:00Z",
+      "description_cn": "查询开始时间，格式：<i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z（UTC时间）。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2011-06-11T15:00:00Z",
+      "description_cn": "查询结束时间，大于查询开始时间，与查询开始时间间隔小于31天。格式：<i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z（UTC时间）。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ETnLKlblzczshOTUbOCzxxxxxxx",
+      "description_cn": "用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。"
+    },
+    "SQLId": {
+      "name": "SQLId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "25623548",
+      "description_cn": "SQL语句唯一标识ID。"
+    },
+    "QueryKeywords": {
+      "name": "QueryKeywords",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rds",
+      "description_cn": "用于查询的关键字，多个关键字以空格分隔，不超过10个关键字。"
+    },
+    "Database": {
+      "name": "Database",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Database",
+      "description_cn": "数据库名称。默认为所有数据库，也可以输入数据库名称查询，一次只能输入一个。"
+    },
+    "User": {
+      "name": "User",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "user",
+      "description_cn": "用户名称。默认为所有用户，也可以输入用户名称查询，一次只能输入一个。"
+    },
+    "Form": {
+      "name": "Form",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Stream",
+      "description_cn": "触发审计文件的生成或者返回SQL记录列表，取值：\n* **File**：若传入这个值，则触发审计文件的生成，只返回公共参数，需再调用[DescribeSQLLogFiles](~~26295~~)接口获取文件的最终下载地址；\n* **Stream**：默认值，返回SQL记录列表。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "每页记录数，取值：\n* **30**；\n* **50**；\n* **100**。\n\n默认值：**30**。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页码，取值：大于0且不超过Integer的最大值。\n\n默认值：**1**。"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalRecordCounts": 1,
+    "ItemsCounts": 1,
+    "SQLItems": {
+      "SQLItem": [
+        {
+          "DBName": "test",
+          "AccountName": "accounttest",
+          "HostAddress": "192.168.0.121",
+          "SQLText": "update test.zxb set id=0 limit 1",
+          "TotalExecutionTimes": 12,
+          "ReturnRowCounts": 34,
+          "ExecuteTime": "2011-06-11T15:00:23Z"
+        }
+      ]
+    },
+    "RequestId": "08A3B71B-FE08-4B03-974F-CC7EA6DB1828"
+  }
+}

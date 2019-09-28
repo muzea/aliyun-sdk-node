@@ -1,0 +1,45 @@
+{
+  "name": "DescribeFabricChaincodeUploadPolicy",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeFabricChaincodeUploadPolicy获取上传链码策略。",
+  "abc_id": 127851,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "OrganizationId": {
+      "name": "OrganizationId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "peers-aaaaaa1-1oxw31d04****",
+      "description_cn": "组织ID"
+    }
+  },
+  "res": {
+    "Result": {
+      "Dir": "t/4bd1de21-2fff-4",
+      "Host": "https://oss.aliyuncs.com",
+      "Policy": "eyJleHBpcmF0aW9uIjoiMjAxOC0wNy0zMVQwODoyNjozMC40NzdaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMTA0ODU3NjAwMF0sWyJzdGFydHMtd2l0aCIsIiRrZXkiLCJ0ZXN0My80YmQxZGUyMS0yZmZmLTQ0MDUtYThlOS1mODY0YzRiZWUyNGYiXV19",
+      "Expire": 1533025590,
+      "AccessId": "accessId",
+      "Signature": "klI/signature="
+    },
+    "RequestId": "540BFE13-BDE5-40B9-BCDD-F2E24B6D064F",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

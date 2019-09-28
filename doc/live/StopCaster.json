@@ -1,0 +1,38 @@
+{
+  "name": "StopCaster",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用StopCaster停止导播台，停止PVW、PGM场景，清理输出配置，停止底层音视频处理任务。",
+  "abc_id": 61496,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "CasterId": {
+      "name": "CasterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "80787064-1c94-4dc1-85ce-9409960a9bf0",
+      "description_cn": "导播台ID。"
+    }
+  },
+  "res": {}
+}

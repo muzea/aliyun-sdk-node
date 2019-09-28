@@ -1,0 +1,89 @@
+{
+  "name": "ModifyVpnGatewayAttribute",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyVpnGatewayAttribute接口修改VPN网关的名称和描述信息。",
+  "abc_id": 53025,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-shanghai",
+      "description_cn": "VPN网关实例所在的地域。 您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "VpnGatewayId": {
+      "name": "VpnGatewayId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "vpn-bp1q8bgx4xnkm2ogj****",
+      "description_cn": " VPN网关实例的ID。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "02fb3da4-130e-11e9-8e44-0016e04115b",
+      "description_cn": "客户端token，用于保证请求的幂等性。 \n\n由客户端生成该参数值，要保证在不同请求间唯一，最大不值过64个 ASCII 字符。 "
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "myvpn",
+      "description_cn": "VPN网关的名称。  \n\n长度为 2-128个字符，必须以字母或中文开头，可包含数字，点号（.），下划线（_）和短横线（-）。但不能以`http://` 或`https://`开头。  "
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpn网关",
+      "description_cn": "VPN网关的描述信息。  \n\n长度为 2-256个字符，必须以字母或中文开头，但不能以`http:// `或`https://`开头。  "
+    }
+  },
+  "res": {
+    "Name": "aaa",
+    "Status": "active",
+    "VpnGatewayId": "vpn-bp1q8bgx4xnkm2ogj0fiu",
+    "BusinessStatus": "Normal",
+    "Spec": "5M",
+    "CreateTime": 1492753580000,
+    "IntranetIp": "172.16.104.xxx",
+    "RequestId": "BA56EAF8-E3A9-4BE6-8511-8F03512153E2",
+    "InternetIp": "116.62.69.xxx",
+    "EndTime": 1495382400000,
+    "VSwitchId": "vsw-bp1y9ovl1cu9ou4tvma0l",
+    "VpcId": "vpc-bp1ub1yt9cvakoelj1y9c"
+  }
+}

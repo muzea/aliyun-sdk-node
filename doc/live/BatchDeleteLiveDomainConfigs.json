@@ -1,0 +1,47 @@
+{
+  "name": "BatchDeleteLiveDomainConfigs",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用BatchDeleteLiveDomainConfigs批量删除域名配置。",
+  "abc_id": 101820,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainNames": {
+      "name": "DomainNames",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "play.yourdomain.com",
+      "description_cn": "您的加速域名，多个用英文半角逗号分隔。"
+    },
+    "FunctionNames": {
+      "name": "FunctionNames",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "referer_white_list_set,ip_black_list_set",
+      "description_cn": "功能列表名称，用逗号分隔。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {}
+}

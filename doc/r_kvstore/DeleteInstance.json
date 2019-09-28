@@ -1,0 +1,39 @@
+{
+  "name": "DeleteInstance",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteInstance释放实例。",
+  "abc_id": 60898,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "r-j6cxxxxxxxxxx3d4",
+      "description_cn": "要删除的实例的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "5464564564564564"
+    }
+  },
+  "res": {
+    "RequestId": "8D0C0AFC-E9CD-47A4-8395-5C31BF9B3E76"
+  }
+}

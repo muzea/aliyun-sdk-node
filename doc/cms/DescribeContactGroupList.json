@@ -1,0 +1,50 @@
+{
+  "name": "DescribeContactGroupList",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询报警联系人组列表。",
+  "abc_id": 114922,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "每页显示记录条数。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "页码。"
+    }
+  },
+  "res": {
+    "Code": "200",
+    "ContactGroups": [
+      "我的联系组1"
+    ],
+    "RequestId": "916EE694-03C2-47B6-85EE-5054E3C168D3",
+    "Success": true,
+    "Total": 22
+  }
+}

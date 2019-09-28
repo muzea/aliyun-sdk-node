@@ -1,0 +1,18 @@
+{
+  "name": "DescribeEdasContainers",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v1/sam/resource/edasContainers",
+  "summary_cn": "获取应用微服务容器组件列表",
+  "abc_id": 126239,
+  "timeout": 2000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    }
+  },
+  "res": {}
+}

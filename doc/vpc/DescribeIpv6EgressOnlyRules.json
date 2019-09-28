@@ -1,0 +1,118 @@
+{
+  "name": "DescribeIpv6EgressOnlyRules",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeIpv6EgressOnlyRules接口查询创建的仅主动出规则。",
+  "abc_id": 102208,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-huhehaote",
+      "description_cn": "IPv6网关的地域ID。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "Ipv6GatewayId": {
+      "name": "Ipv6GatewayId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ipv6gw-123456xxxxxxxx",
+      "description_cn": "IPv6网关的ID。"
+    },
+    "Ipv6EgressOnlyRuleId": {
+      "name": "Ipv6EgressOnlyRuleId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ipv6gwpy-123456xxxxxxxx",
+      "description_cn": "要查看的仅主动出规则ID。"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rulename",
+      "description_cn": "规则名称。"
+    },
+    "InstanceType": {
+      "name": "InstanceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Ipv6Address",
+      "description_cn": "需要设置仅主动出规则的实例类型，取值：\n\n **Ipv6Address**：IPv6地址。\n\n"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-123456xxxxxxxx",
+      "description_cn": "设置了仅主动出规则的IPv6地址关联的实例ID。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "列表的页码，默认值为1。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时每页的行数，最大值为50，默认值为10。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "Ipv6EgressOnlyRules": {
+      "Ipv6EgressOnlyRule": [
+        {
+          "Name": "",
+          "Status": "Available",
+          "Description": "",
+          "InstanceId": "ipv6-hp3b5a8t12ihy7c669i13",
+          "Ipv6EgressOnlyRuleId": "ipv6py-hp3w98rmlbqp0qvyrx9ju",
+          "InstanceType": "Ipv6Address"
+        }
+      ]
+    },
+    "PageNumber": 1,
+    "TotalCount": 1,
+    "PageSize": 10,
+    "RequestId": "D1FFB517-D1A7-49BA-9169-C7E7194A9B55"
+  }
+}

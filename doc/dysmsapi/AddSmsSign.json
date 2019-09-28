@@ -1,0 +1,85 @@
+{
+  "name": "AddSmsSign",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用短信AddSmsSign申请短信签名。",
+  "abc_id": 121207,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SignName": {
+      "name": "SignName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "阿里云",
+      "description_cn": "签名名称。\n\n> 签名必须符合[个人用户签名规范](~~108076~~)或[企业用户签名规范](~~108254~~)。"
+    },
+    "SignSource": {
+      "name": "SignSource",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1",
+      "description_cn": "签名来源。其中：\n\n- 0：企事业单位的全称或简称。\n- 1：工信部备案网站的全称或简称。\n- 2：APP应用的全称或简称。\n- 3：公众号或小程序的全称或简称。\n- 4：电商平台店铺名的全称或简称。\n- 5：商标名的全称或简称\n\n> 签名来源为1时，请在申请说明中添加网站域名，加快审核速度。"
+    },
+    "Remark": {
+      "name": "Remark",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "当前的短信签名应用于双11大促推广营销",
+      "description_cn": "短信签名申请说明。请在申请说明中详细描述您的业务使用场景，申请工信部备案网站的全称或简称请在此处填写域名，长度不超过200个字符。"
+    },
+    "SignFileList": {
+      "name": "SignFileList",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "FileSuffix",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "FileContents",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    }
+  },
+  "res": {}
+}

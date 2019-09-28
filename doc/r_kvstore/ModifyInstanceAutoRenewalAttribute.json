@@ -1,0 +1,61 @@
+{
+  "name": "ModifyInstanceAutoRenewalAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyInstanceAutoRenewalAttribute开启或者关闭Redis实例的到期前自动续费功能。",
+  "abc_id": 95584,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "r-bp1xxxxxxxxxxxxx",
+      "description_cn": "目标实例的ID。多个实例ID用半角逗号（‘,’）拼接，最多允许传入30个实例ID。 "
+    },
+    "Duration": {
+      "name": "Duration",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3",
+      "description_cn": "自动续费周期，当AutoRenew=True时，该值有效且必传，取值范围为1-12。实例到期时，将以月为单位进行自动续费，月数等于该值。 "
+    },
+    "AutoRenew": {
+      "name": "AutoRenew",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "True",
+      "description_cn": "开启或关闭自动续费，可选值：\n* True（开启）\n* False（关闭）\n\n> 默认值：False。"
+    }
+  },
+  "res": {
+    "RequestId": "52D901ED-E0A5-42FB-B9DB-39C295C37738"
+  }
+}

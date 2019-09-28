@@ -1,0 +1,30 @@
+{
+  "name": "DeleteRole",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteRole接口删除指定的角色。",
+  "abc_id": 28714,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "RoleName": {
+      "name": "RoleName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "ECSAdmin",
+      "description_cn": "指定角色名称。"
+    }
+  },
+  "res": {
+    "RequestId": "898FAB24-7509-43EE-A287-086FE4C44394"
+  }
+}

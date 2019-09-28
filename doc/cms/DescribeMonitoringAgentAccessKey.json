@@ -1,0 +1,25 @@
+{
+  "name": "DescribeMonitoringAgentAccessKey",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询非阿里云ECS主机安装云监控插件时所需要的AccessKey和AccessSecret。",
+  "abc_id": 114948,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "AccessKey": "xxxx",
+    "SecretKey": "yyyy",
+    "Success": true,
+    "Code": 200
+  }
+}

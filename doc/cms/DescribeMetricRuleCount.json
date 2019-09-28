@@ -1,0 +1,53 @@
+{
+  "name": "DescribeMetricRuleCount",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/",
+  "summary_cn": "分类取得报警规则的数量。",
+  "abc_id": 114936,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Namespace": {
+      "name": "Namespace",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "acs_ecs_dashboard",
+      "description_cn": "产品的数据命名空间，可查询DescribeMetricMetaList接口或参考[预设监控项参考](~~28619~~)。"
+    },
+    "MetricName": {
+      "name": "MetricName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cpu_total",
+      "description_cn": "监控项名称。可查询DescribeMetricMetaList接口或参考[预设监控项参考](~~28619~~)。"
+    }
+  },
+  "res": {
+    "Success": true,
+    "Code": "200",
+    "RequestId": "FF38D33A-67C1-40EB-AB65-FAEE51EDB644",
+    "MetricRuleCount": {
+      "Ok": 40,
+      "Disable": 0,
+      "Total": 45,
+      "Nodata": 0,
+      "Alarm": 5
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "DescribeIpv6GatewayAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeIpv6GatewayAttribute接口查询指定IPV6网关的详细信息。",
+  "abc_id": 102226,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-huhehaote",
+      "description_cn": "IPv6网关的地域ID。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "Ipv6GatewayId": {
+      "name": "Ipv6GatewayId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ipv6gw-123456xxxxxxxx",
+      "description_cn": "要查询的IPv6网关ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "Name": "ipv6gateway",
+    "CreationTime": "2018-12-05T09:21:35Z",
+    "Status": "Available",
+    "Description": "",
+    "BusinessStatus": "Normal",
+    "Spec": "Medium",
+    "RequestId": "F4517005-A716-40EB-8B80-F6AF8508B25F",
+    "RegionId": "cn-huhehaote",
+    "InstanceChargeType": "PostPaid",
+    "ExpiredTime": "",
+    "VpcId": "vpc-hp3kzilwd9yflssfdlgqe",
+    "Ipv6GatewayId": "ipv6gw-hp33p10bdbt77xbeq6sgj"
+  }
+}

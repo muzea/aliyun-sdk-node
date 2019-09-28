@@ -1,0 +1,42 @@
+{
+  "name": "DeleteCenBandwidthPackage",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteCenBandwidthPackage删除带宽包。",
+  "abc_id": 126888,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CenBandwidthPackageId": {
+      "name": "CenBandwidthPackageId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cenbwp-4c2zaavbvh5f42****",
+      "description_cn": "要删除的带宽包的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "",
+      "description_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "C0245BEF-52AC-44A8-A776-EF96FD26A5CA"
+  }
+}

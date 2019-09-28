@@ -1,0 +1,107 @@
+{
+  "name": "DescribeRtcChannelList",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeRtcChannelList获取频道通信记录列表。",
+  "abc_id": 132142,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "TimePoint": {
+      "name": "TimePoint",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2018-01-29T00:00:00Z",
+      "description_cn": "查询时间点，时间粒度为天，UTC格式。"
+    },
+    "PageNo": {
+      "name": "PageNo",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页号。\n"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "显示数量。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "xxx",
+      "description_cn": "应用ID。"
+    },
+    "SortType": {
+      "name": "SortType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "desc",
+      "description_cn": "排序顺序，默认按**starttime**逆序。\n"
+    },
+    "ServiceArea": {
+      "name": "ServiceArea",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn",
+      "description_cn": "服务区域，不填表示所有区域。\n"
+    },
+    "UserId": {
+      "name": "UserId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "a123",
+      "description_cn": "用户ID。\n"
+    },
+    "ChannelId": {
+      "name": "ChannelId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123",
+      "description_cn": "频道ID。"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,89 @@
+{
+  "name": "DescribeVodDomainUsageData",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeVodDomainUsageData查询加速流量或带宽用量数据。",
+  "abc_id": 130511,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2015-12-10T20:00Z",
+      "description_cn": "获取数据结束时间点，需大于起始时间。\n\n日期格式按照ISO8601表示法，并使用UTC时间。格式为：**YYYY-MM-DDThh:mm:ssZ**。"
+    },
+    "Field": {
+      "name": "Field",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "bps",
+      "description_cn": "数据类型。取值范围：**bps（带宽）、traf（流量）**。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2015-12-10T20:00Z",
+      "description_cn": "获取数据起始时间点。\n\n日期格式按照ISO8601表示法，并使用UTC时间。格式为：**YYYY-MM-DDThh:mm:ssZ**。"
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "加速域名。若参数为空，默认返回所有加速域名合并后数据。支持批量查询，多个用逗号（半角）分隔。"
+    },
+    "Type": {
+      "name": "Type",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "traf",
+      "description_cn": "用量类型。"
+    },
+    "Area": {
+      "name": "Area",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "CN",
+      "description_cn": "区域代号，默认为CN中国大陆。\n\n取值范围：**CN（中国大陆）**、**OverSeas（海外区域）**。"
+    }
+  },
+  "res": {}
+}

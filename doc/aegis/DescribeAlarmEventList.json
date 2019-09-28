@@ -1,0 +1,134 @@
+{
+  "name": "DescribeAlarmEventList",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "获取态势感知安全告警模块的安全事件的列表。",
+  "abc_id": 101053,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "From": {
+      "name": "From",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "aqs",
+      "description_cn": "请求来源标识，固定为aqs。"
+    },
+    "CurrentPage": {
+      "name": "CurrentPage",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "告警事件列表的页码。起始值：1 默认值：1"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "分页查询时设置的每页行数。默认值: 20。"
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": "请求源IP。"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "zh",
+      "description_cn": "语言参数。\n- zh：中文\n- cn：英文"
+    },
+    "Dealed": {
+      "name": "Dealed",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Y",
+      "description_cn": "告警事件状态。\n- N：待处理告警\n- Y：已处理告警"
+    },
+    "Levels": {
+      "name": "Levels",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "serious",
+      "description_cn": "告警事件的危险等级，多个严重等级用逗号分隔（严重等级递减）。\n- serious：紧急\n- suspicious：可疑\n- remind：提醒"
+    },
+    "Remark": {
+      "name": "Remark",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "database_server",
+      "description_cn": "告警名称/资产。"
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AlarmEventName": {
+      "name": "AlarmEventName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "DDOS木马",
+      "description_cn": "告警事件名称。"
+    },
+    "AlarmEventType": {
+      "name": "AlarmEventType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "恶意进程（云查杀）",
+      "description_cn": "告警事件类型。"
+    },
+    "OperateErrorCodeList": {
+      "name": "OperateErrorCodeList",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    }
+  },
+  "res": {}
+}

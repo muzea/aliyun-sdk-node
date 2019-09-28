@@ -1,0 +1,76 @@
+{
+  "name": "DescribeGeographicRegionMembership",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeGeographicRegionMembership查看指定区域内所有的地域。",
+  "abc_id": 66005,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "GeographicRegionId": {
+      "name": "GeographicRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "china ",
+      "description_cn": "指定区域的ID，取值： \n\n- **china**：中国大陆。\n\n- **asia-pacific** ：亚太。\n\n- **europe**：欧洲。\n\n- **australia**：澳洲。\n\n- **north-america**：北美。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "列表的页码，默认值为**1**。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "分页查询时每页的行数，最大值为**50**，默认值为**10**。  "
+    }
+  },
+  "res": {
+    "RegionIds": {
+      "RegionId": [
+        {
+          "RegionId": "us-west-1"
+        },
+        {
+          "RegionId": "us-east-1"
+        }
+      ]
+    },
+    "PageNumber": 1,
+    "TotalCount": 2,
+    "PageSize": 10,
+    "RequestId": "DC9EB0C9-60AF-4A09-A36C-608F70130274"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "name": "PutMetricRuleTargets",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|PUT|GET",
+  "path": "/",
+  "summary_cn": "添加或者修改报警规则的目标。",
+  "abc_id": 121589,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Targets": {
+      "name": "Targets",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Id",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Arn",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Level",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "RuleId": {
+      "name": "RuleId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "rulexx12346",
+      "description_cn": "对应报警规则的ID。"
+    }
+  },
+  "res": {
+    "Code": "200",
+    "Message": "Success",
+    "Success": true,
+    "RequestId": "786E92D2-AC66-4250-B76F-F1E2FCDDBA1C",
+    "FailData": {
+      "Targets": [
+        {
+          "Arn": "acs:mns:cn-hangzhou:111:/queues/test/message",
+          "Id": 1,
+          "Level": [
+            "INFO",
+            "WARN",
+            "CRITICAL"
+          ]
+        }
+      ]
+    }
+  }
+}

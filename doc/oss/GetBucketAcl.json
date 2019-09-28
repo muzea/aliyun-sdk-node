@@ -1,0 +1,21 @@
+{
+  "name": "GetBucketAcl",
+  "protocol": "HTTP|HTTPS",
+  "method": "GET",
+  "path": "/",
+  "timeout": null,
+  "reqFormat": {
+    "BucketName": {
+      "name": "BucketName",
+      "position": "domain",
+      "required": true
+    },
+    "acl": {
+      "name": "acl",
+      "position": "query",
+      "required": true,
+      "default": ""
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,26 @@
+{
+  "name": "GetObjectACL",
+  "protocol": "HTTP|HTTPS",
+  "method": "GET",
+  "path": "/[ObjectName]",
+  "timeout": null,
+  "reqFormat": {
+    "BucketName": {
+      "name": "BucketName",
+      "position": "domain",
+      "required": true
+    },
+    "ObjectName": {
+      "name": "ObjectName",
+      "position": "path",
+      "required": true
+    },
+    "acl": {
+      "name": "acl",
+      "position": "query",
+      "required": true,
+      "default": ""
+    }
+  },
+  "res": {}
+}

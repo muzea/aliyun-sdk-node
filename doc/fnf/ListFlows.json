@@ -1,0 +1,40 @@
+{
+  "name": "ListFlows",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/",
+  "summary_cn": "调用ListFlows批量查询流程信息。",
+  "abc_id": 122626,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "NextToken": {
+      "name": "NextToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "flow_nextxxx",
+      "description_cn": "流程查询开始名称。"
+    },
+    "Limit": {
+      "name": "Limit",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "查询数量。"
+    }
+  },
+  "res": {}
+}

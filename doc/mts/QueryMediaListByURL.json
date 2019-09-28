@@ -1,0 +1,52 @@
+{
+  "name": "QueryMediaListByURL",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": null,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false
+    },
+    "FileURLs": {
+      "name": "FileURLs",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true
+    },
+    "IncludePlayList": {
+      "name": "IncludePlayList",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    },
+    "IncludeSnapshotList": {
+      "name": "IncludeSnapshotList",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    },
+    "IncludeMediaInfo": {
+      "name": "IncludeMediaInfo",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    },
+    "IncludeSummaryList": {
+      "name": "IncludeSummaryList",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    }
+  },
+  "res": {}
+}

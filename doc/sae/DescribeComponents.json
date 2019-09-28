@@ -1,0 +1,40 @@
+{
+  "name": "DescribeComponents",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v1/sam/resource/components",
+  "summary_cn": "获取应用创建部署时所需的组件版本",
+  "abc_id": 126225,
+  "timeout": 2000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Type": {
+      "name": "Type",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "TOMCAT",
+      "description_cn": "支持的组件类型。\n\n- Tomcat\n- JDK\n"
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "00000000-0000-0000-0000-000000000000",
+      "description_cn": "应用ID"
+    }
+  },
+  "res": {}
+}

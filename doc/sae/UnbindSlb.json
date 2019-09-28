@@ -1,0 +1,51 @@
+{
+  "name": "UnbindSlb",
+  "protocol": "HTTPS|HTTP",
+  "method": "DELETE",
+  "path": "/pop/v1/sam/app/slb",
+  "summary_cn": "解绑内网或公网SLB",
+  "abc_id": 126361,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "0099b7be-5f5b-4512-a7fc-56049ef1aa6b",
+      "description_cn": "目标应用ID"
+    },
+    "Internet": {
+      "name": "Internet",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "true",
+      "description_cn": "是否解绑公网SLB"
+    },
+    "Intranet": {
+      "name": "Intranet",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "true",
+      "description_cn": "是否解绑私网SLB"
+    }
+  },
+  "res": {}
+}

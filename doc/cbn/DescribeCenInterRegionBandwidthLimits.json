@@ -1,0 +1,77 @@
+{
+  "name": "DescribeCenInterRegionBandwidthLimits",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCenInterRegionBandwidthLimits查询各个地域之间的跨地域互通带宽。",
+  "abc_id": 65998,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "列表的页码，默认值为**1**。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "分页查询时每页的行数，最大值为**50**，默认值为**10**。  "
+    },
+    "CenId": {
+      "name": "CenId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cen-7qthudw0ll6jm****",
+      "description_cn": " 指定查询该云企业网实例内的跨地域互通带宽。 "
+    }
+  },
+  "res": {
+    "DescribeCenInterRegionBandwidthLimitsResponse": {
+      "CenInterRegionBandwidthLimits": {
+        "CenInterRegionBandwidthLimit": {
+          "Status": " Active ",
+          "LocalRegionId": "cn-hangzhou-667",
+          "CenId": "Cen-to55jjgdqd4pfv****",
+          "OppositeRegionId": "cn-hangzhou-668",
+          "BandwidthLimit": "1000"
+        }
+      },
+      "PageNumber": "1",
+      "TotalCount": "1",
+      "PageSize": "10",
+      "RequestId": "C4CF2E97-5C04-4A9E-B908-BE95FF68C7B2"
+    }
+  }
+}

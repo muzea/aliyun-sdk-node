@@ -1,0 +1,37 @@
+{
+  "name": "GetSmartAccessGatewayUseLimit",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用GetSmartAccessGatewayUseLimit查询可购买的智能接入网关数量。",
+  "abc_id": 69828,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "智能接入网关的所属区域。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "2265DB11-F5CC-496E-ADE7-D043AC37926A",
+    "TotalAmount": 500,
+    "UsedAmount": 47
+  }
+}

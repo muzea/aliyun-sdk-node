@@ -1,0 +1,45 @@
+{
+  "name": "DescribeUserTags",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeUserTags查询用户标签。",
+  "abc_id": 117474,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "Tags": [
+      {
+        "Key": "env",
+        "Value": [
+          "product",
+          "pre",
+          "daily"
+        ]
+      },
+      {
+        "Key": "region",
+        "Value": [
+          "hangzhou"
+        ]
+      }
+    ],
+    "RequestId": "34AB41F1-04A5-496F-8C8D-634BDBE6A9FB"
+  }
+}

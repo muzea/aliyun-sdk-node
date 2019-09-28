@@ -1,0 +1,43 @@
+{
+  "name": "ReleaseEipAddress",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "使用ReleaseEipAddress接口释放指定的弹性公网IP（EIP）。",
+  "abc_id": 36020,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "弹性公网IP所在的地域。 您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123"
+    },
+    "AllocationId": {
+      "name": "AllocationId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "eip-2zeerraiwb7uj6i0d0fo3",
+      "description_cn": "要释放的弹性公网IP的ID。 "
+    }
+  },
+  "res": {
+    "RequestId": "748C38F6-9A3D-482E-83FB-DB6C39C68AEA"
+  }
+}

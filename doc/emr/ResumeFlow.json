@@ -1,0 +1,45 @@
+{
+  "name": "ResumeFlow",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 ResumeFlow 接口恢复暂停的工作流",
+  "abc_id": 101243,
+  "timeout": 8000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "ProjectId": {
+      "name": "ProjectId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "FP-3535FE0BE5224A47",
+      "description_cn": "项目ID。"
+    },
+    "FlowInstanceId": {
+      "name": "FlowInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "FI-9DDAAA3ADA5F6FA2",
+      "description_cn": "工作流实例ID。"
+    }
+  },
+  "res": {
+    "RequestId": "B46F8A2A-B46B-415C-8A9C-B01B99B775A2",
+    "Data": true
+  }
+}

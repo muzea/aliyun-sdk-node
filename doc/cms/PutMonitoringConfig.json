@@ -1,0 +1,46 @@
+{
+  "name": "PutMonitoringConfig",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "设置云监控插件全局配置，例如开始自动安装插件以及一键报警等。",
+  "abc_id": 114965,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AutoInstall": {
+      "name": "AutoInstall",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "自动为现有的ECS安装插件。"
+    },
+    "EnableInstallAgentNewECS": {
+      "name": "EnableInstallAgentNewECS",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "开启新购ECS自动安装云监控插件。"
+    }
+  },
+  "res": {
+    "RequestId": "E9F4FA2A-54BE-4EF9-9D1D-1A0B1DC86B8D",
+    "Success": true,
+    "Code": 200
+  }
+}

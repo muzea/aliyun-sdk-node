@@ -1,0 +1,156 @@
+{
+  "name": "DescribeRouteEntryList",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeRouteEntryList查询路由条目列表。",
+  "abc_id": 138148,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "路由条目所在路由表的地域。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "RouteTableId": {
+      "name": "RouteTableId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "vtb-bp1r9pvl4xen8s9ju****",
+      "description_cn": "路由表ID。"
+    },
+    "RouteEntryId": {
+      "name": "RouteEntryId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rte-bp1mnnr2al0naomnp****",
+      "description_cn": "路由条目ID。"
+    },
+    "DestinationCidrBlock": {
+      "name": "DestinationCidrBlock",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "192.168.2.0/24",
+      "description_cn": "路由条目的目标网段，支持IPv4和IPv6网段。\n\n>仅中国站支持IPv6网段。"
+    },
+    "RouteEntryName": {
+      "name": "RouteEntryName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "abc",
+      "description_cn": "路由条目的名称。"
+    },
+    "IpVersion": {
+      "name": "IpVersion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "IPv4",
+      "description_cn": "IP协议的版本，取值：\n\n- **IPv4**：IPv4协议。\n\n- **IPv6**：IPv6协议。\n\n>仅中国站支持IPv6协议。"
+    },
+    "RouteEntryType": {
+      "name": "RouteEntryType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "System",
+      "description_cn": "路由条目的类型，取值：\n\n- **Custom**：自定义路由。\n\n- **System**：系统路由。"
+    },
+    "NextHopId": {
+      "name": "NextHopId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpn-bp10zyaph5cc8b7c7****",
+      "description_cn": "下一跳实例ID。\n"
+    },
+    "NextHopType": {
+      "name": "NextHopType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Instance",
+      "description_cn": "下一跳类型，取值：\n\n- **Instance**：ECS实例。\n\n- **HaVip**：高可用虚拟IP。\n\n- **VpnGateway**：VPN网关。\n\n- **NatGateway**：NAT网关。\n\n- **NetworkInterface**：辅助弹性网卡。\n\n- **RouterInterface**：路由器接口。\n\n- **IPv6Gateway**：IPv6网关。\n\n>仅中国站支持IPv6网关作为下一跳。"
+    },
+    "MaxResult": {
+      "name": "MaxResult",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "50",
+      "description_cn": "分页大小，取值范围：**20**~**100**，默认为**50**。"
+    },
+    "NextToken": {
+      "name": "NextToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "caeba0bbb2be03f84eb48b699f0a4883",
+      "description_cn": "下一个查询开始Token。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "NextToken": "",
+    "RouteEntrys": {
+      "RouteEntry": [
+        {
+          "NextHops": {
+            "NextHop": [
+              {
+                "NextHopId": "eni-bp16v0fuhulfl5e1****",
+                "NextHopRelatedInfo": {},
+                "NextHopType": "NetworkInterface"
+              }
+            ]
+          },
+          "Status": "Available",
+          "RouteEntryName": "ENI",
+          "RouteEntryId": "rte-bp1aejenqyg5zcmv4****",
+          "Type": "Custom",
+          "IpVersion": "ipv4",
+          "RouteTableId": "vtb-bp15w5q90d2rk3bww****",
+          "DestinationCidrBlock": "103.0.0.0/32"
+        }
+      ]
+    },
+    "RequestId": "57828ADD-F0C4-4125-AF79-6556D44C5277"
+  }
+}

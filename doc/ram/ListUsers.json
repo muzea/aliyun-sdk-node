@@ -1,0 +1,66 @@
+{
+  "name": "ListUsers",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ListUsers接口列出所有RAM用户。",
+  "abc_id": 28684,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Marker": {
+      "name": "Marker",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "EXAMPLE",
+      "description_cn": "当请求的返回结果被截断时，可以使用`Marker`获取从当前截断位置之后的内容。"
+    },
+    "MaxItems": {
+      "name": "MaxItems",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "100",
+      "description_cn": "指定返回结果的条数，当返回结果达到MaxItems限制被截断时，返回参数`IsTruncated`将等于`true`。\n\n取值范围：1 ~ 100，默认值：100。"
+    }
+  },
+  "res": {
+    "RequestId": "4B450CA1-36E8-4AA2-8461-86B42BF4CC4E",
+    "IsTruncated": true,
+    "Marker": "EXAMPLE",
+    "Users": {
+      "User": [
+        {
+          "UserId": "1227489245380721",
+          "UserName": "zhangqiang",
+          "DisplayName": "张强",
+          "MobilePhone": "86-18600008888",
+          "Email": "zhangqiang@example.com",
+          "Comments": "这是一位云计算工程师",
+          "CreateDate": "2015-01-23T12:33:18Z",
+          "UpdateDate": "2015-01-23T12:33:18Z"
+        },
+        {
+          "UserId": "1406498224724456",
+          "UserName": "lili",
+          "DisplayName": "李丽",
+          "MobilePhone": "86-18600009999",
+          "Email": "lili@example.com",
+          "Comments": "权限管理员",
+          "CreateDate": "2015-02-18T17:22:08Z",
+          "UpdateDate": "2015-02-18T17:22:08Z"
+        }
+      ]
+    }
+  }
+}

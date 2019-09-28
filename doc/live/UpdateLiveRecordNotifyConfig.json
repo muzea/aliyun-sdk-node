@@ -1,0 +1,68 @@
+{
+  "name": "UpdateLiveRecordNotifyConfig",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用UpdateLiveRecordNotifyConfig更新域名级别录制回调配置。",
+  "abc_id": 51832,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "test.com",
+      "description_cn": "加速域名。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "NotifyUrl": {
+      "name": "NotifyUrl",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "http://www.yourdomain.cn/examplecallback.action",
+      "description_cn": "录制回调（包括事件回调和状态回调）url地址。\n- 必须以`http://`或`https:/`/开头。\n- 需要做url encode。"
+    },
+    "OnDemandUrl": {
+      "name": "OnDemandUrl",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "http://www.yourdomain.cn/ondemandcallback.action",
+      "description_cn": "按需回调url地址。\n- 必须以`http://`或`https://`开头。\n- 需要做url encode。"
+    },
+    "NeedStatusNotify": {
+      "name": "NeedStatusNotify",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否需要录制任务状态回调，可取值：**true | false**。\n\n默认值：**false**。"
+    }
+  },
+  "res": {}
+}

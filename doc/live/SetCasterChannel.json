@@ -1,0 +1,81 @@
+{
+  "name": "SetCasterChannel",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用SetCasterChannel在视频源同步模式时，将视频资源设置到通道中。",
+  "abc_id": 94773,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "地域。"
+    },
+    "ChannelId": {
+      "name": "ChannelId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "RV01",
+      "description_cn": "通道ID。\n\n布局画面的引用编号，每个通道位置至多设置一个资源，数量受限于导播台创建时的通道路数。格式符合“RV01...RV12”。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "CasterId": {
+      "name": "CasterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "a2b8e671-2fe5-4642-a2ec-bf93880e1a49",
+      "description_cn": "导播台ID。"
+    },
+    "ResourceId": {
+      "name": "ResourceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "16A96B9A-F203-4EC5-8E43-CB92E68F4CD8",
+      "description_cn": "视频源ID。"
+    },
+    "SeekOffset": {
+      "name": "SeekOffset",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1000",
+      "description_cn": "仅对文件视频有效，直播源无效，必须大于0，表示从相对于首帧的偏差时间作为开始读取的位置。 单位：毫秒(ms) 。"
+    },
+    "PlayStatus": {
+      "name": "PlayStatus",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "仅对文件视频有效，直播源无效。 \n        \n播放状态： \n          \n- **1（默认）**：播放\n- **0**：暂停\n"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,40 @@
+{
+  "name": "ListParts",
+  "protocol": "HTTP|HTTPS",
+  "method": "GET",
+  "path": "/[ObjectName]",
+  "timeout": null,
+  "reqFormat": {
+    "BucketName": {
+      "name": "BucketName",
+      "position": "domain",
+      "required": true
+    },
+    "ObjectName": {
+      "name": "ObjectName",
+      "position": "path",
+      "required": true
+    },
+    "uploadId": {
+      "name": "uploadId",
+      "position": "query",
+      "required": true
+    },
+    "max-parts": {
+      "name": "max-parts",
+      "position": "query",
+      "required": false
+    },
+    "part-number-marker": {
+      "name": "part-number-marker",
+      "position": "query",
+      "required": false
+    },
+    "encoding-type": {
+      "name": "encoding-type",
+      "position": "query",
+      "required": false
+    }
+  },
+  "res": {}
+}

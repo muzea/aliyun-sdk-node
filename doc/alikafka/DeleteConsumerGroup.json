@@ -1,0 +1,45 @@
+{
+  "name": "DeleteConsumerGroup",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/",
+  "summary_cn": "调用 DeleteConsumerGroup 删除 ConsumerGroup。",
+  "abc_id": 140195,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域 ID。"
+    },
+    "ConsumerId": {
+      "name": "ConsumerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "testconsumer",
+      "description_cn": "Consumer Group 名称。\n\n- 只能包含字母、数字、短横线（-）、下划线（_）。\n- 长度限制在 3-64 个字符，多于 64 个字符将被自动截取。\n- 一旦创建后不能再修改。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "alikafka_post-cn-mp91a44k****",
+      "description_cn": "实例 ID。\n\n可调用 [GetInstanceList](https://help.aliyun.com/document_detail/94533.html?spm=a2c4g.11186623.2.13.50a75a5f5ediNK#concept-94533-zh) 获取。"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,97 @@
+{
+  "name": "QueryRobotTaskList",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用QueryRobotTaskList获取智能语音任务详情。",
+  "abc_id": 124871,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "主账号的ID，即UID。"
+    },
+    "TaskName": {
+      "name": "TaskName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "任务测试",
+      "description_cn": "任务名称"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "EXCUTING",
+      "description_cn": "任务状态，状态如下：INIT                         未开始\nREADY                    准备开始\nDISPATCH               解析中\nEXCUTING              执行中\nMANUAL_STOP     手动暂停\nSYSTEM_STOP      系统暂停\nARREARS_STOP    欠费暂停\nCANCEL                 手动终止\nSYSTEM_CANCEL 系统终止\nFINISH                    已完成"
+    },
+    "Time": {
+      "name": "Time",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2019-06-14",
+      "description_cn": "任务创建日期，yyyy-MM-dd格式。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "分页参数，每页个数"
+    },
+    "PageNo": {
+      "name": "PageNo",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "分页参数，第几页"
+    }
+  },
+  "res": {
+    "Message": "OK",
+    "RequestId": "D9CB3933-9FE3-4870-BA8E-2BEE91B69D23",
+    "Code": "OK",
+    "Data": [
+      {
+        "id": 1045001,
+        "taskName": "智能语音任务",
+        "robotId": 1000000075003,
+        "robotName": "机器人",
+        "status": "INIT",
+        "scheduleType": "SINGLE",
+        "createTime": "2019.06.14 14:55:23",
+        "completeTime": "2019.06.14 14:55:23",
+        "fireTime": "2019.06.14 14:55:23",
+        "totalCount": 1000,
+        "finishCount": 998
+      }
+    ]
+  }
+}

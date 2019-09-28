@@ -1,0 +1,120 @@
+{
+  "name": "AddCasterComponent",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AddCasterComponent添加组件。",
+  "abc_id": 63160,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "区域。"
+    },
+    "LocationId": {
+      "name": "LocationId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "RC01",
+      "description_cn": "用于指定组件位置，每个位置至多设置一个组件，格式需符合“RC01…RC99”。\n\n> 组件类型为caption时，表示引用的视频源Location。"
+    },
+    "ComponentType": {
+      "name": "ComponentType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "text",
+      "description_cn": "组件类型。可取值：**text** | **image** | **caption**。"
+    },
+    "ComponentLayer": {
+      "name": "ComponentLayer",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "{\"HeightNormalized\":\"1\",\"PositionRefer\":\"topRight\",\"WidthNormalized\":\"0\",\"PositionNormalized\":[\"0.1\",\"0.2\"]}",
+      "description_cn": "设置该组件Layer的尺寸，布局等信息。\n\nJSON格式字符串，参数名采用首字母大写、驼峰格式。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "CasterId": {
+      "name": "CasterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "a2b8e671-2fe5-4642-a2ec-bf93880e1a49",
+      "description_cn": "导播间ID。"
+    },
+    "ComponentName": {
+      "name": "ComponentName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "text01",
+      "description_cn": "组件名称。默认为组件ID。"
+    },
+    "Effect": {
+      "name": "Effect",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "animateH",
+      "description_cn": "组件显示的特效 。可取值：\n         \n- **none（默认值）**：无  \n- **animateH**：水平滚动 \n- **animateV**：垂直滚动 "
+    },
+    "TextLayerContent": {
+      "name": "TextLayerContent",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{\"BorderWidthNormalized\":\"1\",\"SizeNormalized\":\"0.2\",\"Color\":\"0x000000\",\"FontName\":\"KaiTi\",\"BorderColor\":\"0x000000\",\"Text\":\"hello world!\"}",
+      "description_cn": "设置该Layer元素属性，JSON格式字符串，参数名采用首字母大写，驼峰格式。\n"
+    },
+    "ImageLayerContent": {
+      "name": "ImageLayerContent",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{\"MaterialId\":\"6cf724c6ebfd4a59b5b3cec6f10d5ecf\"}",
+      "description_cn": "设置该Layer元素属性，JSON格式字符串，参数名采用首字母大写，驼峰格式。"
+    },
+    "CaptionLayerContent": {
+      "name": "CaptionLayerContent",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{\"BorderWidthNormalized\":0.01,\"SizeNormalized\":0.05,\"Color\":\"0x000000\",\"LocationId\":\"RV01\",\"SourceLan\":\"cn\",\"FontName\":\"KaiTi\",\"BorderColor\":\"0xffffff\"}",
+      "description_cn": "设置该Layer元素属性，JSON格式字符串，参数名采用首字母大写，驼峰格式。"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,37 @@
+{
+  "name": "PreloadVodObjectCaches",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用PreloadVodObjectCaches将源站的内容主动预热到L2 Cache节点上，首次访问可直接命中缓存，缓解源站压力。支持post请求，参数用form表单。",
+  "abc_id": 130650,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ObjectPath": {
+      "name": "ObjectPath",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "vod.test.com/test.txt",
+      "description_cn": "输入示例：a.com/image/1.png，多个URL间用换行符（\\n或\\r\\n）分隔。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,95 @@
+{
+  "name": "DescribeCenPrivateZoneRoutes",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCenPrivateZoneRoutes查询PrivateZone。",
+  "abc_id": 126928,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CenId": {
+      "name": "CenId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cen-7qthudw0ll6jmc****\t",
+      "description_cn": "云企业网ID。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "列表的页码，默认值为**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时每页的行数，最大值为**50**，默认值为**10**。"
+    },
+    "AccessRegionId": {
+      "name": "AccessRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "访问所在地。\n\n访问所在地是指通过CEN访问PrivateZone服务的源地域。"
+    },
+    "HostRegionId": {
+      "name": "HostRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "服务所在地。\n\n服务所在地是指通过CEN访问PrivateZone服务的目的地域。"
+    }
+  },
+  "res": {
+    "PrivateZoneInfos": {
+      "PrivateZoneInfo": [
+        {
+          "Status": "Active",
+          "HostVpcId": "vpc-bp18sth14qii3pnvo****",
+          "AccessRegionId": "ccn-cn-shanghai",
+          "HostRegionId": "cn-hangzhou"
+        },
+        {
+          "Status": "Active",
+          "HostVpcId": "vpc-bp18sth14qii3pnvo****",
+          "AccessRegionId": "cn-hangzhou",
+          "HostRegionId": "cn-hangzhou"
+        }
+      ]
+    },
+    "PageNumber": 1,
+    "TotalCount": 2,
+    "PageSize": 10,
+    "PrivateZoneDnsServers": "100.100.xx.136/32,100.100.xx.138/32",
+    "RequestId": "461EC1B5-04A8-4706-8764-8F5BCEF48A6F"
+  }
+}

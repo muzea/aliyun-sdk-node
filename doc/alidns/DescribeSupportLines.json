@@ -1,0 +1,73 @@
+{
+  "name": "DescribeSupportLines",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeSupportLines查询云解析支持的所有线路列表。",
+  "abc_id": 69017,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "语言。"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": "用户端IP。"
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "域名名称。"
+    }
+  },
+  "res": {
+    "RequestId": "CFDA0830-7D6E-4C13-8632-B57C7EDCF079",
+    "RecordLines": {
+      "RecordLine": [
+        {
+          "LineDisplayName": "默认",
+          "LineName": "默认",
+          "LineCode": "default"
+        },
+        {
+          "LineDisplayName": "联通",
+          "LineName": "联通",
+          "LineCode": "unicom"
+        },
+        {
+          "LineDisplayName": "联通_山西",
+          "LineName": "山西",
+          "FatherCode": "unicom",
+          "LineCode": "cn_unicom_shanxi"
+        }
+      ]
+    }
+  }
+}

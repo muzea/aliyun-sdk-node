@@ -1,0 +1,141 @@
+{
+  "name": "ModifyCasterLayout",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyCasterLayout修改布局配置，传递修改项，非修改内容无需传递。",
+  "abc_id": 60268,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "地域。"
+    },
+    "LayoutId": {
+      "name": "LayoutId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "21926b36-7dd2-4fde-ae25-51b5bc8e52d8",
+      "description_cn": "布局Id。"
+    },
+    "VideoLayer": {
+      "name": "VideoLayer",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "FillMode",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "HeightNormalized",
+          "type": "Float",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "WidthNormalized",
+          "type": "Float",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "PositionRefer",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "PositionNormalized",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "Float"
+        },
+        {
+          "name": "FixedDelayDuration",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "AudioLayer": {
+      "name": "AudioLayer",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "VolumeRate",
+          "type": "Float",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ValidChannel",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "FixedDelayDuration",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "BlendList": {
+      "name": "BlendList",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "MixList": {
+      "name": "MixList",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "CasterId": {
+      "name": "CasterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "a2b8e671-2fe5-4642-a2ec-bf93880e1a49",
+      "description_cn": "导播台Id。"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,128 @@
+{
+  "name": "DescribeUisNodes",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeUisNodes接口查询已创建的节点实例。",
+  "abc_id": 94799,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "节点实例所属的实例的地域。"
+    },
+    "UisId": {
+      "name": "UisId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "UIS-xxxbtfk761c670ok9****",
+      "description_cn": "要查询的节点所属的实例的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "UisNodeId": {
+      "name": "UisNodeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "UISNODE-xxxc4dacp9wal2jx6****",
+      "description_cn": "要查询的节点实例ID，如果不指定则查询指定实例关联的节点实例。"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "node_name1",
+      "description_cn": "节点实例的名称。"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "active",
+      "description_cn": "节点实例的状态：\n\n- **active**：可用\n\n- **creating**：创建中"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "列表的页码，默认值为**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时每页的行数，最大值为**50**，默认值为**10**。"
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "d7d24a21-f4ba-4454-9173-b3828dae492b",
+      "description_cn": "客户端token，用于保证请求的幂等性。\n\n由客户端生成该参数值，要保证在不同请求间唯一，最大不值过64个 ASCII 字符。"
+    }
+  },
+  "res": {
+    "pageNumber": 1,
+    "pageSize": 10,
+    "requestId": "0ECA995D-0D92-4507-919C-E5BF9A881834",
+    "totalCount": 1,
+    "uisNodeList": [
+      {
+        "createTime": 1540536789000,
+        "description": "node_desc",
+        "ipAddrsNum": 2,
+        "uisId": "UIS-xxxbtfk761c670ok9****",
+        "uisNodeActiveIp": "47.100.14.XX,47.100.103.XX",
+        "uisNodeAreaId": "cn-shanghai",
+        "uisNodeBandwidth": 20,
+        "uisNodeIps": "47.100.14.XX,47.100.103.XX",
+        "uisNodeId": "UISNODE-xxxc4dacp9wal2jx6****"
+      }
+    ]
+  }
+}

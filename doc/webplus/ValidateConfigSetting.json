@@ -1,0 +1,62 @@
+{
+  "name": "ValidateConfigSetting",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/pop/v1/wam/config/configSetting/validate",
+  "summary_cn": "调用ValidateConfigSetting来验证一个配置的设置有效性。",
+  "abc_id": 128072,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "EnvId": {
+      "name": "EnvId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "we-5d3eaaea2977ca5251e*****",
+      "description_cn": "环境ID"
+    },
+    "TemplateId": {
+      "name": "TemplateId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "wct-5d3e9d2a2977ca5251e*****",
+      "description_cn": "配置模板ID"
+    },
+    "StackId": {
+      "name": "StackId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ws-6c937c98a9c0296d0c48*****",
+      "description_cn": "栈ID"
+    },
+    "OptionSettings": {
+      "name": "OptionSettings",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[{\"path\":\"resources.ecs.autoScaling\", \"name\":\"instanceNum\",\"value\":\"10\"},     {\"path\":\"application.option\", \"name\":\"port\",\"value\":\"100\"}]",
+      "description_cn": "自定义配置项数据，JSON数组，包含以下字段：\n- `path`：配置项路径\n- `name`：配置项名称\n- `value`：配置值"
+    }
+  },
+  "res": {}
+}

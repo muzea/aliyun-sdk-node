@@ -1,0 +1,43 @@
+{
+  "name": "DescribeAreas",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "DescribeAreas",
+  "abc_id": 110348,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "Uis实例所在的地域信息"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "56D9219F-348F-43F5-9751-1E1560DCEE7F",
+    "Areas": {
+      "Area": [
+        {
+          "AreaId": "cn-beijing",
+          "LocalName": "华北2（北京）"
+        }
+      ]
+    }
+  }
+}

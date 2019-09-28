@@ -1,0 +1,225 @@
+{
+  "name": "DescribeDomainRecords",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDomainRecords根据传入参数获取指定主域名的所有解析记录列表。",
+  "abc_id": 29776,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "example.com",
+      "description_cn": "域名名称。"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "语言。"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "当前页数，起始值为**1**，默认为**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "分页查询时设置的每页行数，最大值**500**，默认为**20**。"
+    },
+    "KeyWord": {
+      "name": "KeyWord",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "关键字。"
+    },
+    "RRKeyWord": {
+      "name": "RRKeyWord",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "www",
+      "description_cn": "主机记录的关键字，按照“%RRKeyWord%”模式搜索，不区分大小写。"
+    },
+    "TypeKeyWord": {
+      "name": "TypeKeyWord",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "MX",
+      "description_cn": "解析类型的关键字，按照全匹配搜索，不区分大小写。"
+    },
+    "ValueKeyWord": {
+      "name": "ValueKeyWord",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "com",
+      "description_cn": "记录值的关键字，按照“%ValueKeyWord%”模式搜索，不区分大小写。"
+    },
+    "OrderBy": {
+      "name": "OrderBy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "default",
+      "description_cn": "排序方式。按照解析添加的时间从新到旧排序。"
+    },
+    "Direction": {
+      "name": "Direction",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "描述",
+      "description_cn": "域名描述。"
+    },
+    "SearchMode": {
+      "name": "SearchMode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "LIKE",
+      "description_cn": "搜索模式。"
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2223",
+      "description_cn": "域名分组ID。"
+    },
+    "Type": {
+      "name": "Type",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "A",
+      "description_cn": "解析记录类型，参见[解析记录类型格式](https://help.aliyun.com/document_detail/29805.html?spm=a2c4g.11186623.2.20.2cee2846MZb2I3)。"
+    },
+    "Line": {
+      "name": "Line",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "default",
+      "description_cn": "解析线路，默认为**default**。\n\n参见[解析线路枚举](https://help.aliyun.com/document_detail/29807.html?spm=a2c4g.11186623.2.22.2cee2846MZb2I3)。"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Enable",
+      "description_cn": "解析记录状态，取值：**Enable/Disable**。"
+    }
+  },
+  "res": {
+    "RequestId": "536E9CAD-DB30-4647-AC87-AA5CC38C5382",
+    "TotalCount": 2,
+    "PageNumber": 1,
+    "PageSize": 2,
+    "DomainRecords": {
+      "Record": [
+        {
+          "DomainName": "example.com",
+          "RecordId": "9999985",
+          "RR": "www",
+          "Type": "MX",
+          "Value": "mail1.hichina.com",
+          "Line": "default",
+          "Priority": 5,
+          "TTL": 600,
+          "Status": "Enable",
+          "Locked": false
+        },
+        {
+          "DomainName": "example.com",
+          "RecordId": "9999986",
+          "RR": "www",
+          "Type": "MX",
+          "Value": "mail2.hichina.com",
+          "Line": "default",
+          "Priority": 10,
+          "TTL": 600,
+          "Status": "Enable",
+          "Locked": false
+        }
+      ]
+    }
+  }
+}

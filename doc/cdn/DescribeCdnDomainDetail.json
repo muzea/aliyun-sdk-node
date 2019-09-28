@@ -1,0 +1,66 @@
+{
+  "name": "DescribeCdnDomainDetail",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCdnDomainDetail获取指定加速域名配置的基本信息。",
+  "abc_id": 91187,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "www.yourdomain.com",
+      "description_cn": "需要接入CDN的域名。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "GetDomainDetailModel": {
+      "CdnType": "web",
+      "Cname": "bb.test.com.w.kunlunle.com",
+      "DomainName": "bb.test.com",
+      "DomainStatus": "online",
+      "GmtCreated": "2015-06-25T03:30:50Z",
+      "GmtModified": "2015-06-25T03:30:53Z",
+      "HttpsCname": "bb-test-com.alikunlun.com",
+      "SourceType": "domain",
+      "Region": "huadong",
+      "ResourceGroupId": "abcd1234abcd1234",
+      "SourceModels": {
+        "SourceModel": [
+          {
+            "Enabled": "online",
+            "Port": 80,
+            "Type": "domain",
+            "Content": "test.com",
+            "Priority": "20"
+          }
+        ]
+      },
+      "Sources": {
+        "Source": [
+          "test.com"
+        ]
+      }
+    },
+    "RequestId": "18CF38AA-1275-451D-A12B-4EC0BF1C5E30"
+  }
+}

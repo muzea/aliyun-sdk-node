@@ -1,0 +1,45 @@
+{
+  "name": "DeleteFlowProjectClusterSetting",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 DeleteFlowProjectClusterSetting 接口删除项目集群设置",
+  "abc_id": 100953,
+  "timeout": 8000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "ProjectId": {
+      "name": "ProjectId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "FP-E3F1523F8FC1D2E6",
+      "description_cn": "项目ID。"
+    },
+    "ClusterId": {
+      "name": "ClusterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "C-F32FB31D82954C64",
+      "description_cn": "集群ID。"
+    }
+  },
+  "res": {
+    "RequestId": "ECC2D0D1-B6D5-468D-B698-30E8805EB574",
+    "Data": true
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "DescribeRegions",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeRegions查询可以使用弹性伸缩服务的地域。",
+  "abc_id": 119042,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456123456"
+    },
+    "AcceptLanguage": {
+      "name": "AcceptLanguage",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "zh-CN",
+      "description_cn": "根据所选语言筛选返回结果，更多详情请参见[RFC7231](https://tools.ietf.org/html/rfc7231)，取值范围：\n\n- zh-CN：根据汉语筛选\n- en-US：根据英语筛选\n- ja：根据日语筛选\n\n默认值：zh-CN。"
+    }
+  },
+  "res": {
+    "RequestId": "38EC7366-F5A9-46B1-BDB1-0FDC2E296397",
+    "Regions": {
+      "Region": [
+        {
+          "RegionId": "cn-beijing",
+          "RegionEndpoint": "ess.aliyuncs.com",
+          "LocalName": "华北 2"
+        },
+        {
+          "RegionId": "cn-shanghai",
+          "RegionEndpoint": "ess.aliyuncs.com",
+          "LocalName": "华东 2"
+        }
+      ]
+    }
+  }
+}

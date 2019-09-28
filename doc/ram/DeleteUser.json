@@ -1,0 +1,30 @@
+{
+  "name": "DeleteUser",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteUser接口删除一个RAM用户。",
+  "abc_id": 28683,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "UserName": {
+      "name": "UserName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "zhangq****",
+      "description_cn": "指定用户名。\n\n格式：`^[a-zA-Z0-9\\.@\\-_]+$`。"
+    }
+  },
+  "res": {
+    "RequestId": "1C488B66-B819-4D14-8711-C4EAAA13AC01"
+  }
+}

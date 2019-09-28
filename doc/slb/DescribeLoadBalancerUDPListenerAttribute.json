@@ -1,0 +1,84 @@
+{
+  "name": "DescribeLoadBalancerUDPListenerAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeLoadBalancerUDPListenerAttribute查询UDP监听的配置。",
+  "abc_id": 27609,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "负载均衡实例的地域ID。"
+    },
+    "ListenerPort": {
+      "name": "ListenerPort",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "80",
+      "description_cn": "负载均衡实例前端使用的端口。\n\n取值：**1-65535**。"
+    },
+    "LoadBalancerId": {
+      "name": "LoadBalancerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "lb-bp1rtfnodmywb43e*****",
+      "description_cn": "负载均衡实例的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "",
+      "description_cn": ""
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "AclStatus": "off",
+    "HealthCheck": "on",
+    "HealthCheckConnectTimeout": 5,
+    "PersistenceTimeout": 0,
+    "ListenerPort": 80,
+    "Status": "stopped",
+    "Scheduler": "wrr",
+    "HealthyThreshold": 3,
+    "HealthCheckInterval": 2,
+    "RequestId": "9C103591-2533-432B-9E6B-6DB098C0E65C",
+    "UnhealthyThreshold": 3,
+    "BackendServerPort": 34,
+    "Bandwidth": 67
+  }
+}

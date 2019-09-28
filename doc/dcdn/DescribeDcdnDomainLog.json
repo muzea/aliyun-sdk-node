@@ -1,0 +1,77 @@
+{
+  "name": "DescribeDcdnDomainLog",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDcdnDomainLog获取指定域名的原始访问日志的下载地址。",
+  "abc_id": 130642,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "域名（只支持单个查询）。\n"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "300",
+      "description_cn": "分页大小。默认值：**300**。最大值：**1000**。\n\n取值：**1**~**1000**之前的任意整数。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "取得第几页。\n\n取值范围：大于**1**的任意整数。"
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2017-01-01T12:12:20Z",
+      "description_cn": "获取日志起始时间点。\n\n日期格式按照ISO8601表示法，并使用UTC时间。\n"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2017-01-01T12:12:20Z",
+      "description_cn": "结束时间需大于起始时间。起止时间和结束时间，间隔不超过一年。\n\n获取日期格式按照ISO8601表示法，并使用UTC时间。\n"
+    }
+  },
+  "res": {}
+}

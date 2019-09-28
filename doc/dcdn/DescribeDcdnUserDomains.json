@@ -1,0 +1,133 @@
+{
+  "name": "DescribeDcdnUserDomains",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDcdnUserDomains查询用户名下所有的全站加速域名。支持域名模糊匹配过滤和域名状态过滤。",
+  "abc_id": 131406,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "分页大小。默认**20**，最大**50**，取值：**1**~**50**之前的任意整数。\n"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页数。取值范围：**1**~**100000**。\n"
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "域名模糊匹配过滤。\n"
+    },
+    "DomainStatus": {
+      "name": "DomainStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "运行中",
+      "description_cn": "域名状态过滤。"
+    },
+    "DomainSearchType": {
+      "name": "DomainSearchType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "fuzzy_match",
+      "description_cn": "域名查询类型。默认值：**fuzzy_match**。取值范围：\n\n- **fuzzy_match**：模糊匹配。\n\n- **pre_match**：前匹配。\n\n- **suf_match**：后匹配。\n\n- **full_match**：完全匹配。\n\n"
+    },
+    "CheckDomainShow": {
+      "name": "CheckDomainShow",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "检查domain是否展出。"
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123",
+      "description_cn": "资源组ID。"
+    },
+    "FuncId": {
+      "name": "FuncId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "图片鉴黄",
+      "description_cn": "功能ID。\n"
+    },
+    "FuncFilter": {
+      "name": "FuncFilter",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "config",
+      "description_cn": "过滤。支持**config**（已开通**funcid**）和**unconfig**（未开通**funcid**）。\n"
+    },
+    "ChangeStartTime": {
+      "name": "ChangeStartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ChangeEndTime": {
+      "name": "ChangeEndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

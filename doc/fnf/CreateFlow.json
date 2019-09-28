@@ -1,0 +1,73 @@
+{
+  "name": "CreateFlow",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/",
+  "summary_cn": "调用CreateFlow创建一个流程。",
+  "abc_id": 123079,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "flow",
+      "description_cn": "创建的流程名称。该名称在账户下唯一。"
+    },
+    "Definition": {
+      "name": "Definition",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "version:&nbsp;v1.0<br/>type:&nbsp;flow<br/>steps:<br/>&nbsp;-&nbsp;type:&nbsp;pass<br/>&nbsp;name:&nbsp;mypass",
+      "description_cn": "创建的流程的定义，遵循 FDL 语法标准。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "test flow",
+      "description_cn": "创建流程的描述。"
+    },
+    "Type": {
+      "name": "Type",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "FDL",
+      "description_cn": "创建流程的类型，取值：FDL。"
+    },
+    "RoleArn": {
+      "name": "RoleArn",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "acs:ram:${region}:${accountID}:${role}",
+      "description_cn": "可选参数，流程执行所需的资源描述符信息，用于在任务执行时 FnF 进行 assume role。"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,88 @@
+{
+  "name": "PutContact",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "创建或者修改报警联系人信息。",
+  "abc_id": 114923,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ContactName": {
+      "name": "ContactName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "报警联系人名",
+      "description_cn": "报警联系人姓名。"
+    },
+    "Describe": {
+      "name": "Describe",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "报警描述",
+      "description_cn": "描述详情。"
+    },
+    "Channels.SMS": {
+      "name": "Channels.SMS",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1333333****",
+      "description_cn": "手机号码、短信或者电话联系方式。添加或者修改的手机号码会收到一个激活链接， 激活之后才会被加到联系人中。\n手机号码、邮箱、钉钉机器人、旺旺必须最少添加一种联系方式。"
+    },
+    "Channels.Mail": {
+      "name": "Channels.Mail",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test@aliyun.com",
+      "description_cn": "Email地址。添加或者修改Email会收到一个激活链接， 激活之后对应的Email才会被加到联系人中。\n手机号码、邮箱、钉钉机器人、旺旺必须最少添加一种联系方式。"
+    },
+    "Channels.AliIM": {
+      "name": "Channels.AliIM",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "旺旺",
+      "description_cn": "旺旺联系方式。手机号码、邮箱、钉钉机器人、旺旺必须最少添加一种联系方式。"
+    },
+    "Channels.DingWebHook": {
+      "name": "Channels.DingWebHook",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "https://oapi.dingtalk.com/robot/send?access_token=7d49515e8ebf21106a80a9cc4bb3d247771305d52fb15d6201234565****",
+      "description_cn": "钉钉机器人Webhook。手机号码、邮箱、钉钉机器人、旺旺必须最少添加一种联系方式。"
+    }
+  },
+  "res": {
+    "RequestId": "F7FA82F0-8627-441B-9B2B-8663617F36B9",
+    "Success": true,
+    "Code": "200"
+  }
+}

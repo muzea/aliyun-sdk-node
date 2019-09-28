@@ -1,0 +1,146 @@
+{
+  "name": "ModifyDomainConfig",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyDomainConfig接口修改指定域名配置信息。",
+  "abc_id": 86448,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Domain": {
+      "name": "Domain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rstest.cdn.com",
+      "description_cn": "域名名称。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "waf_elasticity-cn-0xldbqtm005",
+      "description_cn": "WAF实例ID。\n\n> 您可以通过调用[DescribePayInfo](~~86651~~)接口查看您当前WAF实例ID。"
+    },
+    "IsAccessProduct": {
+      "name": "IsAccessProduct",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "该域名在WAF前是否配置有七层代理（例如，高防、CDN等），取值： \n- **0**：表示无。  \n- **1**：表示有。"
+    },
+    "Protocols": {
+      "name": "Protocols",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "[\"http\"]",
+      "description_cn": "该域名所支持的访问协议，取值： \n- **http**：表示支持HTTP协议。  \n- **https**：表示支持HTTPS协议。  \n- **http,https**：同时支持HTTP、HTTPS协议。\n          "
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "SourceIps": {
+      "name": "SourceIps",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[\"1.1.1.1\"]",
+      "description_cn": "源站IP，支持指定多个IP。示例：`[\"1.1.1.1\"]`。"
+    },
+    "HttpPort": {
+      "name": "HttpPort",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[80]",
+      "description_cn": "HTTP协议配置的端口。指定多个HTTP端口时，使用“,”进行分隔。示例值：`[80]`。\n\n> 配置协议为HTTP时，该参数为必填项。默认值为**80**。**HttpPort**与**HttpsPort**两个请求参数至少需要填一个。"
+    },
+    "HttpsPort": {
+      "name": "HttpsPort",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[443]",
+      "description_cn": "HTTPS协议配置的端口。指定多个HTTPS端口时，使用“,”进行分隔。示例值：`[443]`。\n\n> 配置协议为HTTPS时，该参数为必填项。默认值为**443**。**HttpPort**与**HttpsPort**两个请求参数至少需要填一个。"
+    },
+    "Region": {
+      "name": "Region",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn",
+      "description_cn": "WAF实例所在的地域。取值：\n- **cn**：表示中国大陆地区（默认）\n- **cn-hongkong**：表示海外地区"
+    },
+    "LoadBalancing": {
+      "name": "LoadBalancing",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "负载均衡的方式，取值：\n- **0**：IP hash\n- **1**：轮询"
+    },
+    "HttpToUserIp": {
+      "name": "HttpToUserIp",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "是否开启HTTPS访问请求通过HTTP协议转发回源站，取值： \n- **0**：表示关闭 （默认）\n- **1**：表示开启 \n\n> 如果您的网站不支持HTTPS回源，开启HTTP回源（默认回源端口是80端口）功能项，即可通过WAF实现HTTPS访问。"
+    },
+    "HttpsRedirect": {
+      "name": "HttpsRedirect",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "Https跳转状态。取值：\n- **1**：开启\n- **0**：关闭（默认）"
+    }
+  },
+  "res": {}
+}

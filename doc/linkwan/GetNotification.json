@@ -1,0 +1,29 @@
+{
+  "name": "GetNotification",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用GetNotification获取通知信息。",
+  "abc_id": 109969,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "NotificationId": {
+      "name": "NotificationId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "123",
+      "description_cn": "通知ID。"
+    }
+  },
+  "res": {}
+}

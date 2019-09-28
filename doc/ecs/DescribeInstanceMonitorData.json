@@ -1,0 +1,99 @@
+{
+  "name": "DescribeInstanceMonitorData",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeInstanceMonitorData查询一台 ECS 实例所有相关的监控信息。返回的监控内容包括 ECS 实例的 CPU 使用率、接收的数据流量、发送的数据流量、网络流量、平均带宽。当返回信息中缺少部分内容时，可能是由于系统没有获取到相应的信息，比如当时实例处于已停止（Stopped）状态。 ",
+  "abc_id": 25612,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "i-instnace1",
+      "description_cn": "待查询的实例 ID。"
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2014-10-29T23:00:00Z",
+      "description_cn": "获取数据的起始时间点。按照 [ISO8601](~~25696~~) 表示，并需要使用 UTC 时间，格式为：YYYY-MM-DDThh:mm:ssZ。如果指定的秒（ss）不是 00，则自动换算为下一分钟。 "
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2014-10-30T08:00:00Z",
+      "description_cn": "获取数据的结束时间点。按照 [ISO8601](~~25696~~) 标准表示，并需要使用 UTC 时间，格式为：YYYY-MM-DDThh:mm:ssZ。 如果指定的秒（ss）不是 00，则自动换算为下一分钟。 "
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。"
+    },
+    "Period": {
+      "name": "Period",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "60",
+      "description_cn": "获取监控数据的间隔时间，单位为秒。取值范围： \n- 60  \n- 600  \n- 3600  \n\n默认值：60 "
+    }
+  },
+  "res": {
+    "RequestId": "C8B26B44-0189-443E-9816-D951F59623A9",
+    "MonitorData": {
+      "InstanceMonitorData": [
+        {
+          "InstanceId": "Bc0102-23xYm09",
+          "CPU": 0,
+          "IntranetRX": 122,
+          "IntranetTX": 343,
+          "IntranetFlow": 675,
+          "IntranetBandwidth": 10,
+          "InternetRX": 122,
+          "InternetTX": 343,
+          "InternetFlow": 675,
+          "InternetBandwidth": 10,
+          "IOPSRead": 1000,
+          "IOPSWrite": 200,
+          "BPSRead": 1000,
+          "BPSWrite": 200,
+          "TimeStamp": "2010-01-21T09:50:23Z"
+        }
+      ]
+    }
+  }
+}

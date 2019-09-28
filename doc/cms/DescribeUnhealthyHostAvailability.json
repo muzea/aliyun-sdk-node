@@ -1,0 +1,33 @@
+{
+  "name": "DescribeUnhealthyHostAvailability",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询探测结果异常的服务器列表。",
+  "abc_id": 114961,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Id": {
+      "name": "Id",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Long"
+    }
+  },
+  "res": {
+    "RequestId": "ACBDBB40-DFB6-4F4C-8957-51FFB233969C",
+    "Success": true,
+    "Code": 200
+  }
+}

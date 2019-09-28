@@ -1,0 +1,99 @@
+{
+  "name": "DescribeCACertificates",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCACertificates查询CA证书列表。",
+  "abc_id": 34938,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "CA证书的地域。\n\n您可以通过调用[DescribeRegions](~~27584~~)接口查询地域ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "CACertificateId": {
+      "name": "CACertificateId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "139a00604bd-cn-east-hangzhou-02",
+      "description_cn": "CA证书ID。"
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rg-atstuj3rtoptyui",
+      "description_cn": "企业资源组ID。"
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {
+    "RequestId": "365F4154-92F6-4AE4-92F8-7FF34B540710",
+    " CACertificates": {
+      "CACertificate": [
+        {
+          "CACertificateId": "139a00604bd-cn-east-hangzhou-01",
+          "CACertificateName": "bcd",
+          "Fingerprint ": "AB:CB:DE"
+        },
+        {
+          "CACertificateId": "282b00102ac-cn-east-hangzhou-02",
+          "CACertificateName": "cde",
+          "Fingerprint ": "AC:BE:FD"
+        }
+      ]
+    }
+  }
+}

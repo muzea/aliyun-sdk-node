@@ -1,0 +1,94 @@
+{
+  "name": "DescribeDnatEntries",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "DescribeDnatEntries",
+  "abc_id": 110350,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "UIS实例所在的地域"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "UisNodeId": {
+      "name": "UisNodeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "UISNODE-xxxpucur6tfhpzok5u2mi",
+      "description_cn": "UIS节点的ID"
+    },
+    "UisDnatId": {
+      "name": "UisDnatId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "UISDNAT-xxxxlpa9jojfuvvxtvob1",
+      "description_cn": "DNAT规则的ID"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "列表的页码，默认值为1。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时每页的行数，最大值为50，默认值为10。"
+    }
+  },
+  "res": {
+    "UisDnatEntries": {
+      "UisDnatEntry": [
+        {
+          "IpProtocol": "tcp",
+          "UisDnatId": "UISDNAT-xxxxlpa9jojfuvvxtvob1",
+          "DestinationIp": "8.8.8.1",
+          "OriginalPort": 2001,
+          "DestinationPort": 1001,
+          "OriginalIp": "9.9.9.1"
+        }
+      ]
+    },
+    "PageNumber": 1,
+    "TotalCount": 1,
+    "PageSize": 10,
+    "RequestId": "DD14A51E-B94A-487E-B0F0-3D413FBD1E1F"
+  }
+}

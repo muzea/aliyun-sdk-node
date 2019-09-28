@@ -1,0 +1,31 @@
+{
+  "name": "ListAuditSecurityIp",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ListAuditSecurityIp获取审核安全IP列表。",
+  "abc_id": 130424,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SecurityGroupName": {
+      "name": "SecurityGroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Default",
+      "description_cn": "审核安全IP分组名称，默认获取所有。"
+    }
+  },
+  "res": {}
+}

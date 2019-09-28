@@ -1,0 +1,53 @@
+{
+  "name": "CheckFabricOrganizationDomain",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "调用CheckFabricOrganizationDomain检查域名是否可用。",
+  "abc_id": 127872,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域。"
+    },
+    "DomainCode": {
+      "name": "DomainCode",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "bank",
+      "description_cn": "域名。"
+    },
+    "Domain": {
+      "name": "Domain",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "bank",
+      "description_cn": "域名前缀。\n\n不需要包含`DescribeRootDomain`接口获取的根域名。"
+    }
+  },
+  "res": {
+    "Result": {
+      "Prompt": "OK",
+      "Domain": "canyouguessme",
+      "Valid": true
+    },
+    "RequestId": "C30A14C7-800E-468B-9EB2-C704DA49295E",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

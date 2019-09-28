@@ -1,0 +1,22 @@
+{
+  "name": "DescribeZones",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "DescribeZones用于查询某个 Region 下的所有可用区及可用区所支持的 NAS 类型。 ",
+  "abc_id": 94146,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域 ID"
+    }
+  },
+  "res": {}
+}

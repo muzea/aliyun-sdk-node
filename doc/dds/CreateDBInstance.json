@@ -1,0 +1,283 @@
+{
+  "name": "CreateDBInstance",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "该接口用于创建MongoDB副本集实例，同时也可用于克隆MongoDB副本集实例。",
+  "abc_id": 61763,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ETnLKlblzczshOTUbOCzxxxxxxxxxx",
+      "description_cn": "用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。"
+    },
+    "Engine": {
+      "name": "Engine",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "MongoDB",
+      "description_cn": "数据库引擎，取值：**MongoDB**。"
+    },
+    "EngineVersion": {
+      "name": "EngineVersion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "4.0",
+      "description_cn": "数据库版本号，取值：**3.2**、**3.4**或**4.0**。\n> 调用本接口用于克隆实例时，该值必须与源实例保持一致。"
+    },
+    "DBInstanceClass": {
+      "name": "DBInstanceClass",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "dds.mongo.standard",
+      "description_cn": "实例规格，取值详情请参见[实例规格表](~~57141~~)。"
+    },
+    "DBInstanceStorage": {
+      "name": "DBInstanceStorage",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "实例存储空间。\n- 取值范围：**10**~**3000**，单位为GB。\n- 每10GB递增。\n\n> 具体取值受实例规格约束，详情请参考[实例规格表](~~57141~~)。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ZoneId": {
+      "name": "ZoneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou-b",
+      "description_cn": "可用区ID，您可以通过[DescribeRegions](~~61933~~)查看可用的可用区，使用此参数指定实例创建的可用区。"
+    },
+    "DBInstanceDescription": {
+      "name": "DBInstanceDescription",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "测试数据库1",
+      "description_cn": "实例名称，长度为2~256个字符。以中文、英文字母开头，可以包含数字、中文、英文、下划线（_）、短横线（-）。"
+    },
+    "SecurityIPList": {
+      "name": "SecurityIPList",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10.23.12.24/24",
+      "description_cn": "- 实例的IP白名单，以逗号隔开，不可重复，最多1000个IP。\n- 支持格式：%，0.0.0.0/0，10.23.12.24（IP）或者10.23.12.24/24（CIDR模式，无类域间路由，/24表示地址前缀的长度，范围为1~32。\n\n> %和0.0.0.0/0表示任何IP地址都可以访问实例的数据库，属于高危设置，请谨慎设置。"
+    },
+    "AccountPassword": {
+      "name": "AccountPassword",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Alitest!159",
+      "description_cn": "root账号的密码。\n<ul>\n<li>密码由大写字母、小写字母、数字、特殊字符中的至少三种组成，特殊字符为!#$%^&amp;*()_+-=</li>\n<li>密码长度为8-32位。</li>\n</ul>"
+    },
+    "ChargeType": {
+      "name": "ChargeType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PrePaid",
+      "description_cn": "实例的付费类型，取值：\n- **PostPaid**：后付费（按量付费）。\n- **PrePaid**：预付费（包年包月）。\n\n默认付费类型为按量付费。\n\n> 当本参数值为**PrePaid**时，还需要传入**Period**参数。"
+    },
+    "Period": {
+      "name": "Period",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "实例的购买时长，单位为月。取值范围为：**1**~**9**，**12**，**24**，**36**。\n\n> 当**ChargeType**参数值为**PrePaid**时，本参数才可用。"
+    },
+    "NetworkType": {
+      "name": "NetworkType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "VPC",
+      "description_cn": "实例的网络类型，取值：\n- **CLASSIC**：经典网络。\n- **VPC**：专有网络。\n\n默认网络类型为经典网络。\n> 当本参数值为**VPC**时，还需要传入**VpcId**参数和**VSwitchId**参数。"
+    },
+    "VpcId": {
+      "name": "VpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc-bpxxxxxxxx",
+      "description_cn": "专有网络（VPC）ID。\n\n> 当**NetworkType**参数值为**VPC**时，本参数才可用。"
+    },
+    "VSwitchId": {
+      "name": "VSwitchId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": " vsw-bpxxxxxxxx",
+      "description_cn": "虚拟交换机ID。\n\n> 当**NetworkType**参数值为**VPC**时，本参数才可用。"
+    },
+    "SrcDBInstanceId": {
+      "name": "SrcDBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "源实例ID，只有调用本接口用于克隆实例时才能传入该参数，且必须和**BackupId**或**RestoreTime**参数一同传入。"
+    },
+    "BackupId": {
+      "name": "BackupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "32994xxxx",
+      "description_cn": "具体的备份集ID，只有调用本接口用于克隆实例时才能传入该参数，且必须和**SrcDBInstanceId**参数一同传入。\n\n> 您可以通过调用[DescribeBackups](~~62172~~)接口查询备份集ID。"
+    },
+    "RestoreTime": {
+      "name": "RestoreTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2019-03-13T12:11:14Z",
+      "description_cn": "克隆实例时所恢复的时间点，格式为<i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z（UTC时间）。\n\n> - 只有调用本接口用于克隆实例时才能传入该参数，且必须和**SrcDBInstanceId**、**BackupId**参数一同传入。\n- 支持选择7天内的任一时间点进行克隆。"
+    },
+    "BusinessInfo": {
+      "name": "BusinessInfo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{“ActivityId\":\"000000000\"}",
+      "description_cn": "附加参数，业务信息。"
+    },
+    "AutoRenew": {
+      "name": "AutoRenew",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "设置实例是否自动续费，取值：\n- **true**：自动续费。\n- **false**：不自动续费，即手动续费。\n\n默认为手动续费。\n\n> 当**ChargeType**参数值为**PrePaid**时，本参数才可用。"
+    },
+    "DatabaseNames": {
+      "name": "DatabaseNames",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "mongodbtest",
+      "description_cn": "数据库名。\n\n> 调用本接口用于克隆实例操作时，可传入该参数指定需要克隆的数据库，如不传入，则克隆实例的所有数据库。"
+    },
+    "CouponNo": {
+      "name": "CouponNo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "youhuiquan_promotion_option_id_for_blank",
+      "description_cn": " 优惠码，默认为：**youhuiquan_promotion_option_id_for_blank**。"
+    },
+    "StorageEngine": {
+      "name": "StorageEngine",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "WiredTiger",
+      "description_cn": "实例使用的存储引擎，取值为**WiredTiger**，**RocksDB**，**TerarkDB**，默认值为**WiredTiger**。关于存储引擎与版本的选择约束请参考[版本与存储引擎](~~61906~~)。\n\n> 调用本接口用于克隆实例时，该值必须与源实例保持一致。"
+    },
+    "ReplicationFactor": {
+      "name": "ReplicationFactor",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3",
+      "description_cn": "副本集节点个数，取值：**3**，**5**，**7**。默认值为**3**。\n"
+    },
+    "ReadonlyReplicas": {
+      "name": "ReadonlyReplicas",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "创建只读节点的个数，取值范围为**1**-**5**。\n\n> 默认不传入该参数，即默认不创建只读节点。"
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rg-axxxxxxxx",
+      "description_cn": "资源组ID。"
+    }
+  },
+  "res": {
+    "DBInstanceId": "dds-bpxxxxxxxx",
+    "OrderId": "2033xxxxxxxxxxxx",
+    "RequestId": "D8F1D721-6439-4257-A89C-F1E8E9C9624D"
+  }
+}

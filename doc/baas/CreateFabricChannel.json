@@ -1,0 +1,116 @@
+{
+  "name": "CreateFabricChannel",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateFabricChannel创建通道。",
+  "abc_id": 127873,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域。"
+    },
+    "ChannelName": {
+      "name": "ChannelName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "channelx",
+      "description_cn": "通道名。最大长度50个字符，可以包含英文或数字及符号\"_\", \"-\", \".\"。"
+    },
+    "Organization": {
+      "name": "Organization",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Id",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "ConsortiumId": {
+      "name": "ConsortiumId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "consortium-aaaaaa-akpcsjjac2jd",
+      "description_cn": "联盟ID。"
+    },
+    "BatchTimeout": {
+      "name": "BatchTimeout",
+      "type": "Integer",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "块超时时间。"
+    },
+    "MaxMessageCount": {
+      "name": "MaxMessageCount",
+      "type": "Integer",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "50",
+      "description_cn": "块交易上限。"
+    },
+    "PreferredMaxBytes": {
+      "name": "PreferredMaxBytes",
+      "type": "Integer",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "12",
+      "description_cn": "块大小软限制。"
+    }
+  },
+  "res": {
+    "Result": [
+      {
+        "ChannelId": "chan-channelx-1l1hmckuuisxo",
+        "ConsortiumName": "aaaaa",
+        "ChannelName": "channelx",
+        "ConsortiumId": "consortium-aaaaaa-akpcsjjac2jd",
+        "CreateTime": "1544768139624",
+        "MaxMessageCount": 50,
+        "MemberCount": 2,
+        "OwnerBid": "26842",
+        "OwnerUid": "",
+        "OwnerName": "name",
+        "PreferredMaxBytes": 12,
+        "State": "Pending",
+        "SupportConfig": "true",
+        "UpdateTime": "1544768139624"
+      }
+    ],
+    "RequestId": "",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "name": "DescribeDedicatedHostTypes",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDedicatedHostTypes查询指定地域下支持的专有宿主机规格详细参数，或者查询专有宿主机支持的ECS实例规格族。",
+  "abc_id": 93285,
+  "timeout": 8000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "专有宿主机所在地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-beijing"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DedicatedHostType": {
+      "name": "DedicatedHostType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ddh.sn1ne",
+      "description_cn": "专有宿主机规格。更多详情，请参见[宿主机规格](~~68564~~)。"
+    },
+    "SupportedInstanceTypeFamily": {
+      "name": "SupportedInstanceTypeFamily",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ecs.sn1ne",
+      "description_cn": "专有宿主机规格支持的ECS实例规格族。"
+    }
+  },
+  "res": {
+    "DedicatedHostTypes": {
+      "DedicatedHostType": [
+        {
+          "LocalStorageAmount": 0,
+          "Sockets": 2,
+          "DedicatedHostType": "ddh.sn1ne",
+          "LocalStorageCapacity": 0,
+          "SupportedInstanceTypeFamilies": {
+            "SupportedInstanceTypeFamily": [
+              "ecs.sn1ne"
+            ]
+          },
+          "MemorySize": 112,
+          "Cores": 32,
+          "TotalVcpus": 56,
+          "LocalStorageCategory": ""
+        },
+        {
+          "LocalStorageAmount": 0,
+          "Sockets": 2,
+          "DedicatedHostType": "dh.c60m83.n1",
+          "LocalStorageCapacity": 0,
+          "SupportedInstanceTypeFamilies": {
+            "SupportedInstanceTypeFamily": [
+              "ecs.n1"
+            ]
+          },
+          "MemorySize": 84,
+          "Cores": 32,
+          "TotalVcpus": 40,
+          "LocalStorageCategory": ""
+        }
+      ]
+    },
+    "RequestId": "9A0FE8A2-720C-45AE-B2D9-813060FCBBF5"
+  }
+}

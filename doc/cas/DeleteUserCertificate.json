@@ -1,0 +1,48 @@
+{
+  "name": "DeleteUserCertificate",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteUserCertificate接口删除用户的证书文件。",
+  "abc_id": 126510,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CertId": {
+      "name": "CertId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "111111",
+      "description_cn": "指定证书ID。调用**CreateUserCertificate**接口添加证书返回结果中的**CertId**。"
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.2.3.4",
+      "description_cn": "指定请求的来源IP地址。"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "zh",
+      "description_cn": "指定请求和接收消息的语言类型。\n- **zh**：中文\n- **en**：英文"
+    }
+  },
+  "res": {}
+}

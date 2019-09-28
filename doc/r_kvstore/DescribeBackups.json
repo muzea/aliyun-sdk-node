@@ -1,0 +1,161 @@
+{
+  "name": "DescribeBackups",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeBackups查询Redis实例的备份文件信息。",
+  "abc_id": 61081,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2019-03-11T10:00Z",
+      "description_cn": "查询开始时间，例如：`2018-12-21T18:10Z`。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2019-03-14T18:00Z",
+      "description_cn": "查询结束时间，例如：`2018-12-28T18:10Z`。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "r-bp1xxxxxxxxxxxxx",
+      "description_cn": "目标实例的ID。"
+    },
+    "BackupId": {
+      "name": "BackupId",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "111111111",
+      "description_cn": "备份文件的ID。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "每页最大记录数。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页码，大于0，且不超过Integer的最大值。"
+    },
+    "NeedAof": {
+      "name": "NeedAof",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "DescribeBackupsResponse": {
+      "PageNumber": "1",
+      "TotalCount": "3",
+      "PageSize": "30",
+      "RequestId": "6D7D871F-8A6B-40C2-85C7-3632D139EAFD",
+      "Backups": {
+        "Backup": [
+          {
+            "BackupIntranetDownloadURL": "http://rdsbak-hk45-v2.oss-cn-hongkong-internal.aliyuncs.com/xxxxxxxxxxx",
+            "BackupType": "FullBackup",
+            "BackupEndTime": "2019-03-14T05:31:13Z",
+            "BackupMethod": "Physical",
+            "BackupId": "336077354",
+            "BackupStartTime": "2019-03-14T05:28:50Z",
+            "BackupDownloadURL": "https://rdsbak-hk45-v2.oss-cn-hongkong.aliyuncs.com/xxxxxxxxxxx",
+            "BackupDBNames": "all",
+            "NodeInstanceId": "r-bp1xxxxxxxxxxxxx",
+            "BackupMode": "Automated",
+            "BackupStatus": "Success",
+            "BackupSize": "1024",
+            "EngineVersion": "4.0"
+          },
+          {
+            "BackupIntranetDownloadURL": "http://rdsbak-hk45-v2.oss-cn-hongkong-internal.aliyuncs.com/xxxxxxxxxxx",
+            "BackupType": "FullBackup",
+            "BackupEndTime": "2019-03-13T05:31:09Z",
+            "BackupMethod": "Physical",
+            "BackupId": "335538809",
+            "BackupStartTime": "2019-03-13T05:28:46Z",
+            "BackupDownloadURL": "http://rdsbak-hk45-v2.oss-cn-hongkong-internal.aliyuncs.com/xxxxxxxxxxx",
+            "BackupDBNames": "all",
+            "NodeInstanceId": "r-bp1xxxxxxxxxxxxx",
+            "BackupMode": "Automated",
+            "BackupStatus": "Success",
+            "BackupSize": "1024",
+            "EngineVersion": "4.0"
+          },
+          {
+            "BackupIntranetDownloadURL": "http://rdsbak-hk45-v2.oss-cn-hongkong-internal.aliyuncs.com/xxxxxxxxxxx",
+            "BackupType": "FullBackup",
+            "BackupEndTime": "2019-03-12T05:31:14Z",
+            "BackupMethod": "Physical",
+            "BackupId": "335001607",
+            "BackupStartTime": "2019-03-12T05:28:52Z",
+            "BackupDownloadURL": "https://rdsbak-hk45-v2.oss-cn-hongkong.aliyuncs.com/http://rdsbak-hk45-v2.oss-cn-hongkong-internal.aliyuncs.com/xxxxxxxxxxx",
+            "BackupDBNames": "all",
+            "NodeInstanceId": "r-bp1xxxxxxxxxxxxx",
+            "BackupMode": "Automated",
+            "BackupStatus": "Success",
+            "BackupSize": "1024",
+            "EngineVersion": "4.0"
+          }
+        ]
+      }
+    }
+  }
+}

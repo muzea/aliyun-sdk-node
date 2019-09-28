@@ -1,0 +1,68 @@
+{
+  "name": "ModifyHASwitchConfig",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyHASwitchConfig接口开启或关闭RDS实例的主备切换功能。",
+  "abc_id": 133817,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID，可以通过接口[DescribeRegions](~~26243~~)查看地域ID。"
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "rm-uf6wjk5xxxxxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "HAConfig": {
+      "name": "HAConfig",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Manual",
+      "description_cn": "主备切换设置，取值：\n* **Auto**：出现故障时自动切换主备实例；\n* **Manual**：临时关闭自动切换。\n\n默认值：**Auto**。\n>取值为**Manual**时，必须传入参数**ManualHATime**。\n"
+    },
+    "ManualHATime": {
+      "name": "ManualHATime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2019-08-29T15:00:00Z",
+      "description_cn": "临时关闭的截止时间。最晚可设置为7天后的23:59:59。格式：<i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z（UTC时间）。\n>仅当参数**HAConfig**取值为**Manual**时，本参数有效。"
+    }
+  },
+  "res": {
+    "RequestId": "B6AE1448-D846-4831-B1C7-CFF3E99D5470"
+  }
+}

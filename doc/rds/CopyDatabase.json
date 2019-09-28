@@ -1,0 +1,29 @@
+{
+  "name": "CopyDatabase",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CopyDatabase接口复制数据库SQL Server 2008 R2版，已下线。",
+  "abc_id": 64331,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestID": "5A77D650-27A1-4E08-AD9E-59008EDB6927"
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "name": "CreateHostAvailability",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "创建可用性监控任务。",
+  "abc_id": 115317,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "TaskName": {
+      "name": "TaskName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "我的探测任务",
+      "description_cn": "任务名称。"
+    },
+    "TaskType": {
+      "name": "TaskType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "HTTP",
+      "description_cn": "任务类型，支持PING、TELNET、HTTP 三种类型。"
+    },
+    "AlertConfig.NotifyType": {
+      "name": "AlertConfig.NotifyType",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "报警通知类型：\n+ 2：电话+短信+邮件+钉钉机器人,\n+ 1：短信+邮件+钉钉机器人\n+ 0：邮件+钉钉机器人"
+    },
+    "AlertConfigEscalationList": {
+      "name": "AlertConfigEscalationList",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "MetricName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Aggregate",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Times",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Operator",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "12345",
+      "description_cn": "应用分组ID。"
+    },
+    "TaskScope": {
+      "name": "TaskScope",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "GROUP",
+      "description_cn": "任务范围：\n- GROUP：表示做里的所有ECS作为探测任务的探针。\n- INSTANCE：如果选择了INSTANCE 则需要设置InstanceList参数。"
+    },
+    "TaskOption.HttpURI": {
+      "name": "TaskOption.HttpURI",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "http://www.aliyun.com",
+      "description_cn": "HTTP探测类型的探测URI地址。"
+    },
+    "TaskOption.TelnetOrPingHost": {
+      "name": "TaskOption.TelnetOrPingHost",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "www.aliyun.com",
+      "description_cn": "如果探测任务是PING或者TELNET，此处写入要探测的域名或者地址。"
+    },
+    "TaskOption.HttpResponseCharset": {
+      "name": "TaskOption.HttpResponseCharset",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "UTF-8",
+      "description_cn": "HTTP探测类型响应字符集。"
+    },
+    "TaskOption.HttpResponseMatchContent": {
+      "name": "TaskOption.HttpResponseMatchContent",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ok",
+      "description_cn": "匹配响应的内容。"
+    },
+    "TaskOption.HttpMethod": {
+      "name": "TaskOption.HttpMethod",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "GET",
+      "description_cn": "HTTP探测类型的方法，目前支持GET、POST、HEAD 三种方法。"
+    },
+    "TaskOption.HttpNegative": {
+      "name": "TaskOption.HttpNegative",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "true：包含内容则报警。\nfalse：不包含内容则报警。"
+    },
+    "AlertConfig.StartTime": {
+      "name": "AlertConfig.StartTime",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "报警开始时间，单位是小时，0表示00:00。"
+    },
+    "AlertConfig.EndTime": {
+      "name": "AlertConfig.EndTime",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "23",
+      "description_cn": "报警结束时间，单位是小时，0表示00:59。"
+    },
+    "AlertConfig.SilenceTime": {
+      "name": "AlertConfig.SilenceTime",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "86400",
+      "description_cn": "通道沉默时间，单位是秒，默认86400（1天）。"
+    },
+    "AlertConfig.WebHook": {
+      "name": "AlertConfig.WebHook",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "http://www.aliyun.com/webhook.json",
+      "description_cn": "URL回调地址。"
+    },
+    "InstanceList": {
+      "name": "InstanceList",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    }
+  },
+  "res": {
+    "RequestId": "ACBDBB40-DFB6-4F4C-8957-51FFB233969C",
+    "Success": true,
+    "TaskId": 12345,
+    "Code": 200
+  }
+}

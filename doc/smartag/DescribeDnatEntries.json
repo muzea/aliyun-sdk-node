@@ -1,0 +1,85 @@
+{
+  "name": "DescribeDnatEntries",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDnatEntries查询智能接入网关实例绑定的DNAT条目。",
+  "abc_id": 125450,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "智能接入网关实例所在的地域ID。"
+    },
+    "SagId": {
+      "name": "SagId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "sag-djgd*************",
+      "description_cn": "智能接入网关实例ID。\n\n> 目前仅支持硬件版实例。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "Type": {
+      "name": "Type",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Intranet",
+      "description_cn": "DNAT类型，包含以下选项：\n\n* Intranet：缺省值，表示私网DNAT。\n\n* Internet：表示公网DNAT。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "12",
+      "description_cn": "实例状态列表的页码，默认值为1。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "分页查询时设置的每页行数，默认值为10，最大值为50。"
+    }
+  },
+  "res": {
+    "DnatEntries": {
+      "DnatEntry": []
+    },
+    "PageNumber": 1,
+    "PageSize": 10,
+    "RequestId": "635640CA-2335-4856-A9CB-1CB5C444DC5A",
+    "TotalCount": 0
+  }
+}

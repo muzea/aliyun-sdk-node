@@ -1,0 +1,57 @@
+{
+  "name": "CreateIPv6TranslatorAclList",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "创建访问控制策略组。",
+  "abc_id": 114598,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": " IPv6转换服务实例的地域。 您可以通过调用 DescribeRegions接口获取地域ID。  "
+    },
+    "AclName": {
+      "name": "AclName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "test",
+      "description_cn": " 访问控制策略组名称。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sha123456"
+    }
+  },
+  "res": {
+    "RequestId": "8B2F5262-6B57-43F2-xxxxx",
+    "AclId": "ipv6transacl-bp1de2xxxx"
+  }
+}

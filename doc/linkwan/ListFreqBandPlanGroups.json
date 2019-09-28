@@ -1,0 +1,18 @@
+{
+  "name": "ListFreqBandPlanGroups",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ListFreqBandPlanGroups获取频段列表。",
+  "abc_id": 108614,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    }
+  },
+  "res": {}
+}

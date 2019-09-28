@@ -1,0 +1,47 @@
+{
+  "name": "DeleteSourceServer",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "删除一个迁移源。",
+  "abc_id": 121815,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SourceId": {
+      "name": "SourceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "s-xxxxxxxxxxxxxxx",
+      "description_cn": "迁移源ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "000000"
+    },
+    "Force": {
+      "name": "Force",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否强制删除迁移源。\n\n- true：强制删除迁移源、迁移源关联的迁移任务及任务对应的中转资源。\n- false：无法删除已关联迁移任务的迁移源。"
+    }
+  },
+  "res": {}
+}

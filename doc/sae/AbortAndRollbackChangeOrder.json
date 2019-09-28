@@ -1,0 +1,29 @@
+{
+  "name": "AbortAndRollbackChangeOrder",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT",
+  "path": "/pop/v1/sam/changeorder/AbortAndRollbackChangeOrder",
+  "summary_cn": "中止或回滚变更单",
+  "abc_id": 126616,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ChangeOrderId": {
+      "name": "ChangeOrderId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "xxx-xxxx-xxx-xxxx",
+      "description_cn": "变更单ID"
+    }
+  },
+  "res": {}
+}

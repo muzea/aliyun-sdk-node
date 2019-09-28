@@ -1,0 +1,62 @@
+{
+  "name": "DescribeZones",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeZones查询支持Redis的可用区。",
+  "abc_id": 94527,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "",
+      "description_cn": ""
+    },
+    "AcceptLanguage": {
+      "name": "AcceptLanguage",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en-US",
+      "description_cn": "返回值的语言，取值：\n* zh-CN（中文）\n* en-US（英文）\n* ja（日文）\n\n> 默认值：zh-CN。"
+    }
+  },
+  "res": {
+    "RequestId": "1D42F072-72FE-4DC4-BB8E-64B1D298182E",
+    "Zones": {
+      "KVStoreZone": [
+        {
+          "ZoneName": "呼和浩特 可用区B",
+          "IsRds": true,
+          "Disabled": false,
+          "RegionId": "cn-huhehaote",
+          "ZoneId": "cn-huhehaote-b",
+          "SwitchNetwork": true
+        },
+        {
+          "ZoneName": "呼和浩特 可用区A",
+          "IsRds": true,
+          "Disabled": false,
+          "RegionId": "cn-huhehaote",
+          "ZoneId": "cn-huhehaote-a",
+          "SwitchNetwork": true
+        }
+      ]
+    }
+  }
+}

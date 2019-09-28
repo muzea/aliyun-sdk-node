@@ -1,0 +1,102 @@
+{
+  "name": "DescribeImageSupportInstanceTypes",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeImageSupportInstanceTypes查询指定镜像支持的实例规格。",
+  "abc_id": 95504,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例所属的地域 ID。您可以调用 [DescribeRegions](~~25609~~) 查看最新的阿里云地域列表。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "ImageId": {
+      "name": "ImageId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "m-imageid1",
+      "description_cn": "镜像 ID。"
+    },
+    "ActionType": {
+      "name": "ActionType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "*",
+      "description_cn": "实例规格需要使用到的场景。取值范围：\n\n- CreateEcs（默认）：创建实例\n- Upgrade：升级实例规格\n- Downgrade：降级实例规格\n- RenewDowngrade：续费降配"
+    },
+    "Filter": {
+      "name": "Filter",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {
+    "RequestId": "CF661E2D-4AFE-4BCD-959A-A65E14416B44",
+    "RegionId": "cn-hangzhou",
+    "ImageId": "ubuntu_16_0402_64_20G_alibase_20180409.vhd",
+    "InstanceTypes": {
+      "InstanceType": [
+        {
+          "InstanceTypeId": "ecs.t1.xsmall",
+          "CpuCoreCount": 1,
+          "MemorySize": 0.5,
+          "InstanceTypeFamily": "ecs.t1"
+        },
+        {
+          "InstanceTypeId": "ecs.t1.small",
+          "CpuCoreCount": 1,
+          "MemorySize": 1,
+          "InstanceTypeFamily": "ecs.t1"
+        }
+      ]
+    }
+  }
+}

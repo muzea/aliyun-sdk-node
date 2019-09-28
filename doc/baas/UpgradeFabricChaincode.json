@@ -1,0 +1,95 @@
+{
+  "name": "UpgradeFabricChaincode",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "调用UpgradeFabricChaincode升级链码。",
+  "abc_id": 128014,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "ChaincodeId": {
+      "name": "ChaincodeId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "code-sacc-fk9z4r97****",
+      "description_cn": "链码ID"
+    },
+    "OrganizationId": {
+      "name": "OrganizationId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "peers-wholesaler-15ix77tof****",
+      "description_cn": "组织ID"
+    },
+    "EndorsePolicy": {
+      "name": "EndorsePolicy",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "OR (\"wholesalerMSP.peer\")",
+      "description_cn": "背书策略"
+    },
+    "Location": {
+      "name": "Location",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "位置"
+    },
+    "CollectionConfig": {
+      "name": "CollectionConfig",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[{\"requiredPeerCount\":0,\"name\":\"collectionName\",\"maxPeerCount\":3,\"blockToLive\":0,\"policy\":\"OR('Org1MSP.peer')\"}]",
+      "description_cn": "隐私数据集配置"
+    }
+  },
+  "res": {
+    "Result": {
+      "ProviderId": "provider",
+      "ProviderName": "name",
+      "ChaincodeName": "mycc3",
+      "Input": "args:&quot;john&quot; args:&quot;10&quot; ",
+      "Install": false,
+      "State": "Running",
+      "Type": 1,
+      "ChannelName": "mychannel",
+      "ConsortiumId": "consortium-lianmenyumingyi-hc5d1bwl****",
+      "ChaincodeVersion": "0.1",
+      "ChaincodeId": "cc-null-c856k9i1m****",
+      "Path": "github.com/hyperledger/fabric-samples/chaincode/sacc"
+    },
+    "RequestId": "2A3ABD81-95F5-4931-ACB3-31BDAE561FC7",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

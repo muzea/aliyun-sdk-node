@@ -1,0 +1,59 @@
+{
+  "name": "ListFCTrigger",
+  "protocol": "HTTP|HTTPS",
+  "method": "GET",
+  "path": "/",
+  "summary_cn": "调用ListFCTrigger获取指定事件的函数计算触发器列表。",
+  "abc_id": 130586,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "EventMetaName": {
+      "name": "EventMetaName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "LogFileCreated",
+      "description_cn": "事件名称。"
+    },
+    "EventMetaVersion": {
+      "name": "EventMetaVersion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "1.0.0",
+      "description_cn": "事件版本。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "FCTriggers": [
+      {
+        "Notes": "测试",
+        "SourceArn": "acs:cdn:*:1234567890:domain/example.com",
+        "EventMetaVersion": "1.0.0",
+        "EventMetaName": "LogFileCreated",
+        "RoleARN": "acs:ram:: 1234567890:role/aliyuncdneventnotificationrole",
+        "TriggerARN": "acs:fc:cn-beijing: 1234567890:services/FCTestService/functions/printEvent/triggers/testtrigger"
+      }
+    ],
+    "RequestId": "EC046C5D-8CB4-4B6B-B7F8-B335E51EF90E"
+  }
+}

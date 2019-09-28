@@ -1,0 +1,47 @@
+{
+  "name": "BatchSetVodDomainConfigs",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用BatchSetVodDomainConfigs批量配置加速域名。",
+  "abc_id": 130606,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainNames": {
+      "name": "DomainNames",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "点播加速域名，多个用英文半角逗号分隔。"
+    },
+    "Functions": {
+      "name": "Functions",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "[{\"functionArgs\":[{\"argName\":\"domain_name\",\"argValue\":\"www.example.com\"}],\"functionName\":\"set_req_host_header\"}]",
+      "description_cn": "功能列表。\n\n- Functions格式：`[{\"functionArgs\":[{\"argName\":\"domain_name\",\"argValue\":\"www.example.com\"}],\"functionName\":\"set_req_host_header\"}]`\n\n- 某些功能，如filetype_based_ttl_set，可以设置多条纪录，当需要更新其中某条纪录时，可通过该条纪录的configId来指定。 `[{\"functionArgs\":[{\"argName\":\"file_type\",\"argValue\":\"jpg\"},{\"argName\":\"ttl\",\"argValue\":\"18\"},{\"argName\":\"weight\",\"argValue\":\"30\"}],\"functionName\":\"filetype_based_ttl_set\",\"configId\":5068995}]`"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {}
+}

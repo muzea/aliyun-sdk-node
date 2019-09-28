@@ -1,0 +1,162 @@
+{
+  "name": "DescribeAccessPoints",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeAccessPoints接口查询指定地域中的物理专线接入点。",
+  "abc_id": 36062,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "接入点所在的地域。 \n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "Filter": {
+      "name": "Filter",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        }
+      ]
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "",
+      "description_cn": ""
+    },
+    "Type": {
+      "name": "Type",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "HostOperator": {
+      "name": "HostOperator",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": " 列表的页码，默认值为**1**。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": " 分页查询时每页的行数，最大值为**50**，默认值为**10**。  "
+    }
+  },
+  "res": {
+    "AccessPointSet": {
+      "AccessPointType": [
+        {
+          "Name": "北京-丰台-A",
+          "Status": "recommended",
+          "Description": "cn-beijing-ft-cxp32",
+          "Type": "VPC",
+          "Location": "",
+          "HostOperator": "皓宽",
+          "AttachedRegionNo": "cn-beijing",
+          "AccessPointId": "ap-cn-beijing-ft-A"
+        },
+        {
+          "Name": "北京-亦庄-A",
+          "Status": "recommended",
+          "Description": "cn-beijing-yz-ne203",
+          "Type": "VPC",
+          "Location": "",
+          "HostOperator": "世纪互联",
+          "AttachedRegionNo": "cn-beijing",
+          "AccessPointId": "ap-cn-beijing-yz-A"
+        },
+        {
+          "Name": "北京-大兴-B",
+          "Status": "recommended",
+          "Description": "cn-beijing-dx-nu16",
+          "Type": "VPC",
+          "Location": "",
+          "HostOperator": "中国联通",
+          "AttachedRegionNo": "cn-beijing",
+          "AccessPointId": "ap-cn-beijing-dx-B"
+        },
+        {
+          "Name": "北京-昌平-A",
+          "Status": "recommended",
+          "Description": "ap-cn-beijing-cp-CM12",
+          "Type": "VPC",
+          "Location": "",
+          "HostOperator": "中国电信",
+          "AttachedRegionNo": "cn-beijing",
+          "AccessPointId": "ap-cn-beijing-cp-A"
+        },
+        {
+          "Name": "北京-大兴-A",
+          "Status": "recommended",
+          "Description": "cn-beijing-dx-nu17-a",
+          "Type": "VPC",
+          "Location": "",
+          "HostOperator": "GDS",
+          "AttachedRegionNo": "cn-beijing",
+          "AccessPointId": "ap-cn-beijing-dx-A"
+        }
+      ]
+    },
+    "PageNumber": 1,
+    "TotalCount": 5,
+    "PageSize": 10,
+    "RequestId": "3E85D803-C7CF-4BCD-9CFE-6DBA1DFFA027"
+  }
+}

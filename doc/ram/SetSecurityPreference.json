@@ -1,0 +1,107 @@
+{
+  "name": "SetSecurityPreference",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用SetSecurityPreference接口设置全局安全首选项。",
+  "abc_id": 43765,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "EnableSaveMFATicket": {
+      "name": "EnableSaveMFATicket",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否允许在用户在登录时保存多因素认证设备验证票据，目前票据有效期是七天。"
+    },
+    "AllowUserToChangePassword": {
+      "name": "AllowUserToChangePassword",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否允许用户修改自己的密码。"
+    },
+    "AllowUserToManageAccessKeys": {
+      "name": "AllowUserToManageAccessKeys",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否允许用户管理自己的访问密钥。"
+    },
+    "AllowUserToManagePublicKeys": {
+      "name": "AllowUserToManagePublicKeys",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否允许用户管理自己的公钥。"
+    },
+    "AllowUserToManageMFADevices": {
+      "name": "AllowUserToManageMFADevices",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否允许用户管理自己绑定或解绑多因素认证设备。"
+    },
+    "LoginSessionDuration": {
+      "name": "LoginSessionDuration",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "6",
+      "description_cn": "用户登录有效期，单位：小时。"
+    },
+    "LoginNetworkMasks": {
+      "name": "LoginNetworkMasks",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10.0.0.0/8",
+      "description_cn": "登录掩码，默认空字符串，不限制登录IP。"
+    }
+  },
+  "res": {
+    "RequestId": "04F0F334-1335-436C-A1D7-6C044FE73368",
+    "SecurityPreference": {
+      "LoginProfilePreference": {
+        "EnableSaveMFATicket": true,
+        "AllowUserToChangePassword": true,
+        "LoginNetworkMasks": "10.0.0.0/8",
+        "LoginSessionDuration": 6
+      },
+      "AccessKeyPreference": {
+        "AllowUserToManageAccessKeys": false
+      },
+      "MFAPreference": {
+        "AllowUserToManageMFADevices": true
+      },
+      "PublicKeyPreference": {
+        "AllowUserToManagePublicKeys": false
+      }
+    }
+  }
+}

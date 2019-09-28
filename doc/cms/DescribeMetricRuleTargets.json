@@ -1,0 +1,47 @@
+{
+  "name": "DescribeMetricRuleTargets",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "查询报警规则关联目标。",
+  "abc_id": 121592,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "RuleId": {
+      "name": "RuleId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "rulIdxxxxx1",
+      "description_cn": "报警规则ID。"
+    }
+  },
+  "res": {
+    "Code": "200",
+    "Message": "Success",
+    "Success": true,
+    "RequestId": "786E92D2-AC66-4250-B76F-F1E2FCDDBA1C",
+    "Targets": [
+      {
+        "Arn": "acs:mns:cn-hangzhou:111:/queues/test/message",
+        "Id": 1,
+        "Level": [
+          "INFO",
+          "WARN",
+          "CRITICAL"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "name": "QueryCallDetailByTaskId",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用接口QueryCallDetailByTaskId查看指定机器人外呼任务的话单详情。",
+  "abc_id": 114044,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "TaskId": {
+      "name": "TaskId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "4001112222",
+      "description_cn": "机器人呼叫任务的唯一任务ID，成功下发机器人外呼任务后返回。可以在控制台[任务列表](https://dyvms.console.aliyun.com/dyvms.htm#/smart-call/saas/task/list)中查看，或调用接口**BatchRobotSmartCall**成功后记录返回的参数**TaskId**。"
+    },
+    "QueryDate": {
+      "name": "QueryDate",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "123456789000",
+      "description_cn": "机器人外呼任务的开始时间。Unix时间戳格式。\n> 单位为毫秒。"
+    },
+    "Callee": {
+      "name": "Callee",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "15900000000",
+      "description_cn": "被叫号码。当前仅支持查看一个被叫号码的外呼记录。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    }
+  },
+  "res": {
+    "Data": "{\"rejectCount\":0,\"dialogCount\":3,\"tags\":1,\"startDate\":\"2019-03-27 10:34:54\",\"gmtCreate\":\"2019-03-27 10:34:40\",\"sureCount\":0,\"state\":\"200000\",\"recordFile\":\"http://alicom-fc-record-biz.cn-hangzhou.oss.aliyun-inc.com/Freeswitch_RU_115987800002_02c3554f-ea24-422d-b1de-e671f455f21a_record.wav?OSSAccessKeyId=bypFNbGJVk73****&Signature=VWHOX%2FFhvvtSkxfMTw%2F5fdJUQu****&Expires=1554382725\",\"defaultCount\":0,\"endDate\":\"2019-03-27 10:35:09\",\"calleeShowNumber\":\"053158552960\",\"customCount\":0,\"callId\":\"115987800002^102789420002\",\"dialogDetail\":[{\"content\":\"我的呼叫测试\",\"startTime\":\"Wed Mar 27 10:34:45 CST 2019\",\"role\":\"robot\"},{\"content\":\"喂，哎，你好\",\"startTime\":\"Wed Mar 27 10:35:00 CST 2019\",\"role\":\"custom\"},{\"content\":\"不好意思，可以慢点再说一遍吗?\",\"startTime\":\"Wed Mar 27 10:35:00 CST 2019\",\"role\":\"robot\"},{\"content\":\"喂\",\"startTime\":\"Wed Mar 27 10:35:01 CST 2019\",\"role\":\"custom\"},{\"content\":\"哦再见\",\"startTime\":\"Wed Mar 27 10:35:08 CST 2019\",\"role\":\"custom\"},{\"content\":\"不好意思，我这边听得不是很清楚，您可以再说一遍吗？\",\"startTime\":\"Wed Mar 27 10:35:08 CST 2019\",\"role\":\"robot\"}],\"knowledgeCount\":0,\"recordStatus\":1,\"denyCount\":0,\"duration\":16,\"knowledgeCommonCount\":0,\"callee\":\"13735460951\",\"knowledgeBusinessCount\":0,\"hangupDirection\":1}",
+    "Message": "OK",
+    "RequestId": "D86B61A8-F2EE-4E4C-9F05-08A4676FFD89",
+    "Code": "OK"
+  }
+}

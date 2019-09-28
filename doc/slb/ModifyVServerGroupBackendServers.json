@@ -1,0 +1,97 @@
+{
+  "name": "ModifyVServerGroupBackendServers",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyVServerGroupBackendServers替换服务器组中的后端服务器。",
+  "abc_id": 35220,
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "负载均衡实例的地域ID。"
+    },
+    "VServerGroupId": {
+      "name": "VServerGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rsp-cige6j5e7p",
+      "description_cn": "服务器组ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "OldBackendServers": {
+      "name": "OldBackendServers",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[{   \"ServerId\": \"eni-xxxxxxxxx\",   \"Weight\": \"100\",   \"Type\": \"eni\",   \"ServerIp\": \"192.168.11.1\" }, {   \"ServerId\": \"eni-xxxxxxxxx\",   \"Weight\": \"100\",   \"Type\": \"eni\",   \"ServerIp\": \"192.168.11.2\" }]",
+      "description_cn": "要被替换的后端服务器列表。"
+    },
+    "NewBackendServers": {
+      "name": "NewBackendServers",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[{   \"ServerId\": \"eni-xxxxxxxxx\",   \"Weight\": \"100\",   \"Type\": \"eni\",   \"ServerIp\": \"192.168.11.11\" }, {   \"ServerId\": \"eni-xxxxxxxxx\",   \"Weight\": \"100\",   \"Type\": \"eni\",   \"ServerIp\": \"192.168.11.10\" }]",
+      "description_cn": "新的后端服务器列表。\n\n\n单次调用每个服务器组最多可调用20个后端服务器。"
+    }
+  },
+  "res": {
+    "ModifyVServerGroupBackendServersResponse": {
+      "RequestId": "9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C",
+      "VServerGroupId": "rsp-cige6j5e7p",
+      "BackendServers": {
+        "BackendServer": [
+          {
+            "ServerId": "vm-400",
+            "Port": "80",
+            "Weight": "100"
+          },
+          {
+            "ServerId": "vm-401",
+            "Port": "90",
+            "Weight": "100"
+          }
+        ]
+      }
+    }
+  }
+}

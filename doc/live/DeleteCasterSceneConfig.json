@@ -1,0 +1,59 @@
+{
+  "name": "DeleteCasterSceneConfig",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteCasterSceneConfig清除指定场景的配置信息。",
+  "abc_id": 94775,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SceneId": {
+      "name": "SceneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "b5f8c837-ceeb-424f-b30b-68e94e864995",
+      "description_cn": "场景ID。"
+    },
+    "Type": {
+      "name": "Type",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "Component",
+      "description_cn": "可取值：\n\n- **Component**：清除组件配置\n- **Layou**：清除布局配置\n- **All**：清除组件和布局配置"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "CasterId": {
+      "name": "CasterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "b4810848-bcf9-4aef-bd4a-e6bba2d966c8",
+      "description_cn": "导播台ID。"
+    }
+  },
+  "res": {}
+}

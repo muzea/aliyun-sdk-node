@@ -1,0 +1,51 @@
+{
+  "name": "ModifyDBInstanceSSL",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyDBInstanceSSL接口修改MongoDB实例的SSL配置。",
+  "abc_id": 89255,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SSLAction": {
+      "name": "SSLAction",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "Open",
+      "description_cn": "对SSL功能执行的操作，取值：\n- **Open**：开启SSL加密。\n- **Close**：关闭SSL加密。\n- **Update**：更新SSL证书。  \n         "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。"
+    }
+  },
+  "res": {
+    "RequestId": "6D806B11-078F-4154-BF9F-844F56D08964"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "name": "UpdateFlow",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "更新一个工作流编排实例的信息",
+  "abc_id": 127647,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "FlowId": {
+      "name": "FlowId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "lc-abcdefg",
+      "description_cn": "需要更新的工作流编排实例的 ID"
+    },
+    "FlowName": {
+      "name": "FlowName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "更新后的名称"
+    },
+    "FlowDescription": {
+      "name": "FlowDescription",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "这是一个工作流的描述",
+      "description_cn": "更新后的描述"
+    },
+    "Definition": {
+      "name": "Definition",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{\\\"schemaVersion\\\":\\\"2018-12-12\\\",\\\"actions\\\":{},\\\"version\\\":\\\"1.0.0\\\",\\\"triggers\\\":{}}",
+      "description_cn": "更新后的工作流定义"
+    }
+  },
+  "res": {}
+}

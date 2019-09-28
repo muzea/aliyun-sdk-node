@@ -1,0 +1,240 @@
+{
+  "name": "ConfigureSynchronizationJob",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SynchronizationJobId": {
+      "name": "SynchronizationJobId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "StructureInitialization": {
+      "name": "StructureInitialization",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "DataInitialization": {
+      "name": "DataInitialization",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "SynchronizationObjects": {
+      "name": "SynchronizationObjects",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "SynchronizationJobName": {
+      "name": "SynchronizationJobName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SynchronizationDirection": {
+      "name": "SynchronizationDirection",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SourceEndpoint.InstanceId": {
+      "name": "SourceEndpoint.InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SourceEndpoint.InstanceType": {
+      "name": "SourceEndpoint.InstanceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SourceEndpoint.IP": {
+      "name": "SourceEndpoint.IP",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SourceEndpoint.Port": {
+      "name": "SourceEndpoint.Port",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SourceEndpoint.UserName": {
+      "name": "SourceEndpoint.UserName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SourceEndpoint.Password": {
+      "name": "SourceEndpoint.Password",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "DestinationEndpoint.InstanceId": {
+      "name": "DestinationEndpoint.InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "DestinationEndpoint.InstanceType": {
+      "name": "DestinationEndpoint.InstanceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "DestinationEndpoint.IP": {
+      "name": "DestinationEndpoint.IP",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "DestinationEndpoint.Port": {
+      "name": "DestinationEndpoint.Port",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "DestinationEndpoint.UserName": {
+      "name": "DestinationEndpoint.UserName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "DestinationEndpoint.Password": {
+      "name": "DestinationEndpoint.Password",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SourceEndpoint.OwnerID": {
+      "name": "SourceEndpoint.OwnerID",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SourceEndpoint.Role": {
+      "name": "SourceEndpoint.Role",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "PartitionKey.ModifyTime_Year": {
+      "name": "PartitionKey.ModifyTime_Year",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "PartitionKey.ModifyTime_Month": {
+      "name": "PartitionKey.ModifyTime_Month",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "PartitionKey.ModifyTime_Day": {
+      "name": "PartitionKey.ModifyTime_Day",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "PartitionKey.ModifyTime_Hour": {
+      "name": "PartitionKey.ModifyTime_Hour",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "PartitionKey.ModifyTime_Minute": {
+      "name": "PartitionKey.ModifyTime_Minute",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "MigrationReserved": {
+      "name": "MigrationReserved",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Checkpoint": {
+      "name": "Checkpoint",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

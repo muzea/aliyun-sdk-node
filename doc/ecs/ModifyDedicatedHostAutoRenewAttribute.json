@@ -1,0 +1,92 @@
+{
+  "name": "ModifyDedicatedHostAutoRenewAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyDedicatedHostAutoRenewAttribute为一台或多台包年包月专有宿主机设置自动续费，也可以取消已设定的自动续费。",
+  "abc_id": 93296,
+  "timeout": 8000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "专有宿主机所属的地域ID。"
+    },
+    "DedicatedHostIds": {
+      "name": "DedicatedHostIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ddh-xxxxxxxxxxxxxxxxx",
+      "description_cn": "专有宿主机ID。最多可以输入100个包年包月专有宿主机ID，ID之间用半角逗号（,）隔开。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-beijing"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "Duration": {
+      "name": "Duration",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "续费周期。取值范围：请参见**PeriodUnit**参数的描述部分。"
+    },
+    "PeriodUnit": {
+      "name": "PeriodUnit",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Month",
+      "description_cn": "续费时长单位。取值范围：\n\n- Week：周。此时，参数**Duration**取值范围为 {1, 2, 3}。\n\n- Month（默认）：月。此时，参数**Duration**的取值范围为 { 1, 2, 3, 6, 12}。"
+    },
+    "AutoRenew": {
+      "name": "AutoRenew",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否自动续费包年包月专有宿主机。取值范围：\n\n- true：自动续费包年包月专有宿主机。\n\n- false（默认）：不自动续费包年包月专有宿主机。\n"
+    },
+    "RenewalStatus": {
+      "name": "RenewalStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Normal",
+      "description_cn": "是否自动续费包年包月专有宿主机，参数**RenewalStatus**的优先级高于**AutoRenew**。取值范围：\n\n- AutoRenewal：自动续费。\n\n- Normal：待续费。\n\n- NotRenewal：不续费，也不发送到期提醒。到期前第三天我们会发送不续费提醒。不续费的专有宿主机可以设置成待续费（Normal），再自行续费（[RenewDedicatedHosts](~~93287~~)）或设置为自动续费（AutoRenewal）。"
+    }
+  },
+  "res": {
+    "RequestId": "2A4EA075-CB5B-41B7-B0EB-70D339F64DE7"
+  }
+}

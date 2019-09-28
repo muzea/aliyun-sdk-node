@@ -1,0 +1,193 @@
+{
+  "name": "DescribeInstanceHistoryEvents",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeInstanceHistoryEvents查询指定实例的系统事件信息，默认查询处于非活跃状态的历史系统事件。",
+  "abc_id": 63962,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例所在地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。 "
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-myInstance",
+      "description_cn": "实例ID。不指定实例ID时，表示查询您指定地域下所有实例的系统事件信息。"
+    },
+    "EventId": {
+      "name": "EventId",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "InstanceEventCycleStatus": {
+      "name": "InstanceEventCycleStatus",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "EventCycleStatus": {
+      "name": "EventCycleStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Executed",
+      "description_cn": "系统事件的生命周期状态。EventCycleStatus只在未指定InstanceEventCycleStatus.N参数时有效。取值范围： \n\n- Scheduled  \n- Avoided  \n- Executing  \n- Executed  \n- Canceled  \n- Failed\n- Inquiring\n         "
+    },
+    "InstanceEventType": {
+      "name": "InstanceEventType",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "EventType": {
+      "name": "EventType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "SystemMaintenance.Reboot",
+      "description_cn": "系统事件的类型。EventType参数只在未指定InstanceEventType.N参数时有效。取值范围： \n\n- SystemMaintenance.Reboot：因系统维护实例重启 \n- SystemMaintenance.Redeploy：因系统维护实例重新部署   \n- SystemFailure.Reboot：因系统错误实例重启    \n- SystemFailure.Redeploy：因系统错误实例重新部署\n- SystemFailure.Delete：因实例创建失败实例释放  \n- InstanceFailure.Reboot：因实例错误实例重启  \n- InstanceExpiration.Stop：因包年包月期限到期，实例停止 \n- InstanceExpiration.Delete：因包年包月期限到期，实例释放 \n- AccountUnbalanced.Stop：因账号欠费，按量付费实例停止 \n- AccountUnbalanced.Delete：因账号欠费，按量付费实例释放 \n         "
+    },
+    "NotBefore.Start": {
+      "name": "NotBefore.Start",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2017-11-30T06:32:31Z",
+      "description_cn": "查询系统事件计划执行时间的开始时间。按照[ISO8601](~~25696~~)标准表示，并需要使用UTC +0时间，格式为yyyy-MM-ddTHH:mm:ssZ。"
+    },
+    "NotBefore.End": {
+      "name": "NotBefore.End",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2017-12-01T06:32:31Z",
+      "description_cn": "查询系统事件计划执行时间的结束时间。按照[ISO8601](~~25696~~)标准表示，并需要使用UTC +0时间，格式为yyyy-MM-ddTHH:mm:ssZ。"
+    },
+    "EventPublishTime.Start": {
+      "name": "EventPublishTime.Start",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2017-11-30T06:32:31Z",
+      "description_cn": "查询系统事件发布时间的开始时间。按照[ISO8601](~~25696~~)标准表示，并需要使用UTC +0时间，格式为yyyy-MM-ddTHH:mm:ssZ。"
+    },
+    "EventPublishTime.End": {
+      "name": "EventPublishTime.End",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2017-12-01T06:32:31Z",
+      "description_cn": "查询系统事件发布时间的结束时间。按照[ISO8601](~~25696~~)标准表示，并需要使用UTC +0时间，格式为yyyy-MM-ddTHH:mm:ssZ。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "查询结果的页码。取值范围：正整数\n\n默认值：1 "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "查询结果的分页大小。取值范围：1~100\n\n默认值：10 "
+    }
+  },
+  "res": {
+    "InstanceSystemEventSet": {
+      "InstanceSystemEventType": [
+        {
+          "InstanceId": "i-2ze3tphuqvc93cixxxx3",
+          "EventId": "e-2ze9yxxxxwtqcvai68rl",
+          "EventType": {
+            "Code": 1,
+            "Name": "SystemMaintenance.Reboot"
+          },
+          "EventCycleStatus": {
+            "Code": 0,
+            "Name": "Executed"
+          },
+          "EventPublishTime": "2017-11-30T06:32:31Z",
+          "NotBefore": "2017-12-01T06:32:31Z",
+          "EventFinishTime": "2017-12-01T06:35:31Z"
+        },
+        {
+          "InstanceId": "i-2ze3tphuqvc93cixxxx3",
+          "EventId": "e-2ze9yxxxxwtqcvai68r3",
+          "EventType": {
+            "Code": 34,
+            "Name": "InstanceExpiration.Stop"
+          },
+          "EventCycleStatus": {
+            "Code": 8,
+            "Name": "Avoided"
+          },
+          "EventPublishTime": "2017-11-29T06:32:31Z",
+          "NotBefore": "2017-12-06T00:00:00Z",
+          "EventFinishTime": "2017-12-05T12:35:31Z"
+        }
+      ]
+    },
+    "PageSize": 10,
+    "PageNumber": 1,
+    "TotalCount": 2,
+    "RequestId": "02EA76D3-5A2A-44EB-XXXX-8901881D8707"
+  }
+}

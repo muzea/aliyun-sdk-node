@@ -1,0 +1,74 @@
+{
+  "name": "ListPolicies",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ListPolicies接口列出权限策略。",
+  "abc_id": 28719,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "PolicyType": {
+      "name": "PolicyType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "System",
+      "description_cn": "指定`Policy`的类型, 取值`System`或`Custom`，如果没有指定则列出所有权限策略。"
+    },
+    "Marker": {
+      "name": "Marker",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "EXAMPLE",
+      "description_cn": "当请求的返回结果被截断时，可以使用`Marker`获取从当前截断位置之后的内容。"
+    },
+    "MaxItems": {
+      "name": "MaxItems",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "100",
+      "description_cn": "指定返回结果的条数，当返回结果达到`MaxItems`限制被截断时，返回参数`IsTruncated`将等于`true`。\n\n取值范围：1 ~ 1000，默认值：100。"
+    }
+  },
+  "res": {
+    "RequestId": "7B8A4E7D-6CFF-471D-84DF-195A7A241ECB",
+    "IsTruncated": true,
+    "Marker": "EXAMPLE",
+    "Policies": {
+      "Policy": [
+        {
+          "PolicyName": "OSS-Administrator",
+          "PolicyType": "Custom",
+          "Description": "OSS管理员权限",
+          "DefaultVersion": "v1",
+          "CreateDate": "2015-01-23T12:33:18Z",
+          "UpdateDate": "2015-01-23T12:33:18Z",
+          "AttachmentCount": 3
+        },
+        {
+          "PolicyName": "ReadOnlyAccess",
+          "PolicyType": "System",
+          "Description": "只读权限",
+          "DefaultVersion": "v1",
+          "CreateDate": "2015-02-11T18:39:12Z",
+          "UpdateDate": "2015-02-19T09:43:16Z",
+          "AttachmentCount": 1
+        }
+      ]
+    }
+  }
+}

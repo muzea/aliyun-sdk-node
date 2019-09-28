@@ -1,0 +1,29 @@
+{
+  "name": "DescribeChangeOrder",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v1/sam/changeorder/DescribeChangeOrder",
+  "summary_cn": "查询变更单信息",
+  "abc_id": 126617,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ChangeOrderId": {
+      "name": "ChangeOrderId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "76fa5c0-9ebb-4bb4-b383-1f885447b109",
+      "description_cn": "变更单ID"
+    }
+  },
+  "res": {}
+}

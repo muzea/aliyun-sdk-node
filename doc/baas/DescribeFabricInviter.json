@@ -1,0 +1,46 @@
+{
+  "name": "DescribeFabricInviter",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|PUT|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeFabricInviter获取邀请人信息。",
+  "abc_id": 127846,
+  "timeout": 1000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "Code": {
+      "name": "Code",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "200",
+      "description_cn": "邀请码"
+    }
+  },
+  "res": {
+    "Result": [
+      {
+        "ConsortiumId": "10000",
+        "ExpireTime": 1544411108000,
+        "InviterId": 35242340,
+        "ConsortiumName": "quickstart",
+        "InviterName": "name"
+      }
+    ],
+    "RequestId": "C445762C-8909-4BD8-A2BD-BB45BF2441D8",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "CompleteMultipartUpload",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST",
+  "path": "/[ObjectName]",
+  "timeout": null,
+  "reqFormat": {
+    "BucketName": {
+      "name": "BucketName",
+      "position": "domain",
+      "required": true
+    },
+    "ObjectName": {
+      "name": "ObjectName",
+      "position": "path",
+      "required": true
+    },
+    "uploadId": {
+      "name": "uploadId",
+      "position": "query",
+      "required": true
+    },
+    "encoding-type": {
+      "name": "encoding-type",
+      "position": "query",
+      "required": true
+    }
+  },
+  "res": {}
+}

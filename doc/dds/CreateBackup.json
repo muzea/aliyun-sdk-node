@@ -1,0 +1,52 @@
+{
+  "name": "CreateBackup",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateBackup接口手动备份MongoDB实例。",
+  "abc_id": 62171,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "d-bpxxxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "BackupMethod": {
+      "name": "BackupMethod",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Logical",
+      "description_cn": "实例的备份方式，取值：\n- **Logical**：逻辑备份。\n- **Physical**：物理备份，默认为物理备份。\n\n>仅副本集和分片集群实例支持选择备份方式。单节点实例无需传入本参数，固定为快照备份。"
+    }
+  },
+  "res": {
+    "RequestId": "7016B12F-7F64-40A4-BAFF-013F02AC82FC",
+    "BackupId": "5664xxxx"
+  }
+}

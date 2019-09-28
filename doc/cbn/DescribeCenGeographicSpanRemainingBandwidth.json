@@ -1,0 +1,86 @@
+{
+  "name": "DescribeCenGeographicSpanRemainingBandwidth",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCenGeographicSpanRemainingBandwidth查询指定带宽包的剩余可用带宽值。",
+  "abc_id": 93307,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CenId": {
+      "name": "CenId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cen-nh98vzx8gfhlwn****",
+      "description_cn": "带宽包所属的CEN实例ID。"
+    },
+    "GeographicRegionAId": {
+      "name": "GeographicRegionAId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "China",
+      "description_cn": "带宽包的互通区域，取值：**China**|**North-America**|**Asia-Pacific**|**Europe**|**Australia**。"
+    },
+    "GeographicRegionBId": {
+      "name": "GeographicRegionBId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "North-America",
+      "description_cn": "带宽包的另一个互通区域，取值：**China**|**North-America**|**Asia-Pacific**|**Europe**|**Australia**。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "111"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "列表的页码，默认值为**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时每页的行数，最大值为**50**，默认值为**10**。"
+    }
+  },
+  "res": {
+    "RequestId": "E4B345CD-2CBA-4881-AF6D-E5D9BAE1CA7B",
+    "RemainingBandwidth": "2"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "name": "DescribeFabricConsortiumChaincodes",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeFabricConsortiumChaincodes获取联盟的链码列表。",
+  "abc_id": 127867,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "ConsortiumId": {
+      "name": "ConsortiumId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "consortium-lianmenyumingyi-hc5d1bwlulg7",
+      "description_cn": "联盟ID"
+    },
+    "Location": {
+      "name": "Location",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "位置"
+    }
+  },
+  "res": {
+    "Result": [
+      {
+        "ChaincodeName": "asset_mgmtv1.0.out",
+        "ChannelId": "chan-channel1-1180moa11f7g5a",
+        "Install": false,
+        "State": "Checking",
+        "ConsortiumId": "consortium-testthree-3i6j6d8ian5668",
+        "Type": 0,
+        "CreateTime": "2018-07-31T08:13:27.000+0000",
+        "ProviderId": "peers-test3-25c96n9n6jh3dc",
+        "ChannelName": "channel1",
+        "ChaincodeVersion": "unknown",
+        "EndorsePolicy": "OR (&#test3MSP.member&#39;)",
+        "ChaincodeId": "code-asset_mgmtv1.0.out-1gab808kn8bfgl"
+      }
+    ],
+    "RequestId": "66495305-6EE5-4023-96F2-93B47B79E076",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

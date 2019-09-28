@@ -1,0 +1,42 @@
+{
+  "name": "InstallMonitoringAgent",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "对指定ECS安装云监控插件。不适用于非阿里云ECS 的服务器。",
+  "abc_id": 114950,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "InstanceIds": {
+      "name": "InstanceIds",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "Force": {
+      "name": "Force",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否强制安装，默认值为强制安装。"
+    }
+  },
+  "res": {
+    "Success": true,
+    "Code": 200
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "name": "DescribeSecurityGroupReferences",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeSecurityGroupReferences查询一个安全组和其他哪些安全组有安全组级别的授权行为。",
+  "abc_id": 57320,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "安全组所属地域。"
+    },
+    "SecurityGroupId": {
+      "name": "SecurityGroupId",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "CEF72CEB-54B6-4AE8-B225-F876FF7BA984",
+    "SecurityGroupReferences": [
+      {
+        "SecurityGroupId": "sg-1133aa",
+        "SecurityReferencingGroups": [
+          {
+            "AliUid": 123,
+            "SecurityGroupId": "sg-2255cc"
+          },
+          {
+            "AliUid": 123,
+            "SecurityGroupId": "sg-2255dd"
+          }
+        ]
+      }
+    ]
+  }
+}

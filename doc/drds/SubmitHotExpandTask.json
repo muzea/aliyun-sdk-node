@@ -1,0 +1,174 @@
+{
+  "name": "SubmitHotExpandTask",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true
+    },
+    "DbName": {
+      "name": "DbName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "InstanceDbMapping": {
+      "name": "InstanceDbMapping",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "InstanceName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "DbList",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        }
+      ]
+    },
+    "Mapping": {
+      "name": "Mapping",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "HotDbName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "LogicTable",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "HotTableName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ShardDbValue",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ShardTbValue",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "DbShardColumn",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "TbShardColumn",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "ExtendedMapping": {
+      "name": "ExtendedMapping",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "SrcDb",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "SrcInstanceId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "DrdsInstanceId": {
+      "name": "DrdsInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "TaskName": {
+      "name": "TaskName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "TaskDesc": {
+      "name": "TaskDesc",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SupperAccountMapping": {
+      "name": "SupperAccountMapping",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "SupperAccount",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "SupperPassword",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "InstanceName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,39 @@
+{
+  "name": "DescribeDiagnosticReportList",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDiagnosticReportList接口获取诊断报告列表。",
+  "abc_id": 64304,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "实例ID。"
+    }
+  },
+  "res": {
+    "reportList": [
+      {
+        "diagnosticTime": "2018-01-17T12:46:09Z",
+        "downloadURL": "http://rdsreport-hzi-v2.oss-cn-hangzhou-i.aliyuncs.com/xxxxx",
+        "endTime": "2018-01-10T15:31:00Z",
+        "score": 100,
+        "startTime": "2018-01-10T15:30:00Z"
+      }
+    ],
+    "requestId": "B7E9A79C-DE1B-4398-845F-D654FC0958BD"
+  }
+}

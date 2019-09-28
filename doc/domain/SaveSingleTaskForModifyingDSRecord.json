@@ -1,0 +1,98 @@
+{
+  "name": "SaveSingleTaskForModifyingDSRecord",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "提交修改DS记录任务",
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "test.com",
+      "description_cn": "域名"
+    },
+    "KeyTag": {
+      "name": "KeyTag",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1",
+      "description_cn": "关键标签，用于标识DNSSEC记录，为小于65536的整数值"
+    },
+    "Algorithm": {
+      "name": "Algorithm",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1",
+      "description_cn": "加密算法编号，详见[Domain Name System Security (DNSSEC) Algorithm Numbers](https://www.iana.org/assignments/dns-sec-alg-numbers/dns-sec-alg-numbers.xhtml)。枚举范围：\n - 1 RSA/MD5\n - 2 Diffie-Hellman\n - 3 DSA/SHA-1\n - 5 RSA/SHA-1\n - 6 DSA-NSEC3-SHA1\n - 7 RSASHA1-NSEC3-SHA1\n - 8 RSA/SHA-256\n - 10 RSA/SHA-512\n - 12 GOST R 34.10-2001\n - 13 ECDSA Curve P-256 with SHA-256\n - 14 ECDSA Curve P-384 with SHA-384\n - 15 Ed25519\n - 16 Ed448\n - 252 Reserved for Indirect Keys\n - 253 private algorithm\n - 254 private algorithm OID\n"
+    },
+    "DigestType": {
+      "name": "DigestType",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2",
+      "description_cn": "摘要算法类型，详见[Delegation Signer (DS) Resource Record (RR) Type Digest Algorithms](https://www.iana.org/assignments/ds-rr-types/ds-rr-types.xhtml)。枚举值范围：\n - 1 SHA-1\n - 2 SHA-256\n - 3 GOST R 34.11-94\n - 4 SHA-384"
+    },
+    "Digest": {
+      "name": "Digest",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "f58fa917424383934c7b0cf1a90f61d692745680fa06f5ecdbe0924e86de9598",
+      "description_cn": "摘要值"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "接口返回错误信息语言，枚举值范围：zh 中文；en 英文。默认为en。"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "127.0.0.1",
+      "description_cn": "用户ip"
+    }
+  },
+  "res": {
+    "RequestId": "E2598CAF-DBFE-494E-95EF-B42A33C178AA",
+    "TaskNo": "e893148f-6343-4ae1-9eba-6e2a4116e142"
+  }
+}

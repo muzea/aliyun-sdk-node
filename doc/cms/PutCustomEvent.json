@@ -1,0 +1,59 @@
+{
+  "name": "PutCustomEvent",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "上报自定义事件数据监控数据。",
+  "abc_id": 115012,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "EventInfo": {
+      "name": "EventInfo",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "EventName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Content",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Time",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "GroupId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {
+    "Message": "success",
+    "RequestId": "131DD9C8-9A32-4428-AD2E-4E3013B6E3A7",
+    "Code": "200"
+  }
+}

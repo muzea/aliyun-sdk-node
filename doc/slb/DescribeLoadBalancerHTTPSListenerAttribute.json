@@ -1,0 +1,91 @@
+{
+  "name": "DescribeLoadBalancerHTTPSListenerAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeLoadBalancerHTTPSListenerAttribute查询HTTPS监听配置。",
+  "abc_id": 27607,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "负载均衡实例的地域ID。"
+    },
+    "ListenerPort": {
+      "name": "ListenerPort",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "80",
+      "description_cn": "负载均衡实例前端使用的端口。\n\n取值：**1-65535**。"
+    },
+    "LoadBalancerId": {
+      "name": "LoadBalancerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "lb-bp1mxu5r8laukr35n1k5r",
+      "description_cn": "负载均衡实例的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "11F52428-64ED-40F7-98C2-DBB6D0BB0AD7",
+    "HealthCheckHttpCode": "http_2xx,http_3xx",
+    "HealthCheckTimeout": 5,
+    "ServerCertificateId": "1231579085529123_15dbf6ff26f_1991415478_2054196746",
+    "XForwardedFor_SLBID": "off",
+    "Gzip": "on",
+    "HealthyThreshold": 3,
+    "Scheduler": "wrr",
+    "StickySession": "off",
+    "UnhealthyThreshold": 3,
+    "XForwardedFor_SLBIP": "off",
+    "XForwardedFor_proto": "off",
+    "Bandwidth": -1,
+    "HealthCheckURI": "/",
+    "VServerGroupId": "rsp-0xiju72xwnr93",
+    "HealthCheck": "on",
+    "ListenerPort": 443,
+    "Status": "running",
+    "XForwardedFor": "on",
+    "HealthCheckDomain": "",
+    "HealthCheckInterval": 2,
+    "BackendServerPort": 443
+  }
+}

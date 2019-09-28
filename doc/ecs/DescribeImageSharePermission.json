@@ -1,0 +1,91 @@
+{
+  "name": "DescribeImageSharePermission",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeImageSharePermission查询一份自定义镜像已经共享的所有用户。返回结果支持分页显示，每页的信息条目默认为 10 条。",
+  "abc_id": 25541,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "自定义镜像所属的地域 ID。您可以调用 [DescribeRegions](~~25609~~) 查看最新的阿里云地域列表。"
+    },
+    "ImageId": {
+      "name": "ImageId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "m-imageid1",
+      "description_cn": "自定义镜像 ID。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "查询结果显示的页码。起始值：1 默认值：1 "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "查询结果显示的每页的信息条目数。最大值：50 默认值：10 "
+    }
+  },
+  "res": {
+    "ShareGroups": {
+      "ShareGroup": [
+        {
+          "Group": "all"
+        }
+      ]
+    },
+    "Accounts": {
+      "Account": [
+        {
+          "AliyunId": "1886508529898586"
+        }
+      ]
+    },
+    "ImageId": "m-282dzntc7",
+    "PageNumber": 1,
+    "PageSize": 10,
+    "RegionId": "cn-qingdao",
+    "TotalCount": 1,
+    "RequestId": "9AD96F49-0BE5-4868-A66A-224352549CEC"
+  }
+}

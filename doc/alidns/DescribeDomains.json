@@ -1,0 +1,143 @@
+{
+  "name": "DescribeDomains",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDomains根据传入参数查询该用户的域名列表。",
+  "abc_id": 29751,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "用户语言。"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "KeyWord": {
+      "name": "KeyWord",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "com",
+      "description_cn": "关键字，按照“%KeyWord%”模式搜索，不区分大小写。"
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2223",
+      "description_cn": "域名分组ID，如果不填写则默认为全部分组。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "当前页数，起始值为**1**，默认为**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "分页查询时设置的每页行数，最大值**100**，默认为**20**。"
+    },
+    "SearchMode": {
+      "name": "SearchMode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "LIKE",
+      "description_cn": "搜索模式。取值：\n\n- **LIKE**：模糊搜索\n- **EXACT**：精确搜索\n"
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rg-resourcegroupid01",
+      "description_cn": "资源组ID。"
+    }
+  },
+  "res": {
+    "RequestId": "68386699-8B9E-4D5B-BC4C-75A28F6C2A00",
+    "TotalCount": 2,
+    "PageNumber": 1,
+    "PageSize": 2,
+    "Domains": {
+      "Domain": [
+        {
+          "DomainId": "00efd71a-770e-4255-b54e-6fe5659baffe",
+          "DomainName": "abc.com",
+          "AliDomain": "true",
+          "GroupId": "2223",
+          "PunyCode": "abc.com",
+          "InstanceId": "i-7bg",
+          "VersionCode": "version1",
+          "DnsServers": {
+            "DnsServer": [
+              "ns1.alidns.com",
+              "ns2.alidns.com"
+            ]
+          }
+        },
+        {
+          "DomainId": "00efd71a-770e-4255-b54e-6fe5659baffe",
+          "DomainName": "实例.com",
+          "AliDomain": "false",
+          "GroupId": "2223",
+          "PunyCode": "xn--fsq270a.com",
+          "InstanceId": "i-7bk",
+          "VersionCode": "version2",
+          "DnsServers": {
+            "DnsServer": [
+              "ns1.alidns.com",
+              "ns2.alidns.com"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

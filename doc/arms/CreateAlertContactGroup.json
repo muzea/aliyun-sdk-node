@@ -1,0 +1,45 @@
+{
+  "name": "CreateAlertContactGroup",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 CreateAlertContactGroup 创建联系人分组。",
+  "abc_id": 130677,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域 ID"
+    },
+    "ContactGroupName": {
+      "name": "ContactGroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "TestGroup",
+      "description_cn": "报警联系人分组名称"
+    },
+    "ContactIds": {
+      "name": "ContactIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "1234212343",
+      "description_cn": "报警联系人 ID（多个联系人 ID 以空格分隔）"
+    }
+  },
+  "res": {}
+}

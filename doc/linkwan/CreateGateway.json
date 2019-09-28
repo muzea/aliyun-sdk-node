@@ -1,0 +1,165 @@
+{
+  "name": "CreateGateway",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateGateway录入网关。",
+  "abc_id": 109772,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "PinCode": {
+      "name": "PinCode",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "000000",
+      "description_cn": "网关PinCode, 用于确保录入者拥有该网关。"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "vme",
+      "description_cn": "自定义网关名称。"
+    },
+    "FreqBandPlanGroupId": {
+      "name": "FreqBandPlanGroupId",
+      "type": "Long",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "123",
+      "description_cn": "网关频段ID。"
+    },
+    "CommunicationMode": {
+      "name": "CommunicationMode",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "HALF_DUPLEX",
+      "description_cn": "网关通信模式。取值：**FULL_DUPLEX**(全双工）| **HALF_DUPLEX**(半双工)。"
+    },
+    "City": {
+      "name": "City",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "杭州",
+      "description_cn": "网关所在城市名称。"
+    },
+    "District": {
+      "name": "District",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "滨江区",
+      "description_cn": "网关所在城区名称。"
+    },
+    "Address": {
+      "name": "Address",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "详细地址",
+      "description_cn": "网关所在详细地址。"
+    },
+    "GisCoordinateSystem": {
+      "name": "GisCoordinateSystem",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "GCJ-02",
+      "description_cn": "网关经纬度所采用的坐标系统，可取值为**WGS_84**, **GCJ_02**。"
+    },
+    "Longitude": {
+      "name": "Longitude",
+      "type": "Float",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "123.45678",
+      "description_cn": "网关经度。"
+    },
+    "Latitude": {
+      "name": "Latitude",
+      "type": "Float",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "23.45678",
+      "description_cn": "网关纬度。"
+    },
+    "AddressCode": {
+      "name": "AddressCode",
+      "type": "Long",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "123",
+      "description_cn": "网关所在地区ID, 由http://lbs.amap.com/api/javascript-api/download定义。"
+    },
+    "GwEui": {
+      "name": "GwEui",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "0000000000000000",
+      "description_cn": "网关唯一标识。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "my gateway",
+      "description_cn": "自定义网关描述信息。"
+    }
+  },
+  "res": {}
+}

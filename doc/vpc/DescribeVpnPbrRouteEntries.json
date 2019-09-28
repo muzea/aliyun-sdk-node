@@ -1,0 +1,84 @@
+{
+  "name": "DescribeVpnPbrRouteEntries",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeVpnPbrRouteEntries查询VPN策略路由。",
+  "abc_id": 126799,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "VPN策略路由所在的地域。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。"
+    },
+    "VpnGatewayId": {
+      "name": "VpnGatewayId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "vpn-bp1a3kqjiiq9legfx****",
+      "description_cn": "VPN网关的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "列表的页码，默认值为**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时每页的行数，最大值为**50**，默认值为**10**。"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 1,
+    "RequestId": "E5D94DC7-AEC7-4E73-A203-61B04D1F1160",
+    "PageSize": 10,
+    "VpnPbrRouteEntries": {
+      "VpnPbrRouteEntry": [
+        {
+          "RouteDest": "10.0.0.0/32",
+          "VpnInstanceId": "vpn-bp1cmw7jh1nfe43m9****",
+          "State": "published",
+          "Weight": 100,
+          "CreateTime": 1563881012000,
+          "NextHop": "vco-bp1tui07ob10fmuro****",
+          "RouteSource": "11.0.0.0/32"
+        }
+      ]
+    }
+  }
+}

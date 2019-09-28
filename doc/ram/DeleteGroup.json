@@ -1,0 +1,30 @@
+{
+  "name": "DeleteGroup",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteGroup接口删除指定的用户组。",
+  "abc_id": 28704,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "GroupName": {
+      "name": "GroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "Dev-Team",
+      "description_cn": "指定用户组名称。\n\n格式：`^[a-zA-Z0-9\\-]+$`。"
+    }
+  },
+  "res": {
+    "RequestId": "FCF40AB5-881C-A0F9-334C-B0AD423AA69D"
+  }
+}

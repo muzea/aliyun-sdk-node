@@ -1,0 +1,29 @@
+{
+  "name": "AbortChange",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/pop/v1/wam/change/abort",
+  "summary_cn": "使用AbortChange可以中止一次变更。",
+  "abc_id": 127705,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ChangeId": {
+      "name": "ChangeId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "wc-5d3a963d5802611c4ddc****",
+      "description_cn": "变更ID，将中止此变更"
+    }
+  },
+  "res": {}
+}

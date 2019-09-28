@@ -1,0 +1,27 @@
+{
+  "name": "DescribeRootDomain",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "获取Baas中可用的根域名",
+  "abc_id": 0,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "Result": "onaliyunbaas.com"
+    },
+    "requestId": "@guid",
+    "successResponse": true
+  }
+}

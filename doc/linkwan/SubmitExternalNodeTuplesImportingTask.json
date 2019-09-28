@@ -1,0 +1,51 @@
+{
+  "name": "SubmitExternalNodeTuplesImportingTask",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "NodeTuples": {
+      "name": "NodeTuples",
+      "type": "RepeatList",
+      "position": "Body",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "DevEui",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "AppSKey",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "NwkSKey",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "LoraVer",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {}
+}

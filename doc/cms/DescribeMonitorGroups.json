@@ -1,0 +1,112 @@
+{
+  "name": "DescribeMonitorGroups",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询应用分组列表。",
+  "abc_id": 115032,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SelectContactGroups": {
+      "name": "SelectContactGroups",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "返回结果中是否需要包含报警联系人组。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "分页页码， 默认1 。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页大小，默认10。"
+    },
+    "Keyword": {
+      "name": "Keyword",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "应用分组名称。可根据应用分组名称模糊查询。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "xxx-1",
+      "description_cn": "资源实例ID。查询指定实例所在的应用分组。"
+    },
+    "GroupName": {
+      "name": "GroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "我的组",
+      "description_cn": "应用分组名称。"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "PageSize": 30,
+    "RequestId": "31BC7201-00F2-47B2-B7B9-6A173076ACE8",
+    "Success": true,
+    "Code": 200,
+    "Total": 1,
+    "Resources": {
+      "Resource": [
+        {
+          "GroupName": "demo",
+          "Type": "custom",
+          "ContactGroups": {
+            "ContactGroup": [
+              {
+                "Name": "xxx"
+              }
+            ]
+          },
+          "ServiceId": 49922,
+          "GmtCreate": 1489043796000,
+          "GmtModified": 1525183537000,
+          "GroupId": 13263
+        }
+      ]
+    }
+  }
+}

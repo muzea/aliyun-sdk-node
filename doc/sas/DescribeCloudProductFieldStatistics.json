@@ -1,0 +1,43 @@
+{
+  "name": "DescribeCloudProductFieldStatistics",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用该接口获取云产品统计信息。",
+  "abc_id": 130978,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "code": 200,
+    "data": {
+      "GroupedFields": {
+        "InstanceCount": 100,
+        "RiskInstanceCount": 90,
+        "categoryCount": [
+          {
+            "MachineType": 1,
+            "Count": 11
+          }
+        ]
+      }
+    },
+    "requestId": "7E0618A9-D5EF-4220-9471-C42B5E92719F",
+    "success": true
+  }
+}

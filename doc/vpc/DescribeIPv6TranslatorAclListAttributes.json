@@ -1,0 +1,81 @@
+{
+  "name": "DescribeIPv6TranslatorAclListAttributes",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "询访问控制策略组的详细信息，包括访问控制策略组中的IP和关联的IPv6转换映射条目的具体信息。",
+  "abc_id": 114606,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "访问控制策略组的地域。 您可以通过调用**DescribeRegions**接口获取地域ID。  "
+    },
+    "AclId": {
+      "name": "AclId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "ipv6transacl-bp1de2xxxx",
+      "description_cn": "访问控制策略组ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "列表的页码，默认值为1。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时每页的行数，最大值为50，默认值为10。"
+    }
+  },
+  "res": {
+    "AclEntries": {
+      "AclEntry": [
+        {
+          "AclEntryId": "ipv6transaclentry-bp105jrskxxx",
+          "AclEntryIp": "12ab:0:0:dc30::0102/128"
+        }
+      ]
+    },
+    "TotalCount": 1,
+    "PageSize": 10,
+    "RequestId": "0C8935C6-F9E9-438A-A9EE-6B01xxxxx0",
+    "PageNumber": 1,
+    "AclId": "ipv6transacl-bp1dxxxxxxx",
+    "AclName": "acl1"
+  }
+}

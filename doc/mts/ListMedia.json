@@ -1,0 +1,45 @@
+{
+  "name": "ListMedia",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": null,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false
+    },
+    "NextPageToken": {
+      "name": "NextPageToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    },
+    "MaximumPageSize": {
+      "name": "MaximumPageSize",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    },
+    "From": {
+      "name": "From",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    },
+    "To": {
+      "name": "To",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false
+    }
+  },
+  "res": {}
+}

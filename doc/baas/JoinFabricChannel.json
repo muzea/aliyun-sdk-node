@@ -1,0 +1,70 @@
+{
+  "name": "JoinFabricChannel",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "调用JoinFabricChannel确认加入通道。",
+  "abc_id": 127845,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "Do": {
+      "name": "Do",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "accept",
+      "description_cn": "操作"
+    },
+    "ChannelId": {
+      "name": "ChannelId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "chan-channelx-1l1hmckuu****",
+      "description_cn": "通道ID"
+    },
+    "Location": {
+      "name": "Location",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "位置"
+    }
+  },
+  "res": {
+    "Result": {
+      "InviteTime": "2018-06-21T13:41:48.000+0000",
+      "ChannelId": "ch-2n5fgcikopo4al",
+      "WithPeer": true,
+      "ApproveTime": "2018-06-21T13:41:48.000+0000",
+      "ConfirmTime": "2018-06-21T13:41:48.000+0000",
+      "DestroyTime": "2018-06-21T13:41:48.000+0000",
+      "State": "Accepted",
+      "OrganizationId": "org1",
+      "AcceptTime": "2018-06-21T13:41:48.000+0000"
+    },
+    "RequestId": "7D27692E-C501-4B1D-878C-0B869DD3D9E6",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

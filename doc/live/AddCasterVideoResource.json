@@ -1,0 +1,130 @@
+{
+  "name": "AddCasterVideoResource",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AddCasterVideoResource添加视频源，视频源数量受限于导播台输入路数。",
+  "abc_id": 60250,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "区域。"
+    },
+    "ResourceName": {
+      "name": "ResourceName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "test001",
+      "description_cn": "视频源名称。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "CasterId": {
+      "name": "CasterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "80787064-1c94-4dc1-85ce-9409960a9bf0",
+      "description_cn": "导播台ID。"
+    },
+    "LocationId": {
+      "name": "LocationId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "RV01",
+      "description_cn": "用于标识视频源位置，定义布局内画面的引用编号，每个位置至多关联一个资源，格式需符合“RV01…RV12”。"
+    },
+    "LiveStreamUrl": {
+      "name": "LiveStreamUrl",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "http://live.aliyun.com/AppName/StreamName.flv",
+      "description_cn": "直播流地址，视频源类型为直播流时必选。"
+    },
+    "MaterialId": {
+      "name": "MaterialId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "f080575eb5f4427684fc0715159ab3cd",
+      "description_cn": "媒资库素材ID，视频源类型为素材时必选。"
+    },
+    "VodUrl": {
+      "name": "VodUrl",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "http://live.aliyun.com/AppName/StreamName.flv",
+      "description_cn": "点播文件地址，当且仅当资源为文件视频，且视频文件未导入素材库时使用，仅限**mp4、flv、ts**格式。"
+    },
+    "BeginOffset": {
+      "name": "BeginOffset",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1000",
+      "description_cn": "仅对文件视频有效， 单位：毫秒(ms) 。\n\n> 大于0，表示从相对于首帧的偏差时间作为开始读取的位置。"
+    },
+    "EndOffset": {
+      "name": "EndOffset",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10000",
+      "description_cn": "仅对文件视频有效，单位：毫秒(ms)。\n         \n> - 大于0时，表示从相对于首帧的偏差时间为结束读取的位置。\n- 小于0时，表示相对于最后一帧的偏差时间作为结束读取的位置。 "
+    },
+    "RepeatNum": {
+      "name": "RepeatNum",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "仅对文件视频有效，表示播放完后重复继续播放的次数。\n\n> 其中，**0（默认值）**表示不重复播放。**-1**表示一直循环重复。"
+    },
+    "PtsCallbackInterval": {
+      "name": "PtsCallbackInterval",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2000",
+      "description_cn": "PTS回调间隔。"
+    }
+  },
+  "res": {}
+}

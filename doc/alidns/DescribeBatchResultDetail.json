@@ -1,0 +1,90 @@
+{
+  "name": "DescribeBatchResultDetail",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeBatchResultDetail查询批量处理结果的详细信息。",
+  "abc_id": 90010,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "用户语言。"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": "用户端IP。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "当前页码，默认值为**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "分页查询时每页设置的大小。"
+    },
+    "TaskId": {
+      "name": "TaskId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "83618818",
+      "description_cn": "任务ID。"
+    },
+    "BatchType": {
+      "name": "BatchType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "DOMAIN_ADD",
+      "description_cn": "批量操作类型。取值：\n\n- **DOMAIN_ADD**：批量添加域名\n- **DOMAIN_DEL**：批量删除域名\n- **RR_ADD**：批量添加解析\n- **RR_DEL**：批量删除解析"
+    }
+  },
+  "res": {
+    "RequestId": "75446CC1-FC9A-4595-8D96-089D73D7A63D",
+    "BatchResultDetail": {
+      "Domain": "abc.com",
+      "Status": "true"
+    }
+  }
+}

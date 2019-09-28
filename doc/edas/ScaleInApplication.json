@@ -1,0 +1,40 @@
+{
+  "name": "ScaleInApplication",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST",
+  "path": "/pop/v5/changeorder/co_scale_in",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "EccInfo": {
+      "name": "EccInfo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    },
+    "ForceStatus": {
+      "name": "ForceStatus",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

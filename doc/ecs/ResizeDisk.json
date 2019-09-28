@@ -1,0 +1,78 @@
+{
+  "name": "ResizeDisk",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "扩容一块数据盘。",
+  "abc_id": 25522,
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DiskId": {
+      "name": "DiskId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "d-diskid1",
+      "description_cn": "磁盘 ID。"
+    },
+    "NewSize": {
+      "name": "NewSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2100",
+      "description_cn": "希望扩容到的磁盘容量大小。单位为 GiB。取值范围：\n\n- 普通云盘（Cloud）：5~2000\n- 高效云盘（Cloud_efficiency）：5~2000\n- SSD 云盘（Cloud_ssd）：5~2000\n\n指定的新磁盘容量必须比原磁盘容量大。且 2 TB 以下的磁盘不能扩容到 2 TB 以上。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。"
+    },
+    "Type": {
+      "name": "Type",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "online",
+      "description_cn": "是否在线扩容磁盘。取值范围：\n\n- online：在线扩容，实例无需重启便能完成扩容。\n- offline（默认）：离线扩容，您需要重启实例以完成扩容。"
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123e4567-e89b-12d3-a456-426655440000",
+      "description_cn": "保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。**ClientToken** 只支持 ASCII 字符，且不能超过 64 个字符。更多详情，请参阅 [如何保证幂等性](~~25693~~)。"
+    }
+  },
+  "res": {
+    "RequestId": "F3CD6886-D8D0-4FEE-B93E-1B73239673DE"
+  }
+}

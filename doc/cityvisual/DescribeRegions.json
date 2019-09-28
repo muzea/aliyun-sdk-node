@@ -1,0 +1,29 @@
+{
+  "name": "DescribeRegions",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeRegions查询您可以使用的阿里云地域。",
+  "abc_id": 129263,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AcceptLanguage": {
+      "name": "AcceptLanguage",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "zh-CN",
+      "description_cn": "根据汉语、英语筛选返回结果。取值范围：\n\n- zh-CN：中文\n- en-US：英文\n\n默认值：zh-CN。"
+    }
+  },
+  "res": {}
+}

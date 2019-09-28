@@ -1,0 +1,77 @@
+{
+  "name": "CreateAntChainAccount",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "在一条蚂蚁区块链上创建一个账户",
+  "abc_id": 127091,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID"
+    },
+    "Account": {
+      "name": "Account",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "test",
+      "description_cn": "账号名"
+    },
+    "AccountPubKey": {
+      "name": "AccountPubKey",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "AEDC32...",
+      "description_cn": "账户公钥"
+    },
+    "AccountRecoverPubKey": {
+      "name": "AccountRecoverPubKey",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "AEDC32...",
+      "description_cn": "账户恢复公钥"
+    },
+    "AntChainId": {
+      "name": "AntChainId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "bDXK6boZ",
+      "description_cn": "区块链ID"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "0301F6CB-4FA6-4D03-8668-963623B63D0F",
+      "Result": {
+        "Account": "test",
+        "AntChainId": "bDXK6boZ"
+      }
+    },
+    "requestId": "0301F6CB-4FA6-4D03-8668-963623B63D0F",
+    "successResponse": true
+  }
+}

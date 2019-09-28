@@ -1,0 +1,48 @@
+{
+  "name": "DeleteMetricRuleTargets",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|PUT|GET|DELETE",
+  "path": "/",
+  "summary_cn": "删除一个报警规则的目标。",
+  "abc_id": 122131,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "RuleId": {
+      "name": "RuleId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "ruleId-xxxxxx",
+      "description_cn": "关联的报警规则ID。"
+    },
+    "TargetIds": {
+      "name": "TargetIds",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    }
+  },
+  "res": {
+    "Code": "200",
+    "Message": "Success",
+    "Success": true,
+    "RequestId": "786E92D2-AC66-4250-B76F-F1E2FCDDBA1C",
+    "FailIds": [
+      "1"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "DescribeChildInstanceRegions",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeChildInstanceRegions查询支持加载到云企业网中的网络实例的地域。",
+  "abc_id": 132080,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ProductType": {
+      "name": "ProductType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "VPC",
+      "description_cn": "实例类型，取值：\n\n- **VPC**：专有网络。\n\n- **VBR**：边界路由器。\n\n- **CCN**：云连接网。"
+    }
+  },
+  "res": {
+    "RequestId": "D5CEED59-36AA-47CC-9D81-16F71C46BD80",
+    "Regions": {
+      "Region": [
+        {
+          "RegionId": "cn-hangzhou",
+          "LocalName": "华东 1"
+        }
+      ]
+    }
+  }
+}

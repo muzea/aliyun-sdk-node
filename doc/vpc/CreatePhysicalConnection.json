@@ -1,0 +1,143 @@
+{
+  "name": "CreatePhysicalConnection",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreatePhysicalConnection接口申请物理专线接入。",
+  "abc_id": 36040,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": " 物理专线所在的地域。 您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "AccessPointId": {
+      "name": "AccessPointId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "AccessPointId=ap-cn-beijing-ft-A",
+      "description_cn": " 物理专线所在的接入点。 您可以通过调用[DescribeAccessPoints](~~36062~~)接口获取地域ID。  "
+    },
+    "LineOperator": {
+      "name": "LineOperator",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "CT",
+      "description_cn": "提供接入物理线路的运营商，取值： \n           \n- CT：中国电信   \n\n- CU：中国联通   \n\n- CM：中国移动   \n\n- CO：中国其他   \n\n- Equinix：Equinix   \n\n- Other：境外其他   "
+    },
+    "PeerLocation": {
+      "name": "PeerLocation",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "浙江省---vfjdbg_21e",
+      "description_cn": " 本地数据中心的地理位置。 "
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dgfdg12344ff",
+      "description_cn": " 客户端token，用于保证请求的幂等性。 由客户端生成该参数值，要保证在不同请求间唯一，最大不值过64个 ASCII 字符。 "
+    },
+    "Type": {
+      "name": "Type",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "VPC",
+      "description_cn": "专线类型，默认值：**VPC**。"
+    },
+    "bandwidth": {
+      "name": "bandwidth",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "带宽包的带宽。取值范围：5-5000，单位为Mbps。"
+    },
+    "PortType": {
+      "name": "PortType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1000Base-T",
+      "description_cn": "物理专线接入端口类型，取值： \n           \n- 100Base-T：百兆电口   \n\n- 1000Base-T（默认值）：千兆电口   \n\n- 1000Base-LX：千兆单模光口（10千米）   \n\n- 10GBase-T：万兆电口   \n\n- 10GBase-LR：万兆单模光口（10千米）\n   \n    "
+    },
+    "RedundantPhysicalConnectionId": {
+      "name": "RedundantPhysicalConnectionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "pc-119mfjzm7",
+      "description_cn": "冗余物理专线的ID，该专线的状态必须为Allocated、Confirmed或Enabled。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "物理专线的描述信息",
+      "description_cn": " 物理专线的描述信息。  长度为 2-256个字符，必须以字母或中文开头，但不能以`http://` 或`https://`开头。  "
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": " 物理专线的名称。  长度为 2-128个字符，必须以字母或中文开头，可包含数字，点号（.），下划线（_）和短横线（-）。但不能以`http:// `或`https://`开头。  "
+    },
+    "CircuitCode": {
+      "name": "CircuitCode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "longtel001",
+      "description_cn": "  运营商的为物理专线提供的电路编码。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "PhysicalConnectionId": "pc-**************",
+    "RequestId": "8A6A5EC5-6F6C-4906-9689-56ACE58A13E0"
+  }
+}

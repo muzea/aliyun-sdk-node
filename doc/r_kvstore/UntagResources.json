@@ -1,0 +1,69 @@
+{
+  "name": "UntagResources",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用UntagResources将标签从Redis实例解绑。",
+  "abc_id": 133991,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID，可调用[DescribeRegions](~~61012~~)查询。"
+    },
+    "ResourceType": {
+      "name": "ResourceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "INSTANCE",
+      "description_cn": "资源类型，唯一值：INSTANCE。"
+    },
+    "ResourceId": {
+      "name": "ResourceId",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "TagKey": {
+      "name": "TagKey",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "All": {
+      "name": "All",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "解绑实例上的所有标签。可选值：\n* true\n* false\n\n> * 默认值：false。\n* 如果同时设置了**TagKey.N**和该参数，该参数不生效。"
+    }
+  },
+  "res": {
+    "RequestId": "601B6F25-21E7-4484-99D5-3EF2625C0088"
+  }
+}

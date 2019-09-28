@@ -1,0 +1,24 @@
+{
+  "name": "AttachInstances",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST",
+  "path": "/clusters/[ClusterId]/attach",
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ClusterId": {
+      "name": "ClusterId",
+      "type": "String",
+      "position": "Path",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

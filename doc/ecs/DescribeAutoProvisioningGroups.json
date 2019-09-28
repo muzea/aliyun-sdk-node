@@ -1,0 +1,142 @@
+{
+  "name": "DescribeAutoProvisioningGroups",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeAutoProvisioningGroups接口查询弹性供应组。",
+  "abc_id": 122742,
+  "timeout": 8000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "弹性供应组所在地域的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "实例状态列表的页码。起始值：**1**，默认值：**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时设置的每页行数。最大值：**100**，默认值：**10**。"
+    },
+    "AutoProvisioningGroupName": {
+      "name": "AutoProvisioningGroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "弹性供应组的名称。"
+    },
+    "AutoProvisioningGroupId": {
+      "name": "AutoProvisioningGroupId",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "AutoProvisioningGroupStatus": {
+      "name": "AutoProvisioningGroupStatus",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 1,
+    "PageSize": 10,
+    "RequestId": "85331AC9-82C0-4604-9A14-048865BE****",
+    "AutoProvisioningGroups": {
+      "AutoProvisioningGroup": [
+        {
+          "TerminateInstancesWithExpiration": false,
+          "TerminateInstances": false,
+          "ValidFrom": "2019-06-17T15:22Z",
+          "AutoProvisioningGroupType": "maintain",
+          "PayAsYouGoOptions": {
+            "AllocationStrategy": "lowest-price"
+          },
+          "AutoProvisioningGroupName": "test61****",
+          "CreationTime": "",
+          "ExcessCapacityTerminationPolicy": "no-termination",
+          "Status": "active",
+          "MaxSpotPrice": 5,
+          "LaunchTemplateVersion": "1",
+          "ValidUntil": "2100-01-01T07:59Z",
+          "TargetCapacitySpecification": {
+            "SpotTargetCapacity": 180,
+            "TotalTargetCapacity": 300,
+            "PayAsYouGoTargetCapacity": 120,
+            "DefaultTargetCapacityType": "PayAsYouGo"
+          },
+          "State": "fulfilled",
+          "LaunchTemplateId": "lt-uf657o6auob6aivd****",
+          "RegionId": "cn-shanghai",
+          "AutoProvisioningGroupId": "apg-uf6c7pl7b30t4m98****",
+          "SpotOptions": {
+            "InstancePoolsToUseCount": 1,
+            "InstanceInterruptionBehavior": "terminate",
+            "AllocationStrategy": "lowest-price"
+          },
+          "LaunchTemplateConfigs": {
+            "LaunchTemplateConfig": [
+              {
+                "MaxPrice": 3,
+                "WeightedCapacity": 1,
+                "VSwitchId": "vsw-uf6qbjwokzl67uqqf****",
+                "Priority": 1,
+                "InstanceType": "ecs.c5.xlarge"
+              },
+              {
+                "MaxPrice": 2,
+                "WeightedCapacity": 2,
+                "VSwitchId": "vsw-uf6n6iy1ib39eqvph****",
+                "Priority": 1,
+                "InstanceType": "ecs.g5.large"
+              },
+              {
+                "MaxPrice": 1,
+                "WeightedCapacity": 3,
+                "VSwitchId": "vsw-uf6gs8uerj5osels4****",
+                "Priority": 1,
+                "InstanceType": "ecs.hfc5.large"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "name": "ListClusters",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 ListClusters 接口分页查询集群列表。",
+  "abc_id": 28147,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "ClusterTypeList": {
+      "name": "ClusterTypeList",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "CreateType": {
+      "name": "CreateType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ON-DEMAND",
+      "description_cn": "集群创建类型。可选值：\n\n- ON-DEMAND。\n- MANUAL。"
+    },
+    "MachineType": {
+      "name": "MachineType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ECS",
+      "description_cn": "机器类型。"
+    },
+    "StatusList": {
+      "name": "StatusList",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "IsDesc": {
+      "name": "IsDesc",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否倒序排列。"
+    },
+    "DepositType": {
+      "name": "DepositType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "HALF_MANAGED",
+      "description_cn": "托管类型，标识集群是全托管还是半托管。枚举值：\n\n- HALF_MANAGED。\n- FULLY_MANAGED。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "分页分数，从1开始。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页大小。"
+    },
+    "DefaultStatus": {
+      "name": "DefaultStatus",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否查询默认状态为初始化中、等待构建、空闲、运行中、释放中、创建失败的集群。"
+    }
+  },
+  "res": {
+    "clusters": [
+      {
+        "chargeType": "PostPaid",
+        "createResource": "ECM_EMR",
+        "createTime": 1542784048000,
+        "failReason": {},
+        "hasUncompletedOrder": false,
+        "id": "C-010A704DA760072A",
+        "name": "jy_test_d1_test",
+        "orderTaskInfo": {},
+        "runningTime": 3138,
+        "status": "RELEASED",
+        "type": "HADOOP"
+      },
+      {
+        "chargeType": "PostPaid",
+        "createResource": "ECM_EMR",
+        "createTime": 1538107586000,
+        "failReason": {},
+        "hasUncompletedOrder": false,
+        "id": "C-B9712209060CAB62",
+        "name": "intelligence-313-yp",
+        "orderTaskInfo": {},
+        "runningTime": 2069400,
+        "status": "RELEASED",
+        "type": "HADOOP"
+      },
+      {
+        "chargeType": "PostPaid",
+        "createResource": "ECM_EMR",
+        "createTime": 1536546078000,
+        "failReason": {},
+        "hasUncompletedOrder": false,
+        "id": "C-4CD9EBBD6B23C81E",
+        "name": "mg-storm",
+        "orderTaskInfo": {},
+        "runningTime": 1382155,
+        "status": "RELEASED",
+        "type": "HADOOP"
+      },
+      {
+        "chargeType": "PostPaid",
+        "createResource": "ECM_EMR",
+        "createTime": 1535363759000,
+        "failReason": {},
+        "hasUncompletedOrder": false,
+        "id": "C-75D6EE95D722E5CA",
+        "name": "df-3101-upgrade-test",
+        "orderTaskInfo": {},
+        "runningTime": 676284,
+        "status": "RELEASED",
+        "type": "HADOOP"
+      },
+      {
+        "chargeType": "PostPaid",
+        "createResource": "ECM_EMR",
+        "createTime": 1534492361000,
+        "failReason": {
+          "errorCode": "InvalidImageId.NotFound",
+          "errorMsg": "The specified ImageId does not exist.",
+          "requestId": "B8DC3A91-3953-4444-92BB-DBC29C47EC1A"
+        },
+        "hasUncompletedOrder": false,
+        "id": "C-5EF0F3C257B16CB7",
+        "name": "测试集群1",
+        "orderTaskInfo": {},
+        "runningTime": 0,
+        "status": "CREATE_FAILED",
+        "type": "HADOOP"
+      }
+    ],
+    "pageNumber": 1,
+    "pageSize": 5,
+    "requestId": "5443DB14-4641-4DFF-9226-4888EC5A2EA9",
+    "totalCount": 11
+  }
+}

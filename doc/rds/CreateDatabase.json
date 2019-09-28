@@ -1,0 +1,73 @@
+{
+  "name": "CreateDatabase",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateDatabase接口在某个实例下创建数据库。",
+  "abc_id": 26258,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "rm-uf6wjk5xxxxxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "DBName": {
+      "name": "DBName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "rds_mysql",
+      "description_cn": "数据库名称。\n\n>* 长度为2~64个字符；\n* 以字母开头，以字母或数字结尾；\n* 由小写字母、数字、下划线或中划线组成；\n* 数据库名称在实例内必须是唯一的；\n* 其他非法字符，详见[禁用关键字表](~~26317~~)。"
+    },
+    "CharacterSetName": {
+      "name": "CharacterSetName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "gbk",
+      "description_cn": "字符集，取值：\n* MySQL/MariaDB类型：**utf8、gbk、latin1、utf8mb4**；\n* SQL Server类型：**Chinese_PRC_CI_AS、Chinese_PRC_CS_AS、SQL_Latin1_General_CP1_CI_AS、SQL_Latin1_General_CP1_CS_AS、Chinese_PRC_BIN**。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "DBDescription": {
+      "name": "DBDescription",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "测试用数据库",
+      "description_cn": "数据库描述，长度为2~256个字符。以中文、英文字母开头，可以包含数字、中文、英文、下划线（_）、短横线（-）。\n>不能以 http:// 和 https:// 开头。"
+    }
+  },
+  "res": {
+    "RequestID": "5A77D650-27A1-4E08-AD9E-59008EDB6927"
+  }
+}

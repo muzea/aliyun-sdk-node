@@ -1,0 +1,41 @@
+{
+  "name": "GetTranscodeSummary",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用GetTranscodeSummary根据视频ID查询视频转码摘要，包括视频转码状态、转码进展等汇总信息。由于可能存在多次转码，故该接口只返回最近一次的转码摘要。",
+  "abc_id": 129928,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "VideoIds": {
+      "name": "VideoIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "\"ddddddddd,ggggggg,hhhhhhh\"",
+      "description_cn": "视频ID，多个用英文逗号分隔，最多支持10个。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {}
+}

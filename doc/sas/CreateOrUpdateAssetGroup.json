@@ -1,0 +1,61 @@
+{
+  "name": "CreateOrUpdateAssetGroup",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用该接口修改资产与分组的关系。",
+  "abc_id": 130975,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Uuids": {
+      "name": "Uuids",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[]",
+      "description_cn": "UUIDS列表信息。"
+    },
+    "GroupName": {
+      "name": "GroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "指定待修改分组名称。"
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "111111",
+      "description_cn": "指定待修改分组ID。"
+    }
+  },
+  "res": {
+    "code": 200,
+    "requestId": "7E0618A9-D5EF-4220-9471-C42B5E92719F",
+    "success": true
+  }
+}

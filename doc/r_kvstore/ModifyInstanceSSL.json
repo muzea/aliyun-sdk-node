@@ -1,0 +1,53 @@
+{
+  "name": "ModifyInstanceSSL",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyInstanceSSL设置Redis实例的SSL加密模式。",
+  "abc_id": 96194,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SSLEnabled": {
+      "name": "SSLEnabled",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "Enable",
+      "description_cn": "修改SSL状态：\n* Disable（关闭）\n* Enable（开启）\n* Update（更新证书） "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "r-bp1xxxxxxxxxxxxx",
+      "description_cn": "需要修改设置的实例的ID。"
+    }
+  },
+  "res": {
+    "InstanceId": "r-xxxxxxxxxxxxxxx",
+    "RequestId": "52D901ED-E0A5-42FB-B9DB-39C295C37738",
+    "TaskId": "1111111111"
+  }
+}

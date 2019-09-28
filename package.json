@@ -1,0 +1,18 @@
+{
+  "name": "aliyun-sdk-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "got": "^9.6.0",
+    "json-bigint": "^0.3.0",
+    "kitx": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.13",
+    "@types/got": "^9.6.7",
+    "cheerio": "^1.0.0-rc.3",
+    "glob": "^7.1.4",
+    "typescript": "^3.6.3"
+  }
+}

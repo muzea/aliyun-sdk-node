@@ -1,0 +1,57 @@
+{
+  "name": "ModifySourceServerAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "修改一个迁移源的名称和描述。",
+  "abc_id": 121821,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SourceId": {
+      "name": "SourceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "s-xxxxxxxxxxx",
+      "description_cn": "迁移源ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "000000"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "MySourceServer",
+      "description_cn": "迁移源名称。长度为2~128个英文或中文字符。必须以大小字母或中文开头，不能以 http:// 和 https:// 开头。可以包含数字、半角冒号（:）、下划线（_）或者连字符（-）。\n\n默认值：空。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "This is a source server.",
+      "description_cn": "迁移源描述。取值需满足以下要求：\n\n- 能包含 0~256 个字符。\n- 不能以 http:// 和 https:// 开头。\n- 不填则为空。\n\n默认值：空。"
+    }
+  },
+  "res": {}
+}

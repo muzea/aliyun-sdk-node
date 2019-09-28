@@ -1,0 +1,91 @@
+{
+  "name": "DescribeCustomMetricList",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询上报的自定义监控数据。",
+  "abc_id": 115005,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "12345",
+      "description_cn": "应用分组ID。"
+    },
+    "MetricName": {
+      "name": "MetricName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cpu",
+      "description_cn": "监控项名称。"
+    },
+    "Dimension": {
+      "name": "Dimension",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "xx",
+      "description_cn": "维度map，key-value都为字符串, 支持字母、数字、连接符“_-./\\”，键值对数量最大为10，key长度最大64字节，value长度最大64字节，超过64字节时截取前64字节。"
+    },
+    "Md5": {
+      "name": "Md5",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "97c25982d9745a231276bff27469fbc8",
+      "description_cn": "Md5校验码。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "当前页码。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "每页显示记录条数。"
+    }
+  },
+  "res": {
+    "Code": "200",
+    "Data": "{\"param\":{\"metric\":\"{\\\"project\\\":\\\"acs_customMetric_12345\\\",\\\"status\\\":1}\",\"service\":\"metrics.xxxxx.com\"},\"data\":[{\"groupId\":\"111\",\"count\":1},{\"groupId\":\"111\",\"count\":2}]}",
+    "Message": "success",
+    "Success": true
+  }
+}

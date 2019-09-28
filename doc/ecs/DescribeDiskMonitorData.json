@@ -1,0 +1,113 @@
+{
+  "name": "DescribeDiskMonitorData",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDiskMonitorData查询一块云盘指定时间内的使用信息。可查询云盘实用信息包括读IOPS、写IOPS、读带宽（Bps）、写带宽（Bps）、读时延（μs）以及写时延（μs）。若查询的信息中出现内容缺失，是因为我们无法获取该段时间的使用信息，即云盘状态不是使用中（In_Use）。",
+  "abc_id": 25614,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DiskId": {
+      "name": "DiskId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "d-myDisk",
+      "description_cn": "云盘ID。"
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2014-07-23T12:07:00Z",
+      "description_cn": "数据的起始时间。按照[ISO8601](~~25696~~)标准表示，并使用UTC +0时间，格式为yyyy-MM-ddTHH:mm:ssZ。如果秒（ss）不是00，则自动取为下一分钟开始时。 "
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2014-07-23T12:09:00Z",
+      "description_cn": "数据的结束时间。按照[ISO8601](~~25696~~)标准表示，并使用UTC +0时间，格式为yyyy-MM-ddTHH:mm:ssZ。如果秒（ss）不是00，则自动取为下一分钟开始时。 "
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。 "
+    },
+    "Period": {
+      "name": "Period",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "60",
+      "description_cn": "数据的精度，单位为秒。取值范围：\n- 60\n- 600  \n- 3600  \n\n默认值：60 "
+    }
+  },
+  "res": {
+    "MonitorData": {
+      "DiskMonitorData": [
+        {
+          "BPSRead": 0,
+          "BPSTotal": 0,
+          "BPSWrite": 0,
+          "DiskId": "d-23b3p4r8b",
+          "IOPSRead": 0,
+          "IOPSTotal": 0,
+          "IOPSWrite": 0,
+          "TimeStamp": "2014-07-23T12:07:00Z"
+        },
+        {
+          "BPSRead": 0,
+          "BPSTotal": 204,
+          "BPSWrite": 204,
+          "DiskId": "d-23b3p4r8b",
+          "IOPSRead": 0,
+          "IOPSTotal": 0,
+          "IOPSWrite": 0,
+          "TimeStamp": "2014-07-23T12:08:00Z"
+        },
+        {
+          "BPSRead": 0,
+          "BPSTotal": 819,
+          "BPSWrite": 819,
+          "DiskId": "d-23b3p4r8b",
+          "IOPSRead": 0,
+          "IOPSTotal": 0,
+          "IOPSWrite": 0,
+          "TimeStamp": "2014-07-23T12:09:00Z"
+        }
+      ]
+    },
+    "RequestId": "A48A0A77-34F5-4C33-9066-9E8D2DA0D8E2",
+    "TotalCount": 3
+  }
+}

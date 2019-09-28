@@ -1,0 +1,186 @@
+{
+  "name": "DescribeDisksFullStatus",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDisksFullStatus查询一块或多块块存储的全部状态信息。",
+  "abc_id": 63963,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "块存储所在地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。"
+    },
+    "DiskId": {
+      "name": "DiskId",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "EventId": {
+      "name": "EventId",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Available",
+      "description_cn": "指定块存储的生命周期状态，参见[云盘状态表](~~25689~~)。取值范围： \n\n- In_use：使用中 \n- Available：待挂载 \n- Attaching：挂载中 \n- Detaching：卸载中 \n- Creating：创建中 \n- ReIniting：初始化中 \n         "
+    },
+    "HealthStatus": {
+      "name": "HealthStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Warning",
+      "description_cn": "指定块存储的健康状态。取值范围： \n\n- Impaired：暂时性不可读写 \n- Warning：服务降级 \n- Initializing：初始化中 \n- InsufficientData：数据不足 \n- NotApplicable：不适用 \n         "
+    },
+    "EventType": {
+      "name": "EventType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Stalled",
+      "description_cn": "指定块存储的事件类型。取值范围： \n\n- Degraded：块存储性能降级 \n- SeverelyDegraded：块存储性能严重降级 \n- Stalled：块存储性能受到严重影响 \n         "
+    },
+    "EventTime.Start": {
+      "name": "EventTime.Start",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2018-05-06T02:43:10Z",
+      "description_cn": "查询事件发生时间的开始时间。按照[ISO8601](~~25696~~)标准表示，并使用UTC +0时间，格式为yyyy-MM-ddTHH:mm:ssZ。"
+    },
+    "EventTime.End": {
+      "name": "EventTime.End",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2018-05-08T02:48:52Z",
+      "description_cn": "查询事件发生时间的结束时间。按照[ISO8601](~~25696~~)标准表示，并使用UTC +0时间，格式为yyyy-MM-ddTHH:mm:ssZ。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "查询结果的页码。取值范围：正整数\n\n默认值：1 "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "查询结果的分页大小。取值范围：1~100\n\n默认值：10 "
+    }
+  },
+  "res": {
+    "DiskFullStatusSet": {
+      "DiskFullStatusType": [
+        {
+          "DiskEventSet": {
+            "DiskEventType": [
+              {
+                "EventId": "e-event1",
+                "EventType": {
+                  "Code": "7",
+                  "Name": "Stalled"
+                },
+                "EventTime": "2018-05-08T02:43:10Z"
+              }
+            ]
+          },
+          "DiskId": "d-disk1",
+          "InstanceId": "i-instance1",
+          "Device": "/dev/xvda",
+          "HealthStatus": {
+            "Code": 128,
+            "Name": "Impaired"
+          },
+          "Status": {
+            "Code": 129,
+            "Name": "Available"
+          }
+        },
+        {
+          "DiskEventSet": {
+            "DiskEventType": [
+              {
+                "EventId": "e-event2",
+                "EventType": {
+                  "Code": "1",
+                  "Name": "Degraded"
+                },
+                "EventTime": "2018-05-06T02:43:10Z",
+                "EventEndTime": "2018-05-06T02:48:52Z"
+              }
+            ]
+          },
+          "DiskId": "d-disk2",
+          "InstanceId": "i-instance2",
+          "Device": "/dev/xvdb",
+          "HealthStatus": {
+            "Code": 0,
+            "Name": "Ok"
+          },
+          "Status": {
+            "Code": 129,
+            "Name": "Available"
+          }
+        }
+      ]
+    },
+    "PageNumber": 1,
+    "PageSize": 10,
+    "RequestId": "1A8B4B27-8B2D-XXXX-XXXX-0F64DBE4C211",
+    "TotalCount": 2
+  }
+}

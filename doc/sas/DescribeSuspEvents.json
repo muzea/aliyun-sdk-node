@@ -1,0 +1,170 @@
+{
+  "name": "DescribeSuspEvents",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询异常事件列表。",
+  "abc_id": 99393,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "From": {
+      "name": "From",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "sas",
+      "description_cn": "请求来源标识，固定为sas。"
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": "接口访问者源IP。"
+    },
+    "Dealed": {
+      "name": "Dealed",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "N",
+      "description_cn": "异常事件状态。\n- N：待处理告警\n- Y：已处理告警"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "矿",
+      "description_cn": "异常事件名称或者是主机名称，模糊匹配。"
+    },
+    "Levels": {
+      "name": "Levels",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "serious",
+      "description_cn": "告警事件的危险等级，多个危险等级用逗号分隔。以下危险等级严重程度依次递减。\n- serious：紧急\n- suspicious：可疑\n- remind：提醒"
+    },
+    "ParentEventTypes": {
+      "name": "ParentEventTypes",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "网站后门",
+      "description_cn": "异常事件分类名称。"
+    },
+    "Remark": {
+      "name": "Remark",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "测试机器",
+      "description_cn": "主机IP或者名称。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "分页查询时设置的每页行数，默认值为20。"
+    },
+    "CurrentPage": {
+      "name": "CurrentPage",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "当前页码。\n"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "zh",
+      "description_cn": "异常事件的语言类型。\n- zh：中文\n- cn：英文"
+    },
+    "AlarmUniqueInfo": {
+      "name": "AlarmUniqueInfo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "8df914418f4211fbf756efe7a6f40cbc",
+      "description_cn": "告警事件的唯一标识。"
+    }
+  },
+  "res": {
+    "TotalCount": 3,
+    "Count": 2,
+    "PageSize": 20,
+    "RequestId": "0C7FAD74-83FA-4671-9250-A5F2A64F437A",
+    "CurrentPage": 1,
+    "SuspEvents": [
+      {
+        "EventStatus": 1,
+        "SaleVersion": "1",
+        "IntranetIp": "10.0.0.0",
+        "EventSubType": "XorDDoS木马",
+        "Name": "恶意进程（云查杀）-XorDDoS木马",
+        "DataSource": "aegis_suspicious_event",
+        "OccurrenceTime": "2018-09-26 01:51:01",
+        "InstanceName": "server01",
+        "Desc": "XORDDoS木马入侵后，会在Linux的定时任务中植入恶意代码。",
+        "CanBeDealOnLine": false,
+        "Uuid": "bf6b30d3-eea8-4924-9f0a-XXXXXXXXXXXX",
+        "InternetIp": "10.0.0.0",
+        "Level": "serious",
+        "Id": 3682,
+        "LastTime": "2018-10-24 21:06:01"
+      },
+      {
+        "EventStatus": 1,
+        "SaleVersion": "1",
+        "IntranetIp": "172.24.40.51",
+        "EventSubType": "XorDDoS木马",
+        "Name": "恶意进程（云查杀）-XorDDoS木马",
+        "DataSource": "aegis_suspicious_event",
+        "OccurrenceTime": "2018-09-26 02:01:01",
+        "InstanceName": "server01",
+        "Desc": "XORDDoS木马入侵后，会在Linux的定时任务中植入恶意代码。",
+        "CanBeDealOnLine": false,
+        "Uuid": "bf6b30d3-eea8-4924-9f0a-XXXXXXXXXXXX",
+        "InternetIp": "10.0.0.0",
+        "Level": "serious",
+        "Id": 3683,
+        "LastTime": "2018-10-24 21:01:01"
+      }
+    ]
+  }
+}

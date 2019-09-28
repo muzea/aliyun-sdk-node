@@ -1,0 +1,182 @@
+{
+  "name": "RunClusterServiceAction",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 RunClusterServiceAction 接口对集群的指定服务，运行指定的操作。",
+  "abc_id": 100765,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "ClusterId": {
+      "name": "ClusterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "C-F32FB31D8295****",
+      "description_cn": "集群ID。"
+    },
+    "ServiceName": {
+      "name": "ServiceName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "TEZ",
+      "description_cn": "服务名称。"
+    },
+    "ServiceActionName": {
+      "name": "ServiceActionName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "STOP",
+      "description_cn": "Action名。"
+    },
+    "HostGroupIdList": {
+      "name": "HostGroupIdList",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "HostIdList": {
+      "name": "HostIdList",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "\"\"",
+      "description_cn": "主机ID列表，以英文半角逗号（,）分割。"
+    },
+    "CustomCommand": {
+      "name": "CustomCommand",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "\"\"",
+      "description_cn": "在Action为**CUSTOM_COMMAND**时，需要指定，例如，**refreshQueues**。"
+    },
+    "ComponentNameList": {
+      "name": "ComponentNameList",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Tomcat",
+      "description_cn": "组件名称列表，用英文半角逗号（,）分割。"
+    },
+    "Comment": {
+      "name": "Comment",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test run action",
+      "description_cn": "本次操作的备注信息。"
+    },
+    "IsRolling": {
+      "name": "IsRolling",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否滚动操作。"
+    },
+    "ExecuteStrategy": {
+      "name": "ExecuteStrategy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FAILED_BLOCK",
+      "description_cn": "任务执行策略，枚举值：\n\n- FAILED_BLOCK\n- FAILED_CONTINUE"
+    },
+    "CustomParams": {
+      "name": "CustomParams",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "\"\"",
+      "description_cn": "运行自定义Action时的可选配置参数，目前只支持**kafka的innode_disks_balance**。"
+    },
+    "Interval": {
+      "name": "Interval",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "60",
+      "description_cn": "每个任务的执行时间间隔，IsRolling为**true**时可以指定。"
+    },
+    "NodeCountPerBatch": {
+      "name": "NodeCountPerBatch",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "每个批次在多少个主机上执行，IsRolling为**true**时可以指定。"
+    },
+    "TotlerateFailCount": {
+      "name": "TotlerateFailCount",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "5",
+      "description_cn": "预留字段。"
+    },
+    "OnlyRestartStaleConfigNodes": {
+      "name": "OnlyRestartStaleConfigNodes",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "为**true**时，只对修改了配置项的主机执行命令。"
+    },
+    "TurnOnMaintenanceMode": {
+      "name": "TurnOnMaintenanceMode",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "开启维护模式。"
+    }
+  },
+  "res": {
+    "requestId": "9AEDC439-1F63-491D-B8C6-9737C372BF3A"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "name": "SetBackendServers",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用SetBackendServers设置后端服务器权重。",
+  "abc_id": 27634,
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "负载均衡实例的地域ID。"
+    },
+    "LoadBalancerId": {
+      "name": "LoadBalancerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "lb-bp1qjwo61pqz3ahltv0mw",
+      "description_cn": "负载均衡实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "BackendServers": {
+      "name": "BackendServers",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[{   \"ServerId\": \"eni-xxxxxxxxx\",   \"Weight\": \"100\",   \"Type\": \"eni\",   \"ServerIp\": \"192.168.11.1\" }, {   \"ServerId\": \"eni-xxxxxxxxx\",   \"Weight\": \"100\",   \"Type\": \"eni\",   \"ServerIp\": \"192.168.11.2\" }]",
+      "description_cn": "要添加的后端服务器列表。\n\n<note>后端服务器（ECS实例）必须是运行中才可以加入负载均衡实例，一次最多可调用20个后端服务器。</note>"
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "AddBackendServersResponse": {
+      "RequestId": "365F4154-92F6-4AE4-92F8-7FF34B540710",
+      "LoadBalancerId": "139a00604ad-cn-east-hangzhou-01",
+      "BackendServers": {
+        "BackendServer": [
+          {
+            "ServerId": "vm-233",
+            "Weight": "0"
+          },
+          {
+            "ServerId": "vm-234",
+            "Weight": "0"
+          }
+        ]
+      }
+    }
+  }
+}

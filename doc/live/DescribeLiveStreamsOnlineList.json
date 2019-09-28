@@ -1,0 +1,127 @@
+{
+  "name": "DescribeLiveStreamsOnlineList",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeLiveStreamsOnlineList查看指定域名下（或者指定域名下某个应用）的所有正在推的流的信息。",
+  "abc_id": 35409,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "play.yourdomain.com",
+      "description_cn": "您的加速域名。"
+    },
+    "AppName": {
+      "name": "AppName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "testApp",
+      "description_cn": "应用名称。\n\n<note>AppName不支持通配符（*）查询，且不支持模糊查询。</note>\n"
+    },
+    "StreamName": {
+      "name": "StreamName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "myStream",
+      "description_cn": "流名称。\n\n<note>StreamName不支持通配符（*）查询，但支持模糊查询 。</note>\n"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1500",
+      "description_cn": "每页大小，取值：**1~3000**之前的任意整数。最大值为**3000**，默认值为**2000**。"
+    },
+    "PageNum": {
+      "name": "PageNum",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "当前页码，默认值为**1**。"
+    },
+    "StreamType": {
+      "name": "StreamType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "all",
+      "description_cn": "流类型。取值范围：\n\n- **all（默认值）**：查询所有流\n- **raw**：查询原始流\n- **trans**：查询转码流"
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "QueryType": {
+      "name": "QueryType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "fuzzy",
+      "description_cn": "指定是否模糊匹配流名称。取值：\n- **fuzzy**：模糊匹配\n- **strict**：精准匹配"
+    },
+    "OrderBy": {
+      "name": "OrderBy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

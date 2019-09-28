@@ -1,0 +1,139 @@
+{
+  "name": "ListFlow",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 ListFlow 接口查询工作流列表",
+  "abc_id": 101073,
+  "timeout": 8000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "区域 ID"
+    },
+    "ProjectId": {
+      "name": "ProjectId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FP-3535FE0BE5224A47",
+      "description_cn": "项目 ID"
+    },
+    "JobId": {
+      "name": "JobId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FJ-F32FB31D82954C64",
+      "description_cn": "作业 ID"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "my_flow",
+      "description_cn": "工作流名称"
+    },
+    "Id": {
+      "name": "Id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "F-A32FB31D82954C64",
+      "description_cn": "工作流 ID"
+    },
+    "ClusterId": {
+      "name": "ClusterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "C-F32FB31D82954C64",
+      "description_cn": "集群 ID"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "STOP_SCHEDULE",
+      "description_cn": "状态：STOP_SCHEDULE(停止调度)，UNDER_SCHEDULE(调度中)"
+    },
+    "Periodic": {
+      "name": "Periodic",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否调度"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页码"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "每页查询数量"
+    }
+  },
+  "res": {
+    "PageSize": 500,
+    "RequestId": "7DDFF4C7-3AE3-485F-BFA1-BAE0AA3689DD",
+    "PageNumber": 1,
+    "Total": 1,
+    "Flow": {
+      "Flow": [
+        {
+          "StartSchedule": 1541561443000,
+          "Status": "UNDER_SCHEDULE",
+          "CategoryId": "FC-2CF58396A18923B6",
+          "Description": "daily_0",
+          "ClusterId": "C-F32FB31D82954C64",
+          "GmtModified": 1542902401000,
+          "ProjectId": "FP-3535FE0BE5224A47",
+          "Periodic": true,
+          "CronExpr": "0 0 0 * * ?",
+          "Name": "daily_0",
+          "Type": "EMR",
+          "GmtCreate": 1541561048000,
+          "Id": "F-D156B45E06F1CA8E",
+          "EndSchedule": 4102416001000,
+          "HostName": "",
+          "CreateCluster": false
+        }
+      ]
+    }
+  }
+}

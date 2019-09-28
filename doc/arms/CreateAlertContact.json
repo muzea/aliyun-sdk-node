@@ -1,0 +1,78 @@
+{
+  "name": "CreateAlertContact",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "使用 CreateAlertContact 创建报警联系人。",
+  "abc_id": 130680,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域 ID"
+    },
+    "ContactName": {
+      "name": "ContactName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "JohnDoe",
+      "description_cn": "报警联系人姓名"
+    },
+    "PhoneNum": {
+      "name": "PhoneNum",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "1381111****",
+      "description_cn": "手机号码"
+    },
+    "Email": {
+      "name": "Email",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "johndoe@example.com",
+      "description_cn": "邮箱"
+    },
+    "DingRobotWebhookUrl": {
+      "name": "DingRobotWebhookUrl",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "123456",
+      "description_cn": "钉钉机器人地址"
+    },
+    "SystemNoc": {
+      "name": "SystemNoc",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "true",
+      "description_cn": "是否接收系统报警通知"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,41 @@
+{
+  "name": "DeleteAntChainContractContent",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "删除一个合约工程的内容",
+  "abc_id": 127098,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID"
+    },
+    "ContentId": {
+      "name": "ContentId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "GKX7KZX0",
+      "description_cn": "文件ID"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "7E54F588-39DE-446F-9A16-B9BB0B05DF44",
+      "Result": "success"
+    },
+    "requestId": "7E54F588-39DE-446F-9A16-B9BB0B05DF44",
+    "successResponse": true
+  }
+}

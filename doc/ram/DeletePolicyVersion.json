@@ -1,0 +1,40 @@
+{
+  "name": "DeletePolicyVersion",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeletePolicyVersion接口删除指定的权限策略的某个版本。",
+  "abc_id": 28722,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "PolicyName": {
+      "name": "PolicyName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "OSS-Administrator",
+      "description_cn": "权限策略名称。"
+    },
+    "VersionId": {
+      "name": "VersionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "v3",
+      "description_cn": "指定目标版本的ID。"
+    }
+  },
+  "res": {
+    "RequestId": "9B34724D-54B0-4A51-B34D-4512372FE1BE"
+  }
+}

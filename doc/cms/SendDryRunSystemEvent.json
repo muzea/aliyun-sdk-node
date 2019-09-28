@@ -1,0 +1,69 @@
+{
+  "name": "SendDryRunSystemEvent",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "触发一个用于调试的系统事件，用于调试事件下游配置的触发逻辑是否符合预期。",
+  "abc_id": 114971,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "EventName": {
+      "name": "EventName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "Agent_Status_Stopped",
+      "description_cn": "事件名称。"
+    },
+    "Product": {
+      "name": "Product",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "CloudMonitor",
+      "description_cn": "产品名称。"
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "12345",
+      "description_cn": "应用分组ID。"
+    },
+    "EventContent": {
+      "name": "EventContent",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{\"product\":\"CloudMonitor\",\"resourceId\":\"acs:ecs:cn-hongkong:173651113438****:instance/{instanceId}\",\"level\":\"CRITICAL\",\"instanceName\":\"instanceName\",\"regionId\":\"cn-hangzhou\",\"name\":\"Agent_Status_Stopped\",\"content\":{\"ipGroup\":\"0.0.0.0,0.0.0.1\",\"tianjimonVersion\":\"1.2.11\"},\"status\":\"stopped\"}",
+      "description_cn": "事件内容。"
+    }
+  },
+  "res": {
+    "Message": "success",
+    "RequestId": "590FB642-5FFE-4AE0-883B-E1323DD20541",
+    "Code": "200",
+    "Success": true
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "name": "CountRentedJoinPermissions",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CountRentedJoinPermissions统计当前用户账号所租用的且符合过滤条件的入网凭证数量。",
+  "abc_id": 109930,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "FuzzyOwnerAliyunId": {
+      "name": "FuzzyOwnerAliyunId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "some-user",
+      "description_cn": "模糊匹配入网凭证拥有者的阿里云账号ID。"
+    },
+    "FuzzyJoinEui": {
+      "name": "FuzzyJoinEui",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "d896e0",
+      "description_cn": "模糊匹配入网凭证的JoinEUI。"
+    },
+    "Enabled": {
+      "name": "Enabled",
+      "type": "Boolean",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "按照凭证的启停用状态进行过滤。"
+    },
+    "BoundNodeGroup": {
+      "name": "BoundNodeGroup",
+      "type": "Boolean",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "根据入网凭证是否关联到节点分组进行过滤。\n\n**true**表示已关联，**false**表示未关联。"
+    },
+    "Type": {
+      "name": "Type",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "LOCAL",
+      "description_cn": "按照凭证的类型进行过滤。取值：\n\n- **LOCAL**：专用凭证\n- **ROAMING**：泛在凭证"
+    },
+    "FuzzyJoinPermissionName": {
+      "name": "FuzzyJoinPermissionName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "模糊匹配入网凭证的名称。"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,147 @@
+{
+  "name": "CreateVpnGateway",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateVpnGateway接口创建一个VPN网关。",
+  "abc_id": 53018,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": " VPN网关所在的地域。 \n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "VpcId": {
+      "name": "VpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "vpc-bp1ub1yt9cvakoelj****",
+      "description_cn": " VPN网关所属的VPC ID。 "
+    },
+    "Bandwidth": {
+      "name": "Bandwidth",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "5",
+      "description_cn": "VPN网关的公网带宽，单位Mbps。\n\n取值：**5|10|20|50|100**。\n\n"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "MYVPN",
+      "description_cn": "VPN网关的名称，默认值为VPN网关的ID。\n\n长度为2~100个英文或中文字符，必须以大小字母或中文开头，可包含数字、下划线（_）和短横线（-），不能以`http://`或`https://`开头。"
+    },
+    "InstanceChargeType": {
+      "name": "InstanceChargeType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PREPAY",
+      "description_cn": "VPN网关的计费方式，取值：\n\n<props=\"china\">**PREPAY**：包年包月。</props>\n<props=\"intl\">**POSTPAY**：按量计费。</props>\n<props=\"partner\">**POSTPAY**：按量计费。</props>\n"
+    },
+    "Period": {
+      "name": "Period",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "购买时长，取值：**1~9|12|24|36**。\n\n>**InstanceChargeType**参数的值为**PREPAY**时，该参数必选。"
+    },
+    "AutoPay": {
+      "name": "AutoPay",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否自动支付VPN网关的账单，取值：\n\n- **true**：自动支付VPN网关的账单。\n\n- **false**(默认值) ：不自动支付VPN网关的账单。"
+    },
+    "EnableIpsec": {
+      "name": "EnableIpsec",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否开启IPsec-VPN功能。IPsec-VPN功能提供站点到站点的连接。您可以通过创建IPsec隧道将本地数据中心网络和专有网络或两个专有网络安全地连接起来。取值：\n\n- **true**(默认值)：开启IPsec-VPN功能。\n\n- **false**：不开启IPsec-VPN功能。"
+    },
+    "EnableSsl": {
+      "name": "EnableSsl",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "开启SSL-VPN功能。提供点到站点的VPN连接，不需要配置客户网关，终端直接接入。取值：\n\n- **true**：开启SSL-VPN功能。\n\n- **false**(默认值) ：不开启SSL-VPN功能。"
+    },
+    "SslConnections": {
+      "name": "SslConnections",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "允许同时连接的最大客户端数量。"
+    },
+    "VSwitchId": {
+      "name": "VSwitchId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "CreateVpnGatewayResponse": {
+      "Name": "myVpn",
+      "VpnGatewayId": "vpn-bp1q8bgx4xnkm2ogj0fiu",
+      "RequestId": "54B48E3D-DF70-471B-AA93-08E683A1B457"
+    }
+  }
+}

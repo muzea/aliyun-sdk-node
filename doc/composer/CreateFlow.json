@@ -1,0 +1,51 @@
+{
+  "name": "CreateFlow",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "创建一个工作流编排实例",
+  "abc_id": 127651,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "FlowName": {
+      "name": "FlowName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "test",
+      "description_cn": "工作流编排实例的名称"
+    },
+    "FlowDescription": {
+      "name": "FlowDescription",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "这是一个工作流",
+      "description_cn": "工作流编排实例的描述"
+    },
+    "Definition": {
+      "name": "Definition",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{\\\"schemaVersion\\\":\\\"2018-12-12\\\",\\\"actions\\\":{},\\\"version\\\":\\\"1.0.0\\\",\\\"triggers\\\":{}}",
+      "description_cn": "工作流定义，需要将 JSON 格式化为 string"
+    }
+  },
+  "res": {}
+}

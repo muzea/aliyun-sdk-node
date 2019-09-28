@@ -1,0 +1,41 @@
+{
+  "name": "DescribeClusterResourcePoolSchedulerType",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 DescribeClusterResourcePoolSchedulerType 接口查看资源池策略类型。",
+  "abc_id": 100570,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "ClusterId": {
+      "name": "ClusterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "C-EBD62A703A430E23",
+      "description_cn": "集群ID。"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "SupportSchedulerType": "CAPACITY_SCHEDULER,FAIR_SCHEDULER",
+      "RequestId": "51517046-1327-45CF-9C70-AEA03A5BE025",
+      "CurrentSchedulerType": "CAPACITY_SCHEDULER"
+    },
+    "requestId": "51517046-1327-45CF-9C70-AEA03A5BE025",
+    "successResponse": true
+  }
+}

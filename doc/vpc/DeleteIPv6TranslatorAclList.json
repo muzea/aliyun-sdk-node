@@ -1,0 +1,57 @@
+{
+  "name": "DeleteIPv6TranslatorAclList",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "删除访问控制策略组。只有当访问控制策略组没有绑定任何IPv6转换映射时，才可以删除。",
+  "abc_id": 114600,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": " IPv6转换服务实例的地域。 您可以通过调用 DescribeRegions接口获取地域ID。  "
+    },
+    "AclId": {
+      "name": "AclId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "ipv6transacl-bp1de2xxxx",
+      "description_cn": " 要删除的访问控制策略组ID。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sha123456",
+      "description_cn": "客户端token，用于保证请求的幂等性。 由客户端生成该参数值，要保证在不同请求间唯一，最大不值过64个 ASCII 字符。"
+    }
+  },
+  "res": {
+    "RequestId": "8B2F5262-6B57-43F2-xxxxx"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "name": "ConfigLayer7Cert",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST",
+  "path": "/",
+  "summary_cn": "调用ConfigLayer7Cert为指定域名配置7层证书。",
+  "abc_id": 91736,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn"
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Domain": {
+      "name": "Domain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "www.aliyun.com",
+      "description_cn": "要操作的域名。"
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "xx",
+      "description_cn": "资源组ID。"
+    },
+    "CertId": {
+      "name": "CertId",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1234",
+      "description_cn": "证书ID。 \n\n> 若传入此参数，则无需传入**CertName**、**Cert**、**Key**。"
+    },
+    "CertName": {
+      "name": "CertName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "testCertName",
+      "description_cn": "证书名称。 \n\n> 若传入此参数，则必须同时传入**Cert**和**Key**。若传入**CertName**、**Cert**、**Key**组合，则无需传入**CertId**。"
+    },
+    "Cert": {
+      "name": "Cert",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "xx",
+      "description_cn": "证书公钥。 \n\n> 若传入此参数，则必须同时传入**CertName**和**Key**。若传入**CertName**、**Cert**、**Key**组合，则无需传入**CertId**。"
+    },
+    "Key": {
+      "name": "Key",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "xx",
+      "description_cn": "证书私钥。 \n\n> 若传入此参数，则必须同时传入**CertName**和**Cert**。若传入**CertName**、**Cert**、**Key**组合，则无需传入**CertId**。"
+    }
+  },
+  "res": {}
+}

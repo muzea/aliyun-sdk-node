@@ -1,0 +1,88 @@
+{
+  "name": "AddListenerWhiteListItem",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AddListenerWhiteListItem添加监听访问控制白名单。",
+  "abc_id": 27600,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例所在地域。"
+    },
+    "ListenerPort": {
+      "name": "ListenerPort",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "80",
+      "description_cn": "负载均衡实例前端使用的端口。"
+    },
+    "SourceItems": {
+      "name": "SourceItems",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "1.1.1.1,1.1.1.0/21",
+      "description_cn": "访问控制列表。\n\n监听的**AccessControlStatus**为**open_white_list**时有效。\n\n支持输入IP地址或IP地址段（CIDR block形式），多个IP地址或地址段用逗号（,）分割。\n\n不允许输入0.0.0.0或0.0.0.0/0。您可以通过调用[SetListenerAccessControlStatus](~~27599~~)接口将AccessControlStatus的值设置为close，关闭访问控制。"
+    },
+    "LoadBalancerId": {
+      "name": "LoadBalancerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "139a00604ad-cn-east-hangzhou-01",
+      "description_cn": "负载均衡实例的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "ListenerProtocol": {
+      "name": "ListenerProtocol",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": " CEF72CEB-54B6-4AE8-B225-F876FF7BA984"
+  }
+}

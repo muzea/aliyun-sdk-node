@@ -1,0 +1,58 @@
+{
+  "name": "ListGroups",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ListGroups接口列出所有的用户组。",
+  "abc_id": 28703,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Marker": {
+      "name": "Marker",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "EXAMPLE",
+      "description_cn": "当请求的返回结果被截断时，可以使用`Marker`获取从当前截断位置之后的内容。"
+    },
+    "MaxItems": {
+      "name": "MaxItems",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "100",
+      "description_cn": "指定返回结果的条数，当返回结果达到`MaxItems`限制被截断时，返回参数`IsTruncated`将等于`true`。\n\n取值范围：1 ~ 1000，默认值：100。"
+    }
+  },
+  "res": {
+    "RequestId": "065527AA-2F2E-AD7C-7484-F2626CFE4934",
+    "IsTruncated": true,
+    "Marker": "EXAMPLE",
+    "Groups": {
+      "Group": [
+        {
+          "GroupName": "Dev-Team",
+          "Comments": "开发团队",
+          "CreateDate": "2015-01-23T12:33:18Z",
+          "UpdateDate": "2015-01-23T12:33:18Z"
+        },
+        {
+          "GroupName": "QA-Team",
+          "Comments": "测试团队",
+          "CreateDate": "2015-02-18T17:22:08Z",
+          "UpdateDate": "2015-02-18T17:22:08Z"
+        }
+      ]
+    }
+  }
+}

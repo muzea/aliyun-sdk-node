@@ -1,0 +1,97 @@
+{
+  "name": "DescribeReplicationJobs",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询一个或多个迁移任务的详细信息。",
+  "abc_id": 121816,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "迁移源需迁入的目标阿里云地域ID。\n\n例如，您需要迁移源服务器至上海，则RegionId为`cn-shanghai`。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "SourceId": {
+      "name": "SourceId",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "JobId": {
+      "name": "JobId",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "MyMigrationTask",
+      "description_cn": "迁移任务的名称。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "000000"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Ready",
+      "description_cn": "迁移任务的主状态。取值范围：\n\n- Ready（未开始）\n- Running（运行中）\n- Stopped（已暂停）\n- InError（出错）\n- Finished（已完成）\n- Expired（已过期）\n- Deleting（删除中）\n\n\n"
+    },
+    "BusinessStatus": {
+      "name": "BusinessStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Preparing",
+      "description_cn": "迁移任务的业务状态，取值范围：\n\n- Preparing（准备中）\n- Syncing（同步中）\n- Processing（处理中）\n- Cleaning（清除中）\n\n\n"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "返回结果中，迁移任务列表的页码。起始值：1。\n\n默认值：1。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时设置的每页行数。最大值：50。\n\n默认值：10。"
+    }
+  },
+  "res": {}
+}

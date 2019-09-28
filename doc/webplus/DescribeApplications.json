@@ -1,0 +1,104 @@
+{
+  "name": "DescribeApplications",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v1/wam/application",
+  "summary_cn": "调用DescribeApplications查询应用信息。",
+  "abc_id": 127728,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "wa-5d1af9c802470221ab7*****",
+      "description_cn": "应用ID，查询特定应用信息"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "查询页面大小"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "查询页面数"
+    },
+    "AppName": {
+      "name": "AppName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "appTest",
+      "description_cn": "应用名称，查询此名称的应用"
+    },
+    "AppSearch": {
+      "name": "AppSearch",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "appSearch",
+      "description_cn": "查询的应用名关键字，若应用名称包含此关键字，则返回此应用的关键字"
+    },
+    "EnvSearch": {
+      "name": "EnvSearch",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "testEnv",
+      "description_cn": "搜索应用中环境名的关键字，若应用中的环境名包含此关键字，则返回此应用"
+    },
+    "StackSearch": {
+      "name": "StackSearch",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Java",
+      "description_cn": "栈类型搜索"
+    },
+    "CategorySearch": {
+      "name": "CategorySearch",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

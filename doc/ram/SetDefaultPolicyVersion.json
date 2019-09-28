@@ -1,0 +1,40 @@
+{
+  "name": "SetDefaultPolicyVersion",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用SetDefaultPolicyVersion接口设置权限策略默认版本。",
+  "abc_id": 28724,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "PolicyName": {
+      "name": "PolicyName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "OSS-Administrator",
+      "description_cn": "指定权限策略名称。"
+    },
+    "VersionId": {
+      "name": "VersionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "v2",
+      "description_cn": "新默认版本的ID。"
+    }
+  },
+  "res": {
+    "RequestId": "9B34724D-54B0-4A51-B34D-4512372FE1BE"
+  }
+}

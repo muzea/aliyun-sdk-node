@@ -1,0 +1,52 @@
+{
+  "name": "DescribeCdnDomainByCertificate",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCdnDomainByCertificate根据证书信息获取加速域名。",
+  "abc_id": 131081,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SSLPub": {
+      "name": "SSLPub",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "yourSSLPub",
+      "description_cn": "证书公钥，需要base64编码后再encodeURIComponent，支持pem格式。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "ASAF2FDS-12SADSA-DDSAE3D-DSADCD4C-CDADS2D",
+    "content": [
+      {
+        "Issuer": "C=US, O=Symantec Corporation, OU=Symantec Trust Network, OU=Domain Validated SSL, CN=Symantec Basic DV SSL CA - G1",
+        "CertType": "RSA",
+        "CertSubjectCommonName": "test.example.com",
+        "CertStartTime": "Nov 29 23:59:59 2017 GMT",
+        "CertExpireTime": "Nov 29 00:00:00 2016 GMT",
+        "DomainNames": "*.example1.com,example2.com",
+        "DomainList": "example1.com,example2.com",
+        "CertExpired": "yes",
+        "CertCaIsLegacy": "yes"
+      }
+    ]
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "name": "DescribeRecordStatisticsSummary",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeRecordStatisticsSummary查询指定域名下的全部子域名的请求量统计。",
+  "abc_id": 131100,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "StartDate": {
+      "name": "StartDate",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2019-07-04",
+      "description_cn": "查询的开始时间，格式：**YYYY-MM-DD**。\n\n只能查询最近90天的记录，即：StartDate >= Now - 90。"
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "dns-example.com",
+      "description_cn": "域名名称。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "1",
+      "description_cn": "当前页数，起始值为**1**，默认为**1**。"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "语言。"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "分页查询时设置的每页行数，最大值**100**，最小值为**1**，默认值为**20**。"
+    },
+    "EndDate": {
+      "name": "EndDate",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2019-07-04",
+      "description_cn": "查询的结束时间。格式：**YYYY-MM-DD**。\n\n默认为查询当天的时间。"
+    },
+    "OrderBy": {
+      "name": "OrderBy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Direction": {
+      "name": "Direction",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "SearchMode": {
+      "name": "SearchMode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "EXACT",
+      "description_cn": "关键词的搜索模式。取值：\n\n- 模糊搜索（默认）：**LIKE**\n- 精确搜索：**EXACT**"
+    },
+    "Keyword": {
+      "name": "Keyword",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "关键词，按照“%KeyWord%”模式搜索，不区分大小写。"
+    },
+    "Threshold": {
+      "name": "Threshold",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "12",
+      "description_cn": "查询总量阈值，也可查询相应的请求量不大于threshold的数据。例如，可查询出请求量小于100次的域名。"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "Statistics": {
+      "Statistic": [
+        {
+          "Count": 838711553,
+          "SubDomain": "t1.alitest2.com"
+        },
+        {
+          "Count": 3467,
+          "SubDomain": "alitest2.com"
+        },
+        {
+          "Count": 487,
+          "SubDomain": "txt.alitest2.com"
+        }
+      ]
+    },
+    "PageSize": 20,
+    "RequestId": "E49F0023-4A98-486F-8BA3-6003D5664105",
+    "TotalItems": 3,
+    "TotalPages": 1
+  }
+}

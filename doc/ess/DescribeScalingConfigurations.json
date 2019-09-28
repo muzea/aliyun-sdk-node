@@ -1,0 +1,291 @@
+{
+  "name": "DescribeScalingConfigurations",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeScalingConfigurations查询现有的伸缩配置。",
+  "abc_id": 25945,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-qingdao",
+      "description_cn": "伸缩配置所属伸缩组的地域ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456123456",
+      "description_cn": ""
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "伸缩配置列表的页码。起始值：1。\n\n默认值：1 。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "50",
+      "description_cn": "分页查询时设置的每页行数。最大值：50。\n\n默认值：10。"
+    },
+    "ScalingGroupId": {
+      "name": "ScalingGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dE9YbOdCHqaFdFZHXVdD****",
+      "description_cn": "伸缩组的ID，您可以查询该伸缩组下所有的伸缩配置。"
+    },
+    "ScalingConfigurationId.1": {
+      "name": "ScalingConfigurationId.1",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "bU5uZHcAgtzwcL4IeDea****",
+      "description_cn": "ScalingConfigurationId.N为待查询伸缩配置的ID，N的取值范围：1～10。查询结果包括生效和失效的伸缩配置，并通过返回参数LifecycleState进行标识。"
+    },
+    "ScalingConfigurationId.2": {
+      "name": "ScalingConfigurationId.2",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "bU5uZHcAgtzwcL4IeDea****",
+      "description_cn": ""
+    },
+    "ScalingConfigurationId.3": {
+      "name": "ScalingConfigurationId.3",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "bU5uZHcAgtzwcL4IeDea****",
+      "description_cn": ""
+    },
+    "ScalingConfigurationId.4": {
+      "name": "ScalingConfigurationId.4",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "bU5uZHcAgtzwcL4IeDea****",
+      "description_cn": ""
+    },
+    "ScalingConfigurationId.5": {
+      "name": "ScalingConfigurationId.5",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "bU5uZHcAgtzwcL4IeDea****",
+      "description_cn": ""
+    },
+    "ScalingConfigurationId.6": {
+      "name": "ScalingConfigurationId.6",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "bU5uZHcAgtzwcL4IeDea****",
+      "description_cn": ""
+    },
+    "ScalingConfigurationId.7": {
+      "name": "ScalingConfigurationId.7",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "bU5uZHcAgtzwcL4IeDea****",
+      "description_cn": ""
+    },
+    "ScalingConfigurationId.8": {
+      "name": "ScalingConfigurationId.8",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "bU5uZHcAgtzwcL4IeDea****",
+      "description_cn": ""
+    },
+    "ScalingConfigurationId.9": {
+      "name": "ScalingConfigurationId.9",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "bU5uZHcAgtzwcL4IeDea****",
+      "description_cn": ""
+    },
+    "ScalingConfigurationId.10": {
+      "name": "ScalingConfigurationId.10",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "bU5uZHcAgtzwcL4IeDea****",
+      "description_cn": ""
+    },
+    "ScalingConfigurationName.1": {
+      "name": "ScalingConfigurationName.1",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "c1908dd1-690f-4c9b-ab73-350f1f06****",
+      "description_cn": "ScalingConfigurationName.N为待查询伸缩配置的名称，N的取值范围：1～20。查询结果会忽略失效的伸缩配置名称，并且不报错。"
+    },
+    "ScalingConfigurationName.2": {
+      "name": "ScalingConfigurationName.2",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "c1908dd1-690f-4c9b-ab73-350f1f06****",
+      "description_cn": ""
+    },
+    "ScalingConfigurationName.3": {
+      "name": "ScalingConfigurationName.3",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "c1908dd1-690f-4c9b-ab73-350f1f06****",
+      "description_cn": ""
+    },
+    "ScalingConfigurationName.4": {
+      "name": "ScalingConfigurationName.4",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "c1908dd1-690f-4c9b-ab73-350f1f06****",
+      "description_cn": ""
+    },
+    "ScalingConfigurationName.5": {
+      "name": "ScalingConfigurationName.5",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "c1908dd1-690f-4c9b-ab73-350f1f06****",
+      "description_cn": ""
+    },
+    "ScalingConfigurationName.6": {
+      "name": "ScalingConfigurationName.6",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "c1908dd1-690f-4c9b-ab73-350f1f06****",
+      "description_cn": ""
+    },
+    "ScalingConfigurationName.7": {
+      "name": "ScalingConfigurationName.7",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "c1908dd1-690f-4c9b-ab73-350f1f06****",
+      "description_cn": ""
+    },
+    "ScalingConfigurationName.8": {
+      "name": "ScalingConfigurationName.8",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "c1908dd1-690f-4c9b-ab73-350f1f06****",
+      "description_cn": ""
+    },
+    "ScalingConfigurationName.9": {
+      "name": "ScalingConfigurationName.9",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "c1908dd1-690f-4c9b-ab73-350f1f06****",
+      "description_cn": ""
+    },
+    "ScalingConfigurationName.10": {
+      "name": "ScalingConfigurationName.10",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "c1908dd1-690f-4c9b-ab73-350f1f06****",
+      "description_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "804F240A-8D3E-40A1-BD68-6B333DEA2CA8",
+    "TotalCount": "1",
+    "PageNumber": "1",
+    "PageSize": "50",
+    "ScalingConfigurations": {
+      "ScalingConfiguration": {
+        "CreationTime": "2014-08-14T10:58Z",
+        "ImageId": "centos6u5_64_20G_aliaegis_20140703.vhd",
+        "InstanceType": "ecs.t1.xsmall",
+        "InternetChargeType": "PayByTraffic",
+        "InternetMaxBandwidthIn": "200",
+        "InternetMaxBandwidthOut": "0",
+        "LifecycleState": "Active",
+        "ScalingConfigurationId": "bU5uZHcAgtzwcL4IeDea****",
+        "ScalingConfigurationName": "c1908dd1-690f-4c9b-ab73-350f1f06****",
+        "ScalingGroupId": "dE9YbOdCHqaFdFZHXVdD****",
+        "SecurityGroupId": "sg-280ih****",
+        "SystemDiskCategory": "cloud",
+        "DataDisks": {
+          "DataDisk": {
+            "Size": "200",
+            "Category": "cloud",
+            "SnapshotId": "s-280s7****",
+            "Device": "/dev/xvdb"
+          }
+        }
+      }
+    }
+  }
+}

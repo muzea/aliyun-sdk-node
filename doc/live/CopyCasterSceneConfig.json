@@ -1,0 +1,60 @@
+{
+  "name": "CopyCasterSceneConfig",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CopyCasterSceneConfig将原场景配置应用至目标场景并生效，仅限PVW场景配置拷贝至PGM场景。",
+  "abc_id": 60252,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "区域。"
+    },
+    "FromSceneId": {
+      "name": "FromSceneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "f1a361f4-bee3-436d-ae6e-d38e69437666",
+      "description_cn": "原场景ID，仅限于PVM场景。"
+    },
+    "ToSceneId": {
+      "name": "ToSceneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "05ab713c-676e-49c0-96ce-cc408da1b314",
+      "description_cn": "目标场景ID，仅限于PGM场景。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "CasterId": {
+      "name": "CasterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "80787064-1c94-4dc1-85ce-9409960a9bf0",
+      "description_cn": "导播台ID。"
+    }
+  },
+  "res": {}
+}

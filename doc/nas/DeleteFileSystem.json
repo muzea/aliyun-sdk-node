@@ -1,0 +1,31 @@
+{
+  "name": "DeleteFileSystem",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "DeleteFileSystem用于删除已有的文件系统。 ",
+  "abc_id": 62615,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "FileSystemId": {
+      "name": "FileSystemId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1ca404a348",
+      "description_cn": "要删除的文件系统 ID"
+    }
+  },
+  "res": {}
+}

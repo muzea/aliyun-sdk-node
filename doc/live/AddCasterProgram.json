@@ -1,0 +1,92 @@
+{
+  "name": "AddCasterProgram",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AddCasterProgram添加导播台节目单。",
+  "abc_id": 94751,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Episode": {
+      "name": "Episode",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "EpisodeType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "EpisodeName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ResourceId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "ComponentId",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        },
+        {
+          "name": "StartTime",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "EndTime",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "SwitchType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "CasterId": {
+      "name": "CasterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "a2b8e671-2fe5-4642-a2ec-bf93880e1a49",
+      "description_cn": "导播台ID。"
+    }
+  },
+  "res": {}
+}

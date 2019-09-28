@@ -1,0 +1,87 @@
+{
+  "name": "SignalResource",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/V2/SignalResource",
+  "summary_cn": "发送信号。",
+  "abc_id": 133961,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "资源栈所属的地域ID。您可以调用[DescribeRegions](~~131035~~)查看最新的阿里云地域列表。"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "SUCCESS",
+      "description_cn": "信号的状态。故障信号会导致无法创建或更新堆栈。如果所有信号都是警告信号，也将无法创建或更新堆栈。可选值：\n\n- SUCCESS\n- FAILURE\n- WARNING\n\n"
+    },
+    "StackId": {
+      "name": "StackId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "4a6c9851-3b0f-4f5f-b4ca-a14bf691f2ff",
+      "description_cn": "资源栈ID。"
+    },
+    "UniqueId": {
+      "name": "UniqueId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "27c7347b-352a-4377-accf-63d361c1ea60",
+      "description_cn": "信号的唯一ID。如果向单个资源发送多个信号（例如发信号通知等待条件），则每个信号都需要不同的信息ID。\n\n长度限制：1~64"
+    },
+    "LogicalResourceId": {
+      "name": "LogicalResourceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "WebServer",
+      "description_cn": "资源逻辑ID，模板定义的名称。"
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123e4567-e89b-12d3-a456-426655440000",
+      "description_cn": "保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。更多详情，请参见[如何保证幂等性](~~134212~~)。"
+    },
+    "Data": {
+      "name": "Data",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

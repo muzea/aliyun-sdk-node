@@ -1,0 +1,51 @@
+{
+  "name": "AllocatePublicNetworkAddress",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AllocatePublicNetworkAddress接口为MongoDB实例申请公网连接地址。",
+  "abc_id": 67602,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。\n\n> 当本参数传入的是分片集群实例ID时，还需要传入**NodeId**参数。"
+    },
+    "NodeId": {
+      "name": "NodeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "s-bpxxxxxxxx",
+      "description_cn": "分片集群实例中Mongos节点ID、Shard节点ID或ConfigServer节点ID。\n\n> - 当**DBInstanceId**传入的是分片集群实例ID时，本参数才可用。\n- 您可以调用[DescribeDBInstanceAttribute](~~62010~~)接口查询Mongos/Shard/ConfigServer节点ID。"
+    }
+  },
+  "res": {
+    "RequestId": "B6D17591-B48B-4D31-9CD6-9B9796B2270A"
+  }
+}

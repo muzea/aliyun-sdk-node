@@ -1,0 +1,177 @@
+{
+  "name": "DescribeLaunchTemplateVersions",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeLaunchTemplateVersions查询实例启动模板版本。",
+  "abc_id": 73761,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例启动模板所属的地域 ID。您可以调用 [DescribeRegions](~~25609~~) 查看最新的阿里云地域列表。 "
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "hide"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "LaunchTemplateId": {
+      "name": "LaunchTemplateId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "lt-launchtemplateid1",
+      "description_cn": "实例启动模板 ID。您必须指定 LaunchTemplateId 或 LaunchTemplateName 以确定模板。 "
+    },
+    "LaunchTemplateName": {
+      "name": "LaunchTemplateName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FinanceJoshua",
+      "description_cn": "实例启动模板名称。"
+    },
+    "LaunchTemplateVersion": {
+      "name": "LaunchTemplateVersion",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Long"
+    },
+    "MinVersion": {
+      "name": "MinVersion",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "通过范围指定版本时的最小版本号。"
+    },
+    "MaxVersion": {
+      "name": "MaxVersion",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "通过范围指定版本时的最大版本号。"
+    },
+    "DefaultVersion": {
+      "name": "DefaultVersion",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否查询默认版本。"
+    },
+    "DetailFlag": {
+      "name": "DetailFlag",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": ""
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "实例启动模板列表的页码。起始值：1 \n\n默认值：1 "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时设置的每页行数。最大值：50 \n\n默认值：10 "
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 1,
+    "PageSize": 10,
+    "RequestId": "3989ED0C-20A1-4351-A127-2067FF8390AX",
+    "LaunchTemplateVersionSets": {
+      "LaunchTemplateVersionSet": [
+        {
+          "LaunchTemplateId": "lt-bp16jovvln1cgaaqg01X",
+          "CreateTime": "2018-10-17T07:36:22Z",
+          "CreatedBy": "1942111349714xxx",
+          "ModifiedTime": "2018-10-17T07:36:22Z",
+          "LaunchTemplateData": {
+            "ImageId": "centos_7_04_64_20G_alibase_201701015.vhd",
+            "SecurityGroupId": "sg-bp1azkttqpldxgtedupX",
+            "Description": "DocV587!",
+            "NetworkInterfaces": {
+              "NetworkInterface": []
+            },
+            "DataDisks": {
+              "DataDisk": []
+            },
+            "SecurityEnhancementStrategy": "Active",
+            "ZoneId": "random",
+            "ImageOwnerAlias": "system",
+            "InternetChargeType": "PayByTraffic",
+            "VSwitchId": "vsw-bp1s5fnvk4gn2tws03ziX",
+            "VpcId": "vpc-bp1opxu1zkhn00gzv26cX",
+            "HostName": "LocalHost",
+            "InstanceType": "ecs.g5.large",
+            "IoOptimized": "true",
+            "Tags": {
+              "InstanceTag": []
+            },
+            "NetworkType": "vpc",
+            "InternetMaxBandwidthOut": 5,
+            "SystemDisk.Size": 40,
+            "InstanceChargeType": "PostPaid",
+            "SystemDisk.Category": "cloud_efficiency",
+            "InstanceName": "JoshuaCentOSPAYG"
+          },
+          "VersionNumber": 1,
+          "DefaultVersion": true,
+          "VersionDescription": "EcsV587!",
+          "LaunchTemplateName": "JoshuaCentOSPAYG"
+        }
+      ]
+    }
+  }
+}

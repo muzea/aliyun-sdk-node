@@ -1,0 +1,80 @@
+{
+  "name": "ModifyNetworkInterfaceAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyNetworkInterfaceAttribute修改一个弹性网卡（ENI）的属性。例如，弹性网卡名称、描述以及所属安全组等。",
+  "abc_id": 58513,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "弹性网卡所在地域 ID。您可以调用 [DescribeRegions](~~25609~~) 查看最新的阿里云地域列表。 "
+    },
+    "NetworkInterfaceId": {
+      "name": "NetworkInterfaceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "eni-myeni",
+      "description_cn": "弹性网卡 ID。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。"
+    },
+    "SecurityGroupId": {
+      "name": "SecurityGroupId",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "NetworkInterfaceName": {
+      "name": "NetworkInterfaceName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "my-eni-name",
+      "description_cn": "弹性网卡的名称。 \n- 字符长度为2~128个英文或中文字符，必须以大小字母或中文开头，可包含数字、下划线（_） 或连字符（-）。  \n- 弹性网卡名称会展示在控制台。  \n- 不能以 http:// 和 https:// 开头。  \n- 不填则为空，默认值为空。  \n         "
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "弹性网卡的描述信息。 \n- 字符长度为2~256个英文或中文字符。  \n- 不能以 http:// 和 https:// 开头。  \n- 不填则为空，默认值为空。  \n         "
+    }
+  },
+  "res": {
+    "RequestId": "04F0F334-1335-436C-A1D7-6C044FExxxxx"
+  }
+}

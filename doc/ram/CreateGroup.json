@@ -1,0 +1,45 @@
+{
+  "name": "CreateGroup",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateGroup接口创建用户组。",
+  "abc_id": 28700,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "GroupName": {
+      "name": "GroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "Dev-Team",
+      "description_cn": "用户组名称，最大长度64个字符。\n\n格式：`^[a-zA-Z0-9\\-]+$`。"
+    },
+    "Comments": {
+      "name": "Comments",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "开发团队",
+      "description_cn": "备注信息，最大长度128个字符。"
+    }
+  },
+  "res": {
+    "RequestId": "D3F0679E-9757-95DB-AF2D-04D5188C69C5",
+    "Group": {
+      "GroupName": "Dev-Team",
+      "Comments": "开发团队",
+      "CreateDate": "2015-01-23T12:33:18Z"
+    }
+  }
+}

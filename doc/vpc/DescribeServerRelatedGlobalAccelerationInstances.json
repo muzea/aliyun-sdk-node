@@ -1,0 +1,62 @@
+{
+  "name": "DescribeServerRelatedGlobalAccelerationInstances",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeServerRelatedGlobalAccelerationInstances接口查询指定后端服务器绑定的全球加速实例。",
+  "abc_id": 56830,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "全球加速实例所在的地域。 \n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "ServerId": {
+      "name": "ServerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "i-12s3sdf****",
+      "description_cn": " 后端服务实例的ID。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ServerType": {
+      "name": "ServerType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "EcsInstance",
+      "description_cn": "后端服务实例的类型，取值： \n\n- **EcsInstance**（默认值）：ECS实例\n\n- **SlbInstance**：负载均衡实例  \n          "
+    }
+  },
+  "res": {
+    "GlobalAccelerationInstances": {
+      "GlobalAccelerationInstance": [
+        {
+          "GlobalAccelerationInstanceId": "ga-t4nku6vv9xxxxxxxxx",
+          "IpAddress": "12.34.56.78",
+          "RegionId": "ap-southeast-1",
+          "ServerIpAddress": "172.24.52.234"
+        }
+      ]
+    },
+    "RequestId": "A8252014-D8DE-4D85-AF35-AFEXXXXXXX"
+  }
+}

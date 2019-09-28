@@ -1,0 +1,203 @@
+{
+  "name": "CreateReadOnlyDBInstance",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateReadOnlyDBInstance接口为某个实例创建一个只读实例。",
+  "abc_id": 26252,
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。只读实例的地域必须和主实例相同。可以通过接口[DescribeRegions](~~26243~~)查看地域列表。"
+    },
+    "ZoneId": {
+      "name": "ZoneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou-b",
+      "description_cn": "可用区ID。可以通过接口[DescribeRegions](~~26243~~)查看可用区列表。"
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "主实例ID。"
+    },
+    "DBInstanceClass": {
+      "name": "DBInstanceClass",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "rds.mys2.small",
+      "description_cn": "实例规格，详见[实例规格表](~~26312~~)。建议只读实例规格不小于主实例规格，否则易导致只读实例延迟高、负载高等现象。"
+    },
+    "DBInstanceStorage": {
+      "name": "DBInstanceStorage",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "20",
+      "description_cn": "存储空间，取值：**5-3000**，每5GB进行递增，单位：GB。\n>不同版本实例，支持的取值范围不同，请以控制台创建只读实例页面为准。"
+    },
+    "EngineVersion": {
+      "name": "EngineVersion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "5.6",
+      "description_cn": "数据库版本号。必须与主实例相同。取值：\n* **5.6**\n* **5.7**\n* **8.0**\n* **2017_ent**"
+    },
+    "PayType": {
+      "name": "PayType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "Postpaid",
+      "description_cn": "付费类型，仅支持按量付费，取值：**Postpaid**。\n"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ETnLKlblzczshOTUbOCzxxxxxxxxxx",
+      "description_cn": "用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。"
+    },
+    "DBInstanceDescription": {
+      "name": "DBInstanceDescription",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "测试只读实例",
+      "description_cn": "实例描述，长度为2~256个字符。以中文、英文字母开头，可以包含数字、中文、英文、下划线（_）、短横线（-）。\n>不能以 http:// 和 https:// 开头。"
+    },
+    "InstanceNetworkType": {
+      "name": "InstanceNetworkType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Classic",
+      "description_cn": "实例的网络类型，取值：\n\n* **VPC**：VPC网络；\n* **Classic**：经典网络。\n\n默认创建经典网络实例。"
+    },
+    "VPCId": {
+      "name": "VPCId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc-uf6f7l4fg90xxxxxxxxxx",
+      "description_cn": "VPC ID。"
+    },
+    "VSwitchId": {
+      "name": "VSwitchId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vsw-uf6adz52c2pxxxxxxxxxx",
+      "description_cn": "交换机ID。"
+    },
+    "PrivateIpAddress": {
+      "name": "PrivateIpAddress",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "172.16.201.69",
+      "description_cn": "设置只读实例的内网IP，需要在指定交换机的IP地址范围内。系统默认通过**VPCId**和**VSwitchId**自动分配。"
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rg-acfmyxxxxxxxxxx",
+      "description_cn": "资源组ID。"
+    },
+    "Category": {
+      "name": "Category",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "HighAvailability",
+      "description_cn": "实例系列，取值：\n\n* **Basic**：基础版；\n* **HighAvailability**：高可用版；\n* **AlwaysOn**：集群版；\n* **Finance**：金融版（仅中国站支持）。"
+    },
+    "DBInstanceStorageType": {
+      "name": "DBInstanceStorageType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "local_ssd",
+      "description_cn": "实例储存类型，取值：\n* **local_ssd**/**ephemeral_ssd**：本地SSD盘；\n* **cloud_ssd**：SSD云盘；\n* **cloud_essd**：ESSD云盘。\n\n>MySQL仅支持本地盘存储类型，SQL Server仅支持云盘存储类型。"
+    }
+  },
+  "res": {
+    "OrderId": "10078937xxxxx",
+    "ConnectionString": "rm-uf6wjk5xxxxxxx.mysql.rds.aliyuncs.com",
+    "DBInstanceId": "rm-uf6wjk5xxxxxxx",
+    "Port": "3306",
+    "RequestId": "1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC"
+  }
+}

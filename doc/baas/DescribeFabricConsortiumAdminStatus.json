@@ -1,0 +1,47 @@
+{
+  "name": "DescribeFabricConsortiumAdminStatus",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeFabricConsortiumAdminStatus获取联盟管理状态信息。",
+  "abc_id": 127855,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "Location": {
+      "name": "Location",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "位置"
+    }
+  },
+  "res": {
+    "Result": [
+      {
+        "ConsortiumId": "10000",
+        "ConsortiumAdministrator": true
+      },
+      {
+        "ConsortiumId": "10001",
+        "ConsortiumAdministrator": false
+      }
+    ],
+    "RequestId": "3E85A941-658C-40E8-9704-60513A0281CF",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

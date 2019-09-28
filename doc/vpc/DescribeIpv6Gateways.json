@@ -1,0 +1,116 @@
+{
+  "name": "DescribeIpv6Gateways",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeIpv6Gateways接口查询已创建的IPv6网关。",
+  "abc_id": 102108,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-huhehaote",
+      "description_cn": "IPv6网关所属的地域ID。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "Ipv6GatewayId": {
+      "name": "Ipv6GatewayId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ipv6gw-123456xxxxxxxx",
+      "description_cn": "IPv6网关的ID。"
+    },
+    "VpcId": {
+      "name": "VpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc-123456xxxxxxxx",
+      "description_cn": "IPv6网关关联的VPC ID。"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ipv6GW",
+      "description_cn": "IPv6网关的名称。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "当前页码。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "每页包含的条目数。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "Ipv6Gateways": {
+      "Ipv6Gateway": [
+        {
+          "Name": "",
+          "CreationTime": "2018-12-20T14:51:23Z",
+          "Status": "Available",
+          "Description": "",
+          "BusinessStatus": "Normal",
+          "Spec": "Medium",
+          "RegionId": "cn-huhehaote",
+          "InstanceChargeType": "PostPaid",
+          "ExpiredTime": "",
+          "VpcId": "vpc-hp3ag7ydchedxpt0smw00",
+          "Ipv6GatewayId": "ipv6gw-hp33of4uz4k4k7ccwhk95"
+        },
+        {
+          "CreationTime": "2018-12-05T09:21:35Z",
+          "Name": "IPv6网关",
+          "Status": "Available",
+          "Description": "",
+          "BusinessStatus": "Normal",
+          "Spec": "Medium",
+          "RegionId": "cn-huhehaote",
+          "InstanceChargeType": "PostPaid",
+          "ExpiredTime": "",
+          "VpcId": "vpc-hp3kzilwd9yflssfdlgqe",
+          "Ipv6GatewayId": "ipv6gw-hp33p10bdbt77xbeq6sgj"
+        }
+      ]
+    },
+    "TotalCount": 2,
+    "PageSize": 10,
+    "RequestId": "E3A06196-3E7C-490D-8F39-CB4B5A0CE8AD"
+  }
+}

@@ -1,0 +1,293 @@
+{
+  "name": "DescribeRecommendInstanceType",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "（Beta）调用DescribeRecommendInstanceType根据一个指定的的实例规格，查找一个或多个备选的实例规格。针对已经或者即将停售的实例规格，DescribeRecommendInstanceType会罗列出作为替补的所有实例规格。",
+  "abc_id": 95963,
+  "timeout": 9000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "NetworkType": {
+      "name": "NetworkType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "vpc",
+      "description_cn": "ECS实例的网络类型。取值范围：\n\n- classic：经典网络。\n- vpc（默认）：专有网络VPC。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "hide"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "Cores": {
+      "name": "Cores",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "ECS实例vCPU核数。\n\n>同时指定`Cores`参数和`Memory`参数会匹配所有满足vCPU核数和内存大小的实例规格。"
+    },
+    "Memory": {
+      "name": "Memory",
+      "type": "Float",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "8.0",
+      "description_cn": "ECS实例内存大小，单位为GiB。\n\n>同时指定`Cores`参数和`Memory`参数会匹配所有满足vCPU核数和内存大小的实例规格。"
+    },
+    "InstanceType": {
+      "name": "InstanceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ecs.s1.large",
+      "description_cn": "指定的实例规格。更多详情，请参见[实例规格族](~~25378~~)，也可以调用[DescribeInstanceTypes](~~25620~~)接口获得最新的规格表。\n\n> 如果您指定了`InstanceType`，则无法指定`Cores`或者`Memory`。"
+    },
+    "InstanceChargeType": {
+      "name": "InstanceChargeType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PostPaid",
+      "description_cn": "ECS实例的计费方式。更多详情，请参见[计费概述](~~25398~~)。取值范围：\n\n- PrePaid：包年包月。\n- PostPaid（默认）：按量付费。"
+    },
+    "SpotStrategy": {
+      "name": "SpotStrategy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "NoSpot",
+      "description_cn": "抢占式实例的竞价策略。取值范围：\n\n- NoSpot（默认）：正常按量付费实例。\n- SpotWithPriceLimit：设置上限价格的抢占式实例。\n- SpotAsPriceGo：系统自动出价，最高按量付费价格。\n\n使用`SpotStrategy`时，`InstanceChargerType`必须设置为`PostPaid`。"
+    },
+    "IoOptimized": {
+      "name": "IoOptimized",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "optimized",
+      "description_cn": "是否为I/O优化实例。实例规格只支持非I/O优化时，不能设置IoOptimized参数。取值范围：\n\n- optimized：I/O优化。\n- none：非IO优化。\n\n默认值：optimized。\n\n如果您设置的是已停售实例规格，默认为none。"
+    },
+    "InstanceTypeFamily": {
+      "name": "InstanceTypeFamily",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "PriorityStrategy": {
+      "name": "PriorityStrategy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PriceFirst",
+      "description_cn": "优先推荐策略。取值范围：\n\n- InventoryFirst（默认）：库存优先。\n- PriceFirst：价格优先，按每小时vCPU单价从低到高排序。\n- NewProductFirst：最新产品优先。"
+    },
+    "MaxPrice": {
+      "name": "MaxPrice",
+      "type": "Float",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10.0",
+      "description_cn": "按量付费实例或者抢占式实例可接受的每小时最高价格。\n\n>设置抢占式实例的最高单价时，`SpotStrategy`必须设置为`SpotWithPriceLimit`。"
+    },
+    "InstanceBandwidthRx": {
+      "name": "InstanceBandwidthRx",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "InstanceBandwidthTx": {
+      "name": "InstanceBandwidthTx",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "InstancePpsRx": {
+      "name": "InstancePpsRx",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "InstancePpsTx": {
+      "name": "InstancePpsTx",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "ZoneId": {
+      "name": "ZoneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou-f",
+      "description_cn": "可用区ID。您可以调用[DescribeZones](~~25610~~)查看最新的阿里云可用区列表。"
+    },
+    "SystemDiskCategory": {
+      "name": "SystemDiskCategory",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cloud_ssd",
+      "description_cn": "系统盘的云盘种类。取值范围:\n\n- cloud_efficiency：高效云盘。\n- cloud_ssd：SSD云盘。\n- cloud_essd：ESSD云盘。\n- cloud：普通云盘。\n\n非I/O优化实例的默认值为：cloud。\n\nI/O优化实例的默认值为：cloud_efficiency。"
+    },
+    "Scene": {
+      "name": "Scene",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "CREATE",
+      "description_cn": "在哪种场景下推荐实例规格。取值范围：\n\n- UPGRADE：升级或降低实例规格。\n- CREATE（默认）：创建实例。"
+    }
+  },
+  "res": {
+    "Data": {
+      "RecommendInstanceType": [
+        {
+          "CommodityCode": "ecs",
+          "RegionNo": "us-west-ot7-a01",
+          "Scene": "CREATE",
+          "Zones": {
+            "zone": []
+          },
+          "InstanceType": {
+            "Memory": 8192,
+            "Cores": 1,
+            "InstanceTypeFamily": "ecs.s1",
+            "SupportIoOptimized": "none",
+            "Generation": "ecs-1",
+            "InstanceType": "ecs.s1.large"
+          }
+        },
+        {
+          "CommodityCode": "ecs",
+          "RegionNo": "us-west-ot7-a01",
+          "Scene": "CREATE",
+          "Zones": {
+            "zone": [
+              {
+                "ZoneNo": "us-west-1a",
+                "NetworkTypes": {
+                  "NetworkType": [
+                    "vpc"
+                  ]
+                }
+              }
+            ]
+          },
+          "InstanceType": {
+            "Memory": 8192,
+            "Cores": 1,
+            "InstanceTypeFamily": "ecs.e4",
+            "SupportIoOptimized": "optimized",
+            "Generation": "ecs-3",
+            "InstanceType": "ecs.e4.small"
+          }
+        },
+        {
+          "CommodityCode": "ecs",
+          "RegionNo": "us-west-ot7-a01",
+          "Scene": "CREATE",
+          "Zones": {
+            "zone": [
+              {
+                "ZoneNo": "us-west-1a",
+                "NetworkTypes": {
+                  "NetworkType": [
+                    "vpc"
+                  ]
+                }
+              }
+            ]
+          },
+          "InstanceType": {
+            "Memory": 8192,
+            "Cores": 2,
+            "InstanceTypeFamily": "ecs.sn2",
+            "SupportIoOptimized": "optimized",
+            "Generation": "ecs-2",
+            "InstanceType": "ecs.sn2.medium"
+          }
+        },
+        {
+          "CommodityCode": "ecs",
+          "RegionNo": "us-west-ot7-a01",
+          "Scene": "CREATE",
+          "Zones": {
+            "zone": []
+          },
+          "InstanceType": {
+            "Memory": 8192,
+            "Cores": 1,
+            "InstanceTypeFamily": "ecs.e3",
+            "SupportIoOptimized": "optimized",
+            "Generation": "ecs-2",
+            "InstanceType": "ecs.e3.small"
+          }
+        }
+      ]
+    },
+    "RequestId": "775643e7-8297-40ee-b9e6-f0a252aa152d"
+  }
+}

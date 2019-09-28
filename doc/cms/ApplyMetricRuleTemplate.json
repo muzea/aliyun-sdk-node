@@ -1,0 +1,134 @@
+{
+  "name": "ApplyMetricRuleTemplate",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "将报警模板应用到分组，生成报警规则。",
+  "abc_id": 114977,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "12345",
+      "description_cn": "应用分组ID。"
+    },
+    "TemplateIds": {
+      "name": "TemplateIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "123",
+      "description_cn": "报警模板ID。"
+    },
+    "SilenceTime": {
+      "name": "SilenceTime",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "86400",
+      "description_cn": "通道沉默周期，单位为秒。默认86400秒（即1天）。监控数据持续超过报警规则阈值时，每个沉默周期内只发送1次报警通知。"
+    },
+    "EnableStartTime": {
+      "name": "EnableStartTime",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "00",
+      "description_cn": "报警生效的起始时间周期， 选值为00-23，表示00：00 到23：00。"
+    },
+    "EnableEndTime": {
+      "name": "EnableEndTime",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "23",
+      "description_cn": "报警生效的结束时间周期， 选值为00-23，表示00：59 到23：59。"
+    },
+    "NotifyLevel": {
+      "name": "NotifyLevel",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "ApplyMode": {
+      "name": "ApplyMode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "GROUP_INSTANCE_FIRST",
+      "description_cn": "- GROUP_INSTANCE_FIRST：实例分组优先， 即应用报警模板的时候，以分组实例优先，如果分组中不存在这种实例则忽略模板中的规则。\n- ALARM_TEMPLATE_FIRST：模板实例优先，即应用报警模板的时候，不管分组中是否存在这种实例，都创建出这种规则。"
+    },
+    "Webhook": {
+      "name": "Webhook",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "http://www.aliyun.com",
+      "description_cn": "报警发生时会回调指定的URL地址。向URL发送POST请求。"
+    }
+  },
+  "res": {
+    "RequestId": "3F897F3C-020A-4993-95B4-63ABB84F83E6",
+    "Resource": {
+      "AlertResults": [
+        {
+          "DisplayName": "xxxx11",
+          "Code": 200,
+          "Success": true,
+          "Name": "applyTemplate12345-321",
+          "GroupId": 123456
+        },
+        {
+          "DisplayName": "abb33",
+          "Code": 200,
+          "Success": true,
+          "Name": "applyTemplate12345-322",
+          "GroupId": 123457
+        },
+        {
+          "DisplayName": "aaaa",
+          "Code": 200,
+          "Success": true,
+          "Name": "applyTemplate12345-322",
+          "GroupId": 123459
+        }
+      ],
+      "GroupId": 3040150
+    },
+    "ErrorCode": 200,
+    "Success": true
+  }
+}

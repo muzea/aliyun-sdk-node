@@ -1,0 +1,40 @@
+{
+  "name": "DeleteVideo",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteVideo删除完整视频（包括其源文件、转码后的流文件、封面截图等），支持批量删除。",
+  "abc_id": 129673,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "VideoIds": {
+      "name": "VideoIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "e44ebf114f4d429e9b2d2adbea8bf5b5,e44ebf114f4d429e9b2d2adbea8bf55",
+      "description_cn": "视频ID列表，多个用逗号分隔，最多支持10个。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

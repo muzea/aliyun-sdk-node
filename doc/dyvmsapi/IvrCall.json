@@ -1,0 +1,151 @@
+{
+  "name": "IvrCall",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用接口IvrCall发起交互式语音通话。",
+  "abc_id": 114037,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CalledShowNumber": {
+      "name": "CalledShowNumber",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "4001112222",
+      "description_cn": "被叫显号，必须是已购买的号码。\n\n您可以在[语音服务控制台](https://dyvms.console.aliyun.com/dyvms.htm#/number/normal)上查看已购买的号码。"
+    },
+    "CalledNumber": {
+      "name": "CalledNumber",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "13700000000",
+      "description_cn": "被叫号码。仅支持中国大陆号码。"
+    },
+    "StartCode": {
+      "name": "StartCode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "TTS_1234",
+      "description_cn": "呼叫开始时播放的提示音，可以指定为：\n\n- **语音文件**：语音ID。可以在[文本转语音模板页面](https://dyvms.console.aliyun.com/dyvms.htm#/file/notify)查看语音ID。\n- **文本转语音模板**：模板ID。可以在[文本转语音模板页面](https://dyvms.console.aliyun.com/dyvms.htm#/template)查看模板ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "StartTtsParams": {
+      "name": "StartTtsParams",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{“name”:”xxx”,”code”:”123”}",
+      "description_cn": "文本转语音模板（TTS）变量替换关系，格式为JSON。\n\n> 当**StartCode**为文本转语音模板（TTS）、且模板中带变量的情况下此参数为必选。"
+    },
+    "MenuKeyMap": {
+      "name": "MenuKeyMap",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Code",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "TtsParams",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "PlayTimes": {
+      "name": "PlayTimes",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3",
+      "description_cn": "重复播放次数，取值范围为1~3。"
+    },
+    "ByeCode": {
+      "name": "ByeCode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "TTS_1234",
+      "description_cn": "播放结束时播放的结束提示音，支持以下两种方式：\n\n- 语音文件\n- 文本转语音（TTS）模板\n\n> 参数**ByeCode**的类型需要与参数**StartCode**一致，即必须同时为语音文件或文本转语音（TTS）模板。"
+    },
+    "ByeTtsParams": {
+      "name": "ByeTtsParams",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{“name”:”xxx”,”code”:”123”}\t",
+      "description_cn": "文本转语音模板变量替换关系，格式为JSON。\n\n> 当**ByeCode**为文本转语音（TTS）模板、且模板中带变量的情况下此参数为必选。"
+    },
+    "Timeout": {
+      "name": "Timeout",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3000",
+      "description_cn": "等待用户按键超时时间，单位为毫秒。"
+    },
+    "OutId": {
+      "name": "OutId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "abcdefgh",
+      "description_cn": "预留给调用方使用的ID，最终会通过在回执消息中将此ID带回给调用方。"
+    }
+  },
+  "res": {
+    "Message": "OK",
+    "RequestId": "D9CB3933-9FE3-4870-BA8E-2BEE91B69D23",
+    "Code": "OK",
+    "CallId": "116012354148^102813784148"
+  }
+}

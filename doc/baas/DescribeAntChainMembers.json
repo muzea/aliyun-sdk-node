@@ -1,0 +1,113 @@
+{
+  "name": "DescribeAntChainMembers",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "获取联盟成员列表",
+  "abc_id": 127102,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID"
+    },
+    "ConsortiumId": {
+      "name": "ConsortiumId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "q0oWq92P",
+      "description_cn": "联盟ID"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "1",
+      "description_cn": "页面编号"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "10",
+      "description_cn": "页面包含条例数"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "15EFC35E-3DAD-4E97-A97D-9F81660C9DE9",
+      "Result": {
+        "Pagination": {
+          "TotalCount": 6,
+          "PageSize": 10,
+          "PageNumber": 1
+        },
+        "Members": [
+          {
+            "Status": "AllianceJoined",
+            "Role": "SuperAdmin",
+            "MemberId": "1287126353308684",
+            "JoinTime": 1562845453000,
+            "MemberName": "uid-1287126353308684"
+          },
+          {
+            "Status": "AllianceNotJoined",
+            "Role": "Member",
+            "MemberId": "1897759808932113",
+            "JoinTime": 1562847689000,
+            "MemberName": "uid-1897759808932113"
+          },
+          {
+            "Status": "AllianceNotJoined",
+            "Role": "Member",
+            "MemberId": "1244631294173906",
+            "JoinTime": 1562847826000,
+            "MemberName": "uid-1244631294173906"
+          },
+          {
+            "Status": "AllianceJoined",
+            "Role": "Member",
+            "MemberId": "1298430932251201",
+            "JoinTime": 1562848743000,
+            "MemberName": "uid-1298430932251201"
+          },
+          {
+            "Status": "AllianceNotJoined",
+            "Role": "Member",
+            "MemberId": "1908162809538613",
+            "JoinTime": 1562848777000,
+            "MemberName": "uid-1908162809538613"
+          },
+          {
+            "Status": "AllianceNotJoined",
+            "Role": "Member",
+            "MemberId": "100",
+            "JoinTime": 1562850385000,
+            "MemberName": "uid-100"
+          }
+        ]
+      }
+    },
+    "requestId": "15EFC35E-3DAD-4E97-A97D-9F81660C9DE9",
+    "successResponse": true
+  }
+}

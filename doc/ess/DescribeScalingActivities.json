@@ -1,0 +1,292 @@
+{
+  "name": "DescribeScalingActivities",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeScalingActivities查询伸缩活动。",
+  "abc_id": 25961,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-qingdao",
+      "description_cn": "伸缩活动所属伸缩组的地域ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456123456",
+      "description_cn": ""
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "伸缩活动列表的页码，起始值：1。\n\n默认值：1 。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "50",
+      "description_cn": "分页查询时设置的每页行数，最大值：50。\n\n默认值：10 。"
+    },
+    "ScalingGroupId": {
+      "name": "ScalingGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "AG6CQdPU8OKdwLjgZcJ****",
+      "description_cn": "伸缩组的ID。"
+    },
+    "StatusCode": {
+      "name": "StatusCode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Successful",
+      "description_cn": "伸缩活动的状态，取值范围：\n \n- Successful：执行成功的伸缩活动。 \n- Warning：部分执行成功的伸缩活动。 \n- Failed：执行失败的伸缩活动。 \n- InProgress：正在执行的伸缩活动。 \n- Rejected：执行伸缩活动请求被拒绝。 \n         "
+    },
+    "ScalingActivityId.1": {
+      "name": "ScalingActivityId.1",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ebta5WbUzC8gcwUWvfch****",
+      "description_cn": "ScalingActivityId.N为待查询伸缩活动的ID，N的取值范围：1～20。"
+    },
+    "ScalingActivityId.2": {
+      "name": "ScalingActivityId.2",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ebta5WbUzC8gcwUWvfch****",
+      "description_cn": ""
+    },
+    "ScalingActivityId.3": {
+      "name": "ScalingActivityId.3",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ebta5WbUzC8gcwUWvfch****",
+      "description_cn": ""
+    },
+    "ScalingActivityId.4": {
+      "name": "ScalingActivityId.4",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ebta5WbUzC8gcwUWvfch****",
+      "description_cn": ""
+    },
+    "ScalingActivityId.5": {
+      "name": "ScalingActivityId.5",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ebta5WbUzC8gcwUWvfch****",
+      "description_cn": ""
+    },
+    "ScalingActivityId.6": {
+      "name": "ScalingActivityId.6",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ebta5WbUzC8gcwUWvfch****",
+      "description_cn": ""
+    },
+    "ScalingActivityId.7": {
+      "name": "ScalingActivityId.7",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ebta5WbUzC8gcwUWvfch****",
+      "description_cn": ""
+    },
+    "ScalingActivityId.8": {
+      "name": "ScalingActivityId.8",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ebta5WbUzC8gcwUWvfch****",
+      "description_cn": ""
+    },
+    "ScalingActivityId.9": {
+      "name": "ScalingActivityId.9",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ebta5WbUzC8gcwUWvfch****",
+      "description_cn": ""
+    },
+    "ScalingActivityId.10": {
+      "name": "ScalingActivityId.10",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ebta5WbUzC8gcwUWvfch****",
+      "description_cn": ""
+    },
+    "ScalingActivityId.11": {
+      "name": "ScalingActivityId.11",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ebta5WbUzC8gcwUWvfch****",
+      "description_cn": ""
+    },
+    "ScalingActivityId.12": {
+      "name": "ScalingActivityId.12",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ebta5WbUzC8gcwUWvfch****",
+      "description_cn": ""
+    },
+    "ScalingActivityId.13": {
+      "name": "ScalingActivityId.13",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ebta5WbUzC8gcwUWvfch****",
+      "description_cn": ""
+    },
+    "ScalingActivityId.14": {
+      "name": "ScalingActivityId.14",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ebta5WbUzC8gcwUWvfch****",
+      "description_cn": ""
+    },
+    "ScalingActivityId.15": {
+      "name": "ScalingActivityId.15",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ebta5WbUzC8gcwUWvfch****",
+      "description_cn": ""
+    },
+    "ScalingActivityId.16": {
+      "name": "ScalingActivityId.16",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ebta5WbUzC8gcwUWvfch****",
+      "description_cn": ""
+    },
+    "ScalingActivityId.17": {
+      "name": "ScalingActivityId.17",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ebta5WbUzC8gcwUWvfch****",
+      "description_cn": ""
+    },
+    "ScalingActivityId.18": {
+      "name": "ScalingActivityId.18",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ebta5WbUzC8gcwUWvfch****",
+      "description_cn": ""
+    },
+    "ScalingActivityId.19": {
+      "name": "ScalingActivityId.19",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ebta5WbUzC8gcwUWvfch****",
+      "description_cn": ""
+    },
+    "ScalingActivityId.20": {
+      "name": "ScalingActivityId.20",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ebta5WbUzC8gcwUWvfch****",
+      "description_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "0A016AD6-A91F-4210-9DEE-D5BBD4270F45",
+    "TotalCount": 2582,
+    "PageNumber": 1,
+    "PageSize": 1,
+    "ScalingActivities": {
+      "ScalingActivity": [
+        {
+          "ScalingActivityId": "bBxOR5dhKFoccGkbTrcy****",
+          "StartTime": "2014-08-18T20:49Z",
+          "EndTime": "2014-08-18T20:49Z",
+          "Cause": " A scheduled task excuete scaling rule \"sr****\"，changing the Total Capacity from \"0\" to \"1\".",
+          "Description": " Add \"1\" ECS instance ",
+          "Progress": 100,
+          "ScalingGroupId": "c7acXJbAJmpPcGE7G3bw****",
+          "StatusCode": "Successful",
+          "StatusMessage": "\"1\" ECS instances is added. "
+        }
+      ]
+    }
+  }
+}

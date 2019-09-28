@@ -1,0 +1,30 @@
+{
+  "name": "DeleteCluster",
+  "protocol": "HTTPS|HTTP",
+  "method": "DELETE",
+  "path": "/pop/v5/resource/cluster",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ClusterId": {
+      "name": "ClusterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "Data": true,
+    "Message": "success",
+    "RequestId": "856D4438-DBC0-4EA9-BEB1-894628C0434E",
+    "Code": 200
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "name": "DescribeCdnUserResourcePackage",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCdnUserResourcePackage查询CDN用户当前流量包。",
+  "abc_id": 91171,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "ResourcePackageInfos": {
+      "ResourcePackageInfo": [
+        {
+          "Status": "closed",
+          "InstanceId": "FP-mkqgwsyui",
+          "CommodityCode": "cdnflowbag",
+          "InitCapacity": "10995116277760",
+          "EndTime": "2017-01-30T08:00:00Z",
+          "StartTime": "2016-01-30T03:40:06Z",
+          "DisplayName": "CDN流量包（国内版）",
+          "CurrCapacity": "10995089554629"
+        },
+        {
+          "Status": "valid",
+          "InstanceId": "FP-ilttxc23a",
+          "CommodityCode": "cdnflowbag",
+          "InitCapacity": "536870912000",
+          "EndTime": "2018-07-01T08:00:00Z",
+          "StartTime": "2017-07-01T01:26:41Z",
+          "DisplayName": "CDN流量包（国内版）",
+          "CurrCapacity": "0"
+        },
+        {
+          "Status": "valid",
+          "InstanceId": "CDNHTTPSBAG-cn-v0h0dnlq4000m9",
+          "CommodityCode": "cdnhttpsbag",
+          "InitCapacity": "10000000",
+          "EndTime": "2018-12-06T08:00:00Z",
+          "StartTime": "2017-12-05T19:10:58Z",
+          "DisplayName": "CDN HTTPS请求数资源包",
+          "CurrCapacity": "9999645"
+        }
+      ]
+    },
+    "RequestId": "84839536-2B7E-457D-9D8C-82E6C7D4E1A3"
+  }
+}

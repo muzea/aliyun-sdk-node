@@ -1,0 +1,50 @@
+{
+  "name": "DescribeL2VipsByDomain",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeL2VipsByDomain按域名查询L2节点的回源IP。",
+  "abc_id": 91151,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "www.yourdomain.com",
+      "description_cn": "域名，只支持单个域名。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "Vips": {
+      "Vip": [
+        "xxx.111.111/25",
+        "xxx.112.112/25",
+        "xxx.33.190/25",
+        "xxx.96.109/25",
+        "xxx.20.226/25",
+        "xxx.19.140/25",
+        "xxx.215.140/25"
+      ]
+    },
+    "RequestId": "820E7900-5CA9-4AEF-B0DD-20ED5F64BE55",
+    "DomainName": "example.com"
+  }
+}

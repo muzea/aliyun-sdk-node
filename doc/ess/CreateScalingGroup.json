@@ -1,0 +1,309 @@
+{
+  "name": "CreateScalingGroup",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateScalingGroup创建一个伸缩组。",
+  "abc_id": 25936,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-qingdao",
+      "description_cn": "伸缩组所属的地域ID。更多详情，请参见[地域与可用区](~~40654~~)。 "
+    },
+    "MinSize": {
+      "name": "MinSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "伸缩组内ECS实例台数的最小值，取值范围：0~1000 。当伸缩组内ECS实例数小于MinSize时，弹性伸缩会自动创建ECS实例。 "
+    },
+    "MaxSize": {
+      "name": "MaxSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "伸缩组内ECS实例台数的最大值，取值范围：0~1000。 当伸缩组内ECS实例数大于MaxSize时，弹性伸缩会自动移出ECS实例。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456123456",
+      "description_cn": ""
+    },
+    "ScalingGroupName": {
+      "name": "ScalingGroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "测试sg",
+      "description_cn": "伸缩组的名称，同一地域下伸缩组名称唯一。长度为2~40个英文或中文字符，以数字、大小英文字母或中文开头，可以包含数字、下划线（_）、连字符（-）和小数点（.）。\n\n默认值为伸缩组ID。 "
+    },
+    "LaunchTemplateId": {
+      "name": "LaunchTemplateId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "lt-m5e3ofjr1zn1aw7****",
+      "description_cn": "实例启动模板ID，用于指定伸缩组从实例启动模板获取启动配置信息。"
+    },
+    "LaunchTemplateVersion": {
+      "name": "LaunchTemplateVersion",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Default",
+      "description_cn": "实例启动模板的版本，取值范围： \n         \n- 固定的模板版本号\n- Default：始终使用模板默认版本\n- Latest：始终使用模板最新版本"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "DefaultCooldown": {
+      "name": "DefaultCooldown",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "300",
+      "description_cn": " 一次伸缩活动（添加或移出ECS实例）结束后的一段冷却时间。取值范围：0~86400，单位：秒。\n\n默认值：300。\n\n冷却时间内，该伸缩组不执行其它的伸缩活动，仅针对[云监控](~~35170~~)报警任务触发的伸缩活动有效。  "
+    },
+    "LoadBalancerIds": {
+      "name": "LoadBalancerIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[\"lb-idx\", \"lb-idy\", \"lb-idz\"]",
+      "description_cn": "负载均衡实例ID。取值可以是由多台负载均衡实例ID组成一个JSON数组，最多支持5个ID，ID之间用半角逗号（,）隔开。 "
+    },
+    "DBInstanceIds": {
+      "name": "DBInstanceIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[\"rm-idx\", \"rm-idy\", \"rm-idz\"]",
+      "description_cn": "RDS实例ID。取值可以是由多台RDS实例ID组成一个JSON数组，最多支持8个ID，ID之间用半角逗号（,）隔开。 "
+    },
+    "RemovalPolicy.1": {
+      "name": "RemovalPolicy.1",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "OldestScalingConfiguration",
+      "description_cn": "RemovalPolicy.N指定移出ECS实例的伸缩组策略，N的取值范围：1~2。更多详情，请参见[移出策略](~~25910~~)。取值范围：\n\n- OldestInstance：移出最早加入伸缩组的ECS实例\n- NewestInstance：移出最新加入伸缩组的ECS实例\n- OldestScalingConfiguration：移出最早伸缩配置创建的ECS实例\n\nRemovalPolicy.1的默认值：OldestScalingConfiguration。\n\nRemovalPolicy.2的默认值：OldestInstance。"
+    },
+    "RemovalPolicy.2": {
+      "name": "RemovalPolicy.2",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "OldestInstance",
+      "description_cn": ""
+    },
+    "VSwitchId": {
+      "name": "VSwitchId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vsw-****",
+      "description_cn": "创建VPC类型的伸缩组时，指定的虚拟交换机ID。"
+    },
+    "VSwitchIds": {
+      "name": "VSwitchIds",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "MultiAZPolicy": {
+      "name": "MultiAZPolicy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PRIORITY",
+      "description_cn": " 多可用区伸缩组ECS实例扩缩容策略。取值范围： \n         \n- PRIORITY：根据您定义的虚拟交换机（VSwitchIds.N）扩缩容。当优先级较高的虚拟交换机所在可用区无法创建ECS实例时，自动使用下一优先级的虚拟交换机创建ECS实例。  \n\n- COST_OPTIMIZED：按vCPU单价从低到高进行尝试创建。当伸缩配置设置了抢占式计费方式的多实例规格时，优先创建对应抢占式计费实例。当抢占式计费实例由于库存等原因无法创建时，自动尝试以按量付费的方式创建。 \n\n    > COST_OPTIMIZED仅在伸缩配置设置了多实例规格或者选用了抢占式实例的情况下生效。 \n\n- BALANCE：在伸缩组指定的多可用区之间均匀分配ECS实例。如果由于库存不足等原因可用区之间变得不平衡，您可以通过API [RebalanceInstance](~~71516~~)平衡资源。  \n\n默认值：PRIORITY 。"
+    },
+    "HealthCheckType": {
+      "name": "HealthCheckType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ECS",
+      "description_cn": "伸缩组的健康检查方式，取值范围：\n\n- NONE：不做健康检查。\n- ECS：对伸缩组内的ECS实例做健康检查。"
+    },
+    "LifecycleHook": {
+      "name": "LifecycleHook",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "LifecycleHookName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "LifecycleTransition",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "DefaultResult",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "HeartbeatTimeout",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "NotificationMetadata",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "NotificationArn",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "VServerGroup": {
+      "name": "VServerGroup",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "LoadBalancerId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "VServerGroupAttribute",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "ScalingPolicy": {
+      "name": "ScalingPolicy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "recycle",
+      "description_cn": "指定伸缩组的回收模式，取值范围： \n         \n- recycle：伸缩组的回收模式为停机回收模式  \n- release：伸缩组的回收模式为释放模式  \n\n关于被移出实例的动作，请参见[RemoveInstances](~~25955~~)。  "
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123e4567-e89b-12d3-a456-42665544****",
+      "description_cn": "保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。只支持ASCII字符，且不能超过64个字符。更多详情，请参见[如何保证幂等性](~~25693~~)。"
+    },
+    "OnDemandBaseCapacity": {
+      "name": "OnDemandBaseCapacity",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "伸缩组所需要按量实例个数的最小值，取值范围：0~1000。当按量实例个数少于该值时，将优先创建按量实例。 "
+    },
+    "OnDemandPercentageAboveBaseCapacity": {
+      "name": "OnDemandPercentageAboveBaseCapacity",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "伸缩组满足最小按量实例数（OnDemandBaseCapacity）要求后，超出的实例中按量实例应占的比例，取值范围：0～100。"
+    },
+    "SpotInstanceRemedy": {
+      "name": "SpotInstanceRemedy",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否开启补齐抢占式实例。开启后，当收到抢占式实例将被回收的系统消息时，伸缩组将尝试创建新的实例，替换掉将被回收的抢占式实例。"
+    },
+    "SpotInstancePools": {
+      "name": "SpotInstancePools",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "5",
+      "description_cn": "指定可用实例规格的个数，伸缩组将按成本最低的多个规格均衡创建抢占式实例。取值范围：0~10。"
+    }
+  },
+  "res": {
+    "RequestId": "473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E",
+    "ScalingGroupId": "dP8VqSd9ENXPc0ciVmbc****"
+  }
+}

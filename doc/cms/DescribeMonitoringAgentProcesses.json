@@ -1,0 +1,50 @@
+{
+  "name": "DescribeMonitoringAgentProcesses",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询进程监控列表。",
+  "abc_id": 114947,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "i-xx12****",
+      "description_cn": "实例ID。"
+    }
+  },
+  "res": {
+    "NodeProcesses": {
+      "NodeProcess": [
+        {
+          "Command": "number",
+          "InstanceId": "host-123aaaa",
+          "ProcessName": "http",
+          "ProcessId": 123455
+        },
+        {
+          "Command": "number",
+          "InstanceId": "host-123aaaa",
+          "ProcessName": "nginx",
+          "ProcessId": 123456
+        }
+      ]
+    },
+    "Success": true,
+    "Code": 200
+  }
+}

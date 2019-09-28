@@ -1,0 +1,87 @@
+{
+  "name": "QuerySubscriptionDetail",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用接口QuerySubscriptionDetail查询号码的绑定关系。",
+  "abc_id": 110262,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SubsId": {
+      "name": "SubsId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1000000768798832",
+      "description_cn": "绑定关系ID。\n\n可以在控制台的**号码管理** > **号码详情**中查看绑定关系ID，或者在调用BindAxb等号码绑定API时查看返回参数中的**SubsId**。"
+    },
+    "PhoneNoX": {
+      "name": "PhoneNoX",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "17000000000",
+      "description_cn": "绑定关系中的隐私号码，即X号码。"
+    },
+    "PoolKey": {
+      "name": "PoolKey",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "FC123456",
+      "description_cn": "号码池Key。请登录[号码隐私保护控制台](https://dypls.console.aliyun.com/dypls.htm#/account)，在**号码池管理**中查看号码池Key。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "ProductType": {
+      "name": "ProductType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "AXB_170",
+      "description_cn": "产品类型。\n\n> 适用于原阿里大于客户，阿里云用户可忽略。"
+    }
+  },
+  "res": {
+    "Message": "OK",
+    "RequestId": "066E6E47-04CB-4774-A976-4F73CB76D4A3",
+    "SecretBindDetailDTO": {
+      "Status": 1,
+      "ExpireDate": "2019-09-05 12:00:00",
+      "PhoneNoX": "17000000000",
+      "NeedRecord": false,
+      "PhoneNoB": "15000000001",
+      "PhoneNoA": "15000000000",
+      "SubsId": "1000000768798832",
+      "GmtCreate": "2019-03-02 19:30:11"
+    },
+    "Code": "OK"
+  }
+}

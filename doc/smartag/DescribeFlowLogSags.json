@@ -1,0 +1,115 @@
+{
+  "name": "DescribeFlowLogSags",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeFlowLogSags查询流日志绑定的智能接入网关实例。",
+  "abc_id": 134883,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-shanghahi",
+      "description_cn": "流日志的地域ID。"
+    },
+    "FlowLogId": {
+      "name": "FlowLogId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "fl-l934tsa5504yuc****",
+      "description_cn": "流日志实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "指定分页查询时每页的列表行数，最大值为**50**，默认值为**10**。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "查询列表的页码，起始值为**1**，默认值为**1**。"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "Sags": {
+      "Sag": [
+        {
+          "Name": "ruijie-test-2",
+          "SmartAGId": "sag-6rm1awijm3ktic****"
+        },
+        {
+          "Name": "zhanxiaolong",
+          "SmartAGId": "sag-ecvqa7bw8fxbdn****"
+        },
+        {
+          "Name": "ccn-e2e-cn-sh-0-0820-005408",
+          "SmartAGId": "sag-gn7m5v5bpjykne****"
+        },
+        {
+          "Name": "sag-sec-1b",
+          "SmartAGId": "sag-hk69hizmi21fy9****"
+        },
+        {
+          "Name": "",
+          "SmartAGId": "sag-i54wm4v15ruxji****"
+        },
+        {
+          "Name": "china-0-0424-222240",
+          "SmartAGId": "sag-iunln2dztruttt****"
+        },
+        {
+          "Name": "sag-sec-1",
+          "SmartAGId": "sag-q1sqc77sk2oe08****"
+        },
+        {
+          "Name": "sag1000_box5",
+          "SmartAGId": "sag-u42tn80ro3bxsd****"
+        },
+        {
+          "Name": "ccn-e2e-cn-sh-0-0820-005549",
+          "SmartAGId": "sag-wle98f4o41nm3f****"
+        },
+        {
+          "Name": "jia_双机_SAG1000",
+          "SmartAGId": "sag-yev5ajsek9x12o****"
+        }
+      ]
+    },
+    "TotalCount": 35,
+    "PageSize": 10,
+    "RequestId": "8D945945-85F2-4BD7-A144-7DC0E8B5A0DC"
+  }
+}

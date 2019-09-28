@@ -1,0 +1,100 @@
+{
+  "name": "DescribeLiveUserDomains",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeLiveUserDomains查询用户名下所有的直播域名。 ",
+  "abc_id": 88332,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "",
+      "description_cn": ""
+    },
+    "LiveDomainType": {
+      "name": "LiveDomainType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "liveVideo",
+      "description_cn": "直播域名业务类型，不传查询所有。\n\n取值：**liveVideo**|**liveEdge**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "100",
+      "description_cn": "分页大小。默认值为**20**，最大值为**50**。\n"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "当前页码。取值范围：**1~100000**。"
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "*.testdomain.com",
+      "description_cn": "域名模糊匹配过滤。\n\n不传值，默认查询用户所有直播域名。"
+    },
+    "RegionName": {
+      "name": "RegionName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-beijing",
+      "description_cn": "域名所属区域。"
+    },
+    "DomainSearchType": {
+      "name": "DomainSearchType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "fuzzy_match",
+      "description_cn": "域名查询类型。取值：\n\n- **fuzzy_match（默认值）**：模糊匹配\n- **pre_match**：前匹配\n- **suf_match**：后匹配\n- **full_match**：完全匹配"
+    },
+    "DomainStatus": {
+      "name": "DomainStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "online",
+      "description_cn": "域名状态过滤。域名状态包括：\n\n- **online**：运行中（表示域名服务状态正常）\n- **offline**：已停止\n- **configuring**：配置中"
+    }
+  },
+  "res": {}
+}

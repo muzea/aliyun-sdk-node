@@ -1,0 +1,31 @@
+{
+  "name": "DeleteSnapshot",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "DeleteSnapshot用于删除指定的快照。如果需要取消正在创建的快照，也可以调用该接口删除快照，即取消创建快照任务。",
+  "abc_id": 126580,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false
+    },
+    "SnapshotId": {
+      "name": "SnapshotId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "s-extreme-snapshotid1",
+      "description_cn": "快照 ID。"
+    }
+  },
+  "res": {}
+}

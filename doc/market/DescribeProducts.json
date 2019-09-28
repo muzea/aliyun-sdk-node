@@ -1,0 +1,210 @@
+{
+  "name": "DescribeProducts",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SearchTerm": {
+      "name": "SearchTerm",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "Filter": {
+      "name": "Filter",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "pageNumber": 1,
+    "pageSize": 10,
+    "productItems": [
+      {
+        "categoryId": 53398003,
+        "code": "PHP多版本环境（Windows2012 | phpStudy）",
+        "code1": "PHP多版本环境（Windows2012 | phpStudy）",
+        "deliveryWay": "镜像",
+        "imageUrl": "https://oss.aliyuncs.com/photogallery/photo/1904996544835414/7549/767d6d07-8366-4822-b84e-61f6ea10d146.png",
+        "operationSystem": "Windows2008 R2 企业版 64位",
+        "score": "5.0",
+        "shortDescription": "由Websof9提供的phpStudy镜像是一个预安装环境，可在<em>ECS</em>上一键安装。phpStudy是一个PHP环境集成包，支持php5.2到7.0多个版本切换，同时支持Apache,Nginx,IIS ...",
+        "suggestedPrice": "10元/月",
+        "supplierId": 228399,
+        "supplierName": "长沙网久软件有限公司",
+        "tags": "企业,上云,Windows,Windows server 2012,Apache,Nginx,Windows面板"
+      },
+      {
+        "categoryId": 56014009,
+        "code": "Pydio 开源在线文件管理系统（构建企业网盘和云存储系统）",
+        "code1": "Pydio 开源在线文件管理系统（构建企业网盘和云存储系统）",
+        "deliveryWay": "镜像",
+        "imageUrl": "https://oss.aliyuncs.com/photogallery/photo/1904996544835414/7049/47bde5de-8610-439f-a160-1eb34aec5505.png",
+        "operationSystem": "CentOS7.0 64位",
+        "score": "5.0",
+        "shortDescription": "由Websof9提供的Pydio镜像是一个预安装环境，可在<em>ECS</em>上一键安装。Pydio是功能强大在线文件管理系统（ECM），用于构建自托管的企业网盘和云存储系统，支持多用户的文档协作、分享、设备同步。 ...",
+        "suggestedPrice": "10元/月",
+        "supplierId": 228399,
+        "supplierName": "长沙网久软件有限公司",
+        "tags": "企业,应用开发,Linux,Centos,PHP,LAMP"
+      },
+      {
+        "categoryId": 53616009,
+        "code": "Joomla! 内容管理系统( WAMP )",
+        "code1": "Joomla! 内容管理系统( WAMP )",
+        "deliveryWay": "镜像",
+        "imageUrl": "https://oss.aliyuncs.com/photogallery/photo/1904996544835414/5280/fab724de-da66-4548-9717-1a1d3ac6f887.png",
+        "operationSystem": "Windows2008 64位 标准版",
+        "score": "5.0",
+        "shortDescription": "由Websof9提供的Joomla3.7.5预装环境，可在<em>ECS</em>上一键安装。Joomla是全球三大开源内容管理系统之一（CMS），比肩WordPress和Drupal，占据全球5%的建站市场。 ...",
+        "suggestedPrice": "10元/月",
+        "supplierId": 228399,
+        "supplierName": "长沙网久软件有限公司",
+        "tags": "开发者,建站,Windows,Windows server 2008,PHP,WAMP,Joomla!"
+      },
+      {
+        "categoryId": 53690006,
+        "code": "Ubuntu 16.04 64位（含Webmin中文）",
+        "code1": "Ubuntu 16.04 64位（含Webmin中文）",
+        "deliveryWay": "镜像",
+        "imageUrl": "https://oss.aliyuncs.com/photogallery/photo/1904996544835414/4613/57259fc6-7086-42b8-9619-f688fd3eb310.png",
+        "score": "5.0",
+        "shortDescription": "由Websoft9提供Ubuntu 16.04+Webmin1.881（中文）镜像，可以一键安装到<em>ECS</em>。Webmin是知名的Linux可视化面板管理工具，100%免费开源，可轻松管理文件、配置域名、修改配置文件、备份数据等 ...",
+        "suggestedPrice": "10元/月",
+        "supplierId": 228399,
+        "supplierName": "长沙网久软件有限公司",
+        "tags": "站长,上云,Linux,Centos,LAMP,Webmin,Linux面板"
+      },
+      {
+        "categoryId": 53616009,
+        "code": "云·企业官网尊贵版（ECS）",
+        "code1": "云·企业官网尊贵版（ECS）",
+        "deliveryWay": "镜像",
+        "imageUrl": "https://photogallery.oss.aliyuncs.com/photo/1984723351411381/22286/727fc507-37b5-4b91-b706-8bbc2a765a88.jpg",
+        "operationSystem": "windows",
+        "score": "5.0",
+        "shortDescription": "【定制建站一条龙服务+阿里云独享服务器】由客户经理与设计师提供一对一服务，应用标准化全自动服务流程体系，帮助企业轻松拥有官方网站。该建站产品与<em>ECS</em>下单时同时购买，<em>ECS</em>最低配置1核1G即可。购买须知：请在购买<em>ECS</em>配置安全组时选择HTTP：80端口 ...",
+        "suggestedPrice": "998元/月",
+        "supplierId": 3587828,
+        "supplierName": "云梦-云市场自营店",
+        "tags": "企业,建站"
+      },
+      {
+        "categoryId": 56014009,
+        "code": "Zurmo 开源CRM系统（LAMP）",
+        "code1": "Zurmo 开源CRM系统（LAMP）",
+        "deliveryWay": "镜像",
+        "imageUrl": "https://oss.aliyuncs.com/photogallery/photo/1904996544835414/7716/6b100770-1f15-43c6-b99f-9b6c53c89e2d.png",
+        "operationSystem": "CentOS7.4 64位",
+        "score": "5.0",
+        "shortDescription": "由Websof9提供的Zurmo镜像是一个预安装环境，可在<em>ECS</em>上一键安装。Zurmo是一个开源的客户关系管理系统(CRM)，使用Yii框架、RedBeanPHP和Jquery实现，界面美观，功能全面 ...",
+        "suggestedPrice": "20元/月",
+        "supplierId": 228399,
+        "supplierName": "长沙网久软件有限公司",
+        "tags": "企业,上云,Linux,Centos,PHP,LAMP,ERP"
+      },
+      {
+        "categoryId": 56014009,
+        "code": "SuiteCRM，优质开源CRM",
+        "code1": "SuiteCRM，优质开源CRM",
+        "deliveryWay": "镜像",
+        "imageUrl": "https://oss.aliyuncs.com/photogallery/photo/1904996544835414/7760/0db05f1e-aa8a-490d-b8eb-093c43d93f7d.png",
+        "operationSystem": "CentOS7.3 64位",
+        "score": "5.0",
+        "shortDescription": "由Websof9提供的EspoCRM预装环境，可在<em>ECS</em>上一键安装。SuiteCRM是一个国际上屡获殊荣的企业级的、强大的、可定制的，免费的CRM系统。 ...",
+        "suggestedPrice": "20元/月",
+        "supplierId": 228399,
+        "supplierName": "长沙网久软件有限公司",
+        "tags": "企业,移动营销,Linux,Centos,PHP,LAMP,ERP"
+      },
+      {
+        "categoryId": 55528001,
+        "code": "Node.JS6 运行环境（Windows2008 | Nginx | Express）",
+        "code1": "Node.JS6 运行环境（Windows2008 | Nginx | Express）",
+        "deliveryWay": "镜像",
+        "imageUrl": "https://photogallery.oss.aliyuncs.com/photo/1904996544835414/7573/e03da499-c7e9-4784-867f-8789539e6a82.png",
+        "score": "5.0",
+        "shortDescription": "Websoft9提供Node.JS镜像，预装了NodeJS 6.14,PM2 2.10,Express框架,Yarn1.7,MySQL5.6,MongoDB4.0,Nginx1.14，任何<em>ECS</em>用户可以一键获取，用于快速部署Node.JS应用程序。 ...",
+        "suggestedPrice": "0元/月",
+        "supplierId": 228399,
+        "supplierName": "长沙网久软件有限公司",
+        "tags": "企业,上云,Windows,Windows server 2008,Node.js,Nginx,MySQL"
+      },
+      {
+        "categoryId": 56014009,
+        "code": "ERPNext 中小企业开源ERP系统（Ubuntu16.04）",
+        "code1": "ERPNext 中小企业开源ERP系统（Ubuntu16.04）",
+        "deliveryWay": "镜像",
+        "imageUrl": "https://oss.aliyuncs.com/photogallery/photo/1904996544835414/7259/cdee958f-bcfa-4362-ad2f-543e01140e60.png",
+        "score": "5.0",
+        "shortDescription": "由Websof9提供的Vtiger CRM预装环境，可在<em>ECS</em>上一键安装。ERPNext是全球化的开源ERP系统，使用Python语言开发，支持70+种语言，拥有150+国家的用户。界面友好，入门简单，包括：财务、采购、销售和库存管理、POS系统、制造管理、资产管理等功能。 ...",
+        "suggestedPrice": "10元/月",
+        "supplierId": 228399,
+        "supplierName": "长沙网久软件有限公司",
+        "tags": "企业,上云,Linux,Ubuntu,Python,ERP"
+      },
+      {
+        "categoryId": 55530001,
+        "code": "Gitlab-CE10.1.0 代码托管系统（Ubuntu16）",
+        "code1": "Gitlab-CE10.1.0 代码托管系统（Ubuntu16）",
+        "deliveryWay": "镜像",
+        "imageUrl": "https://oss.aliyuncs.com/photogallery/photo/1904996544835414/17080/cd8053ae-2666-4716-9e4d-1b754f24fbc2.png",
+        "operationSystem": "Ubuntu16.04 64位",
+        "score": "5.0",
+        "shortDescription": "由Websof9提供的Omnibus Gitlab镜像是一个预安装环境，可在<em>ECS</em>上一键安装。Gitlab是一个开源的Git代码仓库系统，用于构建私有代码托管平台，基于Rails开发，速度快、安全稳定 ...",
+        "suggestedPrice": "10元/月",
+        "supplierId": 228399,
+        "supplierName": "长沙网久软件有限公司",
+        "tags": "开发者,应用开发,Linux,Ubuntu,Ruby,Nginx,PostgreSQL"
+      }
+    ],
+    "requestId": "5A85CB8D-EF2F-46DA-91E2-8AF75900F1BF",
+    "totalCount": 75
+  }
+}

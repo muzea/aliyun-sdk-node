@@ -1,0 +1,59 @@
+{
+  "name": "DescribeDBInstanceHAConfig",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDBInstanceHAConfig接口查询RDS实例高可用模式和数据复制方式。",
+  "abc_id": 26244,
+  "timeout": 35000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "dBInstanceId": "rm-wz96j6kgg4tn1ytiw",
+    "hAMode": "RPO",
+    "hostInstanceInfos": [
+      {
+        "logSyncTime": "2018-01-19T12:33:06Z",
+        "nodeId": "3397027",
+        "nodeType": "Slave",
+        "regionId": "cn-shenzhen",
+        "syncStatus": "Syncing",
+        "zoneId": "cn-shenzhen-b"
+      },
+      {
+        "logSyncTime": "2018-01-19T12:33:06Z",
+        "nodeId": "3397029",
+        "nodeType": "Master",
+        "regionId": "cn-shenzhen",
+        "syncStatus": "Syncing",
+        "zoneId": "cn-shenzhen-a"
+      }
+    ],
+    "requestId": "F051AEB2-7655-4F0A-BC46-7E0C18A7910C",
+    "syncMode": "Semi-sync"
+  }
+}

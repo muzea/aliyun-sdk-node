@@ -1,0 +1,53 @@
+{
+  "name": "ModifyAccessGroup",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "ModifyAccessGroup用于修改权限组。 ",
+  "abc_id": 62634,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AccessGroupName": {
+      "name": "AccessGroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "classic-test",
+      "description_cn": "权限组名称"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "classic-test",
+      "description_cn": "权限组描述，默认和名称相同，长度为 2~128 个英文或中文字符。必须以大小字母或中文开头，不能以 http:// 和 https:// 开头。可以包含数字、半角冒号（:）、下划线（_）或者连字符（-）"
+    },
+    "FileSystemType": {
+      "name": "FileSystemType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "standard",
+      "description_cn": "文件系统类型，可选值：standard、extreme，默认值：standard"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,102 @@
+{
+  "name": "DescribePropertyProcItem",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用该接口获取进程信息列表。",
+  "abc_id": 131006,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "ForceFlush": {
+      "name": "ForceFlush",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否强制刷新待查询数据。"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "指定待查询的进程名称。"
+    },
+    "CurrentPage": {
+      "name": "CurrentPage",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "指定返回结果的当前页码。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "指定列表每页显示数据条数。"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "PropertyItems": [
+        {
+          "Name": "(sd-pam)",
+          "Count": 6
+        },
+        {
+          "Name": ".ss",
+          "Count": 1
+        },
+        {
+          "Name": ".sshd",
+          "Count": 3
+        },
+        {
+          "Name": "360Inst_BSFree.exe",
+          "Count": 1
+        },
+        {
+          "Name": "8888",
+          "Count": 1
+        }
+      ],
+      "PageInfo": {
+        "Count": 5,
+        "PageSize": 5,
+        "TotalCount": 372,
+        "CurrentPage": 1
+      }
+    },
+    "success": true,
+    "requestId": null,
+    "message": "successful"
+  }
+}

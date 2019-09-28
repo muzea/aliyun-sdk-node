@@ -1,0 +1,41 @@
+{
+  "name": "GetUser",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用GetUser接口获取用户的详细信息。",
+  "abc_id": 28681,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "UserName": {
+      "name": "UserName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "zhangq****",
+      "description_cn": "指定用户名。\n\n格式：`^[a-zA-Z0-9\\.@\\-_]+$`。"
+    }
+  },
+  "res": {
+    "RequestId": "2D69A58F-345C-4FDE-88E4-BF5189484043",
+    "User": {
+      "UserId": "1227489245380721",
+      "UserName": "zhangqiang",
+      "DisplayName": "张强",
+      "MobilePhone": "86-18600008888",
+      "Email": "zhangqiang@example.com",
+      "Comments": "这是一位云计算工程师",
+      "CreateDate": "2015-01-23T12:33:18Z",
+      "UpdateDate": "2015-02-11T03:15:21Z",
+      "LastLoginDate": "2015-01-23T12:33:18Z"
+    }
+  }
+}

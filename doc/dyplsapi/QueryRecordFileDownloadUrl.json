@@ -1,0 +1,78 @@
+{
+  "name": "QueryRecordFileDownloadUrl",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用接口QueryRecordFileDownloadUrl获取录音文件的下载链接。",
+  "abc_id": 110264,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CallId": {
+      "name": "CallId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "abcedf1234",
+      "description_cn": "呼叫记录ID，用于标识一条通话记录。\n请登录[号码隐私保护控制台](https://dypls.console.aliyun.com/dypls.htm#/account)，在**呼叫记录查询**中查看**呼叫记录ID**。"
+    },
+    "PoolKey": {
+      "name": "PoolKey",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "FC123456",
+      "description_cn": "号码池Key。请登录[号码隐私保护控制台](https://dypls.console.aliyun.com/dypls.htm#/account)，在**号码池管理**中查看号码池Key。"
+    },
+    "CallTime": {
+      "name": "CallTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "2019-03-05 12:00:00\t",
+      "description_cn": "呼叫记录中的呼叫发起时间。请登录[号码隐私保护控制台](https://dypls.console.aliyun.com/dypls.htm#/account)，在**呼叫记录查询**中查看**呼叫发起时间**，或者在话单回执消息中查看call_time字段。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "ProductType": {
+      "name": "ProductType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "AXB_170",
+      "description_cn": "产品类型。\n\n> 适用于原阿里大于客户，阿里云用户可忽略。"
+    }
+  },
+  "res": {
+    "Message": "OK",
+    "RequestId": "1AB3CEF7-DCBE-488C-9C33-D180982CE031",
+    "DownloadUrl": "http://secret-axb-record-files.oss-cn-shanghai.aliyuncs.com/1000000820257625_66647243838006067251551752068865.mp3?Expires=1551759607&OSSAccessKeyId=LTAI27GqAW1VrcQA&Signature=tK6Yq9KusU4n%2BZQWXI7lg4/WmEA%3D",
+    "Code": "OK"
+  }
+}

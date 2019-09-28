@@ -1,0 +1,55 @@
+{
+  "name": "DescribeSecurityIps",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeSecurityIps查询允许访问Redis实例的IP名单。",
+  "abc_id": 63889,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "r-bp1xxxxxxxxxxxxx",
+      "description_cn": "目标实例的ID。"
+    }
+  },
+  "res": {
+    "SecurityIpGroups": {
+      "SecurityIpGroup": [
+        {
+          "SecurityIpList": "127.0.0.1",
+          "SecurityIpGroupAttribute": "",
+          "SecurityIpGroupName": "default"
+        },
+        {
+          "SecurityIpList": "100.xxx.xxx.xxx/24,10.xxx.xxx.xxx",
+          "SecurityIpGroupAttribute": "hidden",
+          "SecurityIpGroupName": "rds_replica_group"
+        }
+      ]
+    },
+    "RequestId": "EFC9161F-15E3-4A6E-8A99-C09916D1F464"
+  }
+}

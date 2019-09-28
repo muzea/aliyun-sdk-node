@@ -1,0 +1,51 @@
+{
+  "name": "ListMultipartUploads",
+  "protocol": "HTTP|HTTPS",
+  "method": "GET",
+  "path": "/",
+  "timeout": null,
+  "reqFormat": {
+    "BucketName": {
+      "name": "BucketName",
+      "position": "domain",
+      "required": true
+    },
+    "uploads": {
+      "name": "uploads",
+      "position": "query",
+      "required": true,
+      "default": ""
+    },
+    "delimiter": {
+      "name": "delimiter",
+      "position": "query",
+      "required": false
+    },
+    "max-uploads": {
+      "name": "max-uploads",
+      "position": "query",
+      "required": false
+    },
+    "key-marker": {
+      "name": "key-marker",
+      "position": "query",
+      "required": false
+    },
+    "prefix": {
+      "name": "prefix",
+      "position": "query",
+      "required": false
+    },
+    "upload-id-marker": {
+      "name": "upload-id-marker",
+      "position": "query",
+      "required": false
+    },
+    "encoding-type": {
+      "name": "encoding-type",
+      "position": "query",
+      "required": false
+    }
+  },
+  "res": {}
+}

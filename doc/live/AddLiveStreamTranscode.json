@@ -1,0 +1,58 @@
+{
+  "name": "AddLiveStreamTranscode",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AddLiveStreamTranscode添加转码配置信息。",
+  "abc_id": 45039,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "App": {
+      "name": "App",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "app",
+      "description_cn": "直播流所属应用名称。"
+    },
+    "Template": {
+      "name": "Template",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "lld",
+      "description_cn": "转码模版。目前有：\n\n- **标准质量模板**：lld、lsd、lhd、lud\n- **高品质（窄带高清™转码）模板**：ld、sd、hd、ud"
+    },
+    "Domain": {
+      "name": "Domain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "play.aliyunlive.com",
+      "description_cn": "您的加速域名。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

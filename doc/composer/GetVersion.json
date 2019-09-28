@@ -1,0 +1,40 @@
+{
+  "name": "GetVersion",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询某个工作流的某个特定版本信息",
+  "abc_id": 127654,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "FlowId": {
+      "name": "FlowId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "lc-abcdefg",
+      "description_cn": "需要查询的工作流编排实例的 ID"
+    },
+    "VersionId": {
+      "name": "VersionId",
+      "type": "Integer",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "10",
+      "description_cn": "需要查询的版本"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,172 @@
+{
+  "name": "DescribeRenewalPrice",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": null,
+  "abc_id": 61472,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域名称ID，如“cn-hangzhou”。"
+    },
+    "TimeType": {
+      "name": "TimeType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "Year",
+      "description_cn": "取值为Year、Month。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ETnLKlblzczshOTUbOCziJZNwHlYBQ",
+      "description_cn": "用于保证请求的幂等性。"
+    },
+    "CommodityCode": {
+      "name": "CommodityCode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rds",
+      "description_cn": "商品编码。"
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rm-bp1842vmucoa5w874",
+      "description_cn": "实例名。"
+    },
+    "UsedTime": {
+      "name": "UsedTime",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1",
+      "description_cn": "购买时长，取值范围如下：<ul><li>Year[1,3]</li><li>Month[1,10]</li></ul>"
+    },
+    "PayType": {
+      "name": "PayType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Postpaid",
+      "description_cn": "付费类型。Postpaid：后付费实例；Prepaid：预付费实例。"
+    },
+    "DBInstanceClass": {
+      "name": "DBInstanceClass",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rds.mys2.small",
+      "description_cn": "当前实例规格，默认为当前实例规格。"
+    },
+    "Quantity": {
+      "name": "Quantity",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "无"
+    },
+    "OrderType": {
+      "name": "OrderType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "无",
+      "description_cn": "无"
+    },
+    "PromotionCode": {
+      "name": "PromotionCode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "无",
+      "description_cn": "无"
+    },
+    "BusinessInfo": {
+      "name": "BusinessInfo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "无",
+      "description_cn": "无"
+    }
+  },
+  "res": {
+    "priceInfo": {
+      "activityInfo": {},
+      "coupons": [],
+      "currency": "CNY",
+      "discountPrice": 4132.8,
+      "originalPrice": 4132.8,
+      "ruleIds": [
+        "1001199213"
+      ],
+      "tradePrice": 0
+    },
+    "requestId": "AC983010-6CEE-42C7-A20E-1617D1BE7260",
+    "rules": [
+      {
+        "name": "",
+        "ruleId": 1001199213
+      }
+    ]
+  }
+}

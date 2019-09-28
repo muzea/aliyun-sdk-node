@@ -1,0 +1,71 @@
+{
+  "name": "DescribeContactList",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询报警联系人列表。",
+  "abc_id": 114926,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "每页显示的记录条数，默认100。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "当前页码，默认1."
+    },
+    "ContactName": {
+      "name": "ContactName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "我的报警联系人",
+      "description_cn": "报警联系人姓名。只支持精确查询，暂不支持模糊查询。"
+    }
+  },
+  "res": {
+    "RequestId": "06D5ECC2-B9BE-42A4-8FA3-1A610FB08B83",
+    "Contacts": {
+      "Contact": [
+        {
+          "Channels": {
+            "SMS": "1333333****",
+            "Mail": "xxxxx@aliyun.com"
+          },
+          "Name": "关某",
+          "CreateTime": 1553006761000,
+          "UpdateTime": 1553084361000
+        }
+      ]
+    },
+    "Total": 1,
+    "Success": true,
+    "Code": "200"
+  }
+}

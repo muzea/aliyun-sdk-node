@@ -1,0 +1,84 @@
+{
+  "name": "CreateIpv6Gateway",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateIpv6Gateway接口创建IPv6网关。",
+  "abc_id": 102214,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-huhehaote",
+      "description_cn": "IPv6网关的地域。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "VpcId": {
+      "name": "VpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "vpc-123456xxxxxxxx",
+      "description_cn": "要开通IPv6网关的VPC ID。"
+    },
+    "Spec": {
+      "name": "Spec",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Small",
+      "description_cn": "IPv6网关的规格。取值：\n\n- **Small**（默认值）：免费版\n\n- **Medium**：企业版\n\n- **Large**：企业增强版\n\n不同规格的IPv6网关的转发能力都不同。详细信息，请参见[IPv6网关规格](~~98926~~)。\n"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ipv6GW",
+      "description_cn": "IPv6网关的名称。\n\n长度为2-128个字符，必须以字母或中文开头，可包含数字、点号(.)、下划线(_)和短橫线(-)，但不能以`http://`或`https://`开头。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ipv6gatewayforVPC1",
+      "description_cn": "IPv6网关的描述信息。\n\n长度为2-256个字符，必须以字母或中文开头，可包含数字、点号(.)、下划线(_)和短橫线(-)，但不能以`http://`或`https://`开头。\n"
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456",
+      "description_cn": "客户端token，用于保证请求的幂等性。\n\n由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "0ED8D006-F706-4D23-88ED-E11ED28DCAC0",
+    "Ipv6GatewayId": "ipv6gw-hp3y0l3ln89j8fv0m5som"
+  }
+}

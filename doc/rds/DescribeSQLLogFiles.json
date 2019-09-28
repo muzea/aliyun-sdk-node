@@ -1,0 +1,80 @@
+{
+  "name": "DescribeSQLLogFiles",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeSQLLogFiles接口查询SQL审计文件列表。",
+  "abc_id": 26295,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "FileName": {
+      "name": "FileName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "custinsxxxxx.csv",
+      "description_cn": "审计文件名称。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "每页记录数，取值：**1-50**。\n\n默认值：**20**。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页码，取值：**1-100000**。\n默认值：**1**。"
+    }
+  },
+  "res": {
+    "items": [
+      {
+        "FileID": "ZUBaS964T3OYtxxxxxxxx",
+        "LogStatus": "Success",
+        "LogStartTime": "2015-05-23T07:00:00Z",
+        "LogEndTime": "2015-05-23T07:00:00Z",
+        "LogDownloadURL": "xxxxxx.cn-hangzhou.oss.aliyun-inc.com/xxxxx",
+        "LogSize": "257"
+      }
+    ],
+    "pageRecordCount": 1,
+    "requestId": " 1AD222E9-E606-4A42-BF6D-8A4442913CEF",
+    "totalRecordCount": 1
+  }
+}

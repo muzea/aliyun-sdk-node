@@ -1,0 +1,751 @@
+{
+  "name": "RunInstances",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用RunInstances创建一台或多台按量付费或者包年包月ECS实例。",
+  "abc_id": 63440,
+  "timeout": 80000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例所属的地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "ImageId": {
+      "name": "ImageId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "win2008r2_64_ent_sp1_en-us_40G_alibase_20170915.vhd",
+      "description_cn": "镜像ID，启动实例时选择的镜像资源。您可以通过[DescribeImages](~~25534~~)查询您可以使用的镜像资源。如果您不指定`LaunchTemplateId`或`LaunchTemplateName`以确定启动模板，`ImageId`为必选参数。"
+    },
+    "InstanceType": {
+      "name": "InstanceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ecs.g5.large",
+      "description_cn": "实例的资源规格。更多详情，请参见[实例规格族](~~25378~~)，也可以调用[DescribeInstanceTypes](~~25620~~)接口获得最新的规格表。\n\n如果您不指定`LaunchTemplateId`或`LaunchTemplateName`以确定启动模板，`InstanceType`为必选参数。  "
+    },
+    "SecurityGroupId": {
+      "name": "SecurityGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sg-bp15ed6xe1yxeycg7o***",
+      "description_cn": "指定新创建实例所属于的安全组ID。同一个安全组内的实例之间可以互相访问，一个安全组最多能管理1000台实例。\n\n> SecurityGroupId决定了实例的网络类型，例如，如果指定安全组的网络类型为专有网络VPC，实例则为VPC类型，并同时需要指定参数VSwitchId。\n\n如果您不指定`LaunchTemplateId`或`LaunchTemplateName`以确定启动模板，`SecurityGroupId`为必选参数。"
+    },
+    "SecurityGroupIds": {
+      "name": "SecurityGroupIds",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "VSwitchId": {
+      "name": "VSwitchId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vsw-bp1s5fnvk4gn2tws03***",
+      "description_cn": "虚拟交换机ID。如果您创建的是VPC类型ECS实例，需要指定虚拟交换机ID。"
+    },
+    "InstanceName": {
+      "name": "InstanceName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "k8s-node-[1,4]-alibabacloud",
+      "description_cn": "实例名称。长度为2~128个字符，必须以大小字母或中文开头，不能以http://和https://开头。可以包含中文、英文、数字、半角冒号（:）、下划线（_）、点号（.）或者连字符（-）。默认值为实例的`InstanceId`。\n\n> 创建多台ECS实例时，您可以使用`UniqueSuffix`为这些实例设置不同的实例名称。您也可以使用`name_prefix[begin_number,bits]name_suffix`的命名格式设置有序的实例名称，例如，设置`InstanceName`取值为`k8s-node-[1,4]-alibabacloud`，则第一台ECS实例的实例名称为`k8s-node-0001-alibabacloud` 。详情请参见[API FAQ](~~122617#howToAddSequentialSuffix~~)。\n\n当实例名称或主机名称不设置命名后缀`name_suffix`，即命名格式为`name_prefix[begin_number,bits]`时，`UniqueSuffix`不生效。例如，当`InstanceName`取值为`instance-[99,3]`，`UniqueSuffix`取值为`true`时，生效的实例名称为`instance099`，而不是`instance099001`。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FinaceDept",
+      "description_cn": "实例的描述。长度为2~256个英文或中文字符，不能以 http:// 和 https:// 开头。"
+    },
+    "InternetMaxBandwidthIn": {
+      "name": "InternetMaxBandwidthIn",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "200",
+      "description_cn": "公网入带宽最大值，单位为Mbit/s。取值范围：1~200\n\n默认值：200 "
+    },
+    "InternetMaxBandwidthOut": {
+      "name": "InternetMaxBandwidthOut",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "5",
+      "description_cn": "公网出带宽最大值，单位为Mbit/s。取值范围：0~100\n\n默认值：0 "
+    },
+    "HostName": {
+      "name": "HostName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "k8s-node-[1,4]-ecshost",
+      "description_cn": "实例主机名称。\n\n-   点号（.）和短横线（-）不能作为首尾字符，更不能连续使用。\n-   Windows实例：字符长度为2~15，不支持点号（.），不能全是数字。允许大小写英文字母、数字和短横线（-）。\n-   其他类型实例（Linux等）：字符长度为2~64，支持多个点号（.），点之间为一段，每段允许大小写英文字母、数字和短横线（-）。\n\n> 创建多台ECS实例时，您可以使用`UniqueSuffix`为这些实例设置不同的主机名称。您也可以使用`name_prefix[begin_number,bits]name_suffix`的命名格式设置有序的主机名称，例如，设置`HostName`取值为`k8s-node-[1,4]-ecshost`，则第一台ECS实例的主机名称为`k8s-node-0001-ecshost` 。详情请参见[API FAQ](~~122617#howToAddSequentialSuffix~~)。\n\n当实例名称或主机名称不设置命名后缀`name_suffix`，即命名格式为`name_prefix[begin_number,bits]`时，`UniqueSuffix`不生效。例如，当`InstanceName`取值为`instance-[99,3]`，`UniqueSuffix`取值为`true`时，生效的实例名称为`instance099`，而不是`instance099001`。"
+    },
+    "UniqueSuffix": {
+      "name": "UniqueSuffix",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否为`HostName`和`InstanceName`添加有序后缀，有序后缀从001开始递增，最大不能超过999。例如，`LocalHost001`，`LocalHost002`和`MyInstance001`，`MyInstance002`。默认值：false"
+    },
+    "Password": {
+      "name": "Password",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "EcsV587!",
+      "description_cn": "实例的密码。长度为8至30个字符，必须同时包含大小写英文字母、数字和特殊符号中的三类字符。特殊符号可以是：\n\n```\n()`~!@#$%^&*-_+=|{}[]:;'<>,.?/\n```\n\n其中，Windows实例不能以斜线号（/）为密码首字符。\n\n> 如果传入`Password`参数，建议您使用HTTPS协议发送请求，避免密码泄露。"
+    },
+    "PasswordInherit": {
+      "name": "PasswordInherit",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否使用镜像预设的密码。使用该参数时，Password参数必须为空，同时您需要确保使用的镜像已经设置了密码。 "
+    },
+    "ZoneId": {
+      "name": "ZoneId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou-g",
+      "description_cn": "实例所属的可用区编号，您可以调用[DescribeZones](~~25610~~)获取可用区列表。\n\n默认值：系统随机选择。"
+    },
+    "InternetChargeType": {
+      "name": "InternetChargeType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PayByTraffic",
+      "description_cn": "网络计费类型。取值范围：\n\n- <props=\"china\">PayByBandwidth：按固定带宽计费</props>\n- PayByTraffic（默认）：按使用流量计费"
+    },
+    "SystemDisk.Size": {
+      "name": "SystemDisk.Size",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "40",
+      "description_cn": "系统盘大小，单位为GiB。取值范围：20~500\n\n该参数的取值必须大于或者等于max{20, ImageSize}。默认值：max{40, 参数ImageId对应的镜像大小}"
+    },
+    "SystemDisk.Category": {
+      "name": "SystemDisk.Category",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cloud_ssd",
+      "description_cn": "系统盘的云盘种类。[已停售的实例规格](~~55263~~)且非I/O优化实例默认值为cloud，否则默认值为cloud_efficiency。取值范围：\n\n-   cloud：普通云盘\n-   cloud_efficiency：高效云盘\n-   cloud_ssd：SSD云盘\n-   ephemeral_ssd：本地SSD盘\n-   cloud_essd：ESSD云盘"
+    },
+    "SystemDisk.DiskName": {
+      "name": "SystemDisk.DiskName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cloud_ssdSystem",
+      "description_cn": "系统盘名称。长度为2~128个英文或中文字符。必须以大小字母或中文开头，不能以 http:// 和 https:// 开头。可以包含数字、半角冒号（:）、下划线（_）或者连字符（-）。默认值：空。 "
+    },
+    "SystemDisk.Description": {
+      "name": "SystemDisk.Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FinanceDept",
+      "description_cn": "系统盘的描述。长度为2~256个英文或中文字符，不能以 http:// 和 https:// 开头。"
+    },
+    "SystemDisk.PerformanceLevel": {
+      "name": "SystemDisk.PerformanceLevel",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PL1",
+      "description_cn": "创建ESSD云盘作为系统盘使用时，设置云盘的性能等级。取值范围：\n\n- PL1（默认）：单盘最高随机读写IOPS 5万。\n- PL2：单盘最高随机读写IOPS 10万。\n- PL3：单盘最高随机读写IOPS 100万。\n\n有关如何选择ESSD性能等级，请参见[ESSD云盘](~~122389~~)。"
+    },
+    "DataDisk": {
+      "name": "DataDisk",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Size",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "SnapshotId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Category",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Encrypted",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "KMSKeyId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "DiskName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Description",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Device",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "DeleteWithInstance",
+          "type": "Boolean",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "PerformanceLevel",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "IoOptimized": {
+      "name": "IoOptimized",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "optimized",
+      "description_cn": "是否为I/O优化实例。[已停售的实例规格](~~55263~~)实例默认值是none，其他实例规格默认值是optimized。取值范围：\n\n- none：非I/O优化\n- optimized：I/O优化"
+    },
+    "NetworkInterface": {
+      "name": "NetworkInterface",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "PrimaryIpAddress",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "VSwitchId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "SecurityGroupId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "NetworkInterfaceName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Description",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "UserData": {
+      "name": "UserData",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ZWNobyBoZWxsbyBlY3Mh",
+      "description_cn": "实例自定义数据。需要以Base64方式编码，原始数据最多为16 KB。"
+    },
+    "KeyPairName": {
+      "name": "KeyPairName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Instancetest",
+      "description_cn": "密钥对名称。\n\n-   Windows实例，忽略该参数。默认为空。即使填写了该参数，仍旧只执行`Password`的内容。\n-   Linux实例的密码登录方式会被初始化成禁止。"
+    },
+    "RamRoleName": {
+      "name": "RamRoleName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FinanceDept",
+      "description_cn": "实例RAM角色名称。您可以使用RAM API [ListRoles](~~28713~~)查询您已创建的实例RAM角色。"
+    },
+    "Amount": {
+      "name": "Amount",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3",
+      "description_cn": "指定创建ECS实例的数量。取值范围：1~100\n\n默认值：1 "
+    },
+    "MinAmount": {
+      "name": "MinAmount",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "指定ECS实例最小购买数量。取值范围：1~100\n\n- 当ECS库存数量小于最小购买数量，会创建失败。\n- 当ECS库存数量大于等于最小购买数量，按照库存数量创建。"
+    },
+    "AutoReleaseTime": {
+      "name": "AutoReleaseTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2018-01-01T12:05:00Z",
+      "description_cn": "自动释放时间。按照[ISO8601](~~25696~~)标准表示，使用UTC +0时间。格式为：yyyy-MM-ddTHH:mm:ssZ。\n\n- 如果秒（`ss`）取值不是`00`，则自动取为当前分钟（`mm`）开始时。\n\n- 最短释放时间为当前时间半小时之后。\n\n- 最长释放时间不能超过当前时间三年。"
+    },
+    "SpotStrategy": {
+      "name": "SpotStrategy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "NoSpot",
+      "description_cn": "按量实例的抢占策略。当参数`InstanceChargeType`取值为`PostPaid`时生效。取值范围：\n\n-   NoSpot（默认）：正常按量付费实例。\n-   SpotWithPriceLimit：设置上限价格的抢占式实例。\n-   SpotAsPriceGo：系统自动出价，跟随当前市场实际价格。"
+    },
+    "SpotDuration": {
+      "name": "SpotDuration",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "SpotPriceLimit": {
+      "name": "SpotPriceLimit",
+      "type": "Float",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0.97",
+      "description_cn": "设置实例的每小时最高价格。支持最大3位小数，参数`SpotStrategy`取值为`SpotWithPriceLimit`时生效。 "
+    },
+    "SpotInterruptionBehavior": {
+      "name": "SpotInterruptionBehavior",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Terminate",
+      "description_cn": "抢占实例中断模式。目前仅支持Terminate（默认）直接释放实例。"
+    },
+    "SecurityEnhancementStrategy": {
+      "name": "SecurityEnhancementStrategy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Active",
+      "description_cn": "是否开启安全加固。取值范围：\n\n-   Active：启用安全加固，只对公共镜像生效。\n-   Deactive：不启用安全加固，对所有镜像类型生效。"
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123e4567-e89b-12d3-a456-426655440000",
+      "description_cn": "保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。**ClientToken**只支持ASCII字符，且不能超过64个字符。更多详情，请参见[如何保证幂等性](~~25693~~)。"
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "HpcClusterId": {
+      "name": "HpcClusterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "hpc-clusterid",
+      "description_cn": "实例所属的EHPC集群ID。 "
+    },
+    "DryRun": {
+      "name": "DryRun",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否只预检此次请求。\n\n-   true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数、请求格式、业务限制和ECS库存。如果检查不通过，则返回对应错误。如果检查通过，则返回错误码`DryRunOperation`。\n-   false（默认）：发送正常请求，通过检查后直接创建实例。"
+    },
+    "DedicatedHostId": {
+      "name": "DedicatedHostId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dh-dedicatedhost1",
+      "description_cn": "是否在专有宿主机上创建ECS实例。您可以通过[DescribeDedicatedHosts](~~94572~~)查询专有宿主机ID列表。\n\n由于专有宿主机不支持创建抢占式实例，指定`DedicatedHostId`参数后，会自动忽略请求中的`SpotStrategy`和`SpotPriceLimit`设置。"
+    },
+    "LaunchTemplateId": {
+      "name": "LaunchTemplateId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "lt-bp1apo0bbbkuy0rj3***",
+      "description_cn": "启动模板ID。更多详情，请调用[DescribeLaunchTemplates](~~73759~~)。\n\n您必须指定`LaunchTemplateId`或`LaunchTemplateName`以确定启动模板。"
+    },
+    "LaunchTemplateName": {
+      "name": "LaunchTemplateName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "JoshuaWinPostPaid",
+      "description_cn": "启动模板名称。您必须指定`LaunchTemplateId`或`LaunchTemplateName`以确定启动模板。 "
+    },
+    "LaunchTemplateVersion": {
+      "name": "LaunchTemplateVersion",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "3",
+      "description_cn": "启动模板版本。如果您指定了`LaunchTemplateId`或`LaunchTemplateName`而不指定启动模板版本号，则采用默认版本。 "
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rg-resourcegroupid1",
+      "description_cn": "实例所在的企业资源组ID。"
+    },
+    "Period": {
+      "name": "Period",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "购买资源的时长，单位为：月。当参数`InstanceChargeType`取值为`PrePaid`时才生效且为必选值。一旦指定了`DedicatedHostId`，则取值范围不能超过专有宿主机的订阅时长。取值范围：\n\n-   `PeriodUnit=Week`时，Period取值：{“1”, “2”, “3”, “4”}\n-   `PeriodUnit=Month`时，Period取值：{ “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}"
+    },
+    "PeriodUnit": {
+      "name": "PeriodUnit",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Month",
+      "description_cn": "购买资源的时长。可选值：\n\n- Week\n- Month（默认）"
+    },
+    "AutoRenew": {
+      "name": "AutoRenew",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否要自动续费。当参数`InstanceChargeType`取值`PrePaid`时才生效。取值范围：\n\n-   True：自动续费。\n-   False（默认）：不自动续费。"
+    },
+    "AutoRenewPeriod": {
+      "name": "AutoRenewPeriod",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "单次自动续费的续费时长。取值范围： \n         \n- `PeriodUnit=Week`时：{“1”, “2”, “3”}  \n- `PeriodUnit=Month`时：{“1”, “2”, “3”, “6”, “12”, \"24\", \"36\", \"48\", \"60\"}  \n\n默认值：1 "
+    },
+    "InstanceChargeType": {
+      "name": "InstanceChargeType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PrePaid",
+      "description_cn": "实例的付费方式。取值范围：\n\n-   PrePaid：包年包月。\n-   PostPaid（默认）：按量付费。\n\n<props=\"china\">选择包年包月时，您必须确认自己的账号支持余额支付或者信用支付，否则将返回`InvalidPayMethod`的错误提示。</props>\n\n<props=\"intl\">选择包年包月时，您必须确认自己的账号支持信用支付，否则将返回`InvalidPayMethod`的错误提示。</props>"
+    },
+    "DeploymentSetId": {
+      "name": "DeploymentSetId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ds-bp1brhwhoqinyjd6t***",
+      "description_cn": "部署集ID。"
+    },
+    "PrivateIpAddress": {
+      "name": "PrivateIpAddress",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "172.16.236.14X",
+      "description_cn": "实例私网IP地址。该IP地址必须为VSwitchId网段的子集网址。 \n\n> 设置`PrivateIpAddress`时，`Amount`参数取值只能为1。 "
+    },
+    "CreditSpecification": {
+      "name": "CreditSpecification",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Standard",
+      "description_cn": "修改t5突发性能实例的运行模式。取值范围：\n\n- Standard：标准模式，实例性能请参见[什么是突发性能实例](~~59977~~)下的性能约束模式章节。\n- Unlimited：无性能约束模式，实例性能请参见[什么是突发性能实例](~~59977~~)下的无性能约束模式章节。\n\n默认值：无。"
+    },
+    "Ipv6Address": {
+      "name": "Ipv6Address",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "Ipv6AddressCount": {
+      "name": "Ipv6AddressCount",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "为弹性网卡指定随机生成的IPv6地址数量。 \n         \n> 您不能同时指定参数`Ipv6Addresses.N`和`Ipv6AddressCount`。 "
+    },
+    "DeletionProtection": {
+      "name": "DeletionProtection",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "实例释放保护属性，指定是否支持通过控制台或API（[DeleteInstance](~~25507~~)）释放实例。\n\n-   true：开启实例释放保护。\n-   false（默认）：关闭实例释放保护。\n\n> 该属性仅适用于按量付费实例，且只能限制手动释放操作，对系统释放操作不生效。"
+    },
+    "HibernationConfigured": {
+      "name": "HibernationConfigured",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "CapacityReservationId": {
+      "name": "CapacityReservationId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "CapacityReservationPreference": {
+      "name": "CapacityReservationPreference",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Affinity": {
+      "name": "Affinity",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "default",
+      "description_cn": "专有宿主机实例是否与专有宿主机关联。取值范围：\n\n- default：实例不与专有宿主机关联。已开启停机不收费功能的实例，停机后再次启动时，若原专有宿主机可用资源不足，则实例被放置在自动部署资源池的其它专有宿主机上。\n\n- host：实例与专有宿主机关联。已开启停机不收费功能的实例，停机后再次启动时，仍放置在原专有宿主机上。若原专有宿主机可用资源不足，则实例重启失败。\n\n默认值：default"
+    },
+    "Tenancy": {
+      "name": "Tenancy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "default",
+      "description_cn": "是否在专有宿主机上创建实例。取值范围：\n\n- default：创建非专有宿主机实例。\n\n- host：创建专有宿主机实例。若您不指定`DedicatedHostId`，则由阿里云自动选择专有宿主机放置实例。\n\n默认值：default"
+    },
+    "StorageSetId": {
+      "name": "StorageSetId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "hide-秦锐"
+    },
+    "StorageSetPartitionNumber": {
+      "name": "StorageSetPartitionNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0000"
+    }
+  },
+  "res": {
+    "InstanceIdSets": {
+      "InstanceIdSet": [
+        "i-instanceid1",
+        "i-instanceid2",
+        "i-instanceid3"
+      ]
+    },
+    "RequestId": "04F0F334-1335-436C-A1D7-6C044FE73368"
+  }
+}

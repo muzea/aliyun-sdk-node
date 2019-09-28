@@ -1,0 +1,132 @@
+{
+  "name": "DescribePropertyUserDetail",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用该接口获取账号列表中一个账号的详细信息。",
+  "abc_id": 131014,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Remark": {
+      "name": "Remark",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0.0.0.0",
+      "description_cn": "服务器名称或IP。"
+    },
+    "User": {
+      "name": "User",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "指定待查询的账户名称。"
+    },
+    "IsRoot": {
+      "name": "IsRoot",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "是否ROOT权限。\t\n\n- **0**：否\n- **1**：是"
+    },
+    "Uuid": {
+      "name": "Uuid",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "50d213b4-3a35-427a-b8a5-04b0c7e1f4d2",
+      "description_cn": "指定待查询的资产UUID。"
+    },
+    "CurrentPage": {
+      "name": "CurrentPage",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "指定返回结果的当前页码。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "指定列表每页显示数据条数 。"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "PageInfo": {
+        "Count": 2,
+        "PageSize": 2,
+        "TotalCount": 384,
+        "CurrentPage": 1
+      },
+      "Propertys": [
+        {
+          "LastLoginTime": "N/A",
+          "GroupName": [
+            "adm"
+          ],
+          "IsRoot": "0",
+          "InstanceName": null,
+          "AccountsExpirationDate": "never",
+          "PasswordExpirationDate": "never",
+          "Ip": null,
+          "Create": 1565644643000,
+          "User": "adm",
+          "Uuid": "00ea0155-548e-4f32-bb53-3a000110b30d",
+          "LastLoginIp": "N/A"
+        },
+        {
+          "LastLoginTime": "N/A",
+          "GroupName": [
+            "adm"
+          ],
+          "IsRoot": "0",
+          "InstanceName": null,
+          "AccountsExpirationDate": "never",
+          "PasswordExpirationDate": "never",
+          "Ip": null,
+          "Create": 1565652008000,
+          "User": "adm",
+          "Uuid": "02c4a5dc-c2d2-483a-9015-f972b44d2cd9",
+          "LastLoginIp": "N/A"
+        }
+      ]
+    },
+    "success": true,
+    "requestId": null,
+    "message": "successful"
+  }
+}

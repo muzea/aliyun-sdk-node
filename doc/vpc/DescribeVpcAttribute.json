@@ -1,0 +1,105 @@
+{
+  "name": "DescribeVpcAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeVpcAttribute接口查询指定VPC的配置信息。",
+  "abc_id": 94565,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "VPC的所属地域ID。"
+    },
+    "VpcId": {
+      "name": "VpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "vpc-bp18sth14qii3pnv****",
+      "description_cn": "要查询的VPC ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DryRun": {
+      "name": "DryRun",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "IsDefault": {
+      "name": "IsDefault",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否为默认VPC，取值： \n\n* **false**：不是默认VPC。\n* **true**：是默认VPC。\n          "
+    }
+  },
+  "res": {
+    "VpcName": "doctest2",
+    "Description": "",
+    "IsDefault": false,
+    "ResourceGroupId": "rg-acfmxazb4ph6aiy",
+    "UserCidrs": {
+      "UserCidr": []
+    },
+    "ClassicLinkEnabled": false,
+    "AssociatedCens": {
+      "AssociatedCen": [
+        {
+          "CenStatus": "Attached",
+          "CenOwnerId": "1231579085529123",
+          "CenId": "cen-7qthudw0ll6jmc4gsu"
+        }
+      ]
+    },
+    "VRouterId": "vrt-bp1jso6ng1at0ajsc8mbe",
+    "VpcId": "vpc-bp18sth14qii3pnvodkvt",
+    "CreationTime": "2018-10-16T07:31:09Z",
+    "CidrBlock": "192.168.0.0/16",
+    "Status": "Available",
+    "VSwitchIds": {
+      "VSwitchId": [
+        "vsw-bp14cagpfysr29feg5t97"
+      ]
+    },
+    "RequestId": "7486AE4A-129D-43DB-A714-2432C074BA04",
+    "RegionId": "cn-hangzhou",
+    "CloudResources": {
+      "CloudResourceSetType": [
+        {
+          "ResourceType": "VSwitch",
+          "ResourceCount": 1
+        },
+        {
+          "ResourceType": "VRouter",
+          "ResourceCount": 1
+        },
+        {
+          "ResourceType": "RouteTable",
+          "ResourceCount": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "name": "DescribeDomainStatistics",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDomainStatistics查询指定主域名请求量的实时数据。",
+  "abc_id": 131102,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "dns-example.com",
+      "description_cn": "域名名称。"
+    },
+    "StartDate": {
+      "name": "StartDate",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2019-07-04",
+      "description_cn": "查询的开始时间，格式：**YYYY-MM-DD**。\n\n只能查询最近90天的记录，即：StartDate >= Now - 90。"
+    },
+    "EndDate": {
+      "name": "EndDate",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "2019-07-04",
+      "description_cn": "查询的结束时间，格式：**YYYY-MM-DD**。\n\n默认为查询当天的时间。"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "语言。"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "Statistics": {
+      "Statistic": [
+        {
+          "Count": 15292887,
+          "Timestamp": 1556640000000
+        },
+        {
+          "Count": 15278215,
+          "Timestamp": 1556726400000
+        }
+      ]
+    },
+    "RequestId": "6AEC7A64-3CB1-4C49-8B35-0B901F1E26BF"
+  }
+}

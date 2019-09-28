@@ -1,0 +1,45 @@
+{
+  "name": "GetConsumerProgress",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/",
+  "summary_cn": "调用 GetConsumerProgress 查询 Consumer Group 的消费状态。",
+  "abc_id": 122223,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域 ID。"
+    },
+    "ConsumerId": {
+      "name": "ConsumerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "kafka-test",
+      "description_cn": "Consumer Group ID。"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "alikafka_pre-cn-mp919o4v****",
+      "description_cn": "实例 ID。"
+    }
+  },
+  "res": {}
+}

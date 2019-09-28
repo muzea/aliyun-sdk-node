@@ -1,0 +1,70 @@
+{
+  "name": "DescribeVSwitchAttributes",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeVSwitchAttributes接口查询指定交换机的配置信息。",
+  "abc_id": 94567,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "路由表所属的VPC的地域ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "VSwitchId": {
+      "name": "VSwitchId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "vsw-25naue4g****",
+      "description_cn": " 要查询的交换机ID。 "
+    },
+    "DryRun": {
+      "name": "DryRun",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RouteTable": {
+      "RouteTableId": "vtb-hp3ngu1hkdutfakqnz76p",
+      "RouteTableType": "System"
+    },
+    "Description": "",
+    "IsDefault": false,
+    "AvailableIpAddressCount": 251,
+    "ResourceGroupId": "rg-acfmy45w7w2cdxa",
+    "ZoneId": "cn-huhehaote-a",
+    "VSwitchId": "vsw-hp3lyltb1dosj540yyxjv",
+    "VpcId": "vpc-hp34hflqqsjh3a3q7lbtr",
+    "CreationTime": "2019-01-07T04:54:14Z",
+    "Status": "Available",
+    "CidrBlock": "192.168.0.0/24",
+    "RequestId": "A31F062D-81F0-48BC-9771-915D6622D26A",
+    "VSwitchName": "doc1",
+    "Ipv6CidrBlock": "2408:4004:0:2900::/64",
+    "CloudResources": {
+      "CloudResourceSetType": []
+    }
+  }
+}

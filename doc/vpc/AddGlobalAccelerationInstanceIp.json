@@ -1,0 +1,53 @@
+{
+  "name": "AddGlobalAccelerationInstanceIp",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AddGlobalAccelerationInstanceIp接口添加EIP到指定的带宽共享实例中。",
+  "abc_id": 86045,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": " 共享带宽型实例所在的地域。 \n\n您可以通过调用**DescribeRegions**接口获取地域ID。  "
+    },
+    "GlobalAccelerationInstanceId": {
+      "name": "GlobalAccelerationInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ga-LXXX111",
+      "description_cn": " 共享型实例ID。 "
+    },
+    "IpInstanceId": {
+      "name": "IpInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "i-rw434rwfaf****",
+      "description_cn": "EIP实例的ID。 您可以通过调用[DescribeEipAddresses](~~36018~~)接口查询EIP实例的ID。 \n\n> 确保EIP的计费类型为后付费，且EIP的地域和共享型实例相同。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "01FDDD49-C4B7-4D2A-A8E5-A93915C450A6"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "DeleteMetricRuleResources",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "删除报警规则关联的资源。",
+  "abc_id": 123692,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Resources": {
+      "name": "Resources",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "[{\"instanceId\":\"*****ixxxId1\"}]",
+      "description_cn": "关联的资源，格式为一个json数组，如：\n```\n[{\"instanceId\":\"*****ixxxId1\"}]\n```"
+    },
+    "RuleId": {
+      "name": "RuleId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "i-2ze3w55tr2rcpejpcfap_59******1",
+      "description_cn": "报警规则ID。"
+    }
+  },
+  "res": {
+    "RequestId": "0671A721-0D7A-4F11-BB77-2416325D65AB",
+    "Success": true,
+    "Message": "success",
+    "Code": "200"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "name": "DescribeShardingNetworkAddress",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeShardingNetworkAddress接口查询MongoDB分片集群实例的连接信息。",
+  "abc_id": 62135,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "NodeId": {
+      "name": "NodeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "d-bpxxxxxxxx",
+      "description_cn": "分片集群实例中Mongos节点ID、Shard节点ID或ConfigServer节点ID。\n\n> 您可以调用[DescribeDBInstanceAttribute](~~62010~~)接口查询Mongos/Shard/ConfigServer节点ID。"
+    }
+  },
+  "res": {
+    "NetworkAddresses": {
+      "NetworkAddress": [
+        {
+          "NetworkType": "VPC",
+          "NodeId": "s-bpxxxxxxxx",
+          "Port": "3717",
+          "VPCId": "vpc-bpxxxxxxxx",
+          "IPAddress": "192.168.xxx.xx",
+          "VswitchId": "vsw-bpxxxxxxxx",
+          "NetworkAddress": "s-bp1xxxxxxxx.mongodb.rds.aliyuncs.com"
+        },
+        {
+          "NetworkType": "VPC",
+          "NodeId": "s-bpxxxxxxxx",
+          "Port": "3717",
+          "VPCId": "vpc-bpxxxxxxxx",
+          "IPAddress": "192.168.xxx.xx",
+          "VswitchId": "vsw-bpxxxxxxxx",
+          "NetworkAddress": "s-bpxxxxxxxx.mongodb.rds.aliyuncs.com"
+        }
+      ]
+    },
+    "RequestId": "B4B78989-6D75-4930-BC26-635C3BB3A33B"
+  }
+}

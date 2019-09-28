@@ -1,0 +1,51 @@
+{
+  "name": "DescribeConfigIndex",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v1/wam/config/configIndex",
+  "summary_cn": "调用DescribeConfigIndex查询配置索引。",
+  "abc_id": 127996,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "StackId": {
+      "name": "StackId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ws-6c937c98a9c0296d0c48*****",
+      "description_cn": "技术栈类型"
+    },
+    "EnvId": {
+      "name": "EnvId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "we-5d3eaaea2977ca5251e*****",
+      "description_cn": "环境ID"
+    },
+    "ProfileName": {
+      "name": "ProfileName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "HighAvailability",
+      "description_cn": "初始化配置类型，可选以下值：\n - `HighAvailability`：高可用，该配置会将实例数设置为2，同时启用公网SLB\n - `StandAlone`：低成本，该配置会将实例数设置为1"
+    }
+  },
+  "res": {}
+}

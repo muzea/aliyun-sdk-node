@@ -1,0 +1,121 @@
+{
+  "name": "ModifyInstanceSpec",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyInstanceSpec变更Redis实例的规格。",
+  "abc_id": 60903,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "r-j6cxxxxxxxxxxxxx",
+      "description_cn": "目标实例的ID。"
+    },
+    "InstanceClass": {
+      "name": "InstanceClass",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "redis.master.small.default",
+      "description_cn": "变更后的实例规格，各规格的InstanceClass值请参见[实例规格表](~~107984~~)。 "
+    },
+    "FromApp": {
+      "name": "FromApp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "BusinessInfo": {
+      "name": "BusinessInfo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "000000000",
+      "description_cn": "活动ID、业务信息。"
+    },
+    "CouponNo": {
+      "name": "CouponNo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "youhuiquan_promotion_option_id_for_blank",
+      "description_cn": "优惠码，默认值：`youhuiquan_promotion_option_id_for_blank`。"
+    },
+    "ForceUpgrade": {
+      "name": "ForceUpgrade",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否强制变配，可选值：\n* false（否）；\n* true（是）。\n\n> 默认值：true。"
+    },
+    "EffectiveTime": {
+      "name": "EffectiveTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Immediately",
+      "description_cn": "变更执行时间，可选值：\n* Immediately（立即执行）\n* MaintainTime（运维时间执行） \n\n默认值：Immediately。"
+    },
+    "AutoPay": {
+      "name": "AutoPay",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否自动付款，可选值：\n* true（是）\n* false（否）\n\n默认值：false。\n\n> 当值为`false`时，请在实例即将到期时到控制台[手动续费](~~26352~~)。"
+    }
+  },
+  "res": {
+    "OrderId": "111111111111111",
+    "RequestId": "0DA1D7EF-C80D-432C-8758-7D225182626B"
+  }
+}

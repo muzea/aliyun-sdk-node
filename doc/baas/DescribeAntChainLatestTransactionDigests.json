@@ -1,0 +1,133 @@
+{
+  "name": "DescribeAntChainLatestTransactionDigests",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询一条蚂蚁区块链最新的交易摘要列表",
+  "abc_id": 127088,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID"
+    },
+    "AntChainId": {
+      "name": "AntChainId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "pYogqb9v",
+      "description_cn": "区块链ID"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "3348160E-187B-47BD-B1B9-76AD4AFA4558",
+      "Result": [
+        {
+          "transactionV10Type": "FREEZE_ACCOUNT_CONTRACT",
+          "createTime": 1563861357920,
+          "from": "e7d3e769f3f593dadcb8634cc5b09fc90dd3a61c4a06a79cb0923662fe6fae6b",
+          "to": "0f7256e0886e2095f328a244cf44823f95a82dedb3e51a1f46f8c272cf1c6030",
+          "hash": "945ffb5e2a8aaf41eed862f7c1565603683b7a640b7b78a168396897979335a9"
+        },
+        {
+          "transactionV10Type": "UNFREEZE_ACCOUNT_CONTRACT",
+          "createTime": 1563861353157,
+          "from": "e7d3e769f3f593dadcb8634cc5b09fc90dd3a61c4a06a79cb0923662fe6fae6b",
+          "to": "0f7256e0886e2095f328a244cf44823f95a82dedb3e51a1f46f8c272cf1c6030",
+          "hash": "5d379f516bf8f96991ee80d91504cfbf94f0b2feb87b375d07d04b019fd7bb3f"
+        },
+        {
+          "transactionV10Type": "FREEZE_ACCOUNT_CONTRACT",
+          "createTime": 1563861343692,
+          "from": "e7d3e769f3f593dadcb8634cc5b09fc90dd3a61c4a06a79cb0923662fe6fae6b",
+          "to": "8e35c2cd3bf6641bdb0e2050b76932cbb2e6034a0ddacc1d9bea82a6ba57f7cf",
+          "hash": "50df783d3e0038ee2ebf62c2295e19da9f95fc99dca6d9de4c0bf8f109c2a2f1"
+        },
+        {
+          "transactionV10Type": "UNFREEZE_ACCOUNT_CONTRACT",
+          "createTime": 1563861340667,
+          "from": "e7d3e769f3f593dadcb8634cc5b09fc90dd3a61c4a06a79cb0923662fe6fae6b",
+          "to": "4db58ada9221304b161ab0aa11b032a62d60d9ab29e41c6d238f4401c81c8189",
+          "hash": "7f299376af6e44825b55dca4c840d7f7bdc124984adfa2501b3ba5d7f3afb61b"
+        },
+        {
+          "transactionV10Type": "UNFREEZE_ACCOUNT_CONTRACT",
+          "createTime": 1563861331665,
+          "from": "e7d3e769f3f593dadcb8634cc5b09fc90dd3a61c4a06a79cb0923662fe6fae6b",
+          "to": "8e35c2cd3bf6641bdb0e2050b76932cbb2e6034a0ddacc1d9bea82a6ba57f7cf",
+          "hash": "2a185f80ea614459f7d2125e0ff43c68f96bfc4266b737646ef8250562b71aca"
+        },
+        {
+          "transactionV10Type": "UNFREEZE_ACCOUNT_CONTRACT",
+          "createTime": 1563861325469,
+          "from": "e7d3e769f3f593dadcb8634cc5b09fc90dd3a61c4a06a79cb0923662fe6fae6b",
+          "to": "49f3bd00a75b5b7519965014a37f14362cc88e303ed9615a49bc888e841184ed",
+          "hash": "944831a05c11be9290ffbe2b29734234462da0fed0192b661c42846d18bdb9f7"
+        },
+        {
+          "transactionV10Type": "FREEZE_ACCOUNT_CONTRACT",
+          "createTime": 1563861322053,
+          "from": "e7d3e769f3f593dadcb8634cc5b09fc90dd3a61c4a06a79cb0923662fe6fae6b",
+          "to": "0f7256e0886e2095f328a244cf44823f95a82dedb3e51a1f46f8c272cf1c6030",
+          "hash": "5d7da0043114b58488e0867c8dddb8b35812ce6e198235ef70d58d06d843024f"
+        },
+        {
+          "transactionV10Type": "FREEZE_ACCOUNT_CONTRACT",
+          "createTime": 1563861318974,
+          "from": "e7d3e769f3f593dadcb8634cc5b09fc90dd3a61c4a06a79cb0923662fe6fae6b",
+          "to": "8e35c2cd3bf6641bdb0e2050b76932cbb2e6034a0ddacc1d9bea82a6ba57f7cf",
+          "hash": "0c94292b144c69cbdc01389938f660a430dda1a50369de3a2c92b08d7e61f145"
+        },
+        {
+          "transactionV10Type": "FREEZE_ACCOUNT_CONTRACT",
+          "createTime": 1563861316016,
+          "from": "e7d3e769f3f593dadcb8634cc5b09fc90dd3a61c4a06a79cb0923662fe6fae6b",
+          "to": "4db58ada9221304b161ab0aa11b032a62d60d9ab29e41c6d238f4401c81c8189",
+          "hash": "293a7412174f7827135ae0610f85f4bc2d7eca21aca017935c3cd048a30dc2b4"
+        },
+        {
+          "transactionV10Type": "UNFREEZE_ACCOUNT_CONTRACT",
+          "createTime": 1563861312633,
+          "from": "e7d3e769f3f593dadcb8634cc5b09fc90dd3a61c4a06a79cb0923662fe6fae6b",
+          "to": "4db58ada9221304b161ab0aa11b032a62d60d9ab29e41c6d238f4401c81c8189",
+          "hash": "21f5977f5f9103c251968e4f84c0e1d3c68549a25b185e21791cb5ad5a4839f6"
+        },
+        {
+          "transactionV10Type": "UNFREEZE_ACCOUNT_CONTRACT",
+          "createTime": 1563861307139,
+          "from": "e7d3e769f3f593dadcb8634cc5b09fc90dd3a61c4a06a79cb0923662fe6fae6b",
+          "to": "8e35c2cd3bf6641bdb0e2050b76932cbb2e6034a0ddacc1d9bea82a6ba57f7cf",
+          "hash": "78329f5dd5af3ab2de339980fef05a0aa1d50ad1ddbce247d4d1e8e85cc5222f"
+        },
+        {
+          "transactionV10Type": "FREEZE_ACCOUNT_CONTRACT",
+          "createTime": 1563861302697,
+          "from": "e7d3e769f3f593dadcb8634cc5b09fc90dd3a61c4a06a79cb0923662fe6fae6b",
+          "to": "49f3bd00a75b5b7519965014a37f14362cc88e303ed9615a49bc888e841184ed",
+          "hash": "e089544b7a9e5354ea4ac57769d854acc0c79acee54420c9232924d978601969"
+        },
+        {
+          "transactionV10Type": "CALL_CONTRACT",
+          "createTime": 1563765546000,
+          "from": "e7d3e769f3f593dadcb8634cc5b09fc90dd3a61c4a06a79cb0923662fe6fae6b",
+          "to": "e93372533f323b2f12783aa3a586135cf421486439c2cdcde47411b78f9839ec",
+          "hash": "e0a27e8b0bd0d3053b29c133f257f636c37cb1ba8524684e3bfc6f7a48191494"
+        }
+      ]
+    },
+    "requestId": "3348160E-187B-47BD-B1B9-76AD4AFA4558",
+    "successResponse": true
+  }
+}

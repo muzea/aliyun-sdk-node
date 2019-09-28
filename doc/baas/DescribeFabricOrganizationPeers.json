@@ -1,0 +1,59 @@
+{
+  "name": "DescribeFabricOrganizationPeers",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeFabricOrganizationPeers获取组织的节点列表。",
+  "abc_id": 127858,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "OrganizationId": {
+      "name": "OrganizationId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "peers-aaaaaa2-1eqnj5o5w****",
+      "description_cn": "组织ID"
+    },
+    "Location": {
+      "name": "Location",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "位置"
+    }
+  },
+  "res": {
+    "Result": {
+      "Port": 7050,
+      "Domain": "peer1.taosafddasffsadfasaddsadbao.aliyunbaas.top",
+      "IsAnchor": true,
+      "CreateTime": "2018-07-01 09:00:00",
+      "UpdateTime": "2018-07-02 09:00:00",
+      "InternetIp": "8.8.8.1",
+      "InstanceType": "ecs.n1.small",
+      "IntranetIp": "8.8.8.1",
+      "OrganizationPeerName": "name"
+    },
+    "RequestId": "C445762C-8909-4BD8-A2BD-BB45BF2441D8",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

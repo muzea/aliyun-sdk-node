@@ -1,0 +1,53 @@
+{
+  "name": "UnroutePrivateZoneInCenToVpc",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用UnroutePrivateZoneInCenToVpc删除PrivateZone。",
+  "abc_id": 126918,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CenId": {
+      "name": "CenId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cen-7qthudw0ll6jmc****",
+      "description_cn": "云企业网ID。"
+    },
+    "AccessRegionId": {
+      "name": "AccessRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "访问所在地。\n\n访问所在地是指通过CEN访问PrivateZone服务的源地域。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "",
+      "description_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "C0245BEF-52AC-44A8-A776-EF96FD26A5CA"
+  }
+}

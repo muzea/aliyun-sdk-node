@@ -1,0 +1,106 @@
+{
+  "name": "ResolveAndRouteServiceInCen",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ResolveAndRouteServiceInCen设置云服务。",
+  "abc_id": 132084,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "CenId": {
+      "name": "CenId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cen-ckwa2hhmuislse****",
+      "description_cn": "云企业网ID。"
+    },
+    "Host": {
+      "name": "Host",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "100.64.1.0/24",
+      "description_cn": "服务域名或IP。"
+    },
+    "HostRegionId": {
+      "name": "HostRegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-beijing",
+      "description_cn": "云服务的服务所在地。"
+    },
+    "AccessRegionIds": {
+      "name": "AccessRegionIds",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "111",
+      "description_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "02fb3da4-130e-11e9-8e44-0016e04115b",
+      "description_cn": "客户端token，用于保证请求的幂等性。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符。"
+    },
+    "UpdateInterval": {
+      "name": "UpdateInterval",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "5",
+      "description_cn": "更新间隔，默认值为**5**，不支持修改。"
+    },
+    "HostVpcId": {
+      "name": "HostVpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vpc-o6woh5s494zueq40v****",
+      "description_cn": "服务关联的VPC。"
+    }
+  },
+  "res": {
+    "RequestId": "C0245BEF-52AC-44A8-A776-EF96FD26A5CA"
+  }
+}

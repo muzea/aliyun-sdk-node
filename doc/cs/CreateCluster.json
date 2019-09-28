@@ -1,0 +1,16 @@
+{
+  "name": "CreateCluster",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/clusters",
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    }
+  },
+  "res": {}
+}

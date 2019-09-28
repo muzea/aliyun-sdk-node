@@ -1,0 +1,138 @@
+{
+  "name": "SetMessageCallback",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用SetMessageCallback设置事件通知的回调方式、回调地址、事件类型。",
+  "abc_id": 130554,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "CallbackURL": {
+      "name": "CallbackURL",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "http://test.com",
+      "description_cn": "回调方式选择HTTP时，回调地址。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "CallbackSwitch": {
+      "name": "CallbackSwitch",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "CallbackType": {
+      "name": "CallbackType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "HTTP",
+      "description_cn": "回调方式，取值：**HTTP** | **MNS**。"
+    },
+    "EventTypeList": {
+      "name": "EventTypeList",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FileUploadComplete",
+      "description_cn": "回调事件类型，为空时关闭所有消息通知，为ALL时开启全部消息通知。也可指定开启某些消息通知，多个用逗号分隔。取值：[事件类型](https://help.aliyun.com/document_detail/55627.html?spm=a2c4g.11186623.2.15.45eb7ca2afB9e2#MessageCallbackType)。"
+    },
+    "AuthSwitch": {
+      "name": "AuthSwitch",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "on",
+      "description_cn": "回调方式选择HTTP时，回调鉴权开关，取值：**on**（启用）、**off**（不启用）。"
+    },
+    "AuthKey": {
+      "name": "AuthKey",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dsf346dvet",
+      "description_cn": "回调方式选择HTTP时，鉴权Key，最长32位，必须同时包含大小写字母和数字。"
+    },
+    "ResourceRealOwnerId": {
+      "name": "ResourceRealOwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "324",
+      "description_cn": "资源所有者ID。"
+    },
+    "MnsEndpoint": {
+      "name": "MnsEndpoint",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "endpoint",
+      "description_cn": "回调方式选择MNS时，消息队列公网Endpoint。"
+    },
+    "MnsQueueName": {
+      "name": "MnsQueueName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "quene_name",
+      "description_cn": "回调方式选择MNS时，消息队列名称。"
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "app-1000000",
+      "description_cn": "应用ID，不传时为系统默认应用的ID，即**app-1000000**。"
+    }
+  },
+  "res": {}
+}

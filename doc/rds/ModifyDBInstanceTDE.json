@@ -1,0 +1,78 @@
+{
+  "name": "ModifyDBInstanceTDE",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyDBInstanceTDE接口开启RDS实例透明数据加密功能。",
+  "abc_id": 26256,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "TDEStatus": {
+      "name": "TDEStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "Enabled",
+      "description_cn": "TDE状态，取值：**Enabled | Disabled**\n"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "DBName": {
+      "name": "DBName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "testDB",
+      "description_cn": "想要开启TDE的数据库名称，可以一次输入多个，以英文逗号（,）分隔，最多传入50个。\n>仅SQL Server企业版实例可以传入此参数。"
+    },
+    "EncryptionKey": {
+      "name": "EncryptionKey",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "749c1df7-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "description_cn": "自定义秘钥ID。\n>仅MySQL实例可以传入此参数。"
+    },
+    "RoleArn": {
+      "name": "RoleArn",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "acs:ram::1406926xxxxx:role/aliyunrdsinstanceencryptiondefaultrole",
+      "description_cn": "角色的全局资源描述符，用来指定具体角色。详情请参见[RAM角色概览](~~93689~~)。\n>仅MySQL实例可以传入此参数。"
+    }
+  },
+  "res": {
+    "requestId": "777C4593-8053-427B-99E2-105593277CAB"
+  }
+}

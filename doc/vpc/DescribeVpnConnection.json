@@ -1,0 +1,80 @@
+{
+  "name": "DescribeVpnConnection",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeVpnConnection接口查询已创建的IPsec连接的详细信息。",
+  "abc_id": 53046,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "IPsec连接所在的地域。 \n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "VpnConnectionId": {
+      "name": "VpnConnectionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "vco-bp1bbi27hojx80nck****",
+      "description_cn": " IPsec连接的ID。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "VpnConnections": {
+      "VpnConnection": [
+        {
+          "Name": "c2",
+          "CustomerGatewayId": "cgw-bp1wl8dtz3auwlavwhgcw",
+          "Status": "ike_sa_not_established",
+          "RemoteSubnet": "192.168.0.0/16",
+          "IpsecConfig": {
+            "IpsecLifetime": 86400,
+            "IpsecAuthAlg": "md5",
+            "IpsecPfs": "group2",
+            "IpsecEncAlg": "aes"
+          },
+          "EffectImmediately": false,
+          "VpnGatewayId": "vpn-bp1yfrjxn4d5t63tbqq70",
+          "CreateTime": 1519391420000,
+          "VpnConnectionId": "vco-bp1w3m1p23iftycvseuc2",
+          "LocalSubnet": "172.16.0.0/12",
+          "IkeConfig": {
+            "IkeEncAlg": "aes",
+            "RemoteId": "47.97.176.95",
+            "IkePfs": "group2",
+            "IkeAuthAlg": "sha1",
+            "Psk": "1234567",
+            "IkeMode": "aggressive",
+            "IkeLifetime": 86400,
+            "IkeVersion": "ikev1",
+            "LocalId": "116.62.119.2"
+          }
+        }
+      ]
+    },
+    "TotalCount": 1,
+    "PageSize": 10,
+    "RequestId": "7D598A10-26EF-44F2-9F47-E417842F3CEA"
+  }
+}

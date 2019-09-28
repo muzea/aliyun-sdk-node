@@ -1,0 +1,66 @@
+{
+  "name": "ExpandCluster",
+  "protocol": "HTTPS",
+  "method": "PUT",
+  "path": "/api/v2/clusters/[clusterId]/expand",
+  "summary_cn": "对后付费集群进行slave扩容或者master升配",
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Header",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou"
+    },
+    "clusterId": {
+      "name": "clusterId",
+      "type": "String",
+      "position": "Path",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cmy99ugusuco66x9qc6knqms",
+      "description_cn": "集群ID"
+    },
+    "model": {
+      "name": "model",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Ecs_4c16g",
+      "description_cn": "机器型号,目前不支持混部，只能和已有slave机型一致，支持混部后可以填其他机型\n4核机器  Ecs_4c16g;\n8核机器  Ecs_8c32g；\n16核机器  Ecs_16c64g；\n24核机器  Ecs_24c96g；\n32核机器  Ecs_32c128g；\n56核机器  Ecs_56c224g；\n64核机器  Ecs_64c256g；"
+    },
+    "count": {
+      "name": "count",
+      "type": "Integer",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "5",
+      "description_cn": "扩容到多少台"
+    },
+    "userVSwitch": {
+      "name": "userVSwitch",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vsw-xxxxxx",
+      "description_cn": "交换机名称，当扩容提示vswitch不足的时候才需要填写，一般不需要填写"
+    }
+  },
+  "res": {}
+}

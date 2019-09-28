@@ -1,0 +1,108 @@
+{
+  "name": "CreateLiveStreamRecordIndexFiles",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateLiveStreamRecordIndexFiles创建录制索引文件。",
+  "abc_id": 35417,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "AppName": {
+      "name": "AppName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "testApp",
+      "description_cn": "直播流所属应用名称。"
+    },
+    "StreamName": {
+      "name": "StreamName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "testStream",
+      "description_cn": "直播流名称。"
+    },
+    "OssEndpoint": {
+      "name": "OssEndpoint",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": " oss-cn-shanghai.aliyuncs.com",
+      "description_cn": "OSS endpoint。"
+    },
+    "OssBucket": {
+      "name": "OssBucket",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "test123",
+      "description_cn": "OSS存储bucket名称。"
+    },
+    "OssObject": {
+      "name": "OssObject",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "{AppName}/{StreamName}/{Date}/{Hour}/{Minute}_{Second}.m3u8",
+      "description_cn": "OSS存储的录制文件名。"
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2017-12-21T08:00:00Z",
+      "description_cn": "开始时间。\n\n格式：UTC时间。\n示例：2015-12-01T17:36:00Z。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "2017-12-22T08:00:00Z",
+      "description_cn": "结束时间。与StartTime间隔时间不能超过4天。\n\n格式：UTC时间。\n示例：2015-12-01T17:36:00Z。"
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "www.yourdomain.com",
+      "description_cn": "您的加速域名。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {}
+}

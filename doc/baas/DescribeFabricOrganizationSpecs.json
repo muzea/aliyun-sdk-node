@@ -1,0 +1,38 @@
+{
+  "name": "DescribeFabricOrganizationSpecs",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeFabricOrganizationSpecs查询组织的规格列表。",
+  "abc_id": 128022,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    }
+  },
+  "res": {
+    "Result": [
+      {
+        "OrganizationSpecsName": "basic",
+        "Enable": true,
+        "Title": "基础版"
+      },
+      {
+        "OrganizationSpecsName": "enterprise",
+        "Enable": false,
+        "Title": "企业版"
+      }
+    ],
+    "RequestId": "D44A00CF-95E0-48D9-A831-716E791D423E",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "name": "ListFlowNodeInstanceContainerStatus",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 ListFlowNodeInstanceContainerStatus 接口查询节点实例的容器状态详情",
+  "abc_id": 101188,
+  "timeout": 8000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "区域 ID"
+    },
+    "ProjectId": {
+      "name": "ProjectId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "7A1018ADE9179EE1",
+      "description_cn": "项目 ID"
+    },
+    "NodeInstanceId": {
+      "name": "NodeInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "FNI-FE4BD156E939CF1F",
+      "description_cn": "节点实例 ID"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页码"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "每页数量"
+    }
+  },
+  "res": {
+    "PageSize": 200,
+    "RequestId": "E82E504E-F1A8-4D05-AA8F-360BD9DF423A",
+    "PageNumber": 1,
+    "Total": 1,
+    "ContainerStatusList": {
+      "ContainerStatus": [
+        {
+          "Status": "KILLED",
+          "ContainerId": "container_1542333181298_0016_01_000015",
+          "ApplicationId": "application_1542333181298_0016",
+          "HostName": "192.168.128.53"
+        }
+      ]
+    }
+  }
+}

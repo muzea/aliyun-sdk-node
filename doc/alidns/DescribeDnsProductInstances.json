@@ -1,0 +1,101 @@
+{
+  "name": "DescribeDnsProductInstances",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDnsProductInstances根据传入参数获取云解析收费版本产品列表。",
+  "abc_id": 29758,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "语言。"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": "用户端IP。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "当前页数，起始值为**1**，默认为**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "分页查询时设置的每页行数，最大值**100**，默认为**20**。"
+    },
+    "VersionCode": {
+      "name": "VersionCode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "version1",
+      "description_cn": "云解析产品code。"
+    }
+  },
+  "res": {
+    "DescribeDnsProductInstancesResponse": {
+      "RequestId": "536E9CAD-DB30-4647-AC87-AA5CC38C5382",
+      "TotalCount": "1",
+      "PageNumber": "1",
+      "PageSize": "2",
+      "DnsProducts": {
+        "DnsProduct": {
+          "InstanceId": "i-8fj",
+          "StartTime": "2015-12-12T09:23Z",
+          "EndTime": "2016-12-12T09:23Z",
+          "Domain": "abc.com",
+          "BindCount": "3",
+          "BindUsedCount": "1",
+          "TTLMinValue": "10",
+          "SubDomainLevel": "6",
+          "DnsSLBCount": "15",
+          "URLForwardCount": "20",
+          "DDosDefendFlow": "50",
+          "DDosDefendQuery": "50",
+          "OverseaDDosDefendFlow": "1",
+          "SearchEngineLines": "搜索引擎、谷歌、百度、必应",
+          "ISPLines": "电信、移动、联通、教育网",
+          "ISPRegionLines": "电信（省份）、移动（省份）、联通（省份）、教育网（省份）",
+          "OverseaLine": "海外大洲"
+        }
+      }
+    }
+  }
+}

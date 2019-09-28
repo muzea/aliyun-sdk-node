@@ -1,0 +1,77 @@
+{
+  "name": "DescribeDBInstanceNetInfo",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDBInstanceNetInfo查看Redis实例的网络信息。",
+  "abc_id": 66742,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "r-bp1xxxxxxxxxxxxx",
+      "description_cn": "目标实例的ID。"
+    }
+  },
+  "res": {
+    "RequestId": "E4866AEC-CE71-4156-8BAA-A078D5B8EF3F",
+    "InstanceNetworkType": "VPC",
+    "NetInfoItems": {
+      "InstanceNetInfo": [
+        {
+          "DBInstanceNetType": "1",
+          "Port": "6379",
+          "ConnectionString": "r-bp1xxxxxxxxxxxxx.redis.rds.aliyuncs.com",
+          "VPCInstanceId": "",
+          "VPCId": "",
+          "IPAddress": "xxx.xxx.xxx.201",
+          "IPType": "Inner",
+          "Upgradeable": "0",
+          "ExpiredTime": "5183779"
+        },
+        {
+          "DBInstanceNetType": "0",
+          "Port": "6379",
+          "ConnectionString": "r-bp1xxxxxxxxxxxxxxx.redis.rds.aliyuncs.com",
+          "VPCInstanceId": "",
+          "VPCId": "",
+          "IPAddress": "xxx.xxx.xxx.146",
+          "IPType": "Public",
+          "Upgradeable": "0"
+        },
+        {
+          "DBInstanceNetType": "2",
+          "Port": "6379",
+          "ConnectionString": "r-bp1xxxxxxxxxxxxxxx.redis.rds.aliyuncs.com",
+          "VPCInstanceId": "r-bp1xxxxxxxxxxxxx",
+          "VPCId": "vpc-bp1cxxxxxxxxxxxxxxxxx",
+          "IPAddress": "xxx.xxx.xxx.245",
+          "IPType": "Private",
+          "Upgradeable": "0"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "name": "DescribeCens",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCens查看账户下所有云企业网实例的详细信息。",
+  "abc_id": 65900,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "列表的页码，默认值为**1**。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "分页查询时每页的行数，最大值为**50**，默认值为**10**。  "
+    },
+    "Filter": {
+      "name": "Filter",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        }
+      ]
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "Cens": {
+      "Cen": [
+        {
+          "Name": "jzwen_0207_01",
+          "Status": "Active",
+          "Description": "jzwne 0207",
+          "CenBandwidthPackageIds": {
+            "CenBandwidthPackageId": [
+              "cenbwp-oq2ehpxq4zhwp7****",
+              "cenbwp-18qmj0bahl3ysk****"
+            ]
+          },
+          "CenId": "cen-kojok19x3j0q6k****"
+        },
+        {
+          "Name": "jzwen_crossaccount_01",
+          "Status": "Active",
+          "CenBandwidthPackageIds": {
+            "CenBandwidthPackageId": [
+              "cenbwp-3o2zy4s6jig88p****",
+              "cenbwp-hq2ad760htrr7r****"
+            ]
+          },
+          "CenId": "cen-mkljagz6auhbzo****"
+        }
+      ]
+    },
+    "TotalCount": 4,
+    "PageSize": 10,
+    "RequestId": "145F96AB-3EE9-4DCA-991C-726F96CC5703"
+  }
+}

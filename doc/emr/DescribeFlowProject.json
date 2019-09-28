@@ -1,0 +1,45 @@
+{
+  "name": "DescribeFlowProject",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 DescribeFlowProject 接口，查询项目详情",
+  "abc_id": 101017,
+  "timeout": 8000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "ProjectId": {
+      "name": "ProjectId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "FP-5D55DA9DEDF2****",
+      "description_cn": "项目ID。"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "GmtCreate": 1542934807000,
+      "Description": "integration_test_project",
+      "RequestId": "ACD3A7A5-CD6E-48DA-823B-ACE5B01DA43D",
+      "UserId": "123456789",
+      "GmtModified": 1542934807000,
+      "Id": "FP-5D55DA9DEDF22ED3",
+      "Name": "integration_test_project"
+    },
+    "requestId": "ACD3A7A5-CD6E-48DA-823B-ACE5B01DA43D",
+    "successResponse": true
+  }
+}

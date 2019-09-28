@@ -1,0 +1,93 @@
+{
+  "name": "DescribeInstanceAutoRenewalAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": null,
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域名称的ID，例如：cn-hangzhou"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ETnLKlblzczshOTUbOCziJZNwHlYBQ",
+      "description_cn": "用于保证幂等性。"
+    },
+    "proxyId": {
+      "name": "proxyId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "隐藏参数",
+      "description_cn": "隐藏参数"
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rm-bp1842vmucoa5w874",
+      "description_cn": "实例名ID。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "每页记录数，可选值为30、50、100，默认值为30。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "当前页数。"
+    }
+  },
+  "res": {
+    "RequestId": "A5409D02-D661-4BF3-8F3D-0A814D0574E7",
+    "PageNumber": 1,
+    "PageRecordCount": 10,
+    "TotalRecordCount": 200,
+    "Items": {
+      "AutoRenew": "True",
+      "DBInstanceId": "rm-ydjskx7yx30jsw",
+      "Duration": 1,
+      "RegionId": "cn-hangzhou",
+      "Status": "Normal"
+    }
+  }
+}

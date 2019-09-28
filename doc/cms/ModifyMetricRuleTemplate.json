@@ -1,0 +1,188 @@
+{
+  "name": "ModifyMetricRuleTemplate",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "修改报警模板。",
+  "abc_id": 114981,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "RestVersion": {
+      "name": "RestVersion",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "修改报警模板的版本，从报警模板列表或则详情中获得。没修改过一次，这个字段会被自动更新。"
+    },
+    "TemplateId": {
+      "name": "TemplateId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "12346",
+      "description_cn": "报警规则模板ID。"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "我的报警模板",
+      "description_cn": "报警规则模板名称。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "报警模板描述",
+      "description_cn": "报警规则描述信息。"
+    },
+    "AlertTemplates": {
+      "name": "AlertTemplates",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "MetricName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "RuleName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Category",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Namespace",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Period",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Selector",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Critical.Statistics",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Critical.ComparisonOperator",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Critical.Threshold",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Critical.Times",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Warn.Statistics",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Warn.ComparisonOperator",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Warn.Threshold",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Warn.Times",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Info.Statistics",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Info.ComparisonOperator",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Info.Threshold",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Escalations.Info.Times",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {
+    "Code": 200,
+    "Message": "success",
+    "RequestId": "9E07117F-F6AE-4F1C-81E8-36FBB4892235",
+    "Success": true
+  }
+}

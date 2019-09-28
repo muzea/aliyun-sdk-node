@@ -1,0 +1,53 @@
+{
+  "name": "ModifyExpressCloudConnectionBandwidth",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyExpressCloudConnectionBandwidth修改高速上云服务带宽。",
+  "abc_id": 118733,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "EccId": {
+      "name": "EccId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ecc-xxxxxxxxx",
+      "description_cn": "高速上云服务实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "Bandwidth": {
+      "name": "Bandwidth",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "高速上云服务带宽。"
+    }
+  },
+  "res": {
+    "RequestId": "E6385514-B0CC-48E3-B9F9-F7BFF64460A2"
+  }
+}

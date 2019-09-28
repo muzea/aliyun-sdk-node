@@ -1,0 +1,82 @@
+{
+  "name": "DescribeVRouters",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeVRouters接口查询指定地域的路由器列表。",
+  "abc_id": 35742,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": " VPC所在的地域。 您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "VRouterId": {
+      "name": "VRouterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vrt-bp1lhl0taikrteen****",
+      "description_cn": " 路由器的ID。 "
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": " 列表的页码，默认值为**1**。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": " 分页查询时每页的行数，最大值为**50**，默认值为**10**。  "
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 1,
+    "VRouters": {
+      "VRouter": [
+        {
+          "VRouterName": "",
+          "RouteTableIds": {
+            "RouteTableId": [
+              "vtb-rj9ybe3y0u41mmjspmop0"
+            ]
+          },
+          "CreationTime": "2018-03-22T07:46:20Z",
+          "Description": "",
+          "RegionId": "us-west-1",
+          "VRouterId": "vrt-rj98khsezfqpjrxmvl7cy",
+          "VpcId": "vpc-rj905wotv6y030t1zz5vl"
+        }
+      ]
+    },
+    "PageSize": 10,
+    "RequestId": "CB2793A8-845F-444C-8E93-76F1BBDF9C78"
+  }
+}

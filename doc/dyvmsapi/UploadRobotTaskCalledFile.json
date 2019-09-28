@@ -1,0 +1,73 @@
+{
+  "name": "UploadRobotTaskCalledFile",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用UploadRobotTaskCalledFile上传智能语音任务的被叫号码。",
+  "abc_id": 124327,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "主账号的ID，即UID。"
+    },
+    "Id": {
+      "name": "Id",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1045001",
+      "description_cn": "机器人呼叫任务的唯一任务ID。"
+    },
+    "CalledNumber": {
+      "name": "CalledNumber",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "13700000000, 13711111111",
+      "description_cn": "被叫号码，支持设置多个，号码之间使用英文逗号（,）分隔。"
+    },
+    "TtsParam": {
+      "name": "TtsParam",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[{“number”:”13700000000”,”params”:[“小王”,”小李”,”小周”]}]",
+      "description_cn": "TTS模板的变量值，格式为JSON。必须和具体的号码对应、TtsParam和上面的TtsParamHead变量名称一一对应。"
+    },
+    "TtsParamHead": {
+      "name": "TtsParamHead",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[“name1”,”name2”,”name3”]",
+      "description_cn": "带变量的呼叫任务，格式为JSON。变量名称列表，和下面的ttsParam配合使用。"
+    }
+  },
+  "res": {
+    "Message": "OK",
+    "RequestId": "D9CB3933-9FE3-4870-BA8E-2BEE91B69D23",
+    "Code": "OK",
+    "Data": "1045001"
+  }
+}

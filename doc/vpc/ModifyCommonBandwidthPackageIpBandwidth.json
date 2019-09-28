@@ -1,0 +1,63 @@
+{
+  "name": "ModifyCommonBandwidthPackageIpBandwidth",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyCommonBandwidthPackageIpBandwidth接口为已经加入共享带宽中的EIP设置最大可用的带宽值。",
+  "abc_id": 120160,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "共享带宽所属的地域ID。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。"
+    },
+    "BandwidthPackageId": {
+      "name": "BandwidthPackageId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cbwp-2zep6hw5d6y8exxxxxxxx",
+      "description_cn": "共享带宽的实例ID。"
+    },
+    "EipId": {
+      "name": "EipId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "eip-2zewysoansu0sxxxxxxxx",
+      "description_cn": "已经加入到共享带宽的EIP的实例ID。"
+    },
+    "Bandwidth": {
+      "name": "Bandwidth",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "500",
+      "description_cn": "在共享带宽内最大可分配的带宽值，单位为Mbps。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "63D187BF-A30A-4DD6-B68D-FF182C96D8A2"
+  }
+}

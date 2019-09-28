@@ -1,0 +1,52 @@
+{
+  "name": "DescribeFabricConsortiumSpecs",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeFabricConsortiumSpecs查询联盟的规格列表。",
+  "abc_id": 127323,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    }
+  },
+  "res": {
+    "Result": [
+      {
+        "Name": "basic",
+        "NumOfNodes": 3,
+        "WorkerDescription": "4 Woker (4C8G 系统盘 100G SSD 云盘)",
+        "Enable": true,
+        "MasterDescription": "3 Master (4C8G)",
+        "Title": "基础版"
+      },
+      {
+        "Name": "enterprise",
+        "NumOfNodes": 3,
+        "WorkerDescription": "6 Woker (8C16G 系统盘 100G SSD 云盘)",
+        "Enable": false,
+        "MasterDescription": "3 Master (4C8G)",
+        "Title": "企业版"
+      },
+      {
+        "Name": "enterprise-sgx",
+        "NumOfNodes": 3,
+        "WorkerDescription": "4 Woker (神龙 SGX 8C32G 系统盘 100G SSD 云盘)",
+        "Enable": false,
+        "MasterDescription": "3 Master (4C8G)",
+        "Title": "企业安全版"
+      }
+    ],
+    "RequestId": "00984305-408B-4499-9822-5B720D96B381",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

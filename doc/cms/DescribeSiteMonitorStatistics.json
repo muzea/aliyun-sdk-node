@@ -1,0 +1,68 @@
+{
+  "name": "DescribeSiteMonitorStatistics",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询指定任务一段时间内的平均统计数据。",
+  "abc_id": 115047,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "MetricName": {
+      "name": "MetricName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "Availability",
+      "description_cn": "任务的监控项名称，可选值为：\n\n- Availability ：可用率\n- ErrorRate：错误率\n- ResponseTime：响应时间"
+    },
+    "TaskId": {
+      "name": "TaskId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "49f7b317-7645-4cc9-94fd-ea42e522****",
+      "description_cn": "任务ID。"
+    },
+    "TimeRange": {
+      "name": "TimeRange",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "60",
+      "description_cn": "统计的时间周期， 单位是分钟，最大1440分钟（1天）。"
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "Message": "successful",
+    "RequestId": "3fcd12e7-d387-42ee-b77e-661c775bb17f",
+    "Data": "{\"value\":100}",
+    "Code": "200",
+    "Success": true
+  }
+}

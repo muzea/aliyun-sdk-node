@@ -1,0 +1,50 @@
+{
+  "name": "AttachPolicyToRole",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AttachPolicyToRole接口为指定角色添加权限。",
+  "abc_id": 28729,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "PolicyType": {
+      "name": "PolicyType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "Custom",
+      "description_cn": "指定权限策略的类型, 取值为：`System`或`Custom`。"
+    },
+    "PolicyName": {
+      "name": "PolicyName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "OSS-Administrator",
+      "description_cn": "指定权限策略名称。"
+    },
+    "RoleName": {
+      "name": "RoleName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "OSSAdminRole",
+      "description_cn": "指定角色名。"
+    }
+  },
+  "res": {
+    "RequestId": "697852FB-50D7-44D9-9774-530C31EAC572"
+  }
+}

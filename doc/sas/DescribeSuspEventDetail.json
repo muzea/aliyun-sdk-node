@@ -1,0 +1,117 @@
+{
+  "name": "DescribeSuspEventDetail",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "获取异常事件详情。",
+  "abc_id": 99391,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "From": {
+      "name": "From",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "sas",
+      "description_cn": "请求来源，固定为sas。"
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": "接口访问者源IP。"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "zh",
+      "description_cn": "异常事件的语言类型。\n- zh：中文\n- cn：英文"
+    },
+    "SuspiciousEventId": {
+      "name": "SuspiciousEventId",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "要查询的异常告警ID。"
+    }
+  },
+  "res": {
+    "RequestId": "43F670F3-AB40-4E91-BC7D-C57468834F67",
+    "HostId": "aegis.cn-hangzhou.aliyuncs.com",
+    "Code": "200",
+    "Message": "illegal parameter, xxxx\n",
+    "EventDesc": "该文件极有可能是黑客成功入侵网站后种植的，建议您先确认文件合法性并处理。",
+    "EventTypeDesc": "网站后门-发现后门(Webshell)文件",
+    "EventStatus": 1,
+    "EventName": "WEBSHELL",
+    "SaleVersion": "1",
+    "IntranetIp": "10.0.0.0",
+    "DataSource": "aegis_suspicious_file_v2",
+    "InstanceName": "ca_cpm_test1",
+    "Type": "normal",
+    "CanBeDealOnLine": true,
+    "OperateMsg": "",
+    "Uuid": "bffb12c3-590a-4db2-b538-XXXXXXXXXXXX",
+    "Details": [
+      {
+        "Type": "text",
+        "Value": "/data/ftpUser/pub/f12cd3bc5b484b0326309b48afb463fb",
+        "InfoType": "trojan_path",
+        "Name": "木马文件路径"
+      },
+      {
+        "Type": "text",
+        "Value": "--",
+        "Name": "影响域名"
+      },
+      {
+        "Type": "text",
+        "Value": "2018-10-30 05:00:56",
+        "InfoType": "frist_found_time",
+        "Name": "首次发现时间"
+      },
+      {
+        "Type": "text",
+        "Value": "2018-10-30 11:43:45",
+        "InfoType": "update_time",
+        "Name": "更新时间"
+      },
+      {
+        "Type": "text",
+        "Value": "Webshell",
+        "InfoType": "trojan_type",
+        "Name": "木马类型"
+      },
+      {
+        "Type": "html",
+        "Value": "<a href=\"http://yundun-aegis-webshell-file.oss-cn-shanghai.aliyuncs.com/XXXXXXXXXX?Expires=1540899863&OSSAccessKeyId=XXXXXX&Signature=XXXXXX&response-content-disposition=attachment%3Bfilename%3Df12cd3bc5b484b0326309b48afb463fb\">下载</a>",
+        "InfoType": "download_url",
+        "Name": "源文件下载"
+      }
+    ],
+    "InternetIp": "39.105.41.176",
+    "Level": "serious",
+    "Id": 129636,
+    "LastTime": "2018-10-30 11:43:46",
+    "SasId": "39938056"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "name": "CreateAntChainAccountWithKeyPairAutoCreation",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "在一条蚂蚁区块链上创建一个账户，通过自动生成keypair 的方式",
+  "abc_id": 127093,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID"
+    },
+    "Account": {
+      "name": "Account",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "accountname",
+      "description_cn": "账户名称"
+    },
+    "Password": {
+      "name": "Password",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "password",
+      "description_cn": "密码"
+    },
+    "RecoverPassword": {
+      "name": "RecoverPassword",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true
+    },
+    "AntChainId": {
+      "name": "AntChainId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1q8B5R9p",
+      "description_cn": "区块链ID"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "5F058BB4-3043-4638-86D4-EED84AD1AE54",
+      "Result": {
+        "Account": "accountname",
+        "AntChainId": "1q8B5R9p",
+        "AccountRecoverPrivateKey": "-----BEGIN ENCRYPTED PRIVATE KEY-----\nM***Io=\n-----END ENCRYPTED PRIVATE KEY-----\n",
+        "AccountRecoverPublicKey": "d***b",
+        "AccountPrivateKey": "-----BEGIN ENCRYPTED PRIVATE KEY-----\nM***8=\n-----END ENCRYPTED PRIVATE KEY-----\n",
+        "AccountPublicKey": "b***7"
+      }
+    },
+    "requestId": "5F058BB4-3043-4638-86D4-EED84AD1AE54",
+    "successResponse": true
+  }
+}

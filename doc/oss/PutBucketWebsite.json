@@ -1,0 +1,21 @@
+{
+  "name": "PutBucketWebsite",
+  "protocol": "HTTP|HTTPS",
+  "method": "PUT",
+  "path": "/",
+  "timeout": null,
+  "reqFormat": {
+    "BucketName": {
+      "name": "BucketName",
+      "position": "domain",
+      "required": true
+    },
+    "website": {
+      "name": "website",
+      "position": "query",
+      "required": true,
+      "default": ""
+    }
+  },
+  "res": {}
+}

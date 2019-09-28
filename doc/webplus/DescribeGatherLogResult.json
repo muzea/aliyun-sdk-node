@@ -1,0 +1,29 @@
+{
+  "name": "DescribeGatherLogResult",
+  "protocol": "HTTPS|HTTP",
+  "method": "GET",
+  "path": "/pop/v1/wam/appEnv/gatherLog",
+  "summary_cn": "调用DescribeGatherLogResult查询一个收集日志的变更信息。",
+  "abc_id": 128023,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ChangeId": {
+      "name": "ChangeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "wc-5d412db056fd7c14ac9*****",
+      "description_cn": "变更ID，将查询此变更对应的日志收集信息"
+    }
+  },
+  "res": {}
+}

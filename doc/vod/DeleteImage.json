@@ -1,0 +1,85 @@
+{
+  "name": "DeleteImage",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteImage删除用户上传的图片及视频自动截图。",
+  "abc_id": 129676,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "DeleteImageType": {
+      "name": "DeleteImageType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "VideoId",
+      "description_cn": "图片删除操作类型。取值：\n\n- **ImageURL**：根据图片URL删除指定图片。\n- **ImageId**：根据图片ID删除指定图片。\n- **VideoId**：根据视频ID删除其关联图片。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ImageURLs": {
+      "name": "ImageURLs",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "http://xxxx,http://xxxxx",
+      "description_cn": "图片URL。\n\n- DeleteImageType=ImageURL时必传。\n- URL编码，多个以英文逗号分隔。\n- 避免存在特殊字符导致图片无法删除成功，需要URL编码后再做逗号拼接。"
+    },
+    "ImageIds": {
+      "name": "ImageIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ImageId1,ImageId2",
+      "description_cn": "图片ID。\n\n- 支持批量，多个英文逗号分隔。\n- DeleteImageType=ImageId时必传。"
+    },
+    "VideoId": {
+      "name": "VideoId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "fdbsngsn4363mnf",
+      "description_cn": "视频ID。DeleteImageType=VideoId时必传。"
+    },
+    "ImageType": {
+      "name": "ImageType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "All",
+      "description_cn": "图片类型。DeleteImageType=VideoId时必传。\n取值：\n\n- **CoverSnapshot**：封面截图。\n- **NormalSnapshot**：SubmitSnapshotJob接口发起的普通截图 。\n- **SpriteSnapshot**：SubmitSnapshotJob接口发起的雪碧截图。\n- **SpriteOriginSnapshot**：组成雪碧图的原始小图。\n- **All（以上多种类型的图片）**：非All时支持多个类型英文逗号分隔传入。"
+    }
+  },
+  "res": {}
+}

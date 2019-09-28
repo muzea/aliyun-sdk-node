@@ -1,0 +1,51 @@
+{
+  "name": "ReportTaskFailed",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/",
+  "summary_cn": "调用ReportTaskFailed汇报指定的任务执行失败。",
+  "abc_id": 131879,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "TaskToken": {
+      "name": "TaskToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "emptyString",
+      "description_cn": "汇报任务指定的令牌。"
+    },
+    "Error": {
+      "name": "Error",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "nill",
+      "description_cn": "失败错误代码。"
+    },
+    "Cause": {
+      "name": "Cause",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "emptyString",
+      "description_cn": "失败错误原因。"
+    }
+  },
+  "res": {}
+}

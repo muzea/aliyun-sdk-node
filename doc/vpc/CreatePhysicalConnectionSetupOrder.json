@@ -1,0 +1,100 @@
+{
+  "name": "CreatePhysicalConnectionSetupOrder",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreatePhysicalConnectionSetupOrder创建初装费订单。",
+  "abc_id": 114592,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "物理专线所在的地域。 您可以通过调用DescribeRegions接口获取地域ID。"
+    },
+    "AccessPointId": {
+      "name": "AccessPointId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ap-cn-beijing-ft-A",
+      "description_cn": "接入点ID。"
+    },
+    "LineOperator": {
+      "name": "LineOperator",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "CT",
+      "description_cn": "提供接入物理线路的运营商，取值：\n\n- CT：中国电信\n\n- CU：中国联通\n\n- CM：中国移动\n\n- CO：中国其他\n\n- Equinix：Equinix\n\n- Other：境外其他"
+    },
+    "PortType": {
+      "name": "PortType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "100Base-T",
+      "description_cn": "物理专线接入端口类型：\n\n- **100Base-T**：百兆电口\n\n- **1000Base-T**（默认值）：千兆电口\n\n- **1000Base-LX**：千兆单模光口（10千米）\n\n- **10GBase-T**：万兆电口\n\n- **10GBase-LR**：万兆单模光口（10千米）"
+    },
+    "RedundantPhysicalConnectionId": {
+      "name": "RedundantPhysicalConnectionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "pc-bp10zsv5ntpxxxxxxxxxx",
+      "description_cn": "冗余物理专线的ID，该专线的状态必须为**Allocated**、**Confirmed**或**Enabled**。"
+    },
+    "AutoPay": {
+      "name": "AutoPay",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否自动支付。\n\n取值：**true|false**"
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "318BB676-0A2B-43A0-9AD8-F1D34E93750F",
+      "description_cn": "客户端Token鉴权。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "orderId": 203255400960138
+    },
+    "httpStatusCode": 200,
+    "message": "successful",
+    "requestId": "AA874147-4A58-41D4-95E2-F2FFDAF417A6",
+    "success": true
+  }
+}

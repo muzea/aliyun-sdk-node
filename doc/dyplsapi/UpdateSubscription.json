@@ -1,0 +1,185 @@
+{
+  "name": "UpdateSubscription",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用接口UpdateSubscription修改绑定关系。",
+  "abc_id": 110253,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SubsId": {
+      "name": "SubsId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "1000000768798832",
+      "description_cn": "绑定关系ID。\n\n可以在控制台的**号码管理** > **号码详情**中查看绑定关系ID，或者在调用BindAxb等号码绑定API时查看返回参数中的**SubsId**。"
+    },
+    "PhoneNoX": {
+      "name": "PhoneNoX",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "15000000000",
+      "description_cn": "号码绑定关系中的X号码。"
+    },
+    "OperateType": {
+      "name": "OperateType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "updateNoA",
+      "description_cn": "修改绑定关系的操作，包括：\n- **updateNoA**：修改A号码。\n- **updateNoB**：修改B号码。\n- **updateExpire**：修改绑定关系有效期。\n- **updateAxgGroup**：修改G号码组。\n- **updateCallRestrict**：设置单通呼叫限制。\n- **updateCallDisplayType**：更新呼叫显号逻辑。\n- **updateOutId**：更新OutId字段。\n- **updateIsRecordingEnabled**：更新绑定中录音状态。"
+    },
+    "PoolKey": {
+      "name": "PoolKey",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "FC123456",
+      "description_cn": "号码池Key。请登录[号码隐私保护控制台](https://dypls.console.aliyun.com/dypls.htm#/account)，在**号码池管理**中查看号码池Key。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "ProductType": {
+      "name": "ProductType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "AXB_170",
+      "description_cn": "产品类型。\n\n> 适用于原阿里大于客户，阿里云用户可忽略。"
+    },
+    "PhoneNoA": {
+      "name": "PhoneNoA",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "150000000",
+      "description_cn": "设置绑定关系中的A号码，当**OperateType**指定为**updateNoA**时必填。"
+    },
+    "PhoneNoB": {
+      "name": "PhoneNoB",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "150000001",
+      "description_cn": "设置绑定关系中的B号码，当**OperateType**指定为**updateNoB**时必填。"
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1234",
+      "description_cn": "设置绑定关系中的G号码组ID，当**OperateType**指定为**updateAxgGroup**时必填。"
+    },
+    "CallRestrict": {
+      "name": "CallRestrict",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "CONTROL_BX_DISABLE ",
+      "description_cn": "设置单通呼叫限制，当**OperateType**指定为**updateCallRestrict**时必填。\n\n取值为：\n-  **CONTROL_AX_DISABLE**：A号码无法呼叫X号码。\n-  **CONTROL_BX_DISABLE**：B号码无法呼叫X号码。\n-  **CONTROL_CLEAR_DISABLE**：清除呼叫限制。"
+    },
+    "Expiration": {
+      "name": "Expiration",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2019-09-05 12:00:00",
+      "description_cn": "重新设置绑定关系的过期时间，**OperateType**为**updateExpire**时必填。过期时间必须晚于当前时间1分钟以上。"
+    },
+    "CallDisplayType": {
+      "name": "CallDisplayType",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "重置绑定关系中的号码显示逻辑，1：主被叫显示中间号码X；2：B/N侧号码呼叫时，给A侧号码显示B/N的真实号码；3：A侧号码呼叫时，给B/N侧号码显示真实号码。"
+    },
+    "OutId": {
+      "name": "OutId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "abcdef",
+      "description_cn": "重新设置绑定关系中的OutId"
+    },
+    "IsRecordingEnabled": {
+      "name": "IsRecordingEnabled",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "重新设置绑定关系中的录音状态"
+    },
+    "RingConfig": {
+      "name": "RingConfig",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "Message": "OK",
+    "RequestId": "986BCB6D-C9BF-42F9-91CE-3A9901233D36",
+    "Code": "OK"
+  }
+}

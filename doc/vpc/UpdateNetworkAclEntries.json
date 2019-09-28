@@ -1,0 +1,188 @@
+{
+  "name": "UpdateNetworkAclEntries",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用UpdateNetworkAclEntries接口更新网络ACL规则。",
+  "abc_id": 116592,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "网络ACL所在的地域。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "NetworkAclId": {
+      "name": "NetworkAclId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "nacl-bp1lhl0taikrxxxxxxxx",
+      "description_cn": "网络ACL的ID。"
+    },
+    "IngressAclEntries": {
+      "name": "IngressAclEntries",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "NetworkAclEntryName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "NetworkAclEntryId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Policy",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Protocol",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "SourceCidrIp",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Port",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "EntryType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Description",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "EgressAclEntries": {
+      "name": "EgressAclEntries",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "NetworkAclEntryName",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "NetworkAclEntryId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Policy",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Protocol",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "DestinationCidrIp",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Port",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "EntryType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Description",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "UpdateIngressAclEntries": {
+      "name": "UpdateIngressAclEntries",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否更新入方向规则，取值：\n\n- **true**：更新。\n\n- **false**（默认）：不更新。\n"
+    },
+    "UpdateEgressAclEntries": {
+      "name": "UpdateEgressAclEntries",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否更新出方向规则，取值：\n\n- **true**：更新。\n\n- **false**（默认）：不更新。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123"
+    }
+  },
+  "res": {
+    "RequestId": "1170A5A0-E760-4331-9133-A7D38D973215"
+  }
+}

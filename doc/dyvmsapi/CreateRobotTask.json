@@ -1,0 +1,133 @@
+{
+  "name": "CreateRobotTask",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用接口CreateRobotTask发起智能语音机器人外呼任务。",
+  "abc_id": 124301,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "主账号的ID，即UID。"
+    },
+    "TaskName": {
+      "name": "TaskName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "批量任务测试",
+      "description_cn": "任务名称。支持中文和英文，0~30个字符。"
+    },
+    "DialogId": {
+      "name": "DialogId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1234567",
+      "description_cn": "指定机器人ID，即话术ID。表示选择哪个机器人/话术发起呼叫。\n\n请在[话术管理页面](https://dyvms.console.aliyun.com/dyvms.htm#/smart-call/saas/robot/list)中查看**话术ID**。"
+    },
+    "CorpName": {
+      "name": "CorpName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "阿里巴巴通信技术(北京)有限公司\t",
+      "description_cn": "公司名称，和[资质管理页面](https://dyvms.console.aliyun.com/dyvms.htm#/corp/normal)中的**公司名称**完全一致，该参数为可选。"
+    },
+    "Caller": {
+      "name": "Caller",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "13700000000",
+      "description_cn": "被叫号码。仅支持中国大陆号码。\n\n支持设置1~1000个被叫号码，号码之间使用英文逗号（,）分隔。"
+    },
+    "NumberStatusIdent": {
+      "name": "NumberStatusIdent",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "号码状态(早媒体)识别标识。默认为fasle，如果需要启用早媒体语音识别标识，请设置为true。"
+    },
+    "RetryType": {
+      "name": "RetryType",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "是否自动重拨，1位重拨，0为不重拨。"
+    },
+    "RecallStateCodes": {
+      "name": "RecallStateCodes",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "200010,200011",
+      "description_cn": "需要重拨的通话状态，200010为关机，200011为停机， 200002为占线， 200012为呼损，200005为无法接通。"
+    },
+    "RecallTimes": {
+      "name": "RecallTimes",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "重拨次数。"
+    },
+    "RecallInterval": {
+      "name": "RecallInterval",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "5",
+      "description_cn": "重拨间隔，单位为分钟，必须大于1。"
+    },
+    "IsSelfLine": {
+      "name": "IsSelfLine",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否调用自有线路，默认为false。"
+    }
+  },
+  "res": {
+    "Message": "OK",
+    "RequestId": "D9CB3933-9FE3-4870-BA8E-2BEE91B69D23",
+    "Code": "OK",
+    "Data": "4001112222"
+  }
+}

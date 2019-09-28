@@ -1,0 +1,105 @@
+{
+  "name": "DescribeBgpGroups",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "使用DescribeBgpGroups查询指定地域下的BGP组。",
+  "abc_id": 63264,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "BGP组所在的地域。 \n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1333738069500000",
+      "description_cn": "用户ID。"
+    },
+    "RouterId": {
+      "name": "RouterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vrt-kojok19x3j0q6kx",
+      "description_cn": " BGP组关联的VBR的ID。 "
+    },
+    "BgpGroupId": {
+      "name": "BgpGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "bgpg-wz9f62v4fbg2gxxxxxxxx",
+      "description_cn": " BGP组的ID。 "
+    },
+    "IsDefault": {
+      "name": "IsDefault",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否为为默认BGP组。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": " 列表的页码，默认值为1。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": " 分页查询时每页的行数，最大值为50，默认值为10。  "
+    }
+  },
+  "res": {
+    "TotalCount": 1,
+    "PageSize": 10,
+    "RequestId": "09E2C0FD-37FF-4737-80DF-517AC36D43DB",
+    "BgpGroups": {
+      "BgpGroup": [
+        {
+          "BgpGroupId": "bgpg-2zev8h2wo414sfhjgdlhh",
+          "LocalAsn": 45104,
+          "Hold": 30,
+          "Description": "",
+          "AuthKey": "",
+          "IsFake": true,
+          "PeerAsn": 234,
+          "Keepalive": 10,
+          "RouteLimit": 99,
+          "Name": "Group1",
+          "Status": "Pending",
+          "RouterId": "vbr-2zecmmvg5gvu8i4telkhw",
+          "RegionId": "cn-beijing"
+        }
+      ]
+    }
+  }
+}

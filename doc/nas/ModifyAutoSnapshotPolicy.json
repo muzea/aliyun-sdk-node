@@ -1,0 +1,75 @@
+{
+  "name": "ModifyAutoSnapshotPolicy",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "ModifyAutoSnapshotPolicy 用于修改一条自动快照策略。修改自动快照策略后，之前已应用该策略的文件系统随即执行修改后的自动快照策略。",
+  "abc_id": 126577,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false
+    },
+    "AutoSnapshotPolicyId": {
+      "name": "AutoSnapshotPolicyId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "sp-extreme-233e6ylv0",
+      "description_cn": "目标自动快照策略 ID。您可以调用 DescribeAutoSnapshotPolicies 查看您可用的自动快照策略。"
+    },
+    "AutoSnapshotPolicyName": {
+      "name": "AutoSnapshotPolicyName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FinanceJoshua",
+      "description_cn": "自动快照策略的名称。如果参数为空则代表不修改。"
+    },
+    "RepeatWeekdays": {
+      "name": "RepeatWeekdays",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1,7",
+      "description_cn": "自动快照的重复日期，单位为天，周期为星期。取值范围：1~7，如1表示周一。当一星期内需要创建多次自动快照时，可以传入多个时间点：\n- 最多传入 7 个时间点。\n- 多个时间点用半角逗号（,）隔开。"
+    },
+    "RetentionDays": {
+      "name": "RetentionDays",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "自动快照的保留时间，单位为天。取值范围：\n- -1（默认）：永久保存。\n- 1~65536：指定保存天数。"
+    },
+    "TimePoints": {
+      "name": "TimePoints",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0,1",
+      "description_cn": "自动快照的创建时间点，单位为小时。取值范围：0~23，代表 00:00 至 23:00 共 24 个时间点，如 1 表示 01:00。当一天内需要创建多次自动快照时，可以传入多个时间点：\n- 最多传入 24 个时间点。\n- 多个时间点半角逗号（,）隔开。"
+    }
+  },
+  "res": {}
+}

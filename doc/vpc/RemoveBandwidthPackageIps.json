@@ -1,0 +1,61 @@
+{
+  "name": "RemoveBandwidthPackageIps",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "使用RemoveBandwidthPackageIps接口删除NAT带宽包中的公网IP。",
+  "abc_id": 36057,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "NAT带宽包所在的地域。\n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。"
+    },
+    "BandwidthPackageId": {
+      "name": "BandwidthPackageId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "bwp-s6lmotmkkxxxxxxxx",
+      "description_cn": "待删除的公网IP的所属的NAT带宽包ID。"
+    },
+    "RemovedIpAddresses": {
+      "name": "RemovedIpAddresses",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123"
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "SHAww112344jhsxxxx",
+      "description_cn": "用于保证请求的幂等性。\n\n由客户端生成该参数值，要保证在不同请求间唯一，最大值不能超过64个ASCII字符。      \n\n更多关于幂等性的信息，请参考[如何保证幂等性](~~36569~~)。"
+    }
+  },
+  "res": {
+    "RequestId": "7D275A59-1EB0-4775-8A20-2A47055EAC5C"
+  }
+}

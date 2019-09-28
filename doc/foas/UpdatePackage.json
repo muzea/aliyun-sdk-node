@@ -1,0 +1,133 @@
+{
+  "name": "UpdatePackage",
+  "protocol": "HTTPS",
+  "method": "PUT",
+  "path": "/api/v2/projects/[projectName]/packages/[packageName]",
+  "summary_cn": "更新package信息",
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Header",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou-pre",
+      "description_cn": "集团内用户使用： cn-hangzhou-pre 公共云预发； cn-hangzhou-internal 集团内生产； cn-hangzhou-internal-pre 集团内预发；"
+    },
+    "packageName": {
+      "name": "packageName",
+      "type": "String",
+      "position": "Path",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "package1.jar",
+      "description_cn": "package名称"
+    },
+    "projectName": {
+      "name": "projectName",
+      "type": "String",
+      "position": "Path",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "project1",
+      "description_cn": "项目名称"
+    },
+    "ossEndpoint": {
+      "name": "ossEndpoint",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "oss-cn-hangzhou-internal.aliyuncs.com",
+      "description_cn": "oss接入点"
+    },
+    "ossBucket": {
+      "name": "ossBucket",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "blinktest2.oss-cn-hangzhou-internal.aliyuncs.com",
+      "description_cn": "ossBucket"
+    },
+    "ossOwner": {
+      "name": "ossOwner",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "xxxx",
+      "description_cn": "oss所有者"
+    },
+    "ossPath": {
+      "name": "ossPath",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "/path1/path2",
+      "description_cn": "oss路径"
+    },
+    "originName": {
+      "name": "originName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "package2.jar",
+      "description_cn": "package别名"
+    },
+    "description": {
+      "name": "description",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "package注释描述"
+    },
+    "md5": {
+      "name": "md5",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "md5值",
+      "description_cn": "package的md5值"
+    },
+    "tag": {
+      "name": "tag",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "xxxx",
+      "description_cn": "package的标记"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,95 @@
+{
+  "name": "UpdateDomainToDomainGroup",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/",
+  "summary_cn": "向分组中设置域名",
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainGroupId": {
+      "name": "DomainGroupId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "1234",
+      "description_cn": "分组编号"
+    },
+    "Replace": {
+      "name": "Replace",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否替换当前分组中域名。false即为向分组中新增域名，true为替换分组中原有域名"
+    },
+    "DataSource": {
+      "name": "DataSource",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "域名数据来源，枚举值范围：1 自定义输入域名 2 文件上传"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "127.0.0.1",
+      "description_cn": "用户ip"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "接口返回错误信息语言，枚举值范围：zh 中文；en 英文。默认为en"
+    },
+    "FileToUpload": {
+      "name": "FileToUpload",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "dGVzdA==",
+      "description_cn": "base64编码的xls、xlsx文件，域名来源为文件时该字段为必须。文件中每行一个域名，单次上传最大支持文件大小为2M"
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    }
+  },
+  "res": {
+    "RequestId": "C7EE737A-5C01-4B82-A9BF-61DA846D57D2"
+  }
+}

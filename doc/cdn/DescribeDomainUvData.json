@@ -1,0 +1,162 @@
+{
+  "name": "DescribeDomainUvData",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDomainUvData获取加速域名最小1小时粒度的UV页面独立访问统计。",
+  "abc_id": 91109,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "test.test.com",
+      "description_cn": "需要查询的加速域名，只支持一个域名，不写代表查询当前用户下所有域名。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2015-11-29T00:00:00Z",
+      "description_cn": "获取数据起始时间点。\n\n- 日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。\n\n- 最小数据粒度为1小时，不写默认读取过去24小时数据。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2015-11-30T00:00:00Z",
+      "description_cn": "获取数据结束时间点。\n- 结束时间需大于起始时间。\n\n- 日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。"
+    }
+  },
+  "res": {
+    "DataInterval": "3600",
+    "RequestId": "E9D3257A-1B7C-414C-90C1-8D07AC47BCAC",
+    "DomainName": "example.com",
+    "EndTime": "2015-11-30T00:00:00Z",
+    "StartTime": "2015-11-29T00:00:00Z",
+    "UvDataInterval": {
+      "UsageData": [
+        {
+          "TimeStamp": "2015-11-29T20:00:00Z",
+          "Value": "318"
+        },
+        {
+          "TimeStamp": "2015-11-29T18:00:00Z",
+          "Value": "318"
+        },
+        {
+          "TimeStamp": "2015-11-29T03:00:00Z",
+          "Value": "329"
+        },
+        {
+          "TimeStamp": "2015-11-29T21:00:00Z",
+          "Value": "316"
+        },
+        {
+          "TimeStamp": "2015-11-29T07:00:00Z",
+          "Value": "319"
+        },
+        {
+          "TimeStamp": "2015-11-29T00:00:00Z",
+          "Value": "326"
+        },
+        {
+          "TimeStamp": "2015-11-29T11:00:00Z",
+          "Value": "321"
+        },
+        {
+          "TimeStamp": "2015-11-29T10:00:00Z",
+          "Value": "313"
+        },
+        {
+          "TimeStamp": "2015-11-29T08:00:00Z",
+          "Value": "331"
+        },
+        {
+          "TimeStamp": "2015-11-29T01:00:00Z",
+          "Value": "324"
+        },
+        {
+          "TimeStamp": "2015-11-29T04:00:00Z",
+          "Value": "330"
+        },
+        {
+          "TimeStamp": "2015-11-29T14:00:00Z",
+          "Value": "335"
+        },
+        {
+          "TimeStamp": "2015-11-29T12:00:00Z",
+          "Value": "318"
+        },
+        {
+          "TimeStamp": "2015-11-29T23:00:00Z",
+          "Value": "310"
+        },
+        {
+          "TimeStamp": "2015-11-29T17:00:00Z",
+          "Value": "309"
+        },
+        {
+          "TimeStamp": "2015-11-29T22:00:00Z",
+          "Value": "320"
+        },
+        {
+          "TimeStamp": "2015-11-29T16:00:00Z",
+          "Value": "309"
+        },
+        {
+          "TimeStamp": "2015-11-29T02:00:00Z",
+          "Value": "317"
+        },
+        {
+          "TimeStamp": "2015-11-29T06:00:00Z",
+          "Value": "309"
+        },
+        {
+          "TimeStamp": "2015-11-29T19:00:00Z",
+          "Value": "308"
+        },
+        {
+          "TimeStamp": "2015-11-29T13:00:00Z",
+          "Value": "347"
+        },
+        {
+          "TimeStamp": "2015-11-29T15:00:00Z",
+          "Value": "341"
+        },
+        {
+          "TimeStamp": "2015-11-29T05:00:00Z",
+          "Value": "347"
+        },
+        {
+          "TimeStamp": "2015-11-29T09:00:00Z",
+          "Value": "312"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "ListPolicyVersions",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ListPolicyVersions接口列出权限策略版本。",
+  "abc_id": 28723,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "PolicyType": {
+      "name": "PolicyType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "Custom",
+      "description_cn": "指定权限策略的类型, 取值为：`System`或`Custom`。"
+    },
+    "PolicyName": {
+      "name": "PolicyName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "OSS-Administrator",
+      "description_cn": "权限策略名称。"
+    }
+  },
+  "res": {
+    "RequestId": "7B8A4E7D-6CFF-471D-84DF-195A7A241ECB",
+    "PolicyVersions": {
+      "PolicyVersion": [
+        {
+          "VersionId": "v3",
+          "IsDefaultVersion": false,
+          "CreateDate": "2015-01-23T12:33:18Z",
+          "PolicyDocument": "{ \"Statement\": [{ \"Action\": [\"oss:*\"], \"Effect\": \"Allow\", \"Resource\": [\"acs:oss:*:*:*\"]}], \"Version\": \"1\"}"
+        },
+        {
+          "VersionId": "v5",
+          "IsDefaultVersion": true,
+          "CreateDate": "2015-02-26T01:25:52Z",
+          "PolicyDocument": "{ \"Statement\": [{ \"Action\": [\"oss:*\"], \"Effect\": \"Allow\", \"Resource\": [\"acs:oss:*:*:*\"]}], \"Version\": \"1\"}"
+        }
+      ]
+    }
+  }
+}

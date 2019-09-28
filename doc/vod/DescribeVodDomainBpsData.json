@@ -1,0 +1,89 @@
+{
+  "name": "DescribeVodDomainBpsData",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeVodDomainBpsData获取加速域名的网络带宽监控数据。",
+  "abc_id": 130571,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "example.com",
+      "description_cn": "要查询的域名。若为空，则默认返回所有加速域名的合并数据。支持批量查询，多个用半角逗号分隔。"
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2015-12-10T20:00:00Z",
+      "description_cn": "获取数据起始时间点。\n\n- 日期格式按照ISO8601表示法，使用UTC时间。格式为：**YYYY-MM-DDThh:mmZ**。\n- 最小数据粒度为5分钟，若为空，则默认读取最近24小时的数据。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2015-12-10T20:00:00Z",
+      "description_cn": "结束时间，需大于起始时间。\n\n日期格式按照ISO8601表示法，使用UTC时间。格式为：**YYYY-MM-DDThh:mmZ**。"
+    },
+    "Interval": {
+      "name": "Interval",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "300",
+      "description_cn": "查询数据的时间粒度，支持**300**，**3600**和**86400**秒。\n\n- 3天以内（不包含3天整）支持300(默认), 3600, 86400。\n- 3-31天（不包含31天整）支持3600(默认)和86400。\n- 31天以上支持86400(默认)。"
+    },
+    "IspNameEn": {
+      "name": "IspNameEn",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Alibaba",
+      "description_cn": "运营商英文名。默认为所有运营商。"
+    },
+    "LocationNameEn": {
+      "name": "LocationNameEn",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "区域英文名。默认为所有区域。"
+    }
+  },
+  "res": {}
+}

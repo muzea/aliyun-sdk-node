@@ -1,0 +1,57 @@
+{
+  "name": "CreateFlowProjectUser",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 CreateFlowProjectUser 接口添加项目用户",
+  "abc_id": 100904,
+  "timeout": 8000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "ProjectId": {
+      "name": "ProjectId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "FP-257A173659F59685",
+      "description_cn": "项目ID。"
+    },
+    "User": {
+      "name": "User",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "UserId",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "UserName",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {
+    "RequestId": "2670BCFB-925D-4C3E-9994-8D12F7A9F538",
+    "Data": "true"
+  }
+}

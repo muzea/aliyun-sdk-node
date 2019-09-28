@@ -1,0 +1,302 @@
+{
+  "name": "DescribeImages",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeImages查询您可以使用的镜像资源。",
+  "abc_id": 25534,
+  "timeout": 15000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "实例所属的地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "hide"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM用户的虚拟账号ID。"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Available",
+      "description_cn": "查询某种状态下的镜像。取值范围：\n\n- Creating：镜像正在创建中。\n- Waiting：多任务排队中。\n- Available（默认）：您可以使用的镜像。\n- UnAvailable：您不能使用的镜像。\n- CreateFailed：创建失败的镜像。\n\n支持同时取多个值，值之间以半角逗号（,）隔开。"
+    },
+    "ImageId": {
+      "name": "ImageId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "m-imageid1",
+      "description_cn": "镜像ID。"
+    },
+    "ShowExpired": {
+      "name": "ShowExpired",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "订阅型镜像是否已经超过使用期限。\n\n>该参数即将被弃用，为提高兼容性，请尽量使用其他参数。"
+    },
+    "SnapshotId": {
+      "name": "SnapshotId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "s-snapshotid1",
+      "description_cn": "根据某一快照ID创建的自定义镜像。"
+    },
+    "ImageName": {
+      "name": "ImageName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FinanceJoshua",
+      "description_cn": "镜像名称。"
+    },
+    "ImageOwnerAlias": {
+      "name": "ImageOwnerAlias",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "self",
+      "description_cn": "镜像来源。取值范围：\n\n- system：阿里云提供的公共镜像。\n- self：您创建的自定义镜像。\n- others：其他阿里云用户共享给您的镜像。\n- marketplace：镜像市场提供的镜像。您查询到的云市场镜像可以直接使用，无需提前订阅。您需要自行留意云市场镜像的收费详情。\n\n默认值：空，空表示返回取值为system、self以及others的结果。"
+    },
+    "InstanceType": {
+      "name": "InstanceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ecs.g5.large",
+      "description_cn": "指定实例类型可以使用的镜像。"
+    },
+    "IsSupportIoOptimized": {
+      "name": "IsSupportIoOptimized",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "镜像是否可以运行在I/O优化实例上。"
+    },
+    "IsSupportCloudinit": {
+      "name": "IsSupportCloudinit",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "镜像是否支持Cloud Init。"
+    },
+    "OSType": {
+      "name": "OSType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "linux",
+      "description_cn": "镜像的操作系统类型。取值范围：\n\n- windows\n- linux"
+    },
+    "Architecture": {
+      "name": "Architecture",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i386",
+      "description_cn": "镜像的体系架构。取值范围：\n\n- i386\n- x86_64"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "镜像资源列表的页码。起始值：1\n\n默认值：1 "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时设置的每页行数。最大值：100\n\n默认值：10 "
+    },
+    "Usage": {
+      "name": "Usage",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "instance",
+      "description_cn": "镜像是否已经运行在ECS实例中。取值范围：\n\n- instance：镜像处于运行状态，有ECS实例使用。\n- none：镜像处于闲置状态，暂无ECS实例使用。"
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "DryRun": {
+      "name": "DryRun",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否只预检此次请求。\n         \n- true：发送检查请求，不会查询资源状况。检查项包括AccessKey是否有效、RAM用户的授权情况和是否填写了必需参数。如果检查不通过，则返回对应错误。如果检查通过，会返回错误码DryRunOperation。  \n- false：发送正常请求，通过检查后返回2XX HTTP状态码并直接查询资源状况。 \n\n默认值：false "
+    },
+    "ActionType": {
+      "name": "ActionType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "CreateEcs",
+      "description_cn": "镜像需要被使用到的场景。取值范围：\n\n- CreateEcs（默认）：创建实例\n- ChangeOS：更换系统盘/更换操作系统"
+    },
+    "Filter": {
+      "name": "Filter",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rg-resourcegroupid1",
+      "description_cn": "自定义镜像所在的企业资源组ID。"
+    }
+  },
+  "res": {
+    "Images": {
+      "Image": [
+        {
+          "Architecture": "x86_64",
+          "CreationTime": "2015-05-06T09:01:32Z",
+          "DiskDeviceMappings": {
+            "DiskDeviceMapping": [
+              {
+                "Device": "/dev/xvda",
+                "Size": "20"
+              }
+            ]
+          },
+          "ImageId": "suse11sp3_64_20G_aliaegis_20150428.vhd",
+          "ImageName": "suse11sp3_64_20G_aliaegis_20150428.vhd",
+          "ImageOwnerAlias": "system",
+          "ImageVersion": "1",
+          "IsCopied": false,
+          "IsSubscribed": false,
+          "OSName": "SUSE Linux  Enterprise Server 11 SP3 64位",
+          "OSType": "linux",
+          "Platform": "SUSE",
+          "Progress": "100%",
+          "Size": 20,
+          "Status": "Available",
+          "Usage": "instance"
+        }
+      ]
+    },
+    "PageNumber": 1,
+    "PageSize": 1,
+    "RegionId": "cn-hangzhou",
+    "RequestId": "49CBCED4-C9B9-4851-BEB5-8FB5E5169E30",
+    "TotalCount": 24
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "name": "DescribeAutoSnapshotPolicies",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "DescribeAutoSnapshotPolicies 用于查询您已创建的自动快照策略。",
+  "abc_id": 126583,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false
+    },
+    "FileSystemType": {
+      "name": "FileSystemType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "extreme",
+      "description_cn": "文件系统类型，可选值：extreme。"
+    },
+    "AutoSnapshotPolicyId": {
+      "name": "AutoSnapshotPolicyId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sp-extreme-233e6ylv0",
+      "description_cn": "自动快照策略 ID。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "\t\n分页展示返回的自动快照策略时的每页行数。 最大值：100，默认值：10。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "自动快照策略返回结果分多页展示。 起始值：1，默认值：1。"
+    }
+  },
+  "res": {}
+}

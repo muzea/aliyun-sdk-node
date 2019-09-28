@@ -1,0 +1,98 @@
+{
+  "name": "DescribeSiteMonitorList",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询站点监控任务列表。",
+  "abc_id": 115052,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "TaskId": {
+      "name": "TaskId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "a1ecd34a-8157-44d9-b060-14950837****",
+      "description_cn": "任务ID。"
+    },
+    "TaskType": {
+      "name": "TaskType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "HTTP",
+      "description_cn": "站点监控任务探测类型。"
+    },
+    "Keyword": {
+      "name": "Keyword",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "site",
+      "description_cn": "支持根据名称或任务地址模糊搜索。"
+    },
+    "Page": {
+      "name": "Page",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "分页页码，默认值为1。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "每页显示条数，默认值为10。"
+    }
+  },
+  "res": {
+    "Message": "请求成功",
+    "RequestId": "95078877-009D-43C2-8654-67AE771C08D9",
+    "SiteMonitors": {
+      "SiteMonitor": [
+        {
+          "Interval": 1,
+          "CreateTime": "2019-03-02 09:02:51",
+          "Address": "http://www.aliyun.com",
+          "OptionsJson": {
+            "http_method": "get",
+            "time_out": 30000
+          },
+          "UpdateTime": "2019-03-03 15:48:00",
+          "TaskId": "49f7b317-7645-4cc9-94fd-12****",
+          "TaskName": "阿里云官网探测",
+          "TaskState": 2,
+          "TaskType": "HTTP"
+        }
+      ]
+    },
+    "Success": true,
+    "Code": "200"
+  }
+}

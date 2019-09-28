@@ -1,0 +1,55 @@
+{
+  "name": "CreateFabricChannelMember",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateFabricChannelMember将其他组织添加到通道中。",
+  "abc_id": 127865,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "Organization": {
+      "name": "Organization",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "OrganizationId",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "ChannelId": {
+      "name": "ChannelId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "chan-channelx-1l1hmckuuisxo",
+      "description_cn": "通道ID"
+    }
+  },
+  "res": {
+    "Result": true,
+    "RequestId": "1890FA4F-067A-4CE9-AC9B-2BD2E58FB5D3",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

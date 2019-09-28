@@ -1,0 +1,229 @@
+{
+  "name": "DescribeAlertHistoryList",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询报警历史详情。",
+  "abc_id": 114942,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "RuleId": {
+      "name": "RuleId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "aaaabbb123",
+      "description_cn": "报警规则ID。"
+    },
+    "RuleName": {
+      "name": "RuleName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "我的报警规则",
+      "description_cn": "报警规则名称。"
+    },
+    "Namespace": {
+      "name": "Namespace",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "acs_ecs_dashboard",
+      "description_cn": "产品的数据命名空间，可通过DescribeMetricMetaList接口查询或参考[预设监控项参考](~~28619~~)。"
+    },
+    "MetricName": {
+      "name": "MetricName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cpu_total",
+      "description_cn": "监控项名称。"
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456",
+      "description_cn": "应用组ID。"
+    },
+    "AlertStatus": {
+      "name": "AlertStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ALARM",
+      "description_cn": "报警状态：\n- ALARM：报警状态\n- OK：恢复正常"
+    },
+    "State": {
+      "name": "State",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "通道沉默状态：\n- 2：表示通道沉默。 \n- 0：表示报警或者恢复。"
+    },
+    "Ascending": {
+      "name": "Ascending",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "排序，正序或者倒序， true表示时间倒序， false表示时间正序。"
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1554085998000",
+      "description_cn": "开始时间。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1554085998000",
+      "description_cn": "结束时间。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "页面大小。"
+    },
+    "Page": {
+      "name": "Page",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页码。"
+    }
+  },
+  "res": {
+    "AlarmHistoryList": {
+      "AlarmHistory": [
+        {
+          "Value": "4.41",
+          "LastTime": 881140083,
+          "Webhooks": "",
+          "ContactSmses": {
+            "ContactSms": []
+          },
+          "RuleName": "test-auto-scaling-0001",
+          "GroupId": "",
+          "AlertName": "putNewAlarm_xxxxxx",
+          "EvaluationCount": 1,
+          "Status": 2,
+          "AlertState": "ALARM",
+          "MetricName": "cpu_total#60",
+          "ContactMails": {
+            "ContactMail": []
+          },
+          "AlertTime": 1554986620000,
+          "Dimensions": "{\"instanceId\":\"i-2******3\"}",
+          "RuleId": "",
+          "Contacts": {
+            "Contact": []
+          },
+          "Namespace": "acs_ecs",
+          "ContactALIIMs": {
+            "ContactALIIM": []
+          },
+          "ContactGroups": {
+            "ContactGroup": []
+          },
+          "Expression": "$Average>=1",
+          "Level": "P3",
+          "InstanceName": ""
+        },
+        {
+          "Value": "2.13",
+          "LastTime": 760058,
+          "Webhooks": "",
+          "ContactSmses": {
+            "ContactSms": []
+          },
+          "RuleName": "test-auto-scaling-0001",
+          "GroupId": "",
+          "AlertName": "putNewAlarm_us****",
+          "EvaluationCount": 1,
+          "Status": 2,
+          "AlertState": "ALARM",
+          "MetricName": "cpu_total#60",
+          "ContactMails": {
+            "ContactMail": []
+          },
+          "AlertTime": 1554986620000,
+          "Dimensions": "{\"instanceId\":\"i-2z*****\"}",
+          "RuleId": "",
+          "Contacts": {
+            "Contact": []
+          },
+          "Namespace": "acs_ecs",
+          "ContactALIIMs": {
+            "ContactALIIM": []
+          },
+          "ContactGroups": {
+            "ContactGroup": []
+          },
+          "Expression": "$Average>=1",
+          "Level": "P3",
+          "InstanceName": ""
+        }
+      ]
+    },
+    "RequestId": "FEBE3561-166F-4DB2-BB59-020B26F30318",
+    "Success": true,
+    "Code": "200",
+    "Total": 102390
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "DeleteConfigTemplate",
+  "protocol": "HTTPS|HTTP",
+  "method": "DELETE",
+  "path": "/pop/v1/wam/configTemplate",
+  "summary_cn": "调用DeleteConfigTemplate删除一个配置模板。",
+  "abc_id": 127715,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "TemplateId": {
+      "name": "TemplateId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "wct-5d3e9d2a2977ca5251e0****",
+      "description_cn": "配置模板ID，将删除此配置模板"
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,405 @@
+{
+  "name": "DescribeCacheAnalysisReport",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCacheAnalysisReport查看Redis实例在指定日期中的缓存分析报告。",
+  "abc_id": 128808,
+  "timeout": 50000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Date": {
+      "name": "Date",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2019-08-05Z",
+      "description_cn": "需要查询的日期，每次可查询一天的缓存分析结果，格式：`2019-08-05Z`。"
+    },
+    "AnalysisType": {
+      "name": "AnalysisType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "BigKey",
+      "description_cn": "分析类型，当前唯一值：`BigKey`。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "r-bp1xxxxxxxxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "每页返回的记录数，可选值：\n* 30\n* 50\n* 100\n\n默认值：30。"
+    },
+    "PageNumbers": {
+      "name": "PageNumbers",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "需要返回的页码。\n\n> 如果该值大于返回结果的最大页数，则返回的大key结果为空。"
+    },
+    "NodeId": {
+      "name": "NodeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "r-bp1xxxxxxxxxxxxx-db-0",
+      "description_cn": "集群版Redis实例的子节点ID。\n\n> 如果不设置将返回所有子节点的分析结果。"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalRecordCount": 160,
+    "HotKeys": [],
+    "PageSize": 30,
+    "RequestId": "A057C066-C3F5-4CC9-9FE4-A8D8B0DCBF19",
+    "BigKeys": [
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "list",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "mylist",
+        "memory": 1005377,
+        "size": 200000
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:23124",
+        "memory": 970,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:167541",
+        "memory": 967,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:152015",
+        "memory": 958,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:30883",
+        "memory": 955,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:81031",
+        "memory": 953,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:152007",
+        "memory": 952,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:161880",
+        "memory": 951,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:194610",
+        "memory": 949,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:53620",
+        "memory": 948,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:23525",
+        "memory": 946,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:89333",
+        "memory": 946,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:23687",
+        "memory": 945,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:32653",
+        "memory": 945,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:72166",
+        "memory": 945,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:195881",
+        "memory": 944,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:160121",
+        "memory": 944,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:93626",
+        "memory": 944,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:138451",
+        "memory": 944,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:183732",
+        "memory": 943,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:143393",
+        "memory": 943,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:109289",
+        "memory": 943,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:153637",
+        "memory": 942,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:171049",
+        "memory": 942,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:53013",
+        "memory": 941,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:103664",
+        "memory": 941,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:180733",
+        "memory": 941,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:69766",
+        "memory": 941,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:125910",
+        "memory": 940,
+        "size": 11
+      },
+      {
+        "db": "0",
+        "qps": 0,
+        "keyType": "hash",
+        "isExpired": "no",
+        "analysisType": "BIGKEY",
+        "key": "customer:10653",
+        "memory": 940,
+        "size": 11
+      }
+    ],
+    "PageRecordCount": 30
+  }
+}

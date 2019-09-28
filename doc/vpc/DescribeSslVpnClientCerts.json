@@ -1,0 +1,113 @@
+{
+  "name": "DescribeSslVpnClientCerts",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeSslVpnClientCerts接口查询已创建的SSL-VPN客户端证书。",
+  "abc_id": 65148,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "SSL-VPN客户端证书所在的地域。\n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "SslVpnServerId": {
+      "name": "SslVpnServerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vss-bp18q7hzj6largv4v****",
+      "description_cn": "SSL-VPN服务端ID。"
+    },
+    "SslVpnClientCertId": {
+      "name": "SslVpnClientCertId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vsc-bp1n8wcf134yl0osr****",
+      "description_cn": "SSL-VPN客户端证书ID。"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cert1",
+      "description_cn": "SSL-VPN客户端证书的名称。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "列表的页码，默认值为**1**。 "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时每页的行数，最大值为**50**，默认值为**10**。 "
+    }
+  },
+  "res": {
+    "DescribeSslVpnServersResponse": {
+      "PageNumber": "1",
+      "TotalCount": "1",
+      "PageSize": "10",
+      "SslVpnServers": {
+        "SslVpnServer": {
+          "RegionId": "cn-hanghzou",
+          "SslVpnServerId": "vss-bp18q7hzj6largv4vk2fe",
+          "VpnGatewayId": "vpn-bp1q8bgx4xnkm2ogj0fiu",
+          "Name": "test",
+          "CLientIpPool": "10.10.10.20/24",
+          "LocalSubnet": "10.10.10.10/24",
+          "Proto": "UDP",
+          "Port": "1194",
+          "Cipher": "AES-128-CBC",
+          "Compress": "true",
+          "CreateTime": "1492753580000",
+          "Connections": "0",
+          "MaxConnections": "5",
+          "InternetIp": "47.98.xx.xx"
+        }
+      },
+      "RequestId": "DF11D6F6-E35A-41C3-9B20-6FC8A901FE65"
+    }
+  }
+}

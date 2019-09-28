@@ -1,0 +1,62 @@
+{
+  "name": "CreatePkgVersion",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/pop/v1/wam/pkgVersion",
+  "summary_cn": "调用CreatePkgVersion创建一个部署包版本。",
+  "abc_id": 127898,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "PkgVersionLabel": {
+      "name": "PkgVersionLabel",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "version-demo-tmc-1.5",
+      "description_cn": "版本标签"
+    },
+    "PkgVersionDescription": {
+      "name": "PkgVersionDescription",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "This is a package.",
+      "description_cn": "版本描述信息"
+    },
+    "AppId": {
+      "name": "AppId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "wa-5d3eaae92977ca5251e*****",
+      "description_cn": "建立部署包版本的应用ID"
+    },
+    "PackageSource": {
+      "name": "PackageSource",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "oss://target-url/webx/webx-quickstart-tomcat-0.1.0-SNAPSHOT.war",
+      "description_cn": "用于建立部署包版本的资源包"
+    }
+  },
+  "res": {}
+}

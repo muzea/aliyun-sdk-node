@@ -1,0 +1,130 @@
+{
+  "name": "PollTaskResult",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": null,
+  "abc_id": 0,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "PageNum": {
+      "name": "PageNum",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "页码"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "20",
+      "description_cn": "分页大小"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "127.0.0.1",
+      "description_cn": "用户ip"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "接口返回错误信息语言，枚举值范围：zh 中文；en 英文。默认为en"
+    },
+    "TaskNo": {
+      "name": "TaskNo",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "75addb07-28a3-450e-b5ec-test",
+      "description_cn": "任务编号"
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test.com",
+      "description_cn": "域名"
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "S20181T0WLI85212",
+      "description_cn": "业务编号"
+    },
+    "TaskResultStatus": {
+      "name": "TaskResultStatus",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "任务结果类型，枚举值范围：2 成功；3 失败"
+    }
+  },
+  "res": {
+    "CurrentPageNum": 1,
+    "Data": {
+      "TaskDetail": [
+        {
+          "CreateTime": "2018-03-26 15:08:20",
+          "DomainName": "test.com",
+          "ErrorMsg": "The operation is successful.",
+          "InstanceId": "S201817141000000",
+          "TaskDetailNo": "15fee9d10d514bada66bd08c5723c583",
+          "TaskNo": "b95bc334-f7d8-4f39-8a62-4c4302a243d8",
+          "TaskStatus": "EXECUTE_SUCCESS",
+          "TaskStatusCode": 2,
+          "TaskType": "CHG_DNS",
+          "TaskTypeDescription": "DNS Modification",
+          "TryCount": 0,
+          "UpdateTime": "2018-03-26 15:22:18"
+        }
+      ]
+    },
+    "PageSize": 1,
+    "RequestId": "E879DC07-38EE-4408-9F33-73B30CD965CD",
+    "TotalItemNum": 10,
+    "TotalPageNum": 10
+  }
+}

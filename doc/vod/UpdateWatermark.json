@@ -1,0 +1,63 @@
+{
+  "name": "UpdateWatermark",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用UpdateWatermark更新水印数据。",
+  "abc_id": 129819,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "WatermarkConfig": {
+      "name": "WatermarkConfig",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "{\"Width\":\"55\",\"Height\":\"55\",\"Dx\":\"9\",\"Dy\":\"9\",\"ReferPos\":\"BottonLeft\",\"Type\":\"Image\"}",
+      "description_cn": "水印显示位置、效果等配置(JSON字符串)。\n\n不同的水印类型对应不同的WatermarkConfig内容。"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "test",
+      "description_cn": "水印名称。只支持中英文、数字。长度不超过128个字节。UTF-8编码。"
+    },
+    "WatermarkId": {
+      "name": "WatermarkId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "aasaassa",
+      "description_cn": "水印ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {}
+}

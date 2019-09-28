@@ -1,0 +1,40 @@
+{
+  "name": "SubmitJoinPermissionAuthOrder",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用SubmitJoinPermissionAuthOrder发起专用入网凭证授权工单。",
+  "abc_id": 109932,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "JoinPermissionId": {
+      "name": "JoinPermissionId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "123",
+      "description_cn": "要授权的专用入网凭证ID。"
+    },
+    "RenterAliyunId": {
+      "name": "RenterAliyunId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "some_user",
+      "description_cn": "要授权的开发者的阿里云账号ID。"
+    }
+  },
+  "res": {}
+}

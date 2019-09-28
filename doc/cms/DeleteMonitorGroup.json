@@ -1,0 +1,46 @@
+{
+  "name": "DeleteMonitorGroup",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "删除指定的应用分组。",
+  "abc_id": 115036,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "GroupId": {
+      "name": "GroupId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "12345",
+      "description_cn": "应用分组ID。"
+    }
+  },
+  "res": {
+    "RequestId": "C85A2870-5DF4-4269-BC50-ECB5E4591A80",
+    "Success": true,
+    "Code": 200,
+    "Group": {
+      "GroupName": "xxxxx",
+      "ContactGroups": {
+        "ContactGroup": [
+          {
+            "Name": "default Contact"
+          }
+        ]
+      },
+      "GroupId": 3391309
+    }
+  }
+}

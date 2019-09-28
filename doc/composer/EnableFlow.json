@@ -1,0 +1,29 @@
+{
+  "name": "EnableFlow",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "启用一个工作流编排实例",
+  "abc_id": 127650,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "FlowId": {
+      "name": "FlowId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "lc-abcdefg",
+      "description_cn": "需要启用的工作流编排实例的 ID"
+    }
+  },
+  "res": {}
+}

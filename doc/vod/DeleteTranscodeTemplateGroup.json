@@ -1,0 +1,63 @@
+{
+  "name": "DeleteTranscodeTemplateGroup",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteTranscodeTemplateGroup删除转码配置信息，可删除转码模板组下的部分转码模板，也可强制删除整个转码模板组。",
+  "abc_id": 129750,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "TranscodeTemplateGroupId": {
+      "name": "TranscodeTemplateGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "4c71a339fecec0152b4fa6f4527xxx",
+      "description_cn": "转码模板组ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "TranscodeTemplateIds": {
+      "name": "TranscodeTemplateIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "[\"dddddd\",\"ffffff\"]",
+      "description_cn": "需要删除的转码模板ID列表。ID以英文逗号分隔，最大支持10个模板ID。\n\n> **DeleteMode**取值**DeleteTranscodeTemplate**时，该参数必传。"
+    },
+    "ForceDelGroup": {
+      "name": "ForceDelGroup",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "是否强制删除整个转码模板组。取值：\n\n- **true**：删除整个模板组及其转码模板列表。\n- **false（默认）**：只删除指定的转码模板。"
+    }
+  },
+  "res": {}
+}

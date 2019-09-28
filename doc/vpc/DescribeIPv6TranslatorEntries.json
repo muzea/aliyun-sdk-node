@@ -1,0 +1,206 @@
+{
+  "name": "DescribeIPv6TranslatorEntries",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询IPv6转换映射条目。",
+  "abc_id": 114602,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": " IPv6转换服务实例的地域。 您可以通过调用**DescribeRegions**接口获取地域ID。  "
+    },
+    "Ipv6TranslatorId": {
+      "name": "Ipv6TranslatorId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "ipv6trans-bp1858ysxxxxxx",
+      "description_cn": "IPv6转换服务实例的ID。 "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "Ipv6TranslatorEntryId": {
+      "name": "Ipv6TranslatorEntryId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ipv6transentry-bp1g8bhrdexxxxx",
+      "description_cn": "要查询的IPv6转换映射条目ID。 \n\n> 如果**Ipv6TranslatorId**参数和**Ipv6TranslatorEntryId**参数的值都为null，则返回所有IPv6转换映射条目信息。如果仅是**Ipv6TranslatorEntryId**参数的值为null，则返回当前IPv6转换服务实例下的所有IPv6转换映射条目信息。  "
+    },
+    "EntryName": {
+      "name": "EntryName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "entryname",
+      "description_cn": " Pv6转换映射条目的名称。 "
+    },
+    "AllocateIpv6Addr": {
+      "name": "AllocateIpv6Addr",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2400:3200:1600::xx",
+      "description_cn": "IPv6转换服务实例分配的IPv6地址。"
+    },
+    "AllocateIpv6Port": {
+      "name": "AllocateIpv6Port",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "80",
+      "description_cn": " IPv6转换服务实例分配的IPv6地址使用的端口。 "
+    },
+    "BackendIpv4Addr": {
+      "name": "BackendIpv4Addr",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "47.99.xx.xx",
+      "description_cn": " 需要提供IPv6服务的公网IPv4地址 "
+    },
+    "BackendIpv4Port": {
+      "name": "BackendIpv4Port",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "80",
+      "description_cn": " 需要提供IPv6服务的公网IPv4地址使用的端口。 "
+    },
+    "TransProtocol": {
+      "name": "TransProtocol",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "tcp",
+      "description_cn": " 转发数据的协议类型。 "
+    },
+    "AclStatus": {
+      "name": "AclStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "off",
+      "description_cn": "是否开启访问控制。取值：**on|off**。"
+    },
+    "AclType": {
+      "name": "AclType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "white",
+      "description_cn": "访问控制策略类型。取值：\n\n- **white**：允许访问策略组中的IPv6地址访问后端服务。\n\n- **black**：禁止访问策略组中的IPv6地址访问后端服务。"
+    },
+    "AclId": {
+      "name": "AclId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ipv6transacl-bp1de2xxxx",
+      "description_cn": "访问控制策略组ID。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": " 列表的页码，默认值为1。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": " 分页查询时每页的行数，最大值为50，默认值为10。  "
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sha1111",
+      "description_cn": "客户端token，用于保证请求的幂等性。 由客户端生成该参数值，要保证在不同请求间唯一，最大不值过64个 ASCII 字符。"
+    }
+  },
+  "res": {
+    "Ipv6TranslatorEntries": [
+      {
+        "AllocateIpv6Addr": "2400:3200:1600::xxx",
+        "AllocateIpv6Port": 2345,
+        "BackendIpv4Addr": "222.118.xxx.xxx",
+        "BackendIpv4Port": "1234",
+        "EntryBandwidth": "-1",
+        "EntryStatus": "active",
+        "Ipv6TranslatorEntryId": "ipv6transentry-bp1gpgxxg",
+        "Ipv6TranslatorId": "ipv6trans-bp1i8ahxut1iedrxxx",
+        "RegionId": "cn-hangzhou",
+        "TransProtocol": "tcp"
+      }
+    ],
+    "PageNumber": 1,
+    "PageSize": 10,
+    "RequestId": "9C57C407-3179-4B85-80D8-F0BE74262EF1",
+    "TotalCount": 1
+  }
+}

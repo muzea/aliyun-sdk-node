@@ -1,0 +1,40 @@
+{
+  "name": "UpdateGatewayEnablingState",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用UpdateGatewayEnablingState启动、关闭网关。",
+  "abc_id": 109910,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "GwEui": {
+      "name": "GwEui",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "0000000000000000",
+      "description_cn": "网关唯一标识。"
+    },
+    "Enabled": {
+      "name": "Enabled",
+      "type": "Boolean",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "true",
+      "description_cn": "是否开启网关。\n- **true**：表示启用该网关。\n- **false**：表示关闭该网关。"
+    }
+  },
+  "res": {}
+}

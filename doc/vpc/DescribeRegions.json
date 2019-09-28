@@ -1,0 +1,61 @@
+{
+  "name": "DescribeRegions",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeRegions接口查询可用地域。",
+  "abc_id": 36063,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "ProductType": {
+      "name": "ProductType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "AcceptLanguage": {
+      "name": "AcceptLanguage",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "zh-CN",
+      "description_cn": "返回值语言。取值： \n          \n- **zh-CN（默认值）**：中文\n\n- **en-US**：英文\n  "
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "2F026E79-30AD-47B6-9E7D-D1D4BA77F1F1",
+    "Regions": {
+      "Region": [
+        {
+          "RegionId": "cn-qingdao",
+          "RegionEndpoint": "vpc.aliyuncs.com",
+          "LocalName": "华北 1"
+        },
+        {
+          "RegionId": "eu-central-1",
+          "RegionEndpoint": "vpc.eu-central-1.aliyuncs.com",
+          "LocalName": "欧洲中部 1 (法兰克福)"
+        }
+      ]
+    }
+  }
+}

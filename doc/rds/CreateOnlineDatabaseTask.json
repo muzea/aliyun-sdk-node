@@ -1,0 +1,84 @@
+{
+  "name": "CreateOnlineDatabaseTask",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "在备份数据上云时调用CreateOnlineDatabaseTask接口打开数据库。",
+  "abc_id": 74296,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "DBName": {
+      "name": "DBName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "testDB",
+      "description_cn": "数据库名称。"
+    },
+    "MigrateTaskId": {
+      "name": "MigrateTaskId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "5652255443",
+      "description_cn": "迁移任务ID。"
+    },
+    "CheckDBMode": {
+      "name": "CheckDBMode",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "AsyncExecuteDBCheck",
+      "description_cn": "打开数据库后的一致性检查方法，取值：\n* **SyncExecuteDBCheck**：同步执行DB检查；\n* **AsyncExecuteDBCheck**：异步执行DB检查。\n\n>兼容SQL Server 2008 R2版本。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ETnLKlblzczshOTUbOCzxxxxxxx",
+      "description_cn": "用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "1B2EBD14-36F6-4645-A3F9-DE19D321C18F"
+    },
+    "requestId": "1B2EBD14-36F6-4645-A3F9-DE19D321C18F",
+    "successResponse": true
+  }
+}

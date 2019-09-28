@@ -1,0 +1,153 @@
+{
+  "name": "DescribeInvocationResults",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeInvocationResults查看云助手命令的执行结果，在指定ECS实例中的实际执行结果。",
+  "abc_id": 64845,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。您可以调用 [DescribeRegions](~~25609~~) 查看最新的阿里云地域列表。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "hide"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。 "
+    },
+    "InvokeId": {
+      "name": "InvokeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "t-7d2a745b412b4601b2d47f6a768d3***",
+      "description_cn": "命令执行ID。命令进程执行ID。您可以通过接口 [DescribeInvocations](~~64840~~) 查询InvokeId。 "
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-uf614fhehhzmx***",
+      "description_cn": "实例ID。"
+    },
+    "CommandId": {
+      "name": "CommandId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "c-4d34302d02424c5c8e10281e3a315***",
+      "description_cn": "命令ID。\n"
+    },
+    "InvokeRecordStatus": {
+      "name": "InvokeRecordStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Finished",
+      "description_cn": "命令执行状态。"
+    },
+    "IncludeHistory": {
+      "name": "IncludeHistory",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "当前页码，起始值：1\n\n默认值：1 "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "5",
+      "description_cn": "分页查询时设置的每页行数，最大值：50\n\n默认值：10 "
+    }
+  },
+  "res": {
+    "Invocation": {
+      "TotalCount": 5,
+      "PageNumber": 1,
+      "InvocationResults": {
+        "InvocationResult": [
+          {
+            "FinishedTime": "2018-01-05 15:45:02",
+            "InstanceId": "i-uf614fhehhzmxdqw",
+            "Output": "MTU6NDU6MDEK",
+            "InvokeRecordStatus": "Finished",
+            "ExitCode": 0
+          },
+          {
+            "FinishedTime": "2018-01-05 15:40:02",
+            "InstanceId": "i-uf614fhehhzmxdqw",
+            "InvokeRecordStatus": "Finished",
+            "Output": "",
+            "ExitCode": 0
+          },
+          {
+            "FinishedTime": "2018-01-05 15:30:02",
+            "InstanceId": "i-uf614fhehhzmxdqw",
+            "Output": "MTU6MzA6MDEK",
+            "ExitCode": 0
+          },
+          {
+            "FinishedTime": "2018-01-05 15:20:02",
+            "InstanceId": "i-uf614fhehhzmd3zj4k74",
+            "Output": "",
+            "ExitCode": 0
+          },
+          {
+            "FinishedTime": "2018-01-05 15:15:02",
+            "InstanceId": "i-uf614fhehhzmd3zj4k74",
+            "InvokeRecordStatus": "Finished",
+            "Output": "MTU6MTU6MDEK",
+            "ExitCode": 0
+          }
+        ]
+      },
+      "PageSize": 5
+    },
+    "RequestId": "E69EF3CC-94CD-42E7-8926-F133B86387C0"
+  }
+}

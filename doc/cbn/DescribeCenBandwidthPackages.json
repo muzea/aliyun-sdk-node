@@ -1,0 +1,119 @@
+{
+  "name": "DescribeCenBandwidthPackages",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCenBandwidthPackage查看账户下所有带宽包的详细信息。",
+  "abc_id": 110732,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "IncludeReservationData": {
+      "name": "IncludeReservationData",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "111"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "列表的页码，默认值为**1**。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "2",
+      "description_cn": "分页查询时每页的行数，最大值为**50**，默认值为**10**。  "
+    },
+    "Filter": {
+      "name": "Filter",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        }
+      ]
+    },
+    "IsOrKey": {
+      "name": "IsOrKey",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "过滤条件之间的关系，取值：\n\n- **false**：过滤值之间是**与**关系。\n\n- **true**：过滤值之间是**或**关系。"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 5,
+    "PageSize": 10,
+    "RequestId": "9D7E2400-2755-4AF5-9B73-12565E4F73A0",
+    "CenBandwidthPackages": {
+      "CenBandwidthPackage": [
+        {
+          "CreationTime": "2018-02-07T02:19Z",
+          "Status": "InUse",
+          "GeographicRegionBId": "china",
+          "BusinessStatus": "Normal",
+          "BandwidthPackageChargeType": "PREPAY",
+          "GeographicRegionAId": "china",
+          "CenBandwidthPackageId": "cenbwp-oq2ehpxq4zhwp7****",
+          "CenIds": {
+            "CenId": [
+              "cen-kojok19x3j0q6k****"
+            ]
+          },
+          "ExpiredTime": "2018-03-07T16:00Z",
+          "Bandwidth": 1
+        }
+      ]
+    }
+  }
+}

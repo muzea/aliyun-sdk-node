@@ -1,0 +1,129 @@
+{
+  "name": "SubmitSnapshotJob",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用SubmitSnapshotJob提交视频截图作业，开始异步截图处理。支持普通截图和雪碧图截图。",
+  "abc_id": 129711,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "VideoId": {
+      "name": "VideoId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "d3e680e618708fef7cefbf2cae7cc931",
+      "description_cn": "视频ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "SpecifiedOffsetTime": {
+      "name": "SpecifiedOffsetTime",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "0",
+      "description_cn": "截图指定时间的起始点，单位：毫秒。默认值：**0**。"
+    },
+    "Width": {
+      "name": "Width",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "8",
+      "description_cn": "截图宽，取值范围：`[8,4096]`，默认原片宽，单位：px。"
+    },
+    "Height": {
+      "name": "Height",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "8",
+      "description_cn": "截图高，取值范围：`[8,4096]`，默认原片高，单位：px。"
+    },
+    "Count": {
+      "name": "Count",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "截图的最大数量。默认值：**1**。\n\n> **Count**和**Interval**至少指定一个，若同时指定，截图数目以少者为准。"
+    },
+    "Interval": {
+      "name": "Interval",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "截图的间隔时间，必须**大于等于0**，单位：秒。其中，Interval为**0**表示按照Count数根据视频时长平均截图。默认值：**1**。"
+    },
+    "SpriteSnapshotConfig": {
+      "name": "SpriteSnapshotConfig",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{'CellWidth': 120, 'CellHeight': 68, 'Columns': 3,'Lines': 10, 'Padding': 20, 'Margin': 50}",
+      "description_cn": "生成雪碧图的配置信息，如果不为空则生成雪碧图。"
+    },
+    "SnapshotTemplateId": {
+      "name": "SnapshotTemplateId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "snapshotTemplateId",
+      "description_cn": "截图模板ID，推荐先构建截图模板，再传递截图模板ID。\n\n> 如果传递该参数，会忽略除**Action**、**VideoId**之外的请求参数。截图模板创建详细请参考[添加截图模板](https://help.aliyun.com/document_detail/99406.html?spm=a2c4g.11186623.2.17.a35d5f28WoLjDw)。"
+    },
+    "UserData": {
+      "name": "UserData",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "{\"Vod\":{\"Title\":\"test\",\"CateId\":\"234\"}\"}",
+      "description_cn": "自定义数据，将在截图完成时进行回调。\n\n- 最大长度为1024。\n- 建议采用JSON字符串。"
+    }
+  },
+  "res": {}
+}

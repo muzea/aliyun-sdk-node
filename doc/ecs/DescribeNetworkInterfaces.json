@@ -1,0 +1,224 @@
+{
+  "name": "DescribeNetworkInterfaces",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeNetworkInterfaces查看弹性网卡（ENI）列表。",
+  "abc_id": 58512,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "所在地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。"
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "ResourceGroupId": {
+      "name": "ResourceGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "rg-resourcegroupid1",
+      "description_cn": "资源组ID。"
+    },
+    "VSwitchId": {
+      "name": "VSwitchId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vsw-bp16usj2p27htro3*****",
+      "description_cn": "VPC的虚拟交换机ID。"
+    },
+    "VpcId": {
+      "name": "VpcId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "vsw-bp16usj2p27htro3*****",
+      "description_cn": "网卡所属的专有网络VPC ID。"
+    },
+    "PrimaryIpAddress": {
+      "name": "PrimaryIpAddress",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "172.17.**.***",
+      "description_cn": "弹性网卡主私有IP地址。"
+    },
+    "PrivateIpAddress": {
+      "name": "PrivateIpAddress",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "SecurityGroupId": {
+      "name": "SecurityGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sg-bp144yr32sx6ndw*****",
+      "description_cn": "安全组ID。"
+    },
+    "NetworkInterfaceName": {
+      "name": "NetworkInterfaceName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "my-eni-name",
+      "description_cn": "弹性网卡的名称。"
+    },
+    "Type": {
+      "name": "Type",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Secondary",
+      "description_cn": "弹性网卡类型。取值范围： \n- Primary\n- Secondary\n         "
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "i-bpm21018033933ea*****",
+      "description_cn": "弹性网卡当前关联的实例ID。"
+    },
+    "NetworkInterfaceId": {
+      "name": "NetworkInterfaceId",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "ServiceManaged": {
+      "name": "ServiceManaged",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "查询结果的页码。取值为正整数。\n\n默认值：1 "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "100",
+      "description_cn": "查询结果的分页大小。取值范围：1~100\n\n默认值：10 "
+    }
+  },
+  "res": {
+    "NetworkInterfaceSets": {
+      "NetworkInterfaceSet": [
+        {
+          "AssociatedPublicIp": {},
+          "CreationTime": "2017-11-24T06:14:22Z",
+          "InstanceId": "AY121018033933eaxxxxx",
+          "MacAddress": "00:16:3e:0f:XX:XX",
+          "NetworkInterfaceId": "eni-bp17pdijfczaxZZZZxxxxx",
+          "PrivateIpAddress": "XXX.XXX.XX.XX",
+          "PrivateIpSets": {
+            "PrivateIpSet": [
+              {
+                "AssociatedPublicIp": {},
+                "Primary": true,
+                "PrivateIpAddress": "XXX.XXX.XX.XX"
+              }
+            ]
+          },
+          "SecurityGroupIds": {
+            "SecurityGroupId": [
+              "sg-bp144yr32sx6ndwxxxxx"
+            ]
+          },
+          "Status": "Available",
+          "Type": "Secondary",
+          "VpcId": "vpc-bp1j7w3gc1cexjqdxxxxx",
+          "VSwitchId": "vsw-bp16usj2p27htro3xxxxx",
+          "ZoneId": "cn-hangzhou-e"
+        }
+      ]
+    },
+    "PageNumber": 1,
+    "PageSize": 100,
+    "RequestId": "CEE5C347-0B64-4535-A061-95BE95Axxxxx",
+    "TotalCount": 1
+  }
+}

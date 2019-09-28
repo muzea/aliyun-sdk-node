@@ -1,0 +1,118 @@
+{
+  "name": "DescribePhysicalConnections",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribePhysicalConnections接口查询指定地域内的物理专线。",
+  "abc_id": 36042,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "物理专线所在的地域。 \n\n您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。  "
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": " 列表的页码，默认值为1。  "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": " 分页查询时每页的行数，最大值为50，默认值为10。  "
+    },
+    "Filter": {
+      "name": "Filter",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "RepeatList",
+          "required": false,
+          "docRequired": false,
+          "subType": "String"
+        }
+      ]
+    },
+    "IncludeReservationData": {
+      "name": "IncludeReservationData",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "是否返回未生效订单。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "23243242rggyt",
+      "description_cn": "用于保证请求的幂等性。由客户端生成该参数值，要保证在不同请求间唯一，最大不值过64个ASCII字符。"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 1,
+    "PageSize": 10,
+    "RequestId": "7C07B0AF-4FC0-4BB2-9667-F75812824BCD",
+    "PhysicalConnectionSet": {
+      "PhysicalConnectionType": [
+        {
+          "Type": "VPC",
+          "PhysicalConnectionId": "pc-2zeoaxkq3jot5p71qcnuy",
+          "PeerLocation": "XXX-XX区--XXX路",
+          "CreationTime": "2017-12-13T02:28:42Z",
+          "Name": "TEST",
+          "Status": "Enabled",
+          "AdLocation": "XXX--XX-XXX机房XX机柜XXU",
+          "EnabledTime": "2017-12-18T04:01:30Z",
+          "BusinessStatus": "Normal",
+          "LineOperator": "CT",
+          "PortNumber": "1/1/4",
+          "AccessPointId": "ap-cn-beijing-dx-A",
+          "PortType": "100Base-T",
+          "Bandwidth": 2
+        }
+      ]
+    }
+  }
+}

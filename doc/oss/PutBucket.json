@@ -1,0 +1,20 @@
+{
+  "name": "PutBucket",
+  "protocol": "HTTP|HTTPS",
+  "method": "PUT",
+  "path": "/",
+  "timeout": null,
+  "reqFormat": {
+    "BucketName": {
+      "name": "BucketName",
+      "position": "domain",
+      "required": true
+    },
+    "x-oss-acl": {
+      "name": "x-oss-acl",
+      "position": "header",
+      "required": false
+    }
+  },
+  "res": {}
+}

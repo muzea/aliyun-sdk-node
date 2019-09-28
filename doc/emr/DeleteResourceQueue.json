@@ -1,0 +1,46 @@
+{
+  "name": "DeleteResourceQueue",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 DeleteResourceQueue 接口删除资源队列。",
+  "abc_id": 100559,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。"
+    },
+    "ClusterId": {
+      "name": "ClusterId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "C-EBD62A703A430E23",
+      "description_cn": "集群ID。"
+    },
+    "ResourceQueueId": {
+      "name": "ResourceQueueId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "248",
+      "description_cn": "资源队列ID。"
+    }
+  },
+  "res": {
+    "code": "200",
+    "requestId": "A544317F-4A60-4532-AC96-191B9D80420A",
+    "successResponse": true
+  }
+}

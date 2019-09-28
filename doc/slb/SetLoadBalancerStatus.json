@@ -1,0 +1,72 @@
+{
+  "name": "SetLoadBalancerStatus",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用SetLoadBalancerStatus设置负载均衡实例的状态。",
+  "abc_id": 27580,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "负载均衡实例的地域ID。\n\n您可以从[地域和可用区](~~40654~~)列表或通过调用[DescribeRegions](~~25609~~)接口查询地域ID。"
+    },
+    "LoadBalancerStatus": {
+      "name": "LoadBalancerStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "active",
+      "description_cn": "负载均衡实例状态。取值：**active|inactive**。\n\n* active（默认值）\n\t\n 当负载均衡实例的状态为active时，实例中的监听可以根据规则转发接收的流量。\n\n 实例创建后的状态默认为**active**。\n \n* inactive\n\n 当负载均衡实例的状态为**inactive**时，实例中的监听不会再转发接收的流量。\n\n\n> 当一个实例下的所有监听都被删除后，实例状态会被自动改为**inactive**。"
+    },
+    "LoadBalancerId": {
+      "name": "LoadBalancerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "lb-bp1b6c719dfa08exfuca5",
+      "description_cn": "负载均衡实例的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "",
+      "description_cn": ""
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "E6DDFE22-F019-4F34-B8DD-FD14973450A6"
+  }
+}

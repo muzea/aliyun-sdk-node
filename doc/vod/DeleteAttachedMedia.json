@@ -1,0 +1,41 @@
+{
+  "name": "DeleteAttachedMedia",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeleteAttachedMedia删除辅助媒资，支持批量删除。",
+  "abc_id": 129681,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "MediaIds": {
+      "name": "MediaIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "xxxxxxxx,xxxxxxxxx",
+      "description_cn": "辅助媒资ID列表。多个用逗号分隔。最多支持20个。"
+    }
+  },
+  "res": {}
+}

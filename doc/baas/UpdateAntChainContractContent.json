@@ -1,0 +1,74 @@
+{
+  "name": "UpdateAntChainContractContent",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "更新一个合约工程的内容",
+  "abc_id": 127097,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID"
+    },
+    "ParentContentId": {
+      "name": "ParentContentId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "R38DYDop",
+      "description_cn": "上级目录ID"
+    },
+    "ContentId": {
+      "name": "ContentId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "R6XMn59e",
+      "description_cn": "文件ID"
+    },
+    "ContentName": {
+      "name": "ContentName",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "newFile",
+      "description_cn": "更新文件/文件夹名称"
+    },
+    "Content": {
+      "name": "Content",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "update content",
+      "description_cn": "文件内容"
+    }
+  },
+  "res": {
+    "code": "200",
+    "data": {
+      "RequestId": "08CBD579-C430-4F1F-9011-C120FA1E9B97",
+      "Result": "success"
+    },
+    "requestId": "08CBD579-C430-4F1F-9011-C120FA1E9B97",
+    "successResponse": true
+  }
+}

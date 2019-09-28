@@ -1,0 +1,69 @@
+{
+  "name": "GrantAccountPrivilege",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用GrantAccountPrivilege接口授权账号访问数据库。",
+  "abc_id": 26266,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "AccountName": {
+      "name": "AccountName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "test1",
+      "description_cn": "账号名称。"
+    },
+    "DBName": {
+      "name": "DBName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "testDB",
+      "description_cn": "需要授权访问的数据库名称。"
+    },
+    "AccountPrivilege": {
+      "name": "AccountPrivilege",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "ReadWrite",
+      "description_cn": "账号权限，取值：\n* **ReadWrite**：读写；\n* **ReadOnly**：只读；\n* **DDLOnly**：仅执行DDL，适用于MySQL和MariaDB；\n* **DMLOnly**：只执行DML，适用于MySQL和MariaDB；\n* **DBOwner**：数据库所有者，适用于SQL Server。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "81BC9559-7B22-4B7F-B705-5F56DEECDEA7"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "DeletePolicy",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DeletePolicy接口删除指定的权限策略。",
+  "abc_id": 28718,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "PolicyName": {
+      "name": "PolicyName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "OSS-Administrator",
+      "description_cn": "指定权限策略名称。"
+    }
+  },
+  "res": {
+    "RequestId": "898FAB24-7509-43EE-A287-086FE4C44394"
+  }
+}

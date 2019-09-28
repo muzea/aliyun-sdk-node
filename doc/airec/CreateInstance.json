@@ -1,0 +1,16 @@
+{
+  "name": "CreateInstance",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST",
+  "path": "/openapi/instances",
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    }
+  },
+  "res": {}
+}

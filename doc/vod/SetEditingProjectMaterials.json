@@ -1,0 +1,49 @@
+{
+  "name": "SetEditingProjectMaterials",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用SetEditingProjectMaterials设置云剪辑工程的待剪辑素材。",
+  "abc_id": 130321,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "MaterialIds": {
+      "name": "MaterialIds",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "9e3101bf24bf41c78b275123318788ca",
+      "description_cn": "素材ID。即媒资ID，如视频VideoId、图片ImageId、辅助媒资MediaId等。支持多个素材，以逗号分隔。"
+    },
+    "ProjectId": {
+      "name": "ProjectId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "fb2101bf24bf41c78b2754cb318787dc",
+      "description_cn": "云剪辑工程ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {}
+}

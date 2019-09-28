@@ -1,0 +1,34 @@
+{
+  "name": "SearchAlertContactGroup",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 SearchAlertContactGroup 查询报警联系人分组。",
+  "abc_id": 130671,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域 ID"
+    },
+    "ContactGroupName": {
+      "name": "ContactGroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "TestGroup",
+      "description_cn": "报警联系人分组名称"
+    }
+  },
+  "res": {}
+}

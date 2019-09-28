@@ -1,0 +1,88 @@
+{
+  "name": "DescribeLoadBalancerTCPListenerAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeLoadBalancerTCPListenerAttribute查询TCP监听配置。",
+  "abc_id": 27608,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "负载均衡实例的地域。\n\n您可以从[地域和可用区](~~40654~~)列表或通过调用[DescribeRegions](~~25609~~)接口查询地域ID。"
+    },
+    "ListenerPort": {
+      "name": "ListenerPort",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "80",
+      "description_cn": "负载均衡实例前端使用的端口。\n\n取值：**1~65535**。"
+    },
+    "LoadBalancerId": {
+      "name": "LoadBalancerId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "lb-bp1ygod3yctvg1y******",
+      "description_cn": "负载均衡实例的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "HealthCheckHttpCode": "http_2xx,http_3xx",
+    "PersistenceTimeout": 0,
+    "HealthCheckType": "tcp",
+    "HealthyThreshold": 3,
+    "Scheduler": "wrr",
+    "UnhealthyThreshold": 3,
+    "Bandwidth": -1,
+    "Description": "tcp_80",
+    "AclStatus": "off",
+    "HealthCheckURI": "/",
+    "HealthCheck": "on",
+    "HealthCheckConnectTimeout": 5,
+    "ListenerPort": 80,
+    "Status": "running",
+    "EstablishedTimeout": 900,
+    "HealthCheckDomain": "",
+    "HealthCheckInterval": 2,
+    "RequestId": "9A113A8C-BB8F-475E-9533-7819ECA2FFC1",
+    "BackendServerPort": 80
+  }
+}

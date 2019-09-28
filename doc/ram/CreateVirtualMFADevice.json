@@ -1,0 +1,35 @@
+{
+  "name": "CreateVirtualMFADevice",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateVirtualMFADevice接口创建多因素认证设备。",
+  "abc_id": 28693,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "VirtualMFADeviceName": {
+      "name": "VirtualMFADeviceName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "device001",
+      "description_cn": "指定设备名称, 最大长度64个字符。\n\n限制：`[a-zA-Z0-9-]*`。"
+    }
+  },
+  "res": {
+    "RequestId": "04F0F334-1335-436C-A1D7-6C044FE73368",
+    "VirtualMFADevice": {
+      "SerialNumber": "acs:ram::1234567890123:mfa/device001",
+      "Base32StringSeed": "DSF98HAD982KJA9SDFNAS9D8FU839B8ADHBGSD7A8",
+      "QRCodePNG": "YXNkZmFzZDlmeW5hc2Q5OGZoODd4bXJmcThhaGU5aSBmYXNkZiBzYWRmIGFGIDRxd2VjIGEgdHEzdCAg"
+    }
+  }
+}

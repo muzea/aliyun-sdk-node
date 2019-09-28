@@ -1,0 +1,32 @@
+{
+  "name": "DescribeSiteMonitorQuota",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询站点监控的配额以及版本。",
+  "abc_id": 115040,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "Data": {
+      "SiteMonitorIdcQuota": 20,
+      "SiteMonitorVersion": "V1",
+      "SiteMonitorTaskQuota": 9999,
+      "SiteMonitorQuotaTaskUsed": 39,
+      "SiteMonitorOperatorQuotaQuota": 500
+    },
+    "Message": "successful",
+    "RequestId": "26860260-76C6-404E-AB7A-EB98D36A6885",
+    "Success": true,
+    "Code": "200"
+  }
+}

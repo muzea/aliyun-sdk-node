@@ -1,0 +1,163 @@
+{
+  "name": "DescribeCommands",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeCommands查询您已经创建的云助手命令。只输入参数Action和RegionId，不输入其他任何请求参数，则默认查询您所有可用的命令（CommandId）。 ",
+  "abc_id": 64843,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。 "
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。 "
+    },
+    "CommandId": {
+      "name": "CommandId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "c-7d2a745b412b4601b2d47f6a768d3***",
+      "description_cn": "命令 ID。"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Test1",
+      "description_cn": "命令的名称，暂不支持模糊查询。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "命令描述。"
+    },
+    "Type": {
+      "name": "Type",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "RunShellScript",
+      "description_cn": "命令的类型。取值范围： \n\n- RunBatScript：命令为在Windows实例中运行的Bat脚本  \n- RunPowerShellScript：命令为在Windows实例中运行的PowerShell脚本  \n- RunShellScript：命令为在Linux实例中运行的Shell脚本  \n         "
+    },
+    "ContentEncoding": {
+      "name": "ContentEncoding",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "当前页码，起始值：1\n\n默认值：1 "
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时设置的每页行数，最大值：50\n\n默认值：10 "
+    }
+  },
+  "res": {
+    "TotalCount": 5,
+    "Commands": {
+      "Command": [
+        {
+          "Name": "Test",
+          "WorkingDir": "",
+          "CommandContent": "ZWNobyAxMjM=",
+          "Timeout": 3600,
+          "Type": "RunShellScript",
+          "CommandId": "c-7d2a745b412b4601b2d47f6a768d3a14",
+          "Description": "test"
+        },
+        {
+          "Name": "Test1",
+          "WorkingDir": "",
+          "CommandContent": "Y2QgL3Jvb3Q=",
+          "Timeout": 3600,
+          "Type": "RunShellScript",
+          "CommandId": "c-7d2a745b412b4601b2d47f6a768d3a15",
+          "Description": "test1"
+        },
+        {
+          "Name": "Test2",
+          "WorkingDir": "",
+          "CommandContent": "eXVtIHVwZGF0ZQ==",
+          "Timeout": 3600,
+          "Type": "RunShellScript",
+          "CommandId": "c-7d2a745b412b4601b2d47f6a768d3a16",
+          "Description": "test2"
+        },
+        {
+          "Name": "Test3",
+          "WorkingDir": "",
+          "CommandContent": "c2VydmljZSBuZ2lueCByZWxvYWQ=",
+          "Timeout": 3600,
+          "Type": "RunShellScript",
+          "CommandId": "c-7d2a745b412b4601b2d47f6a768d3a17",
+          "Description": "test3"
+        },
+        {
+          "Name": "Test4",
+          "WorkingDir": "",
+          "CommandContent": "bHM=",
+          "Timeout": 3600,
+          "Type": "RunShellScript",
+          "CommandId": "c-7d2a745b412b4601b2d47f6a768d3a18",
+          "Description": "test4"
+        }
+      ]
+    },
+    "PageNumber": 1,
+    "RequestId": "E69EF3CC-94CD-42E7-8926-F133B86387C0",
+    "PageSize": 10
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "DeleteEventRules",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "删除事件报警规则。",
+  "abc_id": 114998,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "RuleNames": {
+      "name": "RuleNames",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": false,
+      "subType": "String"
+    }
+  },
+  "res": {
+    "RequestId": "E5A72B5B-4F44-438C-B68A-147FD5DC53A8",
+    "Success": true,
+    "Code": "200"
+  }
+}

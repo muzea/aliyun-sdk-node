@@ -1,0 +1,40 @@
+{
+  "name": "ReturnJoinPermission",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ReturnJoinPermission归还租用的入网凭证（可以是专用入网凭证或泛在入网凭证）。",
+  "abc_id": 109931,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "JoinPermissionId": {
+      "name": "JoinPermissionId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "123",
+      "description_cn": "要归还的入网凭证ID。"
+    },
+    "JoinPermissionType": {
+      "name": "JoinPermissionType",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "LOCAL",
+      "description_cn": "要归还的入网凭证类型。"
+    }
+  },
+  "res": {}
+}

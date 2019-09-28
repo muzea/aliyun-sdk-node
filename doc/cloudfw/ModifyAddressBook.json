@@ -1,0 +1,122 @@
+{
+  "name": "ModifyAddressBook",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyAddressBook接口修改访问控制的地址簿。",
+  "abc_id": 138868,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "DEMO地址簿",
+      "description_cn": "地址簿的描述信息。"
+    },
+    "GroupName": {
+      "name": "GroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "demo_address_book",
+      "description_cn": "地址簿名称。"
+    },
+    "GroupUuid": {
+      "name": "GroupUuid",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "0657ab9d-fe8b-4174-b2a6-6baf358ea4ad",
+      "description_cn": "地址簿唯一ID。"
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.2.3.4",
+      "description_cn": "访问者源IP地址。"
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "zh",
+      "description_cn": "指定请求和接收消息的语言类型。\n- **zh**：中文\n- **en**：英文"
+    },
+    "AddressList": {
+      "name": "AddressList",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1/32, 2.2.2.0/24",
+      "description_cn": "地址列表，多个地址间用英文逗号分隔。\n\n> 当GroupType为ip、port或domain时必须设置。\n\n- 当GroupType为ip时，地址列表中填写IP地址。例如：1.2.3.4/32, 1.2.3.0/24\n\n- 当GroupType为port时，地址列表中填写端口或端口范围。例如：100/200, 80\n\n- 当GroupType为domain时，地址列表中填写域名。例如：demo1.aliyun.com, demo2.aliyun.com"
+    },
+    "AutoAddTagEcs": {
+      "name": "AutoAddTagEcs",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "是否自动添加新匹配标签的ECS公网IP到地址簿。\n\n- **1**：表示自动添加\n\n- **0**：表示不自动添加"
+    },
+    "TagRelation": {
+      "name": "TagRelation",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "and",
+      "description_cn": "多个标签间的关系。\n\n- **and**：多个标签间为“与”关系，即同时匹配多个标签的ECS公网IP才会被加入地址簿。\n\n- **or**：多个标签间为“或”关系，即只要匹配一个标签的ECS公网IP就会被加入地址簿。"
+    },
+    "TagList": {
+      "name": "TagList",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "TagKey",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "TagValue",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {
+    "RequestId": "CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D"
+  }
+}

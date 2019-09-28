@@ -1,0 +1,74 @@
+{
+  "name": "DescribeSiteMonitorISPCityList",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "查询可用于创建任务的探测点列表。",
+  "abc_id": 115045,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "System",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "Isp": {
+      "name": "Isp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "移动",
+      "description_cn": "探测的运营商名称或者ID，名称支持模糊查询。"
+    },
+    "City": {
+      "name": "City",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "北京",
+      "description_cn": "探测点的城市名称或者ID，城市名称支持模糊查询。"
+    }
+  },
+  "res": {
+    "Message": "successful",
+    "IspCityList": {
+      "IspCity": [
+        {
+          "IspName.zh_CN": "移动",
+          "Isp": "5",
+          "Region.en": "Shandong",
+          "CityName.en": "Yantai",
+          "IspName.en": "China-Mobile",
+          "Country.en": "China",
+          "Region.zh_CN": "山东省",
+          "Country.zh_CN": "中国",
+          "City": "428",
+          "CityName.zh_CN": "烟台市"
+        },
+        {
+          "IspName.zh_CN": "鹏博士",
+          "Isp": "507",
+          "Region.en": "Shaanxi",
+          "CityName.en": "Xian",
+          "IspName.en": "DrPeng",
+          "Country.en": "China",
+          "Region.zh_CN": "陕西省",
+          "Country.zh_CN": "中国",
+          "City": "311",
+          "CityName.zh_CN": "西安市"
+        }
+      ]
+    },
+    "Success": true,
+    "Code": "200"
+  }
+}

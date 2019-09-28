@@ -1,0 +1,40 @@
+{
+  "name": "RemoveUserFromGroup",
+  "protocol": "HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用RemoveUserFromGroup接口将RAM用户从用户组中移除。",
+  "abc_id": 28706,
+  "timeout": 5000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "UserName": {
+      "name": "UserName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "zhangq****",
+      "description_cn": "RAM用户名称。"
+    },
+    "GroupName": {
+      "name": "GroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "Dev-Team",
+      "description_cn": "用户组名称。"
+    }
+  },
+  "res": {
+    "RequestId": "A07EF215-B9B3-8CB2-2899-3F9575C6E320"
+  }
+}

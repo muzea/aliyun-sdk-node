@@ -1,0 +1,125 @@
+{
+  "name": "OperateBatchDomain",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用OperateBatchDomain提交批量管理域名、解析记录的任务。",
+  "abc_id": 90011,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "Lang": {
+      "name": "Lang",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "en",
+      "description_cn": "语言。"
+    },
+    "UserClientIp": {
+      "name": "UserClientIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1.1.1.1",
+      "description_cn": "用户IP。"
+    },
+    "Type": {
+      "name": "Type",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "DOMAIN_ADD",
+      "description_cn": "批量操作类型，取值：\n\n- **DOMAIN_ADD**：批量添加域名\n- **DOMAIN_DEL**：批量删除域名\n- **RR_ADD**：批量添加解析\n- **RR_DEL**：批量删除解析"
+    },
+    "DomainRecordInfo": {
+      "name": "DomainRecordInfo",
+      "type": "RepeatList",
+      "position": "Query",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Domain",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Type",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Rr",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": true,
+          "docRequired": false
+        },
+        {
+          "name": "Ttl",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Priority",
+          "type": "Integer",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Line",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "NewRr",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "NewType",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "NewValue",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    }
+  },
+  "res": {
+    "RequestId": "75446CC1-FC9A-4595-8D96-089D73D7A63D",
+    "TaskId": "345345"
+  }
+}

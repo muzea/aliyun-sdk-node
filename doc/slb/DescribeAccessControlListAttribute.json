@@ -1,0 +1,84 @@
+{
+  "name": "DescribeAccessControlListAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeAccessControlListAttribute查询访问控制策略组的配置。",
+  "abc_id": 70051,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "访问控制策略组的地域ID。\n\n您可以通过调用[DescribeRegions](~~27584~~)接口查询地域ID。"
+    },
+    "AclId": {
+      "name": "AclId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "acl-bp1l0kk4gxce43kzet04s",
+      "description_cn": "要查询的访问控制策略组ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "access_key_id": {
+      "name": "access_key_id",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "Tags": {
+      "name": "Tags",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Private",
+      "required": false,
+      "docRequired": false
+    },
+    "AclEntryComment": {
+      "name": "AclEntryComment",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test",
+      "description_cn": "访问控制策略组的条目的备注信息。"
+    }
+  },
+  "res": {
+    "AclId": "acl-bp1l0kk4gxce43kzet04s",
+    "RelatedListeners": {
+      "RelatedListener": [
+        {
+          "AclType": "white",
+          "LoadBalancerId": "lb-bp13jaf5qli5xmgl1miup",
+          "Protocol": "https",
+          "ListenerPort": 443
+        }
+      ]
+    },
+    "AclName": "doctest",
+    "RequestId": "C9906A1D-86F7-4C9C-A369-54DA42EF206A",
+    "AddressIPVersion": "ipv4"
+  }
+}

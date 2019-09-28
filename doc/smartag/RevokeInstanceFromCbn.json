@@ -1,0 +1,57 @@
+{
+  "name": "RevokeInstanceFromCbn",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用RevokeInstanceFromCbn撤销云企业网对云连接网的授权。",
+  "abc_id": 126142,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-shanghai",
+      "description_cn": "地域ID。"
+    },
+    "CcnInstanceId": {
+      "name": "CcnInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "ccn-n2935s1mnwv8i*****",
+      "description_cn": "云连接网的实例ID。"
+    },
+    "CenInstanceId": {
+      "name": "CenInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cen-7qthudw0ll6jm*****",
+      "description_cn": "云企业网的实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    }
+  },
+  "res": {
+    "RequestId": "07D73949-2508-4169-8C64-7CCDB33871C4"
+  }
+}

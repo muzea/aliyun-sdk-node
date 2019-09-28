@@ -1,0 +1,80 @@
+{
+  "name": "DescribeFabricOrganizationChaincodes",
+  "protocol": "HTTPS|HTTP",
+  "method": "PUT|POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeFabricOrganizationChaincodes获取组织的链码列表。",
+  "abc_id": 127853,
+  "timeout": 3000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域"
+    },
+    "OrganizationId": {
+      "name": "OrganizationId",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "peers-aaaaaa2-1eqnj5o5w****",
+      "description_cn": "组织ID"
+    },
+    "Location": {
+      "name": "Location",
+      "type": "String",
+      "position": "Body",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "位置信息"
+    }
+  },
+  "res": {
+    "Result": [
+      {
+        "ChaincodeName": "sacc",
+        "ChannelId": "chan-first-channel-31hlgpen5k5lig",
+        "State": "Upgradable",
+        "ConsortiumId": "10000",
+        "Creator": "perf9143",
+        "CreateTime": "2018-08-19T08:37:33.000+0000",
+        "Installed": "Installed",
+        "DeployTime": "2018-08-19T08:43:26.000+0000",
+        "ChannelName": "first-channel",
+        "ChaincodeVersion": "1.0.10",
+        "EndorsePolicy": "OR (&#39;perf9143MSP.member&#39;)",
+        "ChaincodeId": "code-sacc-nbk70pidp2jm7",
+        "Message": "OK"
+      },
+      {
+        "ChaincodeName": "sacc",
+        "ChannelId": "chan-first-channel-31hlgpen5k5lig",
+        "State": "Upgradable",
+        "ConsortiumId": "10000",
+        "Creator": "perf9141",
+        "CreateTime": "2018-08-19T08:38:18.000+0000",
+        "Installed": "Installed",
+        "DeployTime": "2018-08-19T08:46:02.000+0000",
+        "ChannelName": "first-channel",
+        "ChaincodeVersion": "1.0.11",
+        "EndorsePolicy": "OR (&#39;perf9141MSP.member&#39;)",
+        "ChaincodeId": "code-sacc-2bpegdo9mfchod",
+        "Message": "OK"
+      }
+    ],
+    "RequestId": "C741EF76-4F31-40BF-B286-E87C9D3E7232",
+    "Success": true,
+    "ErrorCode": 200
+  }
+}

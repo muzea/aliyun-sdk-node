@@ -1,0 +1,82 @@
+{
+  "name": "DescribeDBInstanceNetInfo",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeDBInstanceNetInfo接口查看实例的所有连接地址信息。",
+  "abc_id": 26237,
+  "timeout": 30000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "rm-uf6wjk5xxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ClientToken": {
+      "name": "ClientToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ETnLKlblzczshOTUbOCzxxxxxxxxxx",
+      "description_cn": "用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。"
+    },
+    "Flag": {
+      "name": "Flag",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "-",
+      "description_cn": "备用参数。"
+    },
+    "DBInstanceNetRWSplitType": {
+      "name": "DBInstanceNetRWSplitType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Normal",
+      "description_cn": "连接地址类型，取值：\n* **Normal**：普通连接地址；\n* **ReadWriteSplitting**：读写分离连接地址。\n\n>默认返回所有类型连接地址。"
+    }
+  },
+  "res": {
+    "dBInstanceNetInfos": [
+      {
+        "connectionString": "rm-bp1px91yp13ijer19.mysql.rds.aliyuncs.com",
+        "connectionStringType": "Normal",
+        "dBInstanceWeights": [],
+        "iPAddress": "47.98.12.84",
+        "iPType": "Public",
+        "port": "3306",
+        "securityIPGroups": [],
+        "upgradeable": "Disabled",
+        "vPCId": ""
+      }
+    ],
+    "instanceNetworkType": "Classic",
+    "requestId": "777C4593-8053-427B-99E2-105593277CAB"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "name": "ModifyInstanceNetExpireTime",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "若Redis实例之前执行过由经典网络向VPC网络切换，并保留了经典网络连接地址，则可调用ModifyInstanceNetExpireTime延长经典网络连接地址的保存时间。",
+  "abc_id": 61010,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "ConnectionString": {
+      "name": "ConnectionString",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "r-bp1xxxxxxxxxxxxx.redis.rds.aliyuncs.com",
+      "description_cn": "实例的经典网络连接地址。"
+    },
+    "ClassicExpiredDays": {
+      "name": "ClassicExpiredDays",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "14",
+      "description_cn": "延长经典网络连接地址的保留时间。取值：14、30、60或120，单位为天。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "r-bp1xxxxxxxxxxxxx",
+      "description_cn": "目标实例的ID。"
+    }
+  },
+  "res": {
+    "InstanceId": "r-bp1xxxxxxxxxxxxx",
+    "RequestId": "9C4AF387-1EA3-4C84-8013-3F6B973EDDF5",
+    "NetInfoItems": {
+      "NetInfoItem": [
+        {
+          "ConnectionString": "r-bp1xxxxxxxxxxxxx.redis.rds.aliyuncs.com",
+          "Port": "6379",
+          "DBInstanceNetType": "Classic",
+          "IPAddress": "xxx.xxx.xxx.222",
+          "ExpiredTime": "2019-08-01T09:29:18Z"
+        }
+      ]
+    }
+  }
+}

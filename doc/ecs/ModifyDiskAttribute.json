@@ -1,0 +1,98 @@
+{
+  "name": "ModifyDiskAttribute",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyDiskAttribute修改您的磁盘的属性或者明细。",
+  "abc_id": 25517,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "DiskId": {
+      "name": "DiskId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "d-diskid1",
+      "description_cn": "待修改明细的磁盘 ID。"
+    },
+    "SourceRegionId": {
+      "name": "SourceRegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "155780923770",
+      "description_cn": "RAM 用户的虚拟账号 ID。"
+    },
+    "DiskName": {
+      "name": "DiskName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FinanceJoshua",
+      "description_cn": "磁盘名称。长度为 2~128 个英文或中文字符。必须以大小字母或中文开头，不能以 http:// 和 https:// 开头。可以包含数字、半角冒号（:）、下划线（_）或者连字符（-）。\n         "
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "FinanceDeptJoshua",
+      "description_cn": "磁盘描述。 长度为 2~256 个英文或中文字符，不能以 http:// 和 https:// 开头。\n         "
+    },
+    "DeleteWithInstance": {
+      "name": "DeleteWithInstance",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "磁盘是否随实例释放。默认值：无，无表示不改变当前的值。\n\n在下列两种情况下，将参数 DeleteWithInstance 设置成 false 时会报错。 \n         \n- 磁盘的种类（category）为本地盘（ephemeral）时。  \n- 磁盘的种类（category）为普通云盘（cloud），且不可以卸载（Portable=false）时。  "
+    },
+    "DeleteAutoSnapshot": {
+      "name": "DeleteAutoSnapshot",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "删除磁盘时，是否同时删除其自动快照。默认值：无，无表示不改变当前的值。"
+    },
+    "EnableAutoSnapshot": {
+      "name": "EnableAutoSnapshot",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "true",
+      "description_cn": "如果您已经创建了自动快照策略，是否应用于该磁盘。默认值：无，无表示不改变当前的值。"
+    }
+  },
+  "res": {
+    "RequestId": "473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E"
+  }
+}

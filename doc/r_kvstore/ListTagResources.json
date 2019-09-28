@@ -1,0 +1,111 @@
+{
+  "name": "ListTagResources",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ListTagResources查询绑定了指定标签的Redis实例或者查询指定实例绑定的标签。",
+  "abc_id": 133990,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域ID，可调用[DescribeRegions](~~61012~~)查询，使用此参数指定要创建实例的地域。"
+    },
+    "ResourceType": {
+      "name": "ResourceType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "INSTANCE",
+      "description_cn": "资源类型，唯一值：INSTANCE。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "ResourceId": {
+      "name": "ResourceId",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "String"
+    },
+    "Tag": {
+      "name": "Tag",
+      "type": "RepeatList",
+      "position": "Query",
+      "required": false,
+      "docRequired": false,
+      "subType": "Json",
+      "params": [
+        {
+          "name": "Key",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "required": false,
+          "docRequired": false
+        }
+      ]
+    },
+    "NextToken": {
+      "name": "NextToken",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "212db86sca4384811e0b5e8707ec21345",
+      "description_cn": "用来返回更多结果。第一次查询不需要提供这个参数，如果一次查询没有返回全部结果，则可在后续查询中传入前一次返回的token继续查询。"
+    }
+  },
+  "res": {
+    "TagResources": {
+      "TagResource": [
+        {
+          "ResourceType": "ALIYUN::KVSTORE::INSTANCE",
+          "TagValue": "demovalue1",
+          "ResourceId": "r-hp3xxxxxxxxxxxxx",
+          "TagKey": "demokey1"
+        },
+        {
+          "ResourceType": "ALIYUN::KVSTORE::INSTANCE",
+          "TagValue": "demovalue1",
+          "ResourceId": "r-hp2xxxxxxxxxxxxx",
+          "TagKey": "demokey1"
+        },
+        {
+          "ResourceType": "ALIYUN::KVSTORE::INSTANCE",
+          "TagValue": "demovalue2",
+          "ResourceId": "r-hp3xxxxxxxxxxxxx",
+          "TagKey": "demokey2"
+        },
+        {
+          "ResourceType": "ALIYUN::KVSTORE::INSTANCE",
+          "TagValue": "demovalue2",
+          "ResourceId": "r-hp2xxxxxxxxxxxxx",
+          "TagKey": "demokey2"
+        }
+      ]
+    },
+    "RequestId": "47A514A1-4B77-4E30-B4C5-2A880650B3FD"
+  }
+}

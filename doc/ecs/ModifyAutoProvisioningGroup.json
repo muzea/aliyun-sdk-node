@@ -1,0 +1,121 @@
+{
+  "name": "ModifyAutoProvisioningGroup",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyAutoProvisioningGroup接口修改一个弹性供应组的设置。",
+  "abc_id": 122739,
+  "timeout": 8000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "弹性供应组所在地域的ID。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "123456"
+    },
+    "AutoProvisioningGroupId": {
+      "name": "AutoProvisioningGroupId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "apg-uf6jel2bbl62wh13****",
+      "description_cn": "弹性供应组的ID。"
+    },
+    "ExcessCapacityTerminationPolicy": {
+      "name": "ExcessCapacityTerminationPolicy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "no-termination",
+      "description_cn": "弹性供应组超过容量时，超额的抢占式实例的关停策略，可选值：\n\n- **no-termination**：超额的抢占式实例继续运行。\n- **termination**：关停超额的抢占式实例，关停后的动作由**SpotInstanceInterruptionBehavior**指定。\n\n> **SpotInstanceInterruptionBehavior**在创建弹性供应组时设置，且不可修改，更多信息请参见[CreateAutoProvisioningGroup](~~122738~~)。"
+    },
+    "DefaultTargetCapacityType": {
+      "name": "DefaultTargetCapacityType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "PayAsYouGo",
+      "description_cn": "指定差额容量的类型，**PayAsYouGoTargetCapacity**和**SpotTargetCapacity**之和小于**TotalTargetCapacity**时，您可以指定补齐差额容量的实例类型。可选值：\n\n- **PayAsYouGo**：使用按量付费实例补齐差额容量。\n- **Spot**：使用抢占式实例补齐差额容量。"
+    },
+    "TerminateInstancesWithExpiration": {
+      "name": "TerminateInstancesWithExpiration",
+      "type": "Boolean",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "false",
+      "description_cn": "弹性供应组到期时的关停策略，可选值：\n\n- **true**：关停组内抢占式实例，关停后的动作由**SpotInstanceInterruptionBehavior**指定。\n- **false**：组内抢占式实例继续运行。\n\n> **SpotInstanceInterruptionBehavior**在创建弹性供应组时设置，且不可修改，更多信息请参见[CreateAutoProvisioningGroup](~~122738~~)。"
+    },
+    "MaxSpotPrice": {
+      "name": "MaxSpotPrice",
+      "type": "Float",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "8",
+      "description_cn": "弹性供应组内抢占式实例的全局价格上限，同时设置**MaxSpotPrice**和**LaunchTemplateConfig.N.MaxPrice**时，以较低者为准。\n\n> **LaunchTemplateConfig.N.MaxPrice**在创建弹性供应组时设置，且不可修改，更多信息请参见[CreateAutoProvisioningGroup](~~122738~~)。"
+    },
+    "TotalTargetCapacity": {
+      "name": "TotalTargetCapacity",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "弹性供应组的目标总容量，由以下三个部分组成：\n\n- **PayAsYouGoTargetCapacity**指定的按量付费实例目标容量。\n- **SpotTargetCapacity**指定的抢占式实例目标容量。\n- **PayAsYouGoTargetCapacity**和**SpotTargetCapacity**之外的差额容量。"
+    },
+    "PayAsYouGoTargetCapacity": {
+      "name": "PayAsYouGoTargetCapacity",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "5",
+      "description_cn": "弹性供应组内按量付费实例的目标容量。"
+    },
+    "SpotTargetCapacity": {
+      "name": "SpotTargetCapacity",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "5",
+      "description_cn": "弹性供应组内抢占式实例的目标容量。"
+    },
+    "AutoProvisioningGroupName": {
+      "name": "AutoProvisioningGroupName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "RequestId": "B48A12CD-1295-4A38-A8F0-0E92C937****"
+  }
+}

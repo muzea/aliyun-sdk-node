@@ -1,0 +1,99 @@
+{
+  "name": "DescribeUises",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeUises接口查询已创建的实例。",
+  "abc_id": 94786,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "UisId": {
+      "name": "UisId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "UIS-xxxk7k971za1h6gx****",
+      "description_cn": "查询指定实例的详细信息。"
+    },
+    "Name": {
+      "name": "Name",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "test_uis_modify",
+      "description_cn": "实例的名称。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "列表的页码，默认值为**1**。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "10",
+      "description_cn": "分页查询时每页的行数，最大值为**50**，默认值为**10**。"
+    }
+  },
+  "res": {
+    "PageNumber": 1,
+    "TotalCount": 1,
+    "PageSize": 10,
+    "RequestId": "4E0234B3-9484-4E3D-BF5D-426DC951360C",
+    "Uis": [
+      {
+        "ChargeType": "POSTPAY",
+        "ConnectionCount": 500,
+        "ConnectionType": "GRE",
+        "Name": "uis-test-00030",
+        "BandwidthType": "BGP",
+        "Status": "active",
+        "ConnectionBandwidth": 5,
+        "ServiceRegion": "China-mainland",
+        "BusinessStatus": "Normal",
+        "UserInfo": {
+          "ClientInfoDB": "test1",
+          "ClientInfoDBAccount": "account1",
+          "ClientInfoDBPassword": "password1"
+        },
+        "CreateTime": 1561647417000,
+        "UisId": "UIS-xxx81sig1kn0dhr1t****",
+        "SslClientCertUrl": "http://example.com",
+        "PayType": "connection"
+      }
+    ]
+  }
+}

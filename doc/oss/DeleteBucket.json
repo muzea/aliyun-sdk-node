@@ -1,0 +1,15 @@
+{
+  "name": "DeleteBucket",
+  "protocol": "HTTP|HTTPS",
+  "method": "DELETE",
+  "path": "/",
+  "timeout": null,
+  "reqFormat": {
+    "BucketName": {
+      "name": "BucketName",
+      "position": "domain",
+      "required": true
+    }
+  },
+  "res": {}
+}

@@ -1,0 +1,61 @@
+{
+  "name": "ModifyDBInstanceTDE",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用ModifyDBInstanceTDE接口修改MongoDB实例的透明数据加密TDE（Transparent Data Encryption）状态。",
+  "abc_id": 131267,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Domain",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "TDEStatus": {
+      "name": "TDEStatus",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "enabled",
+      "description_cn": "TDE状态，取值： **enabled**，即开启TDE功能。\n> TDE功能开启后不支持关闭，请谨慎开启。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DBInstanceId": {
+      "name": "DBInstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "dds-bpxxxxxxxx",
+      "description_cn": "实例ID。"
+    },
+    "EncryptorName": {
+      "name": "EncryptorName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "AES-256-CBC",
+      "description_cn": "加密方式，取值：**AES-256-CBC**。\n\n> 当**TEDStatus**参数取值为**enabled**时，本参数才可用。"
+    }
+  },
+  "res": {
+    "RequestId": "434D7127-6229-4355-BA50-7A3685A725DF"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "SearchTraceAppByName",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用 SearchTraceAppByName 查询应用监控任务列表。",
+  "abc_id": 130676,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-hangzhou",
+      "description_cn": "地域 ID"
+    },
+    "TraceAppName": {
+      "name": "TraceAppName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": true,
+      "example_cn": "demo",
+      "description_cn": "应用名称"
+    }
+  },
+  "res": {}
+}

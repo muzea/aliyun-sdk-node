@@ -1,0 +1,101 @@
+{
+  "name": "AddTrancodeSEI",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用AddTrancodeSEI添加转码SEI信息。",
+  "abc_id": 66945,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "cn-shanghai",
+      "description_cn": "区域。"
+    },
+    "AppName": {
+      "name": "AppName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "AppName",
+      "description_cn": "直播流所属应用名称。"
+    },
+    "StreamName": {
+      "name": "StreamName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "StreamName",
+      "description_cn": "流名称。"
+    },
+    "Text": {
+      "name": "Text",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "firsttxt",
+      "description_cn": "SEI文本。长度限制：4000字节。"
+    },
+    "Pattern": {
+      "name": "Pattern",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "keyframe",
+      "description_cn": "追加到每一个关键帧/每一帧。取值：**keyframe** | **frame**。"
+    },
+    "Repeat": {
+      "name": "Repeat",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "重复次数，-1代表无限。"
+    },
+    "Delay": {
+      "name": "Delay",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "100",
+      "description_cn": "接收到命令后的delay时间。单位： 毫秒。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "DomainName": {
+      "name": "DomainName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "true",
+      "required": true,
+      "docRequired": false,
+      "example_cn": "live.aliyunlive.com",
+      "description_cn": "您的加速域名。"
+    }
+  },
+  "res": {}
+}

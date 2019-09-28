@@ -1,0 +1,175 @@
+{
+  "name": "DescribeSlowLogRecords",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用DescribeSlowLogRecords查询Redis实例在指定时间内产生的慢日志。",
+  "abc_id": 113448,
+  "timeout": 50000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Host",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2019-03-10T14:11Z",
+      "description_cn": "查询开始时间，格式：YYYY-MM-DDTHH:mmZ。"
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "2019-03-22T14:11Z",
+      "description_cn": "查询结束时间，必须晚于查询开始时间，格式：YYYY-MM-DDTHH:mmZ。"
+    },
+    "OwnerId": {
+      "name": "OwnerId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": ""
+    },
+    "InstanceId": {
+      "name": "InstanceId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "r-bp1xxxxxxxxxxxxx",
+      "description_cn": "需要查询的实例的ID。"
+    },
+    "NodeId": {
+      "name": "NodeId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "r-bp1xxxxxxxxxxxxx-db-0",
+      "description_cn": "集群子节点ID，查询集群实例的特定子节点时需传入此参数。"
+    },
+    "SQLId": {
+      "name": "SQLId",
+      "type": "Long",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "DBName": {
+      "name": "DBName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "redisdemo",
+      "description_cn": "数据库名称。"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "30",
+      "description_cn": "每页显示的日志数上限。"
+    },
+    "PageNumber": {
+      "name": "PageNumber",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "当前显示的页码。"
+    },
+    "SlowLogRecordType": {
+      "name": "SlowLogRecordType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "QueryKeyword": {
+      "name": "QueryKeyword",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "OrderType": {
+      "name": "OrderType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    },
+    "OrderBy": {
+      "name": "OrderBy",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false
+    }
+  },
+  "res": {
+    "Items": {
+      "LogRecords": [
+        {
+          "Command": "KEYS *",
+          "ExecuteTime": "2019-03-20T09:18:41Z",
+          "ElapsedTime": 248,
+          "IPAddress": "xxx.xxx.xxx.100",
+          "Account": "0",
+          "AccountName": "0",
+          "DataBaseName": "-1",
+          "DBName": "-1"
+        }
+      ]
+    },
+    "PageNumber": 1,
+    "TotalRecordCount": 1,
+    "PageSize": 30,
+    "InstanceId": "r-bp1xxxxxxxxxxxxx-db-1",
+    "RequestId": "686BB8A6-BBA5-47E5-8A75-D2ADE433917A",
+    "StartTime": "2019-03-10T13:11Z",
+    "Engine": "Redis",
+    "PageRecordCount": 1
+  }
+}

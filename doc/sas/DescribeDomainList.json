@@ -1,0 +1,113 @@
+{
+  "name": "DescribeDomainList",
+  "protocol": "HTTP|HTTPS",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用该接口域名资产列表。",
+  "abc_id": 130980,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "required": false
+    },
+    "SourceIp": {
+      "name": "SourceIp",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "127.1.1.1",
+      "description_cn": "指定访问源IP地址。"
+    },
+    "FuzzyDomain": {
+      "name": "FuzzyDomain",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "sas",
+      "description_cn": "指定的域名模糊匹配搜索信息。"
+    },
+    "DomainType": {
+      "name": "DomainType",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "root",
+      "description_cn": "指定待查询的域名类型。\n"
+    },
+    "PageSize": {
+      "name": "PageSize",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "指定列表每页显示数据条数。"
+    },
+    "CurrentPage": {
+      "name": "CurrentPage",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "1",
+      "description_cn": "指定返回结果的当前页码。"
+    }
+  },
+  "res": {
+    "code": 200,
+    "data": {
+      "PageInfo": {
+        "TotalCount": 27,
+        "PageSize": 10,
+        "CurrentPage": 1,
+        "Count": 10
+      },
+      "DomainListResponseList": [
+        {
+          "Domain": "sastst.com"
+        },
+        {
+          "Domain": "p.sastst.com"
+        },
+        {
+          "IpList": "120.27.11.134,47.111.33.130,120.79.72.16,139.129.103.215",
+          "Domain": "b.sastst.com"
+        },
+        {
+          "Domain": "r.sastst.com"
+        },
+        {
+          "Domain": "t.sastst.com"
+        },
+        {
+          "Domain": "k.sastst.com"
+        },
+        {
+          "Domain": "{.sastst.com"
+        },
+        {
+          "Domain": "w.sastst.com"
+        },
+        {
+          "Domain": "l.sastst.com"
+        },
+        {
+          "Domain": "v.sastst.com"
+        }
+      ]
+    },
+    "requestId": "0B48AB3C-84FC-424D-A01D-B9270EF46038",
+    "success": true
+  }
+}

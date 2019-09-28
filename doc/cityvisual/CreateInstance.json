@@ -1,0 +1,67 @@
+{
+  "name": "CreateInstance",
+  "protocol": "HTTPS|HTTP",
+  "method": "POST|GET",
+  "path": "/",
+  "summary_cn": "调用CreateInstance创建一个实例。",
+  "abc_id": 129290,
+  "timeout": 10000,
+  "reqFormat": {
+    "RegionId": {
+      "name": "RegionId",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "cn-shanghai",
+      "description_cn": "所属的地域ID。您可以调用DescribeRegions查看最新的阿里云地域列表。"
+    },
+    "InstanceCapacity": {
+      "name": "InstanceCapacity",
+      "type": "Integer",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": true,
+      "docRequired": true,
+      "example_cn": "20",
+      "description_cn": "实例规格,指视频点位接入路数。"
+    },
+    "InstanceName": {
+      "name": "InstanceName",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "ShangHai",
+      "description_cn": "实例名称。长度为2~128个英文或中文字符。必须以大小字母或中文开头，不能以 http:// 和 https:// 开头。可以包含数字、半角冒号（:）、下划线（_）或者连字符（-）。默认值：空。"
+    },
+    "Description": {
+      "name": "Description",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "SHInstance",
+      "description_cn": "实例描述。长度为2~256个英文或中文字符，不能以 http:// 和 https:// 开头。默认值：空。"
+    },
+    "Status": {
+      "name": "Status",
+      "type": "String",
+      "position": "Query",
+      "checkBlank": "false",
+      "visibility": "Public",
+      "required": false,
+      "docRequired": false,
+      "example_cn": "Running",
+      "description_cn": "实例状态，取值范围：\n* Running    运行中\n* Stopped 已停止"
+    }
+  },
+  "res": {}
+}
