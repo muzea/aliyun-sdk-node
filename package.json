@@ -1,8 +1,14 @@
 {
-  "name": "aliyun-sdk-node",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "@woodenfish/aliyun-sdk-node",
+  "version": "0.0.0-alpha1",
+  "main": "dist/index.js",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo 'fake done'"
+  },
   "dependencies": {
     "got": "^9.6.0",
     "json-bigint": "^0.3.0",
