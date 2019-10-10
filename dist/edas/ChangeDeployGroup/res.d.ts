@@ -1,0 +1,3 @@
+interface ChangeDeployGroupResponse {
+}
+export { ChangeDeployGroupResponse };

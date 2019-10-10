@@ -1,0 +1,3 @@
+interface RenewClusterInstanceResponse {
+}
+export { RenewClusterInstanceResponse };

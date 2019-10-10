@@ -1,0 +1,14 @@
+interface DescribeRegionsRequest {
+    "RegionId"?: string;
+    "ProductType"?: string;
+    /**
+    * 返回值语言。取值：
+    *
+    * - **zh-CN（默认值）**：中文
+    * - **en-US**：英文
+    *
+    * @example `zh-CN`
+    */ "AcceptLanguage"?: string;
+    "OwnerId"?: number;
+}
+export { DescribeRegionsRequest };

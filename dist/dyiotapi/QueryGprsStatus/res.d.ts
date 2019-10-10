@@ -1,0 +1,3 @@
+interface QueryGprsStatusResponse {
+}
+export { QueryGprsStatusResponse };

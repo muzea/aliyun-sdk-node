@@ -1,0 +1,3 @@
+interface DescribeDdosIpConfigResponse {
+}
+export { DescribeDdosIpConfigResponse };

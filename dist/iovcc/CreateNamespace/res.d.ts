@@ -1,0 +1,3 @@
+interface CreateNamespaceResponse {
+}
+export { CreateNamespaceResponse };

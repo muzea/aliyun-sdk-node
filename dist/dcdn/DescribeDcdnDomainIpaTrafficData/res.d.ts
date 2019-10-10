@@ -1,0 +1,3 @@
+interface DescribeDcdnDomainIpaTrafficDataResponse {
+}
+export { DescribeDcdnDomainIpaTrafficDataResponse };

@@ -1,0 +1,3 @@
+interface DeleteVersionWhiteDevicesResponse {
+}
+export { DeleteVersionWhiteDevicesResponse };

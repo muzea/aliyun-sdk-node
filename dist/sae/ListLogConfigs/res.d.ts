@@ -1,0 +1,3 @@
+interface ListLogConfigsResponse {
+}
+export { ListLogConfigsResponse };

@@ -1,0 +1,3 @@
+interface ListUpstreamAppKeyRelationsResponse {
+}
+export { ListUpstreamAppKeyRelationsResponse };

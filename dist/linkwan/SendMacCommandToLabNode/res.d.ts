@@ -1,0 +1,3 @@
+interface SendMacCommandToLabNodeResponse {
+}
+export { SendMacCommandToLabNodeResponse };

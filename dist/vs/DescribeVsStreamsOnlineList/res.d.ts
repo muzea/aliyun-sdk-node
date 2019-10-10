@@ -1,0 +1,3 @@
+interface DescribeVsStreamsOnlineListResponse {
+}
+export { DescribeVsStreamsOnlineListResponse };

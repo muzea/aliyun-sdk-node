@@ -1,0 +1,3 @@
+interface ListFreqBandPlanGroupsResponse {
+}
+export { ListFreqBandPlanGroupsResponse };

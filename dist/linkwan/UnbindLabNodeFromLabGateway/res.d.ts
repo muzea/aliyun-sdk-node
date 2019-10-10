@@ -1,0 +1,3 @@
+interface UnbindLabNodeFromLabGatewayResponse {
+}
+export { UnbindLabNodeFromLabGatewayResponse };

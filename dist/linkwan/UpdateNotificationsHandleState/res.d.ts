@@ -1,0 +1,3 @@
+interface UpdateNotificationsHandleStateResponse {
+}
+export { UpdateNotificationsHandleStateResponse };

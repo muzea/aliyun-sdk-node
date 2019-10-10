@@ -1,0 +1,3 @@
+interface UpdateNodeGroupResponse {
+}
+export { UpdateNodeGroupResponse };

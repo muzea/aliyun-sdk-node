@@ -1,155 +1,55 @@
+import { AddIpRequest } from "./AddIp/req";
+import { AddIpResponse } from "./AddIp/res";
+import { CheckGrantRequest } from "./CheckGrant/req";
+import { CheckGrantResponse } from "./CheckGrant/res";
+import { DeleteBlackholeRequest } from "./DeleteBlackhole/req";
+import { DeleteBlackholeResponse } from "./DeleteBlackhole/res";
+import { DeleteIpRequest } from "./DeleteIp/req";
+import { DeleteIpResponse } from "./DeleteIp/res";
+import { DescribeDdosEventRequest } from "./DescribeDdosEvent/req";
+import { DescribeDdosEventResponse } from "./DescribeDdosEvent/res";
+import { DescribeInstanceListRequest } from "./DescribeInstanceList/req";
+import { DescribeInstanceListResponse } from "./DescribeInstanceList/res";
+import { DescribeInstanceSpecsRequest } from "./DescribeInstanceSpecs/req";
+import { DescribeInstanceSpecsResponse } from "./DescribeInstanceSpecs/res";
+import { DescribeOpEntitiesRequest } from "./DescribeOpEntities/req";
+import { DescribeOpEntitiesResponse } from "./DescribeOpEntities/res";
+import { DescribePackPaidTrafficRequest } from "./DescribePackPaidTraffic/req";
+import { DescribePackPaidTrafficResponse } from "./DescribePackPaidTraffic/res";
+import { DescribeResourcePackInstancesRequest } from "./DescribeResourcePackInstances/req";
+import { DescribeResourcePackInstancesResponse } from "./DescribeResourcePackInstances/res";
+import { DescribeResourcePackStatisticsRequest } from "./DescribeResourcePackStatistics/req";
+import { DescribeResourcePackStatisticsResponse } from "./DescribeResourcePackStatistics/res";
+import { DescribeResourcePackUsageRequest } from "./DescribeResourcePackUsage/req";
+import { DescribeResourcePackUsageResponse } from "./DescribeResourcePackUsage/res";
+import { DescribeTrafficRequest } from "./DescribeTraffic/req";
+import { DescribeTrafficResponse } from "./DescribeTraffic/res";
+import { ModifyRemarkRequest } from "./ModifyRemark/req";
+import { ModifyRemarkResponse } from "./ModifyRemark/res";
+import { DescribeExcpetionCountRequest } from "./DescribeExcpetionCount/req";
+import { DescribeExcpetionCountResponse } from "./DescribeExcpetionCount/res";
+import { DescribePackIpListRequest } from "./DescribePackIpList/req";
+import { DescribePackIpListResponse } from "./DescribePackIpList/res";
+import { DescribeRegionsRequest } from "./DescribeRegions/req";
+import { DescribeRegionsResponse } from "./DescribeRegions/res";
+
 interface DDOSBGP {
-    AddIp(query: {
-        "RegionId"?: string;
-        "IpList": string;
-        "InstanceId": string;
-        "SourceIp"?: string;
-        "ResourceRegionId"?: string;
-        "ResourceGroupId"?: string;
-    }): Promise<{}>;
-    CheckGrant(query: {
-        "RegionId"?: string;
-        "SourceIp"?: string;
-        "ResourceGroupId"?: string;
-    }): Promise<{}>;
-    DeleteBlackhole(query: {
-        "RegionId"?: string;
-        "Ip": string;
-        "InstanceId": string;
-        "SourceIp"?: string;
-        "ResourceRegionId"?: string;
-        "ResourceGroupId"?: string;
-    }): Promise<{}>;
-    DeleteIp(query: {
-        "RegionId"?: string;
-        "IpList": string;
-        "InstanceId": string;
-        "SourceIp"?: string;
-        "ResourceRegionId"?: string;
-        "ResourceGroupId"?: string;
-    }): Promise<{}>;
-    DescribeDdosEvent(query: {
-        "RegionId"?: string;
-        "StartTime": number;
-        "EndTime": number;
-        "PageSize": number;
-        "PageNo": number;
-        "InstanceId": string;
-        "SourceIp"?: string;
-        "Ip"?: string;
-        "ResourceRegionId"?: string;
-        "ResourceGroupId"?: string;
-    }): Promise<{}>;
-    DescribeInstanceList(query: {
-        "RegionId"?: string;
-        "PageNo": number;
-        "PageSize": number;
-        "SourceIp"?: string;
-        "ResourceGroupId"?: string;
-        "InstanceIdList"?: string;
-        "Remark"?: string;
-        "DdosRegionId"?: string;
-        "IpVersion"?: string;
-        "InstanceType"?: string;
-        "Ip"?: string;
-        "Orderby"?: string;
-        "Orderdire"?: string;
-        "Tag"?: string[];
-    }): Promise<{}>;
-    DescribeInstanceSpecs(query: {
-        "RegionId"?: string;
-        "InstanceIdList": string;
-        "SourceIp"?: string;
-        "Lang"?: string;
-        "DdosRegionId"?: string;
-        "ResourceGroupId"?: string;
-    }): Promise<{}>;
-    DescribeOpEntities(query: {
-        "RegionId"?: string;
-        "CurrentPage": number;
-        "PageSize": number;
-        "StartTime": number;
-        "EndTime": number;
-        "SourceIp"?: string;
-        "Lang"?: string;
-        "OrderBy"?: string;
-        "OrderDir"?: string;
-        "InstanceId"?: string;
-        "ResourceRegionId"?: string;
-        "ResourceGroupId"?: string;
-    }): Promise<{}>;
-    DescribePackPaidTraffic(query: {
-        "RegionId"?: string;
-        "CurrentPage": number;
-        "PageSize": number;
-        "StartTime": number;
-        "EndTime": number;
-        "SourceIp"?: string;
-        "InstanceId"?: string;
-        "ResourceGroupId"?: string;
-    }): Promise<{}>;
-    DescribeResourcePackInstances(query: {
-        "RegionId"?: string;
-        "PageSize": number;
-        "CurrentPage": number;
-        "SourceIp"?: string;
-        "ResourceGroupId"?: string;
-    }): Promise<{}>;
-    DescribeResourcePackStatistics(query: {
-        "RegionId"?: string;
-        "SourceIp"?: string;
-        "DdosRegionId"?: string;
-        "InstanceId"?: string;
-        "ResourceGroupId"?: string;
-    }): Promise<{}>;
-    DescribeResourcePackUsage(query: {
-        "RegionId"?: string;
-        "EndTime": number;
-        "StartTime": number;
-        "SourceIp"?: string;
-        "InstanceId"?: string;
-        "ResourceGroupId"?: string;
-    }): Promise<{}>;
-    DescribeTraffic(query: {
-        "RegionId"?: string;
-        "StartTime": number;
-        "EndTime": number;
-        "Interval": number;
-        "SourceIp"?: string;
-        "InstanceId"?: string;
-        "Ip"?: string;
-        "ResourceGroupId"?: string;
-    }): Promise<{}>;
-    ModifyRemark(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "Remark": string;
-        "SourceIp"?: string;
-        "Lang"?: string;
-        "ResourceRegionId"?: string;
-        "ResourceGroupId"?: string;
-    }): Promise<{}>;
-    DescribeExcpetionCount(query: {
-        "RegionId"?: string;
-        "DdosRegionId": string;
-        "SourceIp"?: string;
-        "ResourceGroupId"?: string;
-    }): Promise<{}>;
-    DescribePackIpList(query: {
-        "RegionId"?: string;
-        "PageNo": number;
-        "PageSize": number;
-        "DdosRegionId": string;
-        "InstanceId": string;
-        "SourceIp"?: string;
-        "Ip"?: string;
-        "ProductName"?: string;
-        "ResourceGroupId"?: string;
-    }): Promise<{}>;
-    DescribeRegions(query: {
-        "RegionId"?: string;
-        "SourceIp"?: string;
-        "ResourceGroupId"?: string;
-    }): Promise<{}>;
+    AddIp(query: AddIpRequest): Promise<AddIpResponse>;
+    CheckGrant(query: CheckGrantRequest): Promise<CheckGrantResponse>;
+    DeleteBlackhole(query: DeleteBlackholeRequest): Promise<DeleteBlackholeResponse>;
+    DeleteIp(query: DeleteIpRequest): Promise<DeleteIpResponse>;
+    DescribeDdosEvent(query: DescribeDdosEventRequest): Promise<DescribeDdosEventResponse>;
+    DescribeInstanceList(query: DescribeInstanceListRequest): Promise<DescribeInstanceListResponse>;
+    DescribeInstanceSpecs(query: DescribeInstanceSpecsRequest): Promise<DescribeInstanceSpecsResponse>;
+    DescribeOpEntities(query: DescribeOpEntitiesRequest): Promise<DescribeOpEntitiesResponse>;
+    DescribePackPaidTraffic(query: DescribePackPaidTrafficRequest): Promise<DescribePackPaidTrafficResponse>;
+    DescribeResourcePackInstances(query: DescribeResourcePackInstancesRequest): Promise<DescribeResourcePackInstancesResponse>;
+    DescribeResourcePackStatistics(query: DescribeResourcePackStatisticsRequest): Promise<DescribeResourcePackStatisticsResponse>;
+    DescribeResourcePackUsage(query: DescribeResourcePackUsageRequest): Promise<DescribeResourcePackUsageResponse>;
+    DescribeTraffic(query: DescribeTrafficRequest): Promise<DescribeTrafficResponse>;
+    ModifyRemark(query: ModifyRemarkRequest): Promise<ModifyRemarkResponse>;
+    DescribeExcpetionCount(query: DescribeExcpetionCountRequest): Promise<DescribeExcpetionCountResponse>;
+    DescribePackIpList(query: DescribePackIpListRequest): Promise<DescribePackIpListResponse>;
+    DescribeRegions(query: DescribeRegionsRequest): Promise<DescribeRegionsResponse>;
 }
 export default DDOSBGP;

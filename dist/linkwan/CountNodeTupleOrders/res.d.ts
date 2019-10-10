@@ -1,0 +1,3 @@
+interface CountNodeTupleOrdersResponse {
+}
+export { CountNodeTupleOrdersResponse };

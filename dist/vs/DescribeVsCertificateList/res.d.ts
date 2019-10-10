@@ -1,0 +1,3 @@
+interface DescribeVsCertificateListResponse {
+}
+export { DescribeVsCertificateListResponse };

@@ -1,0 +1,3 @@
+interface QueryDeviceByDriverResponse {
+}
+export { QueryDeviceByDriverResponse };

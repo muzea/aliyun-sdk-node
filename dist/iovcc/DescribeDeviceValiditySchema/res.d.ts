@@ -1,0 +1,3 @@
+interface DescribeDeviceValiditySchemaResponse {
+}
+export { DescribeDeviceValiditySchemaResponse };

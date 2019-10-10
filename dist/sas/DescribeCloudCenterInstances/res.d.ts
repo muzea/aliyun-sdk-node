@@ -1,0 +1,3 @@
+interface DescribeCloudCenterInstancesResponse {
+}
+export { DescribeCloudCenterInstancesResponse };

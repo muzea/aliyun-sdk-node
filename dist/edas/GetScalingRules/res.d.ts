@@ -1,0 +1,3 @@
+interface GetScalingRulesResponse {
+}
+export { GetScalingRulesResponse };

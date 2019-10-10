@@ -1,0 +1,3 @@
+interface DescribeVsStreamsPublishListResponse {
+}
+export { DescribeVsStreamsPublishListResponse };

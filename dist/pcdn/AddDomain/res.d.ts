@@ -1,0 +1,3 @@
+interface AddDomainResponse {
+}
+export { AddDomainResponse };

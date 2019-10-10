@@ -1,0 +1,3 @@
+interface DeleteUpstreamAppServerResponse {
+}
+export { DeleteUpstreamAppServerResponse };

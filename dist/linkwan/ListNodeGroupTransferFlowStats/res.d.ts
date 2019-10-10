@@ -1,0 +1,3 @@
+interface ListNodeGroupTransferFlowStatsResponse {
+}
+export { ListNodeGroupTransferFlowStatsResponse };

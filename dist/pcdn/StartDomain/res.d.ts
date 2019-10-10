@@ -1,0 +1,3 @@
+interface StartDomainResponse {
+}
+export { StartDomainResponse };

@@ -1,0 +1,3 @@
+interface DescribeScansResponse {
+}
+export { DescribeScansResponse };

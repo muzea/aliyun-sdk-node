@@ -1,0 +1,3 @@
+interface GetCoverRateDataResponse {
+}
+export { GetCoverRateDataResponse };

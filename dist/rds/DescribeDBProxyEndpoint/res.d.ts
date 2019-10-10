@@ -1,0 +1,3 @@
+interface DescribeDBProxyEndpointResponse {
+}
+export { DescribeDBProxyEndpointResponse };

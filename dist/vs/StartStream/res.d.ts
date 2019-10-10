@@ -1,0 +1,3 @@
+interface StartStreamResponse {
+}
+export { StartStreamResponse };

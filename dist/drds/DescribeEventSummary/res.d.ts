@@ -1,0 +1,3 @@
+interface DescribeEventSummaryResponse {
+}
+export { DescribeEventSummaryResponse };

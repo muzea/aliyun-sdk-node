@@ -1,0 +1,3 @@
+interface AddEndPointResponse {
+}
+export { AddEndPointResponse };

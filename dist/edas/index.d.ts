@@ -1,682 +1,322 @@
+import { DeleteApplicationRequest } from "./DeleteApplication/req";
+import { DeleteApplicationResponse } from "./DeleteApplication/res";
+import { DeleteEcuRequest } from "./DeleteEcu/req";
+import { DeleteEcuResponse } from "./DeleteEcu/res";
+import { GetK8sApplicationRequest } from "./GetK8sApplication/req";
+import { GetK8sApplicationResponse } from "./GetK8sApplication/res";
+import { InsertFlowControlRequest } from "./InsertFlowControl/req";
+import { InsertFlowControlResponse } from "./InsertFlowControl/res";
+import { ListAuthorityRequest } from "./ListAuthority/req";
+import { ListAuthorityResponse } from "./ListAuthority/res";
+import { ListBuildPackRequest } from "./ListBuildPack/req";
+import { ListBuildPackResponse } from "./ListBuildPack/res";
+import { ListClusterMembersRequest } from "./ListClusterMembers/req";
+import { ListClusterMembersResponse } from "./ListClusterMembers/res";
+import { AuthorizeApplicationRequest } from "./AuthorizeApplication/req";
+import { AuthorizeApplicationResponse } from "./AuthorizeApplication/res";
+import { AuthorizeResourceGroupRequest } from "./AuthorizeResourceGroup/req";
+import { AuthorizeResourceGroupResponse } from "./AuthorizeResourceGroup/res";
+import { AuthorizeRoleRequest } from "./AuthorizeRole/req";
+import { AuthorizeRoleResponse } from "./AuthorizeRole/res";
+import { BindK8sSlbRequest } from "./BindK8sSlb/req";
+import { BindK8sSlbResponse } from "./BindK8sSlb/res";
+import { BindSlbRequest } from "./BindSlb/req";
+import { BindSlbResponse } from "./BindSlb/res";
+import { ChangeDeployGroupRequest } from "./ChangeDeployGroup/req";
+import { ChangeDeployGroupResponse } from "./ChangeDeployGroup/res";
+import { ContinuePipelineRequest } from "./ContinuePipeline/req";
+import { ContinuePipelineResponse } from "./ContinuePipeline/res";
+import { DeleteClusterRequest } from "./DeleteCluster/req";
+import { DeleteClusterResponse } from "./DeleteCluster/res";
+import { DeleteClusterMemberRequest } from "./DeleteClusterMember/req";
+import { DeleteClusterMemberResponse } from "./DeleteClusterMember/res";
+import { DeleteConfigCenterRequest } from "./DeleteConfigCenter/req";
+import { DeleteConfigCenterResponse } from "./DeleteConfigCenter/res";
+import { DeleteDegradeControlRequest } from "./DeleteDegradeControl/req";
+import { DeleteDegradeControlResponse } from "./DeleteDegradeControl/res";
+import { DeleteK8sApplicationRequest } from "./DeleteK8sApplication/req";
+import { DeleteK8sApplicationResponse } from "./DeleteK8sApplication/res";
+import { DeleteRoleRequest } from "./DeleteRole/req";
+import { DeleteRoleResponse } from "./DeleteRole/res";
+import { DeleteServiceGroupRequest } from "./DeleteServiceGroup/req";
+import { DeleteServiceGroupResponse } from "./DeleteServiceGroup/res";
+import { DeployApplicationRequest } from "./DeployApplication/req";
+import { DeployApplicationResponse } from "./DeployApplication/res";
+import { DeployK8sApplicationRequest } from "./DeployK8sApplication/req";
+import { DeployK8sApplicationResponse } from "./DeployK8sApplication/res";
+import { DisableFlowControlRequest } from "./DisableFlowControl/req";
+import { DisableFlowControlResponse } from "./DisableFlowControl/res";
+import { EnableDegradeControlRequest } from "./EnableDegradeControl/req";
+import { EnableDegradeControlResponse } from "./EnableDegradeControl/res";
+import { EnableFlowControlRequest } from "./EnableFlowControl/req";
+import { EnableFlowControlResponse } from "./EnableFlowControl/res";
+import { GetApplicationRequest } from "./GetApplication/req";
+import { GetApplicationResponse } from "./GetApplication/res";
+import { GetChangeOrderInfoRequest } from "./GetChangeOrderInfo/req";
+import { GetChangeOrderInfoResponse } from "./GetChangeOrderInfo/res";
+import { GetContainerConfigurationRequest } from "./GetContainerConfiguration/req";
+import { GetContainerConfigurationResponse } from "./GetContainerConfiguration/res";
+import { GetJvmConfigurationRequest } from "./GetJvmConfiguration/req";
+import { GetJvmConfigurationResponse } from "./GetJvmConfiguration/res";
+import { GetPackageStorageCredentialRequest } from "./GetPackageStorageCredential/req";
+import { GetPackageStorageCredentialResponse } from "./GetPackageStorageCredential/res";
+import { GetSecureTokenRequest } from "./GetSecureToken/req";
+import { GetSecureTokenResponse } from "./GetSecureToken/res";
+import { ImportK8sClusterRequest } from "./ImportK8sCluster/req";
+import { ImportK8sClusterResponse } from "./ImportK8sCluster/res";
+import { InsertClusterRequest } from "./InsertCluster/req";
+import { InsertClusterResponse } from "./InsertCluster/res";
+import { InsertConfigCenterRequest } from "./InsertConfigCenter/req";
+import { InsertConfigCenterResponse } from "./InsertConfigCenter/res";
+import { InsertDegradeControlRequest } from "./InsertDegradeControl/req";
+import { InsertDegradeControlResponse } from "./InsertDegradeControl/res";
+import { InsertDeployGroupRequest } from "./InsertDeployGroup/req";
+import { InsertDeployGroupResponse } from "./InsertDeployGroup/res";
+import { InsertK8sApplicationRequest } from "./InsertK8sApplication/req";
+import { InsertK8sApplicationResponse } from "./InsertK8sApplication/res";
+import { InsertOrUpdateRegionRequest } from "./InsertOrUpdateRegion/req";
+import { InsertOrUpdateRegionResponse } from "./InsertOrUpdateRegion/res";
+import { InsertServiceGroupRequest } from "./InsertServiceGroup/req";
+import { InsertServiceGroupResponse } from "./InsertServiceGroup/res";
+import { ListApplicationRequest } from "./ListApplication/req";
+import { ListApplicationResponse } from "./ListApplication/res";
+import { ListApplicationEcuRequest } from "./ListApplicationEcu/req";
+import { ListApplicationEcuResponse } from "./ListApplicationEcu/res";
+import { ListClusterRequest } from "./ListCluster/req";
+import { ListClusterResponse } from "./ListCluster/res";
+import { ListConsumedServicesRequest } from "./ListConsumedServices/req";
+import { ListConsumedServicesResponse } from "./ListConsumedServices/res";
+import { ListConvertableEcuRequest } from "./ListConvertableEcu/req";
+import { ListConvertableEcuResponse } from "./ListConvertableEcu/res";
+import { ListDegradeControlsRequest } from "./ListDegradeControls/req";
+import { ListDegradeControlsResponse } from "./ListDegradeControls/res";
+import { ListFlowControlsRequest } from "./ListFlowControls/req";
+import { ListFlowControlsResponse } from "./ListFlowControls/res";
+import { ListHistoryDeployVersionRequest } from "./ListHistoryDeployVersion/req";
+import { ListHistoryDeployVersionResponse } from "./ListHistoryDeployVersion/res";
+import { ListPublishedServicesRequest } from "./ListPublishedServices/req";
+import { ListPublishedServicesResponse } from "./ListPublishedServices/res";
+import { ListRecentChangeOrderRequest } from "./ListRecentChangeOrder/req";
+import { ListRecentChangeOrderResponse } from "./ListRecentChangeOrder/res";
+import { ListResourceGroupRequest } from "./ListResourceGroup/req";
+import { ListResourceGroupResponse } from "./ListResourceGroup/res";
+import { ListRoleRequest } from "./ListRole/req";
+import { ListRoleResponse } from "./ListRole/res";
+import { ListScaleOutEcuRequest } from "./ListScaleOutEcu/req";
+import { ListScaleOutEcuResponse } from "./ListScaleOutEcu/res";
+import { ListServiceGroupsRequest } from "./ListServiceGroups/req";
+import { ListServiceGroupsResponse } from "./ListServiceGroups/res";
+import { ListSlbRequest } from "./ListSlb/req";
+import { ListSlbResponse } from "./ListSlb/res";
+import { ListSubAccountRequest } from "./ListSubAccount/req";
+import { ListSubAccountResponse } from "./ListSubAccount/res";
+import { ListUserDefineRegionRequest } from "./ListUserDefineRegion/req";
+import { ListUserDefineRegionResponse } from "./ListUserDefineRegion/res";
+import { ListVpcRequest } from "./ListVpc/req";
+import { ListVpcResponse } from "./ListVpc/res";
+import { MigrateEcuRequest } from "./MigrateEcu/req";
+import { MigrateEcuResponse } from "./MigrateEcu/res";
+import { ModifyScalingRuleRequest } from "./ModifyScalingRule/req";
+import { ModifyScalingRuleResponse } from "./ModifyScalingRule/res";
+import { QueryApplicationStatusRequest } from "./QueryApplicationStatus/req";
+import { QueryApplicationStatusResponse } from "./QueryApplicationStatus/res";
+import { QueryConfigCenterRequest } from "./QueryConfigCenter/req";
+import { QueryConfigCenterResponse } from "./QueryConfigCenter/res";
+import { QueryMigrateRegionListRequest } from "./QueryMigrateRegionList/req";
+import { QueryMigrateRegionListResponse } from "./QueryMigrateRegionList/res";
+import { QueryMonitorInfoRequest } from "./QueryMonitorInfo/req";
+import { QueryMonitorInfoResponse } from "./QueryMonitorInfo/res";
+import { QueryRegionConfigRequest } from "./QueryRegionConfig/req";
+import { QueryRegionConfigResponse } from "./QueryRegionConfig/res";
+import { ResetApplicationRequest } from "./ResetApplication/req";
+import { ResetApplicationResponse } from "./ResetApplication/res";
+import { RollbackApplicationRequest } from "./RollbackApplication/req";
+import { RollbackApplicationResponse } from "./RollbackApplication/res";
+import { ScaleInApplicationRequest } from "./ScaleInApplication/req";
+import { ScaleInApplicationResponse } from "./ScaleInApplication/res";
+import { ScaleK8sApplicationRequest } from "./ScaleK8sApplication/req";
+import { ScaleK8sApplicationResponse } from "./ScaleK8sApplication/res";
+import { StartApplicationRequest } from "./StartApplication/req";
+import { StartApplicationResponse } from "./StartApplication/res";
+import { StopApplicationRequest } from "./StopApplication/req";
+import { StopApplicationResponse } from "./StopApplication/res";
+import { SynchronizeResourceRequest } from "./SynchronizeResource/req";
+import { SynchronizeResourceResponse } from "./SynchronizeResource/res";
+import { TransformClusterMemberRequest } from "./TransformClusterMember/req";
+import { TransformClusterMemberResponse } from "./TransformClusterMember/res";
+import { UnbindK8sSlbRequest } from "./UnbindK8sSlb/req";
+import { UnbindK8sSlbResponse } from "./UnbindK8sSlb/res";
+import { UnbindSlbRequest } from "./UnbindSlb/req";
+import { UnbindSlbResponse } from "./UnbindSlb/res";
+import { UpdateAccountInfoRequest } from "./UpdateAccountInfo/req";
+import { UpdateAccountInfoResponse } from "./UpdateAccountInfo/res";
+import { UpdateApplicationBaseInfoRequest } from "./UpdateApplicationBaseInfo/req";
+import { UpdateApplicationBaseInfoResponse } from "./UpdateApplicationBaseInfo/res";
+import { UpdateContainerRequest } from "./UpdateContainer/req";
+import { UpdateContainerResponse } from "./UpdateContainer/res";
+import { UpdateContainerConfigurationRequest } from "./UpdateContainerConfiguration/req";
+import { UpdateContainerConfigurationResponse } from "./UpdateContainerConfiguration/res";
+import { UpdateFlowControlRequest } from "./UpdateFlowControl/req";
+import { UpdateFlowControlResponse } from "./UpdateFlowControl/res";
+import { UpdateHealthCheckUrlRequest } from "./UpdateHealthCheckUrl/req";
+import { UpdateHealthCheckUrlResponse } from "./UpdateHealthCheckUrl/res";
+import { UpdateJvmConfigurationRequest } from "./UpdateJvmConfiguration/req";
+import { UpdateJvmConfigurationResponse } from "./UpdateJvmConfiguration/res";
+import { UpdateK8sApplicationConfigRequest } from "./UpdateK8sApplicationConfig/req";
+import { UpdateK8sApplicationConfigResponse } from "./UpdateK8sApplicationConfig/res";
+import { UpdateK8sSlbRequest } from "./UpdateK8sSlb/req";
+import { UpdateK8sSlbResponse } from "./UpdateK8sSlb/res";
+import { UpdateRoleRequest } from "./UpdateRole/req";
+import { UpdateRoleResponse } from "./UpdateRole/res";
+import { DeleteDeployGroupRequest } from "./DeleteDeployGroup/req";
+import { DeleteDeployGroupResponse } from "./DeleteDeployGroup/res";
+import { DeleteFlowControlRequest } from "./DeleteFlowControl/req";
+import { DeleteFlowControlResponse } from "./DeleteFlowControl/res";
+import { DeleteUserDefineRegionRequest } from "./DeleteUserDefineRegion/req";
+import { DeleteUserDefineRegionResponse } from "./DeleteUserDefineRegion/res";
+import { DisableDegradeControlRequest } from "./DisableDegradeControl/req";
+import { DisableDegradeControlResponse } from "./DisableDegradeControl/res";
+import { GetClusterRequest } from "./GetCluster/req";
+import { GetClusterResponse } from "./GetCluster/res";
+import { ListAliyunRegionRequest } from "./ListAliyunRegion/req";
+import { ListAliyunRegionResponse } from "./ListAliyunRegion/res";
+import { ListComponentsRequest } from "./ListComponents/req";
+import { ListComponentsResponse } from "./ListComponents/res";
+import { ListConfigCentersRequest } from "./ListConfigCenters/req";
+import { ListConfigCentersResponse } from "./ListConfigCenters/res";
+import { ListDeployGroupRequest } from "./ListDeployGroup/req";
+import { ListDeployGroupResponse } from "./ListDeployGroup/res";
+import { ListMethodsRequest } from "./ListMethods/req";
+import { ListMethodsResponse } from "./ListMethods/res";
+import { QueryMigrateEcuListRequest } from "./QueryMigrateEcuList/req";
+import { QueryMigrateEcuListResponse } from "./QueryMigrateEcuList/res";
+import { GetScalingRulesRequest } from "./GetScalingRules/req";
+import { GetScalingRulesResponse } from "./GetScalingRules/res";
+import { InsertApplicationRequest } from "./InsertApplication/req";
+import { InsertApplicationResponse } from "./InsertApplication/res";
+import { InsertClusterMemberRequest } from "./InsertClusterMember/req";
+import { InsertClusterMemberResponse } from "./InsertClusterMember/res";
+import { InsertRoleRequest } from "./InsertRole/req";
+import { InsertRoleResponse } from "./InsertRole/res";
+import { InstallAgentRequest } from "./InstallAgent/req";
+import { InstallAgentResponse } from "./InstallAgent/res";
+import { ListEcsNotInClusterRequest } from "./ListEcsNotInCluster/req";
+import { ListEcsNotInClusterResponse } from "./ListEcsNotInCluster/res";
+import { ListEcuByRegionRequest } from "./ListEcuByRegion/req";
+import { ListEcuByRegionResponse } from "./ListEcuByRegion/res";
+import { QueryEccInfoRequest } from "./QueryEccInfo/req";
+import { QueryEccInfoResponse } from "./QueryEccInfo/res";
+import { ScaleOutApplicationRequest } from "./ScaleOutApplication/req";
+import { ScaleOutApplicationResponse } from "./ScaleOutApplication/res";
+import { UpdateDegradeControlRequest } from "./UpdateDegradeControl/req";
+import { UpdateDegradeControlResponse } from "./UpdateDegradeControl/res";
+
 interface EDAS {
-    DeleteApplication(query: {
-        "RegionId"?: string;
-        "AppId": string;
-    }): Promise<{}>;
-    DeleteEcu(query: {
-        "RegionId"?: string;
-        "EcuId": string;
-    }): Promise<{}>;
-    GetK8sApplication(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "From"?: string;
-    }): Promise<{}>;
-    InsertFlowControl(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "Granularity": string;
-        "RuleType": string;
-        "Threshold": number;
-        "ConsumerAppId"?: string;
-        "MethodName"?: string;
-        "ServiceName"?: string;
-        "Strategy"?: string;
-        "UrlVar"?: string;
-    }): Promise<{}>;
-    ListAuthority(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ListBuildPack(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ListClusterMembers(query: {
-        "RegionId"?: string;
-        "ClusterId": string;
-        "CurrentPage"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    AuthorizeApplication(query: {
-        "RegionId"?: string;
-        "TargetUserId": string;
-        "AppIds"?: string;
-    }): Promise<{}>;
-    AuthorizeResourceGroup(query: {
-        "RegionId"?: string;
-        "TargetUserId": string;
-        "ResourceGroupIds"?: string;
-    }): Promise<{}>;
-    AuthorizeRole(query: {
-        "RegionId"?: string;
-        "TargetUserId": string;
-        "RoleIds"?: string;
-    }): Promise<{}>;
-    BindK8sSlb(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "ClusterId": string;
-        "Type": string;
-        "SlbProtocol": string;
-        "TargetPort": string;
-        "Port": string;
-        "SlbId"?: string;
-    }): Promise<{}>;
-    BindSlb(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "SlbId": string;
-        "SlbIp": string;
-        "Type": string;
-        "ListenerPort"?: number;
-        "VServerGroupId"?: string;
-    }): Promise<{}>;
-    ChangeDeployGroup(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "EccInfo": string;
-        "GroupName": string;
-        "ForceStatus"?: boolean;
-    }): Promise<{}>;
-    ContinuePipeline(query: {
-        "RegionId"?: string;
-        "PipelineId": string;
-        "Confirm"?: boolean;
-    }): Promise<{}>;
-    DeleteCluster(query: {
-        "RegionId"?: string;
-        "ClusterId": string;
-    }): Promise<{
-        "Data": boolean;
-        "Message": string;
-        "RequestId": string;
-        "Code": number;
-    }>;
-    DeleteClusterMember(query: {
-        "RegionId"?: string;
-        "ClusterId": string;
-        "ClusterMemberId": string;
-    }): Promise<{}>;
-    DeleteConfigCenter(query: {
-        "RegionId"?: string;
-        "DataId": string;
-        "Group": string;
-        "LogicalRegionId": string;
-    }): Promise<{}>;
-    DeleteDegradeControl(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "RuleId": string;
-    }): Promise<{}>;
-    DeleteK8sApplication(query: {
-        "RegionId"?: string;
-        "AppId": string;
-    }): Promise<{}>;
-    DeleteRole(query: {
-        "RegionId"?: string;
-        "RoleId": number;
-    }): Promise<{}>;
-    DeleteServiceGroup(query: {
-        "RegionId"?: string;
-        "GroupId": string;
-    }): Promise<{}>;
-    DeployApplication(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "PackageVersion": string;
-        "DeployType": string;
-        "GroupId": string;
-        "Desc"?: string;
-        "WarUrl"?: string;
-        "ImageUrl"?: string;
-        "Batch"?: number;
-        "BatchWaitTime"?: number;
-        "AppEnv"?: string;
-        "BuildPackId"?: number;
-        "ComponentIds"?: string;
-        "ReleaseType"?: number;
-    }): Promise<{}>;
-    DeployK8sApplication(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "PreStop"?: string;
-        "Envs"?: string;
-        "ImageTag"?: string;
-        "BatchWaitTime"?: number;
-        "Command"?: string;
-        "PostStart"?: string;
-        "Readiness"?: string;
-        "Liveness"?: string;
-        "Args"?: string;
-        "Replicas"?: number;
-        "Image"?: string;
-        "CpuLimit"?: number;
-        "MemoryLimit"?: number;
-        "CpuRequest"?: number;
-        "MemoryRequest"?: number;
-        "NasId"?: string;
-        "MountDescs"?: string;
-        "StorageType"?: string;
-        "LocalVolume"?: string;
-        "PackageUrl"?: string;
-        "PackageVersion"?: string;
-        "JDK"?: string;
-        "WebContainer"?: string;
-        "EdasContainerVersion"?: string;
-    }): Promise<{}>;
-    DisableFlowControl(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "RuleId": string;
-    }): Promise<{}>;
-    EnableDegradeControl(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "RuleId": string;
-    }): Promise<{}>;
-    EnableFlowControl(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "RuleId": string;
-    }): Promise<{}>;
-    GetApplication(query: {
-        "RegionId"?: string;
-        "AppId": string;
-    }): Promise<{}>;
-    GetChangeOrderInfo(query: {
-        "RegionId"?: string;
-        "ChangeOrderId": string;
-    }): Promise<{}>;
-    GetContainerConfiguration(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "GroupId"?: string;
-    }): Promise<{}>;
-    GetJvmConfiguration(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "GroupId"?: string;
-    }): Promise<{}>;
-    GetPackageStorageCredential(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    GetSecureToken(query: {
-        "RegionId"?: string;
-        "NamespaceId": string;
-    }): Promise<{}>;
-    ImportK8sCluster(query: {
-        "RegionId"?: string;
-        "ClusterId": string;
-        "NamespaceId"?: string;
-    }): Promise<{}>;
-    InsertCluster(query: {
-        "RegionId"?: string;
-        "ClusterName": string;
-        "ClusterType": number;
-        "NetworkMode": number;
-        "LogicalRegionId"?: string;
-        "VpcId"?: string;
-        "OversoldFactor"?: number;
-        "IaasProvider"?: string;
-    }): Promise<{}>;
-    InsertConfigCenter(query: {
-        "RegionId"?: string;
-        "DataId": string;
-        "Group": string;
-        "Data": string;
-        "LogicalRegionId": string;
-        "AppName"?: string;
-    }): Promise<{}>;
-    InsertDegradeControl(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "Duration": number;
-        "RtThreshold": number;
-        "RuleType": string;
-        "MethodName"?: string;
-        "ServiceName"?: string;
-        "UrlVar"?: string;
-    }): Promise<{}>;
-    InsertDeployGroup(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "GroupName": string;
-    }): Promise<{}>;
-    InsertK8sApplication(query: {
-        "RegionId"?: string;
-        "AppName": string;
-        "ClusterId": string;
-        "ImageUrl"?: string;
-        "PackageType"?: string;
-        "IntranetTargetPort"?: number;
-        "IntranetSlbPort"?: number;
-        "ApplicationDescription"?: string;
-        "RepoId"?: string;
-        "Replicas"?: number;
-        "LimitCpu"?: number;
-        "LimitMem"?: number;
-        "RequestsCpu"?: number;
-        "RequestsMem"?: number;
-        "Command"?: string;
-        "CommandArgs"?: string;
-        "IntranetSlbProtocol"?: string;
-        "IntranetSlbId"?: string;
-        "InternetSlbId"?: string;
-        "InternetSlbProtocol"?: string;
-        "InternetSlbPort"?: number;
-        "InternetTargetPort"?: number;
-        "Envs"?: string;
-        "PreStop"?: string;
-        "PostStart"?: string;
-        "Liveness"?: string;
-        "Readiness"?: string;
-        "NasId"?: string;
-        "MountDescs"?: string;
-        "StorageType"?: string;
-        "LocalVolume"?: string;
-        "Namespace"?: string;
-        "LogicalRegionId"?: string;
-        "PackageUrl"?: string;
-        "PackageVersion"?: string;
-        "JDK"?: string;
-        "WebContainer"?: string;
-        "EdasContainerVersion"?: string;
-    }): Promise<{}>;
-    InsertOrUpdateRegion(query: {
-        "RegionId"?: string;
-        "RegionTag": string;
-        "RegionName": string;
-        "Description"?: string;
-        "Id"?: number;
-        "DebugEnable"?: boolean;
-    }): Promise<{}>;
-    InsertServiceGroup(query: {
-        "RegionId"?: string;
-        "GroupName": string;
-    }): Promise<{}>;
-    ListApplication(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ListApplicationEcu(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ListCluster(query: {
-        "RegionId"?: string;
-        "LogicalRegionId"?: string;
-    }): Promise<{}>;
-    ListConsumedServices(query: {
-        "RegionId"?: string;
-        "AppId": string;
-    }): Promise<{}>;
-    ListConvertableEcu(query: {
-        "RegionId"?: string;
-        "clusterId": string;
-    }): Promise<{}>;
-    ListDegradeControls(query: {
-        "RegionId"?: string;
-        "AppId": string;
-    }): Promise<{}>;
-    ListFlowControls(query: {
-        "RegionId"?: string;
-        "AppId": string;
-    }): Promise<{}>;
-    ListHistoryDeployVersion(query: {
-        "RegionId"?: string;
-        "AppId": string;
-    }): Promise<{}>;
-    ListPublishedServices(query: {
-        "RegionId"?: string;
-        "AppId": string;
-    }): Promise<{}>;
-    ListRecentChangeOrder(query: {
-        "RegionId"?: string;
-        "AppId": string;
-    }): Promise<{}>;
-    ListResourceGroup(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ListRole(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ListScaleOutEcu(query: {
-        "RegionId"?: string;
-        "LogicalRegionId"?: string;
-        "ClusterId"?: string;
-        "AppId"?: string;
-        "GroupId"?: string;
-        "Cpu"?: number;
-        "Mem"?: number;
-        "InstanceNum"?: number;
-    }): Promise<{}>;
-    ListServiceGroups(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ListSlb(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ListSubAccount(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ListUserDefineRegion(query: {
-        "RegionId"?: string;
-        "DebugEnable"?: boolean;
-    }): Promise<{}>;
-    ListVpc(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    MigrateEcu(query: {
-        "RegionId"?: string;
-        "InstanceIds": string;
-        "LogicalRegionId"?: string;
-    }): Promise<{}>;
-    ModifyScalingRule(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "GroupId": string;
-        "InEnable"?: boolean;
-        "InCpu"?: number;
-        "InDuration"?: number;
-        "InInstanceNum"?: number;
-        "InLoad"?: number;
-        "InRT"?: number;
-        "InStep"?: number;
-        "OutCPU"?: number;
-        "OutDuration"?: number;
-        "OutEnable"?: boolean;
-        "OutInstanceNum"?: number;
-        "OutLoad"?: number;
-        "OutRT"?: number;
-        "OutStep"?: number;
-        "InCondition"?: string;
-        "OutCondition"?: string;
-        "ResourceFrom"?: string;
-        "MultiAzPolicy"?: string;
-        "VpcId"?: string;
-        "VSwitchIds"?: string;
-        "ScalingPolicy"?: string;
-        "TemplateInstanceId"?: string;
-        "TemplateInstanceName"?: string;
-        "Password"?: string;
-        "KeyPairName"?: string;
-        "AcceptEULA"?: boolean;
-        "TemplateId"?: string;
-        "TemplateVersion"?: number;
-    }): Promise<{}>;
-    QueryApplicationStatus(query: {
-        "RegionId"?: string;
-        "AppId": string;
-    }): Promise<{}>;
-    QueryConfigCenter(query: {
-        "RegionId"?: string;
-        "DataId": string;
-        "Group": string;
-        "LogicalRegionId": string;
-    }): Promise<{}>;
-    QueryMigrateRegionList(query: {
-        "RegionId"?: string;
-        "LogicalRegionId"?: string;
-    }): Promise<{}>;
-    QueryMonitorInfo(query: {
-        "RegionId"?: string;
-        "Start": number;
-        "End": number;
-        "Metric": string;
-        "Tags": string;
-        "Aggregator": string;
-        "Interval"?: string;
-    }): Promise<{}>;
-    QueryRegionConfig(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ResetApplication(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "EccInfo": string;
-    }): Promise<{}>;
-    RollbackApplication(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "HistoryVersion": string;
-        "GroupId": string;
-        "Batch"?: number;
-        "BatchWaitTime"?: number;
-    }): Promise<{}>;
-    ScaleInApplication(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "EccInfo": string;
-        "ForceStatus"?: boolean;
-    }): Promise<{}>;
-    ScaleK8sApplication(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "Replicas": number;
-    }): Promise<{}>;
-    StartApplication(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "EccInfo"?: string;
-    }): Promise<{}>;
-    StopApplication(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "EccInfo"?: string;
-    }): Promise<{}>;
-    SynchronizeResource(query: {
-        "RegionId"?: string;
-        "Type": string;
-    }): Promise<{}>;
-    TransformClusterMember(query: {
-        "RegionId"?: string;
-        "InstanceIds": string;
-        "TargetClusterId": string;
-        "Password": string;
-    }): Promise<{}>;
-    UnbindK8sSlb(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "ClusterId": string;
-        "Type": string;
-    }): Promise<{}>;
-    UnbindSlb(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "SlbId": string;
-        "Type": string;
-    }): Promise<{}>;
-    UpdateAccountInfo(query: {
-        "RegionId"?: string;
-        "Name"?: string;
-        "Telephone"?: string;
-        "Email"?: string;
-    }): Promise<{}>;
-    UpdateApplicationBaseInfo(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "AppName"?: string;
-        "desc"?: string;
-    }): Promise<{}>;
-    UpdateContainer(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "BuildPackId": number;
-    }): Promise<{}>;
-    UpdateContainerConfiguration(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "GroupId"?: string;
-        "ContextPath"?: string;
-        "HttpPort"?: number;
-        "MaxThreads"?: number;
-        "URIEncoding"?: string;
-        "UseBodyEncoding"?: boolean;
-    }): Promise<{}>;
-    UpdateFlowControl(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "RuleId": string;
-        "Granularity": string;
-        "RuleType": string;
-        "Threshold": number;
-        "ConsumerAppId"?: string;
-        "MethodName"?: string;
-        "ServiceName"?: string;
-        "Strategy"?: string;
-        "UrlVar"?: string;
-    }): Promise<{}>;
-    UpdateHealthCheckUrl(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "hcURL"?: string;
-    }): Promise<{}>;
-    UpdateJvmConfiguration(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "GroupId"?: string;
-        "Options"?: string;
-        "MinHeapSize"?: number;
-        "MaxPermSize"?: number;
-        "MaxHeapSize"?: number;
-    }): Promise<{}>;
-    UpdateK8sApplicationConfig(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "ClusterId": string;
-        "CpuLimit": string;
-        "MemoryLimit": string;
-    }): Promise<{}>;
-    UpdateK8sSlb(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "ClusterId": string;
-        "Type": string;
-        "SlbProtocol": string;
-        "TargetPort": string;
-        "Port": string;
-    }): Promise<{}>;
-    UpdateRole(query: {
-        "RegionId"?: string;
-        "RoleId": number;
-        "ActionData": string;
-    }): Promise<{}>;
-    DeleteDeployGroup(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "GroupName": string;
-    }): Promise<{}>;
-    DeleteFlowControl(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "RuleId": string;
-    }): Promise<{}>;
-    DeleteUserDefineRegion(query: {
-        "RegionId"?: string;
-        "Id"?: number;
-        "RegionTag"?: string;
-    }): Promise<{}>;
-    DisableDegradeControl(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "RuleId": string;
-    }): Promise<{}>;
-    GetCluster(query: {
-        "RegionId"?: string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    ListAliyunRegion(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ListComponents(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ListConfigCenters(query: {
-        "RegionId"?: string;
-        "Group": string;
-        "LogicalRegionId": string;
-        "DataIdPattern"?: string;
-        "AppName"?: string;
-    }): Promise<{}>;
-    ListDeployGroup(query: {
-        "RegionId"?: string;
-        "AppId": string;
-    }): Promise<{}>;
-    ListMethods(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "ServiceName": string;
-    }): Promise<{}>;
-    QueryMigrateEcuList(query: {
-        "RegionId"?: string;
-        "LogicalRegionId"?: string;
-    }): Promise<{}>;
-    GetScalingRules(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "GroupId": string;
-        "Mode"?: string;
-    }): Promise<{}>;
-    InsertApplication(query: {
-        "RegionId"?: string;
-        "ApplicationName": string;
-        "BuildPackId"?: number;
-        "ClusterId"?: string;
-        "Description"?: string;
-        "ReservedPortStr"?: string;
-        "EcuInfo"?: string;
-        "Cpu"?: number;
-        "Mem"?: number;
-        "HealthCheckURL"?: string;
-        "LogicalRegionId"?: string;
-        "Jdk"?: string;
-        "WebContainer"?: string;
-        "PackageType"?: string;
-    }): Promise<{}>;
-    InsertClusterMember(query: {
-        "RegionId"?: string;
-        "clusterId": string;
-        "instanceIds": string;
-        "password": string;
-    }): Promise<{}>;
-    InsertRole(query: {
-        "RegionId"?: string;
-        "RoleName": string;
-        "ActionData": string;
-    }): Promise<{}>;
-    InstallAgent(query: {
-        "RegionId"?: string;
-        "ClusterId": string;
-        "InstanceIds": string;
-        "DoAsync"?: boolean;
-    }): Promise<{}>;
-    ListEcsNotInCluster(query: {
-        "RegionId"?: string;
-        "NetworkMode": number;
-        "VpcId"?: string;
-    }): Promise<{}>;
-    ListEcuByRegion(query: {
-        "RegionId"?: string;
-        "Act": string;
-        "LogicalRegionId"?: string;
-    }): Promise<{}>;
-    QueryEccInfo(query: {
-        "RegionId"?: string;
-        "EccId": string;
-    }): Promise<{}>;
-    ScaleOutApplication(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "EcuInfo": string;
-        "DeployGroup": string;
-    }): Promise<{}>;
-    UpdateDegradeControl(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "RuleId": string;
-        "Duration": number;
-        "RtThreshold": number;
-        "RuleType": string;
-        "MethodName"?: string;
-        "ServiceName"?: string;
-        "UrlVar"?: string;
-    }): Promise<{}>;
+    DeleteApplication(query: DeleteApplicationRequest): Promise<DeleteApplicationResponse>;
+    DeleteEcu(query: DeleteEcuRequest): Promise<DeleteEcuResponse>;
+    GetK8sApplication(query: GetK8sApplicationRequest): Promise<GetK8sApplicationResponse>;
+    InsertFlowControl(query: InsertFlowControlRequest): Promise<InsertFlowControlResponse>;
+    ListAuthority(query: ListAuthorityRequest): Promise<ListAuthorityResponse>;
+    ListBuildPack(query: ListBuildPackRequest): Promise<ListBuildPackResponse>;
+    ListClusterMembers(query: ListClusterMembersRequest): Promise<ListClusterMembersResponse>;
+    AuthorizeApplication(query: AuthorizeApplicationRequest): Promise<AuthorizeApplicationResponse>;
+    AuthorizeResourceGroup(query: AuthorizeResourceGroupRequest): Promise<AuthorizeResourceGroupResponse>;
+    AuthorizeRole(query: AuthorizeRoleRequest): Promise<AuthorizeRoleResponse>;
+    BindK8sSlb(query: BindK8sSlbRequest): Promise<BindK8sSlbResponse>;
+    BindSlb(query: BindSlbRequest): Promise<BindSlbResponse>;
+    ChangeDeployGroup(query: ChangeDeployGroupRequest): Promise<ChangeDeployGroupResponse>;
+    ContinuePipeline(query: ContinuePipelineRequest): Promise<ContinuePipelineResponse>;
+    DeleteCluster(query: DeleteClusterRequest): Promise<DeleteClusterResponse>;
+    DeleteClusterMember(query: DeleteClusterMemberRequest): Promise<DeleteClusterMemberResponse>;
+    DeleteConfigCenter(query: DeleteConfigCenterRequest): Promise<DeleteConfigCenterResponse>;
+    DeleteDegradeControl(query: DeleteDegradeControlRequest): Promise<DeleteDegradeControlResponse>;
+    DeleteK8sApplication(query: DeleteK8sApplicationRequest): Promise<DeleteK8sApplicationResponse>;
+    DeleteRole(query: DeleteRoleRequest): Promise<DeleteRoleResponse>;
+    DeleteServiceGroup(query: DeleteServiceGroupRequest): Promise<DeleteServiceGroupResponse>;
+    DeployApplication(query: DeployApplicationRequest): Promise<DeployApplicationResponse>;
+    DeployK8sApplication(query: DeployK8sApplicationRequest): Promise<DeployK8sApplicationResponse>;
+    DisableFlowControl(query: DisableFlowControlRequest): Promise<DisableFlowControlResponse>;
+    EnableDegradeControl(query: EnableDegradeControlRequest): Promise<EnableDegradeControlResponse>;
+    EnableFlowControl(query: EnableFlowControlRequest): Promise<EnableFlowControlResponse>;
+    GetApplication(query: GetApplicationRequest): Promise<GetApplicationResponse>;
+    GetChangeOrderInfo(query: GetChangeOrderInfoRequest): Promise<GetChangeOrderInfoResponse>;
+    GetContainerConfiguration(query: GetContainerConfigurationRequest): Promise<GetContainerConfigurationResponse>;
+    GetJvmConfiguration(query: GetJvmConfigurationRequest): Promise<GetJvmConfigurationResponse>;
+    GetPackageStorageCredential(query: GetPackageStorageCredentialRequest): Promise<GetPackageStorageCredentialResponse>;
+    GetSecureToken(query: GetSecureTokenRequest): Promise<GetSecureTokenResponse>;
+    ImportK8sCluster(query: ImportK8sClusterRequest): Promise<ImportK8sClusterResponse>;
+    InsertCluster(query: InsertClusterRequest): Promise<InsertClusterResponse>;
+    InsertConfigCenter(query: InsertConfigCenterRequest): Promise<InsertConfigCenterResponse>;
+    InsertDegradeControl(query: InsertDegradeControlRequest): Promise<InsertDegradeControlResponse>;
+    InsertDeployGroup(query: InsertDeployGroupRequest): Promise<InsertDeployGroupResponse>;
+    InsertK8sApplication(query: InsertK8sApplicationRequest): Promise<InsertK8sApplicationResponse>;
+    InsertOrUpdateRegion(query: InsertOrUpdateRegionRequest): Promise<InsertOrUpdateRegionResponse>;
+    InsertServiceGroup(query: InsertServiceGroupRequest): Promise<InsertServiceGroupResponse>;
+    ListApplication(query: ListApplicationRequest): Promise<ListApplicationResponse>;
+    ListApplicationEcu(query: ListApplicationEcuRequest): Promise<ListApplicationEcuResponse>;
+    ListCluster(query: ListClusterRequest): Promise<ListClusterResponse>;
+    ListConsumedServices(query: ListConsumedServicesRequest): Promise<ListConsumedServicesResponse>;
+    ListConvertableEcu(query: ListConvertableEcuRequest): Promise<ListConvertableEcuResponse>;
+    ListDegradeControls(query: ListDegradeControlsRequest): Promise<ListDegradeControlsResponse>;
+    ListFlowControls(query: ListFlowControlsRequest): Promise<ListFlowControlsResponse>;
+    ListHistoryDeployVersion(query: ListHistoryDeployVersionRequest): Promise<ListHistoryDeployVersionResponse>;
+    ListPublishedServices(query: ListPublishedServicesRequest): Promise<ListPublishedServicesResponse>;
+    ListRecentChangeOrder(query: ListRecentChangeOrderRequest): Promise<ListRecentChangeOrderResponse>;
+    ListResourceGroup(query: ListResourceGroupRequest): Promise<ListResourceGroupResponse>;
+    ListRole(query: ListRoleRequest): Promise<ListRoleResponse>;
+    ListScaleOutEcu(query: ListScaleOutEcuRequest): Promise<ListScaleOutEcuResponse>;
+    ListServiceGroups(query: ListServiceGroupsRequest): Promise<ListServiceGroupsResponse>;
+    ListSlb(query: ListSlbRequest): Promise<ListSlbResponse>;
+    ListSubAccount(query: ListSubAccountRequest): Promise<ListSubAccountResponse>;
+    ListUserDefineRegion(query: ListUserDefineRegionRequest): Promise<ListUserDefineRegionResponse>;
+    ListVpc(query: ListVpcRequest): Promise<ListVpcResponse>;
+    MigrateEcu(query: MigrateEcuRequest): Promise<MigrateEcuResponse>;
+    ModifyScalingRule(query: ModifyScalingRuleRequest): Promise<ModifyScalingRuleResponse>;
+    QueryApplicationStatus(query: QueryApplicationStatusRequest): Promise<QueryApplicationStatusResponse>;
+    QueryConfigCenter(query: QueryConfigCenterRequest): Promise<QueryConfigCenterResponse>;
+    QueryMigrateRegionList(query: QueryMigrateRegionListRequest): Promise<QueryMigrateRegionListResponse>;
+    QueryMonitorInfo(query: QueryMonitorInfoRequest): Promise<QueryMonitorInfoResponse>;
+    QueryRegionConfig(query: QueryRegionConfigRequest): Promise<QueryRegionConfigResponse>;
+    ResetApplication(query: ResetApplicationRequest): Promise<ResetApplicationResponse>;
+    RollbackApplication(query: RollbackApplicationRequest): Promise<RollbackApplicationResponse>;
+    ScaleInApplication(query: ScaleInApplicationRequest): Promise<ScaleInApplicationResponse>;
+    ScaleK8sApplication(query: ScaleK8sApplicationRequest): Promise<ScaleK8sApplicationResponse>;
+    StartApplication(query: StartApplicationRequest): Promise<StartApplicationResponse>;
+    StopApplication(query: StopApplicationRequest): Promise<StopApplicationResponse>;
+    SynchronizeResource(query: SynchronizeResourceRequest): Promise<SynchronizeResourceResponse>;
+    TransformClusterMember(query: TransformClusterMemberRequest): Promise<TransformClusterMemberResponse>;
+    UnbindK8sSlb(query: UnbindK8sSlbRequest): Promise<UnbindK8sSlbResponse>;
+    UnbindSlb(query: UnbindSlbRequest): Promise<UnbindSlbResponse>;
+    UpdateAccountInfo(query: UpdateAccountInfoRequest): Promise<UpdateAccountInfoResponse>;
+    UpdateApplicationBaseInfo(query: UpdateApplicationBaseInfoRequest): Promise<UpdateApplicationBaseInfoResponse>;
+    UpdateContainer(query: UpdateContainerRequest): Promise<UpdateContainerResponse>;
+    UpdateContainerConfiguration(query: UpdateContainerConfigurationRequest): Promise<UpdateContainerConfigurationResponse>;
+    UpdateFlowControl(query: UpdateFlowControlRequest): Promise<UpdateFlowControlResponse>;
+    UpdateHealthCheckUrl(query: UpdateHealthCheckUrlRequest): Promise<UpdateHealthCheckUrlResponse>;
+    UpdateJvmConfiguration(query: UpdateJvmConfigurationRequest): Promise<UpdateJvmConfigurationResponse>;
+    UpdateK8sApplicationConfig(query: UpdateK8sApplicationConfigRequest): Promise<UpdateK8sApplicationConfigResponse>;
+    UpdateK8sSlb(query: UpdateK8sSlbRequest): Promise<UpdateK8sSlbResponse>;
+    UpdateRole(query: UpdateRoleRequest): Promise<UpdateRoleResponse>;
+    DeleteDeployGroup(query: DeleteDeployGroupRequest): Promise<DeleteDeployGroupResponse>;
+    DeleteFlowControl(query: DeleteFlowControlRequest): Promise<DeleteFlowControlResponse>;
+    DeleteUserDefineRegion(query: DeleteUserDefineRegionRequest): Promise<DeleteUserDefineRegionResponse>;
+    DisableDegradeControl(query: DisableDegradeControlRequest): Promise<DisableDegradeControlResponse>;
+    GetCluster(query: GetClusterRequest): Promise<GetClusterResponse>;
+    ListAliyunRegion(query: ListAliyunRegionRequest): Promise<ListAliyunRegionResponse>;
+    ListComponents(query: ListComponentsRequest): Promise<ListComponentsResponse>;
+    ListConfigCenters(query: ListConfigCentersRequest): Promise<ListConfigCentersResponse>;
+    ListDeployGroup(query: ListDeployGroupRequest): Promise<ListDeployGroupResponse>;
+    ListMethods(query: ListMethodsRequest): Promise<ListMethodsResponse>;
+    QueryMigrateEcuList(query: QueryMigrateEcuListRequest): Promise<QueryMigrateEcuListResponse>;
+    GetScalingRules(query: GetScalingRulesRequest): Promise<GetScalingRulesResponse>;
+    InsertApplication(query: InsertApplicationRequest): Promise<InsertApplicationResponse>;
+    InsertClusterMember(query: InsertClusterMemberRequest): Promise<InsertClusterMemberResponse>;
+    InsertRole(query: InsertRoleRequest): Promise<InsertRoleResponse>;
+    InstallAgent(query: InstallAgentRequest): Promise<InstallAgentResponse>;
+    ListEcsNotInCluster(query: ListEcsNotInClusterRequest): Promise<ListEcsNotInClusterResponse>;
+    ListEcuByRegion(query: ListEcuByRegionRequest): Promise<ListEcuByRegionResponse>;
+    QueryEccInfo(query: QueryEccInfoRequest): Promise<QueryEccInfoResponse>;
+    ScaleOutApplication(query: ScaleOutApplicationRequest): Promise<ScaleOutApplicationResponse>;
+    UpdateDegradeControl(query: UpdateDegradeControlRequest): Promise<UpdateDegradeControlResponse>;
 }
 export default EDAS;

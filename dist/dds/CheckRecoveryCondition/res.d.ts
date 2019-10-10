@@ -1,0 +1,3 @@
+interface CheckRecoveryConditionResponse {
+}
+export { CheckRecoveryConditionResponse };

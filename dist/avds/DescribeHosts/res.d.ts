@@ -1,0 +1,3 @@
+interface DescribeHostsResponse {
+}
+export { DescribeHostsResponse };

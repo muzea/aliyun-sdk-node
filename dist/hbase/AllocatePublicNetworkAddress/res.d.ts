@@ -1,0 +1,3 @@
+interface AllocatePublicNetworkAddressResponse {
+}
+export { AllocatePublicNetworkAddressResponse };

@@ -1,0 +1,3 @@
+interface CreateImageCacheResponse {
+}
+export { CreateImageCacheResponse };

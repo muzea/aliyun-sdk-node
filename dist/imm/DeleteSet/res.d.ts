@@ -1,0 +1,8 @@
+// this file was automatically generated, DO NOT EDIT
+// structs
+// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/imm.DeleteSetResponse
+export interface DeleteSetResponse {
+	RequestId: string;
+	SetId: string;
+}
+

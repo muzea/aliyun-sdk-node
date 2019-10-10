@@ -1,0 +1,3 @@
+interface DescribeVsDomainCertificateInfoResponse {
+}
+export { DescribeVsDomainCertificateInfoResponse };

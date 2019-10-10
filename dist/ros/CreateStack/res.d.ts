@@ -1,0 +1,3 @@
+interface CreateStackResponse {
+}
+export { CreateStackResponse };

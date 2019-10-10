@@ -1,0 +1,3 @@
+interface GenerateOssUploadMetaResponse {
+}
+export { GenerateOssUploadMetaResponse };

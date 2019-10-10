@@ -1,0 +1,3 @@
+interface CountNodesByNodeGroupIdResponse {
+}
+export { CountNodesByNodeGroupIdResponse };

@@ -1,0 +1,3 @@
+interface CreateDeviceBrandResponse {
+}
+export { CreateDeviceBrandResponse };

@@ -1,0 +1,3 @@
+interface DescribeNFSClientStatusResponse {
+}
+export { DescribeNFSClientStatusResponse };

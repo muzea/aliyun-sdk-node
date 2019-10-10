@@ -1,0 +1,3 @@
+interface DescribeApiGatewayAppSecurityResponse {
+}
+export { DescribeApiGatewayAppSecurityResponse };

@@ -1,0 +1,3 @@
+interface DeleteShadowSchemaResponse {
+}
+export { DeleteShadowSchemaResponse };

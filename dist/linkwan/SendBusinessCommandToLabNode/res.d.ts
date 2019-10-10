@@ -1,0 +1,3 @@
+interface SendBusinessCommandToLabNodeResponse {
+}
+export { SendBusinessCommandToLabNodeResponse };

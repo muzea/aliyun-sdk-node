@@ -1,0 +1,3 @@
+interface UnSubscribeRegionResponse {
+}
+export { UnSubscribeRegionResponse };

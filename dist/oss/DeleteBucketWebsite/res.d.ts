@@ -1,0 +1,3 @@
+interface DeleteBucketWebsiteResponse {
+}
+export { DeleteBucketWebsiteResponse };

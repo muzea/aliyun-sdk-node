@@ -1,0 +1,3 @@
+interface ModifyReplicationJobAttributeResponse {
+}
+export { ModifyReplicationJobAttributeResponse };

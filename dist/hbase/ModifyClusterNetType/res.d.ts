@@ -1,0 +1,3 @@
+interface ModifyClusterNetTypeResponse {
+}
+export { ModifyClusterNetTypeResponse };

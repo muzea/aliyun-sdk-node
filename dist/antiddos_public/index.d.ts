@@ -1,124 +1,52 @@
+import { DescribeCapRequest } from "./DescribeCap/req";
+import { DescribeCapResponse } from "./DescribeCap/res";
+import { DescribeRegionDdosThresholdRequest } from "./DescribeRegionDdosThreshold/req";
+import { DescribeRegionDdosThresholdResponse } from "./DescribeRegionDdosThreshold/res";
+import { DescribeTrafficInfoRequest } from "./DescribeTrafficInfo/req";
+import { DescribeTrafficInfoResponse } from "./DescribeTrafficInfo/res";
+import { DescribeBgpPackByIpRequest } from "./DescribeBgpPackByIp/req";
+import { DescribeBgpPackByIpResponse } from "./DescribeBgpPackByIp/res";
+import { DescribeBgpPackElasticThresholdRequest } from "./DescribeBgpPackElasticThreshold/req";
+import { DescribeBgpPackElasticThresholdResponse } from "./DescribeBgpPackElasticThreshold/res";
+import { DescribeCreditInfoRequest } from "./DescribeCreditInfo/req";
+import { DescribeCreditInfoResponse } from "./DescribeCreditInfo/res";
+import { DescribeDdosCountRequest } from "./DescribeDdosCount/req";
+import { DescribeDdosCountResponse } from "./DescribeDdosCount/res";
+import { DescribeDdosEventListRequest } from "./DescribeDdosEventList/req";
+import { DescribeDdosEventListResponse } from "./DescribeDdosEventList/res";
+import { DescribeDdosThresholdRequest } from "./DescribeDdosThreshold/req";
+import { DescribeDdosThresholdResponse } from "./DescribeDdosThreshold/res";
+import { DescribeFlexibleProtectionFlowRequest } from "./DescribeFlexibleProtectionFlow/req";
+import { DescribeFlexibleProtectionFlowResponse } from "./DescribeFlexibleProtectionFlow/res";
+import { DescribeFlowgraphRequest } from "./DescribeFlowgraph/req";
+import { DescribeFlowgraphResponse } from "./DescribeFlowgraph/res";
+import { ModifyDdosStatusRequest } from "./ModifyDdosStatus/req";
+import { ModifyDdosStatusResponse } from "./ModifyDdosStatus/res";
+import { ModifyDefenseThresholdRequest } from "./ModifyDefenseThreshold/req";
+import { ModifyDefenseThresholdResponse } from "./ModifyDefenseThreshold/res";
+import { DescribeDdosCreditRequest } from "./DescribeDdosCredit/req";
+import { DescribeDdosCreditResponse } from "./DescribeDdosCredit/res";
+import { DescribeInstanceRequest } from "./DescribeInstance/req";
+import { DescribeInstanceResponse } from "./DescribeInstance/res";
+import { DescribeRegionsRequest } from "./DescribeRegions/req";
+import { DescribeRegionsResponse } from "./DescribeRegions/res";
+
 interface ANTIDDOS_PUBLIC {
-    DescribeCap(query: {
-        "RegionId"?: string;
-        "DdosRegionId": string;
-        "InstanceType": string;
-        "InstanceId": string;
-        "BegTime": number;
-        "SourceIp"?: string;
-        "Lang"?: string;
-    }): Promise<{}>;
-    DescribeRegionDdosThreshold(query: {
-        "RegionId"?: string;
-        "DdosRegionId": string;
-        "SourceIp"?: string;
-        "Lang"?: string;
-    }): Promise<{}>;
-    DescribeTrafficInfo(query: {
-        "RegionId"?: string;
-        "SourceIp"?: string;
-        "Lang"?: string;
-    }): Promise<{}>;
-    DescribeBgpPackByIp(query: {
-        "RegionId"?: string;
-        "DdosRegionId": string;
-        "Ip": string;
-        "SourceIp"?: string;
-        "Lang"?: string;
-    }): Promise<{}>;
-    DescribeBgpPackElasticThreshold(query: {
-        "RegionId"?: string;
-        "DdosRegionId": string;
-        "SourceIp"?: string;
-        "Lang"?: string;
-    }): Promise<{}>;
-    DescribeCreditInfo(query: {
-        "RegionId"?: string;
-        "SourceIp"?: string;
-    }): Promise<{}>;
-    DescribeDdosCount(query: {
-        "RegionId"?: string;
-        "DdosRegionId": string;
-        "InstanceType": string;
-        "SourceIp"?: string;
-        "Lang"?: string;
-    }): Promise<{}>;
-    DescribeDdosEventList(query: {
-        "RegionId"?: string;
-        "DdosRegionId": string;
-        "InstanceType": string;
-        "InstanceId": string;
-        "SourceIp"?: string;
-        "Lang"?: string;
-        "CurrentPage"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    DescribeDdosThreshold(query: {
-        "RegionId"?: string;
-        "DdosRegionId": string;
-        "DdosType": string;
-        "InstanceType": string;
-        "InstanceIds": string[];
-        "SourceIp"?: string;
-        "Lang"?: string;
-    }): Promise<{}>;
-    DescribeFlexibleProtectionFlow(query: {
-        "RegionId"?: string;
-        "SourceIp"?: string;
-        "Lang"?: string;
-        "Days"?: number;
-    }): Promise<{}>;
-    DescribeFlowgraph(query: {
-        "RegionId"?: string;
-        "DdosRegionId": string;
-        "InstanceType": string;
-        "InstanceId": string;
-        "SourceIp"?: string;
-        "Lang"?: string;
-        "Days"?: number;
-    }): Promise<{}>;
-    ModifyDdosStatus(query: {
-        "RegionId"?: string;
-        "DdosRegionId": string;
-        "InstanceType": string;
-        "InstanceId": string;
-        "SourceIp"?: string;
-        "Lang"?: string;
-    }): Promise<{}>;
-    ModifyDefenseThreshold(query: {
-        "RegionId"?: string;
-        "DdosRegionId": string;
-        "InstanceType": string;
-        "InstanceId": string;
-        "SourceIp"?: string;
-        "Lang"?: string;
-        "Bps"?: number;
-        "Pps"?: number;
-        "IsAuto"?: boolean;
-    }): Promise<{}>;
-    DescribeDdosCredit(query: {
-        "RegionId"?: string;
-        "DdosRegionId": string;
-        "SourceIp"?: string;
-        "Lang"?: string;
-    }): Promise<{}>;
-    DescribeInstance(query: {
-        "RegionId"?: string;
-        "DdosRegionId": string;
-        "InstanceType": string;
-        "SourceIp"?: string;
-        "Lang"?: string;
-        "InstanceName"?: string;
-        "DdosStatus"?: string;
-        "InstanceId"?: string;
-        "InstanceIp"?: string;
-        "CurrentPage"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    DescribeRegions(query: {
-        "RegionId"?: string;
-        "SourceIp"?: string;
-        "Lang"?: string;
-    }): Promise<{}>;
+    DescribeCap(query: DescribeCapRequest): Promise<DescribeCapResponse>;
+    DescribeRegionDdosThreshold(query: DescribeRegionDdosThresholdRequest): Promise<DescribeRegionDdosThresholdResponse>;
+    DescribeTrafficInfo(query: DescribeTrafficInfoRequest): Promise<DescribeTrafficInfoResponse>;
+    DescribeBgpPackByIp(query: DescribeBgpPackByIpRequest): Promise<DescribeBgpPackByIpResponse>;
+    DescribeBgpPackElasticThreshold(query: DescribeBgpPackElasticThresholdRequest): Promise<DescribeBgpPackElasticThresholdResponse>;
+    DescribeCreditInfo(query: DescribeCreditInfoRequest): Promise<DescribeCreditInfoResponse>;
+    DescribeDdosCount(query: DescribeDdosCountRequest): Promise<DescribeDdosCountResponse>;
+    DescribeDdosEventList(query: DescribeDdosEventListRequest): Promise<DescribeDdosEventListResponse>;
+    DescribeDdosThreshold(query: DescribeDdosThresholdRequest): Promise<DescribeDdosThresholdResponse>;
+    DescribeFlexibleProtectionFlow(query: DescribeFlexibleProtectionFlowRequest): Promise<DescribeFlexibleProtectionFlowResponse>;
+    DescribeFlowgraph(query: DescribeFlowgraphRequest): Promise<DescribeFlowgraphResponse>;
+    ModifyDdosStatus(query: ModifyDdosStatusRequest): Promise<ModifyDdosStatusResponse>;
+    ModifyDefenseThreshold(query: ModifyDefenseThresholdRequest): Promise<ModifyDefenseThresholdResponse>;
+    DescribeDdosCredit(query: DescribeDdosCreditRequest): Promise<DescribeDdosCreditResponse>;
+    DescribeInstance(query: DescribeInstanceRequest): Promise<DescribeInstanceResponse>;
+    DescribeRegions(query: DescribeRegionsRequest): Promise<DescribeRegionsResponse>;
 }
 export default ANTIDDOS_PUBLIC;

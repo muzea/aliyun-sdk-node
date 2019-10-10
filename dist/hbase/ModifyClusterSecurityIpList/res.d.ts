@@ -1,0 +1,3 @@
+interface ModifyClusterSecurityIpListResponse {
+}
+export { ModifyClusterSecurityIpListResponse };

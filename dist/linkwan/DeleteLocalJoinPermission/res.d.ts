@@ -1,0 +1,3 @@
+interface DeleteLocalJoinPermissionResponse {
+}
+export { DeleteLocalJoinPermissionResponse };

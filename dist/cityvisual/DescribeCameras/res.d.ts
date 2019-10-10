@@ -1,0 +1,3 @@
+interface DescribeCamerasResponse {
+}
+export { DescribeCamerasResponse };

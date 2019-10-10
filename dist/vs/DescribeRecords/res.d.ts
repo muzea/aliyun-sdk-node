@@ -1,0 +1,3 @@
+interface DescribeRecordsResponse {
+}
+export { DescribeRecordsResponse };

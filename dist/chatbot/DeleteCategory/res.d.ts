@@ -1,0 +1,3 @@
+interface DeleteCategoryResponse {
+}
+export { DeleteCategoryResponse };

@@ -1,0 +1,3 @@
+interface DeleteDialogResponse {
+}
+export { DeleteDialogResponse };

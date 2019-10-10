@@ -1,0 +1,3 @@
+interface GetShareRateDataResponse {
+}
+export { GetShareRateDataResponse };

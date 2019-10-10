@@ -1,0 +1,3 @@
+interface AddAssetsResponse {
+}
+export { AddAssetsResponse };

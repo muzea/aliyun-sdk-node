@@ -1,1251 +1,523 @@
+import { AddUploadedFunctionFileInfoRequest } from "./AddUploadedFunctionFileInfo/req";
+import { AddUploadedFunctionFileInfoResponse } from "./AddUploadedFunctionFileInfo/res";
+import { AddVersionBlackDevicesRequest } from "./AddVersionBlackDevices/req";
+import { AddVersionBlackDevicesResponse } from "./AddVersionBlackDevices/res";
+import { AddVersionGroupDevicesRequest } from "./AddVersionGroupDevices/req";
+import { AddVersionGroupDevicesResponse } from "./AddVersionGroupDevices/res";
+import { AddVersionWhiteDevicesRequest } from "./AddVersionWhiteDevices/req";
+import { AddVersionWhiteDevicesResponse } from "./AddVersionWhiteDevices/res";
+import { ConnectAssistDeviceRequest } from "./ConnectAssistDevice/req";
+import { ConnectAssistDeviceResponse } from "./ConnectAssistDevice/res";
+import { CountActivatedOrNewRegistrationDeviceRequest } from "./CountActivatedOrNewRegistrationDevice/req";
+import { CountActivatedOrNewRegistrationDeviceResponse } from "./CountActivatedOrNewRegistrationDevice/res";
+import { CountDeviceBrandsRequest } from "./CountDeviceBrands/req";
+import { CountDeviceBrandsResponse } from "./CountDeviceBrands/res";
+import { CountDeviceModelsRequest } from "./CountDeviceModels/req";
+import { CountDeviceModelsResponse } from "./CountDeviceModels/res";
+import { CountDevicesRequest } from "./CountDevices/req";
+import { CountDevicesResponse } from "./CountDevices/res";
+import { CountProjectsRequest } from "./CountProjects/req";
+import { CountProjectsResponse } from "./CountProjects/res";
+import { CountYunIdInfoRequest } from "./CountYunIdInfo/req";
+import { CountYunIdInfoResponse } from "./CountYunIdInfo/res";
+import { CreateAppVersionRequest } from "./CreateAppVersion/req";
+import { CreateAppVersionResponse } from "./CreateAppVersion/res";
+import { CreateCustomizedFilterRequest } from "./CreateCustomizedFilter/req";
+import { CreateCustomizedFilterResponse } from "./CreateCustomizedFilter/res";
+import { CreateCustomizedPropertyRequest } from "./CreateCustomizedProperty/req";
+import { CreateCustomizedPropertyResponse } from "./CreateCustomizedProperty/res";
+import { CreateDeviceRequest } from "./CreateDevice/req";
+import { CreateDeviceResponse } from "./CreateDevice/res";
+import { CreateDeviceBrandRequest } from "./CreateDeviceBrand/req";
+import { CreateDeviceBrandResponse } from "./CreateDeviceBrand/res";
+import { CreateDeviceModelRequest } from "./CreateDeviceModel/req";
+import { CreateDeviceModelResponse } from "./CreateDeviceModel/res";
+import { CreateNamespaceRequest } from "./CreateNamespace/req";
+import { CreateNamespaceResponse } from "./CreateNamespace/res";
+import { CreateOsVersionRequest } from "./CreateOsVersion/req";
+import { CreateOsVersionResponse } from "./CreateOsVersion/res";
+import { CreateProjectRequest } from "./CreateProject/req";
+import { CreateProjectResponse } from "./CreateProject/res";
+import { CreateProjectAppRequest } from "./CreateProjectApp/req";
+import { CreateProjectAppResponse } from "./CreateProjectApp/res";
+import { CreateRpcServiceRequest } from "./CreateRpcService/req";
+import { CreateRpcServiceResponse } from "./CreateRpcService/res";
+import { CreateSchemaSubscribeRequest } from "./CreateSchemaSubscribe/req";
+import { CreateSchemaSubscribeResponse } from "./CreateSchemaSubscribe/res";
+import { CreateShadowSchemaRequest } from "./CreateShadowSchema/req";
+import { CreateShadowSchemaResponse } from "./CreateShadowSchema/res";
+import { CreateTriggerRequest } from "./CreateTrigger/req";
+import { CreateTriggerResponse } from "./CreateTrigger/res";
+import { CreateUpstreamAppKeyRelationRequest } from "./CreateUpstreamAppKeyRelation/req";
+import { CreateUpstreamAppKeyRelationResponse } from "./CreateUpstreamAppKeyRelation/res";
+import { CreateUpstreamAppKeyRelationsRequest } from "./CreateUpstreamAppKeyRelations/req";
+import { CreateUpstreamAppKeyRelationsResponse } from "./CreateUpstreamAppKeyRelations/res";
+import { CreateUpstreamAppServerRequest } from "./CreateUpstreamAppServer/req";
+import { CreateUpstreamAppServerResponse } from "./CreateUpstreamAppServer/res";
+import { CreateVersionDeviceGroupRequest } from "./CreateVersionDeviceGroup/req";
+import { CreateVersionDeviceGroupResponse } from "./CreateVersionDeviceGroup/res";
+import { CreateVersionPrepublishRequest } from "./CreateVersionPrepublish/req";
+import { CreateVersionPrepublishResponse } from "./CreateVersionPrepublish/res";
+import { CreateVersionTestRequest } from "./CreateVersionTest/req";
+import { CreateVersionTestResponse } from "./CreateVersionTest/res";
+import { DelayPublishOsVersionRequest } from "./DelayPublishOsVersion/req";
+import { DelayPublishOsVersionResponse } from "./DelayPublishOsVersion/res";
+import { DeleteAllCustomizedFiltersRequest } from "./DeleteAllCustomizedFilters/req";
+import { DeleteAllCustomizedFiltersResponse } from "./DeleteAllCustomizedFilters/res";
+import { DeleteAllVersionGroupDevicesRequest } from "./DeleteAllVersionGroupDevices/req";
+import { DeleteAllVersionGroupDevicesResponse } from "./DeleteAllVersionGroupDevices/res";
+import { DeleteCustomizedFilterRequest } from "./DeleteCustomizedFilter/req";
+import { DeleteCustomizedFilterResponse } from "./DeleteCustomizedFilter/res";
+import { DeleteCustomizedPropertyRequest } from "./DeleteCustomizedProperty/req";
+import { DeleteCustomizedPropertyResponse } from "./DeleteCustomizedProperty/res";
+import { DeleteDeviceRequest } from "./DeleteDevice/req";
+import { DeleteDeviceResponse } from "./DeleteDevice/res";
+import { DeleteFunctionFileRequest } from "./DeleteFunctionFile/req";
+import { DeleteFunctionFileResponse } from "./DeleteFunctionFile/res";
+import { DeleteNamespaceRequest } from "./DeleteNamespace/req";
+import { DeleteNamespaceResponse } from "./DeleteNamespace/res";
+import { DeleteOpenAccountRequest } from "./DeleteOpenAccount/req";
+import { DeleteOpenAccountResponse } from "./DeleteOpenAccount/res";
+import { DeleteProjectAppRequest } from "./DeleteProjectApp/req";
+import { DeleteProjectAppResponse } from "./DeleteProjectApp/res";
+import { DeleteRpcServiceRequest } from "./DeleteRpcService/req";
+import { DeleteRpcServiceResponse } from "./DeleteRpcService/res";
+import { DeleteSchemaSubscribeRequest } from "./DeleteSchemaSubscribe/req";
+import { DeleteSchemaSubscribeResponse } from "./DeleteSchemaSubscribe/res";
+import { DeleteShadowSchemaRequest } from "./DeleteShadowSchema/req";
+import { DeleteShadowSchemaResponse } from "./DeleteShadowSchema/res";
+import { DeleteTriggerRequest } from "./DeleteTrigger/req";
+import { DeleteTriggerResponse } from "./DeleteTrigger/res";
+import { DeleteUpstreamAppKeyRelationRequest } from "./DeleteUpstreamAppKeyRelation/req";
+import { DeleteUpstreamAppKeyRelationResponse } from "./DeleteUpstreamAppKeyRelation/res";
+import { DeleteUpstreamAppServerRequest } from "./DeleteUpstreamAppServer/req";
+import { DeleteUpstreamAppServerResponse } from "./DeleteUpstreamAppServer/res";
+import { DeleteVersionAllBlackDevicesRequest } from "./DeleteVersionAllBlackDevices/req";
+import { DeleteVersionAllBlackDevicesResponse } from "./DeleteVersionAllBlackDevices/res";
+import { DeleteVersionAllWhiteDevicesRequest } from "./DeleteVersionAllWhiteDevices/req";
+import { DeleteVersionAllWhiteDevicesResponse } from "./DeleteVersionAllWhiteDevices/res";
+import { DeleteVersionBlackDevicesRequest } from "./DeleteVersionBlackDevices/req";
+import { DeleteVersionBlackDevicesResponse } from "./DeleteVersionBlackDevices/res";
+import { DeleteVersionBlackDevicesByIdRequest } from "./DeleteVersionBlackDevicesById/req";
+import { DeleteVersionBlackDevicesByIdResponse } from "./DeleteVersionBlackDevicesById/res";
+import { DeleteVersionDeviceGroupRequest } from "./DeleteVersionDeviceGroup/req";
+import { DeleteVersionDeviceGroupResponse } from "./DeleteVersionDeviceGroup/res";
+import { DeleteVersionGroupDeviceRequest } from "./DeleteVersionGroupDevice/req";
+import { DeleteVersionGroupDeviceResponse } from "./DeleteVersionGroupDevice/res";
+import { DeleteVersionGroupDeviceByIdRequest } from "./DeleteVersionGroupDeviceById/req";
+import { DeleteVersionGroupDeviceByIdResponse } from "./DeleteVersionGroupDeviceById/res";
+import { DeleteVersionTestRequest } from "./DeleteVersionTest/req";
+import { DeleteVersionTestResponse } from "./DeleteVersionTest/res";
+import { DeleteVersionWhiteDevicesRequest } from "./DeleteVersionWhiteDevices/req";
+import { DeleteVersionWhiteDevicesResponse } from "./DeleteVersionWhiteDevices/res";
+import { DeleteVersionWhiteDevicesByIdRequest } from "./DeleteVersionWhiteDevicesById/req";
+import { DeleteVersionWhiteDevicesByIdResponse } from "./DeleteVersionWhiteDevicesById/res";
+import { DeployFunctionFileRequest } from "./DeployFunctionFile/req";
+import { DeployFunctionFileResponse } from "./DeployFunctionFile/res";
+import { DescribeApiGatewayAppSecurityRequest } from "./DescribeApiGatewayAppSecurity/req";
+import { DescribeApiGatewayAppSecurityResponse } from "./DescribeApiGatewayAppSecurity/res";
+import { DescribeAppVersionRequest } from "./DescribeAppVersion/req";
+import { DescribeAppVersionResponse } from "./DescribeAppVersion/res";
+import { DescribeAssistRTMPServerAddressRequest } from "./DescribeAssistRTMPServerAddress/req";
+import { DescribeAssistRTMPServerAddressResponse } from "./DescribeAssistRTMPServerAddress/res";
+import { DescribeAssistReportRequest } from "./DescribeAssistReport/req";
+import { DescribeAssistReportResponse } from "./DescribeAssistReport/res";
+import { DescribeAssistWSServerAddressRequest } from "./DescribeAssistWSServerAddress/req";
+import { DescribeAssistWSServerAddressResponse } from "./DescribeAssistWSServerAddress/res";
+import { DescribeCustomizedFilterRequest } from "./DescribeCustomizedFilter/req";
+import { DescribeCustomizedFilterResponse } from "./DescribeCustomizedFilter/res";
+import { DescribeDefaultSchemaRequest } from "./DescribeDefaultSchema/req";
+import { DescribeDefaultSchemaResponse } from "./DescribeDefaultSchema/res";
+import { DescribeDeviceRequest } from "./DescribeDevice/req";
+import { DescribeDeviceResponse } from "./DescribeDevice/res";
+import { DescribeDeviceBrandRequest } from "./DescribeDeviceBrand/req";
+import { DescribeDeviceBrandResponse } from "./DescribeDeviceBrand/res";
+import { DescribeDeviceIdByOuterInfoRequest } from "./DescribeDeviceIdByOuterInfo/req";
+import { DescribeDeviceIdByOuterInfoResponse } from "./DescribeDeviceIdByOuterInfo/res";
+import { DescribeDeviceInfoRequest } from "./DescribeDeviceInfo/req";
+import { DescribeDeviceInfoResponse } from "./DescribeDeviceInfo/res";
+import { DescribeDeviceModelRequest } from "./DescribeDeviceModel/req";
+import { DescribeDeviceModelResponse } from "./DescribeDeviceModel/res";
+import { DescribeDeviceOnlineInfoRequest } from "./DescribeDeviceOnlineInfo/req";
+import { DescribeDeviceOnlineInfoResponse } from "./DescribeDeviceOnlineInfo/res";
+import { DescribeDeviceShadowRequest } from "./DescribeDeviceShadow/req";
+import { DescribeDeviceShadowResponse } from "./DescribeDeviceShadow/res";
+import { DescribeDeviceValiditySchemaRequest } from "./DescribeDeviceValiditySchema/req";
+import { DescribeDeviceValiditySchemaResponse } from "./DescribeDeviceValiditySchema/res";
+import { DescribeMessageRequest } from "./DescribeMessage/req";
+import { DescribeMessageResponse } from "./DescribeMessage/res";
+import { DescribeOpenAccountRequest } from "./DescribeOpenAccount/req";
+import { DescribeOpenAccountResponse } from "./DescribeOpenAccount/res";
+import { DescribeOsVersionRequest } from "./DescribeOsVersion/req";
+import { DescribeOsVersionResponse } from "./DescribeOsVersion/res";
+import { DescribeProjectRequest } from "./DescribeProject/req";
+import { DescribeProjectResponse } from "./DescribeProject/res";
+import { DescribeProjectAppSecurityRequest } from "./DescribeProjectAppSecurity/req";
+import { DescribeProjectAppSecurityResponse } from "./DescribeProjectAppSecurity/res";
+import { DescribeShadowSchemaRequest } from "./DescribeShadowSchema/req";
+import { DescribeShadowSchemaResponse } from "./DescribeShadowSchema/res";
+import { DescribeVersionDeviceGroupRequest } from "./DescribeVersionDeviceGroup/req";
+import { DescribeVersionDeviceGroupResponse } from "./DescribeVersionDeviceGroup/res";
+import { DiagnosisVersionRequest } from "./DiagnosisVersion/req";
+import { DiagnosisVersionResponse } from "./DiagnosisVersion/res";
+import { FindAppVersionsRequest } from "./FindAppVersions/req";
+import { FindAppVersionsResponse } from "./FindAppVersions/res";
+import { FindCustomizedFiltersRequest } from "./FindCustomizedFilters/req";
+import { FindCustomizedFiltersResponse } from "./FindCustomizedFilters/res";
+import { FindOsVersionsRequest } from "./FindOsVersions/req";
+import { FindOsVersionsResponse } from "./FindOsVersions/res";
+import { FindPrepublishPassedDevicesRequest } from "./FindPrepublishPassedDevices/req";
+import { FindPrepublishPassedDevicesResponse } from "./FindPrepublishPassedDevices/res";
+import { FindPrepublishesByParentIdRequest } from "./FindPrepublishesByParentId/req";
+import { FindPrepublishesByParentIdResponse } from "./FindPrepublishesByParentId/res";
+import { FindPrepublishesByVersionIdRequest } from "./FindPrepublishesByVersionId/req";
+import { FindPrepublishesByVersionIdResponse } from "./FindPrepublishesByVersionId/res";
+import { FindVersionBlackDevicesRequest } from "./FindVersionBlackDevices/req";
+import { FindVersionBlackDevicesResponse } from "./FindVersionBlackDevices/res";
+import { FindVersionDeviceGroupsRequest } from "./FindVersionDeviceGroups/req";
+import { FindVersionDeviceGroupsResponse } from "./FindVersionDeviceGroups/res";
+import { FindVersionGroupDevicesRequest } from "./FindVersionGroupDevices/req";
+import { FindVersionGroupDevicesResponse } from "./FindVersionGroupDevices/res";
+import { FindVersionMessageSendRecordsRequest } from "./FindVersionMessageSendRecords/req";
+import { FindVersionMessageSendRecordsResponse } from "./FindVersionMessageSendRecords/res";
+import { FindVersionMessagesRequest } from "./FindVersionMessages/req";
+import { FindVersionMessagesResponse } from "./FindVersionMessages/res";
+import { FindVersionWhiteDevicesRequest } from "./FindVersionWhiteDevices/req";
+import { FindVersionWhiteDevicesResponse } from "./FindVersionWhiteDevices/res";
+import { GenerateAssistFileUploadUrlRequest } from "./GenerateAssistFileUploadUrl/req";
+import { GenerateAssistFileUploadUrlResponse } from "./GenerateAssistFileUploadUrl/res";
+import { GenerateFunctionFileUploadMetaRequest } from "./GenerateFunctionFileUploadMeta/req";
+import { GenerateFunctionFileUploadMetaResponse } from "./GenerateFunctionFileUploadMeta/res";
+import { GenerateOssPostPolicyRequest } from "./GenerateOssPostPolicy/req";
+import { GenerateOssPostPolicyResponse } from "./GenerateOssPostPolicy/res";
+import { GenerateOssUploadMetaRequest } from "./GenerateOssUploadMeta/req";
+import { GenerateOssUploadMetaResponse } from "./GenerateOssUploadMeta/res";
+import { GenerateSdkDownloadInfoRequest } from "./GenerateSdkDownloadInfo/req";
+import { GenerateSdkDownloadInfoResponse } from "./GenerateSdkDownloadInfo/res";
+import { GenerateSysAppDownloadInfoRequest } from "./GenerateSysAppDownloadInfo/req";
+import { GenerateSysAppDownloadInfoResponse } from "./GenerateSysAppDownloadInfo/res";
+import { GetDeviceSystemUpdateFunnelEventsRequest } from "./GetDeviceSystemUpdateFunnelEvents/req";
+import { GetDeviceSystemUpdateFunnelEventsResponse } from "./GetDeviceSystemUpdateFunnelEvents/res";
+import { GetNamespaceDataRequest } from "./GetNamespaceData/req";
+import { GetNamespaceDataResponse } from "./GetNamespaceData/res";
+import { GetNamespaceStatisticsDataRequest } from "./GetNamespaceStatisticsData/req";
+import { GetNamespaceStatisticsDataResponse } from "./GetNamespaceStatisticsData/res";
+import { GetOssUploadMetaRequest } from "./GetOssUploadMeta/req";
+import { GetOssUploadMetaResponse } from "./GetOssUploadMeta/res";
+import { InvokeFunctionRequest } from "./InvokeFunction/req";
+import { InvokeFunctionResponse } from "./InvokeFunction/res";
+import { ListApiGatewayAppsRequest } from "./ListApiGatewayApps/req";
+import { ListApiGatewayAppsResponse } from "./ListApiGatewayApps/res";
+import { ListAppsRequest } from "./ListApps/req";
+import { ListAppsResponse } from "./ListApps/res";
+import { ListAssistActionDetailsRequest } from "./ListAssistActionDetails/req";
+import { ListAssistActionDetailsResponse } from "./ListAssistActionDetails/res";
+import { ListAssistDevicesRequest } from "./ListAssistDevices/req";
+import { ListAssistDevicesResponse } from "./ListAssistDevices/res";
+import { ListAssistHistoriesRequest } from "./ListAssistHistories/req";
+import { ListAssistHistoriesResponse } from "./ListAssistHistories/res";
+import { ListAssistHistoryDetailsRequest } from "./ListAssistHistoryDetails/req";
+import { ListAssistHistoryDetailsResponse } from "./ListAssistHistoryDetails/res";
+import { ListClientPluginVersionsRequest } from "./ListClientPluginVersions/req";
+import { ListClientPluginVersionsResponse } from "./ListClientPluginVersions/res";
+import { ListClientPluginsRequest } from "./ListClientPlugins/req";
+import { ListClientPluginsResponse } from "./ListClientPlugins/res";
+import { ListClientSdksRequest } from "./ListClientSdks/req";
+import { ListClientSdksResponse } from "./ListClientSdks/res";
+import { ListConnectLogsRequest } from "./ListConnectLogs/req";
+import { ListConnectLogsResponse } from "./ListConnectLogs/res";
+import { ListDeployedFunctionsRequest } from "./ListDeployedFunctions/req";
+import { ListDeployedFunctionsResponse } from "./ListDeployedFunctions/res";
+import { ListDeviceBrandsRequest } from "./ListDeviceBrands/req";
+import { ListDeviceBrandsResponse } from "./ListDeviceBrands/res";
+import { ListDeviceModelRequest } from "./ListDeviceModel/req";
+import { ListDeviceModelResponse } from "./ListDeviceModel/res";
+import { ListDeviceModelsRequest } from "./ListDeviceModels/req";
+import { ListDeviceModelsResponse } from "./ListDeviceModels/res";
+import { ListDeviceTypesRequest } from "./ListDeviceTypes/req";
+import { ListDeviceTypesResponse } from "./ListDeviceTypes/res";
+import { ListDevicesRequest } from "./ListDevices/req";
+import { ListDevicesResponse } from "./ListDevices/res";
+import { ListFunctionExecuteLogRequest } from "./ListFunctionExecuteLog/req";
+import { ListFunctionExecuteLogResponse } from "./ListFunctionExecuteLog/res";
+import { ListFunctionFilesRequest } from "./ListFunctionFiles/req";
+import { ListFunctionFilesResponse } from "./ListFunctionFiles/res";
+import { ListFunctionFilesByProjectIdRequest } from "./ListFunctionFilesByProjectId/req";
+import { ListFunctionFilesByProjectIdResponse } from "./ListFunctionFilesByProjectId/res";
+import { ListMessageAcksRequest } from "./ListMessageAcks/req";
+import { ListMessageAcksResponse } from "./ListMessageAcks/res";
+import { ListMessageReceiversRequest } from "./ListMessageReceivers/req";
+import { ListMessageReceiversResponse } from "./ListMessageReceivers/res";
+import { ListNamespacesRequest } from "./ListNamespaces/req";
+import { ListNamespacesResponse } from "./ListNamespaces/res";
+import { ListOfflineMessagesRequest } from "./ListOfflineMessages/req";
+import { ListOfflineMessagesResponse } from "./ListOfflineMessages/res";
+import { ListOpenAccountLinksRequest } from "./ListOpenAccountLinks/req";
+import { ListOpenAccountLinksResponse } from "./ListOpenAccountLinks/res";
+import { ListOpenAccountsRequest } from "./ListOpenAccounts/req";
+import { ListOpenAccountsResponse } from "./ListOpenAccounts/res";
+import { ListPreChecksRequest } from "./ListPreChecks/req";
+import { ListPreChecksResponse } from "./ListPreChecks/res";
+import { ListProjectAppsRequest } from "./ListProjectApps/req";
+import { ListProjectAppsResponse } from "./ListProjectApps/res";
+import { ListProjectsRequest } from "./ListProjects/req";
+import { ListProjectsResponse } from "./ListProjects/res";
+import { ListRpcServicesRequest } from "./ListRpcServices/req";
+import { ListRpcServicesResponse } from "./ListRpcServices/res";
+import { ListSchemaSubscribesRequest } from "./ListSchemaSubscribes/req";
+import { ListSchemaSubscribesResponse } from "./ListSchemaSubscribes/res";
+import { ListServicesRequest } from "./ListServices/req";
+import { ListServicesResponse } from "./ListServices/res";
+import { ListShadowSchemaDeviceModelsRequest } from "./ListShadowSchemaDeviceModels/req";
+import { ListShadowSchemaDeviceModelsResponse } from "./ListShadowSchemaDeviceModels/res";
+import { ListShadowSchemasRequest } from "./ListShadowSchemas/req";
+import { ListShadowSchemasResponse } from "./ListShadowSchemas/res";
+import { ListSupportFeaturesRequest } from "./ListSupportFeatures/req";
+import { ListSupportFeaturesResponse } from "./ListSupportFeatures/res";
+import { ListTriggersRequest } from "./ListTriggers/req";
+import { ListTriggersResponse } from "./ListTriggers/res";
+import { ListUpstreamAppKeyRelationsRequest } from "./ListUpstreamAppKeyRelations/req";
+import { ListUpstreamAppKeyRelationsResponse } from "./ListUpstreamAppKeyRelations/res";
+import { ListUpstreamAppServersRequest } from "./ListUpstreamAppServers/req";
+import { ListUpstreamAppServersResponse } from "./ListUpstreamAppServers/res";
+import { ListVersionDeviceGroupsRequest } from "./ListVersionDeviceGroups/req";
+import { ListVersionDeviceGroupsResponse } from "./ListVersionDeviceGroups/res";
+import { PublishAppVersionRequest } from "./PublishAppVersion/req";
+import { PublishAppVersionResponse } from "./PublishAppVersion/res";
+import { PublishOsVersionRequest } from "./PublishOsVersion/req";
+import { PublishOsVersionResponse } from "./PublishOsVersion/res";
+import { PushMessageRequest } from "./PushMessage/req";
+import { PushMessageResponse } from "./PushMessage/res";
+import { PushVersionMessageRequest } from "./PushVersionMessage/req";
+import { PushVersionMessageResponse } from "./PushVersionMessage/res";
+import { QueryPrepublishPassedDeviceCountRequest } from "./QueryPrepublishPassedDeviceCount/req";
+import { QueryPrepublishPassedDeviceCountResponse } from "./QueryPrepublishPassedDeviceCount/res";
+import { SubmitAssistReportRequest } from "./SubmitAssistReport/req";
+import { SubmitAssistReportResponse } from "./SubmitAssistReport/res";
+import { UpdateApiGatewayAppStatusRequest } from "./UpdateApiGatewayAppStatus/req";
+import { UpdateApiGatewayAppStatusResponse } from "./UpdateApiGatewayAppStatus/res";
+import { UpdateAppBlackWhiteVersionsRequest } from "./UpdateAppBlackWhiteVersions/req";
+import { UpdateAppBlackWhiteVersionsResponse } from "./UpdateAppBlackWhiteVersions/res";
+import { UpdateAppVersionRequest } from "./UpdateAppVersion/req";
+import { UpdateAppVersionResponse } from "./UpdateAppVersion/res";
+import { UpdateAppVersionReleaseNoteRequest } from "./UpdateAppVersionReleaseNote/req";
+import { UpdateAppVersionReleaseNoteResponse } from "./UpdateAppVersionReleaseNote/res";
+import { UpdateAppVersionRemarkRequest } from "./UpdateAppVersionRemark/req";
+import { UpdateAppVersionRemarkResponse } from "./UpdateAppVersionRemark/res";
+import { UpdateAppVersionStatusRequest } from "./UpdateAppVersionStatus/req";
+import { UpdateAppVersionStatusResponse } from "./UpdateAppVersionStatus/res";
+import { UpdateCustomizedFilterRequest } from "./UpdateCustomizedFilter/req";
+import { UpdateCustomizedFilterResponse } from "./UpdateCustomizedFilter/res";
+import { UpdateDeviceModelRequest } from "./UpdateDeviceModel/req";
+import { UpdateDeviceModelResponse } from "./UpdateDeviceModel/res";
+import { UpdateNamespaceDataRequest } from "./UpdateNamespaceData/req";
+import { UpdateNamespaceDataResponse } from "./UpdateNamespaceData/res";
+import { UpdateOsBlackWhiteVersionsRequest } from "./UpdateOsBlackWhiteVersions/req";
+import { UpdateOsBlackWhiteVersionsResponse } from "./UpdateOsBlackWhiteVersions/res";
+import { UpdateOsVersionRequest } from "./UpdateOsVersion/req";
+import { UpdateOsVersionResponse } from "./UpdateOsVersion/res";
+import { UpdateOsVersionReleaseNoteRequest } from "./UpdateOsVersionReleaseNote/req";
+import { UpdateOsVersionReleaseNoteResponse } from "./UpdateOsVersionReleaseNote/res";
+import { UpdateOsVersionRemarkRequest } from "./UpdateOsVersionRemark/req";
+import { UpdateOsVersionRemarkResponse } from "./UpdateOsVersionRemark/res";
+import { UpdateOsVersionStatusRequest } from "./UpdateOsVersionStatus/req";
+import { UpdateOsVersionStatusResponse } from "./UpdateOsVersionStatus/res";
+import { UpdateProjectRequest } from "./UpdateProject/req";
+import { UpdateProjectResponse } from "./UpdateProject/res";
+import { UpdateSchemaSubscribeRequest } from "./UpdateSchemaSubscribe/req";
+import { UpdateSchemaSubscribeResponse } from "./UpdateSchemaSubscribe/res";
+import { UpdateShadowSchemaRequest } from "./UpdateShadowSchema/req";
+import { UpdateShadowSchemaResponse } from "./UpdateShadowSchema/res";
+import { UpdateTriggerRequest } from "./UpdateTrigger/req";
+import { UpdateTriggerResponse } from "./UpdateTrigger/res";
+import { UpdateUpstreamAppServerRequest } from "./UpdateUpstreamAppServer/req";
+import { UpdateUpstreamAppServerResponse } from "./UpdateUpstreamAppServer/res";
+import { UpdateVersionDeviceGroupRequest } from "./UpdateVersionDeviceGroup/req";
+import { UpdateVersionDeviceGroupResponse } from "./UpdateVersionDeviceGroup/res";
+import { UpdateVersionPrepublishActiveStatusRequest } from "./UpdateVersionPrepublishActiveStatus/req";
+import { UpdateVersionPrepublishActiveStatusResponse } from "./UpdateVersionPrepublishActiveStatus/res";
+import { AddVersionWhiteDevicesByDeviceGroupsRequest } from "./AddVersionWhiteDevicesByDeviceGroups/req";
+import { AddVersionWhiteDevicesByDeviceGroupsResponse } from "./AddVersionWhiteDevicesByDeviceGroups/res";
+import { FindVersionTestsRequest } from "./FindVersionTests/req";
+import { FindVersionTestsResponse } from "./FindVersionTests/res";
+import { GetDeviceAppUpdateFunnelEventsRequest } from "./GetDeviceAppUpdateFunnelEvents/req";
+import { GetDeviceAppUpdateFunnelEventsResponse } from "./GetDeviceAppUpdateFunnelEvents/res";
+import { FindCustomizedPropertiesRequest } from "./FindCustomizedProperties/req";
+import { FindCustomizedPropertiesResponse } from "./FindCustomizedProperties/res";
+
 interface IOVCC {
-    AddUploadedFunctionFileInfo(query: {
-        "RegionId"?: string;
-        "ObjectKey": string;
-        "FileName": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    AddVersionBlackDevices(query: {
-        "RegionId": string;
-        "ProjectId": string;
-        "VersionType": string;
-        "DeviceIdType": string;
-        "VersionId": string;
-        "DeviceIds": string;
-    }): Promise<{}>;
-    AddVersionGroupDevices(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-        "DeviceIds": string;
-        "DeviceGroupId": string;
-        "DeviceIdType": string;
-    }): Promise<{}>;
-    AddVersionWhiteDevices(query: {
-        "RegionId": string;
-        "ProjectId": string;
-        "VersionType": string;
-        "DeviceIdType": string;
-        "VersionId": string;
-        "DeviceIds": string;
-    }): Promise<{}>;
-    ConnectAssistDevice(query: {
-        "RegionId"?: string;
-        "AllowCommandExtension"?: boolean;
-        "DeviceId"?: string;
-        "SerialNumber"?: string;
-        "VIN"?: string;
-        "UUID"?: string;
-        "ProjectId"?: string;
-        "HardwareId"?: string;
-    }): Promise<{}>;
-    CountActivatedOrNewRegistrationDevice(query: {
-        "RegionId"?: string;
-        "EndTime": string;
-        "StartTime": string;
-        "ProjectId"?: string;
-        "DeviceType"?: string;
-        "DeviceBrandId"?: string;
-        "DeviceBrand"?: string;
-        "DeviceModelId"?: string;
-        "DeviceModel"?: string;
-        "DeviceCountStatType"?: string;
-        "IsQueryNewRegistrationDevice"?: string;
-        "IsQueryYearlyActivate"?: string;
-    }): Promise<{}>;
-    CountDeviceBrands(query: {
-        "RegionId"?: string;
-        "DeviceBrandId"?: number;
-        "DeviceBrand"?: string;
-        "ProjectId"?: string;
-    }): Promise<{}>;
-    CountDeviceModels(query: {
-        "RegionId"?: string;
-        "ProjectId"?: string;
-        "DeviceModelId"?: number;
-        "DeviceModel"?: string;
-        "DeviceBrand"?: string;
-    }): Promise<{}>;
-    CountDevices(query: {
-        "RegionId"?: string;
-        "DeviceModelId"?: number;
-        "DeviceModel"?: string;
-        "ProjectId"?: string;
-    }): Promise<{}>;
-    CountProjects(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    CountYunIdInfo(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    CreateAppVersion(query: {
-        "RegionId": string;
-        "ProjectId": string;
-        "IsForceUpgrade"?: string;
-        "IsAllowNewInstall"?: string;
-        "AppId"?: string;
-        "AppVersion"?: string;
-        "VersionCode"?: string;
-        "InstallType"?: string;
-        "Remark"?: string;
-        "ReleaseNote"?: string;
-        "IsSilentUpgrade"?: string;
-        "PackageUrl"?: string;
-        "IsNeedRestart"?: string;
-        "BlackVersionList"?: string;
-        "WhiteVersionList"?: string;
-        "RestartType"?: string;
-        "RestartAppType"?: string;
-        "RestartAppParam"?: string;
-        "DeviceAdapterList"?: string;
-        "ApkMd5"?: string;
-    }): Promise<{}>;
-    CreateCustomizedFilter(query: {
-        "RegionId": string;
-        "BlackWhiteType": string;
-        "Value": string;
-        "ProjectId": string;
-        "ValueCompareType": string;
-        "Name": string;
-        "ValueType": string;
-        "VersionId": string;
-        "VersionType": string;
-    }): Promise<{}>;
-    CreateCustomizedProperty(query: {
-        "RegionId": string;
-        "ProjectId": string;
-        "Name": string;
-        "Value": string;
-        "VersionType": string;
-        "VersionId": string;
-    }): Promise<{}>;
-    CreateDevice(query: {
-        "RegionId"?: string;
-        "ProjectId"?: string;
-        "ModelName"?: string;
-        "HardwareId"?: string;
-    }): Promise<{}>;
-    CreateDeviceBrand(query: {
-        "RegionId"?: string;
-        "BrandName": string;
-        "ProjectId"?: string;
-        "Manufacture"?: string;
-        "Description"?: string;
-    }): Promise<{}>;
-    CreateDeviceModel(query: {
-        "RegionId"?: string;
-        "CanCreateDeviceId"?: string;
-        "ModelName"?: string;
-        "HardwareType"?: string;
-        "BrandName"?: string;
-        "Description"?: string;
-        "DeviceType"?: string;
-        "ProjectId"?: string;
-        "InitUsageType"?: string;
-        "SecurityChip"?: string;
-        "OsPlatform"?: string;
-        "ObjectKey"?: string;
-        "DeviceName"?: string;
-    }): Promise<{}>;
-    CreateNamespace(query: {
-        "RegionId"?: string;
-        "AuthType": string;
-        "Name": string;
-        "Desc": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    CreateOsVersion(query: {
-        "RegionId": string;
-        "ProjectId": string;
-        "DeviceModelId": string;
-        "SystemVersion": string;
-        "IsMilestone": string;
-        "IsForceUpgrade": string;
-        "NightUpgradeDownloadType": string;
-        "NightUpgradeIsShowTip": string;
-        "NightUpgradeIsAllowedCancel": string;
-        "RomList": string;
-        "IsForceNightUpgrade": string;
-        "EnableMobileDownload": string;
-        "MaxClientVersion"?: string;
-        "ReleaseNote"?: string;
-        "Remark"?: string;
-        "BlackVersionList"?: string;
-        "MinClientVersion"?: string;
-        "WhiteVersionList"?: string;
-        "MobileDownloadMaxSize"?: string;
-    }): Promise<{}>;
-    CreateProject(query: {
-        "RegionId"?: string;
-        "ProjectDesc": string;
-        "ProjectName": string;
-    }): Promise<{}>;
-    CreateProjectApp(query: {
-        "RegionId"?: string;
-        "AppName": string;
-        "AppPkgName": string;
-        "OsType": number;
-        "ProjectId": string;
-    }): Promise<{}>;
-    CreateRpcService(query: {
-        "RegionId"?: string;
-        "AppKey": string;
-        "InterfaceName": string;
-        "InvokeType": string;
-        "Params": string;
-        "MethodName": string;
-        "GroupName"?: string;
-        "ProjectId": string;
-        "VersionCode"?: string;
-    }): Promise<{}>;
-    CreateSchemaSubscribe(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-        "DeviceModel": string;
-        "SubscribeList"?: string;
-        "SchemaVersion"?: string;
-    }): Promise<{}>;
-    CreateShadowSchema(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-        "DeviceModelId": string;
-        "AuthType"?: string;
-        "Namespace"?: string;
-        "Schema"?: string;
-    }): Promise<{}>;
-    CreateTrigger(query: {
-        "RegionId"?: string;
-        "Namespace": string;
-        "Source": string;
-        "FileIds": string;
-        "FunctionIds": string;
-        "InvocationMode": number;
-        "ProjectId": string;
-        "Sandbox"?: number;
-        "Production"?: number;
-    }): Promise<{}>;
-    CreateUpstreamAppKeyRelation(query: {
-        "RegionId"?: string;
-        "PAppKey": string;
-        "ProjectId": string;
-        "AppKey": string;
-    }): Promise<{}>;
-    CreateUpstreamAppKeyRelations(query: {
-        "RegionId"?: string;
-        "AppServerId": string;
-        "ProjectId": string;
-        "AppKeys": string;
-    }): Promise<{}>;
-    CreateUpstreamAppServer(query: {
-        "RegionId"?: string;
-        "Name": string;
-        "Tags": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    CreateVersionDeviceGroup(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-        "Name": string;
-        "MaxCount": string;
-        "Description"?: string;
-    }): Promise<{}>;
-    CreateVersionPrepublish(query: {
-        "RegionId"?: string;
-        "VersionId": string;
-        "VersionType": string;
-        "Name": string;
-        "ProjectId": string;
-        "BarrierCount": string;
-        "IsTotalPrepublish": string;
-    }): Promise<{}>;
-    CreateVersionTest(query: {
-        "RegionId"?: string;
-        "VersionId": string;
-        "VersionType": string;
-        "Name": string;
-        "ProjectId": string;
-        "Description"?: string;
-        "DeviceGroupId": string;
-    }): Promise<{}>;
-    DelayPublishOsVersion(query: {
-        "RegionId": string;
-        "ProjectId": string;
-        "VersionId": string;
-        "Email": string;
-        "PrepubTime"?: number;
-        "PublishTime"?: number;
-        "DownTime"?: number;
-        "Description"?: string;
-        "SendMessage"?: string;
-        "PrepublishCount"?: string;
-    }): Promise<{}>;
-    DeleteAllCustomizedFilters(query: {
-        "RegionId"?: string;
-        "VersionId": string;
-        "VersionType": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    DeleteAllVersionGroupDevices(query: {
-        "RegionId": string;
-        "ProjectId": string;
-        "DeviceGroupId": string;
-    }): Promise<{}>;
-    DeleteCustomizedFilter(query: {
-        "RegionId"?: string;
-        "Id": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    DeleteCustomizedProperty(query: {
-        "RegionId": string;
-        "ProjectId": string;
-        "Id": string;
-    }): Promise<{}>;
-    DeleteDevice(query: {
-        "RegionId"?: string;
-        "DeviceId"?: string;
-        "ProjectId"?: string;
-    }): Promise<{}>;
-    DeleteFunctionFile(query: {
-        "RegionId"?: string;
-        "FileName": string;
-        "ProjectId": string;
-        "FileType"?: number;
-    }): Promise<{}>;
-    DeleteNamespace(query: {
-        "RegionId"?: string;
-        "Namespace": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    DeleteOpenAccount(query: {
-        "RegionId"?: string;
-        "IdentityId"?: string;
-        "ProjectId"?: string;
-    }): Promise<{}>;
-    DeleteProjectApp(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    DeleteRpcService(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-        "Id": string;
-    }): Promise<{}>;
-    DeleteSchemaSubscribe(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-        "Id": string;
-    }): Promise<{}>;
-    DeleteShadowSchema(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-        "Id": string;
-    }): Promise<{}>;
-    DeleteTrigger(query: {
-        "RegionId"?: string;
-        "Id": number;
-        "ProjectId": string;
-    }): Promise<{}>;
-    DeleteUpstreamAppKeyRelation(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-        "Id": string;
-    }): Promise<{}>;
-    DeleteUpstreamAppServer(query: {
-        "RegionId"?: string;
-        "Id": number;
-        "ProjectId": string;
-    }): Promise<{}>;
-    DeleteVersionAllBlackDevices(query: {
-        "RegionId": string;
-        "VersionType": string;
-        "VersionId": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    DeleteVersionAllWhiteDevices(query: {
-        "RegionId": string;
-        "ProjectId": string;
-        "VersionType": string;
-        "VersionId": string;
-    }): Promise<{}>;
-    DeleteVersionBlackDevices(query: {
-        "RegionId": string;
-        "ProjectId": string;
-        "VersionType": string;
-        "VersionId": string;
-        "DeviceIdType": string;
-        "DeviceIds": string;
-    }): Promise<{}>;
-    DeleteVersionBlackDevicesById(query: {
-        "RegionId": string;
-        "Ids": string;
-        "ProjectId": string;
-        "VersionType": string;
-        "VersionId": string;
-    }): Promise<{}>;
-    DeleteVersionDeviceGroup(query: {
-        "RegionId"?: string;
-        "Id": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    DeleteVersionGroupDevice(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-        "DeviceGroupId": string;
-        "DeviceIdType": string;
-        "DeviceIds": string;
-    }): Promise<{}>;
-    DeleteVersionGroupDeviceById(query: {
-        "RegionId": string;
-        "ProjectId": string;
-        "DeviceGroupId": string;
-        "Ids": string;
-    }): Promise<{}>;
-    DeleteVersionTest(query: {
-        "RegionId"?: string;
-        "Id": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    DeleteVersionWhiteDevices(query: {
-        "RegionId": string;
-        "ProjectId": string;
-        "VersionType": string;
-        "VersionId": string;
-        "DeviceIdType": string;
-        "DeviceIds": string;
-    }): Promise<{}>;
-    DeleteVersionWhiteDevicesById(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-        "VersionType": string;
-        "VersionId": string;
-        "Ids": string;
-    }): Promise<{}>;
-    DeployFunctionFile(query: {
-        "RegionId"?: string;
-        "FileId": string;
-        "DeployEnv": number;
-        "ProjectId": string;
-    }): Promise<{}>;
-    DescribeApiGatewayAppSecurity(query: {
-        "RegionId"?: string;
-        "GatewayAppId": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    DescribeAppVersion(query: {
-        "RegionId"?: string;
-        "VersionId": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    DescribeAssistRTMPServerAddress(query: {
-        "RegionId"?: string;
-        "DeviceId": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    DescribeAssistReport(query: {
-        "RegionId"?: string;
-        "AssistId": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    DescribeAssistWSServerAddress(query: {
-        "RegionId"?: string;
-        "DeviceId": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    DescribeCustomizedFilter(query: {
-        "RegionId": string;
-        "Id": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    DescribeDefaultSchema(query: {
-        "RegionId"?: string;
-        "DeviceModelId": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    DescribeDevice(query: {
-        "RegionId"?: string;
-        "DeviceId": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    DescribeDeviceBrand(query: {
-        "RegionId"?: string;
-        "DeviceBrandId"?: number;
-        "DeviceBrand"?: string;
-        "Start"?: string;
-        "Length"?: string;
-        "ProjectId"?: string;
-    }): Promise<{}>;
-    DescribeDeviceIdByOuterInfo(query: {
-        "RegionId"?: string;
-        "ProjectId"?: string;
-        "QueryType"?: string;
-        "QueryValue"?: string;
-    }): Promise<{}>;
-    DescribeDeviceInfo(query: {
-        "RegionId"?: string;
-        "DeviceId"?: string;
-        "DeviceToken"?: string;
-        "ProjectId"?: string;
-    }): Promise<{}>;
-    DescribeDeviceModel(query: {
-        "RegionId"?: string;
-        "DeviceModel"?: string;
-        "ProjectId"?: string;
-        "DeviceModelId"?: number;
-    }): Promise<{}>;
-    DescribeDeviceOnlineInfo(query: {
-        "RegionId"?: string;
-        "Type": string;
-        "Value": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    DescribeDeviceShadow(query: {
-        "RegionId"?: string;
-        "DeviceId": string;
-        "Path": string;
-        "ProjectId": string;
-        "DeviceModel"?: string;
-        "ViewSubscribed"?: boolean;
-    }): Promise<{}>;
-    DescribeDeviceValiditySchema(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-        "DeviceModel"?: string;
-        "SchemaVersion"?: string;
-    }): Promise<{}>;
-    DescribeMessage(query: {
-        "RegionId"?: string;
-        "MessageId": number;
-        "ProjectId": string;
-    }): Promise<{}>;
-    DescribeOpenAccount(query: {
-        "RegionId"?: string;
-        "IdentityId"?: string;
-        "Idp"?: string;
-        "IdToken"?: string;
-        "OpenId"?: string;
-        "ProjectId"?: string;
-    }): Promise<{}>;
-    DescribeOsVersion(query: {
-        "RegionId": string;
-        "ProjectId": string;
-        "VersionId": number;
-    }): Promise<{}>;
-    DescribeProject(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    DescribeProjectAppSecurity(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    DescribeShadowSchema(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-        "DeviceModel": string;
-        "IsSimple"?: boolean;
-    }): Promise<{}>;
-    DescribeVersionDeviceGroup(query: {
-        "RegionId"?: string;
-        "Id": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    DiagnosisVersion(query: {
-        "RegionId": string;
-        "ProjectId": string;
-        "VersionType": string;
-        "VersionId": string;
-        "IdType": string;
-        "OriginalId": string;
-        "DiagnoseStyle": string;
-        "EndTime"?: string;
-        "StartTime"?: string;
-    }): Promise<{}>;
-    FindAppVersions(query: {
-        "RegionId"?: string;
-        "PageSize": number;
-        "PageIndex": number;
-        "Status"?: string;
-        "VersionId"?: string;
-        "DeviceModelId"?: string;
-        "AppId"?: string;
-        "Remark"?: string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    FindCustomizedFilters(query: {
-        "RegionId"?: string;
-        "VersionId": string;
-        "PageIndex": number;
-        "PageSize": number;
-        "VersionType": string;
-        "Name"?: string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    FindOsVersions(query: {
-        "RegionId": string;
-        "PageIndex": number;
-        "PageSize": number;
-        "ProjectId": string;
-        "VersionId"?: string;
-        "DeviceModelId"?: string;
-        "SystemVersion"?: string;
-        "Status"?: string;
-        "IsMilestone"?: string;
-        "Remark"?: string;
-    }): Promise<{}>;
-    FindPrepublishPassedDevices(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-        "PageIndex": number;
-        "PageSize": number;
-        "DeviceId"?: string;
-        "PrepublishId": string;
-    }): Promise<{}>;
-    FindPrepublishesByParentId(query: {
-        "RegionId"?: string;
-        "ParentId": number;
-        "ProjectId": string;
-    }): Promise<{}>;
-    FindPrepublishesByVersionId(query: {
-        "RegionId"?: string;
-        "VersionId": number;
-        "VersionType": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    FindVersionBlackDevices(query: {
-        "RegionId": string;
-        "VersionId": string;
-        "VersionType": string;
-        "PageIndex": number;
-        "PageSize": number;
-        "ProjectId": string;
-        "DeviceId"?: string;
-        "OriginalId"?: string;
-    }): Promise<{}>;
-    FindVersionDeviceGroups(query: {
-        "RegionId"?: string;
-        "PageSize": number;
-        "ProjectId": string;
-        "DeviceId"?: string;
-        "OriginalId"?: string;
-        "Name"?: string;
-        "PageIndex": number;
-    }): Promise<{}>;
-    FindVersionGroupDevices(query: {
-        "RegionId"?: string;
-        "PageIndex": number;
-        "PageSize": number;
-        "DeviceGroupId": string;
-        "OriginalId"?: string;
-        "DeviceId"?: string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    FindVersionMessageSendRecords(query: {
-        "RegionId": string;
-        "PageIndex": number;
-        "PageSize": number;
-        "ProjectId": string;
-        "VersionType"?: string;
-        "MessageType"?: string;
-        "VersionId"?: string;
-    }): Promise<{}>;
-    FindVersionMessages(query: {
-        "RegionId": string;
-        "PageIndex": number;
-        "PageSize": number;
-        "VersionId": string;
-        "VersionType": string;
-        "ProjectId": string;
-        "MessageType"?: string;
-        "TestId"?: string;
-        "SendRecordId"?: string;
-        "DeviceId"?: string;
-    }): Promise<{}>;
-    FindVersionWhiteDevices(query: {
-        "RegionId": string;
-        "VersionId": string;
-        "VersionType": string;
-        "PageIndex": number;
-        "PageSize": number;
-        "ProjectId": string;
-        "DeviceId"?: string;
-        "OriginalId"?: string;
-    }): Promise<{}>;
-    GenerateAssistFileUploadUrl(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-        "DeviceId": string;
-        "Filename": string;
-    }): Promise<{}>;
-    GenerateFunctionFileUploadMeta(query: {
-        "RegionId"?: string;
-        "FileName": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    GenerateOssPostPolicy(query: {
-        "RegionId"?: string;
-        "Ext": string;
-        "AccessId": string;
-        "AccessKey": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    GenerateOssUploadMeta(query: {
-        "RegionId"?: string;
-        "Ext": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    GenerateSdkDownloadInfo(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "OsType": number;
-        "PkgName": string;
-        "ProjectId": string;
-        "CertFileObjectKey": string;
-        "Sdks": string;
-    }): Promise<{}>;
-    GenerateSysAppDownloadInfo(query: {
-        "RegionId"?: string;
-        "SignMode": string;
-        "OsType": number;
-        "PkgName": string;
-        "ProjectId": string;
-        "CertFileObjectKey"?: string;
-        "Plugins": string;
-    }): Promise<{}>;
-    GetDeviceSystemUpdateFunnelEvents(query: {
-        "RegionId": string;
-        "ProjectId": string;
-        "OriginalId"?: string;
-        "TargetVersion"?: string;
-        "IdType"?: string;
-    }): Promise<{}>;
-    GetNamespaceData(query: {
-        "RegionId"?: string;
-        "Namespace": string;
-        "AuthType": string;
-        "ProjectId": string;
-        "DeviceIdType"?: string;
-        "DeviceId"?: string;
-        "AccountType"?: string;
-        "AccountId"?: string;
-    }): Promise<{}>;
-    GetNamespaceStatisticsData(query: {
-        "RegionId"?: string;
-        "Namespace": string;
-        "DimensionType": string;
-        "ProjectId": string;
-        "StartTime"?: string;
-        "EndTime"?: string;
-    }): Promise<{}>;
-    GetOssUploadMeta(query: {
-        "RegionId": string;
-        "Ext": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    InvokeFunction(query: {
-        "RegionId"?: string;
-        "FileId": number;
-        "FunctionName": string;
-        "Env": number;
-        "Parameters": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    ListApiGatewayApps(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    ListApps(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    ListAssistActionDetails(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-        "ActionTimestamp": string;
-    }): Promise<{}>;
-    ListAssistDevices(query: {
-        "RegionId"?: string;
-        "PageIndex": number;
-        "PerPage": number;
-        "ProjectId": string;
-        "Condition"?: string;
-    }): Promise<{}>;
-    ListAssistHistories(query: {
-        "RegionId"?: string;
-        "PageIndex": number;
-        "ProjectId": string;
-        "PerPage": number;
-        "Condition"?: string;
-    }): Promise<{}>;
-    ListAssistHistoryDetails(query: {
-        "RegionId"?: string;
-        "AssistId": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    ListClientPluginVersions(query: {
-        "RegionId"?: string;
-        "PkgName": string;
-        "OsType": string;
-    }): Promise<{}>;
-    ListClientPlugins(query: {
-        "RegionId"?: string;
-        "OsType": string;
-    }): Promise<{}>;
-    ListClientSdks(query: {
-        "RegionId"?: string;
-        "OsType": string;
-    }): Promise<{}>;
-    ListConnectLogs(query: {
-        "RegionId"?: string;
-        "DeviceId": string;
-        "PageSize"?: number;
-        "StartTime"?: number;
-        "EndTime"?: number;
-        "PageIndex"?: number;
-        "ProjectId": string;
-    }): Promise<{}>;
-    ListDeployedFunctions(query: {
-        "RegionId"?: string;
-        "FileId": number;
-        "ProjectId": string;
-    }): Promise<{}>;
-    ListDeviceBrands(query: {
-        "RegionId"?: string;
-        "DeviceBrandId"?: number;
-        "DeviceBrand"?: string;
-        "Start"?: string;
-        "Length"?: string;
-        "ProjectId"?: string;
-    }): Promise<{}>;
-    ListDeviceModel(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    ListDeviceModels(query: {
-        "RegionId"?: string;
-        "Length"?: string;
-        "DeviceModel"?: string;
-        "DeviceBrand"?: string;
-        "Start"?: string;
-        "DeviceModelId"?: number;
-        "ProjectId"?: string;
-        "DeviceBrandId"?: number;
-    }): Promise<{}>;
-    ListDeviceTypes(query: {
-        "RegionId"?: string;
-        "ProjectId"?: string;
-    }): Promise<{}>;
-    ListDevices(query: {
-        "RegionId"?: string;
-        "DeviceModelId"?: number;
-        "DeviceModel"?: string;
-        "Start"?: string;
-        "Length"?: string;
-        "ProjectId"?: string;
-    }): Promise<{}>;
-    ListFunctionExecuteLog(query: {
-        "RegionId"?: string;
-        "FileId": number;
-        "FunctionName": string;
-        "Env": number;
-        "ProjectId": string;
-        "PageIndex"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ListFunctionFiles(query: {
-        "RegionId"?: string;
-        "FileType": number;
-        "ProjectId": string;
-        "PageIndex"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ListFunctionFilesByProjectId(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-        "PageIndex"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ListMessageAcks(query: {
-        "RegionId"?: string;
-        "PageSize"?: number;
-        "DeviceId"?: string;
-        "MessageId"?: number;
-        "PageIndex"?: number;
-        "ProjectId": string;
-    }): Promise<{}>;
-    ListMessageReceivers(query: {
-        "RegionId"?: string;
-        "MessageId": string;
-        "ProjectId": string;
-        "PageIndex"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ListNamespaces(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-        "AuthType"?: string;
-    }): Promise<{}>;
-    ListOfflineMessages(query: {
-        "RegionId"?: string;
-        "Type": string;
-        "Value": string;
-        "PageSize"?: number;
-        "PageIndex"?: number;
-        "ProjectId": string;
-    }): Promise<{}>;
-    ListOpenAccountLinks(query: {
-        "RegionId"?: string;
-        "ProjectId"?: string;
-        "IdentityId"?: string;
-        "Idp"?: string;
-        "OpenId"?: string;
-    }): Promise<{}>;
-    ListOpenAccounts(query: {
-        "RegionId"?: string;
-        "Start"?: number;
-        "Mobile"?: string;
-        "Email"?: string;
-        "DisplayName"?: string;
-        "ProjectId"?: string;
-        "Length"?: number;
-    }): Promise<{}>;
-    ListPreChecks(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ListProjectApps(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-        "PageIndex"?: number;
-        "PageSize"?: number;
-        "Keywords"?: string;
-    }): Promise<{}>;
-    ListProjects(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ListRpcServices(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-        "PageIndex"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ListSchemaSubscribes(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-        "DeviceModel"?: string;
-        "PageIndex"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ListServices(query: {
-        "RegionId": string;
-    }): Promise<{}>;
-    ListShadowSchemaDeviceModels(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    ListShadowSchemas(query: {
-        "RegionId"?: string;
-        "QueryType"?: string;
-        "QueryValue"?: string;
-        "PageIndex"?: number;
-        "PageSize"?: number;
-        "ProjectId": string;
-    }): Promise<{}>;
-    ListSupportFeatures(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ListTriggers(query: {
-        "RegionId"?: string;
-        "Namespace": string;
-        "ProjectId": string;
-        "PageIndex"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ListUpstreamAppKeyRelations(query: {
-        "RegionId"?: string;
-        "AppServerId": number;
-        "ProjectId": string;
-        "PageSize"?: number;
-        "PageIndex"?: number;
-    }): Promise<{}>;
-    ListUpstreamAppServers(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-        "PageIndex"?: string;
-        "PageSize"?: string;
-    }): Promise<{}>;
-    ListVersionDeviceGroups(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    PublishAppVersion(query: {
-        "RegionId": string;
-        "ProjectId": string;
-        "VersionId": string;
-        "SendMessage": boolean;
-    }): Promise<{}>;
-    PublishOsVersion(query: {
-        "RegionId": string;
-        "ProjectId": string;
-        "VersionId": string;
-        "SendMessage": boolean;
-    }): Promise<{}>;
-    PushMessage(query: {
-        "RegionId"?: string;
-        "Act": string;
-        "PkgContent": string;
-        "ReceiverType": string;
-        "ReceiverValues": string;
-        "ProjectId": string;
-        "AppKey": string;
-        "Type": number;
-        "Desc"?: string;
-        "Uri"?: string;
-        "CustomContent"?: string;
-        "ExpiredTime"?: number;
-        "Title"?: string;
-        "AppPackage": string;
-    }): Promise<{}>;
-    PushVersionMessage(query: {
-        "RegionId": string;
-        "ProjectId": string;
-        "VersionId": string;
-        "VersionType": string;
-    }): Promise<{}>;
-    QueryPrepublishPassedDeviceCount(query: {
-        "RegionId"?: string;
-        "PrepublishId": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    SubmitAssistReport(query: {
-        "RegionId"?: string;
-        "AssistId": string;
-        "AssistDescription"?: string;
-        "AssistResult"?: string;
-        "AssistTag"?: string;
-        "AssistReason"?: string;
-        "DeviceModel"?: string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    UpdateApiGatewayAppStatus(query: {
-        "RegionId"?: string;
-        "GatewayAppId": string;
-        "Status": number;
-        "ProjectId": string;
-    }): Promise<{}>;
-    UpdateAppBlackWhiteVersions(query: {
-        "RegionId": string;
-        "ProjectId": string;
-        "VersionId": string;
-        "WhiteAppVersions"?: string;
-        "BlackAppVersions"?: string;
-    }): Promise<{}>;
-    UpdateAppVersion(query: {
-        "RegionId": string;
-        "ProjectId": string;
-        "BlackVersionList"?: string;
-        "IsAllowNewInstall"?: string;
-        "AppId"?: string;
-        "AppVersion"?: string;
-        "VersionCode"?: string;
-        "InstallType"?: string;
-        "Remark"?: string;
-        "IsForceUpgrade"?: string;
-        "IsSilentUpgrade"?: string;
-        "IsNeedRestart"?: string;
-        "PackageUrl"?: string;
-        "ReleaseNote"?: string;
-        "WhiteVersionList"?: string;
-        "RestartType"?: string;
-        "RestartAppType"?: string;
-        "RestartAppParam"?: string;
-        "DeviceAdapterList"?: string;
-        "VersionId"?: string;
-        "ApkMd5"?: string;
-    }): Promise<{}>;
-    UpdateAppVersionReleaseNote(query: {
-        "RegionId"?: string;
-        "VersionId": string;
-        "ReleaseNote": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    UpdateAppVersionRemark(query: {
-        "RegionId"?: string;
-        "VersionId": string;
-        "Remark": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    UpdateAppVersionStatus(query: {
-        "RegionId": string;
-        "ProjectId": string;
-        "Id": string;
-        "Status"?: string;
-    }): Promise<{}>;
-    UpdateCustomizedFilter(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-        "Name": string;
-        "Value": string;
-        "ValueType": string;
-        "ValueCompareType": string;
-        "Id": number;
-        "BlackWhiteType": string;
-    }): Promise<{}>;
-    UpdateDeviceModel(query: {
-        "RegionId"?: string;
-        "ModelName"?: string;
-        "Id"?: string;
-        "BrandName"?: string;
-        "Description"?: string;
-        "DeviceType"?: string;
-        "CanCreateDeviceId"?: string;
-        "ProjectId"?: string;
-        "InitUsageType"?: string;
-        "HardwareType"?: string;
-        "SecurityChip"?: string;
-        "OsPlatform"?: string;
-        "ObjectKey"?: string;
-        "DeviceName"?: string;
-    }): Promise<{}>;
-    UpdateNamespaceData(query: {
-        "RegionId"?: string;
-        "Namespace": string;
-        "AuthType": string;
-        "Path": string;
-        "OldData": string;
-        "NewData": string;
-        "ProjectId": string;
-        "DeviceIdType"?: string;
-        "DeviceId"?: string;
-        "AccountType"?: string;
-        "AccountId"?: string;
-    }): Promise<{}>;
-    UpdateOsBlackWhiteVersions(query: {
-        "RegionId": string;
-        "ProjectId": string;
-        "VersionId": string;
-        "WhiteVersions"?: string;
-        "BlackVersions"?: string;
-    }): Promise<{}>;
-    UpdateOsVersion(query: {
-        "RegionId": string;
-        "IsForceNightUpgrade": string;
-        "ProjectId": string;
-        "DeviceModelId": string;
-        "SystemVersion": string;
-        "ReleaseNote": string;
-        "IsForceUpgrade": string;
-        "NightUpgradeDownloadType": string;
-        "NightUpgradeIsShowTip": string;
-        "NightUpgradeIsAllowedCancel": string;
-        "RomList": string;
-        "Id": string;
-        "IsMilestone": string;
-        "EnableMobileDownload": string;
-        "Remark"?: string;
-        "BlackVersionList"?: string;
-        "WhiteVersionList"?: string;
-        "MaxClientVersion"?: string;
-        "MinClientVersion"?: string;
-        "MobileDownloadMaxSize"?: string;
-    }): Promise<{}>;
-    UpdateOsVersionReleaseNote(query: {
-        "RegionId": string;
-        "ProjectId": string;
-        "VersionId": string;
-        "ReleaseNote": string;
-    }): Promise<{}>;
-    UpdateOsVersionRemark(query: {
-        "RegionId": string;
-        "ProjectId": string;
-        "VersionId": string;
-        "Remark": string;
-    }): Promise<{}>;
-    UpdateOsVersionStatus(query: {
-        "RegionId"?: string;
-        "Id": string;
-        "ProjectId": string;
-        "Status"?: string;
-    }): Promise<{}>;
-    UpdateProject(query: {
-        "RegionId"?: string;
-        "Name": string;
-        "Description": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    UpdateSchemaSubscribe(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-        "DeviceModel": string;
-        "SubscribeList"?: string;
-        "SchemaVersion"?: string;
-    }): Promise<{}>;
-    UpdateShadowSchema(query: {
-        "RegionId"?: string;
-        "ProjectId": string;
-        "Id": string;
-        "DeviceModelId": string;
-        "AuthType"?: string;
-        "Namespace"?: string;
-        "Schema"?: string;
-    }): Promise<{}>;
-    UpdateTrigger(query: {
-        "RegionId"?: string;
-        "Id": number;
-        "ProjectId": string;
-        "Sandbox"?: number;
-        "Production"?: number;
-    }): Promise<{}>;
-    UpdateUpstreamAppServer(query: {
-        "RegionId"?: string;
-        "Id": number;
-        "Name"?: string;
-        "Tags"?: string;
-        "ProjectId"?: string;
-    }): Promise<{}>;
-    UpdateVersionDeviceGroup(query: {
-        "RegionId"?: string;
-        "Name": string;
-        "ProjectId": string;
-        "Description"?: string;
-        "Id"?: string;
-    }): Promise<{}>;
-    UpdateVersionPrepublishActiveStatus(query: {
-        "RegionId"?: string;
-        "PrepublishId": string;
-        "IsActive": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    AddVersionWhiteDevicesByDeviceGroups(query: {
-        "RegionId": string;
-        "VersionType": string;
-        "GroupIds": string;
-        "VersionId": string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    FindVersionTests(query: {
-        "RegionId"?: string;
-        "PageIndex": number;
-        "PageSize": number;
-        "VersionId"?: string;
-        "VersionType"?: string;
-        "ProjectId": string;
-    }): Promise<{}>;
-    GetDeviceAppUpdateFunnelEvents(query: {
-        "RegionId": string;
-        "ProjectId": string;
-        "PackageName"?: string;
-        "TargetVersionCode"?: string;
-        "IdType"?: string;
-        "OriginalId"?: string;
-    }): Promise<{}>;
-    FindCustomizedProperties(query: {
-        "RegionId"?: string;
-        "VersionId": string;
-        "PageIndex": number;
-        "PageSize": number;
-        "VersionType": string;
-        "Name"?: string;
-        "ProjectId": string;
-    }): Promise<{}>;
+    AddUploadedFunctionFileInfo(query: AddUploadedFunctionFileInfoRequest): Promise<AddUploadedFunctionFileInfoResponse>;
+    AddVersionBlackDevices(query: AddVersionBlackDevicesRequest): Promise<AddVersionBlackDevicesResponse>;
+    AddVersionGroupDevices(query: AddVersionGroupDevicesRequest): Promise<AddVersionGroupDevicesResponse>;
+    AddVersionWhiteDevices(query: AddVersionWhiteDevicesRequest): Promise<AddVersionWhiteDevicesResponse>;
+    ConnectAssistDevice(query: ConnectAssistDeviceRequest): Promise<ConnectAssistDeviceResponse>;
+    CountActivatedOrNewRegistrationDevice(query: CountActivatedOrNewRegistrationDeviceRequest): Promise<CountActivatedOrNewRegistrationDeviceResponse>;
+    CountDeviceBrands(query: CountDeviceBrandsRequest): Promise<CountDeviceBrandsResponse>;
+    CountDeviceModels(query: CountDeviceModelsRequest): Promise<CountDeviceModelsResponse>;
+    CountDevices(query: CountDevicesRequest): Promise<CountDevicesResponse>;
+    CountProjects(query: CountProjectsRequest): Promise<CountProjectsResponse>;
+    CountYunIdInfo(query: CountYunIdInfoRequest): Promise<CountYunIdInfoResponse>;
+    CreateAppVersion(query: CreateAppVersionRequest): Promise<CreateAppVersionResponse>;
+    CreateCustomizedFilter(query: CreateCustomizedFilterRequest): Promise<CreateCustomizedFilterResponse>;
+    CreateCustomizedProperty(query: CreateCustomizedPropertyRequest): Promise<CreateCustomizedPropertyResponse>;
+    CreateDevice(query: CreateDeviceRequest): Promise<CreateDeviceResponse>;
+    CreateDeviceBrand(query: CreateDeviceBrandRequest): Promise<CreateDeviceBrandResponse>;
+    CreateDeviceModel(query: CreateDeviceModelRequest): Promise<CreateDeviceModelResponse>;
+    CreateNamespace(query: CreateNamespaceRequest): Promise<CreateNamespaceResponse>;
+    CreateOsVersion(query: CreateOsVersionRequest): Promise<CreateOsVersionResponse>;
+    CreateProject(query: CreateProjectRequest): Promise<CreateProjectResponse>;
+    CreateProjectApp(query: CreateProjectAppRequest): Promise<CreateProjectAppResponse>;
+    CreateRpcService(query: CreateRpcServiceRequest): Promise<CreateRpcServiceResponse>;
+    CreateSchemaSubscribe(query: CreateSchemaSubscribeRequest): Promise<CreateSchemaSubscribeResponse>;
+    CreateShadowSchema(query: CreateShadowSchemaRequest): Promise<CreateShadowSchemaResponse>;
+    CreateTrigger(query: CreateTriggerRequest): Promise<CreateTriggerResponse>;
+    CreateUpstreamAppKeyRelation(query: CreateUpstreamAppKeyRelationRequest): Promise<CreateUpstreamAppKeyRelationResponse>;
+    CreateUpstreamAppKeyRelations(query: CreateUpstreamAppKeyRelationsRequest): Promise<CreateUpstreamAppKeyRelationsResponse>;
+    CreateUpstreamAppServer(query: CreateUpstreamAppServerRequest): Promise<CreateUpstreamAppServerResponse>;
+    CreateVersionDeviceGroup(query: CreateVersionDeviceGroupRequest): Promise<CreateVersionDeviceGroupResponse>;
+    CreateVersionPrepublish(query: CreateVersionPrepublishRequest): Promise<CreateVersionPrepublishResponse>;
+    CreateVersionTest(query: CreateVersionTestRequest): Promise<CreateVersionTestResponse>;
+    DelayPublishOsVersion(query: DelayPublishOsVersionRequest): Promise<DelayPublishOsVersionResponse>;
+    DeleteAllCustomizedFilters(query: DeleteAllCustomizedFiltersRequest): Promise<DeleteAllCustomizedFiltersResponse>;
+    DeleteAllVersionGroupDevices(query: DeleteAllVersionGroupDevicesRequest): Promise<DeleteAllVersionGroupDevicesResponse>;
+    DeleteCustomizedFilter(query: DeleteCustomizedFilterRequest): Promise<DeleteCustomizedFilterResponse>;
+    DeleteCustomizedProperty(query: DeleteCustomizedPropertyRequest): Promise<DeleteCustomizedPropertyResponse>;
+    DeleteDevice(query: DeleteDeviceRequest): Promise<DeleteDeviceResponse>;
+    DeleteFunctionFile(query: DeleteFunctionFileRequest): Promise<DeleteFunctionFileResponse>;
+    DeleteNamespace(query: DeleteNamespaceRequest): Promise<DeleteNamespaceResponse>;
+    DeleteOpenAccount(query: DeleteOpenAccountRequest): Promise<DeleteOpenAccountResponse>;
+    DeleteProjectApp(query: DeleteProjectAppRequest): Promise<DeleteProjectAppResponse>;
+    DeleteRpcService(query: DeleteRpcServiceRequest): Promise<DeleteRpcServiceResponse>;
+    DeleteSchemaSubscribe(query: DeleteSchemaSubscribeRequest): Promise<DeleteSchemaSubscribeResponse>;
+    DeleteShadowSchema(query: DeleteShadowSchemaRequest): Promise<DeleteShadowSchemaResponse>;
+    DeleteTrigger(query: DeleteTriggerRequest): Promise<DeleteTriggerResponse>;
+    DeleteUpstreamAppKeyRelation(query: DeleteUpstreamAppKeyRelationRequest): Promise<DeleteUpstreamAppKeyRelationResponse>;
+    DeleteUpstreamAppServer(query: DeleteUpstreamAppServerRequest): Promise<DeleteUpstreamAppServerResponse>;
+    DeleteVersionAllBlackDevices(query: DeleteVersionAllBlackDevicesRequest): Promise<DeleteVersionAllBlackDevicesResponse>;
+    DeleteVersionAllWhiteDevices(query: DeleteVersionAllWhiteDevicesRequest): Promise<DeleteVersionAllWhiteDevicesResponse>;
+    DeleteVersionBlackDevices(query: DeleteVersionBlackDevicesRequest): Promise<DeleteVersionBlackDevicesResponse>;
+    DeleteVersionBlackDevicesById(query: DeleteVersionBlackDevicesByIdRequest): Promise<DeleteVersionBlackDevicesByIdResponse>;
+    DeleteVersionDeviceGroup(query: DeleteVersionDeviceGroupRequest): Promise<DeleteVersionDeviceGroupResponse>;
+    DeleteVersionGroupDevice(query: DeleteVersionGroupDeviceRequest): Promise<DeleteVersionGroupDeviceResponse>;
+    DeleteVersionGroupDeviceById(query: DeleteVersionGroupDeviceByIdRequest): Promise<DeleteVersionGroupDeviceByIdResponse>;
+    DeleteVersionTest(query: DeleteVersionTestRequest): Promise<DeleteVersionTestResponse>;
+    DeleteVersionWhiteDevices(query: DeleteVersionWhiteDevicesRequest): Promise<DeleteVersionWhiteDevicesResponse>;
+    DeleteVersionWhiteDevicesById(query: DeleteVersionWhiteDevicesByIdRequest): Promise<DeleteVersionWhiteDevicesByIdResponse>;
+    DeployFunctionFile(query: DeployFunctionFileRequest): Promise<DeployFunctionFileResponse>;
+    DescribeApiGatewayAppSecurity(query: DescribeApiGatewayAppSecurityRequest): Promise<DescribeApiGatewayAppSecurityResponse>;
+    DescribeAppVersion(query: DescribeAppVersionRequest): Promise<DescribeAppVersionResponse>;
+    DescribeAssistRTMPServerAddress(query: DescribeAssistRTMPServerAddressRequest): Promise<DescribeAssistRTMPServerAddressResponse>;
+    DescribeAssistReport(query: DescribeAssistReportRequest): Promise<DescribeAssistReportResponse>;
+    DescribeAssistWSServerAddress(query: DescribeAssistWSServerAddressRequest): Promise<DescribeAssistWSServerAddressResponse>;
+    DescribeCustomizedFilter(query: DescribeCustomizedFilterRequest): Promise<DescribeCustomizedFilterResponse>;
+    DescribeDefaultSchema(query: DescribeDefaultSchemaRequest): Promise<DescribeDefaultSchemaResponse>;
+    DescribeDevice(query: DescribeDeviceRequest): Promise<DescribeDeviceResponse>;
+    DescribeDeviceBrand(query: DescribeDeviceBrandRequest): Promise<DescribeDeviceBrandResponse>;
+    DescribeDeviceIdByOuterInfo(query: DescribeDeviceIdByOuterInfoRequest): Promise<DescribeDeviceIdByOuterInfoResponse>;
+    DescribeDeviceInfo(query: DescribeDeviceInfoRequest): Promise<DescribeDeviceInfoResponse>;
+    DescribeDeviceModel(query: DescribeDeviceModelRequest): Promise<DescribeDeviceModelResponse>;
+    DescribeDeviceOnlineInfo(query: DescribeDeviceOnlineInfoRequest): Promise<DescribeDeviceOnlineInfoResponse>;
+    DescribeDeviceShadow(query: DescribeDeviceShadowRequest): Promise<DescribeDeviceShadowResponse>;
+    DescribeDeviceValiditySchema(query: DescribeDeviceValiditySchemaRequest): Promise<DescribeDeviceValiditySchemaResponse>;
+    DescribeMessage(query: DescribeMessageRequest): Promise<DescribeMessageResponse>;
+    DescribeOpenAccount(query: DescribeOpenAccountRequest): Promise<DescribeOpenAccountResponse>;
+    DescribeOsVersion(query: DescribeOsVersionRequest): Promise<DescribeOsVersionResponse>;
+    DescribeProject(query: DescribeProjectRequest): Promise<DescribeProjectResponse>;
+    DescribeProjectAppSecurity(query: DescribeProjectAppSecurityRequest): Promise<DescribeProjectAppSecurityResponse>;
+    DescribeShadowSchema(query: DescribeShadowSchemaRequest): Promise<DescribeShadowSchemaResponse>;
+    DescribeVersionDeviceGroup(query: DescribeVersionDeviceGroupRequest): Promise<DescribeVersionDeviceGroupResponse>;
+    DiagnosisVersion(query: DiagnosisVersionRequest): Promise<DiagnosisVersionResponse>;
+    FindAppVersions(query: FindAppVersionsRequest): Promise<FindAppVersionsResponse>;
+    FindCustomizedFilters(query: FindCustomizedFiltersRequest): Promise<FindCustomizedFiltersResponse>;
+    FindOsVersions(query: FindOsVersionsRequest): Promise<FindOsVersionsResponse>;
+    FindPrepublishPassedDevices(query: FindPrepublishPassedDevicesRequest): Promise<FindPrepublishPassedDevicesResponse>;
+    FindPrepublishesByParentId(query: FindPrepublishesByParentIdRequest): Promise<FindPrepublishesByParentIdResponse>;
+    FindPrepublishesByVersionId(query: FindPrepublishesByVersionIdRequest): Promise<FindPrepublishesByVersionIdResponse>;
+    FindVersionBlackDevices(query: FindVersionBlackDevicesRequest): Promise<FindVersionBlackDevicesResponse>;
+    FindVersionDeviceGroups(query: FindVersionDeviceGroupsRequest): Promise<FindVersionDeviceGroupsResponse>;
+    FindVersionGroupDevices(query: FindVersionGroupDevicesRequest): Promise<FindVersionGroupDevicesResponse>;
+    FindVersionMessageSendRecords(query: FindVersionMessageSendRecordsRequest): Promise<FindVersionMessageSendRecordsResponse>;
+    FindVersionMessages(query: FindVersionMessagesRequest): Promise<FindVersionMessagesResponse>;
+    FindVersionWhiteDevices(query: FindVersionWhiteDevicesRequest): Promise<FindVersionWhiteDevicesResponse>;
+    GenerateAssistFileUploadUrl(query: GenerateAssistFileUploadUrlRequest): Promise<GenerateAssistFileUploadUrlResponse>;
+    GenerateFunctionFileUploadMeta(query: GenerateFunctionFileUploadMetaRequest): Promise<GenerateFunctionFileUploadMetaResponse>;
+    GenerateOssPostPolicy(query: GenerateOssPostPolicyRequest): Promise<GenerateOssPostPolicyResponse>;
+    GenerateOssUploadMeta(query: GenerateOssUploadMetaRequest): Promise<GenerateOssUploadMetaResponse>;
+    GenerateSdkDownloadInfo(query: GenerateSdkDownloadInfoRequest): Promise<GenerateSdkDownloadInfoResponse>;
+    GenerateSysAppDownloadInfo(query: GenerateSysAppDownloadInfoRequest): Promise<GenerateSysAppDownloadInfoResponse>;
+    GetDeviceSystemUpdateFunnelEvents(query: GetDeviceSystemUpdateFunnelEventsRequest): Promise<GetDeviceSystemUpdateFunnelEventsResponse>;
+    GetNamespaceData(query: GetNamespaceDataRequest): Promise<GetNamespaceDataResponse>;
+    GetNamespaceStatisticsData(query: GetNamespaceStatisticsDataRequest): Promise<GetNamespaceStatisticsDataResponse>;
+    GetOssUploadMeta(query: GetOssUploadMetaRequest): Promise<GetOssUploadMetaResponse>;
+    InvokeFunction(query: InvokeFunctionRequest): Promise<InvokeFunctionResponse>;
+    ListApiGatewayApps(query: ListApiGatewayAppsRequest): Promise<ListApiGatewayAppsResponse>;
+    ListApps(query: ListAppsRequest): Promise<ListAppsResponse>;
+    ListAssistActionDetails(query: ListAssistActionDetailsRequest): Promise<ListAssistActionDetailsResponse>;
+    ListAssistDevices(query: ListAssistDevicesRequest): Promise<ListAssistDevicesResponse>;
+    ListAssistHistories(query: ListAssistHistoriesRequest): Promise<ListAssistHistoriesResponse>;
+    ListAssistHistoryDetails(query: ListAssistHistoryDetailsRequest): Promise<ListAssistHistoryDetailsResponse>;
+    ListClientPluginVersions(query: ListClientPluginVersionsRequest): Promise<ListClientPluginVersionsResponse>;
+    ListClientPlugins(query: ListClientPluginsRequest): Promise<ListClientPluginsResponse>;
+    ListClientSdks(query: ListClientSdksRequest): Promise<ListClientSdksResponse>;
+    ListConnectLogs(query: ListConnectLogsRequest): Promise<ListConnectLogsResponse>;
+    ListDeployedFunctions(query: ListDeployedFunctionsRequest): Promise<ListDeployedFunctionsResponse>;
+    ListDeviceBrands(query: ListDeviceBrandsRequest): Promise<ListDeviceBrandsResponse>;
+    ListDeviceModel(query: ListDeviceModelRequest): Promise<ListDeviceModelResponse>;
+    ListDeviceModels(query: ListDeviceModelsRequest): Promise<ListDeviceModelsResponse>;
+    ListDeviceTypes(query: ListDeviceTypesRequest): Promise<ListDeviceTypesResponse>;
+    ListDevices(query: ListDevicesRequest): Promise<ListDevicesResponse>;
+    ListFunctionExecuteLog(query: ListFunctionExecuteLogRequest): Promise<ListFunctionExecuteLogResponse>;
+    ListFunctionFiles(query: ListFunctionFilesRequest): Promise<ListFunctionFilesResponse>;
+    ListFunctionFilesByProjectId(query: ListFunctionFilesByProjectIdRequest): Promise<ListFunctionFilesByProjectIdResponse>;
+    ListMessageAcks(query: ListMessageAcksRequest): Promise<ListMessageAcksResponse>;
+    ListMessageReceivers(query: ListMessageReceiversRequest): Promise<ListMessageReceiversResponse>;
+    ListNamespaces(query: ListNamespacesRequest): Promise<ListNamespacesResponse>;
+    ListOfflineMessages(query: ListOfflineMessagesRequest): Promise<ListOfflineMessagesResponse>;
+    ListOpenAccountLinks(query: ListOpenAccountLinksRequest): Promise<ListOpenAccountLinksResponse>;
+    ListOpenAccounts(query: ListOpenAccountsRequest): Promise<ListOpenAccountsResponse>;
+    ListPreChecks(query: ListPreChecksRequest): Promise<ListPreChecksResponse>;
+    ListProjectApps(query: ListProjectAppsRequest): Promise<ListProjectAppsResponse>;
+    ListProjects(query: ListProjectsRequest): Promise<ListProjectsResponse>;
+    ListRpcServices(query: ListRpcServicesRequest): Promise<ListRpcServicesResponse>;
+    ListSchemaSubscribes(query: ListSchemaSubscribesRequest): Promise<ListSchemaSubscribesResponse>;
+    ListServices(query: ListServicesRequest): Promise<ListServicesResponse>;
+    ListShadowSchemaDeviceModels(query: ListShadowSchemaDeviceModelsRequest): Promise<ListShadowSchemaDeviceModelsResponse>;
+    ListShadowSchemas(query: ListShadowSchemasRequest): Promise<ListShadowSchemasResponse>;
+    ListSupportFeatures(query: ListSupportFeaturesRequest): Promise<ListSupportFeaturesResponse>;
+    ListTriggers(query: ListTriggersRequest): Promise<ListTriggersResponse>;
+    ListUpstreamAppKeyRelations(query: ListUpstreamAppKeyRelationsRequest): Promise<ListUpstreamAppKeyRelationsResponse>;
+    ListUpstreamAppServers(query: ListUpstreamAppServersRequest): Promise<ListUpstreamAppServersResponse>;
+    ListVersionDeviceGroups(query: ListVersionDeviceGroupsRequest): Promise<ListVersionDeviceGroupsResponse>;
+    PublishAppVersion(query: PublishAppVersionRequest): Promise<PublishAppVersionResponse>;
+    PublishOsVersion(query: PublishOsVersionRequest): Promise<PublishOsVersionResponse>;
+    PushMessage(query: PushMessageRequest): Promise<PushMessageResponse>;
+    PushVersionMessage(query: PushVersionMessageRequest): Promise<PushVersionMessageResponse>;
+    QueryPrepublishPassedDeviceCount(query: QueryPrepublishPassedDeviceCountRequest): Promise<QueryPrepublishPassedDeviceCountResponse>;
+    SubmitAssistReport(query: SubmitAssistReportRequest): Promise<SubmitAssistReportResponse>;
+    UpdateApiGatewayAppStatus(query: UpdateApiGatewayAppStatusRequest): Promise<UpdateApiGatewayAppStatusResponse>;
+    UpdateAppBlackWhiteVersions(query: UpdateAppBlackWhiteVersionsRequest): Promise<UpdateAppBlackWhiteVersionsResponse>;
+    UpdateAppVersion(query: UpdateAppVersionRequest): Promise<UpdateAppVersionResponse>;
+    UpdateAppVersionReleaseNote(query: UpdateAppVersionReleaseNoteRequest): Promise<UpdateAppVersionReleaseNoteResponse>;
+    UpdateAppVersionRemark(query: UpdateAppVersionRemarkRequest): Promise<UpdateAppVersionRemarkResponse>;
+    UpdateAppVersionStatus(query: UpdateAppVersionStatusRequest): Promise<UpdateAppVersionStatusResponse>;
+    UpdateCustomizedFilter(query: UpdateCustomizedFilterRequest): Promise<UpdateCustomizedFilterResponse>;
+    UpdateDeviceModel(query: UpdateDeviceModelRequest): Promise<UpdateDeviceModelResponse>;
+    UpdateNamespaceData(query: UpdateNamespaceDataRequest): Promise<UpdateNamespaceDataResponse>;
+    UpdateOsBlackWhiteVersions(query: UpdateOsBlackWhiteVersionsRequest): Promise<UpdateOsBlackWhiteVersionsResponse>;
+    UpdateOsVersion(query: UpdateOsVersionRequest): Promise<UpdateOsVersionResponse>;
+    UpdateOsVersionReleaseNote(query: UpdateOsVersionReleaseNoteRequest): Promise<UpdateOsVersionReleaseNoteResponse>;
+    UpdateOsVersionRemark(query: UpdateOsVersionRemarkRequest): Promise<UpdateOsVersionRemarkResponse>;
+    UpdateOsVersionStatus(query: UpdateOsVersionStatusRequest): Promise<UpdateOsVersionStatusResponse>;
+    UpdateProject(query: UpdateProjectRequest): Promise<UpdateProjectResponse>;
+    UpdateSchemaSubscribe(query: UpdateSchemaSubscribeRequest): Promise<UpdateSchemaSubscribeResponse>;
+    UpdateShadowSchema(query: UpdateShadowSchemaRequest): Promise<UpdateShadowSchemaResponse>;
+    UpdateTrigger(query: UpdateTriggerRequest): Promise<UpdateTriggerResponse>;
+    UpdateUpstreamAppServer(query: UpdateUpstreamAppServerRequest): Promise<UpdateUpstreamAppServerResponse>;
+    UpdateVersionDeviceGroup(query: UpdateVersionDeviceGroupRequest): Promise<UpdateVersionDeviceGroupResponse>;
+    UpdateVersionPrepublishActiveStatus(query: UpdateVersionPrepublishActiveStatusRequest): Promise<UpdateVersionPrepublishActiveStatusResponse>;
+    AddVersionWhiteDevicesByDeviceGroups(query: AddVersionWhiteDevicesByDeviceGroupsRequest): Promise<AddVersionWhiteDevicesByDeviceGroupsResponse>;
+    FindVersionTests(query: FindVersionTestsRequest): Promise<FindVersionTestsResponse>;
+    GetDeviceAppUpdateFunnelEvents(query: GetDeviceAppUpdateFunnelEventsRequest): Promise<GetDeviceAppUpdateFunnelEventsResponse>;
+    FindCustomizedProperties(query: FindCustomizedPropertiesRequest): Promise<FindCustomizedPropertiesResponse>;
 }
 export default IOVCC;

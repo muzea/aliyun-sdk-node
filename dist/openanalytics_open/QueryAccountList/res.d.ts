@@ -1,0 +1,3 @@
+interface QueryAccountListResponse {
+}
+export { QueryAccountListResponse };

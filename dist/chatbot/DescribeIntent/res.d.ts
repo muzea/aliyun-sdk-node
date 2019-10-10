@@ -1,0 +1,3 @@
+interface DescribeIntentResponse {
+}
+export { DescribeIntentResponse };

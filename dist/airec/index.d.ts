@@ -1,172 +1,112 @@
+import { AttachDatasetRequest } from "./AttachDataset/req";
+import { AttachDatasetResponse } from "./AttachDataset/res";
+import { CreateDiversifyRequest } from "./CreateDiversify/req";
+import { CreateDiversifyResponse } from "./CreateDiversify/res";
+import { CreateInstanceRequest } from "./CreateInstance/req";
+import { CreateInstanceResponse } from "./CreateInstance/res";
+import { CreateMixRequest } from "./CreateMix/req";
+import { CreateMixResponse } from "./CreateMix/res";
+import { DeleteDataSetRequest } from "./DeleteDataSet/req";
+import { DeleteDataSetResponse } from "./DeleteDataSet/res";
+import { DeleteDiversifyRequest } from "./DeleteDiversify/req";
+import { DeleteDiversifyResponse } from "./DeleteDiversify/res";
+import { DeleteMixRequest } from "./DeleteMix/req";
+import { DeleteMixResponse } from "./DeleteMix/res";
+import { DescribeDataSetMessageRequest } from "./DescribeDataSetMessage/req";
+import { DescribeDataSetMessageResponse } from "./DescribeDataSetMessage/res";
+import { DescribeDataSetReportRequest } from "./DescribeDataSetReport/req";
+import { DescribeDataSetReportResponse } from "./DescribeDataSetReport/res";
+import { DescribeDiversifyRequest } from "./DescribeDiversify/req";
+import { DescribeDiversifyResponse } from "./DescribeDiversify/res";
+import { DescribeInstanceRequest } from "./DescribeInstance/req";
+import { DescribeInstanceResponse } from "./DescribeInstance/res";
+import { DescribeMixRequest } from "./DescribeMix/req";
+import { DescribeMixResponse } from "./DescribeMix/res";
+import { DescribeQuotaRequest } from "./DescribeQuota/req";
+import { DescribeQuotaResponse } from "./DescribeQuota/res";
+import { ListDashboardRequest } from "./ListDashboard/req";
+import { ListDashboardResponse } from "./ListDashboard/res";
+import { ListDashboardParametersRequest } from "./ListDashboardParameters/req";
+import { ListDashboardParametersResponse } from "./ListDashboardParameters/res";
+import { ListDashboardUidRequest } from "./ListDashboardUid/req";
+import { ListDashboardUidResponse } from "./ListDashboardUid/res";
+import { ListDataSetRequest } from "./ListDataSet/req";
+import { ListDataSetResponse } from "./ListDataSet/res";
+import { ListDataSourceRequest } from "./ListDataSource/req";
+import { ListDataSourceResponse } from "./ListDataSource/res";
+import { ListDiversifyRequest } from "./ListDiversify/req";
+import { ListDiversifyResponse } from "./ListDiversify/res";
+import { ListInstanceRequest } from "./ListInstance/req";
+import { ListInstanceResponse } from "./ListInstance/res";
+import { ListInstanceTaskRequest } from "./ListInstanceTask/req";
+import { ListInstanceTaskResponse } from "./ListInstanceTask/res";
+import { ListMixRequest } from "./ListMix/req";
+import { ListMixResponse } from "./ListMix/res";
+import { ModifyDataSourceRequest } from "./ModifyDataSource/req";
+import { ModifyDataSourceResponse } from "./ModifyDataSource/res";
+import { ModifyDiversifyRequest } from "./ModifyDiversify/req";
+import { ModifyDiversifyResponse } from "./ModifyDiversify/res";
+import { ModifyInstanceRequest } from "./ModifyInstance/req";
+import { ModifyInstanceResponse } from "./ModifyInstance/res";
+import { ModifyMixRequest } from "./ModifyMix/req";
+import { ModifyMixResponse } from "./ModifyMix/res";
+import { PushDocumentRequest } from "./PushDocument/req";
+import { PushDocumentResponse } from "./PushDocument/res";
+import { PushInterventionRequest } from "./PushIntervention/req";
+import { PushInterventionResponse } from "./PushIntervention/res";
+import { RecommendRequest } from "./Recommend/req";
+import { RecommendResponse } from "./Recommend/res";
+import { RunInstanceRequest } from "./RunInstance/req";
+import { RunInstanceResponse } from "./RunInstance/res";
+import { StopDataSetRequest } from "./StopDataSet/req";
+import { StopDataSetResponse } from "./StopDataSet/res";
+import { UpgradeInstanceRequest } from "./UpgradeInstance/req";
+import { UpgradeInstanceResponse } from "./UpgradeInstance/res";
+import { ValidateInstanceRequest } from "./ValidateInstance/req";
+import { ValidateInstanceResponse } from "./ValidateInstance/res";
+import { DescribeExposureSettingsRequest } from "./DescribeExposureSettings/req";
+import { DescribeExposureSettingsResponse } from "./DescribeExposureSettings/res";
+import { DescribeRegionsRequest } from "./DescribeRegions/req";
+import { DescribeRegionsResponse } from "./DescribeRegions/res";
+import { ModifyExposureSettingsRequest } from "./ModifyExposureSettings/req";
+import { ModifyExposureSettingsResponse } from "./ModifyExposureSettings/res";
+
 interface AIREC {
-    AttachDataset(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "VersionId": string;
-    }): Promise<{}>;
-    CreateDiversify(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-    }): Promise<{}>;
-    CreateInstance(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    CreateMix(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-    }): Promise<{}>;
-    DeleteDataSet(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "VersionId": string;
-    }): Promise<{}>;
-    DeleteDiversify(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "Name": string;
-    }): Promise<{}>;
-    DeleteMix(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "Name": string;
-    }): Promise<{}>;
-    DescribeDataSetMessage(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "VersionId": string;
-    }): Promise<{}>;
-    DescribeDataSetReport(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "VersionId": string;
-    }): Promise<{}>;
-    DescribeDiversify(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "Name": string;
-    }): Promise<{}>;
-    DescribeInstance(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-    }): Promise<{}>;
-    DescribeMix(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "Name": string;
-    }): Promise<{}>;
-    DescribeQuota(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-    }): Promise<{}>;
-    ListDashboard(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "StartDate": number;
-        "EndDate": number;
-        "TraceId": string;
-        "SceneId": string;
-        "Page"?: number;
-        "Size"?: number;
-    }): Promise<{}>;
-    ListDashboardParameters(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-    }): Promise<{}>;
-    ListDashboardUid(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-    }): Promise<{}>;
-    ListDataSet(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-    }): Promise<{}>;
-    ListDataSource(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-    }): Promise<{}>;
-    ListDiversify(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-    }): Promise<{}>;
-    ListInstance(query: {
-        "RegionId"?: string;
-        "page"?: number;
-        "size"?: number;
-    }): Promise<{}>;
-    ListInstanceTask(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-    }): Promise<{}>;
-    ListMix(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-    }): Promise<{}>;
-    ModifyDataSource(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "TableName"?: string;
-    }): Promise<{}>;
-    ModifyDiversify(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "Name": string;
-    }): Promise<{}>;
-    ModifyInstance(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-    }): Promise<{}>;
-    ModifyMix(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "Name": string;
-    }): Promise<{}>;
-    PushDocument(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "TableName": string;
-    }): Promise<{}>;
-    PushIntervention(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-    }): Promise<{}>;
-    Recommend(query: {
-        "RegionId"?: string;
-        "ReturnCount": number;
-        "UserId"?: string;
-        "SceneId"?: string;
-        "Ip"?: string;
-        "Imei"?: string;
-        "InstanceId": string;
-        "Items"?: string;
-    }): Promise<{}>;
-    RunInstance(query: {
-        "RegionId"?: string;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    StopDataSet(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "VersionId": string;
-    }): Promise<{}>;
-    UpgradeInstance(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-    }): Promise<{}>;
-    ValidateInstance(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-    }): Promise<{}>;
-    DescribeExposureSettings(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-    }): Promise<{}>;
-    DescribeRegions(query: {
-        "RegionId"?: string;
-        "AcceptLanguage"?: string;
-    }): Promise<{}>;
-    ModifyExposureSettings(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-    }): Promise<{}>;
+    AttachDataset(query: AttachDatasetRequest): Promise<AttachDatasetResponse>;
+    CreateDiversify(query: CreateDiversifyRequest): Promise<CreateDiversifyResponse>;
+    CreateInstance(query: CreateInstanceRequest): Promise<CreateInstanceResponse>;
+    CreateMix(query: CreateMixRequest): Promise<CreateMixResponse>;
+    DeleteDataSet(query: DeleteDataSetRequest): Promise<DeleteDataSetResponse>;
+    DeleteDiversify(query: DeleteDiversifyRequest): Promise<DeleteDiversifyResponse>;
+    DeleteMix(query: DeleteMixRequest): Promise<DeleteMixResponse>;
+    DescribeDataSetMessage(query: DescribeDataSetMessageRequest): Promise<DescribeDataSetMessageResponse>;
+    DescribeDataSetReport(query: DescribeDataSetReportRequest): Promise<DescribeDataSetReportResponse>;
+    DescribeDiversify(query: DescribeDiversifyRequest): Promise<DescribeDiversifyResponse>;
+    DescribeInstance(query: DescribeInstanceRequest): Promise<DescribeInstanceResponse>;
+    DescribeMix(query: DescribeMixRequest): Promise<DescribeMixResponse>;
+    DescribeQuota(query: DescribeQuotaRequest): Promise<DescribeQuotaResponse>;
+    ListDashboard(query: ListDashboardRequest): Promise<ListDashboardResponse>;
+    ListDashboardParameters(query: ListDashboardParametersRequest): Promise<ListDashboardParametersResponse>;
+    ListDashboardUid(query: ListDashboardUidRequest): Promise<ListDashboardUidResponse>;
+    ListDataSet(query: ListDataSetRequest): Promise<ListDataSetResponse>;
+    ListDataSource(query: ListDataSourceRequest): Promise<ListDataSourceResponse>;
+    ListDiversify(query: ListDiversifyRequest): Promise<ListDiversifyResponse>;
+    ListInstance(query: ListInstanceRequest): Promise<ListInstanceResponse>;
+    ListInstanceTask(query: ListInstanceTaskRequest): Promise<ListInstanceTaskResponse>;
+    ListMix(query: ListMixRequest): Promise<ListMixResponse>;
+    ModifyDataSource(query: ModifyDataSourceRequest): Promise<ModifyDataSourceResponse>;
+    ModifyDiversify(query: ModifyDiversifyRequest): Promise<ModifyDiversifyResponse>;
+    ModifyInstance(query: ModifyInstanceRequest): Promise<ModifyInstanceResponse>;
+    ModifyMix(query: ModifyMixRequest): Promise<ModifyMixResponse>;
+    PushDocument(query: PushDocumentRequest): Promise<PushDocumentResponse>;
+    PushIntervention(query: PushInterventionRequest): Promise<PushInterventionResponse>;
+    Recommend(query: RecommendRequest): Promise<RecommendResponse>;
+    RunInstance(query: RunInstanceRequest): Promise<RunInstanceResponse>;
+    StopDataSet(query: StopDataSetRequest): Promise<StopDataSetResponse>;
+    UpgradeInstance(query: UpgradeInstanceRequest): Promise<UpgradeInstanceResponse>;
+    ValidateInstance(query: ValidateInstanceRequest): Promise<ValidateInstanceResponse>;
+    DescribeExposureSettings(query: DescribeExposureSettingsRequest): Promise<DescribeExposureSettingsResponse>;
+    DescribeRegions(query: DescribeRegionsRequest): Promise<DescribeRegionsResponse>;
+    ModifyExposureSettings(query: ModifyExposureSettingsRequest): Promise<ModifyExposureSettingsResponse>;
 }
 export default AIREC;

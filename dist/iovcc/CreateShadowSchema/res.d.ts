@@ -1,0 +1,3 @@
+interface CreateShadowSchemaResponse {
+}
+export { CreateShadowSchemaResponse };

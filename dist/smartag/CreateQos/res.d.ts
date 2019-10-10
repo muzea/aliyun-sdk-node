@@ -1,0 +1,3 @@
+interface CreateQosResponse {
+}
+export { CreateQosResponse };

@@ -1,0 +1,34 @@
+interface ModifyScalingRuleRequest {
+    "RegionId"?: string;
+    "AppId": string;
+    "GroupId": string;
+    "InEnable"?: boolean;
+    "InCpu"?: number;
+    "InDuration"?: number;
+    "InInstanceNum"?: number;
+    "InLoad"?: number;
+    "InRT"?: number;
+    "InStep"?: number;
+    "OutCPU"?: number;
+    "OutDuration"?: number;
+    "OutEnable"?: boolean;
+    "OutInstanceNum"?: number;
+    "OutLoad"?: number;
+    "OutRT"?: number;
+    "OutStep"?: number;
+    "InCondition"?: string;
+    "OutCondition"?: string;
+    "ResourceFrom"?: string;
+    "MultiAzPolicy"?: string;
+    "VpcId"?: string;
+    "VSwitchIds"?: string;
+    "ScalingPolicy"?: string;
+    "TemplateInstanceId"?: string;
+    "TemplateInstanceName"?: string;
+    "Password"?: string;
+    "KeyPairName"?: string;
+    "AcceptEULA"?: boolean;
+    "TemplateId"?: string;
+    "TemplateVersion"?: number;
+}
+export { ModifyScalingRuleRequest };

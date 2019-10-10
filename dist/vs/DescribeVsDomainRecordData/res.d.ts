@@ -1,0 +1,3 @@
+interface DescribeVsDomainRecordDataResponse {
+}
+export { DescribeVsDomainRecordDataResponse };

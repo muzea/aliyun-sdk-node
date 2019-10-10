@@ -1,0 +1,3 @@
+interface DescribeEthereumDeletableResponse {
+}
+export { DescribeEthereumDeletableResponse };

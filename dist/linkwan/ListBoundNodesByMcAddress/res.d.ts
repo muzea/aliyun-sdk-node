@@ -1,0 +1,3 @@
+interface ListBoundNodesByMcAddressResponse {
+}
+export { ListBoundNodesByMcAddressResponse };

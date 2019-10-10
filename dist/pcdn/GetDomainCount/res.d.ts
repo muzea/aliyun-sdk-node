@@ -1,0 +1,3 @@
+interface GetDomainCountResponse {
+}
+export { GetDomainCountResponse };

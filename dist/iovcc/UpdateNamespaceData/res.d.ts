@@ -1,0 +1,3 @@
+interface UpdateNamespaceDataResponse {
+}
+export { UpdateNamespaceDataResponse };

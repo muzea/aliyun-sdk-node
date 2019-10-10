@@ -1,0 +1,3 @@
+interface DeleteAllVersionGroupDevicesResponse {
+}
+export { DeleteAllVersionGroupDevicesResponse };

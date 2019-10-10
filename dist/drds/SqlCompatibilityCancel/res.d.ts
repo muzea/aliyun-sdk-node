@@ -1,0 +1,3 @@
+interface SqlCompatibilityCancelResponse {
+}
+export { SqlCompatibilityCancelResponse };

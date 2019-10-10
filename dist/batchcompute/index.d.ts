@@ -1,164 +1,121 @@
+import { CancelImageRequest } from "./CancelImage/req";
+import { CancelImageResponse } from "./CancelImage/res";
+import { CreateClusterRequest } from "./CreateCluster/req";
+import { CreateClusterResponse } from "./CreateCluster/res";
+import { CreateImageRequest } from "./CreateImage/req";
+import { CreateImageResponse } from "./CreateImage/res";
+import { DeleteAppRequest } from "./DeleteApp/req";
+import { DeleteAppResponse } from "./DeleteApp/res";
+import { DeleteClusterRequest } from "./DeleteCluster/req";
+import { DeleteClusterResponse } from "./DeleteCluster/res";
+import { DeleteClusterInstanceRequest } from "./DeleteClusterInstance/req";
+import { DeleteClusterInstanceResponse } from "./DeleteClusterInstance/res";
+import { DeleteImageRequest } from "./DeleteImage/req";
+import { DeleteImageResponse } from "./DeleteImage/res";
+import { DeleteJobRequest } from "./DeleteJob/req";
+import { DeleteJobResponse } from "./DeleteJob/res";
+import { DeleteProjectRequest } from "./DeleteProject/req";
+import { DeleteProjectResponse } from "./DeleteProject/res";
+import { GetAppRequest } from "./GetApp/req";
+import { GetAppResponse } from "./GetApp/res";
+import { GetClusterRequest } from "./GetCluster/req";
+import { GetClusterResponse } from "./GetCluster/res";
+import { GetClusterInstanceRequest } from "./GetClusterInstance/req";
+import { GetClusterInstanceResponse } from "./GetClusterInstance/res";
+import { GetImageRequest } from "./GetImage/req";
+import { GetImageResponse } from "./GetImage/res";
+import { GetInstanceRequest } from "./GetInstance/req";
+import { GetInstanceResponse } from "./GetInstance/res";
+import { GetJobRequest } from "./GetJob/req";
+import { GetJobResponse } from "./GetJob/res";
+import { GetJobDescriptionRequest } from "./GetJobDescription/req";
+import { GetJobDescriptionResponse } from "./GetJobDescription/res";
+import { GetQuotaRequest } from "./GetQuota/req";
+import { GetQuotaResponse } from "./GetQuota/res";
+import { GetTaskRequest } from "./GetTask/req";
+import { GetTaskResponse } from "./GetTask/res";
+import { ListClusterInstancesRequest } from "./ListClusterInstances/req";
+import { ListClusterInstancesResponse } from "./ListClusterInstances/res";
+import { ListClustersRequest } from "./ListClusters/req";
+import { ListClustersResponse } from "./ListClusters/res";
+import { ListImagesRequest } from "./ListImages/req";
+import { ListImagesResponse } from "./ListImages/res";
+import { ListInstancesRequest } from "./ListInstances/req";
+import { ListInstancesResponse } from "./ListInstances/res";
+import { ListJobsRequest } from "./ListJobs/req";
+import { ListJobsResponse } from "./ListJobs/res";
+import { ListTasksRequest } from "./ListTasks/req";
+import { ListTasksResponse } from "./ListTasks/res";
+import { ModifyAppRequest } from "./ModifyApp/req";
+import { ModifyAppResponse } from "./ModifyApp/res";
+import { PollForTaskRequest } from "./PollForTask/req";
+import { PollForTaskResponse } from "./PollForTask/res";
+import { RecreateClusterInstanceRequest } from "./RecreateClusterInstance/req";
+import { RecreateClusterInstanceResponse } from "./RecreateClusterInstance/res";
+import { RenewClusterInstanceRequest } from "./RenewClusterInstance/req";
+import { RenewClusterInstanceResponse } from "./RenewClusterInstance/res";
+import { ReportTaskStatusRequest } from "./ReportTaskStatus/req";
+import { ReportTaskStatusResponse } from "./ReportTaskStatus/res";
+import { ReportWorkerStatusRequest } from "./ReportWorkerStatus/req";
+import { ReportWorkerStatusResponse } from "./ReportWorkerStatus/res";
+import { StartJobRequest } from "./StartJob/req";
+import { StartJobResponse } from "./StartJob/res";
+import { StopJobRequest } from "./StopJob/req";
+import { StopJobResponse } from "./StopJob/res";
+import { ListAvailableInstanceTypeRequest } from "./ListAvailableInstanceType/req";
+import { ListAvailableInstanceTypeResponse } from "./ListAvailableInstanceType/res";
+import { ChangeJobPriorityRequest } from "./ChangeJobPriority/req";
+import { ChangeJobPriorityResponse } from "./ChangeJobPriority/res";
+import { CreateAppRequest } from "./CreateApp/req";
+import { CreateAppResponse } from "./CreateApp/res";
+import { CreateJobRequest } from "./CreateJob/req";
+import { CreateJobResponse } from "./CreateJob/res";
+import { ListAppsRequest } from "./ListApps/req";
+import { ListAppsResponse } from "./ListApps/res";
+import { ListRegionsRequest } from "./ListRegions/req";
+import { ListRegionsResponse } from "./ListRegions/res";
+import { ModifyClusterRequest } from "./ModifyCluster/req";
+import { ModifyClusterResponse } from "./ModifyCluster/res";
+
 interface BATCHCOMPUTE {
-    CancelImage(query: {
-        "RegionId"?: string;
-        "ResourceName": string;
-    }): Promise<{}>;
-    CreateCluster(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    CreateImage(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    DeleteApp(query: {
-        "RegionId"?: string;
-        "ResourceName": string;
-    }): Promise<{}>;
-    DeleteCluster(query: {
-        "RegionId"?: string;
-        "ResourceName": string;
-    }): Promise<{}>;
-    DeleteClusterInstance(query: {
-        "RegionId"?: string;
-        "GroupName": string;
-        "InstanceId": string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    DeleteImage(query: {
-        "RegionId"?: string;
-        "ResourceName": string;
-    }): Promise<{}>;
-    DeleteJob(query: {
-        "RegionId"?: string;
-        "ResourceName": string;
-    }): Promise<{}>;
-    DeleteProject(query: {
-        "RegionId"?: string;
-        "ProjectName": string;
-    }): Promise<{}>;
-    GetApp(query: {
-        "RegionId"?: string;
-        "ResourceName": string;
-    }): Promise<{}>;
-    GetCluster(query: {
-        "RegionId"?: string;
-        "ResourceName": string;
-    }): Promise<{}>;
-    GetClusterInstance(query: {
-        "RegionId"?: string;
-        "GroupName": string;
-        "InstanceId": string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    GetImage(query: {
-        "RegionId"?: string;
-        "ResourceName": string;
-    }): Promise<{}>;
-    GetInstance(query: {
-        "RegionId"?: string;
-        "TaskName": string;
-        "InstanceId": string;
-        "ResourceName": string;
-    }): Promise<{}>;
-    GetJob(query: {
-        "RegionId"?: string;
-        "ResourceName": string;
-    }): Promise<{}>;
-    GetJobDescription(query: {
-        "RegionId"?: string;
-        "ResourceName": string;
-    }): Promise<{}>;
-    GetQuota(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    GetTask(query: {
-        "RegionId"?: string;
-        "TaskName": string;
-        "ResourceName": string;
-    }): Promise<{}>;
-    ListClusterInstances(query: {
-        "RegionId"?: string;
-        "GroupName": string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    ListClusters(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ListImages(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ListInstances(query: {
-        "RegionId"?: string;
-        "TaskName": string;
-        "ResourceName": string;
-    }): Promise<{}>;
-    ListJobs(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ListTasks(query: {
-        "RegionId"?: string;
-        "ResourceName": string;
-    }): Promise<{}>;
-    ModifyApp(query: {
-        "RegionId"?: string;
-        "ResourceName": string;
-    }): Promise<{}>;
-    PollForTask(query: {
-        "RegionId"?: string;
-        "WorkerId": string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    RecreateClusterInstance(query: {
-        "RegionId"?: string;
-        "GroupName": string;
-        "InstanceId": string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    RenewClusterInstance(query: {
-        "RegionId"?: string;
-        "GroupName": string;
-        "InstanceId": string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    ReportTaskStatus(query: {
-        "RegionId"?: string;
-        "WorkerId": string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    ReportWorkerStatus(query: {
-        "RegionId"?: string;
-        "WorkerId": string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    StartJob(query: {
-        "RegionId"?: string;
-        "ResourceName": string;
-    }): Promise<{}>;
-    StopJob(query: {
-        "RegionId"?: string;
-        "ResourceName": string;
-    }): Promise<{}>;
-    ListAvailableInstanceType(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ChangeJobPriority(query: {
-        "RegionId"?: string;
-        "ResourceName": string;
-    }): Promise<{}>;
-    CreateApp(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    CreateJob(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ListApps(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ListRegions(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ModifyCluster(query: {
-        "RegionId"?: string;
-        "ResourceName": string;
-    }): Promise<{}>;
+    CancelImage(query: CancelImageRequest): Promise<CancelImageResponse>;
+    CreateCluster(query: CreateClusterRequest): Promise<CreateClusterResponse>;
+    CreateImage(query: CreateImageRequest): Promise<CreateImageResponse>;
+    DeleteApp(query: DeleteAppRequest): Promise<DeleteAppResponse>;
+    DeleteCluster(query: DeleteClusterRequest): Promise<DeleteClusterResponse>;
+    DeleteClusterInstance(query: DeleteClusterInstanceRequest): Promise<DeleteClusterInstanceResponse>;
+    DeleteImage(query: DeleteImageRequest): Promise<DeleteImageResponse>;
+    DeleteJob(query: DeleteJobRequest): Promise<DeleteJobResponse>;
+    DeleteProject(query: DeleteProjectRequest): Promise<DeleteProjectResponse>;
+    GetApp(query: GetAppRequest): Promise<GetAppResponse>;
+    GetCluster(query: GetClusterRequest): Promise<GetClusterResponse>;
+    GetClusterInstance(query: GetClusterInstanceRequest): Promise<GetClusterInstanceResponse>;
+    GetImage(query: GetImageRequest): Promise<GetImageResponse>;
+    GetInstance(query: GetInstanceRequest): Promise<GetInstanceResponse>;
+    GetJob(query: GetJobRequest): Promise<GetJobResponse>;
+    GetJobDescription(query: GetJobDescriptionRequest): Promise<GetJobDescriptionResponse>;
+    GetQuota(query: GetQuotaRequest): Promise<GetQuotaResponse>;
+    GetTask(query: GetTaskRequest): Promise<GetTaskResponse>;
+    ListClusterInstances(query: ListClusterInstancesRequest): Promise<ListClusterInstancesResponse>;
+    ListClusters(query: ListClustersRequest): Promise<ListClustersResponse>;
+    ListImages(query: ListImagesRequest): Promise<ListImagesResponse>;
+    ListInstances(query: ListInstancesRequest): Promise<ListInstancesResponse>;
+    ListJobs(query: ListJobsRequest): Promise<ListJobsResponse>;
+    ListTasks(query: ListTasksRequest): Promise<ListTasksResponse>;
+    ModifyApp(query: ModifyAppRequest): Promise<ModifyAppResponse>;
+    PollForTask(query: PollForTaskRequest): Promise<PollForTaskResponse>;
+    RecreateClusterInstance(query: RecreateClusterInstanceRequest): Promise<RecreateClusterInstanceResponse>;
+    RenewClusterInstance(query: RenewClusterInstanceRequest): Promise<RenewClusterInstanceResponse>;
+    ReportTaskStatus(query: ReportTaskStatusRequest): Promise<ReportTaskStatusResponse>;
+    ReportWorkerStatus(query: ReportWorkerStatusRequest): Promise<ReportWorkerStatusResponse>;
+    StartJob(query: StartJobRequest): Promise<StartJobResponse>;
+    StopJob(query: StopJobRequest): Promise<StopJobResponse>;
+    ListAvailableInstanceType(query: ListAvailableInstanceTypeRequest): Promise<ListAvailableInstanceTypeResponse>;
+    ChangeJobPriority(query: ChangeJobPriorityRequest): Promise<ChangeJobPriorityResponse>;
+    CreateApp(query: CreateAppRequest): Promise<CreateAppResponse>;
+    CreateJob(query: CreateJobRequest): Promise<CreateJobResponse>;
+    ListApps(query: ListAppsRequest): Promise<ListAppsResponse>;
+    ListRegions(query: ListRegionsRequest): Promise<ListRegionsResponse>;
+    ModifyCluster(query: ModifyClusterRequest): Promise<ModifyClusterResponse>;
 }
 export default BATCHCOMPUTE;

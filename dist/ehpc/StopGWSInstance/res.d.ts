@@ -1,0 +1,3 @@
+interface StopGWSInstanceResponse {
+}
+export { StopGWSInstanceResponse };

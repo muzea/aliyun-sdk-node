@@ -1,0 +1,3 @@
+interface DisableSmartAccessGatewayUserResponse {
+}
+export { DisableSmartAccessGatewayUserResponse };

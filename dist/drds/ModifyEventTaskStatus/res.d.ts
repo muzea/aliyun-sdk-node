@@ -1,0 +1,3 @@
+interface ModifyEventTaskStatusResponse {
+}
+export { ModifyEventTaskStatusResponse };

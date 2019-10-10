@@ -1,0 +1,3 @@
+interface CreateFlexAccFwdRuleListResponse {
+}
+export { CreateFlexAccFwdRuleListResponse };

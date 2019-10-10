@@ -1,0 +1,3 @@
+interface GetVersionResponse {
+}
+export { GetVersionResponse };

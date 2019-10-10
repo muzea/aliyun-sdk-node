@@ -1,0 +1,3 @@
+interface DeleteQosCarResponse {
+}
+export { DeleteQosCarResponse };

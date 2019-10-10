@@ -1,0 +1,3 @@
+interface RecognizeFaceResponse {
+}
+export { RecognizeFaceResponse };

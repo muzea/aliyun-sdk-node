@@ -1,0 +1,3 @@
+interface ListRentedJoinPermissionsResponse {
+}
+export { ListRentedJoinPermissionsResponse };

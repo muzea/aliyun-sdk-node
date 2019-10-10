@@ -1,0 +1,3 @@
+interface DescribeAppVersionResponse {
+}
+export { DescribeAppVersionResponse };

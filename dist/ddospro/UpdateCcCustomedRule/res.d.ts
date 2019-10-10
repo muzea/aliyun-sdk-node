@@ -1,0 +1,3 @@
+interface UpdateCcCustomedRuleResponse {
+}
+export { UpdateCcCustomedRuleResponse };

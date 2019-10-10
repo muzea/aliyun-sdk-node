@@ -1,0 +1,3 @@
+interface UpdateLabNodeDebugConfigResponse {
+}
+export { UpdateLabNodeDebugConfigResponse };

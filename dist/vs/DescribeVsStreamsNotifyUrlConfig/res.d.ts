@@ -1,0 +1,3 @@
+interface DescribeVsStreamsNotifyUrlConfigResponse {
+}
+export { DescribeVsStreamsNotifyUrlConfigResponse };

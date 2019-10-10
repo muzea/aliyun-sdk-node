@@ -1,0 +1,3 @@
+interface DeleteJobResponse {
+}
+export { DeleteJobResponse };

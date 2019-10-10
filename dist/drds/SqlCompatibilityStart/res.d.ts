@@ -1,0 +1,3 @@
+interface SqlCompatibilityStartResponse {
+}
+export { SqlCompatibilityStartResponse };

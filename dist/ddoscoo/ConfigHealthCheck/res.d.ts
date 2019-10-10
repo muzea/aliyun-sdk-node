@@ -1,0 +1,3 @@
+interface ConfigHealthCheckResponse {
+}
+export { ConfigHealthCheckResponse };

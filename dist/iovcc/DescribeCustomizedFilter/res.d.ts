@@ -1,0 +1,3 @@
+interface DescribeCustomizedFilterResponse {
+}
+export { DescribeCustomizedFilterResponse };

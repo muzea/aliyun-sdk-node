@@ -1,0 +1,3 @@
+interface ListMethodsResponse {
+}
+export { ListMethodsResponse };

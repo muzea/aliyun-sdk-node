@@ -1,0 +1,3 @@
+interface GetNodeMulticastConfigResponse {
+}
+export { GetNodeMulticastConfigResponse };

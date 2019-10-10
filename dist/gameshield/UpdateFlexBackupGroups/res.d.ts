@@ -1,0 +1,3 @@
+interface UpdateFlexBackupGroupsResponse {
+}
+export { UpdateFlexBackupGroupsResponse };

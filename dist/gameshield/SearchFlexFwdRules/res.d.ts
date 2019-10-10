@@ -1,0 +1,3 @@
+interface SearchFlexFwdRulesResponse {
+}
+export { SearchFlexFwdRulesResponse };

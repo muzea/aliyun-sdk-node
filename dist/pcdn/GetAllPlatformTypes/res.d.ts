@@ -1,0 +1,3 @@
+interface GetAllPlatformTypesResponse {
+}
+export { GetAllPlatformTypesResponse };

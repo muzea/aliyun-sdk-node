@@ -1,55 +1,22 @@
+import { GetOpLogRequest } from "./GetOpLog/req";
+import { GetOpLogResponse } from "./GetOpLog/res";
+import { RegisterInstanceRequest } from "./RegisterInstance/req";
+import { RegisterInstanceResponse } from "./RegisterInstance/res";
+import { RegisterUserRequest } from "./RegisterUser/req";
+import { RegisterUserResponse } from "./RegisterUser/res";
+import { DeleteUserRequest } from "./DeleteUser/req";
+import { DeleteUserResponse } from "./DeleteUser/res";
+import { DisableUserRequest } from "./DisableUser/req";
+import { DisableUserResponse } from "./DisableUser/res";
+import { EnableUserRequest } from "./EnableUser/req";
+import { EnableUserResponse } from "./EnableUser/res";
+
 interface DMS_ENTERPRISE {
-    GetOpLog(query: {
-        "RegionId"?: string;
-        "Tid": number;
-        "StartTime": string;
-        "EndTime": string;
-        "PageSize": number;
-        "PageNumber": number;
-        "Module"?: string;
-    }): Promise<{}>;
-    RegisterInstance(query: {
-        "RegionId"?: string;
-        "Tid": number;
-        "InstanceType": string;
-        "InstanceSource": string;
-        "NetworkType": string;
-        "EnvType": string;
-        "Host": string;
-        "Port": number;
-        "DatabaseUser": string;
-        "DatabasePassword": string;
-        "InstanceAlias": string;
-        "DbaUid": number;
-        "SafeRule": string;
-        "QueryTimeout": number;
-        "ExportTimeout": number;
-        "EcsInstanceId"?: string;
-        "VpcId"?: string;
-        "EcsRegion"?: string;
-        "Sid"?: string;
-    }): Promise<{}>;
-    RegisterUser(query: {
-        "RegionId"?: string;
-        "Tid": number;
-        "Uid": number;
-        "UserNick"?: string;
-        "RoleNames"?: string;
-    }): Promise<{}>;
-    DeleteUser(query: {
-        "RegionId"?: string;
-        "Tid": number;
-        "Uid": number;
-    }): Promise<{}>;
-    DisableUser(query: {
-        "RegionId"?: string;
-        "Tid": number;
-        "Uid": number;
-    }): Promise<{}>;
-    EnableUser(query: {
-        "RegionId"?: string;
-        "Tid": number;
-        "Uid": number;
-    }): Promise<{}>;
+    GetOpLog(query: GetOpLogRequest): Promise<GetOpLogResponse>;
+    RegisterInstance(query: RegisterInstanceRequest): Promise<RegisterInstanceResponse>;
+    RegisterUser(query: RegisterUserRequest): Promise<RegisterUserResponse>;
+    DeleteUser(query: DeleteUserRequest): Promise<DeleteUserResponse>;
+    DisableUser(query: DisableUserRequest): Promise<DisableUserResponse>;
+    EnableUser(query: EnableUserRequest): Promise<EnableUserResponse>;
 }
 export default DMS_ENTERPRISE;

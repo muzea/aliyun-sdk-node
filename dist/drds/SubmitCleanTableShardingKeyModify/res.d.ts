@@ -1,0 +1,3 @@
+interface SubmitCleanTableShardingKeyModifyResponse {
+}
+export { SubmitCleanTableShardingKeyModifyResponse };

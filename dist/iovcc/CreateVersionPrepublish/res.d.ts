@@ -1,0 +1,3 @@
+interface CreateVersionPrepublishResponse {
+}
+export { CreateVersionPrepublishResponse };

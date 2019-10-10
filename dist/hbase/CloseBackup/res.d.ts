@@ -1,0 +1,3 @@
+interface CloseBackupResponse {
+}
+export { CloseBackupResponse };

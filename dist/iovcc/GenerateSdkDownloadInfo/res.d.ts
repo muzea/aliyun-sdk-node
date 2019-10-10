@@ -1,0 +1,3 @@
+interface GenerateSdkDownloadInfoResponse {
+}
+export { GenerateSdkDownloadInfoResponse };

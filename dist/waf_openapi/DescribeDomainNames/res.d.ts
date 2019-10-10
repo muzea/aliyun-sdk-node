@@ -1,0 +1,3 @@
+interface DescribeDomainNamesResponse {
+}
+export { DescribeDomainNamesResponse };

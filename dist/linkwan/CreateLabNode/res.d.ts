@@ -1,0 +1,3 @@
+interface CreateLabNodeResponse {
+}
+export { CreateLabNodeResponse };

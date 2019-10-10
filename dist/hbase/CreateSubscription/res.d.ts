@@ -1,0 +1,3 @@
+interface CreateSubscriptionResponse {
+}
+export { CreateSubscriptionResponse };

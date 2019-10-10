@@ -1,0 +1,3 @@
+interface SetVsStreamsNotifyUrlConfigResponse {
+}
+export { SetVsStreamsNotifyUrlConfigResponse };

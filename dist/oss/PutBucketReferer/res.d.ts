@@ -1,0 +1,3 @@
+interface PutBucketRefererResponse {
+}
+export { PutBucketRefererResponse };

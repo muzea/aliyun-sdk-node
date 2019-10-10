@@ -1,0 +1,3 @@
+interface UpdateOwnedLocalJoinPermissionEnablingStateResponse {
+}
+export { UpdateOwnedLocalJoinPermissionEnablingStateResponse };

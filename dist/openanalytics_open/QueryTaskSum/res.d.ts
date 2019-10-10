@@ -1,0 +1,3 @@
+interface QueryTaskSumResponse {
+}
+export { QueryTaskSumResponse };

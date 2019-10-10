@@ -1,0 +1,3 @@
+interface DescribeProjectAppSecurityResponse {
+}
+export { DescribeProjectAppSecurityResponse };

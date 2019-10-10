@@ -1,0 +1,3 @@
+interface DownloadSdkFileResponse {
+}
+export { DownloadSdkFileResponse };

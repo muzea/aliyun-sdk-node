@@ -1,0 +1,3 @@
+interface DescribeDomainQpsWithCacheResponse {
+}
+export { DescribeDomainQpsWithCacheResponse };

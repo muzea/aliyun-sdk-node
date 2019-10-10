@@ -1,0 +1,3 @@
+interface DescribeFullNodesResponse {
+}
+export { DescribeFullNodesResponse };

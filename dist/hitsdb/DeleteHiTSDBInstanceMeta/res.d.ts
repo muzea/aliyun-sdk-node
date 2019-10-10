@@ -1,0 +1,3 @@
+interface DeleteHiTSDBInstanceMetaResponse {
+}
+export { DeleteHiTSDBInstanceMetaResponse };

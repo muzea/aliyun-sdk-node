@@ -1,351 +1,145 @@
+import { CreateAccountRequest } from "./CreateAccount/req";
+import { CreateAccountResponse } from "./CreateAccount/res";
+import { CreateBackupRequest } from "./CreateBackup/req";
+import { CreateBackupResponse } from "./CreateBackup/res";
+import { CreateDBClusterRequest } from "./CreateDBCluster/req";
+import { CreateDBClusterResponse } from "./CreateDBCluster/res";
+import { CreateDBClusterEndpointRequest } from "./CreateDBClusterEndpoint/req";
+import { CreateDBClusterEndpointResponse } from "./CreateDBClusterEndpoint/res";
+import { CreateDBEndpointAddressRequest } from "./CreateDBEndpointAddress/req";
+import { CreateDBEndpointAddressResponse } from "./CreateDBEndpointAddress/res";
+import { CreateDBNodesRequest } from "./CreateDBNodes/req";
+import { CreateDBNodesResponse } from "./CreateDBNodes/res";
+import { CreateDatabaseRequest } from "./CreateDatabase/req";
+import { CreateDatabaseResponse } from "./CreateDatabase/res";
+import { DeleteAccountRequest } from "./DeleteAccount/req";
+import { DeleteAccountResponse } from "./DeleteAccount/res";
+import { DeleteBackupRequest } from "./DeleteBackup/req";
+import { DeleteBackupResponse } from "./DeleteBackup/res";
+import { DeleteDBClusterRequest } from "./DeleteDBCluster/req";
+import { DeleteDBClusterResponse } from "./DeleteDBCluster/res";
+import { DeleteDBClusterEndpointRequest } from "./DeleteDBClusterEndpoint/req";
+import { DeleteDBClusterEndpointResponse } from "./DeleteDBClusterEndpoint/res";
+import { DeleteDBEndpointAddressRequest } from "./DeleteDBEndpointAddress/req";
+import { DeleteDBEndpointAddressResponse } from "./DeleteDBEndpointAddress/res";
+import { DeleteDBNodesRequest } from "./DeleteDBNodes/req";
+import { DeleteDBNodesResponse } from "./DeleteDBNodes/res";
+import { DeleteDatabaseRequest } from "./DeleteDatabase/req";
+import { DeleteDatabaseResponse } from "./DeleteDatabase/res";
+import { DescribeAccountsRequest } from "./DescribeAccounts/req";
+import { DescribeAccountsResponse } from "./DescribeAccounts/res";
+import { DescribeAutoRenewAttributeRequest } from "./DescribeAutoRenewAttribute/req";
+import { DescribeAutoRenewAttributeResponse } from "./DescribeAutoRenewAttribute/res";
+import { DescribeBackupPolicyRequest } from "./DescribeBackupPolicy/req";
+import { DescribeBackupPolicyResponse } from "./DescribeBackupPolicy/res";
+import { DescribeBackupsRequest } from "./DescribeBackups/req";
+import { DescribeBackupsResponse } from "./DescribeBackups/res";
+import { DescribeDBClusterAccessWhitelistRequest } from "./DescribeDBClusterAccessWhitelist/req";
+import { DescribeDBClusterAccessWhitelistResponse } from "./DescribeDBClusterAccessWhitelist/res";
+import { DescribeDBClusterAttributeRequest } from "./DescribeDBClusterAttribute/req";
+import { DescribeDBClusterAttributeResponse } from "./DescribeDBClusterAttribute/res";
+import { DescribeDBClusterEndpointsRequest } from "./DescribeDBClusterEndpoints/req";
+import { DescribeDBClusterEndpointsResponse } from "./DescribeDBClusterEndpoints/res";
+import { DescribeDBClusterParametersRequest } from "./DescribeDBClusterParameters/req";
+import { DescribeDBClusterParametersResponse } from "./DescribeDBClusterParameters/res";
+import { DescribeDBClustersRequest } from "./DescribeDBClusters/req";
+import { DescribeDBClustersResponse } from "./DescribeDBClusters/res";
+import { DescribeDatabasesRequest } from "./DescribeDatabases/req";
+import { DescribeDatabasesResponse } from "./DescribeDatabases/res";
+import { DescribeRegionsRequest } from "./DescribeRegions/req";
+import { DescribeRegionsResponse } from "./DescribeRegions/res";
+import { GrantAccountPrivilegeRequest } from "./GrantAccountPrivilege/req";
+import { GrantAccountPrivilegeResponse } from "./GrantAccountPrivilege/res";
+import { ModifyAccountDescriptionRequest } from "./ModifyAccountDescription/req";
+import { ModifyAccountDescriptionResponse } from "./ModifyAccountDescription/res";
+import { ModifyAccountPasswordRequest } from "./ModifyAccountPassword/req";
+import { ModifyAccountPasswordResponse } from "./ModifyAccountPassword/res";
+import { ModifyAutoRenewAttributeRequest } from "./ModifyAutoRenewAttribute/req";
+import { ModifyAutoRenewAttributeResponse } from "./ModifyAutoRenewAttribute/res";
+import { ModifyBackupPolicyRequest } from "./ModifyBackupPolicy/req";
+import { ModifyBackupPolicyResponse } from "./ModifyBackupPolicy/res";
+import { ModifyDBClusterAccessWhitelistRequest } from "./ModifyDBClusterAccessWhitelist/req";
+import { ModifyDBClusterAccessWhitelistResponse } from "./ModifyDBClusterAccessWhitelist/res";
+import { ModifyDBClusterDescriptionRequest } from "./ModifyDBClusterDescription/req";
+import { ModifyDBClusterDescriptionResponse } from "./ModifyDBClusterDescription/res";
+import { ModifyDBClusterEndpointRequest } from "./ModifyDBClusterEndpoint/req";
+import { ModifyDBClusterEndpointResponse } from "./ModifyDBClusterEndpoint/res";
+import { ModifyDBClusterMaintainTimeRequest } from "./ModifyDBClusterMaintainTime/req";
+import { ModifyDBClusterMaintainTimeResponse } from "./ModifyDBClusterMaintainTime/res";
+import { ModifyDBClusterParametersRequest } from "./ModifyDBClusterParameters/req";
+import { ModifyDBClusterParametersResponse } from "./ModifyDBClusterParameters/res";
+import { ModifyDBDescriptionRequest } from "./ModifyDBDescription/req";
+import { ModifyDBDescriptionResponse } from "./ModifyDBDescription/res";
+import { ModifyDBEndpointAddressRequest } from "./ModifyDBEndpointAddress/req";
+import { ModifyDBEndpointAddressResponse } from "./ModifyDBEndpointAddress/res";
+import { ModifyDBNodeClassRequest } from "./ModifyDBNodeClass/req";
+import { ModifyDBNodeClassResponse } from "./ModifyDBNodeClass/res";
+import { ResetAccountRequest } from "./ResetAccount/req";
+import { ResetAccountResponse } from "./ResetAccount/res";
+import { RestartDBNodeRequest } from "./RestartDBNode/req";
+import { RestartDBNodeResponse } from "./RestartDBNode/res";
+import { RevokeAccountPrivilegeRequest } from "./RevokeAccountPrivilege/req";
+import { RevokeAccountPrivilegeResponse } from "./RevokeAccountPrivilege/res";
+import { TagResourcesRequest } from "./TagResources/req";
+import { TagResourcesResponse } from "./TagResources/res";
+import { UntagResourcesRequest } from "./UntagResources/req";
+import { UntagResourcesResponse } from "./UntagResources/res";
+import { CloseDBClusterMigrationRequest } from "./CloseDBClusterMigration/req";
+import { CloseDBClusterMigrationResponse } from "./CloseDBClusterMigration/res";
+import { DescribeDBClusterMigrationRequest } from "./DescribeDBClusterMigration/req";
+import { DescribeDBClusterMigrationResponse } from "./DescribeDBClusterMigration/res";
+import { ModifyDBClusterMigrationRequest } from "./ModifyDBClusterMigration/req";
+import { ModifyDBClusterMigrationResponse } from "./ModifyDBClusterMigration/res";
+import { ModifyDBNodeConfigRequest } from "./ModifyDBNodeConfig/req";
+import { ModifyDBNodeConfigResponse } from "./ModifyDBNodeConfig/res";
+
 interface POLARDB {
-    CreateAccount(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "AccountName": string;
-        "AccountPassword": string;
-        "OwnerId"?: number;
-        "AccountType"?: string;
-        "AccountDescription"?: string;
-        "DBName"?: string;
-        "AccountPrivilege"?: string;
-    }): Promise<{}>;
-    CreateBackup(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    CreateDBCluster(query: {
-        "RegionId": string;
-        "DBType": string;
-        "DBVersion": string;
-        "DBNodeClass": string;
-        "PayType": string;
-        "OwnerId"?: number;
-        "ZoneId"?: string;
-        "Engine"?: string;
-        "ClusterNetworkType"?: string;
-        "DBClusterDescription"?: string;
-        "AutoRenew"?: boolean;
-        "Period"?: string;
-        "UsedTime"?: string;
-        "VPCId"?: string;
-        "VSwitchId"?: string;
-        "CreationOption"?: string;
-        "SourceResourceId"?: string;
-        "CloneDataPoint"?: string;
-        "ClientToken"?: string;
-    }): Promise<{}>;
-    CreateDBClusterEndpoint(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "EndpointType": string;
-        "OwnerId"?: number;
-        "Nodes"?: string;
-        "ReadWriteMode"?: string;
-        "AutoAddNewNodes"?: string;
-        "EndpointConfig"?: string;
-        "ClientToken"?: string;
-    }): Promise<{}>;
-    CreateDBEndpointAddress(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "DBEndpointId": string;
-        "NetType": string;
-        "OwnerId"?: number;
-        "ConnectionStringPrefix"?: string;
-    }): Promise<{}>;
-    CreateDBNodes(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "DBNode": string[];
-        "OwnerId"?: number;
-        "ClientToken"?: string;
-    }): Promise<{}>;
-    CreateDatabase(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "DBName": string;
-        "CharacterSetName": string;
-        "OwnerId"?: number;
-        "DBDescription"?: string;
-        "AccountName"?: string;
-        "AccountPrivilege"?: string;
-        "Collate"?: string;
-        "Ctype"?: string;
-    }): Promise<{}>;
-    DeleteAccount(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "AccountName": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DeleteBackup(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "BackupId": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DeleteDBCluster(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DeleteDBClusterEndpoint(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "DBEndpointId": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DeleteDBEndpointAddress(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "DBEndpointId": string;
-        "NetType": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DeleteDBNodes(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "DBNodeId": string[];
-        "OwnerId"?: number;
-        "ClientToken"?: string;
-    }): Promise<{}>;
-    DeleteDatabase(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "DBName": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DescribeAccounts(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "OwnerId"?: number;
-        "AccountName"?: string;
-    }): Promise<{}>;
-    DescribeAutoRenewAttribute(query: {
-        "RegionId": string;
-        "OwnerId"?: number;
-        "DBClusterIds"?: string;
-        "PageSize"?: number;
-        "PageNumber"?: number;
-    }): Promise<{}>;
-    DescribeBackupPolicy(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DescribeBackups(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "StartTime": string;
-        "EndTime": string;
-        "OwnerId"?: number;
-        "BackupId"?: string;
-        "BackupStatus"?: string;
-        "BackupMode"?: string;
-        "PageSize"?: number;
-        "PageNumber"?: number;
-    }): Promise<{}>;
-    DescribeDBClusterAccessWhitelist(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DescribeDBClusterAttribute(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DescribeDBClusterEndpoints(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "OwnerId"?: number;
-        "DBEndpointId"?: string;
-    }): Promise<{}>;
-    DescribeDBClusterParameters(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DescribeDBClusters(query: {
-        "RegionId": string;
-        "OwnerId"?: number;
-        "DBClusterIds"?: string;
-        "DBClusterDescription"?: string;
-        "DBClusterStatus"?: string;
-        "DBType"?: string;
-        "Tag"?: string[];
-        "PageSize"?: number;
-        "PageNumber"?: number;
-    }): Promise<{}>;
-    DescribeDatabases(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "OwnerId"?: number;
-        "DBName"?: string;
-    }): Promise<{}>;
-    DescribeRegions(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    GrantAccountPrivilege(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "AccountName": string;
-        "DBName": string;
-        "AccountPrivilege": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    ModifyAccountDescription(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "AccountName": string;
-        "AccountDescription": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    ModifyAccountPassword(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "AccountName": string;
-        "NewAccountPassword": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    ModifyAutoRenewAttribute(query: {
-        "RegionId": string;
-        "DBClusterIds": string;
-        "OwnerId"?: number;
-        "RenewalStatus"?: string;
-        "Duration"?: string;
-        "PeriodUnit"?: string;
-    }): Promise<{}>;
-    ModifyBackupPolicy(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "PreferredBackupTime": string;
-        "PreferredBackupPeriod": string;
-        "OwnerId"?: number;
-        "BackupRetentionPeriod"?: string;
-    }): Promise<{}>;
-    ModifyDBClusterAccessWhitelist(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "SecurityIps": string;
-        "OwnerId"?: number;
-        "DBClusterIPArrayName"?: string;
-        "DBClusterIPArrayAttribute"?: string;
-    }): Promise<{}>;
-    ModifyDBClusterDescription(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "DBClusterDescription": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    ModifyDBClusterEndpoint(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "DBEndpointId": string;
-        "OwnerId"?: number;
-        "Nodes"?: string;
-        "ReadWriteMode"?: string;
-        "AutoAddNewNodes"?: string;
-        "EndpointConfig"?: string;
-    }): Promise<{}>;
-    ModifyDBClusterMaintainTime(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "MaintainTime": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    ModifyDBClusterParameters(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "Parameters": string;
-        "OwnerId"?: number;
-        "EffectiveTime"?: string;
-    }): Promise<{}>;
-    ModifyDBDescription(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "DBName": string;
-        "DBDescription": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    ModifyDBEndpointAddress(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "DBEndpointId": string;
-        "NetType": string;
-        "OwnerId"?: number;
-        "ConnectionStringPrefix"?: string;
-    }): Promise<{}>;
-    ModifyDBNodeClass(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "ModifyType": string;
-        "DBNodeTargetClass": string;
-        "OwnerId"?: number;
-        "ClientToken"?: string;
-    }): Promise<{}>;
-    ResetAccount(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "AccountName": string;
-        "AccountPassword": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    RestartDBNode(query: {
-        "RegionId"?: string;
-        "DBNodeId": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    RevokeAccountPrivilege(query: {
-        "RegionId"?: string;
-        "DBClusterId": string;
-        "AccountName": string;
-        "DBName": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    TagResources(query: {
-        "RegionId": string;
-        "ResourceType": string;
-        "ResourceId": string[];
-        "Tag": string[];
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    UntagResources(query: {
-        "RegionId": string;
-        "ResourceType": string;
-        "ResourceId": string[];
-        "OwnerId"?: number;
-        "TagKey"?: string[];
-        "All"?: boolean;
-    }): Promise<{}>;
-    CloseDBClusterMigration(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "DBClusterId": string;
-        "ContinueEnableBinlog"?: boolean;
-    }): Promise<{}>;
-    DescribeDBClusterMigration(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "DBClusterId": string;
-    }): Promise<{}>;
-    ModifyDBClusterMigration(query: {
-        "RegionId"?: string;
-        "SourceRDSDBInstanceId": string;
-        "NewMasterInstanceId": string;
-        "OwnerId"?: number;
-        "DBClusterId": string;
-    }): Promise<{}>;
-    ModifyDBNodeConfig(query: {
-        "RegionId"?: string;
-        "DBNodeId": string;
-        "ConfigName": string;
-        "ConfigValue": string;
-        "OwnerId"?: number;
-        "DBClusterId": string;
-    }): Promise<{}>;
+    CreateAccount(query: CreateAccountRequest): Promise<CreateAccountResponse>;
+    CreateBackup(query: CreateBackupRequest): Promise<CreateBackupResponse>;
+    CreateDBCluster(query: CreateDBClusterRequest): Promise<CreateDBClusterResponse>;
+    CreateDBClusterEndpoint(query: CreateDBClusterEndpointRequest): Promise<CreateDBClusterEndpointResponse>;
+    CreateDBEndpointAddress(query: CreateDBEndpointAddressRequest): Promise<CreateDBEndpointAddressResponse>;
+    CreateDBNodes(query: CreateDBNodesRequest): Promise<CreateDBNodesResponse>;
+    CreateDatabase(query: CreateDatabaseRequest): Promise<CreateDatabaseResponse>;
+    DeleteAccount(query: DeleteAccountRequest): Promise<DeleteAccountResponse>;
+    DeleteBackup(query: DeleteBackupRequest): Promise<DeleteBackupResponse>;
+    DeleteDBCluster(query: DeleteDBClusterRequest): Promise<DeleteDBClusterResponse>;
+    DeleteDBClusterEndpoint(query: DeleteDBClusterEndpointRequest): Promise<DeleteDBClusterEndpointResponse>;
+    DeleteDBEndpointAddress(query: DeleteDBEndpointAddressRequest): Promise<DeleteDBEndpointAddressResponse>;
+    DeleteDBNodes(query: DeleteDBNodesRequest): Promise<DeleteDBNodesResponse>;
+    DeleteDatabase(query: DeleteDatabaseRequest): Promise<DeleteDatabaseResponse>;
+    DescribeAccounts(query: DescribeAccountsRequest): Promise<DescribeAccountsResponse>;
+    DescribeAutoRenewAttribute(query: DescribeAutoRenewAttributeRequest): Promise<DescribeAutoRenewAttributeResponse>;
+    DescribeBackupPolicy(query: DescribeBackupPolicyRequest): Promise<DescribeBackupPolicyResponse>;
+    DescribeBackups(query: DescribeBackupsRequest): Promise<DescribeBackupsResponse>;
+    DescribeDBClusterAccessWhitelist(query: DescribeDBClusterAccessWhitelistRequest): Promise<DescribeDBClusterAccessWhitelistResponse>;
+    DescribeDBClusterAttribute(query: DescribeDBClusterAttributeRequest): Promise<DescribeDBClusterAttributeResponse>;
+    DescribeDBClusterEndpoints(query: DescribeDBClusterEndpointsRequest): Promise<DescribeDBClusterEndpointsResponse>;
+    DescribeDBClusterParameters(query: DescribeDBClusterParametersRequest): Promise<DescribeDBClusterParametersResponse>;
+    DescribeDBClusters(query: DescribeDBClustersRequest): Promise<DescribeDBClustersResponse>;
+    DescribeDatabases(query: DescribeDatabasesRequest): Promise<DescribeDatabasesResponse>;
+    DescribeRegions(query: DescribeRegionsRequest): Promise<DescribeRegionsResponse>;
+    GrantAccountPrivilege(query: GrantAccountPrivilegeRequest): Promise<GrantAccountPrivilegeResponse>;
+    ModifyAccountDescription(query: ModifyAccountDescriptionRequest): Promise<ModifyAccountDescriptionResponse>;
+    ModifyAccountPassword(query: ModifyAccountPasswordRequest): Promise<ModifyAccountPasswordResponse>;
+    ModifyAutoRenewAttribute(query: ModifyAutoRenewAttributeRequest): Promise<ModifyAutoRenewAttributeResponse>;
+    ModifyBackupPolicy(query: ModifyBackupPolicyRequest): Promise<ModifyBackupPolicyResponse>;
+    ModifyDBClusterAccessWhitelist(query: ModifyDBClusterAccessWhitelistRequest): Promise<ModifyDBClusterAccessWhitelistResponse>;
+    ModifyDBClusterDescription(query: ModifyDBClusterDescriptionRequest): Promise<ModifyDBClusterDescriptionResponse>;
+    ModifyDBClusterEndpoint(query: ModifyDBClusterEndpointRequest): Promise<ModifyDBClusterEndpointResponse>;
+    ModifyDBClusterMaintainTime(query: ModifyDBClusterMaintainTimeRequest): Promise<ModifyDBClusterMaintainTimeResponse>;
+    ModifyDBClusterParameters(query: ModifyDBClusterParametersRequest): Promise<ModifyDBClusterParametersResponse>;
+    ModifyDBDescription(query: ModifyDBDescriptionRequest): Promise<ModifyDBDescriptionResponse>;
+    ModifyDBEndpointAddress(query: ModifyDBEndpointAddressRequest): Promise<ModifyDBEndpointAddressResponse>;
+    ModifyDBNodeClass(query: ModifyDBNodeClassRequest): Promise<ModifyDBNodeClassResponse>;
+    ResetAccount(query: ResetAccountRequest): Promise<ResetAccountResponse>;
+    RestartDBNode(query: RestartDBNodeRequest): Promise<RestartDBNodeResponse>;
+    RevokeAccountPrivilege(query: RevokeAccountPrivilegeRequest): Promise<RevokeAccountPrivilegeResponse>;
+    TagResources(query: TagResourcesRequest): Promise<TagResourcesResponse>;
+    UntagResources(query: UntagResourcesRequest): Promise<UntagResourcesResponse>;
+    CloseDBClusterMigration(query: CloseDBClusterMigrationRequest): Promise<CloseDBClusterMigrationResponse>;
+    DescribeDBClusterMigration(query: DescribeDBClusterMigrationRequest): Promise<DescribeDBClusterMigrationResponse>;
+    ModifyDBClusterMigration(query: ModifyDBClusterMigrationRequest): Promise<ModifyDBClusterMigrationResponse>;
+    ModifyDBNodeConfig(query: ModifyDBNodeConfigRequest): Promise<ModifyDBNodeConfigResponse>;
 }
 export default POLARDB;

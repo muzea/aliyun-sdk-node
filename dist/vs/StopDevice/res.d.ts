@@ -1,0 +1,3 @@
+interface StopDeviceResponse {
+}
+export { StopDeviceResponse };

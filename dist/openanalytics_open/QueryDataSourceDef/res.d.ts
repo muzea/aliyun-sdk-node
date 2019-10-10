@@ -1,0 +1,3 @@
+interface QueryDataSourceDefResponse {
+}
+export { QueryDataSourceDefResponse };

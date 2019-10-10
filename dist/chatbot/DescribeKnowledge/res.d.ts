@@ -1,0 +1,3 @@
+interface DescribeKnowledgeResponse {
+}
+export { DescribeKnowledgeResponse };

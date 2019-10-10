@@ -1,0 +1,3 @@
+interface GenerateVulReportResponse {
+}
+export { GenerateVulReportResponse };

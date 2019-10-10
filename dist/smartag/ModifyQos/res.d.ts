@@ -1,0 +1,3 @@
+interface ModifyQosResponse {
+}
+export { ModifyQosResponse };

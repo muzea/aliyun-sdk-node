@@ -1,0 +1,3 @@
+interface CreateOsVersionResponse {
+}
+export { CreateOsVersionResponse };

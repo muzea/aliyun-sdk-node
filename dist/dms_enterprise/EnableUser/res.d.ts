@@ -1,0 +1,3 @@
+interface EnableUserResponse {
+}
+export { EnableUserResponse };

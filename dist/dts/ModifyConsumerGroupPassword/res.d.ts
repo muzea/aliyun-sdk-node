@@ -1,0 +1,3 @@
+interface ModifyConsumerGroupPasswordResponse {
+}
+export { ModifyConsumerGroupPasswordResponse };

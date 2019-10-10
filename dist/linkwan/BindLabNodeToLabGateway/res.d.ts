@@ -1,0 +1,3 @@
+interface BindLabNodeToLabGatewayResponse {
+}
+export { BindLabNodeToLabGatewayResponse };

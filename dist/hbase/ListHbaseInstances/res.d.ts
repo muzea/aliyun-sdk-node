@@ -1,0 +1,3 @@
+interface ListHbaseInstancesResponse {
+}
+export { ListHbaseInstancesResponse };

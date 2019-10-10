@@ -1,0 +1,3 @@
+interface GetEndPointByDomainResponse {
+}
+export { GetEndPointByDomainResponse };

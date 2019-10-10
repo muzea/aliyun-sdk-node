@@ -1,0 +1,3 @@
+interface SearchWorkitemResponse {
+}
+export { SearchWorkitemResponse };

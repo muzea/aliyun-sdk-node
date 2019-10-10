@@ -1,0 +1,3 @@
+interface GetOwnedJoinPermissionResponse {
+}
+export { GetOwnedJoinPermissionResponse };

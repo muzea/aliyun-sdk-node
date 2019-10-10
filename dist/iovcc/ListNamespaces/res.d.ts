@@ -1,0 +1,3 @@
+interface ListNamespacesResponse {
+}
+export { ListNamespacesResponse };

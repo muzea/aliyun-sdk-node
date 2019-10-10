@@ -1,0 +1,3 @@
+interface UpgradeMinorVersionResponse {
+}
+export { UpgradeMinorVersionResponse };

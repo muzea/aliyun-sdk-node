@@ -1,0 +1,3 @@
+interface UpdateProjectResponse {
+}
+export { UpdateProjectResponse };

@@ -1,0 +1,3 @@
+interface DeleteAlgoLibResponse {
+}
+export { DeleteAlgoLibResponse };

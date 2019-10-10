@@ -1,0 +1,3 @@
+interface ModifyElasticBandWidthResponse {
+}
+export { ModifyElasticBandWidthResponse };

@@ -1,0 +1,3 @@
+interface GetStackResourceResponse {
+}
+export { GetStackResourceResponse };

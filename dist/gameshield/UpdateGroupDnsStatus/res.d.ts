@@ -1,0 +1,3 @@
+interface UpdateGroupDnsStatusResponse {
+}
+export { UpdateGroupDnsStatusResponse };

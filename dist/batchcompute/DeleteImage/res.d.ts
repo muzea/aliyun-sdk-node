@@ -1,0 +1,3 @@
+interface DeleteImageResponse {
+}
+export { DeleteImageResponse };

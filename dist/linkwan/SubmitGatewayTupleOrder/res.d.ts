@@ -1,0 +1,3 @@
+interface SubmitGatewayTupleOrderResponse {
+}
+export { SubmitGatewayTupleOrderResponse };

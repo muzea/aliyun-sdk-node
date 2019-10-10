@@ -1,0 +1,3 @@
+interface ExploreHiTSDBInstanceDataResponse {
+}
+export { ExploreHiTSDBInstanceDataResponse };

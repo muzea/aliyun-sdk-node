@@ -1,0 +1,3 @@
+interface AddRtcAccountResponse {
+}
+export { AddRtcAccountResponse };

@@ -1,59 +1,25 @@
+import { CreateComputeTaskRequest } from "./CreateComputeTask/req";
+import { CreateComputeTaskResponse } from "./CreateComputeTask/res";
+import { CreateProjectRequest } from "./CreateProject/req";
+import { CreateProjectResponse } from "./CreateProject/res";
+import { DescribeComputeTasksRequest } from "./DescribeComputeTasks/req";
+import { DescribeComputeTasksResponse } from "./DescribeComputeTasks/res";
+import { DescribeDevicesRequest } from "./DescribeDevices/req";
+import { DescribeDevicesResponse } from "./DescribeDevices/res";
+import { DescribeProjectsRequest } from "./DescribeProjects/req";
+import { DescribeProjectsResponse } from "./DescribeProjects/res";
+import { GetPictureSearchResultsRequest } from "./GetPictureSearchResults/req";
+import { GetPictureSearchResultsResponse } from "./GetPictureSearchResults/res";
+import { ImportDevicesRequest } from "./ImportDevices/req";
+import { ImportDevicesResponse } from "./ImportDevices/res";
+
 interface VCS {
-    CreateComputeTask(query: {
-        "RegionId": string;
-        "VcsId": string;
-        "ProjectId": string;
-        "TaskName": string;
-        "DeviceCodeList": string;
-        "AlgorithmCodeList": string;
-    }): Promise<{}>;
-    CreateProject(query: {
-        "RegionId": string;
-        "VcsId": string;
-        "ProjectName": string;
-        "TimeZoneCode": string;
-        "AreaCode": string;
-    }): Promise<{}>;
-    DescribeComputeTasks(query: {
-        "RegionId": string;
-        "VcsId": string;
-        "ProjectId": string;
-        "SearchKey"?: string;
-        "PageNum"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    DescribeDevices(query: {
-        "RegionId": string;
-        "VcsId": string;
-        "ProjectId": string;
-        "PageSize"?: number;
-        "PageNum"?: number;
-        "FilterKey"?: string;
-        "SearchKey"?: string;
-    }): Promise<{}>;
-    DescribeProjects(query: {
-        "RegionId": string;
-        "VcsId": string;
-        "ProjectName"?: string;
-        "PageSize"?: number;
-        "PageNum"?: number;
-    }): Promise<{}>;
-    GetPictureSearchResults(query: {
-        "RegionId": string;
-        "VcsId": string;
-        "AlgorithmType": string;
-        "PictureContents"?: string;
-        "TopNum"?: number;
-        "PageNum"?: number;
-        "BeginTime"?: string;
-        "EndTime"?: string;
-        "DeviceList"?: string;
-    }): Promise<{}>;
-    ImportDevices(query: {
-        "RegionId": string;
-        "VcsId": string;
-        "ProjectId": string;
-        "DeviceList": string;
-    }): Promise<{}>;
+    CreateComputeTask(query: CreateComputeTaskRequest): Promise<CreateComputeTaskResponse>;
+    CreateProject(query: CreateProjectRequest): Promise<CreateProjectResponse>;
+    DescribeComputeTasks(query: DescribeComputeTasksRequest): Promise<DescribeComputeTasksResponse>;
+    DescribeDevices(query: DescribeDevicesRequest): Promise<DescribeDevicesResponse>;
+    DescribeProjects(query: DescribeProjectsRequest): Promise<DescribeProjectsResponse>;
+    GetPictureSearchResults(query: GetPictureSearchResultsRequest): Promise<GetPictureSearchResultsResponse>;
+    ImportDevices(query: ImportDevicesRequest): Promise<ImportDevicesResponse>;
 }
 export default VCS;

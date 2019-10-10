@@ -1,0 +1,3 @@
+interface DeleteMultipleObjectsResponse {
+}
+export { DeleteMultipleObjectsResponse };

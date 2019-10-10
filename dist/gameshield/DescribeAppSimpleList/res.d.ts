@@ -1,0 +1,3 @@
+interface DescribeAppSimpleListResponse {
+}
+export { DescribeAppSimpleListResponse };

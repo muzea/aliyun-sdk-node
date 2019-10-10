@@ -1,0 +1,3 @@
+interface GetTrafficByRegionResponse {
+}
+export { GetTrafficByRegionResponse };

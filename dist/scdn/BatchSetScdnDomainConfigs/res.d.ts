@@ -1,0 +1,3 @@
+interface BatchSetScdnDomainConfigsResponse {
+}
+export { BatchSetScdnDomainConfigsResponse };

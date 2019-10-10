@@ -1,0 +1,3 @@
+interface ModifyCcCustomStatusResponse {
+}
+export { ModifyCcCustomStatusResponse };

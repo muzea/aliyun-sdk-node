@@ -1,0 +1,3 @@
+interface DescribeHistoryEventTasksResponse {
+}
+export { DescribeHistoryEventTasksResponse };

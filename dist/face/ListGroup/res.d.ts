@@ -1,0 +1,3 @@
+interface ListGroupResponse {
+}
+export { ListGroupResponse };

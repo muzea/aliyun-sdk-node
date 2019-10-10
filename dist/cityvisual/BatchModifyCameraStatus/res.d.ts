@@ -1,0 +1,3 @@
+interface BatchModifyCameraStatusResponse {
+}
+export { BatchModifyCameraStatusResponse };

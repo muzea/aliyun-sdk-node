@@ -1,0 +1,3 @@
+interface BatchQueryDeviceDetailResponse {
+}
+export { BatchQueryDeviceDetailResponse };

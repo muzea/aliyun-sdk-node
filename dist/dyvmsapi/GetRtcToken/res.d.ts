@@ -1,0 +1,3 @@
+interface GetRtcTokenResponse {
+}
+export { GetRtcTokenResponse };

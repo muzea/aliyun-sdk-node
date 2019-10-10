@@ -1,0 +1,3 @@
+interface UpdateTriggerResponse {
+}
+export { UpdateTriggerResponse };

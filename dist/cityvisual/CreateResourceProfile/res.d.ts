@@ -1,0 +1,3 @@
+interface CreateResourceProfileResponse {
+}
+export { CreateResourceProfileResponse };

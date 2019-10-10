@@ -1,225 +1,88 @@
+import { ListPushRecordsRequest } from "./ListPushRecords/req";
+import { ListPushRecordsResponse } from "./ListPushRecords/res";
+import { QueryTagsRequest } from "./QueryTags/req";
+import { QueryTagsResponse } from "./QueryTags/res";
+import { PushMessageToiOSRequest } from "./PushMessageToiOS/req";
+import { PushMessageToiOSResponse } from "./PushMessageToiOS/res";
+import { BindPhoneRequest } from "./BindPhone/req";
+import { BindPhoneResponse } from "./BindPhone/res";
+import { BindTagRequest } from "./BindTag/req";
+import { BindTagResponse } from "./BindTag/res";
+import { CheckDeviceRequest } from "./CheckDevice/req";
+import { CheckDeviceResponse } from "./CheckDevice/res";
+import { QueryAliasesRequest } from "./QueryAliases/req";
+import { QueryAliasesResponse } from "./QueryAliases/res";
+import { QueryDeviceInfoRequest } from "./QueryDeviceInfo/req";
+import { QueryDeviceInfoResponse } from "./QueryDeviceInfo/res";
+import { QueryDeviceStatRequest } from "./QueryDeviceStat/req";
+import { QueryDeviceStatResponse } from "./QueryDeviceStat/res";
+import { QueryDevicesByAliasRequest } from "./QueryDevicesByAlias/req";
+import { QueryDevicesByAliasResponse } from "./QueryDevicesByAlias/res";
+import { QueryPushListRequest } from "./QueryPushList/req";
+import { QueryPushListResponse } from "./QueryPushList/res";
+import { QueryPushStatByMsgRequest } from "./QueryPushStatByMsg/req";
+import { QueryPushStatByMsgResponse } from "./QueryPushStatByMsg/res";
+import { RemoveTagRequest } from "./RemoveTag/req";
+import { RemoveTagResponse } from "./RemoveTag/res";
+import { UnbindTagRequest } from "./UnbindTag/req";
+import { UnbindTagResponse } from "./UnbindTag/res";
+import { BindAliasRequest } from "./BindAlias/req";
+import { BindAliasResponse } from "./BindAlias/res";
+import { CancelPushRequest } from "./CancelPush/req";
+import { CancelPushResponse } from "./CancelPush/res";
+import { CheckDevicesRequest } from "./CheckDevices/req";
+import { CheckDevicesResponse } from "./CheckDevices/res";
+import { ListSummaryAppsRequest } from "./ListSummaryApps/req";
+import { ListSummaryAppsResponse } from "./ListSummaryApps/res";
+import { ListTagsRequest } from "./ListTags/req";
+import { ListTagsResponse } from "./ListTags/res";
+import { PushRequest } from "./Push/req";
+import { PushResponse } from "./Push/res";
+import { PushMessageToAndroidRequest } from "./PushMessageToAndroid/req";
+import { PushMessageToAndroidResponse } from "./PushMessageToAndroid/res";
+import { PushNoticeToAndroidRequest } from "./PushNoticeToAndroid/req";
+import { PushNoticeToAndroidResponse } from "./PushNoticeToAndroid/res";
+import { PushNoticeToiOSRequest } from "./PushNoticeToiOS/req";
+import { PushNoticeToiOSResponse } from "./PushNoticeToiOS/res";
+import { QueryDevicesByAccountRequest } from "./QueryDevicesByAccount/req";
+import { QueryDevicesByAccountResponse } from "./QueryDevicesByAccount/res";
+import { QueryPushStatByAppRequest } from "./QueryPushStatByApp/req";
+import { QueryPushStatByAppResponse } from "./QueryPushStatByApp/res";
+import { QueryUniqueDeviceStatRequest } from "./QueryUniqueDeviceStat/req";
+import { QueryUniqueDeviceStatResponse } from "./QueryUniqueDeviceStat/res";
+import { UnbindAliasRequest } from "./UnbindAlias/req";
+import { UnbindAliasResponse } from "./UnbindAlias/res";
+import { UnbindPhoneRequest } from "./UnbindPhone/req";
+import { UnbindPhoneResponse } from "./UnbindPhone/res";
+
 interface PUSH {
-    ListPushRecords(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "PushType": string;
-        "StartTime": string;
-        "EndTime": string;
-        "Page"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    QueryTags(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "ClientKey": string;
-        "KeyType": string;
-    }): Promise<{}>;
-    PushMessageToiOS(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "Target": string;
-        "TargetValue": string;
-        "Title": string;
-        "Body": string;
-        "JobKey"?: string;
-    }): Promise<{}>;
-    BindPhone(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "DeviceId": string;
-        "PhoneNumber": string;
-    }): Promise<{}>;
-    BindTag(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "ClientKey": string;
-        "KeyType": string;
-        "TagName": string;
-    }): Promise<{}>;
-    CheckDevice(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "DeviceId": string;
-    }): Promise<{}>;
-    QueryAliases(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "DeviceId": string;
-    }): Promise<{}>;
-    QueryDeviceInfo(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "DeviceId": string;
-    }): Promise<{}>;
-    QueryDeviceStat(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "StartTime": string;
-        "EndTime": string;
-        "DeviceType": string;
-        "QueryType": string;
-    }): Promise<{}>;
-    QueryDevicesByAlias(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "Alias": string;
-    }): Promise<{}>;
-    QueryPushList(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "PushType": string;
-        "StartTime": string;
-        "EndTime": string;
-        "Page"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    QueryPushStatByMsg(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "MessageId": number;
-    }): Promise<{}>;
-    RemoveTag(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "TagName": string;
-    }): Promise<{}>;
-    UnbindTag(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "ClientKey": string;
-        "KeyType": string;
-        "TagName": string;
-    }): Promise<{}>;
-    BindAlias(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "DeviceId": string;
-        "AliasName": string;
-    }): Promise<{}>;
-    CancelPush(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "MessageId": number;
-    }): Promise<{}>;
-    CheckDevices(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "DeviceIds": string;
-    }): Promise<{}>;
-    ListSummaryApps(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ListTags(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-    }): Promise<{}>;
-    Push(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "PushType": string;
-        "DeviceType": string;
-        "Target": string;
-        "TargetValue": string;
-        "Body": string;
-        "Title"?: string;
-        "JobKey"?: string;
-        "SendSpeed"?: number;
-        "StoreOffline"?: boolean;
-        "PushTime"?: string;
-        "ExpireTime"?: string;
-        "iOSApnsEnv"?: string;
-        "iOSRemind"?: boolean;
-        "iOSRemindBody"?: string;
-        "iOSBadge"?: number;
-        "iOSBadgeAutoIncrement"?: boolean;
-        "iOSSilentNotification"?: boolean;
-        "iOSMusic"?: string;
-        "iOSSubtitle"?: string;
-        "iOSNotificationCategory"?: string;
-        "iOSMutableContent"?: boolean;
-        "iOSExtParameters"?: string;
-        "AndroidNotifyType"?: string;
-        "AndroidOpenType"?: string;
-        "AndroidActivity"?: string;
-        "AndroidMusic"?: string;
-        "AndroidOpenUrl"?: string;
-        "AndroidXiaoMiActivity"?: string;
-        "AndroidXiaoMiNotifyTitle"?: string;
-        "AndroidXiaoMiNotifyBody"?: string;
-        "AndroidPopupActivity"?: string;
-        "AndroidPopupTitle"?: string;
-        "AndroidPopupBody"?: string;
-        "AndroidNotificationBarType"?: number;
-        "AndroidNotificationBarPriority"?: number;
-        "AndroidExtParameters"?: string;
-        "AndroidRemind"?: boolean;
-        "AndroidNotificationChannel"?: string;
-        "SmsTemplateName"?: string;
-        "SmsSignName"?: string;
-        "SmsParams"?: string;
-        "SmsDelaySecs"?: number;
-        "SmsSendPolicy"?: number;
-    }): Promise<{}>;
-    PushMessageToAndroid(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "Target": string;
-        "TargetValue": string;
-        "Title": string;
-        "Body": string;
-        "JobKey"?: string;
-    }): Promise<{}>;
-    PushNoticeToAndroid(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "Target": string;
-        "TargetValue": string;
-        "Title": string;
-        "Body": string;
-        "JobKey"?: string;
-        "ExtParameters"?: string;
-    }): Promise<{}>;
-    PushNoticeToiOS(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "Target": string;
-        "TargetValue": string;
-        "ApnsEnv": string;
-        "Body": string;
-        "Title"?: string;
-        "JobKey"?: string;
-        "ExtParameters"?: string;
-    }): Promise<{}>;
-    QueryDevicesByAccount(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "Account": string;
-    }): Promise<{}>;
-    QueryPushStatByApp(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "StartTime": string;
-        "EndTime": string;
-        "Granularity": string;
-    }): Promise<{}>;
-    QueryUniqueDeviceStat(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "StartTime": string;
-        "EndTime": string;
-        "Granularity": string;
-    }): Promise<{}>;
-    UnbindAlias(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "DeviceId": string;
-        "AliasName"?: string;
-        "UnbindAll"?: boolean;
-    }): Promise<{}>;
-    UnbindPhone(query: {
-        "RegionId"?: string;
-        "AppKey": number;
-        "DeviceId": string;
-    }): Promise<{}>;
+    ListPushRecords(query: ListPushRecordsRequest): Promise<ListPushRecordsResponse>;
+    QueryTags(query: QueryTagsRequest): Promise<QueryTagsResponse>;
+    PushMessageToiOS(query: PushMessageToiOSRequest): Promise<PushMessageToiOSResponse>;
+    BindPhone(query: BindPhoneRequest): Promise<BindPhoneResponse>;
+    BindTag(query: BindTagRequest): Promise<BindTagResponse>;
+    CheckDevice(query: CheckDeviceRequest): Promise<CheckDeviceResponse>;
+    QueryAliases(query: QueryAliasesRequest): Promise<QueryAliasesResponse>;
+    QueryDeviceInfo(query: QueryDeviceInfoRequest): Promise<QueryDeviceInfoResponse>;
+    QueryDeviceStat(query: QueryDeviceStatRequest): Promise<QueryDeviceStatResponse>;
+    QueryDevicesByAlias(query: QueryDevicesByAliasRequest): Promise<QueryDevicesByAliasResponse>;
+    QueryPushList(query: QueryPushListRequest): Promise<QueryPushListResponse>;
+    QueryPushStatByMsg(query: QueryPushStatByMsgRequest): Promise<QueryPushStatByMsgResponse>;
+    RemoveTag(query: RemoveTagRequest): Promise<RemoveTagResponse>;
+    UnbindTag(query: UnbindTagRequest): Promise<UnbindTagResponse>;
+    BindAlias(query: BindAliasRequest): Promise<BindAliasResponse>;
+    CancelPush(query: CancelPushRequest): Promise<CancelPushResponse>;
+    CheckDevices(query: CheckDevicesRequest): Promise<CheckDevicesResponse>;
+    ListSummaryApps(query: ListSummaryAppsRequest): Promise<ListSummaryAppsResponse>;
+    ListTags(query: ListTagsRequest): Promise<ListTagsResponse>;
+    Push(query: PushRequest): Promise<PushResponse>;
+    PushMessageToAndroid(query: PushMessageToAndroidRequest): Promise<PushMessageToAndroidResponse>;
+    PushNoticeToAndroid(query: PushNoticeToAndroidRequest): Promise<PushNoticeToAndroidResponse>;
+    PushNoticeToiOS(query: PushNoticeToiOSRequest): Promise<PushNoticeToiOSResponse>;
+    QueryDevicesByAccount(query: QueryDevicesByAccountRequest): Promise<QueryDevicesByAccountResponse>;
+    QueryPushStatByApp(query: QueryPushStatByAppRequest): Promise<QueryPushStatByAppResponse>;
+    QueryUniqueDeviceStat(query: QueryUniqueDeviceStatRequest): Promise<QueryUniqueDeviceStatResponse>;
+    UnbindAlias(query: UnbindAliasRequest): Promise<UnbindAliasResponse>;
+    UnbindPhone(query: UnbindPhoneRequest): Promise<UnbindPhoneResponse>;
 }
 export default PUSH;

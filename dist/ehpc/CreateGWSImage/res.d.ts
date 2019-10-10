@@ -1,0 +1,3 @@
+interface CreateGWSImageResponse {
+}
+export { CreateGWSImageResponse };

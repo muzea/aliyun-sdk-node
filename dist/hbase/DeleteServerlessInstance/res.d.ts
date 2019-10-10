@@ -1,0 +1,3 @@
+interface DeleteServerlessInstanceResponse {
+}
+export { DeleteServerlessInstanceResponse };

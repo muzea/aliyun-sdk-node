@@ -1,0 +1,3 @@
+interface DescribeSubscriptionsResponse {
+}
+export { DescribeSubscriptionsResponse };

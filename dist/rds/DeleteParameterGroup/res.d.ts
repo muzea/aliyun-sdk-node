@@ -1,0 +1,3 @@
+interface DeleteParameterGroupResponse {
+}
+export { DeleteParameterGroupResponse };

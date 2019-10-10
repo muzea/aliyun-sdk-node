@@ -1,0 +1,3 @@
+interface DeleteHbaseSlbServerResponse {
+}
+export { DeleteHbaseSlbServerResponse };

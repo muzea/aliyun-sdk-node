@@ -1,0 +1,3 @@
+interface DescribePortsResponse {
+}
+export { DescribePortsResponse };

@@ -1,0 +1,3 @@
+interface SendUnicastCommandResponse {
+}
+export { SendUnicastCommandResponse };

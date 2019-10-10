@@ -1,0 +1,3 @@
+interface UnbindDriverFromEdgeInstanceResponse {
+}
+export { UnbindDriverFromEdgeInstanceResponse };

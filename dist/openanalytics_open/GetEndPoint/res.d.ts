@@ -1,0 +1,3 @@
+interface GetEndPointResponse {
+}
+export { GetEndPointResponse };

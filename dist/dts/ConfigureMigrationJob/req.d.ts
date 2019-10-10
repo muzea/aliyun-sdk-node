@@ -1,0 +1,34 @@
+interface ConfigureMigrationJobRequest {
+    "RegionId"?: string;
+    "MigrationJobId": string;
+    "MigrationJobName": string;
+    "SourceEndpoint.InstanceType": string;
+    "DestinationEndpoint.InstanceType": string;
+    "MigrationMode.StructureIntialization": boolean;
+    "MigrationMode.DataIntialization": boolean;
+    "MigrationMode.DataSynchronization": boolean;
+    "MigrationObject": string;
+    "SourceEndpoint.InstanceID"?: string;
+    "SourceEndpoint.EngineName"?: string;
+    "SourceEndpoint.Region"?: string;
+    "SourceEndpoint.IP"?: string;
+    "SourceEndpoint.Port"?: string;
+    "SourceEndpoint.OracleSID"?: string;
+    "SourceEndpoint.DatabaseName"?: string;
+    "SourceEndpoint.UserName"?: string;
+    "SourceEndpoint.Password"?: string;
+    "SourceEndpoint.OwnerID"?: string;
+    "SourceEndpoint.Role"?: string;
+    "DestinationEndpoint.InstanceID"?: string;
+    "DestinationEndpoint.EngineName"?: string;
+    "DestinationEndpoint.Region"?: string;
+    "DestinationEndpoint.IP"?: string;
+    "DestinationEndpoint.Port"?: string;
+    "DestinationEndpoint.DataBaseName"?: string;
+    "DestinationEndpoint.UserName"?: string;
+    "DestinationEndpoint.Password"?: string;
+    "MigrationReserved"?: string;
+    "Checkpoint"?: string;
+    "OwnerId"?: string;
+}
+export { ConfigureMigrationJobRequest };

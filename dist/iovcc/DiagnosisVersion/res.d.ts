@@ -1,0 +1,3 @@
+interface DiagnosisVersionResponse {
+}
+export { DiagnosisVersionResponse };

@@ -1,0 +1,3 @@
+interface GetControlRulesResponse {
+}
+export { GetControlRulesResponse };

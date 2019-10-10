@@ -1,151 +1,67 @@
+import { QosGetParamRequest } from "./QosGetParam/req";
+import { QosGetParamResponse } from "./QosGetParam/res";
+import { QosSpeedupRequest } from "./QosSpeedup/req";
+import { QosSpeedupResponse } from "./QosSpeedup/res";
+import { QueryCardFlowInfoRequest } from "./QueryCardFlowInfo/req";
+import { QueryCardFlowInfoResponse } from "./QueryCardFlowInfo/res";
+import { QueryCardInfoRequest } from "./QueryCardInfo/req";
+import { QueryCardInfoResponse } from "./QueryCardInfo/res";
+import { QueryCardStatusRequest } from "./QueryCardStatus/req";
+import { QueryCardStatusResponse } from "./QueryCardStatus/res";
+import { QueryIotCardOfferDtlRequest } from "./QueryIotCardOfferDtl/req";
+import { QueryIotCardOfferDtlResponse } from "./QueryIotCardOfferDtl/res";
+import { DoClearAuthRequest } from "./DoClearAuth/req";
+import { DoClearAuthResponse } from "./DoClearAuth/res";
+import { DoIotChgBindOrUnBindRequest } from "./DoIotChgBindOrUnBind/req";
+import { DoIotChgBindOrUnBindResponse } from "./DoIotChgBindOrUnBind/res";
+import { DoIotIsImeiExistRequest } from "./DoIotIsImeiExist/req";
+import { DoIotIsImeiExistResponse } from "./DoIotIsImeiExist/res";
+import { DoIotPoolRechargeRequest } from "./DoIotPoolRecharge/req";
+import { DoIotPoolRechargeResponse } from "./DoIotPoolRecharge/res";
+import { DoIotPostImeiRequest } from "./DoIotPostImei/req";
+import { DoIotPostImeiResponse } from "./DoIotPostImei/res";
+import { DoIotRechargeRequest } from "./DoIotRecharge/req";
+import { DoIotRechargeResponse } from "./DoIotRecharge/res";
+import { DoIotServiceStatusControlRequest } from "./DoIotServiceStatusControl/req";
+import { DoIotServiceStatusControlResponse } from "./DoIotServiceStatusControl/res";
+import { DoIotSetRemindConfigRequest } from "./DoIotSetRemindConfig/req";
+import { DoIotSetRemindConfigResponse } from "./DoIotSetRemindConfig/res";
+import { DoIotTransSilenceRequest } from "./DoIotTransSilence/req";
+import { DoIotTransSilenceResponse } from "./DoIotTransSilence/res";
+import { DoIotUpdateDeviceSnRequest } from "./DoIotUpdateDeviceSn/req";
+import { DoIotUpdateDeviceSnResponse } from "./DoIotUpdateDeviceSn/res";
+import { DoIotUserStopResumeRequest } from "./DoIotUserStopResume/req";
+import { DoIotUserStopResumeResponse } from "./DoIotUserStopResume/res";
+import { DoSendIotSmsRequest } from "./DoSendIotSms/req";
+import { DoSendIotSmsResponse } from "./DoSendIotSms/res";
+import { QosReleaseRequest } from "./QosRelease/req";
+import { QosReleaseResponse } from "./QosRelease/res";
+import { QueryGprsStatusRequest } from "./QueryGprsStatus/req";
+import { QueryGprsStatusResponse } from "./QueryGprsStatus/res";
+import { QueryPersonalInfoRequest } from "./QueryPersonalInfo/req";
+import { QueryPersonalInfoResponse } from "./QueryPersonalInfo/res";
+
 interface DYIOTAPI {
-    QosGetParam(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "Operator": string;
-        "SourcePrivateIpAddress": string;
-        "Msisdn"?: string;
-        "Imsi"?: string;
-        "Longitude"?: string;
-        "Latitude"?: string;
-        "SourcePublicIpAddress"?: string;
-    }): Promise<{}>;
-    QosSpeedup(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "Operator": string;
-        "ServiceMode": number;
-        "ServiceType": number;
-        "SourcePrivateIpAddress": string;
-        "SourcePublicIpAddress": string;
-        "DestinationIpAddress": string;
-        "Duration": number;
-        "UrlResponseBody": string;
-        "UrlResponseStatusCode": number;
-        "Msisdn"?: string;
-        "Imsi"?: string;
-        "Longitude"?: string;
-        "Latitude"?: string;
-        "SourcePort"?: number;
-        "DestinationPort"?: number;
-    }): Promise<{}>;
-    QueryCardFlowInfo(query: {
-        "RegionId"?: string;
-        "Iccid": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    QueryCardInfo(query: {
-        "RegionId"?: string;
-        "Iccid": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    QueryCardStatus(query: {
-        "RegionId"?: string;
-        "Iccid": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    QueryIotCardOfferDtl(query: {
-        "RegionId"?: string;
-        "Iccid": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DoClearAuth(query: {
-        "RegionId"?: string;
-        "Iccid": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DoIotChgBindOrUnBind(query: {
-        "RegionId"?: string;
-        "Iccid": string;
-        "Imei": string;
-        "OpionType": string;
-        "OwnerId"?: number;
-        "NewImei"?: string;
-        "MidChannelId"?: string;
-    }): Promise<{}>;
-    DoIotIsImeiExist(query: {
-        "RegionId"?: string;
-        "Imei": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DoIotPoolRecharge(query: {
-        "RegionId"?: string;
-        "PoolId": string;
-        "Amount": number;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DoIotPostImei(query: {
-        "RegionId"?: string;
-        "Imei": string;
-        "OwnerId"?: number;
-        "Comments"?: string;
-        "DeviceType"?: string;
-    }): Promise<{}>;
-    DoIotRecharge(query: {
-        "RegionId"?: string;
-        "Iccid": string;
-        "OfferIds": string;
-        "OutId": string;
-        "EffCode": string;
-        "OwnerId"?: number;
-        "Amount"?: number;
-        "OrderNum"?: number;
-    }): Promise<{}>;
-    DoIotServiceStatusControl(query: {
-        "RegionId"?: string;
-        "Iccid": string;
-        "ServiceType": string;
-        "OperationType": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DoIotSetRemindConfig(query: {
-        "RegionId"?: string;
-        "BizType": string;
-        "BizId": string;
-        "OperationType": string;
-        "OwnerId"?: number;
-        "ConfigInfo"?: string;
-    }): Promise<{}>;
-    DoIotTransSilence(query: {
-        "RegionId"?: string;
-        "Iccid": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DoIotUpdateDeviceSn(query: {
-        "RegionId"?: string;
-        "Iccid": string;
-        "DeviceSn": string;
-        "OperationType": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DoIotUserStopResume(query: {
-        "RegionId"?: string;
-        "Iccid": string;
-        "OptionType": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DoSendIotSms(query: {
-        "RegionId"?: string;
-        "SignName": string;
-        "TemplateCode": string;
-        "PhoneNumbers": string;
-        "TemplateParam": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    QosRelease(query: {
-        "RegionId"?: string;
-        "AppId": string;
-        "QosId": string;
-    }): Promise<{}>;
-    QueryGprsStatus(query: {
-        "RegionId"?: string;
-        "Iccid": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    QueryPersonalInfo(query: {
-        "RegionId"?: string;
-        "Iccid": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
+    QosGetParam(query: QosGetParamRequest): Promise<QosGetParamResponse>;
+    QosSpeedup(query: QosSpeedupRequest): Promise<QosSpeedupResponse>;
+    QueryCardFlowInfo(query: QueryCardFlowInfoRequest): Promise<QueryCardFlowInfoResponse>;
+    QueryCardInfo(query: QueryCardInfoRequest): Promise<QueryCardInfoResponse>;
+    QueryCardStatus(query: QueryCardStatusRequest): Promise<QueryCardStatusResponse>;
+    QueryIotCardOfferDtl(query: QueryIotCardOfferDtlRequest): Promise<QueryIotCardOfferDtlResponse>;
+    DoClearAuth(query: DoClearAuthRequest): Promise<DoClearAuthResponse>;
+    DoIotChgBindOrUnBind(query: DoIotChgBindOrUnBindRequest): Promise<DoIotChgBindOrUnBindResponse>;
+    DoIotIsImeiExist(query: DoIotIsImeiExistRequest): Promise<DoIotIsImeiExistResponse>;
+    DoIotPoolRecharge(query: DoIotPoolRechargeRequest): Promise<DoIotPoolRechargeResponse>;
+    DoIotPostImei(query: DoIotPostImeiRequest): Promise<DoIotPostImeiResponse>;
+    DoIotRecharge(query: DoIotRechargeRequest): Promise<DoIotRechargeResponse>;
+    DoIotServiceStatusControl(query: DoIotServiceStatusControlRequest): Promise<DoIotServiceStatusControlResponse>;
+    DoIotSetRemindConfig(query: DoIotSetRemindConfigRequest): Promise<DoIotSetRemindConfigResponse>;
+    DoIotTransSilence(query: DoIotTransSilenceRequest): Promise<DoIotTransSilenceResponse>;
+    DoIotUpdateDeviceSn(query: DoIotUpdateDeviceSnRequest): Promise<DoIotUpdateDeviceSnResponse>;
+    DoIotUserStopResume(query: DoIotUserStopResumeRequest): Promise<DoIotUserStopResumeResponse>;
+    DoSendIotSms(query: DoSendIotSmsRequest): Promise<DoSendIotSmsResponse>;
+    QosRelease(query: QosReleaseRequest): Promise<QosReleaseResponse>;
+    QueryGprsStatus(query: QueryGprsStatusRequest): Promise<QueryGprsStatusResponse>;
+    QueryPersonalInfo(query: QueryPersonalInfoRequest): Promise<QueryPersonalInfoResponse>;
 }
 export default DYIOTAPI;

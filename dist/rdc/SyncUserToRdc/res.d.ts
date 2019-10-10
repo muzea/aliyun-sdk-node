@@ -1,0 +1,3 @@
+interface SyncUserToRdcResponse {
+}
+export { SyncUserToRdcResponse };

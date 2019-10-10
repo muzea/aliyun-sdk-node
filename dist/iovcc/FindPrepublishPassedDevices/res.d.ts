@@ -1,0 +1,3 @@
+interface FindPrepublishPassedDevicesResponse {
+}
+export { FindPrepublishPassedDevicesResponse };

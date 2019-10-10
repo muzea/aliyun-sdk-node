@@ -1,0 +1,3 @@
+interface DescribeHealthCheckStatusListResponse {
+}
+export { DescribeHealthCheckStatusListResponse };

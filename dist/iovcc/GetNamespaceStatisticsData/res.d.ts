@@ -1,0 +1,3 @@
+interface GetNamespaceStatisticsDataResponse {
+}
+export { GetNamespaceStatisticsDataResponse };

@@ -1,0 +1,3 @@
+interface DescribeGfResSummaryResponse {
+}
+export { DescribeGfResSummaryResponse };

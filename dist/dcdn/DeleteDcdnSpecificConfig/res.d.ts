@@ -1,0 +1,3 @@
+interface DeleteDcdnSpecificConfigResponse {
+}
+export { DeleteDcdnSpecificConfigResponse };

@@ -1,0 +1,3 @@
+interface GetLabNodeJoinAcceptConfigResponse {
+}
+export { GetLabNodeJoinAcceptConfigResponse };

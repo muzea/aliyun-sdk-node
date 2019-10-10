@@ -1,0 +1,3 @@
+interface DeleteAppKeyResponse {
+}
+export { DeleteAppKeyResponse };

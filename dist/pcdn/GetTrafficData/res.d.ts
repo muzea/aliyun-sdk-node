@@ -1,0 +1,3 @@
+interface GetTrafficDataResponse {
+}
+export { GetTrafficDataResponse };

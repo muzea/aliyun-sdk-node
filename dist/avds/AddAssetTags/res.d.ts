@@ -1,0 +1,3 @@
+interface AddAssetTagsResponse {
+}
+export { AddAssetTagsResponse };

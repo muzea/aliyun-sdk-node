@@ -1,0 +1,3 @@
+interface GetFreqBandPlanGroupResponse {
+}
+export { GetFreqBandPlanGroupResponse };

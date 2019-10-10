@@ -1,0 +1,3 @@
+interface UpdateRoamingJoinPermissionResponse {
+}
+export { UpdateRoamingJoinPermissionResponse };

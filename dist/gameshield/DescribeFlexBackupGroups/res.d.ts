@@ -1,0 +1,3 @@
+interface DescribeFlexBackupGroupsResponse {
+}
+export { DescribeFlexBackupGroupsResponse };

@@ -1,0 +1,3 @@
+interface DescribeTrafficInfoResponse {
+}
+export { DescribeTrafficInfoResponse };

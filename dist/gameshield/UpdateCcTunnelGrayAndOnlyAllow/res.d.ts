@@ -1,0 +1,3 @@
+interface UpdateCcTunnelGrayAndOnlyAllowResponse {
+}
+export { UpdateCcTunnelGrayAndOnlyAllowResponse };

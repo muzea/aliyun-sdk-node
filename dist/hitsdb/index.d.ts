@@ -1,150 +1,55 @@
+import { DeleteHiTSDBInstanceRequest } from "./DeleteHiTSDBInstance/req";
+import { DeleteHiTSDBInstanceResponse } from "./DeleteHiTSDBInstance/res";
+import { DeleteHiTSDBInstanceDataRequest } from "./DeleteHiTSDBInstanceData/req";
+import { DeleteHiTSDBInstanceDataResponse } from "./DeleteHiTSDBInstanceData/res";
+import { DeleteHiTSDBInstanceMetaRequest } from "./DeleteHiTSDBInstanceMeta/req";
+import { DeleteHiTSDBInstanceMetaResponse } from "./DeleteHiTSDBInstanceMeta/res";
+import { DescribeHiTSDBInstanceRequest } from "./DescribeHiTSDBInstance/req";
+import { DescribeHiTSDBInstanceResponse } from "./DescribeHiTSDBInstance/res";
+import { DescribeHiTSDBInstanceDataTtlRequest } from "./DescribeHiTSDBInstanceDataTtl/req";
+import { DescribeHiTSDBInstanceDataTtlResponse } from "./DescribeHiTSDBInstanceDataTtl/res";
+import { DescribeRegionsRequest } from "./DescribeRegions/req";
+import { DescribeRegionsResponse } from "./DescribeRegions/res";
+import { DescribeZonesRequest } from "./DescribeZones/req";
+import { DescribeZonesResponse } from "./DescribeZones/res";
+import { ExploreHiTSDBInstanceDataRequest } from "./ExploreHiTSDBInstanceData/req";
+import { ExploreHiTSDBInstanceDataResponse } from "./ExploreHiTSDBInstanceData/res";
+import { ExploreHiTSDBInstanceDataMetricListRequest } from "./ExploreHiTSDBInstanceDataMetricList/req";
+import { ExploreHiTSDBInstanceDataMetricListResponse } from "./ExploreHiTSDBInstanceDataMetricList/res";
+import { ExploreHiTSDBInstanceDataTagKeyListRequest } from "./ExploreHiTSDBInstanceDataTagKeyList/req";
+import { ExploreHiTSDBInstanceDataTagKeyListResponse } from "./ExploreHiTSDBInstanceDataTagKeyList/res";
+import { ExploreHiTSDBInstanceDataTagValueListRequest } from "./ExploreHiTSDBInstanceDataTagValueList/req";
+import { ExploreHiTSDBInstanceDataTagValueListResponse } from "./ExploreHiTSDBInstanceDataTagValueList/res";
+import { ExploreHiTSDBInstanceDeletionJobListRequest } from "./ExploreHiTSDBInstanceDeletionJobList/req";
+import { ExploreHiTSDBInstanceDeletionJobListResponse } from "./ExploreHiTSDBInstanceDeletionJobList/res";
+import { ModifyHiTSDBInstanceSecurityIpListRequest } from "./ModifyHiTSDBInstanceSecurityIpList/req";
+import { ModifyHiTSDBInstanceSecurityIpListResponse } from "./ModifyHiTSDBInstanceSecurityIpList/res";
+import { RenameHiTSDBInstanceAliasRequest } from "./RenameHiTSDBInstanceAlias/req";
+import { RenameHiTSDBInstanceAliasResponse } from "./RenameHiTSDBInstanceAlias/res";
+import { RestartHiTSDBInstanceRequest } from "./RestartHiTSDBInstance/req";
+import { RestartHiTSDBInstanceResponse } from "./RestartHiTSDBInstance/res";
+import { SwitchHiTSDBInstancePublicNetRequest } from "./SwitchHiTSDBInstancePublicNet/req";
+import { SwitchHiTSDBInstancePublicNetResponse } from "./SwitchHiTSDBInstancePublicNet/res";
+import { UpdateHiTSDBInstanceDataTtlRequest } from "./UpdateHiTSDBInstanceDataTtl/req";
+import { UpdateHiTSDBInstanceDataTtlResponse } from "./UpdateHiTSDBInstanceDataTtl/res";
+
 interface HITSDB {
-    DeleteHiTSDBInstance(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "InstanceId": string;
-    }): Promise<{}>;
-    DeleteHiTSDBInstanceData(query: {
-        "RegionId"?: string;
-        "ReverseVpcIp": string;
-        "ReverseVpcPort": number;
-        "Metric": string;
-        "Start": number;
-        "End": number;
-        "OwnerId"?: number;
-        "InstanceId": string;
-        "Tags"?: string;
-        "UserName"?: string;
-        "PassWord"?: string;
-    }): Promise<{}>;
-    DeleteHiTSDBInstanceMeta(query: {
-        "RegionId"?: string;
-        "ReverseVpcIp": string;
-        "ReverseVpcPort": number;
-        "Metric": string;
-        "OwnerId"?: number;
-        "InstanceId": string;
-        "Tags"?: string;
-        "UserName"?: string;
-        "PassWord"?: string;
-    }): Promise<{}>;
-    DescribeHiTSDBInstance(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "InstanceId": string;
-    }): Promise<{}>;
-    DescribeHiTSDBInstanceDataTtl(query: {
-        "RegionId"?: string;
-        "ReverseVpcIp": string;
-        "ReverseVpcPort": number;
-        "OwnerId"?: number;
-        "InstanceId": string;
-        "UserName"?: string;
-        "PassWord"?: string;
-    }): Promise<{}>;
-    DescribeRegions(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "ZoneId"?: string;
-        "AcceptLanguage"?: string;
-    }): Promise<{}>;
-    DescribeZones(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    ExploreHiTSDBInstanceData(query: {
-        "RegionId"?: string;
-        "ReverseVpcIp": string;
-        "ReverseVpcPort": number;
-        "Metric": string;
-        "Aggregator": string;
-        "Start": number;
-        "End": number;
-        "TagFilter": string;
-        "OwnerId"?: number;
-        "InstanceId": string;
-        "DownSampleTime"?: string;
-        "DownSampleAggregator"?: string;
-        "UserName"?: string;
-        "PassWord"?: string;
-    }): Promise<{}>;
-    ExploreHiTSDBInstanceDataMetricList(query: {
-        "RegionId"?: string;
-        "ReverseVpcIp": string;
-        "ReverseVpcPort": number;
-        "Prefix": string;
-        "Max": number;
-        "OwnerId"?: number;
-        "InstanceId": string;
-        "UserName"?: string;
-        "PassWord"?: string;
-    }): Promise<{}>;
-    ExploreHiTSDBInstanceDataTagKeyList(query: {
-        "RegionId"?: string;
-        "ReverseVpcIp": string;
-        "ReverseVpcPort": number;
-        "Prefix": string;
-        "Max": number;
-        "OwnerId"?: number;
-        "InstanceId": string;
-        "UserName"?: string;
-        "PassWord"?: string;
-        "Metric"?: string;
-    }): Promise<{}>;
-    ExploreHiTSDBInstanceDataTagValueList(query: {
-        "RegionId"?: string;
-        "ReverseVpcIp": string;
-        "ReverseVpcPort": number;
-        "Prefix": string;
-        "TagKey": string;
-        "Max": number;
-        "OwnerId"?: number;
-        "InstanceId": string;
-        "UserName"?: string;
-        "PassWord"?: string;
-    }): Promise<{}>;
-    ExploreHiTSDBInstanceDeletionJobList(query: {
-        "RegionId"?: string;
-        "JobType": string;
-        "PageNumber": number;
-        "PageSize": number;
-        "OwnerId"?: number;
-        "InstanceId": string;
-        "UserName"?: string;
-        "PassWord"?: string;
-    }): Promise<{}>;
-    ModifyHiTSDBInstanceSecurityIpList(query: {
-        "RegionId"?: string;
-        "SecurityIpList": string;
-        "OwnerId"?: number;
-        "InstanceId": string;
-    }): Promise<{}>;
-    RenameHiTSDBInstanceAlias(query: {
-        "RegionId"?: string;
-        "InstanceAlias": string;
-        "OwnerId"?: number;
-        "InstanceId": string;
-    }): Promise<{}>;
-    RestartHiTSDBInstance(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "InstanceId": string;
-    }): Promise<{}>;
-    SwitchHiTSDBInstancePublicNet(query: {
-        "RegionId"?: string;
-        "SwitchAction": number;
-        "OwnerId"?: number;
-        "InstanceId": string;
-    }): Promise<{}>;
-    UpdateHiTSDBInstanceDataTtl(query: {
-        "RegionId"?: string;
-        "ReverseVpcIp": string;
-        "ReverseVpcPort": number;
-        "Ttl": number;
-        "OwnerId"?: number;
-        "InstanceId": string;
-        "UserName"?: string;
-        "PassWord"?: string;
-    }): Promise<{}>;
+    DeleteHiTSDBInstance(query: DeleteHiTSDBInstanceRequest): Promise<DeleteHiTSDBInstanceResponse>;
+    DeleteHiTSDBInstanceData(query: DeleteHiTSDBInstanceDataRequest): Promise<DeleteHiTSDBInstanceDataResponse>;
+    DeleteHiTSDBInstanceMeta(query: DeleteHiTSDBInstanceMetaRequest): Promise<DeleteHiTSDBInstanceMetaResponse>;
+    DescribeHiTSDBInstance(query: DescribeHiTSDBInstanceRequest): Promise<DescribeHiTSDBInstanceResponse>;
+    DescribeHiTSDBInstanceDataTtl(query: DescribeHiTSDBInstanceDataTtlRequest): Promise<DescribeHiTSDBInstanceDataTtlResponse>;
+    DescribeRegions(query: DescribeRegionsRequest): Promise<DescribeRegionsResponse>;
+    DescribeZones(query: DescribeZonesRequest): Promise<DescribeZonesResponse>;
+    ExploreHiTSDBInstanceData(query: ExploreHiTSDBInstanceDataRequest): Promise<ExploreHiTSDBInstanceDataResponse>;
+    ExploreHiTSDBInstanceDataMetricList(query: ExploreHiTSDBInstanceDataMetricListRequest): Promise<ExploreHiTSDBInstanceDataMetricListResponse>;
+    ExploreHiTSDBInstanceDataTagKeyList(query: ExploreHiTSDBInstanceDataTagKeyListRequest): Promise<ExploreHiTSDBInstanceDataTagKeyListResponse>;
+    ExploreHiTSDBInstanceDataTagValueList(query: ExploreHiTSDBInstanceDataTagValueListRequest): Promise<ExploreHiTSDBInstanceDataTagValueListResponse>;
+    ExploreHiTSDBInstanceDeletionJobList(query: ExploreHiTSDBInstanceDeletionJobListRequest): Promise<ExploreHiTSDBInstanceDeletionJobListResponse>;
+    ModifyHiTSDBInstanceSecurityIpList(query: ModifyHiTSDBInstanceSecurityIpListRequest): Promise<ModifyHiTSDBInstanceSecurityIpListResponse>;
+    RenameHiTSDBInstanceAlias(query: RenameHiTSDBInstanceAliasRequest): Promise<RenameHiTSDBInstanceAliasResponse>;
+    RestartHiTSDBInstance(query: RestartHiTSDBInstanceRequest): Promise<RestartHiTSDBInstanceResponse>;
+    SwitchHiTSDBInstancePublicNet(query: SwitchHiTSDBInstancePublicNetRequest): Promise<SwitchHiTSDBInstancePublicNetResponse>;
+    UpdateHiTSDBInstanceDataTtl(query: UpdateHiTSDBInstanceDataTtlRequest): Promise<UpdateHiTSDBInstanceDataTtlResponse>;
 }
 export default HITSDB;

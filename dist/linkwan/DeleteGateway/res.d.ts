@@ -1,0 +1,3 @@
+interface DeleteGatewayResponse {
+}
+export { DeleteGatewayResponse };

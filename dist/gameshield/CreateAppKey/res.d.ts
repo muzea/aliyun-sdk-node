@@ -1,0 +1,3 @@
+interface CreateAppKeyResponse {
+}
+export { CreateAppKeyResponse };

@@ -1,0 +1,3 @@
+interface ModifyAppResponse {
+}
+export { ModifyAppResponse };

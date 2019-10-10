@@ -1,0 +1,3 @@
+interface InitiateMultipartUploadResponse {
+}
+export { InitiateMultipartUploadResponse };

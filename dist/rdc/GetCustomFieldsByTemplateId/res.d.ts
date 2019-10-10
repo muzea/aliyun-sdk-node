@@ -1,0 +1,3 @@
+interface GetCustomFieldsByTemplateIdResponse {
+}
+export { GetCustomFieldsByTemplateIdResponse };

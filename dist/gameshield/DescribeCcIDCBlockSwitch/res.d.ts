@@ -1,0 +1,3 @@
+interface DescribeCcIDCBlockSwitchResponse {
+}
+export { DescribeCcIDCBlockSwitchResponse };

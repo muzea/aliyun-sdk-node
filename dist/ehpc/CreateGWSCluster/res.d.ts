@@ -1,0 +1,3 @@
+interface CreateGWSClusterResponse {
+}
+export { CreateGWSClusterResponse };

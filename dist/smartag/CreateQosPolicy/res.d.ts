@@ -1,0 +1,3 @@
+interface CreateQosPolicyResponse {
+}
+export { CreateQosPolicyResponse };

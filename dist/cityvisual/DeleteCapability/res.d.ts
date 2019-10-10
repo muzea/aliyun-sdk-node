@@ -1,0 +1,3 @@
+interface DeleteCapabilityResponse {
+}
+export { DeleteCapabilityResponse };

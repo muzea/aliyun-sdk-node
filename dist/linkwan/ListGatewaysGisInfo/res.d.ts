@@ -1,0 +1,3 @@
+interface ListGatewaysGisInfoResponse {
+}
+export { ListGatewaysGisInfoResponse };

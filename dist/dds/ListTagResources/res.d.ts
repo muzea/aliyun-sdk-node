@@ -1,0 +1,3 @@
+interface ListTagResourcesResponse {
+}
+export { ListTagResourcesResponse };

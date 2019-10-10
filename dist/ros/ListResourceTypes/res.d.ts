@@ -1,0 +1,3 @@
+interface ListResourceTypesResponse {
+}
+export { ListResourceTypesResponse };

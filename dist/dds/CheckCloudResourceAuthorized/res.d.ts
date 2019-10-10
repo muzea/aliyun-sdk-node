@@ -1,0 +1,3 @@
+interface CheckCloudResourceAuthorizedResponse {
+}
+export { CheckCloudResourceAuthorizedResponse };

@@ -1,0 +1,3 @@
+interface QueryDiscountListResponse {
+}
+export { QueryDiscountListResponse };

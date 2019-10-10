@@ -1,0 +1,3 @@
+interface DescribeZonesResponse {
+}
+export { DescribeZonesResponse };

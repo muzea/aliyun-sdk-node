@@ -1,0 +1,3 @@
+interface DescribeInstanceDetailsResponse {
+}
+export { DescribeInstanceDetailsResponse };

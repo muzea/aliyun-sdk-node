@@ -1,0 +1,3 @@
+interface DeleteBizResponse {
+}
+export { DeleteBizResponse };

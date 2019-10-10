@@ -1,0 +1,3 @@
+interface PollForTaskResponse {
+}
+export { PollForTaskResponse };

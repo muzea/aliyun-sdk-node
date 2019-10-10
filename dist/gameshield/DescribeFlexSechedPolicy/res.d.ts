@@ -1,0 +1,3 @@
+interface DescribeFlexSechedPolicyResponse {
+}
+export { DescribeFlexSechedPolicyResponse };

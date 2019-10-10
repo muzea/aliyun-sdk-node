@@ -1,0 +1,3 @@
+interface GetJobDescriptionResponse {
+}
+export { GetJobDescriptionResponse };

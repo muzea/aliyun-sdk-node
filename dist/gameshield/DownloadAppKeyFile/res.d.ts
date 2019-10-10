@@ -1,0 +1,3 @@
+interface DownloadAppKeyFileResponse {
+}
+export { DownloadAppKeyFileResponse };

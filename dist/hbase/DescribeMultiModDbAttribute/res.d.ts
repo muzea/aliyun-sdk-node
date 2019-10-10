@@ -1,0 +1,3 @@
+interface DescribeMultiModDbAttributeResponse {
+}
+export { DescribeMultiModDbAttributeResponse };

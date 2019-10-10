@@ -1,0 +1,3 @@
+interface DescribeBgpPackElasticThresholdResponse {
+}
+export { DescribeBgpPackElasticThresholdResponse };

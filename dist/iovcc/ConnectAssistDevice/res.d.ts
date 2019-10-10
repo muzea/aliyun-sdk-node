@@ -1,0 +1,3 @@
+interface ConnectAssistDeviceResponse {
+}
+export { ConnectAssistDeviceResponse };

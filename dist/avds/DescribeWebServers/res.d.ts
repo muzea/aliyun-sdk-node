@@ -1,0 +1,3 @@
+interface DescribeWebServersResponse {
+}
+export { DescribeWebServersResponse };

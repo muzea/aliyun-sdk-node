@@ -1,6 +1,7 @@
 const ts = require('typescript');
 const glob = require('glob');
 const fs = require('fs');
+const { execSync } = require('child_process');
 const cheerio = require('cheerio');
 const { where, Prefix } = require('./lib');
 
@@ -69,6 +70,31 @@ function getTypeFromObject(obj) {
       return ps;
     })
   );
+}
+
+function getTypeFromObjectNoWrap(obj) {
+  if (obj === undefined || obj === null) {
+    return ts.createKeywordTypeNode(ts.SyntaxKind.AnyKeyword);
+  }
+  const keys = Object.keys(obj);
+  if (keys.length === 1 && keys[0].endsWith('Response')) {
+    return getTypeFromObject(obj[keys[0]]);
+  }
+  return keys.map(key => {
+    const t = typeof obj[key];
+    let vtype = mapJSTypeNode[t];
+    if (vtype === undefined) {
+      vtype = handleValue(key, obj[key]);
+    }
+    const ps = ts.createPropertySignature(
+      /*modifiers*/ undefined,
+      ts.createStringLiteral(key),
+      /*questionToken*/ undefined,
+      /*type*/ vtype,
+      /*initializer*/ undefined
+    );
+    return ps;
+  });
 }
 
 const mapKeywordTypeNode = {
@@ -164,7 +190,9 @@ function getTypeFromFormat(format) {
  *
  * @param {{ name: string; reqFormat: Object, res: Object; summary_cn: string; }} apiData
  */
-function makeMethodSignature(apiData) {
+function makeMethodSignature(apiData, product) {
+  makeRequest(product, apiData.name, apiData);
+  makeResponse(product, apiData.name, apiData);
   const ms = ts.createMethodSignature(
     undefined,
     [
@@ -174,11 +202,15 @@ function makeMethodSignature(apiData) {
         undefined,
         ts.createIdentifier('query'),
         undefined,
-        getTypeFromFormat(apiData.reqFormat),
+        // getTypeFromFormat(apiData.reqFormat),
+        ts.createTypeReferenceNode(ts.createIdentifier(`${apiData.name}Request`), undefined),
         undefined
       )
     ],
-    ts.createTypeReferenceNode(ts.createIdentifier('Promise'), [getTypeFromObject(apiData.res)]),
+    // ts.createTypeReferenceNode(ts.createIdentifier('Promise'), [getTypeFromObject(apiData.res)]),
+    ts.createTypeReferenceNode(ts.createIdentifier('Promise'), [
+      ts.createTypeReferenceNode(ts.createIdentifier(`${apiData.name}Response`), undefined)
+    ]),
     ts.createIdentifier(apiData.name),
     undefined
   );
@@ -297,6 +329,75 @@ const printer = ts.createPrinter({
 });
 const resultFile = ts.createSourceFile('', '', ts.ScriptTarget.Latest, /*setParentNodes*/ false, ts.ScriptKind.TS);
 
+function makeRequest(product, apiName, apiData) {
+  const requestFileName = where(Prefix.dist, product, apiName, 'req.d.ts');
+  const def = printer.printNode(
+    ts.EmitHint.Unspecified,
+    ts.createInterfaceDeclaration(undefined, undefined, ts.createIdentifier(`${apiName}Request`), undefined, undefined, makePropertySignature(apiData.reqFormat)),
+    resultFile
+  );
+  const exp = printer.printNode(
+    ts.EmitHint.Unspecified,
+    ts.createExportDeclaration(
+      undefined,
+      undefined,
+      ts.createNamedExports([ts.createExportSpecifier(undefined, ts.createIdentifier(`${apiName}Request`))]),
+      undefined
+    ),
+    resultFile
+  );
+  fs.writeFileSync(requestFileName, `${def}\n${exp}`);
+}
+
+const githubPrefix = 'github.com/aliyun/alibaba-cloud-sdk-go/services';
+
+function makeResponse(product, apiName, apiData) {
+  const responseFileName = where(Prefix.dist, product, apiName, 'res.d.ts');
+  const responseType = execSync(`struct2ts -i -H ${githubPrefix}/${product}.${apiName}Response`, {
+    encoding: 'utf8',
+    maxBuffer: 1024 * 1024 * 1024
+  });
+  if (responseType && responseType.length) {
+    fs.writeFileSync(responseFileName, responseType);
+    return;
+  }
+  const def = printer.printNode(
+    ts.EmitHint.Unspecified,
+    ts.createInterfaceDeclaration(undefined, undefined, ts.createIdentifier(`${apiName}Response`), undefined, undefined, getTypeFromObjectNoWrap(apiData.res)),
+    resultFile
+  );
+  const exp = printer.printNode(
+    ts.EmitHint.Unspecified,
+    ts.createExportDeclaration(
+      undefined,
+      undefined,
+      ts.createNamedExports([ts.createExportSpecifier(undefined, ts.createIdentifier(`${apiName}Response`))]),
+      undefined
+    ),
+    resultFile
+  );
+  fs.writeFileSync(responseFileName, `${def}\n${exp}`);
+}
+
+function makeImport(typeName, fileName) {
+  return printer.printNode(
+    ts.EmitHint.Unspecified,
+    ts.createImportDeclaration(
+      undefined,
+      undefined,
+      ts.createImportClause(undefined, ts.createNamedImports([ts.createImportSpecifier(undefined, ts.createIdentifier(typeName))])),
+      ts.createStringLiteral(fileName)
+    ),
+    resultFile
+  );
+}
+
+function makeReqResImport(apiName) {
+  const req = makeImport(`${apiName}Request`, `./${apiName}/req`);
+  const res = makeImport(`${apiName}Response`, `./${apiName}/res`);
+  return `${req}\n${res}\n`;
+}
+
 function makeProduct() {
   const apiLists = glob.sync(where(Prefix.doc, '/**/list.json'));
   /**
@@ -315,19 +416,24 @@ function makeProduct() {
     const apiData = apiList.data.api;
     fs.mkdirSync(where(Prefix.dist, product), { recursive: true });
     const msList = [];
-    Object.keys(apiData).forEach(apiName => {
+    const apiNameList = Object.keys(apiData);
+    let typeImport = '';
+    apiNameList.forEach(apiName => {
       const fileName = where(Prefix.doc, product, apiName + '.json');
       if (fs.existsSync(fileName)) {
+        fs.mkdirSync(where(Prefix.dist, product, apiName), { recursive: true });
         const apiString = fs.readFileSync(fileName, { encoding: 'utf8' });
         const apiData = JSON.parse(apiString);
-        msList.push(makeMethodSignature(apiData));
+        msList.push(makeMethodSignature(apiData, product));
+        typeImport += makeReqResImport(apiName);
       } else {
         console.error('[缺少] - ', fileName);
       }
     });
     const result = printer.printNode(ts.EmitHint.Unspecified, makeInterfaceDeclaration(product, msList), resultFile);
     const varExport = printer.printNode(ts.EmitHint.Unspecified, makeExport(product), resultFile);
-    fs.writeFileSync(where(Prefix.dist, product, 'index.d.ts'), `${result}\n${varExport}\n`);
+    fs.writeFileSync(where(Prefix.dist, product, 'index.d.ts'), `${typeImport}\n${result}\n${varExport}\n`);
+    // throw new Error('stop');
   });
   const apibundle = makeApibundle(productList)
     .map(ast => printer.printNode(ts.EmitHint.Unspecified, ast, resultFile))

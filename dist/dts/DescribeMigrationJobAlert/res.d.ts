@@ -1,0 +1,3 @@
+interface DescribeMigrationJobAlertResponse {
+}
+export { DescribeMigrationJobAlertResponse };

@@ -1,0 +1,3 @@
+interface ModifyGroupResponse {
+}
+export { ModifyGroupResponse };

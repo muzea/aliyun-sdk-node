@@ -1,0 +1,3 @@
+interface CreateIntentResponse {
+}
+export { CreateIntentResponse };

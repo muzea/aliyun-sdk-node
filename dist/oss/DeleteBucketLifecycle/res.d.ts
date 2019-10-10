@@ -1,0 +1,3 @@
+interface DeleteBucketLifecycleResponse {
+}
+export { DeleteBucketLifecycleResponse };

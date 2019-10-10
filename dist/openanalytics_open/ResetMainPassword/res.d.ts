@@ -1,0 +1,3 @@
+interface ResetMainPasswordResponse {
+}
+export { ResetMainPasswordResponse };

@@ -1,0 +1,3 @@
+interface UpdateVersionPrepublishActiveStatusResponse {
+}
+export { UpdateVersionPrepublishActiveStatusResponse };

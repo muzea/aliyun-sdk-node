@@ -1,0 +1,3 @@
+interface DeleteGWSInstanceResponse {
+}
+export { DeleteGWSInstanceResponse };

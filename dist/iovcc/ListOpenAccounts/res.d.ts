@@ -1,0 +1,3 @@
+interface ListOpenAccountsResponse {
+}
+export { ListOpenAccountsResponse };

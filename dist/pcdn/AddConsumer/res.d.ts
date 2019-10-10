@@ -1,0 +1,3 @@
+interface AddConsumerResponse {
+}
+export { AddConsumerResponse };

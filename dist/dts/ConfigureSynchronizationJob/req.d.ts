@@ -1,0 +1,32 @@
+interface ConfigureSynchronizationJobRequest {
+    "RegionId"?: string;
+    "SynchronizationJobId": string;
+    "StructureInitialization": boolean;
+    "DataInitialization": boolean;
+    "SynchronizationObjects": string;
+    "SynchronizationJobName"?: string;
+    "SynchronizationDirection"?: string;
+    "SourceEndpoint.InstanceId"?: string;
+    "SourceEndpoint.InstanceType"?: string;
+    "SourceEndpoint.IP"?: string;
+    "SourceEndpoint.Port"?: string;
+    "SourceEndpoint.UserName"?: string;
+    "SourceEndpoint.Password"?: string;
+    "DestinationEndpoint.InstanceId"?: string;
+    "DestinationEndpoint.InstanceType"?: string;
+    "DestinationEndpoint.IP"?: string;
+    "DestinationEndpoint.Port"?: string;
+    "DestinationEndpoint.UserName"?: string;
+    "DestinationEndpoint.Password"?: string;
+    "SourceEndpoint.OwnerID"?: string;
+    "SourceEndpoint.Role"?: string;
+    "PartitionKey.ModifyTime_Year"?: boolean;
+    "PartitionKey.ModifyTime_Month"?: boolean;
+    "PartitionKey.ModifyTime_Day"?: boolean;
+    "PartitionKey.ModifyTime_Hour"?: boolean;
+    "PartitionKey.ModifyTime_Minute"?: boolean;
+    "MigrationReserved"?: string;
+    "Checkpoint"?: string;
+    "OwnerId"?: string;
+}
+export { ConfigureSynchronizationJobRequest };

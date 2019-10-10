@@ -1,256 +1,154 @@
+import { ChatRequest } from "./Chat/req";
+import { ChatResponse } from "./Chat/res";
+import { CreateCoreWordRequest } from "./CreateCoreWord/req";
+import { CreateCoreWordResponse } from "./CreateCoreWord/res";
+import { CreateIntentRequest } from "./CreateIntent/req";
+import { CreateIntentResponse } from "./CreateIntent/res";
+import { CreatePerspectiveRequest } from "./CreatePerspective/req";
+import { CreatePerspectiveResponse } from "./CreatePerspective/res";
+import { DeleteCategoryRequest } from "./DeleteCategory/req";
+import { DeleteCategoryResponse } from "./DeleteCategory/res";
+import { DeleteDialogRequest } from "./DeleteDialog/req";
+import { DeleteDialogResponse } from "./DeleteDialog/res";
+import { DeleteEntityRequest } from "./DeleteEntity/req";
+import { DeleteEntityResponse } from "./DeleteEntity/res";
+import { DeleteIntentRequest } from "./DeleteIntent/req";
+import { DeleteIntentResponse } from "./DeleteIntent/res";
+import { DescribeCategoryRequest } from "./DescribeCategory/req";
+import { DescribeCategoryResponse } from "./DescribeCategory/res";
+import { DescribeDialogRequest } from "./DescribeDialog/req";
+import { DescribeDialogResponse } from "./DescribeDialog/res";
+import { DescribeDialogFlowRequest } from "./DescribeDialogFlow/req";
+import { DescribeDialogFlowResponse } from "./DescribeDialogFlow/res";
+import { DescribeEntitiesRequest } from "./DescribeEntities/req";
+import { DescribeEntitiesResponse } from "./DescribeEntities/res";
+import { DescribeKnowledgeRequest } from "./DescribeKnowledge/req";
+import { DescribeKnowledgeResponse } from "./DescribeKnowledge/res";
+import { DescribePerspectiveRequest } from "./DescribePerspective/req";
+import { DescribePerspectiveResponse } from "./DescribePerspective/res";
+import { DisableDialogFlowRequest } from "./DisableDialogFlow/req";
+import { DisableDialogFlowResponse } from "./DisableDialogFlow/res";
+import { DisableKnowledgeRequest } from "./DisableKnowledge/req";
+import { DisableKnowledgeResponse } from "./DisableKnowledge/res";
+import { MoveKnowledgeCategoryRequest } from "./MoveKnowledgeCategory/req";
+import { MoveKnowledgeCategoryResponse } from "./MoveKnowledgeCategory/res";
+import { PublishKnowledgeRequest } from "./PublishKnowledge/req";
+import { PublishKnowledgeResponse } from "./PublishKnowledge/res";
+import { QueryCoreWordsRequest } from "./QueryCoreWords/req";
+import { QueryCoreWordsResponse } from "./QueryCoreWords/res";
+import { QueryDialogsRequest } from "./QueryDialogs/req";
+import { QueryDialogsResponse } from "./QueryDialogs/res";
+import { QueryEntitiesRequest } from "./QueryEntities/req";
+import { QueryEntitiesResponse } from "./QueryEntities/res";
+import { QueryKnowledgesRequest } from "./QueryKnowledges/req";
+import { QueryKnowledgesResponse } from "./QueryKnowledges/res";
+import { QueryPerspectivesRequest } from "./QueryPerspectives/req";
+import { QueryPerspectivesResponse } from "./QueryPerspectives/res";
+import { QuerySystemEntitiesRequest } from "./QuerySystemEntities/req";
+import { QuerySystemEntitiesResponse } from "./QuerySystemEntities/res";
+import { RemoveEntityMemberRequest } from "./RemoveEntityMember/req";
+import { RemoveEntityMemberResponse } from "./RemoveEntityMember/res";
+import { TestDialogFlowRequest } from "./TestDialogFlow/req";
+import { TestDialogFlowResponse } from "./TestDialogFlow/res";
+import { UpdateCoreWordRequest } from "./UpdateCoreWord/req";
+import { UpdateCoreWordResponse } from "./UpdateCoreWord/res";
+import { UpdateEntityRequest } from "./UpdateEntity/req";
+import { UpdateEntityResponse } from "./UpdateEntity/res";
+import { UpdateIntentRequest } from "./UpdateIntent/req";
+import { UpdateIntentResponse } from "./UpdateIntent/res";
+import { UpdateKnowledgeRequest } from "./UpdateKnowledge/req";
+import { UpdateKnowledgeResponse } from "./UpdateKnowledge/res";
+import { UpdatePerspectiveRequest } from "./UpdatePerspective/req";
+import { UpdatePerspectiveResponse } from "./UpdatePerspective/res";
+import { ActivatePerspectiveRequest } from "./ActivatePerspective/req";
+import { ActivatePerspectiveResponse } from "./ActivatePerspective/res";
+import { CreateDialogRequest } from "./CreateDialog/req";
+import { CreateDialogResponse } from "./CreateDialog/res";
+import { DeleteKnowledgeRequest } from "./DeleteKnowledge/req";
+import { DeleteKnowledgeResponse } from "./DeleteKnowledge/res";
+import { QueryIntentsRequest } from "./QueryIntents/req";
+import { QueryIntentsResponse } from "./QueryIntents/res";
+import { AddSynonymRequest } from "./AddSynonym/req";
+import { AddSynonymResponse } from "./AddSynonym/res";
+import { AppendEntityMemberRequest } from "./AppendEntityMember/req";
+import { AppendEntityMemberResponse } from "./AppendEntityMember/res";
+import { CreateCategoryRequest } from "./CreateCategory/req";
+import { CreateCategoryResponse } from "./CreateCategory/res";
+import { CreateEntityRequest } from "./CreateEntity/req";
+import { CreateEntityResponse } from "./CreateEntity/res";
+import { CreateKnowledgeRequest } from "./CreateKnowledge/req";
+import { CreateKnowledgeResponse } from "./CreateKnowledge/res";
+import { DeleteCoreWordRequest } from "./DeleteCoreWord/req";
+import { DeleteCoreWordResponse } from "./DeleteCoreWord/res";
+import { DescribeCoreWordRequest } from "./DescribeCoreWord/req";
+import { DescribeCoreWordResponse } from "./DescribeCoreWord/res";
+import { DescribeIntentRequest } from "./DescribeIntent/req";
+import { DescribeIntentResponse } from "./DescribeIntent/res";
+import { FeedbackRequest } from "./Feedback/req";
+import { FeedbackResponse } from "./Feedback/res";
+import { PublishDialogFlowRequest } from "./PublishDialogFlow/req";
+import { PublishDialogFlowResponse } from "./PublishDialogFlow/res";
+import { QueryCategoriesRequest } from "./QueryCategories/req";
+import { QueryCategoriesResponse } from "./QueryCategories/res";
+import { RemoveSynonymRequest } from "./RemoveSynonym/req";
+import { RemoveSynonymResponse } from "./RemoveSynonym/res";
+import { UpdateCategoryRequest } from "./UpdateCategory/req";
+import { UpdateCategoryResponse } from "./UpdateCategory/res";
+import { UpdateDialogRequest } from "./UpdateDialog/req";
+import { UpdateDialogResponse } from "./UpdateDialog/res";
+import { UpdateDialogFlowRequest } from "./UpdateDialogFlow/req";
+import { UpdateDialogFlowResponse } from "./UpdateDialogFlow/res";
+
 interface CHATBOT {
-    Chat(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "Utterance": string;
-        "SessionId"?: string;
-        "KnowledgeId"?: string;
-        "SenderId"?: string;
-        "SenderNick"?: string;
-        "Tag"?: string;
-        "Perspective"?: string[];
-        "Recommend"?: boolean;
-    }): Promise<{}>;
-    CreateCoreWord(query: {
-        "RegionId"?: string;
-        "CoreWordName": string;
-    }): Promise<{}>;
-    CreateIntent(query: {
-        "RegionId"?: string;
-        "IntentDefinition": string;
-        "DialogId": number;
-    }): Promise<{}>;
-    CreatePerspective(query: {
-        "RegionId"?: string;
-        "Name": string;
-    }): Promise<{}>;
-    DeleteCategory(query: {
-        "RegionId"?: string;
-        "CategoryId": number;
-    }): Promise<{}>;
-    DeleteDialog(query: {
-        "RegionId"?: string;
-        "DialogId": number;
-    }): Promise<{}>;
-    DeleteEntity(query: {
-        "RegionId"?: string;
-        "EntityId": number;
-    }): Promise<{}>;
-    DeleteIntent(query: {
-        "RegionId"?: string;
-        "IntentId": number;
-    }): Promise<{}>;
-    DescribeCategory(query: {
-        "RegionId"?: string;
-        "CategoryId": number;
-    }): Promise<{}>;
-    DescribeDialog(query: {
-        "RegionId"?: string;
-        "DialogId": number;
-    }): Promise<{}>;
-    DescribeDialogFlow(query: {
-        "RegionId"?: string;
-        "DialogId": number;
-    }): Promise<{}>;
-    DescribeEntities(query: {
-        "RegionId"?: string;
-        "EntityId": number;
-    }): Promise<{}>;
-    DescribeKnowledge(query: {
-        "RegionId"?: string;
-        "KnowledgeId": number;
-    }): Promise<{}>;
-    DescribePerspective(query: {
-        "RegionId"?: string;
-        "PerspectiveId": string;
-    }): Promise<{}>;
-    DisableDialogFlow(query: {
-        "RegionId"?: string;
-        "DialogId": number;
-    }): Promise<{}>;
-    DisableKnowledge(query: {
-        "RegionId"?: string;
-        "KnowledgeId": number;
-    }): Promise<{}>;
-    MoveKnowledgeCategory(query: {
-        "RegionId"?: string;
-        "KnowledgeId": number;
-        "CategoryId": number;
-    }): Promise<{}>;
-    PublishKnowledge(query: {
-        "RegionId"?: string;
-        "KnowledgeId": number;
-    }): Promise<{}>;
-    QueryCoreWords(query: {
-        "RegionId"?: string;
-        "CoreWordName"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-        "Synonym"?: string;
-    }): Promise<{}>;
-    QueryDialogs(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "DialogName"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    QueryEntities(query: {
-        "RegionId"?: string;
-        "DialogId": number;
-        "EntityName"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    QueryKnowledges(query: {
-        "RegionId"?: string;
-        "KnowledgeTitle"?: string;
-        "CoreWordName"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-        "CategoryId"?: number;
-    }): Promise<{}>;
-    QueryPerspectives(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    QuerySystemEntities(query: {
-        "RegionId"?: string;
-        "EntityName"?: string;
-    }): Promise<{}>;
-    RemoveEntityMember(query: {
-        "RegionId"?: string;
-        "EntityId": number;
-        "RemoveType": string;
-        "Member": string;
-    }): Promise<{}>;
-    TestDialogFlow(query: {
-        "RegionId"?: string;
-        "DialogId": number;
-    }): Promise<{}>;
-    UpdateCoreWord(query: {
-        "RegionId"?: string;
-        "CoreWordName": string;
-        "CoreWordCode": string;
-    }): Promise<{}>;
-    UpdateEntity(query: {
-        "RegionId"?: string;
-        "EntityId": number;
-        "EntityName": string;
-        "EntityType": string;
-        "Regex"?: string;
-        "Members"?: string;
-    }): Promise<{}>;
-    UpdateIntent(query: {
-        "RegionId"?: string;
-        "IntentDefinition": string;
-        "IntentId": number;
-    }): Promise<{}>;
-    UpdateKnowledge(query: {
-        "RegionId"?: string;
-        "Knowledge": string;
-    }): Promise<{}>;
-    UpdatePerspective(query: {
-        "RegionId"?: string;
-        "PerspectiveId": string;
-        "Name": string;
-    }): Promise<{}>;
-    ActivatePerspective(query: {
-        "RegionId"?: string;
-        "PerspectiveId": string;
-    }): Promise<{}>;
-    CreateDialog(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "DialogName": string;
-        "Description"?: string;
-    }): Promise<{}>;
-    DeleteKnowledge(query: {
-        "RegionId"?: string;
-        "KnowledgeId": number;
-    }): Promise<{}>;
-    QueryIntents(query: {
-        "RegionId"?: string;
-        "DialogId": number;
-        "IntentName"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    AddSynonym(query: {
-        "RegionId"?: string;
-        "CoreWordName": string;
-        "Synonym": string;
-    }): Promise<{}>;
-    AppendEntityMember(query: {
-        "RegionId"?: string;
-        "EntityId": number;
-        "ApplyType": string;
-        "Member": string;
-    }): Promise<{}>;
-    CreateCategory(query: {
-        "RegionId"?: string;
-        "Name": string;
-        "ParentCategoryId"?: number;
-    }): Promise<{}>;
-    CreateEntity(query: {
-        "RegionId"?: string;
-        "DialogId": number;
-        "EntityName": string;
-        "EntityType": string;
-        "Regex"?: string;
-        "Members"?: string;
-    }): Promise<{}>;
-    CreateKnowledge(query: {
-        "RegionId"?: string;
-        "Knowledge": string;
-    }): Promise<{}>;
-    DeleteCoreWord(query: {
-        "RegionId"?: string;
-        "CoreWordName": string;
-    }): Promise<{}>;
-    DescribeCoreWord(query: {
-        "RegionId"?: string;
-        "CoreWordName": string;
-    }): Promise<{}>;
-    DescribeIntent(query: {
-        "RegionId"?: string;
-        "IntentId": number;
-    }): Promise<{}>;
-    Feedback(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "MessageId": string;
-        "Feedback": string;
-        "SessionId"?: string;
-    }): Promise<{}>;
-    PublishDialogFlow(query: {
-        "RegionId"?: string;
-        "DialogId": number;
-    }): Promise<{}>;
-    QueryCategories(query: {
-        "RegionId"?: string;
-        "ParentCategoryId"?: number;
-        "ShowChildrens"?: boolean;
-    }): Promise<{}>;
-    RemoveSynonym(query: {
-        "RegionId"?: string;
-        "CoreWordName": string;
-        "Synonym": string;
-    }): Promise<{}>;
-    UpdateCategory(query: {
-        "RegionId"?: string;
-        "CategoryId": number;
-        "Name"?: string;
-    }): Promise<{}>;
-    UpdateDialog(query: {
-        "RegionId"?: string;
-        "DialogId": number;
-        "DialogName": string;
-        "Description"?: string;
-    }): Promise<{}>;
-    UpdateDialogFlow(query: {
-        "RegionId"?: string;
-        "DialogId": number;
-        "ModuleDefinition": string;
-    }): Promise<{}>;
+    Chat(query: ChatRequest): Promise<ChatResponse>;
+    CreateCoreWord(query: CreateCoreWordRequest): Promise<CreateCoreWordResponse>;
+    CreateIntent(query: CreateIntentRequest): Promise<CreateIntentResponse>;
+    CreatePerspective(query: CreatePerspectiveRequest): Promise<CreatePerspectiveResponse>;
+    DeleteCategory(query: DeleteCategoryRequest): Promise<DeleteCategoryResponse>;
+    DeleteDialog(query: DeleteDialogRequest): Promise<DeleteDialogResponse>;
+    DeleteEntity(query: DeleteEntityRequest): Promise<DeleteEntityResponse>;
+    DeleteIntent(query: DeleteIntentRequest): Promise<DeleteIntentResponse>;
+    DescribeCategory(query: DescribeCategoryRequest): Promise<DescribeCategoryResponse>;
+    DescribeDialog(query: DescribeDialogRequest): Promise<DescribeDialogResponse>;
+    DescribeDialogFlow(query: DescribeDialogFlowRequest): Promise<DescribeDialogFlowResponse>;
+    DescribeEntities(query: DescribeEntitiesRequest): Promise<DescribeEntitiesResponse>;
+    DescribeKnowledge(query: DescribeKnowledgeRequest): Promise<DescribeKnowledgeResponse>;
+    DescribePerspective(query: DescribePerspectiveRequest): Promise<DescribePerspectiveResponse>;
+    DisableDialogFlow(query: DisableDialogFlowRequest): Promise<DisableDialogFlowResponse>;
+    DisableKnowledge(query: DisableKnowledgeRequest): Promise<DisableKnowledgeResponse>;
+    MoveKnowledgeCategory(query: MoveKnowledgeCategoryRequest): Promise<MoveKnowledgeCategoryResponse>;
+    PublishKnowledge(query: PublishKnowledgeRequest): Promise<PublishKnowledgeResponse>;
+    QueryCoreWords(query: QueryCoreWordsRequest): Promise<QueryCoreWordsResponse>;
+    QueryDialogs(query: QueryDialogsRequest): Promise<QueryDialogsResponse>;
+    QueryEntities(query: QueryEntitiesRequest): Promise<QueryEntitiesResponse>;
+    QueryKnowledges(query: QueryKnowledgesRequest): Promise<QueryKnowledgesResponse>;
+    QueryPerspectives(query: QueryPerspectivesRequest): Promise<QueryPerspectivesResponse>;
+    QuerySystemEntities(query: QuerySystemEntitiesRequest): Promise<QuerySystemEntitiesResponse>;
+    RemoveEntityMember(query: RemoveEntityMemberRequest): Promise<RemoveEntityMemberResponse>;
+    TestDialogFlow(query: TestDialogFlowRequest): Promise<TestDialogFlowResponse>;
+    UpdateCoreWord(query: UpdateCoreWordRequest): Promise<UpdateCoreWordResponse>;
+    UpdateEntity(query: UpdateEntityRequest): Promise<UpdateEntityResponse>;
+    UpdateIntent(query: UpdateIntentRequest): Promise<UpdateIntentResponse>;
+    UpdateKnowledge(query: UpdateKnowledgeRequest): Promise<UpdateKnowledgeResponse>;
+    UpdatePerspective(query: UpdatePerspectiveRequest): Promise<UpdatePerspectiveResponse>;
+    ActivatePerspective(query: ActivatePerspectiveRequest): Promise<ActivatePerspectiveResponse>;
+    CreateDialog(query: CreateDialogRequest): Promise<CreateDialogResponse>;
+    DeleteKnowledge(query: DeleteKnowledgeRequest): Promise<DeleteKnowledgeResponse>;
+    QueryIntents(query: QueryIntentsRequest): Promise<QueryIntentsResponse>;
+    AddSynonym(query: AddSynonymRequest): Promise<AddSynonymResponse>;
+    AppendEntityMember(query: AppendEntityMemberRequest): Promise<AppendEntityMemberResponse>;
+    CreateCategory(query: CreateCategoryRequest): Promise<CreateCategoryResponse>;
+    CreateEntity(query: CreateEntityRequest): Promise<CreateEntityResponse>;
+    CreateKnowledge(query: CreateKnowledgeRequest): Promise<CreateKnowledgeResponse>;
+    DeleteCoreWord(query: DeleteCoreWordRequest): Promise<DeleteCoreWordResponse>;
+    DescribeCoreWord(query: DescribeCoreWordRequest): Promise<DescribeCoreWordResponse>;
+    DescribeIntent(query: DescribeIntentRequest): Promise<DescribeIntentResponse>;
+    Feedback(query: FeedbackRequest): Promise<FeedbackResponse>;
+    PublishDialogFlow(query: PublishDialogFlowRequest): Promise<PublishDialogFlowResponse>;
+    QueryCategories(query: QueryCategoriesRequest): Promise<QueryCategoriesResponse>;
+    RemoveSynonym(query: RemoveSynonymRequest): Promise<RemoveSynonymResponse>;
+    UpdateCategory(query: UpdateCategoryRequest): Promise<UpdateCategoryResponse>;
+    UpdateDialog(query: UpdateDialogRequest): Promise<UpdateDialogResponse>;
+    UpdateDialogFlow(query: UpdateDialogFlowRequest): Promise<UpdateDialogFlowResponse>;
 }
 export default CHATBOT;

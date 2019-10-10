@@ -1,0 +1,3 @@
+interface ModifyDdosStatusResponse {
+}
+export { ModifyDdosStatusResponse };

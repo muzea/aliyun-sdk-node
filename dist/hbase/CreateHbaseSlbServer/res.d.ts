@@ -1,0 +1,3 @@
+interface CreateHbaseSlbServerResponse {
+}
+export { CreateHbaseSlbServerResponse };

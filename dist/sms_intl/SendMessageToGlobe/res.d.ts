@@ -1,0 +1,3 @@
+interface SendMessageToGlobeResponse {
+}
+export { SendMessageToGlobeResponse };

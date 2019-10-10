@@ -1,0 +1,3 @@
+interface GetFeeHistoryResponse {
+}
+export { GetFeeHistoryResponse };

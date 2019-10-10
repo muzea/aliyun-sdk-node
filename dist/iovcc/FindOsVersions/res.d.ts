@@ -1,0 +1,3 @@
+interface FindOsVersionsResponse {
+}
+export { FindOsVersionsResponse };

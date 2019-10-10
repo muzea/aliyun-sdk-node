@@ -1,0 +1,3 @@
+interface BindNodesToMulticastGroupResponse {
+}
+export { BindNodesToMulticastGroupResponse };

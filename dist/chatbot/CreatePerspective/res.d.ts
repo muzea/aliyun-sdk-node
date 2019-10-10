@@ -1,0 +1,3 @@
+interface CreatePerspectiveResponse {
+}
+export { CreatePerspectiveResponse };

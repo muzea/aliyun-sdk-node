@@ -1,0 +1,3 @@
+interface StopJobGroupResponse {
+}
+export { StopJobGroupResponse };

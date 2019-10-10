@@ -1,233 +1,121 @@
+import { GetServiceRequest } from "./GetService/req";
+import { GetServiceResponse } from "./GetService/res";
+import { PutBucketRequest } from "./PutBucket/req";
+import { PutBucketResponse } from "./PutBucket/res";
+import { PutBucketACLRequest } from "./PutBucketACL/req";
+import { PutBucketACLResponse } from "./PutBucketACL/res";
+import { PutBucketLoggingRequest } from "./PutBucketLogging/req";
+import { PutBucketLoggingResponse } from "./PutBucketLogging/res";
+import { PutBucketWebsiteRequest } from "./PutBucketWebsite/req";
+import { PutBucketWebsiteResponse } from "./PutBucketWebsite/res";
+import { PutBucketRefererRequest } from "./PutBucketReferer/req";
+import { PutBucketRefererResponse } from "./PutBucketReferer/res";
+import { PutBucketLifecycleRequest } from "./PutBucketLifecycle/req";
+import { PutBucketLifecycleResponse } from "./PutBucketLifecycle/res";
+import { GetBucketRequest } from "./GetBucket/req";
+import { GetBucketResponse } from "./GetBucket/res";
+import { GetBucketAclRequest } from "./GetBucketAcl/req";
+import { GetBucketAclResponse } from "./GetBucketAcl/res";
+import { GetBucketLocationRequest } from "./GetBucketLocation/req";
+import { GetBucketLocationResponse } from "./GetBucketLocation/res";
+import { GetBucketInfoRequest } from "./GetBucketInfo/req";
+import { GetBucketInfoResponse } from "./GetBucketInfo/res";
+import { GetBucketLoggingRequest } from "./GetBucketLogging/req";
+import { GetBucketLoggingResponse } from "./GetBucketLogging/res";
+import { GetBucketWebsiteRequest } from "./GetBucketWebsite/req";
+import { GetBucketWebsiteResponse } from "./GetBucketWebsite/res";
+import { GetBucketRefererRequest } from "./GetBucketReferer/req";
+import { GetBucketRefererResponse } from "./GetBucketReferer/res";
+import { GetBucketLifecycleRequest } from "./GetBucketLifecycle/req";
+import { GetBucketLifecycleResponse } from "./GetBucketLifecycle/res";
+import { DeleteBucketRequest } from "./DeleteBucket/req";
+import { DeleteBucketResponse } from "./DeleteBucket/res";
+import { DeleteBucketLoggingRequest } from "./DeleteBucketLogging/req";
+import { DeleteBucketLoggingResponse } from "./DeleteBucketLogging/res";
+import { DeleteBucketWebsiteRequest } from "./DeleteBucketWebsite/req";
+import { DeleteBucketWebsiteResponse } from "./DeleteBucketWebsite/res";
+import { DeleteBucketLifecycleRequest } from "./DeleteBucketLifecycle/req";
+import { DeleteBucketLifecycleResponse } from "./DeleteBucketLifecycle/res";
+import { PutObjectRequest } from "./PutObject/req";
+import { PutObjectResponse } from "./PutObject/res";
+import { CopyObjectRequest } from "./CopyObject/req";
+import { CopyObjectResponse } from "./CopyObject/res";
+import { GetObjectRequest } from "./GetObject/req";
+import { GetObjectResponse } from "./GetObject/res";
+import { AppendObjectRequest } from "./AppendObject/req";
+import { AppendObjectResponse } from "./AppendObject/res";
+import { DeleteObjectRequest } from "./DeleteObject/req";
+import { DeleteObjectResponse } from "./DeleteObject/res";
+import { DeleteMultipleObjectsRequest } from "./DeleteMultipleObjects/req";
+import { DeleteMultipleObjectsResponse } from "./DeleteMultipleObjects/res";
+import { HeadObjectRequest } from "./HeadObject/req";
+import { HeadObjectResponse } from "./HeadObject/res";
+import { GetObjectMetaRequest } from "./GetObjectMeta/req";
+import { GetObjectMetaResponse } from "./GetObjectMeta/res";
+import { PutObjectACLRequest } from "./PutObjectACL/req";
+import { PutObjectACLResponse } from "./PutObjectACL/res";
+import { GetObjectACLRequest } from "./GetObjectACL/req";
+import { GetObjectACLResponse } from "./GetObjectACL/res";
+import { PostObjectRequest } from "./PostObject/req";
+import { PostObjectResponse } from "./PostObject/res";
+import { PutSymlinkRequest } from "./PutSymlink/req";
+import { PutSymlinkResponse } from "./PutSymlink/res";
+import { GetSymlinkRequest } from "./GetSymlink/req";
+import { GetSymlinkResponse } from "./GetSymlink/res";
+import { InitiateMultipartUploadRequest } from "./InitiateMultipartUpload/req";
+import { InitiateMultipartUploadResponse } from "./InitiateMultipartUpload/res";
+import { UploadPartRequest } from "./UploadPart/req";
+import { UploadPartResponse } from "./UploadPart/res";
+import { UploadPartCopyRequest } from "./UploadPartCopy/req";
+import { UploadPartCopyResponse } from "./UploadPartCopy/res";
+import { CompleteMultipartUploadRequest } from "./CompleteMultipartUpload/req";
+import { CompleteMultipartUploadResponse } from "./CompleteMultipartUpload/res";
+import { AbortMultipartUploadRequest } from "./AbortMultipartUpload/req";
+import { AbortMultipartUploadResponse } from "./AbortMultipartUpload/res";
+import { ListMultipartUploadsRequest } from "./ListMultipartUploads/req";
+import { ListMultipartUploadsResponse } from "./ListMultipartUploads/res";
+import { ListPartsRequest } from "./ListParts/req";
+import { ListPartsResponse } from "./ListParts/res";
+
 interface OSS {
-    GetService(query: {
-        "prefix"?: any;
-        "marker"?: any;
-        "max-keys"?: any;
-    }): Promise<{}>;
-    PutBucket(query: {
-        "BucketName": any;
-        "x-oss-acl"?: any;
-    }): Promise<{}>;
-    PutBucketACL(query: {
-        "BucketName": any;
-        "acl": any;
-        "x-oss-acl": any;
-    }): Promise<{}>;
-    PutBucketLogging(query: {
-        "BucketName": any;
-        "logging": any;
-    }): Promise<{}>;
-    PutBucketWebsite(query: {
-        "BucketName": any;
-        "website": any;
-    }): Promise<{}>;
-    PutBucketReferer(query: {
-        "BucketName": any;
-        "referer": any;
-    }): Promise<{}>;
-    PutBucketLifecycle(query: {
-        "BucketName": any;
-        "lifecycle": any;
-    }): Promise<{}>;
-    GetBucket(query: {
-        "BucketName": any;
-        "delimiter"?: any;
-        "marker"?: any;
-        "max-keys"?: any;
-        "prefix"?: any;
-        "encoding-type"?: any;
-    }): Promise<{}>;
-    GetBucketAcl(query: {
-        "BucketName": any;
-        "acl": any;
-    }): Promise<{}>;
-    GetBucketLocation(query: {
-        "BucketName": any;
-        "location": any;
-    }): Promise<{}>;
-    GetBucketInfo(query: {
-        "BucketName": any;
-        "bucketInfo": any;
-    }): Promise<{}>;
-    GetBucketLogging(query: {
-        "BucketName": any;
-        "logging": any;
-    }): Promise<{}>;
-    GetBucketWebsite(query: {
-        "BucketName": any;
-        "website": any;
-    }): Promise<{}>;
-    GetBucketReferer(query: {
-        "BucketName": any;
-        "referer": any;
-    }): Promise<{}>;
-    GetBucketLifecycle(query: {
-        "BucketName": any;
-        "lifecycle": any;
-    }): Promise<{}>;
-    DeleteBucket(query: {
-        "BucketName": any;
-    }): Promise<{}>;
-    DeleteBucketLogging(query: {
-        "BucketName": any;
-        "logging": any;
-    }): Promise<{}>;
-    DeleteBucketWebsite(query: {
-        "BucketName": any;
-        "website": any;
-    }): Promise<{}>;
-    DeleteBucketLifecycle(query: {
-        "BucketName": any;
-        "lifecycle": any;
-    }): Promise<{}>;
-    PutObject(query: {
-        "BucketName": any;
-        "ObjectName": any;
-        "Cache-Control"?: any;
-        "Content-Disposition"?: any;
-        "Content-Encoding"?: any;
-        "Expires"?: any;
-        "x-oss-server-side-encryption"?: any;
-        "x-oss-object-acl"?: any;
-    }): Promise<{}>;
-    CopyObject(query: {
-        "BucketName": any;
-        "ObjectName": any;
-        "x-oss-copy-source": any;
-        "x-oss-copy-source-if-match"?: any;
-        "x-oss-copy-source-if-none-match"?: any;
-        "x-oss-copy-source-if-unmodified-since"?: any;
-        "x-oss-copy-source-if-modified-since"?: any;
-        "x-oss-metadata-directive"?: any;
-        "x-oss-server-side-encryption"?: any;
-        "x-oss-object-acl"?: any;
-    }): Promise<{}>;
-    GetObject(query: {
-        "BucketName": any;
-        "ObjectName": any;
-        "response-content-type"?: any;
-        "response-content-language"?: any;
-        "response-expires"?: any;
-        "response-cache-control"?: any;
-        "response-content-disposition"?: any;
-        "response-content-encoding"?: any;
-    }): Promise<{}>;
-    AppendObject(query: {
-        "BucketName": any;
-        "ObjectName": any;
-        "append": any;
-        "position": any;
-        "Cache-Control"?: any;
-        "Content-Disposition"?: any;
-        "Content-Encoding"?: any;
-        "Expires"?: any;
-        "x-oss-server-side-encryption"?: any;
-        "x-oss-object-acl"?: any;
-    }): Promise<{}>;
-    DeleteObject(query: {
-        "BucketName": any;
-        "ObjectName": any;
-    }): Promise<{}>;
-    DeleteMultipleObjects(query: {
-        "BucketName": any;
-        "delete": any;
-        "encoding-type"?: any;
-    }): Promise<{}>;
-    HeadObject(query: {
-        "BucketName": any;
-        "ObjectName": any;
-        "If-Modified-Since"?: any;
-        "If-Unmodified-Since"?: any;
-        "If-Match"?: any;
-        "If-None-Match"?: any;
-    }): Promise<{}>;
-    GetObjectMeta(query: {
-        "BucketName": any;
-        "ObjectName": any;
-        "objectMeta": any;
-    }): Promise<{}>;
-    PutObjectACL(query: {
-        "BucketName": any;
-        "ObjectName": any;
-        "acl": any;
-        "x-oss-object-acl"?: any;
-    }): Promise<{}>;
-    GetObjectACL(query: {
-        "BucketName": any;
-        "ObjectName": any;
-        "acl": any;
-    }): Promise<{}>;
-    PostObject(query: {
-        "BucketName": any;
-    }): Promise<{}>;
-    PutSymlink(query: {
-        "BucketName": any;
-        "ObjectName": any;
-        "symlink": any;
-        "x-oss-symlink-target"?: any;
-    }): Promise<{}>;
-    GetSymlink(query: {
-        "BucketName": any;
-        "ObjectName": any;
-        "symlink": any;
-    }): Promise<{}>;
-    InitiateMultipartUpload(query: {
-        "BucketName": any;
-        "ObjectName": any;
-        "uploads": any;
-        "encoding-type"?: any;
-        "Cache-Control"?: any;
-        "Content-Disposition"?: any;
-        "Content-Encoding"?: any;
-        "Expires"?: any;
-        "x-oss-server-side-encryption"?: any;
-    }): Promise<{}>;
-    UploadPart(query: {
-        "BucketName": any;
-        "ObjectName": any;
-        "partNumber": any;
-        "uploadId": any;
-    }): Promise<{}>;
-    UploadPartCopy(query: {
-        "BucketName": any;
-        "ObjectName": any;
-        "partNumber": any;
-        "uploadId": any;
-        "x-oss-copy-source": any;
-        "x-oss-copy-source-range"?: any;
-        "x-oss-copy-source-if-match"?: any;
-        "x-oss-copy-source-if-none-match"?: any;
-        "x-oss-copy-source-if-unmodified-since"?: any;
-        "x-oss-copy-source-if-modified-since"?: any;
-    }): Promise<{}>;
-    CompleteMultipartUpload(query: {
-        "BucketName": any;
-        "ObjectName": any;
-        "uploadId": any;
-        "encoding-type": any;
-    }): Promise<{}>;
-    AbortMultipartUpload(query: {
-        "BucketName": any;
-        "ObjectName": any;
-        "uploadId": any;
-    }): Promise<{}>;
-    ListMultipartUploads(query: {
-        "BucketName": any;
-        "uploads": any;
-        "delimiter"?: any;
-        "max-uploads"?: any;
-        "key-marker"?: any;
-        "prefix"?: any;
-        "upload-id-marker"?: any;
-        "encoding-type"?: any;
-    }): Promise<{}>;
-    ListParts(query: {
-        "BucketName": any;
-        "ObjectName": any;
-        "uploadId": any;
-        "max-parts"?: any;
-        "part-number-marker"?: any;
-        "encoding-type"?: any;
-    }): Promise<{}>;
+    GetService(query: GetServiceRequest): Promise<GetServiceResponse>;
+    PutBucket(query: PutBucketRequest): Promise<PutBucketResponse>;
+    PutBucketACL(query: PutBucketACLRequest): Promise<PutBucketACLResponse>;
+    PutBucketLogging(query: PutBucketLoggingRequest): Promise<PutBucketLoggingResponse>;
+    PutBucketWebsite(query: PutBucketWebsiteRequest): Promise<PutBucketWebsiteResponse>;
+    PutBucketReferer(query: PutBucketRefererRequest): Promise<PutBucketRefererResponse>;
+    PutBucketLifecycle(query: PutBucketLifecycleRequest): Promise<PutBucketLifecycleResponse>;
+    GetBucket(query: GetBucketRequest): Promise<GetBucketResponse>;
+    GetBucketAcl(query: GetBucketAclRequest): Promise<GetBucketAclResponse>;
+    GetBucketLocation(query: GetBucketLocationRequest): Promise<GetBucketLocationResponse>;
+    GetBucketInfo(query: GetBucketInfoRequest): Promise<GetBucketInfoResponse>;
+    GetBucketLogging(query: GetBucketLoggingRequest): Promise<GetBucketLoggingResponse>;
+    GetBucketWebsite(query: GetBucketWebsiteRequest): Promise<GetBucketWebsiteResponse>;
+    GetBucketReferer(query: GetBucketRefererRequest): Promise<GetBucketRefererResponse>;
+    GetBucketLifecycle(query: GetBucketLifecycleRequest): Promise<GetBucketLifecycleResponse>;
+    DeleteBucket(query: DeleteBucketRequest): Promise<DeleteBucketResponse>;
+    DeleteBucketLogging(query: DeleteBucketLoggingRequest): Promise<DeleteBucketLoggingResponse>;
+    DeleteBucketWebsite(query: DeleteBucketWebsiteRequest): Promise<DeleteBucketWebsiteResponse>;
+    DeleteBucketLifecycle(query: DeleteBucketLifecycleRequest): Promise<DeleteBucketLifecycleResponse>;
+    PutObject(query: PutObjectRequest): Promise<PutObjectResponse>;
+    CopyObject(query: CopyObjectRequest): Promise<CopyObjectResponse>;
+    GetObject(query: GetObjectRequest): Promise<GetObjectResponse>;
+    AppendObject(query: AppendObjectRequest): Promise<AppendObjectResponse>;
+    DeleteObject(query: DeleteObjectRequest): Promise<DeleteObjectResponse>;
+    DeleteMultipleObjects(query: DeleteMultipleObjectsRequest): Promise<DeleteMultipleObjectsResponse>;
+    HeadObject(query: HeadObjectRequest): Promise<HeadObjectResponse>;
+    GetObjectMeta(query: GetObjectMetaRequest): Promise<GetObjectMetaResponse>;
+    PutObjectACL(query: PutObjectACLRequest): Promise<PutObjectACLResponse>;
+    GetObjectACL(query: GetObjectACLRequest): Promise<GetObjectACLResponse>;
+    PostObject(query: PostObjectRequest): Promise<PostObjectResponse>;
+    PutSymlink(query: PutSymlinkRequest): Promise<PutSymlinkResponse>;
+    GetSymlink(query: GetSymlinkRequest): Promise<GetSymlinkResponse>;
+    InitiateMultipartUpload(query: InitiateMultipartUploadRequest): Promise<InitiateMultipartUploadResponse>;
+    UploadPart(query: UploadPartRequest): Promise<UploadPartResponse>;
+    UploadPartCopy(query: UploadPartCopyRequest): Promise<UploadPartCopyResponse>;
+    CompleteMultipartUpload(query: CompleteMultipartUploadRequest): Promise<CompleteMultipartUploadResponse>;
+    AbortMultipartUpload(query: AbortMultipartUploadRequest): Promise<AbortMultipartUploadResponse>;
+    ListMultipartUploads(query: ListMultipartUploadsRequest): Promise<ListMultipartUploadsResponse>;
+    ListParts(query: ListPartsRequest): Promise<ListPartsResponse>;
 }
 export default OSS;

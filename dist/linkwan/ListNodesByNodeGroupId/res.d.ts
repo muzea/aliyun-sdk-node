@@ -1,0 +1,3 @@
+interface ListNodesByNodeGroupIdResponse {
+}
+export { ListNodesByNodeGroupIdResponse };

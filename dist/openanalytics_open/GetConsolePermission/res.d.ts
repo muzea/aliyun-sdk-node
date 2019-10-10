@@ -1,0 +1,3 @@
+interface GetConsolePermissionResponse {
+}
+export { GetConsolePermissionResponse };

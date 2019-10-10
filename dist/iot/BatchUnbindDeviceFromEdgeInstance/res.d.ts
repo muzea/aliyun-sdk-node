@@ -1,0 +1,3 @@
+interface BatchUnbindDeviceFromEdgeInstanceResponse {
+}
+export { BatchUnbindDeviceFromEdgeInstanceResponse };

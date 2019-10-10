@@ -1,0 +1,3 @@
+interface RejectJoinPermissionAuthOrderResponse {
+}
+export { RejectJoinPermissionAuthOrderResponse };

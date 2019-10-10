@@ -1,0 +1,3 @@
+interface CreateAppResponse {
+}
+export { CreateAppResponse };

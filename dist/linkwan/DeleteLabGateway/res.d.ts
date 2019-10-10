@@ -1,0 +1,3 @@
+interface DeleteLabGatewayResponse {
+}
+export { DeleteLabGatewayResponse };

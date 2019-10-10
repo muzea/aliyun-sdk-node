@@ -1,0 +1,3 @@
+interface QueryIntentsResponse {
+}
+export { QueryIntentsResponse };

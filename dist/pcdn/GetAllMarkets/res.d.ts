@@ -1,0 +1,3 @@
+interface GetAllMarketsResponse {
+}
+export { GetAllMarketsResponse };

@@ -1,0 +1,3 @@
+interface CountGatewayTupleOrdersResponse {
+}
+export { CountGatewayTupleOrdersResponse };

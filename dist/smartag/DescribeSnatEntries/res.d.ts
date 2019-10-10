@@ -1,0 +1,3 @@
+interface DescribeSnatEntriesResponse {
+}
+export { DescribeSnatEntriesResponse };

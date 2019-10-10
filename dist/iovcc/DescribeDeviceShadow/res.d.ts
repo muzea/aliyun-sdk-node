@@ -1,0 +1,3 @@
+interface DescribeDeviceShadowResponse {
+}
+export { DescribeDeviceShadowResponse };

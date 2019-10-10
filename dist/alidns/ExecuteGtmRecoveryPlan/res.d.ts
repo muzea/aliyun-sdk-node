@@ -1,0 +1,3 @@
+interface ExecuteGtmRecoveryPlanResponse {
+}
+export { ExecuteGtmRecoveryPlanResponse };

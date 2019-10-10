@@ -1,0 +1,3 @@
+interface DescribeUserDcdnIpaStatusResponse {
+}
+export { DescribeUserDcdnIpaStatusResponse };

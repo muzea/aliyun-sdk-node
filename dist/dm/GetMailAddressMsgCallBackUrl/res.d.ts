@@ -1,0 +1,3 @@
+interface GetMailAddressMsgCallBackUrlResponse {
+}
+export { GetMailAddressMsgCallBackUrlResponse };

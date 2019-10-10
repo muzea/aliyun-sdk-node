@@ -1,0 +1,3 @@
+interface CreateNodeGroupResponse {
+}
+export { CreateNodeGroupResponse };

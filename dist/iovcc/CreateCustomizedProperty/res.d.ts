@@ -1,0 +1,3 @@
+interface CreateCustomizedPropertyResponse {
+}
+export { CreateCustomizedPropertyResponse };

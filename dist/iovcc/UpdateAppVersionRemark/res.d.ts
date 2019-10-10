@@ -1,0 +1,3 @@
+interface UpdateAppVersionRemarkResponse {
+}
+export { UpdateAppVersionRemarkResponse };

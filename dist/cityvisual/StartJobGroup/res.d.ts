@@ -1,0 +1,3 @@
+interface StartJobGroupResponse {
+}
+export { StartJobGroupResponse };

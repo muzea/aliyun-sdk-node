@@ -1,0 +1,3 @@
+interface GetRentedJoinPermissionResponse {
+}
+export { GetRentedJoinPermissionResponse };

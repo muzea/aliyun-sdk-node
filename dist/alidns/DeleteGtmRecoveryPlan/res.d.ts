@@ -1,0 +1,3 @@
+interface DeleteGtmRecoveryPlanResponse {
+}
+export { DeleteGtmRecoveryPlanResponse };

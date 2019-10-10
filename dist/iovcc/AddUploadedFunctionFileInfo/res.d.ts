@@ -1,0 +1,3 @@
+interface AddUploadedFunctionFileInfoResponse {
+}
+export { AddUploadedFunctionFileInfoResponse };

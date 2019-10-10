@@ -1,0 +1,3 @@
+interface DeleteTemplateResponse {
+}
+export { DeleteTemplateResponse };

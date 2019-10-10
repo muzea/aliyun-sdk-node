@@ -1,0 +1,3 @@
+interface PutSymlinkResponse {
+}
+export { PutSymlinkResponse };

@@ -1,0 +1,3 @@
+interface DeleteSchemaSubscribeResponse {
+}
+export { DeleteSchemaSubscribeResponse };

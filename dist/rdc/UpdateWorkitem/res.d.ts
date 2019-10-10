@@ -1,0 +1,3 @@
+interface UpdateWorkitemResponse {
+}
+export { UpdateWorkitemResponse };

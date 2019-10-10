@@ -1,0 +1,3 @@
+interface DescribeRdsVpcsResponse {
+}
+export { DescribeRdsVpcsResponse };

@@ -1,0 +1,3 @@
+interface GetExpenseSummaryResponse {
+}
+export { GetExpenseSummaryResponse };

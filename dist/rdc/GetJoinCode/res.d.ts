@@ -1,0 +1,3 @@
+interface GetJoinCodeResponse {
+}
+export { GetJoinCodeResponse };

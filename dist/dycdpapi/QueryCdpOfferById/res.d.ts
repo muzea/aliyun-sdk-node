@@ -1,0 +1,3 @@
+interface QueryCdpOfferByIdResponse {
+}
+export { QueryCdpOfferByIdResponse };

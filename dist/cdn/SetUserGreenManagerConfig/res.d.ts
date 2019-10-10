@@ -1,0 +1,3 @@
+interface SetUserGreenManagerConfigResponse {
+}
+export { SetUserGreenManagerConfigResponse };

@@ -1,0 +1,3 @@
+interface DescribeVsDomainReqTrafficDataResponse {
+}
+export { DescribeVsDomainReqTrafficDataResponse };

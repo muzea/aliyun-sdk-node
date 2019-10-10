@@ -1,0 +1,3 @@
+interface WordSegmentResponse {
+}
+export { WordSegmentResponse };

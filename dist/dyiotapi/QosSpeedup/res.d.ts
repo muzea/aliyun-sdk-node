@@ -1,0 +1,3 @@
+interface QosSpeedupResponse {
+}
+export { QosSpeedupResponse };

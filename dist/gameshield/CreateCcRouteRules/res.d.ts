@@ -1,0 +1,3 @@
+interface CreateCcRouteRulesResponse {
+}
+export { CreateCcRouteRulesResponse };

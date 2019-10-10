@@ -1,0 +1,3 @@
+interface DeleteAppResponse {
+}
+export { DeleteAppResponse };

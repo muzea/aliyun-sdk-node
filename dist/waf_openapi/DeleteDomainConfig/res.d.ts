@@ -1,0 +1,3 @@
+interface DeleteDomainConfigResponse {
+}
+export { DeleteDomainConfigResponse };

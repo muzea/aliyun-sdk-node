@@ -1,0 +1,3 @@
+interface CreateEntityResponse {
+}
+export { CreateEntityResponse };

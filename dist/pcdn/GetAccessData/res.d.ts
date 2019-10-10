@@ -1,0 +1,3 @@
+interface GetAccessDataResponse {
+}
+export { GetAccessDataResponse };

@@ -1,0 +1,3 @@
+interface UploadFlexAccRulesFileForParseResponse {
+}
+export { UploadFlexAccRulesFileForParseResponse };

@@ -1,0 +1,3 @@
+interface FindVersionGroupDevicesResponse {
+}
+export { FindVersionGroupDevicesResponse };

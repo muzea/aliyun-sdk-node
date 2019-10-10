@@ -1,1030 +1,481 @@
+import { ChangeAccountPasswordRequest } from "./ChangeAccountPassword/req";
+import { ChangeAccountPasswordResponse } from "./ChangeAccountPassword/res";
+import { ChangeInstanceAzoneRequest } from "./ChangeInstanceAzone/req";
+import { ChangeInstanceAzoneResponse } from "./ChangeInstanceAzone/res";
+import { ChangeInstanceNetworkRequest } from "./ChangeInstanceNetwork/req";
+import { ChangeInstanceNetworkResponse } from "./ChangeInstanceNetwork/res";
+import { CheckCapacityDataReadyRequest } from "./CheckCapacityDataReady/req";
+import { CheckCapacityDataReadyResponse } from "./CheckCapacityDataReady/res";
+import { CheckDrdsDbNameRequest } from "./CheckDrdsDbName/req";
+import { CheckDrdsDbNameResponse } from "./CheckDrdsDbName/res";
+import { CheckDrdsDefaultRoleRequest } from "./CheckDrdsDefaultRole/req";
+import { CheckDrdsDefaultRoleResponse } from "./CheckDrdsDefaultRole/res";
+import { CheckExpandStatusRequest } from "./CheckExpandStatus/req";
+import { CheckExpandStatusResponse } from "./CheckExpandStatus/res";
+import { CheckRdsExpandStatusRequest } from "./CheckRdsExpandStatus/req";
+import { CheckRdsExpandStatusResponse } from "./CheckRdsExpandStatus/res";
+import { CheckRdsSuperAccountRequest } from "./CheckRdsSuperAccount/req";
+import { CheckRdsSuperAccountResponse } from "./CheckRdsSuperAccount/res";
+import { CheckSlsStatusRequest } from "./CheckSlsStatus/req";
+import { CheckSlsStatusResponse } from "./CheckSlsStatus/res";
+import { CheckSqlAuditEnableStatusRequest } from "./CheckSqlAuditEnableStatus/req";
+import { CheckSqlAuditEnableStatusResponse } from "./CheckSqlAuditEnableStatus/res";
+import { ConfigureDrdsDbInstancesRequest } from "./ConfigureDrdsDbInstances/req";
+import { ConfigureDrdsDbInstancesResponse } from "./ConfigureDrdsDbInstances/res";
+import { CreateDrdsDBRequest } from "./CreateDrdsDB/req";
+import { CreateDrdsDBResponse } from "./CreateDrdsDB/res";
+import { CreateDrdsDBPreCheckRequest } from "./CreateDrdsDBPreCheck/req";
+import { CreateDrdsDBPreCheckResponse } from "./CreateDrdsDBPreCheck/res";
+import { CreateDrdsDBPreviewRequest } from "./CreateDrdsDBPreview/req";
+import { CreateDrdsDBPreviewResponse } from "./CreateDrdsDBPreview/res";
+import { CreateInstanceAccountRequest } from "./CreateInstanceAccount/req";
+import { CreateInstanceAccountResponse } from "./CreateInstanceAccount/res";
+import { CreateInstanceInternetAddressRequest } from "./CreateInstanceInternetAddress/req";
+import { CreateInstanceInternetAddressResponse } from "./CreateInstanceInternetAddress/res";
+import { CreateOrderForRdsRequest } from "./CreateOrderForRds/req";
+import { CreateOrderForRdsResponse } from "./CreateOrderForRds/res";
+import { CreateShardTaskRequest } from "./CreateShardTask/req";
+import { CreateShardTaskResponse } from "./CreateShardTask/res";
+import { DatalinkReplicationPrecheckRequest } from "./DatalinkReplicationPrecheck/req";
+import { DatalinkReplicationPrecheckResponse } from "./DatalinkReplicationPrecheck/res";
+import { DeleteShardTasksRequest } from "./DeleteShardTasks/req";
+import { DeleteShardTasksResponse } from "./DeleteShardTasks/res";
+import { DescribeBackMenuRequest } from "./DescribeBackMenu/req";
+import { DescribeBackMenuResponse } from "./DescribeBackMenu/res";
+import { DescribeBackupDbsRequest } from "./DescribeBackupDbs/req";
+import { DescribeBackupDbsResponse } from "./DescribeBackupDbs/res";
+import { DescribeBackupLocalRequest } from "./DescribeBackupLocal/req";
+import { DescribeBackupLocalResponse } from "./DescribeBackupLocal/res";
+import { DescribeBackupPolicyRequest } from "./DescribeBackupPolicy/req";
+import { DescribeBackupPolicyResponse } from "./DescribeBackupPolicy/res";
+import { DescribeBackupSetsRequest } from "./DescribeBackupSets/req";
+import { DescribeBackupSetsResponse } from "./DescribeBackupSets/res";
+import { DescribeBackupTimesRequest } from "./DescribeBackupTimes/req";
+import { DescribeBackupTimesResponse } from "./DescribeBackupTimes/res";
+import { DescribeBroadcastTablesRequest } from "./DescribeBroadcastTables/req";
+import { DescribeBroadcastTablesResponse } from "./DescribeBroadcastTables/res";
+import { DescribeCanExpandInstanceDetailListRequest } from "./DescribeCanExpandInstanceDetailList/req";
+import { DescribeCanExpandInstanceDetailListResponse } from "./DescribeCanExpandInstanceDetailList/res";
+import { DescribeCandidateInstanceListRequest } from "./DescribeCandidateInstanceList/req";
+import { DescribeCandidateInstanceListResponse } from "./DescribeCandidateInstanceList/res";
+import { DescribeConsoleConfigRequest } from "./DescribeConsoleConfig/req";
+import { DescribeConsoleConfigResponse } from "./DescribeConsoleConfig/res";
+import { DescribeDbInstanceDbsRequest } from "./DescribeDbInstanceDbs/req";
+import { DescribeDbInstanceDbsResponse } from "./DescribeDbInstanceDbs/res";
+import { DescribeDbInstancesRequest } from "./DescribeDbInstances/req";
+import { DescribeDbInstancesResponse } from "./DescribeDbInstances/res";
+import { DescribeDrdsDBRequest } from "./DescribeDrdsDB/req";
+import { DescribeDrdsDBResponse } from "./DescribeDrdsDB/res";
+import { DescribeDrdsDBClusterRequest } from "./DescribeDrdsDBCluster/req";
+import { DescribeDrdsDBClusterResponse } from "./DescribeDrdsDBCluster/res";
+import { DescribeDrdsDBIpWhiteListRequest } from "./DescribeDrdsDBIpWhiteList/req";
+import { DescribeDrdsDBIpWhiteListResponse } from "./DescribeDrdsDBIpWhiteList/res";
+import { DescribeDrdsDBsRequest } from "./DescribeDrdsDBs/req";
+import { DescribeDrdsDBsResponse } from "./DescribeDrdsDBs/res";
+import { DescribeDrdsDbInstanceRequest } from "./DescribeDrdsDbInstance/req";
+import { DescribeDrdsDbInstanceResponse } from "./DescribeDrdsDbInstance/res";
+import { DescribeDrdsDbInstancesRequest } from "./DescribeDrdsDbInstances/req";
+import { DescribeDrdsDbInstancesResponse } from "./DescribeDrdsDbInstances/res";
+import { DescribeDrdsDbRdsNameListRequest } from "./DescribeDrdsDbRdsNameList/req";
+import { DescribeDrdsDbRdsNameListResponse } from "./DescribeDrdsDbRdsNameList/res";
+import { DescribeDrdsDbRdsRelationInfoRequest } from "./DescribeDrdsDbRdsRelationInfo/req";
+import { DescribeDrdsDbRdsRelationInfoResponse } from "./DescribeDrdsDbRdsRelationInfo/res";
+import { DescribeDrdsDbRelationInfoRequest } from "./DescribeDrdsDbRelationInfo/req";
+import { DescribeDrdsDbRelationInfoResponse } from "./DescribeDrdsDbRelationInfo/res";
+import { DescribeDrdsDbTasksRequest } from "./DescribeDrdsDbTasks/req";
+import { DescribeDrdsDbTasksResponse } from "./DescribeDrdsDbTasks/res";
+import { DescribeDrdsInstanceRequest } from "./DescribeDrdsInstance/req";
+import { DescribeDrdsInstanceResponse } from "./DescribeDrdsInstance/res";
+import { DescribeDrdsInstanceDbMonitorRequest } from "./DescribeDrdsInstanceDbMonitor/req";
+import { DescribeDrdsInstanceDbMonitorResponse } from "./DescribeDrdsInstanceDbMonitor/res";
+import { DescribeDrdsInstanceLevelTasksRequest } from "./DescribeDrdsInstanceLevelTasks/req";
+import { DescribeDrdsInstanceLevelTasksResponse } from "./DescribeDrdsInstanceLevelTasks/res";
+import { DescribeDrdsInstanceMonitorRequest } from "./DescribeDrdsInstanceMonitor/req";
+import { DescribeDrdsInstanceMonitorResponse } from "./DescribeDrdsInstanceMonitor/res";
+import { DescribeDrdsInstanceVersionRequest } from "./DescribeDrdsInstanceVersion/req";
+import { DescribeDrdsInstanceVersionResponse } from "./DescribeDrdsInstanceVersion/res";
+import { DescribeDrdsInstancesRequest } from "./DescribeDrdsInstances/req";
+import { DescribeDrdsInstancesResponse } from "./DescribeDrdsInstances/res";
+import { DescribeDrdsParamsRequest } from "./DescribeDrdsParams/req";
+import { DescribeDrdsParamsResponse } from "./DescribeDrdsParams/res";
+import { DescribeDrdsRegionsRequest } from "./DescribeDrdsRegions/req";
+import { DescribeDrdsRegionsResponse } from "./DescribeDrdsRegions/res";
+import { DescribeDrdsShardingDbsRequest } from "./DescribeDrdsShardingDbs/req";
+import { DescribeDrdsShardingDbsResponse } from "./DescribeDrdsShardingDbs/res";
+import { DescribeDrdsSlowSqlsRequest } from "./DescribeDrdsSlowSqls/req";
+import { DescribeDrdsSlowSqlsResponse } from "./DescribeDrdsSlowSqls/res";
+import { DescribeDrdsSqlAuditStatusRequest } from "./DescribeDrdsSqlAuditStatus/req";
+import { DescribeDrdsSqlAuditStatusResponse } from "./DescribeDrdsSqlAuditStatus/res";
+import { DescribeDrdsTasksRequest } from "./DescribeDrdsTasks/req";
+import { DescribeDrdsTasksResponse } from "./DescribeDrdsTasks/res";
+import { DescribeExpandLogicTableInfoListRequest } from "./DescribeExpandLogicTableInfoList/req";
+import { DescribeExpandLogicTableInfoListResponse } from "./DescribeExpandLogicTableInfoList/res";
+import { DescribeGlobalBroadcastTypeRequest } from "./DescribeGlobalBroadcastType/req";
+import { DescribeGlobalBroadcastTypeResponse } from "./DescribeGlobalBroadcastType/res";
+import { DescribeHiStoreInstanceInfoRequest } from "./DescribeHiStoreInstanceInfo/req";
+import { DescribeHiStoreInstanceInfoResponse } from "./DescribeHiStoreInstanceInfo/res";
+import { DescribeHotDbListRequest } from "./DescribeHotDbList/req";
+import { DescribeHotDbListResponse } from "./DescribeHotDbList/res";
+import { DescribeInstDbLogInfoRequest } from "./DescribeInstDbLogInfo/req";
+import { DescribeInstDbLogInfoResponse } from "./DescribeInstDbLogInfo/res";
+import { DescribeInstDbSlsInfoRequest } from "./DescribeInstDbSlsInfo/req";
+import { DescribeInstDbSlsInfoResponse } from "./DescribeInstDbSlsInfo/res";
+import { DescribeInstanceAccountsRequest } from "./DescribeInstanceAccounts/req";
+import { DescribeInstanceAccountsResponse } from "./DescribeInstanceAccounts/res";
+import { DescribeInstanceMenuSwitchRequest } from "./DescribeInstanceMenuSwitch/req";
+import { DescribeInstanceMenuSwitchResponse } from "./DescribeInstanceMenuSwitch/res";
+import { DescribeInstanceSwitchAzoneRequest } from "./DescribeInstanceSwitchAzone/req";
+import { DescribeInstanceSwitchAzoneResponse } from "./DescribeInstanceSwitchAzone/res";
+import { DescribeInstanceSwitchNetworkRequest } from "./DescribeInstanceSwitchNetwork/req";
+import { DescribeInstanceSwitchNetworkResponse } from "./DescribeInstanceSwitchNetwork/res";
+import { DescribePreCheckResultRequest } from "./DescribePreCheckResult/req";
+import { DescribePreCheckResultResponse } from "./DescribePreCheckResult/res";
+import { DescribeRDSPerformanceRequest } from "./DescribeRDSPerformance/req";
+import { DescribeRDSPerformanceResponse } from "./DescribeRDSPerformance/res";
+import { DescribeRdsCommodityRequest } from "./DescribeRdsCommodity/req";
+import { DescribeRdsCommodityResponse } from "./DescribeRdsCommodity/res";
+import { DescribeRdsPerformanceSummaryRequest } from "./DescribeRdsPerformanceSummary/req";
+import { DescribeRdsPerformanceSummaryResponse } from "./DescribeRdsPerformanceSummary/res";
+import { DescribeRdsPriceRequest } from "./DescribeRdsPrice/req";
+import { DescribeRdsPriceResponse } from "./DescribeRdsPrice/res";
+import { DescribeRdsSuperAccountInstancesRequest } from "./DescribeRdsSuperAccountInstances/req";
+import { DescribeRdsSuperAccountInstancesResponse } from "./DescribeRdsSuperAccountInstances/res";
+import { DescribeRdsVpcForZoneRequest } from "./DescribeRdsVpcForZone/req";
+import { DescribeRdsVpcForZoneResponse } from "./DescribeRdsVpcForZone/res";
+import { DescribeRecycleBinStatusRequest } from "./DescribeRecycleBinStatus/req";
+import { DescribeRecycleBinStatusResponse } from "./DescribeRecycleBinStatus/res";
+import { DescribeRecycleBinTablesRequest } from "./DescribeRecycleBinTables/req";
+import { DescribeRecycleBinTablesResponse } from "./DescribeRecycleBinTables/res";
+import { DescribeRestoreOrderRequest } from "./DescribeRestoreOrder/req";
+import { DescribeRestoreOrderResponse } from "./DescribeRestoreOrder/res";
+import { DescribeShardTaskInfoRequest } from "./DescribeShardTaskInfo/req";
+import { DescribeShardTaskInfoResponse } from "./DescribeShardTaskInfo/res";
+import { DescribeShardTaskListRequest } from "./DescribeShardTaskList/req";
+import { DescribeShardTaskListResponse } from "./DescribeShardTaskList/res";
+import { DescribeSqlFlashbakTaskRequest } from "./DescribeSqlFlashbakTask/req";
+import { DescribeSqlFlashbakTaskResponse } from "./DescribeSqlFlashbakTask/res";
+import { DescribeSrcRdsListRequest } from "./DescribeSrcRdsList/req";
+import { DescribeSrcRdsListResponse } from "./DescribeSrcRdsList/res";
+import { DescribeStorageInstanceSubDbInfoRequest } from "./DescribeStorageInstanceSubDbInfo/req";
+import { DescribeStorageInstanceSubDbInfoResponse } from "./DescribeStorageInstanceSubDbInfo/res";
+import { DescribeTableRequest } from "./DescribeTable/req";
+import { DescribeTableResponse } from "./DescribeTable/res";
+import { DescribeTableListByTypeRequest } from "./DescribeTableListByType/req";
+import { DescribeTableListByTypeResponse } from "./DescribeTableListByType/res";
+import { DescribeTablesRequest } from "./DescribeTables/req";
+import { DescribeTablesResponse } from "./DescribeTables/res";
+import { DisableSqlAuditRequest } from "./DisableSqlAudit/req";
+import { DisableSqlAuditResponse } from "./DisableSqlAudit/res";
+import { EnableInstanceIpv6AddressRequest } from "./EnableInstanceIpv6Address/req";
+import { EnableInstanceIpv6AddressResponse } from "./EnableInstanceIpv6Address/res";
+import { EnableSqlAuditRequest } from "./EnableSqlAudit/req";
+import { EnableSqlAuditResponse } from "./EnableSqlAudit/res";
+import { EnableSqlFlashbackMatchSwitchRequest } from "./EnableSqlFlashbackMatchSwitch/req";
+import { EnableSqlFlashbackMatchSwitchResponse } from "./EnableSqlFlashbackMatchSwitch/res";
+import { FlashbackRecycleBinTableRequest } from "./FlashbackRecycleBinTable/req";
+import { FlashbackRecycleBinTableResponse } from "./FlashbackRecycleBinTable/res";
+import { GetCandidateInstanceListRequest } from "./GetCandidateInstanceList/req";
+import { GetCandidateInstanceListResponse } from "./GetCandidateInstanceList/res";
+import { GetExpandLogicTableInfoListRequest } from "./GetExpandLogicTableInfoList/req";
+import { GetExpandLogicTableInfoListResponse } from "./GetExpandLogicTableInfoList/res";
+import { GetHotDbListRequest } from "./GetHotDbList/req";
+import { GetHotDbListResponse } from "./GetHotDbList/res";
+import { GetLogicTableInfoListRequest } from "./GetLogicTableInfoList/req";
+import { GetLogicTableInfoListResponse } from "./GetLogicTableInfoList/res";
+import { GetSrcRdsListRequest } from "./GetSrcRdsList/req";
+import { GetSrcRdsListResponse } from "./GetSrcRdsList/res";
+import { ListTagResourcesRequest } from "./ListTagResources/req";
+import { ListTagResourcesResponse } from "./ListTagResources/res";
+import { MigrateJstDrdsDbAcrossRegionRequest } from "./MigrateJstDrdsDbAcrossRegion/req";
+import { MigrateJstDrdsDbAcrossRegionResponse } from "./MigrateJstDrdsDbAcrossRegion/res";
+import { ModifyAccountDescriptionRequest } from "./ModifyAccountDescription/req";
+import { ModifyAccountDescriptionResponse } from "./ModifyAccountDescription/res";
+import { ModifyAccountPrivilegeRequest } from "./ModifyAccountPrivilege/req";
+import { ModifyAccountPrivilegeResponse } from "./ModifyAccountPrivilege/res";
+import { ModifyDrdsInstanceDescriptionRequest } from "./ModifyDrdsInstanceDescription/req";
+import { ModifyDrdsInstanceDescriptionResponse } from "./ModifyDrdsInstanceDescription/res";
+import { ModifyDrdsIpWhiteListRequest } from "./ModifyDrdsIpWhiteList/req";
+import { ModifyDrdsIpWhiteListResponse } from "./ModifyDrdsIpWhiteList/res";
+import { ModifyPolarDbReadWeightRequest } from "./ModifyPolarDbReadWeight/req";
+import { ModifyPolarDbReadWeightResponse } from "./ModifyPolarDbReadWeight/res";
+import { ModifyRdsReadWeightRequest } from "./ModifyRdsReadWeight/req";
+import { ModifyRdsReadWeightResponse } from "./ModifyRdsReadWeight/res";
+import { PreCheckCreateHiStoreInstanceRequest } from "./PreCheckCreateHiStoreInstance/req";
+import { PreCheckCreateHiStoreInstanceResponse } from "./PreCheckCreateHiStoreInstance/res";
+import { PreCheckSqlFlashbackTaskRequest } from "./PreCheckSqlFlashbackTask/req";
+import { PreCheckSqlFlashbackTaskResponse } from "./PreCheckSqlFlashbackTask/res";
+import { PutRestorePreCheckRequest } from "./PutRestorePreCheck/req";
+import { PutRestorePreCheckResponse } from "./PutRestorePreCheck/res";
+import { PutStartBackupRequest } from "./PutStartBackup/req";
+import { PutStartBackupResponse } from "./PutStartBackup/res";
+import { RearrangeDbToInstanceRequest } from "./RearrangeDbToInstance/req";
+import { RearrangeDbToInstanceResponse } from "./RearrangeDbToInstance/res";
+import { RefreshDrdsAtomUrlRequest } from "./RefreshDrdsAtomUrl/req";
+import { RefreshDrdsAtomUrlResponse } from "./RefreshDrdsAtomUrl/res";
+import { RefreshJstMigrateDrdsDbAtomUrlRequest } from "./RefreshJstMigrateDrdsDbAtomUrl/req";
+import { RefreshJstMigrateDrdsDbAtomUrlResponse } from "./RefreshJstMigrateDrdsDbAtomUrl/res";
+import { ReleaseHiStoreInstanceRequest } from "./ReleaseHiStoreInstance/req";
+import { ReleaseHiStoreInstanceResponse } from "./ReleaseHiStoreInstance/res";
+import { ReleaseInstanceInternetAddressRequest } from "./ReleaseInstanceInternetAddress/req";
+import { ReleaseInstanceInternetAddressResponse } from "./ReleaseInstanceInternetAddress/res";
+import { RemoveBackupsSetRequest } from "./RemoveBackupsSet/req";
+import { RemoveBackupsSetResponse } from "./RemoveBackupsSet/res";
+import { RemoveDrdsDbRequest } from "./RemoveDrdsDb/req";
+import { RemoveDrdsDbResponse } from "./RemoveDrdsDb/res";
+import { RemoveDrdsDbFailedRecordRequest } from "./RemoveDrdsDbFailedRecord/req";
+import { RemoveDrdsDbFailedRecordResponse } from "./RemoveDrdsDbFailedRecord/res";
+import { RemoveDrdsInstanceRequest } from "./RemoveDrdsInstance/req";
+import { RemoveDrdsInstanceResponse } from "./RemoveDrdsInstance/res";
+import { RemoveInstanceAccountRequest } from "./RemoveInstanceAccount/req";
+import { RemoveInstanceAccountResponse } from "./RemoveInstanceAccount/res";
+import { RemoveRecycleBinTableRequest } from "./RemoveRecycleBinTable/req";
+import { RemoveRecycleBinTableResponse } from "./RemoveRecycleBinTable/res";
+import { ResetDrdsToRdsConnectionsRequest } from "./ResetDrdsToRdsConnections/req";
+import { ResetDrdsToRdsConnectionsResponse } from "./ResetDrdsToRdsConnections/res";
+import { RestartDrdsInstanceRequest } from "./RestartDrdsInstance/req";
+import { RestartDrdsInstanceResponse } from "./RestartDrdsInstance/res";
+import { RollbackHiStoreInstanceRequest } from "./RollbackHiStoreInstance/req";
+import { RollbackHiStoreInstanceResponse } from "./RollbackHiStoreInstance/res";
+import { RollbackInstanceVersionRequest } from "./RollbackInstanceVersion/req";
+import { RollbackInstanceVersionResponse } from "./RollbackInstanceVersion/res";
+import { SetBackupLocalRequest } from "./SetBackupLocal/req";
+import { SetBackupLocalResponse } from "./SetBackupLocal/res";
+import { SetBackupPolicyRequest } from "./SetBackupPolicy/req";
+import { SetBackupPolicyResponse } from "./SetBackupPolicy/res";
+import { SetupBroadcastTablesRequest } from "./SetupBroadcastTables/req";
+import { SetupBroadcastTablesResponse } from "./SetupBroadcastTables/res";
+import { SetupDrdsParamsRequest } from "./SetupDrdsParams/req";
+import { SetupDrdsParamsResponse } from "./SetupDrdsParams/res";
+import { SetupRecycleBinStatusRequest } from "./SetupRecycleBinStatus/req";
+import { SetupRecycleBinStatusResponse } from "./SetupRecycleBinStatus/res";
+import { SetupTableRequest } from "./SetupTable/req";
+import { SetupTableResponse } from "./SetupTable/res";
+import { StartRestoreRequest } from "./StartRestore/req";
+import { StartRestoreResponse } from "./StartRestore/res";
+import { SubmitCleanTaskRequest } from "./SubmitCleanTask/req";
+import { SubmitCleanTaskResponse } from "./SubmitCleanTask/res";
+import { SubmitHotExpandPreCheckTaskRequest } from "./SubmitHotExpandPreCheckTask/req";
+import { SubmitHotExpandPreCheckTaskResponse } from "./SubmitHotExpandPreCheckTask/res";
+import { SubmitHotExpandTaskRequest } from "./SubmitHotExpandTask/req";
+import { SubmitHotExpandTaskResponse } from "./SubmitHotExpandTask/res";
+import { SubmitRollbackTaskRequest } from "./SubmitRollbackTask/req";
+import { SubmitRollbackTaskResponse } from "./SubmitRollbackTask/res";
+import { SubmitSmoothExpandPreCheckRequest } from "./SubmitSmoothExpandPreCheck/req";
+import { SubmitSmoothExpandPreCheckResponse } from "./SubmitSmoothExpandPreCheck/res";
+import { SubmitSmoothExpandPreCheckTaskRequest } from "./SubmitSmoothExpandPreCheckTask/req";
+import { SubmitSmoothExpandPreCheckTaskResponse } from "./SubmitSmoothExpandPreCheckTask/res";
+import { SubmitSmoothExpandTaskRequest } from "./SubmitSmoothExpandTask/req";
+import { SubmitSmoothExpandTaskResponse } from "./SubmitSmoothExpandTask/res";
+import { SubmitSqlFlashbackTaskRequest } from "./SubmitSqlFlashbackTask/req";
+import { SubmitSqlFlashbackTaskResponse } from "./SubmitSqlFlashbackTask/res";
+import { SubmitSwitchTaskRequest } from "./SubmitSwitchTask/req";
+import { SubmitSwitchTaskResponse } from "./SubmitSwitchTask/res";
+import { SwitchGlobalBroadcastTypeRequest } from "./SwitchGlobalBroadcastType/req";
+import { SwitchGlobalBroadcastTypeResponse } from "./SwitchGlobalBroadcastType/res";
+import { TagResourcesRequest } from "./TagResources/req";
+import { TagResourcesResponse } from "./TagResources/res";
+import { UntagResourcesRequest } from "./UntagResources/req";
+import { UntagResourcesResponse } from "./UntagResources/res";
+import { UpdateInstanceNetworkRequest } from "./UpdateInstanceNetwork/req";
+import { UpdateInstanceNetworkResponse } from "./UpdateInstanceNetwork/res";
+import { UpgradeHiStoreInstanceRequest } from "./UpgradeHiStoreInstance/req";
+import { UpgradeHiStoreInstanceResponse } from "./UpgradeHiStoreInstance/res";
+import { UpgradeInstanceVersionRequest } from "./UpgradeInstanceVersion/req";
+import { UpgradeInstanceVersionResponse } from "./UpgradeInstanceVersion/res";
+import { ValidateShardTaskRequest } from "./ValidateShardTask/req";
+import { ValidateShardTaskResponse } from "./ValidateShardTask/res";
+import { InnerDescribeDrdsInstancesRequest } from "./InnerDescribeDrdsInstances/req";
+import { InnerDescribeDrdsInstancesResponse } from "./InnerDescribeDrdsInstances/res";
+import { InnerGetUserListRequest } from "./InnerGetUserList/req";
+import { InnerGetUserListResponse } from "./InnerGetUserList/res";
+import { DescribeEventSummaryRequest } from "./DescribeEventSummary/req";
+import { DescribeEventSummaryResponse } from "./DescribeEventSummary/res";
+import { DescribeEventTasksRequest } from "./DescribeEventTasks/req";
+import { DescribeEventTasksResponse } from "./DescribeEventTasks/res";
+import { DescribeHistoryEventTasksRequest } from "./DescribeHistoryEventTasks/req";
+import { DescribeHistoryEventTasksResponse } from "./DescribeHistoryEventTasks/res";
+import { ModifyEventTaskStatusRequest } from "./ModifyEventTaskStatus/req";
+import { ModifyEventTaskStatusResponse } from "./ModifyEventTaskStatus/res";
+import { ListUserReportsRequest } from "./ListUserReports/req";
+import { ListUserReportsResponse } from "./ListUserReports/res";
+import { ListVersionsRequest } from "./ListVersions/req";
+import { ListVersionsResponse } from "./ListVersions/res";
+import { SqlCompatibilityCancelRequest } from "./SqlCompatibilityCancel/req";
+import { SqlCompatibilityCancelResponse } from "./SqlCompatibilityCancel/res";
+import { SqlCompatibilityStartRequest } from "./SqlCompatibilityStart/req";
+import { SqlCompatibilityStartResponse } from "./SqlCompatibilityStart/res";
+import { DescribeTableShardingInfoRequest } from "./DescribeTableShardingInfo/req";
+import { DescribeTableShardingInfoResponse } from "./DescribeTableShardingInfo/res";
+import { PreCheckModifyTableShardingKeyParamRequest } from "./PreCheckModifyTableShardingKeyParam/req";
+import { PreCheckModifyTableShardingKeyParamResponse } from "./PreCheckModifyTableShardingKeyParam/res";
+import { SubmitCleanTableShardingKeyModifyRequest } from "./SubmitCleanTableShardingKeyModify/req";
+import { SubmitCleanTableShardingKeyModifyResponse } from "./SubmitCleanTableShardingKeyModify/res";
+import { SubmitRollbackShardingKeyModifyRequest } from "./SubmitRollbackShardingKeyModify/req";
+import { SubmitRollbackShardingKeyModifyResponse } from "./SubmitRollbackShardingKeyModify/res";
+import { SubmitSwitchTableShardingKeyModifyRequest } from "./SubmitSwitchTableShardingKeyModify/req";
+import { SubmitSwitchTableShardingKeyModifyResponse } from "./SubmitSwitchTableShardingKeyModify/res";
+import { SubmitTableShardingKeyModifyRequest } from "./SubmitTableShardingKeyModify/req";
+import { SubmitTableShardingKeyModifyResponse } from "./SubmitTableShardingKeyModify/res";
+
 interface DRDS {
-    ChangeAccountPassword(query: {
-        "RegionId"?: string;
-        "AccountName": string;
-        "Password": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    ChangeInstanceAzone(query: {
-        "RegionId"?: string;
-        "OriginAzoneId": string;
-        "TargetAzoneId": string;
-        "DrdsRegionId": string;
-        "DrdsInstanceId": string;
-    }): Promise<{
-        "code": string;
-        "data": {
-            "RequestId": string;
-            "TaskId": number;
-            "Success": boolean;
-        };
-        "requestId": string;
-        "success": boolean;
-    }>;
-    ChangeInstanceNetwork(query: {
-        "RegionId"?: string;
-        "SrcInstanceNetworkType": string;
-        "DrdsInstanceId": string;
-        "VpcId"?: string;
-        "VswitchId"?: string;
-        "RetainClassic"?: boolean;
-        "ClassicExpiredDays"?: number;
-    }): Promise<{}>;
-    CheckCapacityDataReady(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    CheckDrdsDbName(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    CheckDrdsDefaultRole(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    CheckExpandStatus(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    CheckRdsExpandStatus(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "InstanceList": string[];
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    CheckRdsSuperAccount(query: {
-        "RegionId"?: string;
-        "DbInstanceId": string;
-        "AccountName": string;
-        "Password": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    CheckSlsStatus(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    CheckSqlAuditEnableStatus(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    ConfigureDrdsDbInstances(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-        "DbInstance"?: string[];
-    }): Promise<{}>;
-    CreateDrdsDB(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-        "DbName"?: string;
-        "Encode"?: string;
-        "Password"?: string;
-        "RdsInstance"?: string[];
-        "Type"?: string;
-        "DbInstType"?: string;
-        "RdsSuperAccount"?: string[];
-        "InstDbName"?: string[];
-        "DbInstanceIsCreating"?: boolean;
-        "AccountName"?: string;
-    }): Promise<{}>;
-    CreateDrdsDBPreCheck(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-        "DbName"?: string;
-        "Encode"?: string;
-        "Password"?: string;
-        "RdsInstance"?: string[];
-        "Type"?: string;
-        "DbInstType"?: string;
-        "RdsSuperAccount"?: string[];
-        "InstDbName"?: string[];
-        "DbInstanceIsCreating"?: boolean;
-        "AccountName"?: string;
-    }): Promise<{}>;
-    CreateDrdsDBPreview(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-        "DbName"?: string;
-        "AccountName"?: string;
-        "RdsInstance"?: string[];
-        "Type"?: string;
-        "DbInstType"?: string;
-        "InstDbName"?: string[];
-        "DbInstanceIsCreating"?: boolean;
-        "OrderId"?: string;
-    }): Promise<{}>;
-    CreateInstanceAccount(query: {
-        "RegionId"?: string;
-        "AccountName": string;
-        "Password": string;
-        "DbPrivilege": string[];
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    CreateInstanceInternetAddress(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-        "DrdsPassword"?: string;
-    }): Promise<{}>;
-    CreateOrderForRds(query: {
-        "RegionId"?: string;
-        "Params": string;
-    }): Promise<{}>;
-    CreateShardTask(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "SourceTableName": string;
-        "TargetTableName": string;
-        "TaskType": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DatalinkReplicationPrecheck(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "SrcTableName": string;
-        "DstTableName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DeleteShardTasks(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "TableName": string[];
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeBackMenu(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeBackupDbs(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-        "PreferredRestoreTime"?: string;
-        "BackupId"?: string;
-    }): Promise<{}>;
-    DescribeBackupLocal(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeBackupPolicy(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeBackupSets(query: {
-        "RegionId"?: string;
-        "StartTime": string;
-        "EndTime": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeBackupTimes(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeBroadcastTables(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "Query"?: string;
-        "DrdsInstanceId": string;
-        "PageSize"?: number;
-        "CurrentPage"?: number;
-    }): Promise<{}>;
-    DescribeCanExpandInstanceDetailList(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "CurrentPlan": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeCandidateInstanceList(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "PageSize": number;
-        "PageNumber": number;
-        "DrdsInstanceId": string;
-        "Search"?: string;
-        "AcrossZone"?: boolean;
-    }): Promise<{}>;
-    DescribeConsoleConfig(query: {
-        "RegionId"?: string;
-        "Type": string;
-    }): Promise<{}>;
-    DescribeDbInstanceDbs(query: {
-        "RegionId"?: string;
-        "DbInstanceId": string;
-        "DrdsInstanceId": string;
-        "AccountName"?: string;
-        "Password"?: string;
-        "DbInstType"?: string;
-    }): Promise<{}>;
-    DescribeDbInstances(query: {
-        "RegionId": string;
-        "DrdsInstanceId": string;
-        "Search"?: string;
-        "DbInstType"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    DescribeDrdsDB(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeDrdsDBCluster(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DbInstanceId": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeDrdsDBIpWhiteList(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-        "GroupName"?: string;
-    }): Promise<{}>;
-    DescribeDrdsDBs(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    DescribeDrdsDbInstance(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DbInstanceId": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeDrdsDbInstances(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    DescribeDrdsDbRdsNameList(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeDrdsDbRdsRelationInfo(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeDrdsDbRelationInfo(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeDrdsDbTasks(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-        "TaskType"?: string;
-    }): Promise<{}>;
-    DescribeDrdsInstance(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeDrdsInstanceDbMonitor(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "Key": string;
-        "StartTime": number;
-        "EndTime": number;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeDrdsInstanceLevelTasks(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeDrdsInstanceMonitor(query: {
-        "RegionId"?: string;
-        "Key": string;
-        "StartTime": number;
-        "EndTime": number;
-        "DrdsInstanceId": string;
-        "PeriodMultiple"?: number;
-    }): Promise<{}>;
-    DescribeDrdsInstanceVersion(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeDrdsInstances(query: {
-        "RegionId": string;
-        "Type"?: string;
-        "Tag"?: string[];
-        "Description"?: string;
-        "Expired"?: boolean;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    DescribeDrdsParams(query: {
-        "RegionId"?: string;
-        "ParamLevel": string;
-        "DrdsInstanceId": string;
-        "DbName"?: string;
-    }): Promise<{}>;
-    DescribeDrdsRegions(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    DescribeDrdsShardingDbs(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-        "DbNamePattern"?: string;
-    }): Promise<{}>;
-    DescribeDrdsSlowSqls(query: {
-        "RegionId"?: string;
-        "StartTime": number;
-        "EndTime": number;
-        "DrdsInstanceId": string;
-        "DbName": string;
-        "ExeTime": number;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    DescribeDrdsSqlAuditStatus(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeDrdsTasks(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-        "DbName"?: string;
-        "TaskType"?: string;
-    }): Promise<{}>;
-    DescribeExpandLogicTableInfoList(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeGlobalBroadcastType(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeHiStoreInstanceInfo(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-        "HistoreInstanceId": string;
-    }): Promise<{}>;
-    DescribeHotDbList(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeInstDbLogInfo(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeInstDbSlsInfo(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeInstanceAccounts(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeInstanceMenuSwitch(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeInstanceSwitchAzone(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeInstanceSwitchNetwork(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribePreCheckResult(query: {
-        "RegionId"?: string;
-        "TaskId": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeRDSPerformance(query: {
-        "RegionId"?: string;
-        "RdsInstanceId": string;
-        "Keys": string;
-        "DrdsInstanceId": string;
-        "StartTime"?: number;
-        "EndTime"?: number;
-        "DbInstType"?: string;
-    }): Promise<{}>;
-    DescribeRdsCommodity(query: {
-        "RegionId": string;
-        "DrdsInstanceId": string;
-        "CommodityCode": string;
-        "OrderType"?: string;
-    }): Promise<{}>;
-    DescribeRdsPerformanceSummary(query: {
-        "RegionId"?: string;
-        "RdsInstanceId": string[];
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeRdsPrice(query: {
-        "RegionId"?: string;
-        "Params": string;
-    }): Promise<{}>;
-    DescribeRdsSuperAccountInstances(query: {
-        "RegionId"?: string;
-        "RdsInstance": string[];
-        "DrdsInstanceId": string;
-        "DbInstType"?: string;
-    }): Promise<{}>;
-    DescribeRdsVpcForZone(query: {
-        "RegionId": string;
-        "ZoneId": string;
-    }): Promise<{}>;
-    DescribeRecycleBinStatus(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeRecycleBinTables(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeRestoreOrder(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-        "PreferredBackupTime"?: string;
-        "BackupMode"?: string;
-        "BackupLevel"?: string;
-        "BackupDbNames"?: string;
-        "BackupId"?: string;
-    }): Promise<{}>;
-    DescribeShardTaskInfo(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "SourceTableName": string;
-        "TargetTableName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeShardTaskList(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "TaskType": string;
-        "Query"?: string;
-        "DrdsInstanceId": string;
-        "PageSize"?: number;
-        "CurrentPage"?: number;
-    }): Promise<{}>;
-    DescribeSqlFlashbakTask(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeSrcRdsList(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "PartitionMapping": string[];
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeStorageInstanceSubDbInfo(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "InstanceId": string;
-        "DrdsInstanceId": string;
-        "InstType"?: string;
-    }): Promise<{}>;
-    DescribeTable(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "TableName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeTableListByType(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "TableType": string;
-        "Query"?: string;
-        "DrdsInstanceId": string;
-        "PageSize"?: number;
-        "CurrentPage"?: number;
-    }): Promise<{}>;
-    DescribeTables(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "Query"?: string;
-        "DrdsInstanceId": string;
-        "PageSize"?: number;
-        "CurrentPage"?: number;
-    }): Promise<{}>;
-    DisableSqlAudit(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    EnableInstanceIpv6Address(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-        "DrdsPassword"?: string;
-    }): Promise<{}>;
-    EnableSqlAudit(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-        "IsRecall"?: boolean;
-        "RecallStartTimestamp"?: string;
-        "RecallEndTimestamp"?: string;
-    }): Promise<{}>;
-    EnableSqlFlashbackMatchSwitch(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    FlashbackRecycleBinTable(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "TableName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    GetCandidateInstanceList(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "Search": string;
-        "AcrossZone": boolean;
-        "PageSize": number;
-        "PageNumber": number;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    GetExpandLogicTableInfoList(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    GetHotDbList(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    GetLogicTableInfoList(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    GetSrcRdsList(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "PartitionMapping": string[];
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    ListTagResources(query: {
-        "RegionId": string;
-        "ResourceType": string;
-        "Tag"?: string[];
-        "ResourceId"?: string[];
-        "NoRole"?: boolean;
-        "NextToken"?: string;
-    }): Promise<{}>;
-    MigrateJstDrdsDbAcrossRegion(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DstDrdsInstanceId": string;
-        "SrcDrdsInstanceId": string;
-    }): Promise<{}>;
-    ModifyAccountDescription(query: {
-        "RegionId"?: string;
-        "AccountName": string;
-        "Description": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    ModifyAccountPrivilege(query: {
-        "RegionId"?: string;
-        "AccountName": string;
-        "DbPrivilege": string[];
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    ModifyDrdsInstanceDescription(query: {
-        "RegionId"?: string;
-        "Description": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    ModifyDrdsIpWhiteList(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "IpWhiteList": string;
-        "Mode"?: boolean;
-        "GroupName"?: string;
-        "GroupAttribute"?: string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    ModifyPolarDbReadWeight(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DbNodeIds": string;
-        "DbInstanceId": string;
-        "Weights": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    ModifyRdsReadWeight(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "InstanceNames": string;
-        "Weights": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    PreCheckCreateHiStoreInstance(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-        "DrdsPassword"?: string;
-    }): Promise<{}>;
-    PreCheckSqlFlashbackTask(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "StartTime": string;
-        "EndTime": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    PutRestorePreCheck(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-        "PreferredBackupTime"?: string;
-        "BackupMode"?: string;
-        "BackupLevel"?: string;
-        "BackupDbNames"?: string;
-        "BackupId"?: string;
-    }): Promise<{}>;
-    PutStartBackup(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-        "BackupMode"?: string;
-        "BackupLevel"?: string;
-        "BackupDbNames"?: string;
-    }): Promise<{}>;
-    RearrangeDbToInstance(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-        "ChooseSubDb"?: string;
-        "ChooseRds"?: string;
-        "InstanceList"?: string[];
-        "OrderId"?: string;
-    }): Promise<{}>;
-    RefreshDrdsAtomUrl(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    RefreshJstMigrateDrdsDbAtomUrl(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    ReleaseHiStoreInstance(query: {
-        "RegionId"?: string;
-        "HistoreInstanceId": string;
-        "DrdsInstanceId": string;
-        "DrdsPassword"?: string;
-    }): Promise<{}>;
-    ReleaseInstanceInternetAddress(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-        "DrdsPassword"?: string;
-    }): Promise<{}>;
-    RemoveBackupsSet(query: {
-        "RegionId"?: string;
-        "BackupId": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    RemoveDrdsDb(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    RemoveDrdsDbFailedRecord(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    RemoveDrdsInstance(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    RemoveInstanceAccount(query: {
-        "RegionId"?: string;
-        "AccountName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    RemoveRecycleBinTable(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "TableName"?: string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    ResetDrdsToRdsConnections(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    RestartDrdsInstance(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    RollbackHiStoreInstance(query: {
-        "RegionId"?: string;
-        "HistoreInstanceId": string;
-        "DrdsInstanceId": string;
-        "DrdsPassword"?: string;
-    }): Promise<{}>;
-    RollbackInstanceVersion(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-        "DrdsPassword"?: string;
-    }): Promise<{}>;
-    SetBackupLocal(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-        "LocalLogRetentionHours"?: string;
-        "LocalLogRetentionSpace"?: string;
-        "HighSpaceUsageProtection"?: string;
-    }): Promise<{}>;
-    SetBackupPolicy(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-        "PreferredBackupPeriod"?: string;
-        "PreferredBackupStartTime"?: string;
-        "PreferredBackupEndTime"?: string;
-        "BackupMode"?: string;
-        "BackupLevel"?: string;
-        "BackupDbNames"?: string;
-        "BackupLog"?: string;
-        "DataBackupRetentionPeriod"?: string;
-        "LogBackupRetentionPeriod"?: string;
-    }): Promise<{}>;
-    SetupBroadcastTables(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "Active": boolean;
-        "TableName": string[];
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    SetupDrdsParams(query: {
-        "RegionId"?: string;
-        "ParamLevel": string;
-        "Data": string[];
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    SetupRecycleBinStatus(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "StatusAction": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    SetupTable(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "AllowFullTableScan": boolean;
-        "TableName": string[];
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    StartRestore(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-        "PreferredBackupTime"?: string;
-        "BackupMode"?: string;
-        "BackupLevel"?: string;
-        "BackupDbNames"?: string;
-        "BackupId"?: string;
-    }): Promise<{}>;
-    SubmitCleanTask(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "ParentJobId": string;
-        "JobId": string;
-        "ExpandType": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    SubmitHotExpandPreCheckTask(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DbInstType": string;
-        "DrdsInstanceId": string;
-        "TableList"?: string[];
-    }): Promise<{}>;
-    SubmitHotExpandTask(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "InstanceDbMapping": string[];
-        "Mapping": string[];
-        "ExtendedMapping": string[];
-        "DrdsInstanceId": string;
-        "TaskName"?: string;
-        "TaskDesc"?: string;
-        "SupperAccountMapping"?: string[];
-    }): Promise<{}>;
-    SubmitRollbackTask(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "ParentJobId": string;
-        "JobId": string;
-        "ExpandType": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    SubmitSmoothExpandPreCheck(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DbInstType": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    SubmitSmoothExpandPreCheckTask(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    SubmitSmoothExpandTask(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "TransferTaskInfos": string[];
-        "DrdsInstanceId": string;
-        "RdsSuperInstances"?: string[];
-        "DbInstanceIsCreating"?: boolean;
-    }): Promise<{}>;
-    SubmitSqlFlashbackTask(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "StartTime": string;
-        "EndTime": string;
-        "RecallRestoreType": number;
-        "DrdsInstanceId": string;
-        "TraceId"?: string;
-        "TableName"?: string;
-        "SqlType"?: string;
-        "SqlPk"?: string;
-        "RecallType"?: number;
-    }): Promise<{}>;
-    SubmitSwitchTask(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "ParentJobId": string;
-        "JobId": string;
-        "ExpandType": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    SwitchGlobalBroadcastType(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    TagResources(query: {
-        "RegionId": string;
-        "ResourceType": string;
-        "Tag": string[];
-        "ResourceId": string[];
-        "NoRole"?: boolean;
-    }): Promise<{}>;
-    UntagResources(query: {
-        "RegionId": string;
-        "ResourceType": string;
-        "ResourceId": string[];
-        "All"?: boolean;
-        "NoRole"?: boolean;
-        "TagKey"?: string[];
-    }): Promise<{}>;
-    UpdateInstanceNetwork(query: {
-        "RegionId"?: string;
-        "SrcInstanceNetworkType": string;
-        "DrdsInstanceId": string;
-        "RetainClassic"?: boolean;
-        "ClassicExpiredDays"?: number;
-    }): Promise<{}>;
-    UpgradeHiStoreInstance(query: {
-        "RegionId"?: string;
-        "HistoreInstanceId": string;
-        "DrdsInstanceId": string;
-        "DrdsPassword"?: string;
-    }): Promise<{}>;
-    UpgradeInstanceVersion(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-        "DrdsPassword"?: string;
-        "Rpm"?: string;
-    }): Promise<{}>;
-    ValidateShardTask(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "SourceTableName": string;
-        "TargetTableName": string;
-        "TaskType": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    InnerDescribeDrdsInstances(query: {
-        "RegionId": string;
-        "Aliuid": string;
-        "Type"?: string;
-        "Bid"?: string;
-        "Tag"?: string[];
-        "Description"?: string;
-        "Expired"?: boolean;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    InnerGetUserList(query: {
-        "RegionId": string;
-    }): Promise<{}>;
-    DescribeEventSummary(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    DescribeEventTasks(query: {
-        "RegionId"?: string;
-        "PageNumber": number;
-        "PageSize": number;
-        "Region": string;
-        "EventId": string;
-    }): Promise<{}>;
-    DescribeHistoryEventTasks(query: {
-        "RegionId"?: string;
-        "PageNumber": number;
-        "PageSize": number;
-        "EndTime": number;
-        "StartTime": number;
-    }): Promise<{}>;
-    ModifyEventTaskStatus(query: {
-        "RegionId"?: string;
-        "Region": string;
-        "Ids": string;
-        "EventId": string;
-        "SwitchTime"?: number;
-    }): Promise<{}>;
-    ListUserReports(query: {
-        "RegionId"?: string;
-        "ReportId": number;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    ListVersions(query: {
-        "RegionId"?: string;
-        "DrdsInstanceId": string;
-        "DrdsVer"?: string;
-    }): Promise<{}>;
-    SqlCompatibilityCancel(query: {
-        "RegionId"?: string;
-        "TaskId": number;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    SqlCompatibilityStart(query: {
-        "RegionId"?: string;
-        "TargetVersion": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    DescribeTableShardingInfo(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "TableName": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    PreCheckModifyTableShardingKeyParam(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "SrcTableName": string;
-        "TargetTableName": string;
-        "IsShard": boolean;
-        "DbShardingColumnList"?: string;
-        "DbShardingFunction"?: string;
-        "DbRightShiftOffset"?: number;
-        "TbShardingColumnList"?: string;
-        "TbShardingFunction"?: string;
-        "TbRightShiftOffset"?: string;
-        "TbPartitions"?: string;
-        "TbComputeLength"?: string;
-        "DbComputeLength"?: string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    SubmitCleanTableShardingKeyModify(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "TaskId": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    SubmitRollbackShardingKeyModify(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "TaskId": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    SubmitSwitchTableShardingKeyModify(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "TaskId": string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
-    SubmitTableShardingKeyModify(query: {
-        "RegionId"?: string;
-        "DbName": string;
-        "SrcTableName": string;
-        "TargetTableName": string;
-        "IsShard": boolean;
-        "DbShardingColumnList"?: string;
-        "DbShardingFunction"?: string;
-        "DbRightShiftOffset"?: number;
-        "TbShardingColumnList"?: string;
-        "TbShardingFunction"?: string;
-        "TbRightShiftOffset"?: string;
-        "TbPartitions"?: string;
-        "TbComputeLength"?: string;
-        "DbComputeLength"?: string;
-        "DrdsInstanceId": string;
-    }): Promise<{}>;
+    ChangeAccountPassword(query: ChangeAccountPasswordRequest): Promise<ChangeAccountPasswordResponse>;
+    ChangeInstanceAzone(query: ChangeInstanceAzoneRequest): Promise<ChangeInstanceAzoneResponse>;
+    ChangeInstanceNetwork(query: ChangeInstanceNetworkRequest): Promise<ChangeInstanceNetworkResponse>;
+    CheckCapacityDataReady(query: CheckCapacityDataReadyRequest): Promise<CheckCapacityDataReadyResponse>;
+    CheckDrdsDbName(query: CheckDrdsDbNameRequest): Promise<CheckDrdsDbNameResponse>;
+    CheckDrdsDefaultRole(query: CheckDrdsDefaultRoleRequest): Promise<CheckDrdsDefaultRoleResponse>;
+    CheckExpandStatus(query: CheckExpandStatusRequest): Promise<CheckExpandStatusResponse>;
+    CheckRdsExpandStatus(query: CheckRdsExpandStatusRequest): Promise<CheckRdsExpandStatusResponse>;
+    CheckRdsSuperAccount(query: CheckRdsSuperAccountRequest): Promise<CheckRdsSuperAccountResponse>;
+    CheckSlsStatus(query: CheckSlsStatusRequest): Promise<CheckSlsStatusResponse>;
+    CheckSqlAuditEnableStatus(query: CheckSqlAuditEnableStatusRequest): Promise<CheckSqlAuditEnableStatusResponse>;
+    ConfigureDrdsDbInstances(query: ConfigureDrdsDbInstancesRequest): Promise<ConfigureDrdsDbInstancesResponse>;
+    CreateDrdsDB(query: CreateDrdsDBRequest): Promise<CreateDrdsDBResponse>;
+    CreateDrdsDBPreCheck(query: CreateDrdsDBPreCheckRequest): Promise<CreateDrdsDBPreCheckResponse>;
+    CreateDrdsDBPreview(query: CreateDrdsDBPreviewRequest): Promise<CreateDrdsDBPreviewResponse>;
+    CreateInstanceAccount(query: CreateInstanceAccountRequest): Promise<CreateInstanceAccountResponse>;
+    CreateInstanceInternetAddress(query: CreateInstanceInternetAddressRequest): Promise<CreateInstanceInternetAddressResponse>;
+    CreateOrderForRds(query: CreateOrderForRdsRequest): Promise<CreateOrderForRdsResponse>;
+    CreateShardTask(query: CreateShardTaskRequest): Promise<CreateShardTaskResponse>;
+    DatalinkReplicationPrecheck(query: DatalinkReplicationPrecheckRequest): Promise<DatalinkReplicationPrecheckResponse>;
+    DeleteShardTasks(query: DeleteShardTasksRequest): Promise<DeleteShardTasksResponse>;
+    DescribeBackMenu(query: DescribeBackMenuRequest): Promise<DescribeBackMenuResponse>;
+    DescribeBackupDbs(query: DescribeBackupDbsRequest): Promise<DescribeBackupDbsResponse>;
+    DescribeBackupLocal(query: DescribeBackupLocalRequest): Promise<DescribeBackupLocalResponse>;
+    DescribeBackupPolicy(query: DescribeBackupPolicyRequest): Promise<DescribeBackupPolicyResponse>;
+    DescribeBackupSets(query: DescribeBackupSetsRequest): Promise<DescribeBackupSetsResponse>;
+    DescribeBackupTimes(query: DescribeBackupTimesRequest): Promise<DescribeBackupTimesResponse>;
+    DescribeBroadcastTables(query: DescribeBroadcastTablesRequest): Promise<DescribeBroadcastTablesResponse>;
+    DescribeCanExpandInstanceDetailList(query: DescribeCanExpandInstanceDetailListRequest): Promise<DescribeCanExpandInstanceDetailListResponse>;
+    DescribeCandidateInstanceList(query: DescribeCandidateInstanceListRequest): Promise<DescribeCandidateInstanceListResponse>;
+    DescribeConsoleConfig(query: DescribeConsoleConfigRequest): Promise<DescribeConsoleConfigResponse>;
+    DescribeDbInstanceDbs(query: DescribeDbInstanceDbsRequest): Promise<DescribeDbInstanceDbsResponse>;
+    DescribeDbInstances(query: DescribeDbInstancesRequest): Promise<DescribeDbInstancesResponse>;
+    DescribeDrdsDB(query: DescribeDrdsDBRequest): Promise<DescribeDrdsDBResponse>;
+    DescribeDrdsDBCluster(query: DescribeDrdsDBClusterRequest): Promise<DescribeDrdsDBClusterResponse>;
+    DescribeDrdsDBIpWhiteList(query: DescribeDrdsDBIpWhiteListRequest): Promise<DescribeDrdsDBIpWhiteListResponse>;
+    DescribeDrdsDBs(query: DescribeDrdsDBsRequest): Promise<DescribeDrdsDBsResponse>;
+    DescribeDrdsDbInstance(query: DescribeDrdsDbInstanceRequest): Promise<DescribeDrdsDbInstanceResponse>;
+    DescribeDrdsDbInstances(query: DescribeDrdsDbInstancesRequest): Promise<DescribeDrdsDbInstancesResponse>;
+    DescribeDrdsDbRdsNameList(query: DescribeDrdsDbRdsNameListRequest): Promise<DescribeDrdsDbRdsNameListResponse>;
+    DescribeDrdsDbRdsRelationInfo(query: DescribeDrdsDbRdsRelationInfoRequest): Promise<DescribeDrdsDbRdsRelationInfoResponse>;
+    DescribeDrdsDbRelationInfo(query: DescribeDrdsDbRelationInfoRequest): Promise<DescribeDrdsDbRelationInfoResponse>;
+    DescribeDrdsDbTasks(query: DescribeDrdsDbTasksRequest): Promise<DescribeDrdsDbTasksResponse>;
+    DescribeDrdsInstance(query: DescribeDrdsInstanceRequest): Promise<DescribeDrdsInstanceResponse>;
+    DescribeDrdsInstanceDbMonitor(query: DescribeDrdsInstanceDbMonitorRequest): Promise<DescribeDrdsInstanceDbMonitorResponse>;
+    DescribeDrdsInstanceLevelTasks(query: DescribeDrdsInstanceLevelTasksRequest): Promise<DescribeDrdsInstanceLevelTasksResponse>;
+    DescribeDrdsInstanceMonitor(query: DescribeDrdsInstanceMonitorRequest): Promise<DescribeDrdsInstanceMonitorResponse>;
+    DescribeDrdsInstanceVersion(query: DescribeDrdsInstanceVersionRequest): Promise<DescribeDrdsInstanceVersionResponse>;
+    DescribeDrdsInstances(query: DescribeDrdsInstancesRequest): Promise<DescribeDrdsInstancesResponse>;
+    DescribeDrdsParams(query: DescribeDrdsParamsRequest): Promise<DescribeDrdsParamsResponse>;
+    DescribeDrdsRegions(query: DescribeDrdsRegionsRequest): Promise<DescribeDrdsRegionsResponse>;
+    DescribeDrdsShardingDbs(query: DescribeDrdsShardingDbsRequest): Promise<DescribeDrdsShardingDbsResponse>;
+    DescribeDrdsSlowSqls(query: DescribeDrdsSlowSqlsRequest): Promise<DescribeDrdsSlowSqlsResponse>;
+    DescribeDrdsSqlAuditStatus(query: DescribeDrdsSqlAuditStatusRequest): Promise<DescribeDrdsSqlAuditStatusResponse>;
+    DescribeDrdsTasks(query: DescribeDrdsTasksRequest): Promise<DescribeDrdsTasksResponse>;
+    DescribeExpandLogicTableInfoList(query: DescribeExpandLogicTableInfoListRequest): Promise<DescribeExpandLogicTableInfoListResponse>;
+    DescribeGlobalBroadcastType(query: DescribeGlobalBroadcastTypeRequest): Promise<DescribeGlobalBroadcastTypeResponse>;
+    DescribeHiStoreInstanceInfo(query: DescribeHiStoreInstanceInfoRequest): Promise<DescribeHiStoreInstanceInfoResponse>;
+    DescribeHotDbList(query: DescribeHotDbListRequest): Promise<DescribeHotDbListResponse>;
+    DescribeInstDbLogInfo(query: DescribeInstDbLogInfoRequest): Promise<DescribeInstDbLogInfoResponse>;
+    DescribeInstDbSlsInfo(query: DescribeInstDbSlsInfoRequest): Promise<DescribeInstDbSlsInfoResponse>;
+    DescribeInstanceAccounts(query: DescribeInstanceAccountsRequest): Promise<DescribeInstanceAccountsResponse>;
+    DescribeInstanceMenuSwitch(query: DescribeInstanceMenuSwitchRequest): Promise<DescribeInstanceMenuSwitchResponse>;
+    DescribeInstanceSwitchAzone(query: DescribeInstanceSwitchAzoneRequest): Promise<DescribeInstanceSwitchAzoneResponse>;
+    DescribeInstanceSwitchNetwork(query: DescribeInstanceSwitchNetworkRequest): Promise<DescribeInstanceSwitchNetworkResponse>;
+    DescribePreCheckResult(query: DescribePreCheckResultRequest): Promise<DescribePreCheckResultResponse>;
+    DescribeRDSPerformance(query: DescribeRDSPerformanceRequest): Promise<DescribeRDSPerformanceResponse>;
+    DescribeRdsCommodity(query: DescribeRdsCommodityRequest): Promise<DescribeRdsCommodityResponse>;
+    DescribeRdsPerformanceSummary(query: DescribeRdsPerformanceSummaryRequest): Promise<DescribeRdsPerformanceSummaryResponse>;
+    DescribeRdsPrice(query: DescribeRdsPriceRequest): Promise<DescribeRdsPriceResponse>;
+    DescribeRdsSuperAccountInstances(query: DescribeRdsSuperAccountInstancesRequest): Promise<DescribeRdsSuperAccountInstancesResponse>;
+    DescribeRdsVpcForZone(query: DescribeRdsVpcForZoneRequest): Promise<DescribeRdsVpcForZoneResponse>;
+    DescribeRecycleBinStatus(query: DescribeRecycleBinStatusRequest): Promise<DescribeRecycleBinStatusResponse>;
+    DescribeRecycleBinTables(query: DescribeRecycleBinTablesRequest): Promise<DescribeRecycleBinTablesResponse>;
+    DescribeRestoreOrder(query: DescribeRestoreOrderRequest): Promise<DescribeRestoreOrderResponse>;
+    DescribeShardTaskInfo(query: DescribeShardTaskInfoRequest): Promise<DescribeShardTaskInfoResponse>;
+    DescribeShardTaskList(query: DescribeShardTaskListRequest): Promise<DescribeShardTaskListResponse>;
+    DescribeSqlFlashbakTask(query: DescribeSqlFlashbakTaskRequest): Promise<DescribeSqlFlashbakTaskResponse>;
+    DescribeSrcRdsList(query: DescribeSrcRdsListRequest): Promise<DescribeSrcRdsListResponse>;
+    DescribeStorageInstanceSubDbInfo(query: DescribeStorageInstanceSubDbInfoRequest): Promise<DescribeStorageInstanceSubDbInfoResponse>;
+    DescribeTable(query: DescribeTableRequest): Promise<DescribeTableResponse>;
+    DescribeTableListByType(query: DescribeTableListByTypeRequest): Promise<DescribeTableListByTypeResponse>;
+    DescribeTables(query: DescribeTablesRequest): Promise<DescribeTablesResponse>;
+    DisableSqlAudit(query: DisableSqlAuditRequest): Promise<DisableSqlAuditResponse>;
+    EnableInstanceIpv6Address(query: EnableInstanceIpv6AddressRequest): Promise<EnableInstanceIpv6AddressResponse>;
+    EnableSqlAudit(query: EnableSqlAuditRequest): Promise<EnableSqlAuditResponse>;
+    EnableSqlFlashbackMatchSwitch(query: EnableSqlFlashbackMatchSwitchRequest): Promise<EnableSqlFlashbackMatchSwitchResponse>;
+    FlashbackRecycleBinTable(query: FlashbackRecycleBinTableRequest): Promise<FlashbackRecycleBinTableResponse>;
+    GetCandidateInstanceList(query: GetCandidateInstanceListRequest): Promise<GetCandidateInstanceListResponse>;
+    GetExpandLogicTableInfoList(query: GetExpandLogicTableInfoListRequest): Promise<GetExpandLogicTableInfoListResponse>;
+    GetHotDbList(query: GetHotDbListRequest): Promise<GetHotDbListResponse>;
+    GetLogicTableInfoList(query: GetLogicTableInfoListRequest): Promise<GetLogicTableInfoListResponse>;
+    GetSrcRdsList(query: GetSrcRdsListRequest): Promise<GetSrcRdsListResponse>;
+    ListTagResources(query: ListTagResourcesRequest): Promise<ListTagResourcesResponse>;
+    MigrateJstDrdsDbAcrossRegion(query: MigrateJstDrdsDbAcrossRegionRequest): Promise<MigrateJstDrdsDbAcrossRegionResponse>;
+    ModifyAccountDescription(query: ModifyAccountDescriptionRequest): Promise<ModifyAccountDescriptionResponse>;
+    ModifyAccountPrivilege(query: ModifyAccountPrivilegeRequest): Promise<ModifyAccountPrivilegeResponse>;
+    ModifyDrdsInstanceDescription(query: ModifyDrdsInstanceDescriptionRequest): Promise<ModifyDrdsInstanceDescriptionResponse>;
+    ModifyDrdsIpWhiteList(query: ModifyDrdsIpWhiteListRequest): Promise<ModifyDrdsIpWhiteListResponse>;
+    ModifyPolarDbReadWeight(query: ModifyPolarDbReadWeightRequest): Promise<ModifyPolarDbReadWeightResponse>;
+    ModifyRdsReadWeight(query: ModifyRdsReadWeightRequest): Promise<ModifyRdsReadWeightResponse>;
+    PreCheckCreateHiStoreInstance(query: PreCheckCreateHiStoreInstanceRequest): Promise<PreCheckCreateHiStoreInstanceResponse>;
+    PreCheckSqlFlashbackTask(query: PreCheckSqlFlashbackTaskRequest): Promise<PreCheckSqlFlashbackTaskResponse>;
+    PutRestorePreCheck(query: PutRestorePreCheckRequest): Promise<PutRestorePreCheckResponse>;
+    PutStartBackup(query: PutStartBackupRequest): Promise<PutStartBackupResponse>;
+    RearrangeDbToInstance(query: RearrangeDbToInstanceRequest): Promise<RearrangeDbToInstanceResponse>;
+    RefreshDrdsAtomUrl(query: RefreshDrdsAtomUrlRequest): Promise<RefreshDrdsAtomUrlResponse>;
+    RefreshJstMigrateDrdsDbAtomUrl(query: RefreshJstMigrateDrdsDbAtomUrlRequest): Promise<RefreshJstMigrateDrdsDbAtomUrlResponse>;
+    ReleaseHiStoreInstance(query: ReleaseHiStoreInstanceRequest): Promise<ReleaseHiStoreInstanceResponse>;
+    ReleaseInstanceInternetAddress(query: ReleaseInstanceInternetAddressRequest): Promise<ReleaseInstanceInternetAddressResponse>;
+    RemoveBackupsSet(query: RemoveBackupsSetRequest): Promise<RemoveBackupsSetResponse>;
+    RemoveDrdsDb(query: RemoveDrdsDbRequest): Promise<RemoveDrdsDbResponse>;
+    RemoveDrdsDbFailedRecord(query: RemoveDrdsDbFailedRecordRequest): Promise<RemoveDrdsDbFailedRecordResponse>;
+    RemoveDrdsInstance(query: RemoveDrdsInstanceRequest): Promise<RemoveDrdsInstanceResponse>;
+    RemoveInstanceAccount(query: RemoveInstanceAccountRequest): Promise<RemoveInstanceAccountResponse>;
+    RemoveRecycleBinTable(query: RemoveRecycleBinTableRequest): Promise<RemoveRecycleBinTableResponse>;
+    ResetDrdsToRdsConnections(query: ResetDrdsToRdsConnectionsRequest): Promise<ResetDrdsToRdsConnectionsResponse>;
+    RestartDrdsInstance(query: RestartDrdsInstanceRequest): Promise<RestartDrdsInstanceResponse>;
+    RollbackHiStoreInstance(query: RollbackHiStoreInstanceRequest): Promise<RollbackHiStoreInstanceResponse>;
+    RollbackInstanceVersion(query: RollbackInstanceVersionRequest): Promise<RollbackInstanceVersionResponse>;
+    SetBackupLocal(query: SetBackupLocalRequest): Promise<SetBackupLocalResponse>;
+    SetBackupPolicy(query: SetBackupPolicyRequest): Promise<SetBackupPolicyResponse>;
+    SetupBroadcastTables(query: SetupBroadcastTablesRequest): Promise<SetupBroadcastTablesResponse>;
+    SetupDrdsParams(query: SetupDrdsParamsRequest): Promise<SetupDrdsParamsResponse>;
+    SetupRecycleBinStatus(query: SetupRecycleBinStatusRequest): Promise<SetupRecycleBinStatusResponse>;
+    SetupTable(query: SetupTableRequest): Promise<SetupTableResponse>;
+    StartRestore(query: StartRestoreRequest): Promise<StartRestoreResponse>;
+    SubmitCleanTask(query: SubmitCleanTaskRequest): Promise<SubmitCleanTaskResponse>;
+    SubmitHotExpandPreCheckTask(query: SubmitHotExpandPreCheckTaskRequest): Promise<SubmitHotExpandPreCheckTaskResponse>;
+    SubmitHotExpandTask(query: SubmitHotExpandTaskRequest): Promise<SubmitHotExpandTaskResponse>;
+    SubmitRollbackTask(query: SubmitRollbackTaskRequest): Promise<SubmitRollbackTaskResponse>;
+    SubmitSmoothExpandPreCheck(query: SubmitSmoothExpandPreCheckRequest): Promise<SubmitSmoothExpandPreCheckResponse>;
+    SubmitSmoothExpandPreCheckTask(query: SubmitSmoothExpandPreCheckTaskRequest): Promise<SubmitSmoothExpandPreCheckTaskResponse>;
+    SubmitSmoothExpandTask(query: SubmitSmoothExpandTaskRequest): Promise<SubmitSmoothExpandTaskResponse>;
+    SubmitSqlFlashbackTask(query: SubmitSqlFlashbackTaskRequest): Promise<SubmitSqlFlashbackTaskResponse>;
+    SubmitSwitchTask(query: SubmitSwitchTaskRequest): Promise<SubmitSwitchTaskResponse>;
+    SwitchGlobalBroadcastType(query: SwitchGlobalBroadcastTypeRequest): Promise<SwitchGlobalBroadcastTypeResponse>;
+    TagResources(query: TagResourcesRequest): Promise<TagResourcesResponse>;
+    UntagResources(query: UntagResourcesRequest): Promise<UntagResourcesResponse>;
+    UpdateInstanceNetwork(query: UpdateInstanceNetworkRequest): Promise<UpdateInstanceNetworkResponse>;
+    UpgradeHiStoreInstance(query: UpgradeHiStoreInstanceRequest): Promise<UpgradeHiStoreInstanceResponse>;
+    UpgradeInstanceVersion(query: UpgradeInstanceVersionRequest): Promise<UpgradeInstanceVersionResponse>;
+    ValidateShardTask(query: ValidateShardTaskRequest): Promise<ValidateShardTaskResponse>;
+    InnerDescribeDrdsInstances(query: InnerDescribeDrdsInstancesRequest): Promise<InnerDescribeDrdsInstancesResponse>;
+    InnerGetUserList(query: InnerGetUserListRequest): Promise<InnerGetUserListResponse>;
+    DescribeEventSummary(query: DescribeEventSummaryRequest): Promise<DescribeEventSummaryResponse>;
+    DescribeEventTasks(query: DescribeEventTasksRequest): Promise<DescribeEventTasksResponse>;
+    DescribeHistoryEventTasks(query: DescribeHistoryEventTasksRequest): Promise<DescribeHistoryEventTasksResponse>;
+    ModifyEventTaskStatus(query: ModifyEventTaskStatusRequest): Promise<ModifyEventTaskStatusResponse>;
+    ListUserReports(query: ListUserReportsRequest): Promise<ListUserReportsResponse>;
+    ListVersions(query: ListVersionsRequest): Promise<ListVersionsResponse>;
+    SqlCompatibilityCancel(query: SqlCompatibilityCancelRequest): Promise<SqlCompatibilityCancelResponse>;
+    SqlCompatibilityStart(query: SqlCompatibilityStartRequest): Promise<SqlCompatibilityStartResponse>;
+    DescribeTableShardingInfo(query: DescribeTableShardingInfoRequest): Promise<DescribeTableShardingInfoResponse>;
+    PreCheckModifyTableShardingKeyParam(query: PreCheckModifyTableShardingKeyParamRequest): Promise<PreCheckModifyTableShardingKeyParamResponse>;
+    SubmitCleanTableShardingKeyModify(query: SubmitCleanTableShardingKeyModifyRequest): Promise<SubmitCleanTableShardingKeyModifyResponse>;
+    SubmitRollbackShardingKeyModify(query: SubmitRollbackShardingKeyModifyRequest): Promise<SubmitRollbackShardingKeyModifyResponse>;
+    SubmitSwitchTableShardingKeyModify(query: SubmitSwitchTableShardingKeyModifyRequest): Promise<SubmitSwitchTableShardingKeyModifyResponse>;
+    SubmitTableShardingKeyModify(query: SubmitTableShardingKeyModifyRequest): Promise<SubmitTableShardingKeyModifyResponse>;
 }
 export default DRDS;

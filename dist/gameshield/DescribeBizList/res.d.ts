@@ -1,0 +1,3 @@
+interface DescribeBizListResponse {
+}
+export { DescribeBizListResponse };

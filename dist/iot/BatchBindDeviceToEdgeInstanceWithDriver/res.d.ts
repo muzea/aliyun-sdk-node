@@ -1,0 +1,3 @@
+interface BatchBindDeviceToEdgeInstanceWithDriverResponse {
+}
+export { BatchBindDeviceToEdgeInstanceWithDriverResponse };

@@ -1,0 +1,3 @@
+interface BatchResumeVsStreamResponse {
+}
+export { BatchResumeVsStreamResponse };

@@ -1,0 +1,3 @@
+interface DeleteGroupResponse {
+}
+export { DeleteGroupResponse };

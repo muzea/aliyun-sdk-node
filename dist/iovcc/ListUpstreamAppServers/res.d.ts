@@ -1,0 +1,3 @@
+interface ListUpstreamAppServersResponse {
+}
+export { ListUpstreamAppServersResponse };

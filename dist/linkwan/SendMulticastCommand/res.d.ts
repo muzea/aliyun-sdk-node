@@ -1,0 +1,3 @@
+interface SendMulticastCommandResponse {
+}
+export { SendMulticastCommandResponse };

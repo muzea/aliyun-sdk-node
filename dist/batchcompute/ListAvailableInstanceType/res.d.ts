@@ -1,0 +1,3 @@
+interface ListAvailableInstanceTypeResponse {
+}
+export { ListAvailableInstanceTypeResponse };

@@ -1,0 +1,3 @@
+interface RemoveNodeFromGroupResponse {
+}
+export { RemoveNodeFromGroupResponse };

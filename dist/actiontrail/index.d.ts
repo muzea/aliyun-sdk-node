@@ -1,64 +1,31 @@
+import { DescribeRegionsRequest } from "./DescribeRegions/req";
+import { DescribeRegionsResponse } from "./DescribeRegions/res";
+import { CreateTrailRequest } from "./CreateTrail/req";
+import { CreateTrailResponse } from "./CreateTrail/res";
+import { DeleteTrailRequest } from "./DeleteTrail/req";
+import { DeleteTrailResponse } from "./DeleteTrail/res";
+import { DescribeTrailsRequest } from "./DescribeTrails/req";
+import { DescribeTrailsResponse } from "./DescribeTrails/res";
+import { GetTrailStatusRequest } from "./GetTrailStatus/req";
+import { GetTrailStatusResponse } from "./GetTrailStatus/res";
+import { LookupEventsRequest } from "./LookupEvents/req";
+import { LookupEventsResponse } from "./LookupEvents/res";
+import { StartLoggingRequest } from "./StartLogging/req";
+import { StartLoggingResponse } from "./StartLogging/res";
+import { StopLoggingRequest } from "./StopLogging/req";
+import { StopLoggingResponse } from "./StopLogging/res";
+import { UpdateTrailRequest } from "./UpdateTrail/req";
+import { UpdateTrailResponse } from "./UpdateTrail/res";
+
 interface ACTIONTRAIL {
-    DescribeRegions(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    CreateTrail(query: {
-        "RegionId"?: string;
-        "Name"?: string;
-        "OssBucketName"?: string;
-        "OssKeyPrefix"?: string;
-        "RoleName"?: string;
-        "SlsProjectArn"?: string;
-        "SlsWriteRoleArn"?: string;
-        "EventRW"?: string;
-    }): Promise<{}>;
-    DeleteTrail(query: {
-        "RegionId"?: string;
-        "Name"?: string;
-    }): Promise<{}>;
-    DescribeTrails(query: {
-        "RegionId"?: string;
-        "IncludeShadowTrails"?: boolean;
-        "NameList"?: string;
-    }): Promise<{}>;
-    GetTrailStatus(query: {
-        "RegionId"?: string;
-        "Name"?: string;
-    }): Promise<{}>;
-    LookupEvents(query: {
-        "RegionId"?: string;
-        "Event"?: string;
-        "Request"?: string;
-        "EventType"?: string;
-        "ServiceName"?: string;
-        "EventName"?: string;
-        "User"?: string;
-        "ResourceType"?: string;
-        "ResourceName"?: string;
-        "EventRW"?: string;
-        "EventAccessKeyId"?: string;
-        "NextToken"?: string;
-        "MaxResults"?: string;
-        "StartTime"?: string;
-        "EndTime"?: string;
-    }): Promise<{}>;
-    StartLogging(query: {
-        "RegionId"?: string;
-        "Name"?: string;
-    }): Promise<{}>;
-    StopLogging(query: {
-        "RegionId"?: string;
-        "Name"?: string;
-    }): Promise<{}>;
-    UpdateTrail(query: {
-        "RegionId"?: string;
-        "Name"?: string;
-        "OssBucketName"?: string;
-        "OssKeyPrefix"?: string;
-        "RoleName"?: string;
-        "SlsProjectArn"?: string;
-        "SlsWriteRoleArn"?: string;
-        "EventRW"?: string;
-    }): Promise<{}>;
+    DescribeRegions(query: DescribeRegionsRequest): Promise<DescribeRegionsResponse>;
+    CreateTrail(query: CreateTrailRequest): Promise<CreateTrailResponse>;
+    DeleteTrail(query: DeleteTrailRequest): Promise<DeleteTrailResponse>;
+    DescribeTrails(query: DescribeTrailsRequest): Promise<DescribeTrailsResponse>;
+    GetTrailStatus(query: GetTrailStatusRequest): Promise<GetTrailStatusResponse>;
+    LookupEvents(query: LookupEventsRequest): Promise<LookupEventsResponse>;
+    StartLogging(query: StartLoggingRequest): Promise<StartLoggingResponse>;
+    StopLogging(query: StopLoggingRequest): Promise<StopLoggingResponse>;
+    UpdateTrail(query: UpdateTrailRequest): Promise<UpdateTrailResponse>;
 }
 export default ACTIONTRAIL;

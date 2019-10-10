@@ -1,0 +1,3 @@
+interface ForbidVsStreamResponse {
+}
+export { ForbidVsStreamResponse };

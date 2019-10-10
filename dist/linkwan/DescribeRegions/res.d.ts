@@ -1,0 +1,3 @@
+interface DescribeRegionsResponse {
+}
+export { DescribeRegionsResponse };

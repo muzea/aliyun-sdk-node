@@ -1,0 +1,3 @@
+interface RemoveSynonymResponse {
+}
+export { RemoveSynonymResponse };

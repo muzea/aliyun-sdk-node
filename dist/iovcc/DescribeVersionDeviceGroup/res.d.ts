@@ -1,0 +1,3 @@
+interface DescribeVersionDeviceGroupResponse {
+}
+export { DescribeVersionDeviceGroupResponse };

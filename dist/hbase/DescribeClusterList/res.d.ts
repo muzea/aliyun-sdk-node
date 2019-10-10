@@ -1,0 +1,3 @@
+interface DescribeClusterListResponse {
+}
+export { DescribeClusterListResponse };

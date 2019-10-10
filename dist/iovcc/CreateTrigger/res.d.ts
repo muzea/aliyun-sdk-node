@@ -1,0 +1,3 @@
+interface CreateTriggerResponse {
+}
+export { CreateTriggerResponse };

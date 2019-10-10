@@ -1,0 +1,3 @@
+interface CreateComputeTaskResponse {
+}
+export { CreateComputeTaskResponse };

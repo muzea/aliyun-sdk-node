@@ -1,0 +1,3 @@
+interface UnbindJoinPermissionFromNodeGroupResponse {
+}
+export { UnbindJoinPermissionFromNodeGroupResponse };

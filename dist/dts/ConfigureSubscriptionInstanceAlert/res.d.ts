@@ -1,0 +1,3 @@
+interface ConfigureSubscriptionInstanceAlertResponse {
+}
+export { ConfigureSubscriptionInstanceAlertResponse };

@@ -1,0 +1,3 @@
+interface DescribeAssistWSServerAddressResponse {
+}
+export { DescribeAssistWSServerAddressResponse };

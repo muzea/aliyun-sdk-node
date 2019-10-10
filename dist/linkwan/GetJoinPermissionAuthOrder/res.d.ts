@@ -1,0 +1,3 @@
+interface GetJoinPermissionAuthOrderResponse {
+}
+export { GetJoinPermissionAuthOrderResponse };

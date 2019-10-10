@@ -1,0 +1,3 @@
+interface DisableDialogFlowResponse {
+}
+export { DisableDialogFlowResponse };

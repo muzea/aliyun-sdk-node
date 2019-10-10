@@ -1,0 +1,3 @@
+interface DescribeVsUpPeakPublishStreamDataResponse {
+}
+export { DescribeVsUpPeakPublishStreamDataResponse };

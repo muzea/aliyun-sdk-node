@@ -1,0 +1,3 @@
+interface ListGatewaysResponse {
+}
+export { ListGatewaysResponse };

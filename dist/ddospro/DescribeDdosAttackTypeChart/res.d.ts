@@ -1,0 +1,3 @@
+interface DescribeDdosAttackTypeChartResponse {
+}
+export { DescribeDdosAttackTypeChartResponse };

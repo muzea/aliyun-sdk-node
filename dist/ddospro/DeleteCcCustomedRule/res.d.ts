@@ -1,0 +1,3 @@
+interface DeleteCcCustomedRuleResponse {
+}
+export { DeleteCcCustomedRuleResponse };

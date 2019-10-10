@@ -1,0 +1,3 @@
+interface BatchDeleteDevicesResponse {
+}
+export { BatchDeleteDevicesResponse };

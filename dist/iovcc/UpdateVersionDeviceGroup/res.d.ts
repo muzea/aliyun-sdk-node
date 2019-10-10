@@ -1,0 +1,3 @@
+interface UpdateVersionDeviceGroupResponse {
+}
+export { UpdateVersionDeviceGroupResponse };

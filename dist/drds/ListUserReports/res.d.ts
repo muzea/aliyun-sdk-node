@@ -1,0 +1,3 @@
+interface ListUserReportsResponse {
+}
+export { ListUserReportsResponse };

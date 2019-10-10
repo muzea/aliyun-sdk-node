@@ -1,0 +1,3 @@
+interface DescribeSubscriptionInitializeProgressResponse {
+}
+export { DescribeSubscriptionInitializeProgressResponse };

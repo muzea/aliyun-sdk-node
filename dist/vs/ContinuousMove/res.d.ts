@@ -1,0 +1,3 @@
+interface ContinuousMoveResponse {
+}
+export { ContinuousMoveResponse };

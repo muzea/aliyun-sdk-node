@@ -1,0 +1,3 @@
+interface ListBoundLabNodesResponse {
+}
+export { ListBoundLabNodesResponse };

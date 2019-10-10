@@ -1,0 +1,3 @@
+interface TriggerLabGatewayLogReportResponse {
+}
+export { TriggerLabGatewayLogReportResponse };

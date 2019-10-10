@@ -1,0 +1,3 @@
+interface UpdateDcdnIpaDomainResponse {
+}
+export { UpdateDcdnIpaDomainResponse };

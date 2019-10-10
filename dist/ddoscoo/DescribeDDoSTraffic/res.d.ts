@@ -1,0 +1,3 @@
+interface DescribeDDoSTrafficResponse {
+}
+export { DescribeDDoSTrafficResponse };

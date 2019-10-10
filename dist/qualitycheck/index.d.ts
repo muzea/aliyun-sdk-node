@@ -1,503 +1,361 @@
+import { AddRuleCategoryRequest } from "./AddRuleCategory/req";
+import { AddRuleCategoryResponse } from "./AddRuleCategory/res";
+import { DeleteScoreForApiRequest } from "./DeleteScoreForApi/req";
+import { DeleteScoreForApiResponse } from "./DeleteScoreForApi/res";
+import { GetAudioUrlRequest } from "./GetAudioUrl/req";
+import { GetAudioUrlResponse } from "./GetAudioUrl/res";
+import { GetFileDimensionRequest } from "./GetFileDimension/req";
+import { GetFileDimensionResponse } from "./GetFileDimension/res";
+import { GetRuleDetailRequest } from "./GetRuleDetail/req";
+import { GetRuleDetailResponse } from "./GetRuleDetail/res";
+import { GetSkillGroupConfigRequest } from "./GetSkillGroupConfig/req";
+import { GetSkillGroupConfigResponse } from "./GetSkillGroupConfig/res";
+import { GetUserInfoRequest } from "./GetUserInfo/req";
+import { GetUserInfoResponse } from "./GetUserInfo/res";
+import { OpenServiceRequest } from "./OpenService/req";
+import { OpenServiceResponse } from "./OpenService/res";
+import { SubmitAudioLabelRequest } from "./SubmitAudioLabel/req";
+import { SubmitAudioLabelResponse } from "./SubmitAudioLabel/res";
+import { SubmitReviewInfoRequest } from "./SubmitReviewInfo/req";
+import { SubmitReviewInfoResponse } from "./SubmitReviewInfo/res";
+import { UpdateSkillGroupConfigRequest } from "./UpdateSkillGroupConfig/req";
+import { UpdateSkillGroupConfigResponse } from "./UpdateSkillGroupConfig/res";
+import { AddBusinessCategoryRequest } from "./AddBusinessCategory/req";
+import { AddBusinessCategoryResponse } from "./AddBusinessCategory/res";
+import { AddThesaurusForApiRequest } from "./AddThesaurusForApi/req";
+import { AddThesaurusForApiResponse } from "./AddThesaurusForApi/res";
+import { AddUploadDataSetRequest } from "./AddUploadDataSet/req";
+import { AddUploadDataSetResponse } from "./AddUploadDataSet/res";
+import { AssignReviewerRequest } from "./AssignReviewer/req";
+import { AssignReviewerResponse } from "./AssignReviewer/res";
+import { CloseServiceRequest } from "./CloseService/req";
+import { CloseServiceResponse } from "./CloseService/res";
+import { ConfigDataSetRequest } from "./ConfigDataSet/req";
+import { ConfigDataSetResponse } from "./ConfigDataSet/res";
+import { CreateAsrVocabRequest } from "./CreateAsrVocab/req";
+import { CreateAsrVocabResponse } from "./CreateAsrVocab/res";
+import { CreateRuleRequest } from "./CreateRule/req";
+import { CreateRuleResponse } from "./CreateRule/res";
+import { CreateSkillGroupConfigRequest } from "./CreateSkillGroupConfig/req";
+import { CreateSkillGroupConfigResponse } from "./CreateSkillGroupConfig/res";
+import { CreateTaskAssignRuleRequest } from "./CreateTaskAssignRule/req";
+import { CreateTaskAssignRuleResponse } from "./CreateTaskAssignRule/res";
+import { CreateUserRequest } from "./CreateUser/req";
+import { CreateUserResponse } from "./CreateUser/res";
+import { CreateWarningConfigRequest } from "./CreateWarningConfig/req";
+import { CreateWarningConfigResponse } from "./CreateWarningConfig/res";
+import { DelRuleCategoryRequest } from "./DelRuleCategory/req";
+import { DelRuleCategoryResponse } from "./DelRuleCategory/res";
+import { DelThesaurusForApiRequest } from "./DelThesaurusForApi/req";
+import { DelThesaurusForApiResponse } from "./DelThesaurusForApi/res";
+import { DeleteAsrVocabRequest } from "./DeleteAsrVocab/req";
+import { DeleteAsrVocabResponse } from "./DeleteAsrVocab/res";
+import { DeleteBusinessCategoryRequest } from "./DeleteBusinessCategory/req";
+import { DeleteBusinessCategoryResponse } from "./DeleteBusinessCategory/res";
+import { DeleteCustomizationConfigRequest } from "./DeleteCustomizationConfig/req";
+import { DeleteCustomizationConfigResponse } from "./DeleteCustomizationConfig/res";
+import { DeleteDataSetRequest } from "./DeleteDataSet/req";
+import { DeleteDataSetResponse } from "./DeleteDataSet/res";
+import { DeletePrecisionTaskRequest } from "./DeletePrecisionTask/req";
+import { DeletePrecisionTaskResponse } from "./DeletePrecisionTask/res";
+import { DeleteSkillGroupConfigRequest } from "./DeleteSkillGroupConfig/req";
+import { DeleteSkillGroupConfigResponse } from "./DeleteSkillGroupConfig/res";
+import { DeleteSubScoreForApiRequest } from "./DeleteSubScoreForApi/req";
+import { DeleteSubScoreForApiResponse } from "./DeleteSubScoreForApi/res";
+import { DeleteTaskAssignRuleRequest } from "./DeleteTaskAssignRule/req";
+import { DeleteTaskAssignRuleResponse } from "./DeleteTaskAssignRule/res";
+import { DeleteUserRequest } from "./DeleteUser/req";
+import { DeleteUserResponse } from "./DeleteUser/res";
+import { DeleteWarningConfigRequest } from "./DeleteWarningConfig/req";
+import { DeleteWarningConfigResponse } from "./DeleteWarningConfig/res";
+import { DoCheckResourceRequest } from "./DoCheckResource/req";
+import { DoCheckResourceResponse } from "./DoCheckResource/res";
+import { DoLogicalDeleteResourceRequest } from "./DoLogicalDeleteResource/req";
+import { DoLogicalDeleteResourceResponse } from "./DoLogicalDeleteResource/res";
+import { DoPhysicalDeleteResourceRequest } from "./DoPhysicalDeleteResource/req";
+import { DoPhysicalDeleteResourceResponse } from "./DoPhysicalDeleteResource/res";
+import { EditThesaurusForApiRequest } from "./EditThesaurusForApi/req";
+import { EditThesaurusForApiResponse } from "./EditThesaurusForApi/res";
+import { ExchangeAudioRequest } from "./ExchangeAudio/req";
+import { ExchangeAudioResponse } from "./ExchangeAudio/res";
+import { ExecuteAsrTransformRequest } from "./ExecuteAsrTransform/req";
+import { ExecuteAsrTransformResponse } from "./ExecuteAsrTransform/res";
+import { GenerateCustomizationModelIdRequest } from "./GenerateCustomizationModelId/req";
+import { GenerateCustomizationModelIdResponse } from "./GenerateCustomizationModelId/res";
+import { GetAccAsrResultRequest } from "./GetAccAsrResult/req";
+import { GetAccAsrResultResponse } from "./GetAccAsrResult/res";
+import { GetAsrVocabRequest } from "./GetAsrVocab/req";
+import { GetAsrVocabResponse } from "./GetAsrVocab/res";
+import { GetAudioContentInfoRequest } from "./GetAudioContentInfo/req";
+import { GetAudioContentInfoResponse } from "./GetAudioContentInfo/res";
+import { GetAudioDataStatusRequest } from "./GetAudioDataStatus/req";
+import { GetAudioDataStatusResponse } from "./GetAudioDataStatus/res";
+import { GetBusinessCategoryListRequest } from "./GetBusinessCategoryList/req";
+import { GetBusinessCategoryListResponse } from "./GetBusinessCategoryList/res";
+import { GetCustomizationConfigListRequest } from "./GetCustomizationConfigList/req";
+import { GetCustomizationConfigListResponse } from "./GetCustomizationConfigList/res";
+import { GetDataSetListRequest } from "./GetDataSetList/req";
+import { GetDataSetListResponse } from "./GetDataSetList/res";
+import { GetDataSetOssHeaderRequest } from "./GetDataSetOssHeader/req";
+import { GetDataSetOssHeaderResponse } from "./GetDataSetOssHeader/res";
+import { GetNextResultToReviewRequest } from "./GetNextResultToReview/req";
+import { GetNextResultToReviewResponse } from "./GetNextResultToReview/res";
+import { GetNextResultToVerifyRequest } from "./GetNextResultToVerify/req";
+import { GetNextResultToVerifyResponse } from "./GetNextResultToVerify/res";
+import { GetOssHeaderRequest } from "./GetOssHeader/req";
+import { GetOssHeaderResponse } from "./GetOssHeader/res";
+import { GetPocTestReportRequest } from "./GetPocTestReport/req";
+import { GetPocTestReportResponse } from "./GetPocTestReport/res";
+import { GetPrecisionTaskRequest } from "./GetPrecisionTask/req";
+import { GetPrecisionTaskResponse } from "./GetPrecisionTask/res";
+import { GetRecognizeResultRequest } from "./GetRecognizeResult/req";
+import { GetRecognizeResultResponse } from "./GetRecognizeResult/res";
+import { GetResultRequest } from "./GetResult/req";
+import { GetResultResponse } from "./GetResult/res";
+import { GetResultCountRequest } from "./GetResultCount/req";
+import { GetResultCountResponse } from "./GetResultCount/res";
+import { GetResultReviewListRequest } from "./GetResultReviewList/req";
+import { GetResultReviewListResponse } from "./GetResultReviewList/res";
+import { GetResultToReviewRequest } from "./GetResultToReview/req";
+import { GetResultToReviewResponse } from "./GetResultToReview/res";
+import { GetReviewInfoRequest } from "./GetReviewInfo/req";
+import { GetReviewInfoResponse } from "./GetReviewInfo/res";
+import { GetRuleRequest } from "./GetRule/req";
+import { GetRuleResponse } from "./GetRule/res";
+import { GetRuleCategoryRequest } from "./GetRuleCategory/req";
+import { GetRuleCategoryResponse } from "./GetRuleCategory/res";
+import { GetRuleDimensionRequest } from "./GetRuleDimension/req";
+import { GetRuleDimensionResponse } from "./GetRuleDimension/res";
+import { GetScoreInfoRequest } from "./GetScoreInfo/req";
+import { GetScoreInfoResponse } from "./GetScoreInfo/res";
+import { GetTaskFileResultListRequest } from "./GetTaskFileResultList/req";
+import { GetTaskFileResultListResponse } from "./GetTaskFileResultList/res";
+import { GetTaskRuleListRequest } from "./GetTaskRuleList/req";
+import { GetTaskRuleListResponse } from "./GetTaskRuleList/res";
+import { GetThesaurusBySynonymForApiRequest } from "./GetThesaurusBySynonymForApi/req";
+import { GetThesaurusBySynonymForApiResponse } from "./GetThesaurusBySynonymForApi/res";
+import { GetUserConfigRequest } from "./GetUserConfig/req";
+import { GetUserConfigResponse } from "./GetUserConfig/res";
+import { GetUserGroupRequest } from "./GetUserGroup/req";
+import { GetUserGroupResponse } from "./GetUserGroup/res";
+import { HandleComplaintRequest } from "./HandleComplaint/req";
+import { HandleComplaintResponse } from "./HandleComplaint/res";
+import { InsertScoreForApiRequest } from "./InsertScoreForApi/req";
+import { InsertScoreForApiResponse } from "./InsertScoreForApi/res";
+import { InsertSubScoreForApiRequest } from "./InsertSubScoreForApi/req";
+import { InsertSubScoreForApiResponse } from "./InsertSubScoreForApi/res";
+import { InvalidRuleRequest } from "./InvalidRule/req";
+import { InvalidRuleResponse } from "./InvalidRule/res";
+import { ListAsrVocabRequest } from "./ListAsrVocab/req";
+import { ListAsrVocabResponse } from "./ListAsrVocab/res";
+import { ListDataSetTaskRequest } from "./ListDataSetTask/req";
+import { ListDataSetTaskResponse } from "./ListDataSetTask/res";
+import { ListPrecisionTaskRequest } from "./ListPrecisionTask/req";
+import { ListPrecisionTaskResponse } from "./ListPrecisionTask/res";
+import { ListRolesRequest } from "./ListRoles/req";
+import { ListRolesResponse } from "./ListRoles/res";
+import { ListSkillGroupConfigRequest } from "./ListSkillGroupConfig/req";
+import { ListSkillGroupConfigResponse } from "./ListSkillGroupConfig/res";
+import { ListTaskAssignRulesRequest } from "./ListTaskAssignRules/req";
+import { ListTaskAssignRulesResponse } from "./ListTaskAssignRules/res";
+import { ListUsersRequest } from "./ListUsers/req";
+import { ListUsersResponse } from "./ListUsers/res";
+import { ListWarningConfigRequest } from "./ListWarningConfig/req";
+import { ListWarningConfigResponse } from "./ListWarningConfig/res";
+import { RegisterNoticeRequest } from "./RegisterNotice/req";
+import { RegisterNoticeResponse } from "./RegisterNotice/res";
+import { RemoveAndGetTaskRulesRequest } from "./RemoveAndGetTaskRules/req";
+import { RemoveAndGetTaskRulesResponse } from "./RemoveAndGetTaskRules/res";
+import { RestartAsrTaskRequest } from "./RestartAsrTask/req";
+import { RestartAsrTaskResponse } from "./RestartAsrTask/res";
+import { ReviewSingleResultByIdRequest } from "./ReviewSingleResultById/req";
+import { ReviewSingleResultByIdResponse } from "./ReviewSingleResultById/res";
+import { SaveConfigDataSetRequest } from "./SaveConfigDataSet/req";
+import { SaveConfigDataSetResponse } from "./SaveConfigDataSet/res";
+import { SaveReviewResultRequest } from "./SaveReviewResult/req";
+import { SaveReviewResultResponse } from "./SaveReviewResult/res";
+import { SubmitComplaintRequest } from "./SubmitComplaint/req";
+import { SubmitComplaintResponse } from "./SubmitComplaint/res";
+import { SubmitCustomizationConfigRequest } from "./SubmitCustomizationConfig/req";
+import { SubmitCustomizationConfigResponse } from "./SubmitCustomizationConfig/res";
+import { SubmitModelTestTaskRequest } from "./SubmitModelTestTask/req";
+import { SubmitModelTestTaskResponse } from "./SubmitModelTestTask/res";
+import { SubmitPrecisionTaskRequest } from "./SubmitPrecisionTask/req";
+import { SubmitPrecisionTaskResponse } from "./SubmitPrecisionTask/res";
+import { SubmitQualityCheckTaskRequest } from "./SubmitQualityCheckTask/req";
+import { SubmitQualityCheckTaskResponse } from "./SubmitQualityCheckTask/res";
+import { TestNetworkRequest } from "./TestNetwork/req";
+import { TestNetworkResponse } from "./TestNetwork/res";
+import { TestRuleRequest } from "./TestRule/req";
+import { TestRuleResponse } from "./TestRule/res";
+import { UpdateAsrVocabRequest } from "./UpdateAsrVocab/req";
+import { UpdateAsrVocabResponse } from "./UpdateAsrVocab/res";
+import { UpdateOnPurchaseSuccessRequest } from "./UpdateOnPurchaseSuccess/req";
+import { UpdateOnPurchaseSuccessResponse } from "./UpdateOnPurchaseSuccess/res";
+import { UpdateRuleRequest } from "./UpdateRule/req";
+import { UpdateRuleResponse } from "./UpdateRule/res";
+import { UpdateRuleForAntRequest } from "./UpdateRuleForAnt/req";
+import { UpdateRuleForAntResponse } from "./UpdateRuleForAnt/res";
+import { UpdateScoreForApiRequest } from "./UpdateScoreForApi/req";
+import { UpdateScoreForApiResponse } from "./UpdateScoreForApi/res";
+import { UpdateSubScoreForApiRequest } from "./UpdateSubScoreForApi/req";
+import { UpdateSubScoreForApiResponse } from "./UpdateSubScoreForApi/res";
+import { UpdateTaskAssignRuleRequest } from "./UpdateTaskAssignRule/req";
+import { UpdateTaskAssignRuleResponse } from "./UpdateTaskAssignRule/res";
+import { UpdateUserRequest } from "./UpdateUser/req";
+import { UpdateUserResponse } from "./UpdateUser/res";
+import { UpdateUserConfigRequest } from "./UpdateUserConfig/req";
+import { UpdateUserConfigResponse } from "./UpdateUserConfig/res";
+import { UpdateWarningConfigRequest } from "./UpdateWarningConfig/req";
+import { UpdateWarningConfigResponse } from "./UpdateWarningConfig/res";
+import { UploadAudioDataRequest } from "./UploadAudioData/req";
+import { UploadAudioDataResponse } from "./UploadAudioData/res";
+import { UploadAudioData4PreRequest } from "./UploadAudioData4Pre/req";
+import { UploadAudioData4PreResponse } from "./UploadAudioData4Pre/res";
+import { UploadAudioDataWithRulesRequest } from "./UploadAudioDataWithRules/req";
+import { UploadAudioDataWithRulesResponse } from "./UploadAudioDataWithRules/res";
+import { UploadAudioDataWithRules4PreRequest } from "./UploadAudioDataWithRules4Pre/req";
+import { UploadAudioDataWithRules4PreResponse } from "./UploadAudioDataWithRules4Pre/res";
+import { UploadDataRequest } from "./UploadData/req";
+import { UploadDataResponse } from "./UploadData/res";
+import { UploadDataSyncRequest } from "./UploadDataSync/req";
+import { UploadDataSyncResponse } from "./UploadDataSync/res";
+import { UploadDataWithRulesRequest } from "./UploadDataWithRules/req";
+import { UploadDataWithRulesResponse } from "./UploadDataWithRules/res";
+import { UploadRuleRequest } from "./UploadRule/req";
+import { UploadRuleResponse } from "./UploadRule/res";
+import { UploadRuleForAntRequest } from "./UploadRuleForAnt/req";
+import { UploadRuleForAntResponse } from "./UploadRuleForAnt/res";
+import { ValidateRoleSetRequest } from "./ValidateRoleSet/req";
+import { ValidateRoleSetResponse } from "./ValidateRoleSet/res";
+import { VerifyFileRequest } from "./VerifyFile/req";
+import { VerifyFileResponse } from "./VerifyFile/res";
+import { VerifySentenceRequest } from "./VerifySentence/req";
+import { VerifySentenceResponse } from "./VerifySentence/res";
+import { GetHitResultRequest } from "./GetHitResult/req";
+import { GetHitResultResponse } from "./GetHitResult/res";
+import { ListHotWordsTasksRequest } from "./ListHotWordsTasks/req";
+import { ListHotWordsTasksResponse } from "./ListHotWordsTasks/res";
+
 interface QUALITYCHECK {
-    AddRuleCategory(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    DeleteScoreForApi(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetAudioUrl(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetFileDimension(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetRuleDetail(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetSkillGroupConfig(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetUserInfo(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    OpenService(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    SubmitAudioLabel(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    SubmitReviewInfo(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    UpdateSkillGroupConfig(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    AddBusinessCategory(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    AddThesaurusForApi(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    AddUploadDataSet(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    AssignReviewer(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    CloseService(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    ConfigDataSet(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    CreateAsrVocab(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    CreateRule(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    CreateSkillGroupConfig(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    CreateTaskAssignRule(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    CreateUser(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    CreateWarningConfig(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    DelRuleCategory(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    DelThesaurusForApi(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    DeleteAsrVocab(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    DeleteBusinessCategory(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    DeleteCustomizationConfig(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    DeleteDataSet(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    DeletePrecisionTask(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    DeleteSkillGroupConfig(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    DeleteSubScoreForApi(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    DeleteTaskAssignRule(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    DeleteUser(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    DeleteWarningConfig(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    DoCheckResource(query: {
-        "RegionId"?: string;
-        "Pk": string;
-        "Interrupt"?: boolean;
-        "Bid"?: string;
-        "Hid"?: number;
-        "Country"?: string;
-        "TaskIdentifier"?: string;
-        "TaskExtraData"?: string;
-        "GmtWakeup"?: string;
-        "Success"?: boolean;
-        "Message"?: string;
-        "Level"?: number;
-        "Prompt"?: string;
-    }): Promise<{}>;
-    DoLogicalDeleteResource(query: {
-        "RegionId"?: string;
-        "Pk": string;
-        "Interrupt"?: boolean;
-        "Bid"?: string;
-        "Hid"?: number;
-        "Country"?: string;
-        "TaskIdentifier"?: string;
-        "TaskExtraData"?: string;
-        "GmtWakeup"?: string;
-        "Success"?: boolean;
-        "Message"?: string;
-    }): Promise<{}>;
-    DoPhysicalDeleteResource(query: {
-        "RegionId"?: string;
-        "Pk": string;
-        "Interrupt"?: boolean;
-        "Bid"?: string;
-        "Hid"?: number;
-        "Country"?: string;
-        "TaskIdentifier"?: string;
-        "TaskExtraData"?: string;
-        "GmtWakeup"?: string;
-        "Success"?: boolean;
-    }): Promise<{}>;
-    EditThesaurusForApi(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    ExchangeAudio(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    ExecuteAsrTransform(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GenerateCustomizationModelId(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    GetAccAsrResult(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetAsrVocab(query: {
-        "RegionId"?: string;
-        "JsonStr"?: string;
-    }): Promise<{}>;
-    GetAudioContentInfo(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetAudioDataStatus(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetBusinessCategoryList(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetCustomizationConfigList(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetDataSetList(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetDataSetOssHeader(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetNextResultToReview(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetNextResultToVerify(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetOssHeader(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetPocTestReport(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetPrecisionTask(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetRecognizeResult(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetResult(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetResultCount(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetResultReviewList(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetResultToReview(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetReviewInfo(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetRule(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetRuleCategory(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetRuleDimension(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetScoreInfo(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetTaskFileResultList(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetTaskRuleList(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetThesaurusBySynonymForApi(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetUserConfig(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    GetUserGroup(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    HandleComplaint(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    InsertScoreForApi(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    InsertSubScoreForApi(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    InvalidRule(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    ListAsrVocab(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    ListDataSetTask(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    ListPrecisionTask(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    ListRoles(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    ListSkillGroupConfig(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    ListTaskAssignRules(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    ListUsers(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    ListWarningConfig(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    RegisterNotice(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    RemoveAndGetTaskRules(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    RestartAsrTask(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    ReviewSingleResultById(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    SaveConfigDataSet(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    SaveReviewResult(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    SubmitComplaint(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    SubmitCustomizationConfig(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    SubmitModelTestTask(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    SubmitPrecisionTask(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    SubmitQualityCheckTask(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    TestNetwork(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    TestRule(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    UpdateAsrVocab(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    UpdateOnPurchaseSuccess(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    UpdateRule(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    UpdateRuleForAnt(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    UpdateScoreForApi(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    UpdateSubScoreForApi(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    UpdateTaskAssignRule(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    UpdateUser(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    UpdateUserConfig(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    UpdateWarningConfig(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    UploadAudioData(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    UploadAudioData4Pre(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    UploadAudioDataWithRules(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    UploadAudioDataWithRules4Pre(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    UploadData(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    UploadDataSync(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    UploadDataWithRules(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    UploadRule(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    UploadRuleForAnt(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    ValidateRoleSet(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    VerifyFile(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    VerifySentence(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    GetHitResult(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
-    ListHotWordsTasks(query: {
-        "RegionId"?: string;
-        "JsonStr": string;
-    }): Promise<{}>;
+    AddRuleCategory(query: AddRuleCategoryRequest): Promise<AddRuleCategoryResponse>;
+    DeleteScoreForApi(query: DeleteScoreForApiRequest): Promise<DeleteScoreForApiResponse>;
+    GetAudioUrl(query: GetAudioUrlRequest): Promise<GetAudioUrlResponse>;
+    GetFileDimension(query: GetFileDimensionRequest): Promise<GetFileDimensionResponse>;
+    GetRuleDetail(query: GetRuleDetailRequest): Promise<GetRuleDetailResponse>;
+    GetSkillGroupConfig(query: GetSkillGroupConfigRequest): Promise<GetSkillGroupConfigResponse>;
+    GetUserInfo(query: GetUserInfoRequest): Promise<GetUserInfoResponse>;
+    OpenService(query: OpenServiceRequest): Promise<OpenServiceResponse>;
+    SubmitAudioLabel(query: SubmitAudioLabelRequest): Promise<SubmitAudioLabelResponse>;
+    SubmitReviewInfo(query: SubmitReviewInfoRequest): Promise<SubmitReviewInfoResponse>;
+    UpdateSkillGroupConfig(query: UpdateSkillGroupConfigRequest): Promise<UpdateSkillGroupConfigResponse>;
+    AddBusinessCategory(query: AddBusinessCategoryRequest): Promise<AddBusinessCategoryResponse>;
+    AddThesaurusForApi(query: AddThesaurusForApiRequest): Promise<AddThesaurusForApiResponse>;
+    AddUploadDataSet(query: AddUploadDataSetRequest): Promise<AddUploadDataSetResponse>;
+    AssignReviewer(query: AssignReviewerRequest): Promise<AssignReviewerResponse>;
+    CloseService(query: CloseServiceRequest): Promise<CloseServiceResponse>;
+    ConfigDataSet(query: ConfigDataSetRequest): Promise<ConfigDataSetResponse>;
+    CreateAsrVocab(query: CreateAsrVocabRequest): Promise<CreateAsrVocabResponse>;
+    CreateRule(query: CreateRuleRequest): Promise<CreateRuleResponse>;
+    CreateSkillGroupConfig(query: CreateSkillGroupConfigRequest): Promise<CreateSkillGroupConfigResponse>;
+    CreateTaskAssignRule(query: CreateTaskAssignRuleRequest): Promise<CreateTaskAssignRuleResponse>;
+    CreateUser(query: CreateUserRequest): Promise<CreateUserResponse>;
+    CreateWarningConfig(query: CreateWarningConfigRequest): Promise<CreateWarningConfigResponse>;
+    DelRuleCategory(query: DelRuleCategoryRequest): Promise<DelRuleCategoryResponse>;
+    DelThesaurusForApi(query: DelThesaurusForApiRequest): Promise<DelThesaurusForApiResponse>;
+    DeleteAsrVocab(query: DeleteAsrVocabRequest): Promise<DeleteAsrVocabResponse>;
+    DeleteBusinessCategory(query: DeleteBusinessCategoryRequest): Promise<DeleteBusinessCategoryResponse>;
+    DeleteCustomizationConfig(query: DeleteCustomizationConfigRequest): Promise<DeleteCustomizationConfigResponse>;
+    DeleteDataSet(query: DeleteDataSetRequest): Promise<DeleteDataSetResponse>;
+    DeletePrecisionTask(query: DeletePrecisionTaskRequest): Promise<DeletePrecisionTaskResponse>;
+    DeleteSkillGroupConfig(query: DeleteSkillGroupConfigRequest): Promise<DeleteSkillGroupConfigResponse>;
+    DeleteSubScoreForApi(query: DeleteSubScoreForApiRequest): Promise<DeleteSubScoreForApiResponse>;
+    DeleteTaskAssignRule(query: DeleteTaskAssignRuleRequest): Promise<DeleteTaskAssignRuleResponse>;
+    DeleteUser(query: DeleteUserRequest): Promise<DeleteUserResponse>;
+    DeleteWarningConfig(query: DeleteWarningConfigRequest): Promise<DeleteWarningConfigResponse>;
+    DoCheckResource(query: DoCheckResourceRequest): Promise<DoCheckResourceResponse>;
+    DoLogicalDeleteResource(query: DoLogicalDeleteResourceRequest): Promise<DoLogicalDeleteResourceResponse>;
+    DoPhysicalDeleteResource(query: DoPhysicalDeleteResourceRequest): Promise<DoPhysicalDeleteResourceResponse>;
+    EditThesaurusForApi(query: EditThesaurusForApiRequest): Promise<EditThesaurusForApiResponse>;
+    ExchangeAudio(query: ExchangeAudioRequest): Promise<ExchangeAudioResponse>;
+    ExecuteAsrTransform(query: ExecuteAsrTransformRequest): Promise<ExecuteAsrTransformResponse>;
+    GenerateCustomizationModelId(query: GenerateCustomizationModelIdRequest): Promise<GenerateCustomizationModelIdResponse>;
+    GetAccAsrResult(query: GetAccAsrResultRequest): Promise<GetAccAsrResultResponse>;
+    GetAsrVocab(query: GetAsrVocabRequest): Promise<GetAsrVocabResponse>;
+    GetAudioContentInfo(query: GetAudioContentInfoRequest): Promise<GetAudioContentInfoResponse>;
+    GetAudioDataStatus(query: GetAudioDataStatusRequest): Promise<GetAudioDataStatusResponse>;
+    GetBusinessCategoryList(query: GetBusinessCategoryListRequest): Promise<GetBusinessCategoryListResponse>;
+    GetCustomizationConfigList(query: GetCustomizationConfigListRequest): Promise<GetCustomizationConfigListResponse>;
+    GetDataSetList(query: GetDataSetListRequest): Promise<GetDataSetListResponse>;
+    GetDataSetOssHeader(query: GetDataSetOssHeaderRequest): Promise<GetDataSetOssHeaderResponse>;
+    GetNextResultToReview(query: GetNextResultToReviewRequest): Promise<GetNextResultToReviewResponse>;
+    GetNextResultToVerify(query: GetNextResultToVerifyRequest): Promise<GetNextResultToVerifyResponse>;
+    GetOssHeader(query: GetOssHeaderRequest): Promise<GetOssHeaderResponse>;
+    GetPocTestReport(query: GetPocTestReportRequest): Promise<GetPocTestReportResponse>;
+    GetPrecisionTask(query: GetPrecisionTaskRequest): Promise<GetPrecisionTaskResponse>;
+    GetRecognizeResult(query: GetRecognizeResultRequest): Promise<GetRecognizeResultResponse>;
+    GetResult(query: GetResultRequest): Promise<GetResultResponse>;
+    GetResultCount(query: GetResultCountRequest): Promise<GetResultCountResponse>;
+    GetResultReviewList(query: GetResultReviewListRequest): Promise<GetResultReviewListResponse>;
+    GetResultToReview(query: GetResultToReviewRequest): Promise<GetResultToReviewResponse>;
+    GetReviewInfo(query: GetReviewInfoRequest): Promise<GetReviewInfoResponse>;
+    GetRule(query: GetRuleRequest): Promise<GetRuleResponse>;
+    GetRuleCategory(query: GetRuleCategoryRequest): Promise<GetRuleCategoryResponse>;
+    GetRuleDimension(query: GetRuleDimensionRequest): Promise<GetRuleDimensionResponse>;
+    GetScoreInfo(query: GetScoreInfoRequest): Promise<GetScoreInfoResponse>;
+    GetTaskFileResultList(query: GetTaskFileResultListRequest): Promise<GetTaskFileResultListResponse>;
+    GetTaskRuleList(query: GetTaskRuleListRequest): Promise<GetTaskRuleListResponse>;
+    GetThesaurusBySynonymForApi(query: GetThesaurusBySynonymForApiRequest): Promise<GetThesaurusBySynonymForApiResponse>;
+    GetUserConfig(query: GetUserConfigRequest): Promise<GetUserConfigResponse>;
+    GetUserGroup(query: GetUserGroupRequest): Promise<GetUserGroupResponse>;
+    HandleComplaint(query: HandleComplaintRequest): Promise<HandleComplaintResponse>;
+    InsertScoreForApi(query: InsertScoreForApiRequest): Promise<InsertScoreForApiResponse>;
+    InsertSubScoreForApi(query: InsertSubScoreForApiRequest): Promise<InsertSubScoreForApiResponse>;
+    InvalidRule(query: InvalidRuleRequest): Promise<InvalidRuleResponse>;
+    ListAsrVocab(query: ListAsrVocabRequest): Promise<ListAsrVocabResponse>;
+    ListDataSetTask(query: ListDataSetTaskRequest): Promise<ListDataSetTaskResponse>;
+    ListPrecisionTask(query: ListPrecisionTaskRequest): Promise<ListPrecisionTaskResponse>;
+    ListRoles(query: ListRolesRequest): Promise<ListRolesResponse>;
+    ListSkillGroupConfig(query: ListSkillGroupConfigRequest): Promise<ListSkillGroupConfigResponse>;
+    ListTaskAssignRules(query: ListTaskAssignRulesRequest): Promise<ListTaskAssignRulesResponse>;
+    ListUsers(query: ListUsersRequest): Promise<ListUsersResponse>;
+    ListWarningConfig(query: ListWarningConfigRequest): Promise<ListWarningConfigResponse>;
+    RegisterNotice(query: RegisterNoticeRequest): Promise<RegisterNoticeResponse>;
+    RemoveAndGetTaskRules(query: RemoveAndGetTaskRulesRequest): Promise<RemoveAndGetTaskRulesResponse>;
+    RestartAsrTask(query: RestartAsrTaskRequest): Promise<RestartAsrTaskResponse>;
+    ReviewSingleResultById(query: ReviewSingleResultByIdRequest): Promise<ReviewSingleResultByIdResponse>;
+    SaveConfigDataSet(query: SaveConfigDataSetRequest): Promise<SaveConfigDataSetResponse>;
+    SaveReviewResult(query: SaveReviewResultRequest): Promise<SaveReviewResultResponse>;
+    SubmitComplaint(query: SubmitComplaintRequest): Promise<SubmitComplaintResponse>;
+    SubmitCustomizationConfig(query: SubmitCustomizationConfigRequest): Promise<SubmitCustomizationConfigResponse>;
+    SubmitModelTestTask(query: SubmitModelTestTaskRequest): Promise<SubmitModelTestTaskResponse>;
+    SubmitPrecisionTask(query: SubmitPrecisionTaskRequest): Promise<SubmitPrecisionTaskResponse>;
+    SubmitQualityCheckTask(query: SubmitQualityCheckTaskRequest): Promise<SubmitQualityCheckTaskResponse>;
+    TestNetwork(query: TestNetworkRequest): Promise<TestNetworkResponse>;
+    TestRule(query: TestRuleRequest): Promise<TestRuleResponse>;
+    UpdateAsrVocab(query: UpdateAsrVocabRequest): Promise<UpdateAsrVocabResponse>;
+    UpdateOnPurchaseSuccess(query: UpdateOnPurchaseSuccessRequest): Promise<UpdateOnPurchaseSuccessResponse>;
+    UpdateRule(query: UpdateRuleRequest): Promise<UpdateRuleResponse>;
+    UpdateRuleForAnt(query: UpdateRuleForAntRequest): Promise<UpdateRuleForAntResponse>;
+    UpdateScoreForApi(query: UpdateScoreForApiRequest): Promise<UpdateScoreForApiResponse>;
+    UpdateSubScoreForApi(query: UpdateSubScoreForApiRequest): Promise<UpdateSubScoreForApiResponse>;
+    UpdateTaskAssignRule(query: UpdateTaskAssignRuleRequest): Promise<UpdateTaskAssignRuleResponse>;
+    UpdateUser(query: UpdateUserRequest): Promise<UpdateUserResponse>;
+    UpdateUserConfig(query: UpdateUserConfigRequest): Promise<UpdateUserConfigResponse>;
+    UpdateWarningConfig(query: UpdateWarningConfigRequest): Promise<UpdateWarningConfigResponse>;
+    UploadAudioData(query: UploadAudioDataRequest): Promise<UploadAudioDataResponse>;
+    UploadAudioData4Pre(query: UploadAudioData4PreRequest): Promise<UploadAudioData4PreResponse>;
+    UploadAudioDataWithRules(query: UploadAudioDataWithRulesRequest): Promise<UploadAudioDataWithRulesResponse>;
+    UploadAudioDataWithRules4Pre(query: UploadAudioDataWithRules4PreRequest): Promise<UploadAudioDataWithRules4PreResponse>;
+    UploadData(query: UploadDataRequest): Promise<UploadDataResponse>;
+    UploadDataSync(query: UploadDataSyncRequest): Promise<UploadDataSyncResponse>;
+    UploadDataWithRules(query: UploadDataWithRulesRequest): Promise<UploadDataWithRulesResponse>;
+    UploadRule(query: UploadRuleRequest): Promise<UploadRuleResponse>;
+    UploadRuleForAnt(query: UploadRuleForAntRequest): Promise<UploadRuleForAntResponse>;
+    ValidateRoleSet(query: ValidateRoleSetRequest): Promise<ValidateRoleSetResponse>;
+    VerifyFile(query: VerifyFileRequest): Promise<VerifyFileResponse>;
+    VerifySentence(query: VerifySentenceRequest): Promise<VerifySentenceResponse>;
+    GetHitResult(query: GetHitResultRequest): Promise<GetHitResultResponse>;
+    ListHotWordsTasks(query: ListHotWordsTasksRequest): Promise<ListHotWordsTasksResponse>;
 }
 export default QUALITYCHECK;

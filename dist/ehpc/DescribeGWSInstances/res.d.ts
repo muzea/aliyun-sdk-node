@@ -1,0 +1,3 @@
+interface DescribeGWSInstancesResponse {
+}
+export { DescribeGWSInstancesResponse };

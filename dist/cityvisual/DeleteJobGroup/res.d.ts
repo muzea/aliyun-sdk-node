@@ -1,0 +1,3 @@
+interface DeleteJobGroupResponse {
+}
+export { DeleteJobGroupResponse };

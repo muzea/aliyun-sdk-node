@@ -1,0 +1,3 @@
+interface DisableUserResponse {
+}
+export { DisableUserResponse };

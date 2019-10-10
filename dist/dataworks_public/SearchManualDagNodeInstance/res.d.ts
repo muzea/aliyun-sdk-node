@@ -1,0 +1,3 @@
+interface SearchManualDagNodeInstanceResponse {
+}
+export { SearchManualDagNodeInstanceResponse };

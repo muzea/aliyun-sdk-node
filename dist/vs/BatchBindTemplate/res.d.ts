@@ -1,0 +1,3 @@
+interface BatchBindTemplateResponse {
+}
+export { BatchBindTemplateResponse };

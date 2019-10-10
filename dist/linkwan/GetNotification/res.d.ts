@@ -1,0 +1,3 @@
+interface GetNotificationResponse {
+}
+export { GetNotificationResponse };

@@ -1,0 +1,3 @@
+interface GetClientsRatioResponse {
+}
+export { GetClientsRatioResponse };

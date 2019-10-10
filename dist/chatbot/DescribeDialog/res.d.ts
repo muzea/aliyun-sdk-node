@@ -1,0 +1,3 @@
+interface DescribeDialogResponse {
+}
+export { DescribeDialogResponse };

@@ -1,39 +1,19 @@
+import { SendMessageToGlobeRequest } from "./SendMessageToGlobe/req";
+import { SendMessageToGlobeResponse } from "./SendMessageToGlobe/res";
+import { SmsConversionRequest } from "./SmsConversion/req";
+import { SmsConversionResponse } from "./SmsConversion/res";
+import { QueryMessageRequest } from "./QueryMessage/req";
+import { QueryMessageResponse } from "./QueryMessage/res";
+import { SendMessageWithTemplateRequest } from "./SendMessageWithTemplate/req";
+import { SendMessageWithTemplateResponse } from "./SendMessageWithTemplate/res";
+import { BatchSendMessageToGlobeRequest } from "./BatchSendMessageToGlobe/req";
+import { BatchSendMessageToGlobeResponse } from "./BatchSendMessageToGlobe/res";
+
 interface SMS_INTL {
-    SendMessageToGlobe(query: {
-        "RegionId"?: string;
-        "To": string;
-        "Message": string;
-        "OwnerId"?: number;
-        "From"?: string;
-        "Type"?: string;
-    }): Promise<{}>;
-    SmsConversion(query: {
-        "RegionId"?: string;
-        "MessageId": string;
-        "ConversionDate": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    QueryMessage(query: {
-        "RegionId"?: string;
-        "MessageId": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    SendMessageWithTemplate(query: {
-        "RegionId"?: string;
-        "To": string;
-        "TemplateCode": string;
-        "OwnerId"?: number;
-        "From"?: string;
-        "TemplateParam"?: string;
-        "SmsUpExtendCode"?: string;
-    }): Promise<{}>;
-    BatchSendMessageToGlobe(query: {
-        "RegionId"?: string;
-        "To": string;
-        "Message": string;
-        "Type": string;
-        "OwnerId"?: number;
-        "From"?: string;
-    }): Promise<{}>;
+    SendMessageToGlobe(query: SendMessageToGlobeRequest): Promise<SendMessageToGlobeResponse>;
+    SmsConversion(query: SmsConversionRequest): Promise<SmsConversionResponse>;
+    QueryMessage(query: QueryMessageRequest): Promise<QueryMessageResponse>;
+    SendMessageWithTemplate(query: SendMessageWithTemplateRequest): Promise<SendMessageWithTemplateResponse>;
+    BatchSendMessageToGlobe(query: BatchSendMessageToGlobeRequest): Promise<BatchSendMessageToGlobeResponse>;
 }
 export default SMS_INTL;

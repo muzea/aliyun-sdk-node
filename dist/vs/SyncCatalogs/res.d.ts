@@ -1,0 +1,3 @@
+interface SyncCatalogsResponse {
+}
+export { SyncCatalogsResponse };

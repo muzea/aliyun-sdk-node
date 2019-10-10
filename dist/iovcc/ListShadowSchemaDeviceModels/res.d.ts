@@ -1,0 +1,3 @@
+interface ListShadowSchemaDeviceModelsResponse {
+}
+export { ListShadowSchemaDeviceModelsResponse };

@@ -1,0 +1,3 @@
+interface DescribeDownloadUrlsForAppKeyResponse {
+}
+export { DescribeDownloadUrlsForAppKeyResponse };

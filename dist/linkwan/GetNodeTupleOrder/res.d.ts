@@ -1,0 +1,3 @@
+interface GetNodeTupleOrderResponse {
+}
+export { GetNodeTupleOrderResponse };

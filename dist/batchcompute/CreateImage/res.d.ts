@@ -1,0 +1,3 @@
+interface CreateImageResponse {
+}
+export { CreateImageResponse };

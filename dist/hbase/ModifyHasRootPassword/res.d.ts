@@ -1,0 +1,3 @@
+interface ModifyHasRootPasswordResponse {
+}
+export { ModifyHasRootPasswordResponse };

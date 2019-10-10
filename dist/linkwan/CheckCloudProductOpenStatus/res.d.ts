@@ -1,0 +1,3 @@
+interface CheckCloudProductOpenStatusResponse {
+}
+export { CheckCloudProductOpenStatusResponse };

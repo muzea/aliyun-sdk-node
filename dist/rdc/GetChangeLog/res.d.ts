@@ -1,0 +1,3 @@
+interface GetChangeLogResponse {
+}
+export { GetChangeLogResponse };

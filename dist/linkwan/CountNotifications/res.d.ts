@@ -1,0 +1,3 @@
+interface CountNotificationsResponse {
+}
+export { CountNotificationsResponse };

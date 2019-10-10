@@ -1,0 +1,3 @@
+interface DescribeQosCarsResponse {
+}
+export { DescribeQosCarsResponse };

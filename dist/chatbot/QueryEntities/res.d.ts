@@ -1,0 +1,3 @@
+interface QueryEntitiesResponse {
+}
+export { QueryEntitiesResponse };

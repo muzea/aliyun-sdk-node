@@ -1,0 +1,3 @@
+interface ListActivatedFeaturesResponse {
+}
+export { ListActivatedFeaturesResponse };

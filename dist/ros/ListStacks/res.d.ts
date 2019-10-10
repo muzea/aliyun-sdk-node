@@ -1,0 +1,3 @@
+interface ListStacksResponse {
+}
+export { ListStacksResponse };

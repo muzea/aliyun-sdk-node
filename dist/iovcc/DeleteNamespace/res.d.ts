@@ -1,0 +1,3 @@
+interface DeleteNamespaceResponse {
+}
+export { DeleteNamespaceResponse };

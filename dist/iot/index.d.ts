@@ -1,826 +1,361 @@
+import { BatchAddDeviceGroupRelationsRequest } from "./BatchAddDeviceGroupRelations/req";
+import { BatchAddDeviceGroupRelationsResponse } from "./BatchAddDeviceGroupRelations/res";
+import { BatchDeleteDeviceGroupRelationsRequest } from "./BatchDeleteDeviceGroupRelations/req";
+import { BatchDeleteDeviceGroupRelationsResponse } from "./BatchDeleteDeviceGroupRelations/res";
+import { ClearEdgeInstanceDriverConfigsRequest } from "./ClearEdgeInstanceDriverConfigs/req";
+import { ClearEdgeInstanceDriverConfigsResponse } from "./ClearEdgeInstanceDriverConfigs/res";
+import { CreateDeviceGroupRequest } from "./CreateDeviceGroup/req";
+import { CreateDeviceGroupResponse } from "./CreateDeviceGroup/res";
+import { BatchBindDeviceToEdgeInstanceWithDriverRequest } from "./BatchBindDeviceToEdgeInstanceWithDriver/req";
+import { BatchBindDeviceToEdgeInstanceWithDriverResponse } from "./BatchBindDeviceToEdgeInstanceWithDriver/res";
+import { BindDriverToEdgeInstanceRequest } from "./BindDriverToEdgeInstance/req";
+import { BindDriverToEdgeInstanceResponse } from "./BindDriverToEdgeInstance/res";
+import { BatchCheckDeviceNamesRequest } from "./BatchCheckDeviceNames/req";
+import { BatchCheckDeviceNamesResponse } from "./BatchCheckDeviceNames/res";
+import { BatchGetDeviceDriverRequest } from "./BatchGetDeviceDriver/req";
+import { BatchGetDeviceDriverResponse } from "./BatchGetDeviceDriver/res";
+import { BatchGetDeviceStateRequest } from "./BatchGetDeviceState/req";
+import { BatchGetDeviceStateResponse } from "./BatchGetDeviceState/res";
+import { BatchQueryDeviceDetailRequest } from "./BatchQueryDeviceDetail/req";
+import { BatchQueryDeviceDetailResponse } from "./BatchQueryDeviceDetail/res";
+import { BatchUpdateDeviceNicknameRequest } from "./BatchUpdateDeviceNickname/req";
+import { BatchUpdateDeviceNicknameResponse } from "./BatchUpdateDeviceNickname/res";
+import { BindGatewayToEdgeInstanceRequest } from "./BindGatewayToEdgeInstance/req";
+import { BindGatewayToEdgeInstanceResponse } from "./BindGatewayToEdgeInstance/res";
+import { CloseEdgeInstanceDeploymentRequest } from "./CloseEdgeInstanceDeployment/req";
+import { CloseEdgeInstanceDeploymentResponse } from "./CloseEdgeInstanceDeployment/res";
+import { CreateEdgeInstanceRequest } from "./CreateEdgeInstance/req";
+import { CreateEdgeInstanceResponse } from "./CreateEdgeInstance/res";
+import { CreateRuleActionRequest } from "./CreateRuleAction/req";
+import { CreateRuleActionResponse } from "./CreateRuleAction/res";
+import { CreateTopicRouteTableRequest } from "./CreateTopicRouteTable/req";
+import { CreateTopicRouteTableResponse } from "./CreateTopicRouteTable/res";
+import { DeleteTopicRouteTableRequest } from "./DeleteTopicRouteTable/req";
+import { DeleteTopicRouteTableResponse } from "./DeleteTopicRouteTable/res";
+import { BatchClearEdgeInstanceDeviceConfigRequest } from "./BatchClearEdgeInstanceDeviceConfig/req";
+import { BatchClearEdgeInstanceDeviceConfigResponse } from "./BatchClearEdgeInstanceDeviceConfig/res";
+import { BatchGetEdgeInstanceDeviceConfigRequest } from "./BatchGetEdgeInstanceDeviceConfig/req";
+import { BatchGetEdgeInstanceDeviceConfigResponse } from "./BatchGetEdgeInstanceDeviceConfig/res";
+import { BatchGetEdgeInstanceDriverConfigsRequest } from "./BatchGetEdgeInstanceDriverConfigs/req";
+import { BatchGetEdgeInstanceDriverConfigsResponse } from "./BatchGetEdgeInstanceDriverConfigs/res";
+import { BatchRegisterDeviceWithApplyIdRequest } from "./BatchRegisterDeviceWithApplyId/req";
+import { BatchRegisterDeviceWithApplyIdResponse } from "./BatchRegisterDeviceWithApplyId/res";
+import { BatchUnbindDeviceFromEdgeInstanceRequest } from "./BatchUnbindDeviceFromEdgeInstance/req";
+import { BatchUnbindDeviceFromEdgeInstanceResponse } from "./BatchUnbindDeviceFromEdgeInstance/res";
+import { CreateEdgeInstanceDeploymentRequest } from "./CreateEdgeInstanceDeployment/req";
+import { CreateEdgeInstanceDeploymentResponse } from "./CreateEdgeInstanceDeployment/res";
+import { CreateProductRequest } from "./CreateProduct/req";
+import { CreateProductResponse } from "./CreateProduct/res";
+import { CreateProductTopicRequest } from "./CreateProductTopic/req";
+import { CreateProductTopicResponse } from "./CreateProductTopic/res";
+import { DeleteDeviceRequest } from "./DeleteDevice/req";
+import { DeleteDeviceResponse } from "./DeleteDevice/res";
+import { DeleteDeviceGroupRequest } from "./DeleteDeviceGroup/req";
+import { DeleteDeviceGroupResponse } from "./DeleteDeviceGroup/res";
+import { DeleteProductTagsRequest } from "./DeleteProductTags/req";
+import { DeleteProductTagsResponse } from "./DeleteProductTags/res";
+import { BatchRegisterDeviceRequest } from "./BatchRegisterDevice/req";
+import { BatchRegisterDeviceResponse } from "./BatchRegisterDevice/res";
+import { BatchSetEdgeInstanceDeviceConfigRequest } from "./BatchSetEdgeInstanceDeviceConfig/req";
+import { BatchSetEdgeInstanceDeviceConfigResponse } from "./BatchSetEdgeInstanceDeviceConfig/res";
+import { CreateDataAPIServiceRequest } from "./CreateDataAPIService/req";
+import { CreateDataAPIServiceResponse } from "./CreateDataAPIService/res";
+import { CreateLoRaNodesTaskRequest } from "./CreateLoRaNodesTask/req";
+import { CreateLoRaNodesTaskResponse } from "./CreateLoRaNodesTask/res";
+import { CreateProductTagsRequest } from "./CreateProductTags/req";
+import { CreateProductTagsResponse } from "./CreateProductTags/res";
+import { ListProductByTagsRequest } from "./ListProductByTags/req";
+import { ListProductByTagsResponse } from "./ListProductByTags/res";
+import { QueryDeviceDetailRequest } from "./QueryDeviceDetail/req";
+import { QueryDeviceDetailResponse } from "./QueryDeviceDetail/res";
+import { QueryDeviceEventDataRequest } from "./QueryDeviceEventData/req";
+import { QueryDeviceEventDataResponse } from "./QueryDeviceEventData/res";
+import { QueryDeviceStatisticsRequest } from "./QueryDeviceStatistics/req";
+import { QueryDeviceStatisticsResponse } from "./QueryDeviceStatistics/res";
+import { QueryPageByApplyIdRequest } from "./QueryPageByApplyId/req";
+import { QueryPageByApplyIdResponse } from "./QueryPageByApplyId/res";
+import { SetEdgeInstanceDriverConfigsRequest } from "./SetEdgeInstanceDriverConfigs/req";
+import { SetEdgeInstanceDriverConfigsResponse } from "./SetEdgeInstanceDriverConfigs/res";
+import { CreateRuleRequest } from "./CreateRule/req";
+import { CreateRuleResponse } from "./CreateRule/res";
+import { DeleteDeviceFileRequest } from "./DeleteDeviceFile/req";
+import { DeleteDeviceFileResponse } from "./DeleteDeviceFile/res";
+import { DeleteDevicePropRequest } from "./DeleteDeviceProp/req";
+import { DeleteDevicePropResponse } from "./DeleteDeviceProp/res";
+import { DeleteEdgeInstanceRequest } from "./DeleteEdgeInstance/req";
+import { DeleteEdgeInstanceResponse } from "./DeleteEdgeInstance/res";
+import { DeleteProductRequest } from "./DeleteProduct/req";
+import { DeleteProductResponse } from "./DeleteProduct/res";
+import { DeleteProductTopicRequest } from "./DeleteProductTopic/req";
+import { DeleteProductTopicResponse } from "./DeleteProductTopic/res";
+import { DeleteRuleRequest } from "./DeleteRule/req";
+import { DeleteRuleResponse } from "./DeleteRule/res";
+import { DeleteRuleActionRequest } from "./DeleteRuleAction/req";
+import { DeleteRuleActionResponse } from "./DeleteRuleAction/res";
+import { DisableThingRequest } from "./DisableThing/req";
+import { DisableThingResponse } from "./DisableThing/res";
+import { EnableThingRequest } from "./EnableThing/req";
+import { EnableThingResponse } from "./EnableThing/res";
+import { GetDataAPIServiceDetailRequest } from "./GetDataAPIServiceDetail/req";
+import { GetDataAPIServiceDetailResponse } from "./GetDataAPIServiceDetail/res";
+import { GetDeviceShadowRequest } from "./GetDeviceShadow/req";
+import { GetDeviceShadowResponse } from "./GetDeviceShadow/res";
+import { GetDeviceStatusRequest } from "./GetDeviceStatus/req";
+import { GetDeviceStatusResponse } from "./GetDeviceStatus/res";
+import { GetEdgeInstanceRequest } from "./GetEdgeInstance/req";
+import { GetEdgeInstanceResponse } from "./GetEdgeInstance/res";
+import { GetEdgeInstanceDeploymentRequest } from "./GetEdgeInstanceDeployment/req";
+import { GetEdgeInstanceDeploymentResponse } from "./GetEdgeInstanceDeployment/res";
+import { GetGatewayBySubDeviceRequest } from "./GetGatewayBySubDevice/req";
+import { GetGatewayBySubDeviceResponse } from "./GetGatewayBySubDevice/res";
+import { GetLoraNodesTaskRequest } from "./GetLoraNodesTask/req";
+import { GetLoraNodesTaskResponse } from "./GetLoraNodesTask/res";
+import { GetNodesAddingTaskRequest } from "./GetNodesAddingTask/req";
+import { GetNodesAddingTaskResponse } from "./GetNodesAddingTask/res";
+import { GetRuleRequest } from "./GetRule/req";
+import { GetRuleResponse } from "./GetRule/res";
+import { GetRuleActionRequest } from "./GetRuleAction/req";
+import { GetRuleActionResponse } from "./GetRuleAction/res";
+import { GetThingTopoRequest } from "./GetThingTopo/req";
+import { GetThingTopoResponse } from "./GetThingTopo/res";
+import { InvokeDataAPIServiceRequest } from "./InvokeDataAPIService/req";
+import { InvokeDataAPIServiceResponse } from "./InvokeDataAPIService/res";
+import { InvokeThingServiceRequest } from "./InvokeThingService/req";
+import { InvokeThingServiceResponse } from "./InvokeThingService/res";
+import { InvokeThingsServiceRequest } from "./InvokeThingsService/req";
+import { InvokeThingsServiceResponse } from "./InvokeThingsService/res";
+import { ListProductTagsRequest } from "./ListProductTags/req";
+import { ListProductTagsResponse } from "./ListProductTags/res";
+import { ListRuleRequest } from "./ListRule/req";
+import { ListRuleResponse } from "./ListRule/res";
+import { ListRuleActionsRequest } from "./ListRuleActions/req";
+import { ListRuleActionsResponse } from "./ListRuleActions/res";
+import { NotifyAddThingTopoRequest } from "./NotifyAddThingTopo/req";
+import { NotifyAddThingTopoResponse } from "./NotifyAddThingTopo/res";
+import { PubRequest } from "./Pub/req";
+import { PubResponse } from "./Pub/res";
+import { PubBroadcastRequest } from "./PubBroadcast/req";
+import { PubBroadcastResponse } from "./PubBroadcast/res";
+import { QueryAppDeviceListRequest } from "./QueryAppDeviceList/req";
+import { QueryAppDeviceListResponse } from "./QueryAppDeviceList/res";
+import { QueryBatchRegisterDeviceStatusRequest } from "./QueryBatchRegisterDeviceStatus/req";
+import { QueryBatchRegisterDeviceStatusResponse } from "./QueryBatchRegisterDeviceStatus/res";
+import { QueryDeviceRequest } from "./QueryDevice/req";
+import { QueryDeviceResponse } from "./QueryDevice/res";
+import { QueryDeviceByDriverRequest } from "./QueryDeviceByDriver/req";
+import { QueryDeviceByDriverResponse } from "./QueryDeviceByDriver/res";
+import { QueryDeviceByTagsRequest } from "./QueryDeviceByTags/req";
+import { QueryDeviceByTagsResponse } from "./QueryDeviceByTags/res";
+import { QueryDeviceDesiredPropertyRequest } from "./QueryDeviceDesiredProperty/req";
+import { QueryDeviceDesiredPropertyResponse } from "./QueryDeviceDesiredProperty/res";
+import { QueryDeviceFileRequest } from "./QueryDeviceFile/req";
+import { QueryDeviceFileResponse } from "./QueryDeviceFile/res";
+import { QueryDeviceFileListRequest } from "./QueryDeviceFileList/req";
+import { QueryDeviceFileListResponse } from "./QueryDeviceFileList/res";
+import { QueryDeviceGroupByDeviceRequest } from "./QueryDeviceGroupByDevice/req";
+import { QueryDeviceGroupByDeviceResponse } from "./QueryDeviceGroupByDevice/res";
+import { QueryDeviceGroupByTagsRequest } from "./QueryDeviceGroupByTags/req";
+import { QueryDeviceGroupByTagsResponse } from "./QueryDeviceGroupByTags/res";
+import { QueryDeviceGroupInfoRequest } from "./QueryDeviceGroupInfo/req";
+import { QueryDeviceGroupInfoResponse } from "./QueryDeviceGroupInfo/res";
+import { QueryDeviceGroupListRequest } from "./QueryDeviceGroupList/req";
+import { QueryDeviceGroupListResponse } from "./QueryDeviceGroupList/res";
+import { QueryDeviceGroupTagListRequest } from "./QueryDeviceGroupTagList/req";
+import { QueryDeviceGroupTagListResponse } from "./QueryDeviceGroupTagList/res";
+import { QueryDeviceListByDeviceGroupRequest } from "./QueryDeviceListByDeviceGroup/req";
+import { QueryDeviceListByDeviceGroupResponse } from "./QueryDeviceListByDeviceGroup/res";
+import { QueryDevicePropRequest } from "./QueryDeviceProp/req";
+import { QueryDevicePropResponse } from "./QueryDeviceProp/res";
+import { QueryDevicePropertiesDataRequest } from "./QueryDevicePropertiesData/req";
+import { QueryDevicePropertiesDataResponse } from "./QueryDevicePropertiesData/res";
+import { QueryDevicePropertyDataRequest } from "./QueryDevicePropertyData/req";
+import { QueryDevicePropertyDataResponse } from "./QueryDevicePropertyData/res";
+import { QueryDevicePropertyStatusRequest } from "./QueryDevicePropertyStatus/req";
+import { QueryDevicePropertyStatusResponse } from "./QueryDevicePropertyStatus/res";
+import { QueryDeviceServiceDataRequest } from "./QueryDeviceServiceData/req";
+import { QueryDeviceServiceDataResponse } from "./QueryDeviceServiceData/res";
+import { QueryEdgeInstanceRequest } from "./QueryEdgeInstance/req";
+import { QueryEdgeInstanceResponse } from "./QueryEdgeInstance/res";
+import { QueryEdgeInstanceDeviceRequest } from "./QueryEdgeInstanceDevice/req";
+import { QueryEdgeInstanceDeviceResponse } from "./QueryEdgeInstanceDevice/res";
+import { QueryEdgeInstanceDriverRequest } from "./QueryEdgeInstanceDriver/req";
+import { QueryEdgeInstanceDriverResponse } from "./QueryEdgeInstanceDriver/res";
+import { QueryEdgeInstanceGatewayRequest } from "./QueryEdgeInstanceGateway/req";
+import { QueryEdgeInstanceGatewayResponse } from "./QueryEdgeInstanceGateway/res";
+import { QueryEdgeInstanceHistoricDeploymentRequest } from "./QueryEdgeInstanceHistoricDeployment/req";
+import { QueryEdgeInstanceHistoricDeploymentResponse } from "./QueryEdgeInstanceHistoricDeployment/res";
+import { QueryLoRaJoinPermissionsRequest } from "./QueryLoRaJoinPermissions/req";
+import { QueryLoRaJoinPermissionsResponse } from "./QueryLoRaJoinPermissions/res";
+import { QueryProductRequest } from "./QueryProduct/req";
+import { QueryProductResponse } from "./QueryProduct/res";
+import { QueryProductListRequest } from "./QueryProductList/req";
+import { QueryProductListResponse } from "./QueryProductList/res";
+import { QueryProductTopicRequest } from "./QueryProductTopic/req";
+import { QueryProductTopicResponse } from "./QueryProductTopic/res";
+import { QuerySuperDeviceGroupRequest } from "./QuerySuperDeviceGroup/req";
+import { QuerySuperDeviceGroupResponse } from "./QuerySuperDeviceGroup/res";
+import { QueryTopicReverseRouteTableRequest } from "./QueryTopicReverseRouteTable/req";
+import { QueryTopicReverseRouteTableResponse } from "./QueryTopicReverseRouteTable/res";
+import { QueryTopicRouteTableRequest } from "./QueryTopicRouteTable/req";
+import { QueryTopicRouteTableResponse } from "./QueryTopicRouteTable/res";
+import { RRpcRequest } from "./RRpc/req";
+import { RRpcResponse } from "./RRpc/res";
+import { RegisterDeviceRequest } from "./RegisterDevice/req";
+import { RegisterDeviceResponse } from "./RegisterDevice/res";
+import { RemoveThingTopoRequest } from "./RemoveThingTopo/req";
+import { RemoveThingTopoResponse } from "./RemoveThingTopo/res";
+import { SaveDevicePropRequest } from "./SaveDeviceProp/req";
+import { SaveDevicePropResponse } from "./SaveDeviceProp/res";
+import { SetDeviceDesiredPropertyRequest } from "./SetDeviceDesiredProperty/req";
+import { SetDeviceDesiredPropertyResponse } from "./SetDeviceDesiredProperty/res";
+import { SetDeviceGroupTagsRequest } from "./SetDeviceGroupTags/req";
+import { SetDeviceGroupTagsResponse } from "./SetDeviceGroupTags/res";
+import { SetDevicePropertyRequest } from "./SetDeviceProperty/req";
+import { SetDevicePropertyResponse } from "./SetDeviceProperty/res";
+import { SetDevicesPropertyRequest } from "./SetDevicesProperty/req";
+import { SetDevicesPropertyResponse } from "./SetDevicesProperty/res";
+import { StartRuleRequest } from "./StartRule/req";
+import { StartRuleResponse } from "./StartRule/res";
+import { StopRuleRequest } from "./StopRule/req";
+import { StopRuleResponse } from "./StopRule/res";
+import { UnbindDriverFromEdgeInstanceRequest } from "./UnbindDriverFromEdgeInstance/req";
+import { UnbindDriverFromEdgeInstanceResponse } from "./UnbindDriverFromEdgeInstance/res";
+import { UpdateDeviceGroupRequest } from "./UpdateDeviceGroup/req";
+import { UpdateDeviceGroupResponse } from "./UpdateDeviceGroup/res";
+import { UpdateDeviceShadowRequest } from "./UpdateDeviceShadow/req";
+import { UpdateDeviceShadowResponse } from "./UpdateDeviceShadow/res";
+import { UpdateEdgeInstanceRequest } from "./UpdateEdgeInstance/req";
+import { UpdateEdgeInstanceResponse } from "./UpdateEdgeInstance/res";
+import { UpdateProductRequest } from "./UpdateProduct/req";
+import { UpdateProductResponse } from "./UpdateProduct/res";
+import { UpdateProductTagsRequest } from "./UpdateProductTags/req";
+import { UpdateProductTagsResponse } from "./UpdateProductTags/res";
+import { UpdateProductTopicRequest } from "./UpdateProductTopic/req";
+import { UpdateProductTopicResponse } from "./UpdateProductTopic/res";
+import { UpdateRuleRequest } from "./UpdateRule/req";
+import { UpdateRuleResponse } from "./UpdateRule/res";
+import { UpdateRuleActionRequest } from "./UpdateRuleAction/req";
+import { UpdateRuleActionResponse } from "./UpdateRuleAction/res";
+
 interface IOT {
-    BatchAddDeviceGroupRelations(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "GroupId": string;
-        "Device"?: string[];
-    }): Promise<{}>;
-    BatchDeleteDeviceGroupRelations(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "GroupId": string;
-        "Device"?: string[];
-    }): Promise<{}>;
-    ClearEdgeInstanceDriverConfigs(query: {
-        "RegionId"?: string;
-        "DriverId": string;
-        "InstanceId": string;
-        "IotInstanceId"?: string;
-    }): Promise<{}>;
-    CreateDeviceGroup(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "GroupName": string;
-        "SuperGroupId"?: string;
-        "GroupDesc"?: string;
-    }): Promise<{}>;
-    BatchBindDeviceToEdgeInstanceWithDriver(query: {
-        "RegionId"?: string;
-        "DriverId": string;
-        "IotIds": string[];
-        "InstanceId": string;
-        "IotInstanceId"?: string;
-    }): Promise<{}>;
-    BindDriverToEdgeInstance(query: {
-        "RegionId"?: string;
-        "DriverId": string;
-        "InstanceId": string;
-        "IotInstanceId"?: string;
-        "OrderId"?: string;
-    }): Promise<{}>;
-    BatchCheckDeviceNames(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "ProductKey": string;
-        "DeviceName"?: string[];
-    }): Promise<{}>;
-    BatchGetDeviceDriver(query: {
-        "RegionId"?: string;
-        "IotIds": string[];
-        "InstanceId": string;
-        "IotInstanceId"?: string;
-    }): Promise<{}>;
-    BatchGetDeviceState(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "ProductKey"?: string;
-        "DeviceName"?: string[];
-        "IotId"?: string[];
-    }): Promise<{}>;
-    BatchQueryDeviceDetail(query: {
-        "RegionId"?: string;
-        "DeviceName": string[];
-        "ProductKey": string;
-        "IotInstanceId"?: string;
-    }): Promise<{}>;
-    BatchUpdateDeviceNickname(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "DeviceNicknameInfo": string[];
-    }): Promise<{}>;
-    BindGatewayToEdgeInstance(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "IotInstanceId"?: string;
-        "ProductKey"?: string;
-        "DeviceName"?: string;
-        "IotId"?: string;
-    }): Promise<{}>;
-    CloseEdgeInstanceDeployment(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "IotInstanceId"?: string;
-    }): Promise<{}>;
-    CreateEdgeInstance(query: {
-        "RegionId"?: string;
-        "Name": string;
-        "IotInstanceId"?: string;
-        "Tags"?: string;
-        "Spec"?: number;
-    }): Promise<{}>;
-    CreateRuleAction(query: {
-        "RegionId"?: string;
-        "Type": string;
-        "Configuration": string;
-        "IotInstanceId"?: string;
-        "RuleId": number;
-        "ErrorActionFlag"?: boolean;
-    }): Promise<{}>;
-    CreateTopicRouteTable(query: {
-        "RegionId"?: string;
-        "DstTopic": string[];
-        "IotInstanceId"?: string;
-        "SrcTopic": string;
-    }): Promise<{}>;
-    DeleteTopicRouteTable(query: {
-        "RegionId"?: string;
-        "DstTopic": string[];
-        "IotInstanceId"?: string;
-        "SrcTopic": string;
-    }): Promise<{}>;
-    BatchClearEdgeInstanceDeviceConfig(query: {
-        "RegionId"?: string;
-        "IotIds": string[];
-        "InstanceId": string;
-        "IotInstanceId"?: string;
-    }): Promise<{}>;
-    BatchGetEdgeInstanceDeviceConfig(query: {
-        "RegionId"?: string;
-        "IotIds": string[];
-        "InstanceId": string;
-        "IotInstanceId"?: string;
-    }): Promise<{}>;
-    BatchGetEdgeInstanceDriverConfigs(query: {
-        "RegionId"?: string;
-        "DriverIds": string[];
-        "InstanceId": string;
-        "IotInstanceId"?: string;
-    }): Promise<{}>;
-    BatchRegisterDeviceWithApplyId(query: {
-        "RegionId"?: string;
-        "ApplyId": number;
-        "IotInstanceId"?: string;
-        "ProductKey": string;
-    }): Promise<{}>;
-    BatchUnbindDeviceFromEdgeInstance(query: {
-        "RegionId"?: string;
-        "IotIds": string[];
-        "InstanceId": string;
-        "IotInstanceId"?: string;
-    }): Promise<{}>;
-    CreateEdgeInstanceDeployment(query: {
-        "RegionId"?: string;
-        "Type": string;
-        "InstanceId": string;
-        "IotInstanceId"?: string;
-    }): Promise<{}>;
-    CreateProduct(query: {
-        "RegionId"?: string;
-        "NodeType": number;
-        "IotInstanceId"?: string;
-        "ProductName": string;
-        "DataFormat"?: number;
-        "Description"?: string;
-        "AliyunCommodityCode"?: string;
-        "Id2"?: boolean;
-        "CategoryId"?: number;
-        "ProtocolType"?: string;
-        "NetType"?: string;
-        "JoinPermissionId"?: string;
-    }): Promise<{}>;
-    CreateProductTopic(query: {
-        "RegionId"?: string;
-        "TopicShortName": string;
-        "IotInstanceId"?: string;
-        "ProductKey": string;
-        "Operation"?: string;
-        "Desc"?: string;
-    }): Promise<{}>;
-    DeleteDevice(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "IotId"?: string;
-        "ProductKey"?: string;
-        "DeviceName"?: string;
-    }): Promise<{}>;
-    DeleteDeviceGroup(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "GroupId": string;
-    }): Promise<{}>;
-    DeleteProductTags(query: {
-        "RegionId"?: string;
-        "ProductTagKey": string[];
-        "IotInstanceId"?: string;
-        "ProductKey": string;
-    }): Promise<{}>;
-    BatchRegisterDevice(query: {
-        "RegionId"?: string;
-        "Count": number;
-        "IotInstanceId"?: string;
-        "ProductKey": string;
-    }): Promise<{}>;
-    BatchSetEdgeInstanceDeviceConfig(query: {
-        "RegionId"?: string;
-        "DeviceConfigs": string[];
-        "InstanceId": string;
-        "IotInstanceId"?: string;
-    }): Promise<{}>;
-    CreateDataAPIService(query: {
-        "RegionId"?: string;
-        "ApiPath": string;
-        "OriginSql": string;
-        "TemplateSql": string;
-        "DisplayName": string;
-        "FolderId"?: string;
-        "Desc"?: string;
-        "RequestParam"?: string[];
-        "ResponseParam"?: string[];
-    }): Promise<{}>;
-    CreateLoRaNodesTask(query: {
-        "RegionId"?: string;
-        "DeviceInfo": string[];
-        "IotInstanceId"?: string;
-        "ProductKey": string;
-    }): Promise<{}>;
-    CreateProductTags(query: {
-        "RegionId"?: string;
-        "ProductTag": string[];
-        "IotInstanceId"?: string;
-        "ProductKey": string;
-    }): Promise<{}>;
-    ListProductByTags(query: {
-        "RegionId"?: string;
-        "CurrentPage"?: number;
-        "PageSize"?: number;
-        "IotInstanceId"?: string;
-        "ProductTag": string[];
-    }): Promise<{}>;
-    QueryDeviceDetail(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "IotId"?: string;
-        "ProductKey"?: string;
-        "DeviceName"?: string;
-    }): Promise<{}>;
-    QueryDeviceEventData(query: {
-        "RegionId"?: string;
-        "EndTime": number;
-        "IotInstanceId"?: string;
-        "StartTime": number;
-        "IotId"?: string;
-        "ProductKey"?: string;
-        "EventType"?: string;
-        "DeviceName"?: string;
-        "Identifier"?: string;
-        "Asc"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    QueryDeviceStatistics(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "ProductKey"?: string;
-    }): Promise<{}>;
-    QueryPageByApplyId(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "ApplyId": number;
-        "CurrentPage"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    SetEdgeInstanceDriverConfigs(query: {
-        "RegionId"?: string;
-        "DriverId": string;
-        "Configs": string[];
-        "InstanceId": string;
-        "IotInstanceId"?: string;
-    }): Promise<{}>;
-    CreateRule(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "Name": string;
-        "Select"?: string;
-        "ShortTopic"?: string;
-        "Where"?: string;
-        "ProductKey"?: string;
-        "RuleDesc"?: string;
-        "DataType"?: string;
-        "TopicType"?: number;
-    }): Promise<{}>;
-    DeleteDeviceFile(query: {
-        "RegionId"?: string;
-        "ProductKey"?: string;
-        "DeviceName"?: string;
-        "IotInstanceId"?: string;
-        "FileId": string;
-        "IotId"?: string;
-    }): Promise<{}>;
-    DeleteDeviceProp(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "PropKey": string;
-        "IotId"?: string;
-        "DeviceName"?: string;
-        "ProductKey"?: string;
-    }): Promise<{}>;
-    DeleteEdgeInstance(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "IotInstanceId"?: string;
-    }): Promise<{}>;
-    DeleteProduct(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "ProductKey": string;
-    }): Promise<{}>;
-    DeleteProductTopic(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "TopicId": string;
-    }): Promise<{}>;
-    DeleteRule(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "RuleId": number;
-    }): Promise<{}>;
-    DeleteRuleAction(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "ActionId": number;
-    }): Promise<{}>;
-    DisableThing(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "IotId"?: string;
-        "ProductKey"?: string;
-        "DeviceName"?: string;
-    }): Promise<{}>;
-    EnableThing(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "IotId"?: string;
-        "ProductKey"?: string;
-        "DeviceName"?: string;
-    }): Promise<{}>;
-    GetDataAPIServiceDetail(query: {
-        "RegionId"?: string;
-        "ApiSrn": string;
-    }): Promise<{}>;
-    GetDeviceShadow(query: {
-        "RegionId"?: string;
-        "ProductKey": string;
-        "IotInstanceId"?: string;
-        "DeviceName": string;
-        "ShadowMessage"?: string;
-    }): Promise<{}>;
-    GetDeviceStatus(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "IotId"?: string;
-        "ProductKey"?: string;
-        "DeviceName"?: string;
-    }): Promise<{}>;
-    GetEdgeInstance(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "IotInstanceId"?: string;
-    }): Promise<{}>;
-    GetEdgeInstanceDeployment(query: {
-        "RegionId"?: string;
-        "DeploymentId": string;
-        "InstanceId": string;
-        "IotInstanceId"?: string;
-    }): Promise<{}>;
-    GetGatewayBySubDevice(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "ProductKey"?: string;
-        "DeviceName"?: string;
-        "IotId"?: string;
-    }): Promise<{}>;
-    GetLoraNodesTask(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "TaskId": string;
-    }): Promise<{}>;
-    GetNodesAddingTask(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "TaskId": string;
-    }): Promise<{}>;
-    GetRule(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "RuleId": number;
-    }): Promise<{}>;
-    GetRuleAction(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "ActionId": number;
-    }): Promise<{}>;
-    GetThingTopo(query: {
-        "RegionId"?: string;
-        "PageSize": number;
-        "IotInstanceId"?: string;
-        "PageNo": number;
-        "ProductKey"?: string;
-        "DeviceName"?: string;
-        "IotId"?: string;
-    }): Promise<{}>;
-    InvokeDataAPIService(query: {
-        "RegionId"?: string;
-        "ApiSrn": string;
-        "Param"?: string[];
-    }): Promise<{}>;
-    InvokeThingService(query: {
-        "RegionId"?: string;
-        "Args": string;
-        "IotInstanceId"?: string;
-        "Identifier": string;
-        "IotId"?: string;
-        "ProductKey"?: string;
-        "DeviceName"?: string;
-    }): Promise<{}>;
-    InvokeThingsService(query: {
-        "RegionId"?: string;
-        "Identifier": string;
-        "Args": string;
-        "DeviceName": string[];
-        "IotInstanceId"?: string;
-        "ProductKey": string;
-    }): Promise<{}>;
-    ListProductTags(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "ProductKey": string;
-    }): Promise<{}>;
-    ListRule(query: {
-        "RegionId"?: string;
-        "CurrentPage": number;
-        "PageSize": number;
-        "IotInstanceId"?: string;
-        "SearchName"?: string;
-    }): Promise<{}>;
-    ListRuleActions(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "RuleId": number;
-    }): Promise<{}>;
-    NotifyAddThingTopo(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "DeviceListStr"?: string;
-        "GwIotId"?: string;
-        "GwProductKey"?: string;
-        "GwDeviceName"?: string;
-    }): Promise<{}>;
-    Pub(query: {
-        "RegionId"?: string;
-        "TopicFullName": string;
-        "MessageContent": string;
-        "IotInstanceId"?: string;
-        "ProductKey": string;
-        "Qos"?: number;
-    }): Promise<{}>;
-    PubBroadcast(query: {
-        "RegionId"?: string;
-        "TopicFullName": string;
-        "MessageContent": string;
-        "IotInstanceId"?: string;
-        "ProductKey": string;
-    }): Promise<{}>;
-    QueryAppDeviceList(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "CurrentPage"?: number;
-        "PageSize"?: number;
-        "ProductKeyList"?: string[];
-        "CategoryKeyList"?: string[];
-        "TagList"?: string[];
-        "AppKey"?: string;
-    }): Promise<{}>;
-    QueryBatchRegisterDeviceStatus(query: {
-        "RegionId"?: string;
-        "ApplyId": number;
-        "IotInstanceId"?: string;
-        "ProductKey": string;
-    }): Promise<{}>;
-    QueryDevice(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "ProductKey": string;
-        "PageSize"?: number;
-        "CurrentPage"?: number;
-    }): Promise<{}>;
-    QueryDeviceByDriver(query: {
-        "RegionId"?: string;
-        "DriverId": string;
-        "CurrentPage": number;
-        "PageSize": number;
-        "InstanceId": string;
-        "IotInstanceId"?: string;
-    }): Promise<{}>;
-    QueryDeviceByTags(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "Tag"?: string[];
-        "CurrentPage"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    QueryDeviceDesiredProperty(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "IotId"?: string;
-        "ProductKey"?: string;
-        "DeviceName"?: string;
-        "Identifier"?: string[];
-    }): Promise<{}>;
-    QueryDeviceFile(query: {
-        "RegionId"?: string;
-        "ProductKey"?: string;
-        "DeviceName"?: string;
-        "IotInstanceId"?: string;
-        "FileId": string;
-        "IotId"?: string;
-    }): Promise<{}>;
-    QueryDeviceFileList(query: {
-        "RegionId"?: string;
-        "DeviceName"?: string;
-        "IotInstanceId"?: string;
-        "ProductKey"?: string;
-        "CurrentPage"?: number;
-        "PageSize"?: number;
-        "IotId"?: string;
-    }): Promise<{}>;
-    QueryDeviceGroupByDevice(query: {
-        "RegionId"?: string;
-        "DeviceName": string;
-        "IotInstanceId"?: string;
-        "ProductKey": string;
-    }): Promise<{}>;
-    QueryDeviceGroupByTags(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "Tag"?: string[];
-        "CurrentPage"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    QueryDeviceGroupInfo(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "GroupId": string;
-    }): Promise<{}>;
-    QueryDeviceGroupList(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "SuperGroupId"?: string;
-        "GroupName"?: string;
-        "CurrentPage"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    QueryDeviceGroupTagList(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "GroupId": string;
-    }): Promise<{}>;
-    QueryDeviceListByDeviceGroup(query: {
-        "RegionId"?: string;
-        "CurrentPage"?: number;
-        "PageSize"?: number;
-        "IotInstanceId"?: string;
-        "GroupId": string;
-    }): Promise<{}>;
-    QueryDeviceProp(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "IotId"?: string;
-        "DeviceName"?: string;
-        "ProductKey"?: string;
-    }): Promise<{}>;
-    QueryDevicePropertiesData(query: {
-        "RegionId"?: string;
-        "DeviceName": string;
-        "StartTime": number;
-        "EndTime": number;
-        "Asc": number;
-        "PageSize": number;
-        "Identifier": string[];
-        "IotInstanceId"?: string;
-        "ProductKey": string;
-        "IotId"?: string;
-    }): Promise<{}>;
-    QueryDevicePropertyData(query: {
-        "RegionId"?: string;
-        "StartTime": number;
-        "EndTime": number;
-        "Asc": number;
-        "PageSize": number;
-        "IotInstanceId"?: string;
-        "Identifier": string;
-        "IotId"?: string;
-        "ProductKey"?: string;
-        "DeviceName"?: string;
-    }): Promise<{}>;
-    QueryDevicePropertyStatus(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "IotId"?: string;
-        "ProductKey"?: string;
-        "DeviceName"?: string;
-    }): Promise<{}>;
-    QueryDeviceServiceData(query: {
-        "RegionId"?: string;
-        "EndTime": number;
-        "IotInstanceId"?: string;
-        "StartTime": number;
-        "IotId"?: string;
-        "ProductKey"?: string;
-        "DeviceName"?: string;
-        "Identifier"?: string;
-        "Asc"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    QueryEdgeInstance(query: {
-        "RegionId"?: string;
-        "CurrentPage": number;
-        "PageSize": number;
-        "IotInstanceId"?: string;
-        "Name"?: string;
-    }): Promise<{}>;
-    QueryEdgeInstanceDevice(query: {
-        "RegionId"?: string;
-        "CurrentPage": number;
-        "PageSize": number;
-        "InstanceId": string;
-        "IotInstanceId"?: string;
-    }): Promise<{}>;
-    QueryEdgeInstanceDriver(query: {
-        "RegionId"?: string;
-        "CurrentPage": number;
-        "PageSize": number;
-        "InstanceId": string;
-        "IotInstanceId"?: string;
-    }): Promise<{}>;
-    QueryEdgeInstanceGateway(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "IotInstanceId"?: string;
-    }): Promise<{}>;
-    QueryEdgeInstanceHistoricDeployment(query: {
-        "RegionId"?: string;
-        "CurrentPage": number;
-        "PageSize": number;
-        "InstanceId": string;
-        "IotInstanceId"?: string;
-        "StartTime"?: number;
-        "EndTime"?: number;
-    }): Promise<{}>;
-    QueryLoRaJoinPermissions(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-    }): Promise<{}>;
-    QueryProduct(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "ProductKey": string;
-    }): Promise<{}>;
-    QueryProductList(query: {
-        "RegionId"?: string;
-        "PageSize": number;
-        "IotInstanceId"?: string;
-        "CurrentPage": number;
-        "AliyunCommodityCode"?: string;
-    }): Promise<{}>;
-    QueryProductTopic(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "ProductKey": string;
-    }): Promise<{}>;
-    QuerySuperDeviceGroup(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "GroupId": string;
-    }): Promise<{}>;
-    QueryTopicReverseRouteTable(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "Topic": string;
-    }): Promise<{}>;
-    QueryTopicRouteTable(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "Topic": string;
-    }): Promise<{}>;
-    RRpc(query: {
-        "RegionId"?: string;
-        "Timeout": number;
-        "DeviceName": string;
-        "RequestBase64Byte": string;
-        "IotInstanceId"?: string;
-        "ProductKey": string;
-        "Topic"?: string;
-    }): Promise<{}>;
-    RegisterDevice(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "ProductKey": string;
-        "DeviceName"?: string;
-        "DevEui"?: string;
-        "PinCode"?: string;
-        "Nickname"?: string;
-    }): Promise<{}>;
-    RemoveThingTopo(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "IotId"?: string;
-        "ProductKey"?: string;
-        "DeviceName"?: string;
-    }): Promise<{}>;
-    SaveDeviceProp(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "Props": string;
-        "IotId"?: string;
-        "DeviceName"?: string;
-        "ProductKey"?: string;
-    }): Promise<{}>;
-    SetDeviceDesiredProperty(query: {
-        "RegionId"?: string;
-        "Versions"?: string;
-        "IotInstanceId"?: string;
-        "Items": string;
-        "IotId"?: string;
-        "DeviceName"?: string;
-        "ProductKey"?: string;
-    }): Promise<{}>;
-    SetDeviceGroupTags(query: {
-        "RegionId"?: string;
-        "TagString"?: string;
-        "IotInstanceId"?: string;
-        "GroupId": string;
-    }): Promise<{}>;
-    SetDeviceProperty(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "Items": string;
-        "IotId"?: string;
-        "DeviceName"?: string;
-        "ProductKey"?: string;
-    }): Promise<{}>;
-    SetDevicesProperty(query: {
-        "RegionId"?: string;
-        "Items": string;
-        "DeviceName": string[];
-        "IotInstanceId"?: string;
-        "ProductKey": string;
-    }): Promise<{}>;
-    StartRule(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "RuleId": number;
-    }): Promise<{}>;
-    StopRule(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "RuleId": number;
-    }): Promise<{}>;
-    UnbindDriverFromEdgeInstance(query: {
-        "RegionId"?: string;
-        "DriverId": string;
-        "InstanceId": string;
-        "IotInstanceId"?: string;
-    }): Promise<{}>;
-    UpdateDeviceGroup(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "GroupId": string;
-        "GroupDesc"?: string;
-    }): Promise<{}>;
-    UpdateDeviceShadow(query: {
-        "RegionId"?: string;
-        "ProductKey": string;
-        "ShadowMessage": string;
-        "IotInstanceId"?: string;
-        "DeviceName": string;
-    }): Promise<{}>;
-    UpdateEdgeInstance(query: {
-        "RegionId"?: string;
-        "Name": string;
-        "InstanceId": string;
-        "IotInstanceId"?: string;
-        "Tags"?: string;
-        "Spec"?: number;
-        "BizEnable"?: boolean;
-    }): Promise<{}>;
-    UpdateProduct(query: {
-        "RegionId"?: string;
-        "ProductName": string;
-        "IotInstanceId"?: string;
-        "ProductKey": string;
-        "Description"?: string;
-    }): Promise<{}>;
-    UpdateProductTags(query: {
-        "RegionId"?: string;
-        "ProductTag": string[];
-        "IotInstanceId"?: string;
-        "ProductKey": string;
-    }): Promise<{}>;
-    UpdateProductTopic(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "Desc"?: string;
-        "Operation"?: string;
-        "TopicShortName"?: string;
-        "TopicId"?: string;
-    }): Promise<{}>;
-    UpdateRule(query: {
-        "RegionId"?: string;
-        "IotInstanceId"?: string;
-        "RuleId": number;
-        "Select"?: string;
-        "ShortTopic"?: string;
-        "Where"?: string;
-        "ProductKey"?: string;
-        "Name"?: string;
-        "RuleDesc"?: string;
-        "TopicType"?: number;
-    }): Promise<{}>;
-    UpdateRuleAction(query: {
-        "RegionId"?: string;
-        "Type": string;
-        "Configuration": string;
-        "IotInstanceId"?: string;
-        "ActionId": number;
-    }): Promise<{}>;
+    BatchAddDeviceGroupRelations(query: BatchAddDeviceGroupRelationsRequest): Promise<BatchAddDeviceGroupRelationsResponse>;
+    BatchDeleteDeviceGroupRelations(query: BatchDeleteDeviceGroupRelationsRequest): Promise<BatchDeleteDeviceGroupRelationsResponse>;
+    ClearEdgeInstanceDriverConfigs(query: ClearEdgeInstanceDriverConfigsRequest): Promise<ClearEdgeInstanceDriverConfigsResponse>;
+    CreateDeviceGroup(query: CreateDeviceGroupRequest): Promise<CreateDeviceGroupResponse>;
+    BatchBindDeviceToEdgeInstanceWithDriver(query: BatchBindDeviceToEdgeInstanceWithDriverRequest): Promise<BatchBindDeviceToEdgeInstanceWithDriverResponse>;
+    BindDriverToEdgeInstance(query: BindDriverToEdgeInstanceRequest): Promise<BindDriverToEdgeInstanceResponse>;
+    BatchCheckDeviceNames(query: BatchCheckDeviceNamesRequest): Promise<BatchCheckDeviceNamesResponse>;
+    BatchGetDeviceDriver(query: BatchGetDeviceDriverRequest): Promise<BatchGetDeviceDriverResponse>;
+    BatchGetDeviceState(query: BatchGetDeviceStateRequest): Promise<BatchGetDeviceStateResponse>;
+    BatchQueryDeviceDetail(query: BatchQueryDeviceDetailRequest): Promise<BatchQueryDeviceDetailResponse>;
+    BatchUpdateDeviceNickname(query: BatchUpdateDeviceNicknameRequest): Promise<BatchUpdateDeviceNicknameResponse>;
+    BindGatewayToEdgeInstance(query: BindGatewayToEdgeInstanceRequest): Promise<BindGatewayToEdgeInstanceResponse>;
+    CloseEdgeInstanceDeployment(query: CloseEdgeInstanceDeploymentRequest): Promise<CloseEdgeInstanceDeploymentResponse>;
+    CreateEdgeInstance(query: CreateEdgeInstanceRequest): Promise<CreateEdgeInstanceResponse>;
+    CreateRuleAction(query: CreateRuleActionRequest): Promise<CreateRuleActionResponse>;
+    CreateTopicRouteTable(query: CreateTopicRouteTableRequest): Promise<CreateTopicRouteTableResponse>;
+    DeleteTopicRouteTable(query: DeleteTopicRouteTableRequest): Promise<DeleteTopicRouteTableResponse>;
+    BatchClearEdgeInstanceDeviceConfig(query: BatchClearEdgeInstanceDeviceConfigRequest): Promise<BatchClearEdgeInstanceDeviceConfigResponse>;
+    BatchGetEdgeInstanceDeviceConfig(query: BatchGetEdgeInstanceDeviceConfigRequest): Promise<BatchGetEdgeInstanceDeviceConfigResponse>;
+    BatchGetEdgeInstanceDriverConfigs(query: BatchGetEdgeInstanceDriverConfigsRequest): Promise<BatchGetEdgeInstanceDriverConfigsResponse>;
+    BatchRegisterDeviceWithApplyId(query: BatchRegisterDeviceWithApplyIdRequest): Promise<BatchRegisterDeviceWithApplyIdResponse>;
+    BatchUnbindDeviceFromEdgeInstance(query: BatchUnbindDeviceFromEdgeInstanceRequest): Promise<BatchUnbindDeviceFromEdgeInstanceResponse>;
+    CreateEdgeInstanceDeployment(query: CreateEdgeInstanceDeploymentRequest): Promise<CreateEdgeInstanceDeploymentResponse>;
+    CreateProduct(query: CreateProductRequest): Promise<CreateProductResponse>;
+    CreateProductTopic(query: CreateProductTopicRequest): Promise<CreateProductTopicResponse>;
+    DeleteDevice(query: DeleteDeviceRequest): Promise<DeleteDeviceResponse>;
+    DeleteDeviceGroup(query: DeleteDeviceGroupRequest): Promise<DeleteDeviceGroupResponse>;
+    DeleteProductTags(query: DeleteProductTagsRequest): Promise<DeleteProductTagsResponse>;
+    BatchRegisterDevice(query: BatchRegisterDeviceRequest): Promise<BatchRegisterDeviceResponse>;
+    BatchSetEdgeInstanceDeviceConfig(query: BatchSetEdgeInstanceDeviceConfigRequest): Promise<BatchSetEdgeInstanceDeviceConfigResponse>;
+    CreateDataAPIService(query: CreateDataAPIServiceRequest): Promise<CreateDataAPIServiceResponse>;
+    CreateLoRaNodesTask(query: CreateLoRaNodesTaskRequest): Promise<CreateLoRaNodesTaskResponse>;
+    CreateProductTags(query: CreateProductTagsRequest): Promise<CreateProductTagsResponse>;
+    ListProductByTags(query: ListProductByTagsRequest): Promise<ListProductByTagsResponse>;
+    QueryDeviceDetail(query: QueryDeviceDetailRequest): Promise<QueryDeviceDetailResponse>;
+    QueryDeviceEventData(query: QueryDeviceEventDataRequest): Promise<QueryDeviceEventDataResponse>;
+    QueryDeviceStatistics(query: QueryDeviceStatisticsRequest): Promise<QueryDeviceStatisticsResponse>;
+    QueryPageByApplyId(query: QueryPageByApplyIdRequest): Promise<QueryPageByApplyIdResponse>;
+    SetEdgeInstanceDriverConfigs(query: SetEdgeInstanceDriverConfigsRequest): Promise<SetEdgeInstanceDriverConfigsResponse>;
+    CreateRule(query: CreateRuleRequest): Promise<CreateRuleResponse>;
+    DeleteDeviceFile(query: DeleteDeviceFileRequest): Promise<DeleteDeviceFileResponse>;
+    DeleteDeviceProp(query: DeleteDevicePropRequest): Promise<DeleteDevicePropResponse>;
+    DeleteEdgeInstance(query: DeleteEdgeInstanceRequest): Promise<DeleteEdgeInstanceResponse>;
+    DeleteProduct(query: DeleteProductRequest): Promise<DeleteProductResponse>;
+    DeleteProductTopic(query: DeleteProductTopicRequest): Promise<DeleteProductTopicResponse>;
+    DeleteRule(query: DeleteRuleRequest): Promise<DeleteRuleResponse>;
+    DeleteRuleAction(query: DeleteRuleActionRequest): Promise<DeleteRuleActionResponse>;
+    DisableThing(query: DisableThingRequest): Promise<DisableThingResponse>;
+    EnableThing(query: EnableThingRequest): Promise<EnableThingResponse>;
+    GetDataAPIServiceDetail(query: GetDataAPIServiceDetailRequest): Promise<GetDataAPIServiceDetailResponse>;
+    GetDeviceShadow(query: GetDeviceShadowRequest): Promise<GetDeviceShadowResponse>;
+    GetDeviceStatus(query: GetDeviceStatusRequest): Promise<GetDeviceStatusResponse>;
+    GetEdgeInstance(query: GetEdgeInstanceRequest): Promise<GetEdgeInstanceResponse>;
+    GetEdgeInstanceDeployment(query: GetEdgeInstanceDeploymentRequest): Promise<GetEdgeInstanceDeploymentResponse>;
+    GetGatewayBySubDevice(query: GetGatewayBySubDeviceRequest): Promise<GetGatewayBySubDeviceResponse>;
+    GetLoraNodesTask(query: GetLoraNodesTaskRequest): Promise<GetLoraNodesTaskResponse>;
+    GetNodesAddingTask(query: GetNodesAddingTaskRequest): Promise<GetNodesAddingTaskResponse>;
+    GetRule(query: GetRuleRequest): Promise<GetRuleResponse>;
+    GetRuleAction(query: GetRuleActionRequest): Promise<GetRuleActionResponse>;
+    GetThingTopo(query: GetThingTopoRequest): Promise<GetThingTopoResponse>;
+    InvokeDataAPIService(query: InvokeDataAPIServiceRequest): Promise<InvokeDataAPIServiceResponse>;
+    InvokeThingService(query: InvokeThingServiceRequest): Promise<InvokeThingServiceResponse>;
+    InvokeThingsService(query: InvokeThingsServiceRequest): Promise<InvokeThingsServiceResponse>;
+    ListProductTags(query: ListProductTagsRequest): Promise<ListProductTagsResponse>;
+    ListRule(query: ListRuleRequest): Promise<ListRuleResponse>;
+    ListRuleActions(query: ListRuleActionsRequest): Promise<ListRuleActionsResponse>;
+    NotifyAddThingTopo(query: NotifyAddThingTopoRequest): Promise<NotifyAddThingTopoResponse>;
+    Pub(query: PubRequest): Promise<PubResponse>;
+    PubBroadcast(query: PubBroadcastRequest): Promise<PubBroadcastResponse>;
+    QueryAppDeviceList(query: QueryAppDeviceListRequest): Promise<QueryAppDeviceListResponse>;
+    QueryBatchRegisterDeviceStatus(query: QueryBatchRegisterDeviceStatusRequest): Promise<QueryBatchRegisterDeviceStatusResponse>;
+    QueryDevice(query: QueryDeviceRequest): Promise<QueryDeviceResponse>;
+    QueryDeviceByDriver(query: QueryDeviceByDriverRequest): Promise<QueryDeviceByDriverResponse>;
+    QueryDeviceByTags(query: QueryDeviceByTagsRequest): Promise<QueryDeviceByTagsResponse>;
+    QueryDeviceDesiredProperty(query: QueryDeviceDesiredPropertyRequest): Promise<QueryDeviceDesiredPropertyResponse>;
+    QueryDeviceFile(query: QueryDeviceFileRequest): Promise<QueryDeviceFileResponse>;
+    QueryDeviceFileList(query: QueryDeviceFileListRequest): Promise<QueryDeviceFileListResponse>;
+    QueryDeviceGroupByDevice(query: QueryDeviceGroupByDeviceRequest): Promise<QueryDeviceGroupByDeviceResponse>;
+    QueryDeviceGroupByTags(query: QueryDeviceGroupByTagsRequest): Promise<QueryDeviceGroupByTagsResponse>;
+    QueryDeviceGroupInfo(query: QueryDeviceGroupInfoRequest): Promise<QueryDeviceGroupInfoResponse>;
+    QueryDeviceGroupList(query: QueryDeviceGroupListRequest): Promise<QueryDeviceGroupListResponse>;
+    QueryDeviceGroupTagList(query: QueryDeviceGroupTagListRequest): Promise<QueryDeviceGroupTagListResponse>;
+    QueryDeviceListByDeviceGroup(query: QueryDeviceListByDeviceGroupRequest): Promise<QueryDeviceListByDeviceGroupResponse>;
+    QueryDeviceProp(query: QueryDevicePropRequest): Promise<QueryDevicePropResponse>;
+    QueryDevicePropertiesData(query: QueryDevicePropertiesDataRequest): Promise<QueryDevicePropertiesDataResponse>;
+    QueryDevicePropertyData(query: QueryDevicePropertyDataRequest): Promise<QueryDevicePropertyDataResponse>;
+    QueryDevicePropertyStatus(query: QueryDevicePropertyStatusRequest): Promise<QueryDevicePropertyStatusResponse>;
+    QueryDeviceServiceData(query: QueryDeviceServiceDataRequest): Promise<QueryDeviceServiceDataResponse>;
+    QueryEdgeInstance(query: QueryEdgeInstanceRequest): Promise<QueryEdgeInstanceResponse>;
+    QueryEdgeInstanceDevice(query: QueryEdgeInstanceDeviceRequest): Promise<QueryEdgeInstanceDeviceResponse>;
+    QueryEdgeInstanceDriver(query: QueryEdgeInstanceDriverRequest): Promise<QueryEdgeInstanceDriverResponse>;
+    QueryEdgeInstanceGateway(query: QueryEdgeInstanceGatewayRequest): Promise<QueryEdgeInstanceGatewayResponse>;
+    QueryEdgeInstanceHistoricDeployment(query: QueryEdgeInstanceHistoricDeploymentRequest): Promise<QueryEdgeInstanceHistoricDeploymentResponse>;
+    QueryLoRaJoinPermissions(query: QueryLoRaJoinPermissionsRequest): Promise<QueryLoRaJoinPermissionsResponse>;
+    QueryProduct(query: QueryProductRequest): Promise<QueryProductResponse>;
+    QueryProductList(query: QueryProductListRequest): Promise<QueryProductListResponse>;
+    QueryProductTopic(query: QueryProductTopicRequest): Promise<QueryProductTopicResponse>;
+    QuerySuperDeviceGroup(query: QuerySuperDeviceGroupRequest): Promise<QuerySuperDeviceGroupResponse>;
+    QueryTopicReverseRouteTable(query: QueryTopicReverseRouteTableRequest): Promise<QueryTopicReverseRouteTableResponse>;
+    QueryTopicRouteTable(query: QueryTopicRouteTableRequest): Promise<QueryTopicRouteTableResponse>;
+    RRpc(query: RRpcRequest): Promise<RRpcResponse>;
+    RegisterDevice(query: RegisterDeviceRequest): Promise<RegisterDeviceResponse>;
+    RemoveThingTopo(query: RemoveThingTopoRequest): Promise<RemoveThingTopoResponse>;
+    SaveDeviceProp(query: SaveDevicePropRequest): Promise<SaveDevicePropResponse>;
+    SetDeviceDesiredProperty(query: SetDeviceDesiredPropertyRequest): Promise<SetDeviceDesiredPropertyResponse>;
+    SetDeviceGroupTags(query: SetDeviceGroupTagsRequest): Promise<SetDeviceGroupTagsResponse>;
+    SetDeviceProperty(query: SetDevicePropertyRequest): Promise<SetDevicePropertyResponse>;
+    SetDevicesProperty(query: SetDevicesPropertyRequest): Promise<SetDevicesPropertyResponse>;
+    StartRule(query: StartRuleRequest): Promise<StartRuleResponse>;
+    StopRule(query: StopRuleRequest): Promise<StopRuleResponse>;
+    UnbindDriverFromEdgeInstance(query: UnbindDriverFromEdgeInstanceRequest): Promise<UnbindDriverFromEdgeInstanceResponse>;
+    UpdateDeviceGroup(query: UpdateDeviceGroupRequest): Promise<UpdateDeviceGroupResponse>;
+    UpdateDeviceShadow(query: UpdateDeviceShadowRequest): Promise<UpdateDeviceShadowResponse>;
+    UpdateEdgeInstance(query: UpdateEdgeInstanceRequest): Promise<UpdateEdgeInstanceResponse>;
+    UpdateProduct(query: UpdateProductRequest): Promise<UpdateProductResponse>;
+    UpdateProductTags(query: UpdateProductTagsRequest): Promise<UpdateProductTagsResponse>;
+    UpdateProductTopic(query: UpdateProductTopicRequest): Promise<UpdateProductTopicResponse>;
+    UpdateRule(query: UpdateRuleRequest): Promise<UpdateRuleResponse>;
+    UpdateRuleAction(query: UpdateRuleActionRequest): Promise<UpdateRuleActionResponse>;
 }
 export default IOT;

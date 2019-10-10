@@ -1,0 +1,3 @@
+interface ListGatewayOnlineRecordsResponse {
+}
+export { ListGatewayOnlineRecordsResponse };

@@ -1,0 +1,3 @@
+interface UploadCcRouteFileForParseResponse {
+}
+export { UploadCcRouteFileForParseResponse };

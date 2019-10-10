@@ -1,0 +1,3 @@
+interface CreateInstanceResponse {
+}
+export { CreateInstanceResponse };

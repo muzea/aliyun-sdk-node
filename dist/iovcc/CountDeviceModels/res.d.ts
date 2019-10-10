@@ -1,0 +1,3 @@
+interface CountDeviceModelsResponse {
+}
+export { CountDeviceModelsResponse };

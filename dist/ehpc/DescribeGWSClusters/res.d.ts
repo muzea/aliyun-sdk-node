@@ -1,0 +1,3 @@
+interface DescribeGWSClustersResponse {
+}
+export { DescribeGWSClustersResponse };

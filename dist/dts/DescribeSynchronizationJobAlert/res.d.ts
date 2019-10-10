@@ -1,0 +1,3 @@
+interface DescribeSynchronizationJobAlertResponse {
+}
+export { DescribeSynchronizationJobAlertResponse };

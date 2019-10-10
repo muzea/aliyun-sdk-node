@@ -1,0 +1,3 @@
+interface UnbindVbrResponse {
+}
+export { UnbindVbrResponse };

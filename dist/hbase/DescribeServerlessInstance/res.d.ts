@@ -1,0 +1,3 @@
+interface DescribeServerlessInstanceResponse {
+}
+export { DescribeServerlessInstanceResponse };

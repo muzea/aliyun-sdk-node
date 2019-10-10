@@ -1,0 +1,3 @@
+interface DescribeRequestStatisticCountByEsnBiz30MResponse {
+}
+export { DescribeRequestStatisticCountByEsnBiz30MResponse };

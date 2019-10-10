@@ -1,0 +1,3 @@
+interface UpdateGatewayEnablingStateResponse {
+}
+export { UpdateGatewayEnablingStateResponse };

@@ -1,0 +1,3 @@
+interface ModifyQosPolicyResponse {
+}
+export { ModifyQosPolicyResponse };

@@ -1,0 +1,3 @@
+interface DoIotServiceStatusControlResponse {
+}
+export { DoIotServiceStatusControlResponse };

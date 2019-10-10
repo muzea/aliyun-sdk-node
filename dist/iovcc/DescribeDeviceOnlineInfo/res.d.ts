@@ -1,0 +1,3 @@
+interface DescribeDeviceOnlineInfoResponse {
+}
+export { DescribeDeviceOnlineInfoResponse };

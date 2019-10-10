@@ -1,0 +1,3 @@
+interface SearchWorkitemWithTotalCountResponse {
+}
+export { SearchWorkitemWithTotalCountResponse };

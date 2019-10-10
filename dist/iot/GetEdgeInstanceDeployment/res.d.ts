@@ -1,0 +1,3 @@
+interface GetEdgeInstanceDeploymentResponse {
+}
+export { GetEdgeInstanceDeploymentResponse };

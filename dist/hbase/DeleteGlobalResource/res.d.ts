@@ -1,0 +1,3 @@
+interface DeleteGlobalResourceResponse {
+}
+export { DeleteGlobalResourceResponse };

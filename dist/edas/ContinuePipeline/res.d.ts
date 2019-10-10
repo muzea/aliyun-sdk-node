@@ -1,0 +1,3 @@
+interface ContinuePipelineResponse {
+}
+export { ContinuePipelineResponse };

@@ -1,0 +1,3 @@
+interface RegisterUserResponse {
+}
+export { RegisterUserResponse };

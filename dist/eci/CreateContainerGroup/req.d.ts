@@ -1,0 +1,32 @@
+interface CreateContainerGroupRequest {
+    "RegionId": string;
+    "SecurityGroupId": string;
+    "VSwitchId": string;
+    "ContainerGroupName": string;
+    "Container": string[];
+    "OwnerId"?: number;
+    "ZoneId"?: string;
+    "RestartPolicy"?: string;
+    "Tag"?: string[];
+    "ImageRegistryCredential"?: string[];
+    "Volume"?: string[];
+    "EipInstanceId"?: string;
+    "InitContainer"?: string[];
+    "DnsConfig.NameServer"?: string[];
+    "DnsConfig.Search"?: string[];
+    "DnsConfig.Option"?: string[];
+    "Cpu"?: number;
+    "Memory"?: number;
+    "ResourceGroupId"?: string;
+    "DnsPolicy"?: string;
+    "ClientToken"?: string;
+    "HostAliase"?: string[];
+    "Arn"?: string[];
+    "InstanceType"?: string;
+    "SecurityContext.Sysctl"?: string[];
+    "SlsEnable"?: boolean;
+    "ImageSnapshotId"?: string;
+    "RamRoleName"?: string;
+    "NtpServer"?: string[];
+}
+export { CreateContainerGroupRequest };

@@ -1,0 +1,3 @@
+interface DoIotRechargeResponse {
+}
+export { DoIotRechargeResponse };

@@ -1,0 +1,3 @@
+interface CreateUpstreamAppServerResponse {
+}
+export { CreateUpstreamAppServerResponse };

@@ -1,0 +1,3 @@
+interface CloneParameterGroupResponse {
+}
+export { CloneParameterGroupResponse };

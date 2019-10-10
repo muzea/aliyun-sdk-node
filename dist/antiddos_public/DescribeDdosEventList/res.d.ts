@@ -1,0 +1,3 @@
+interface DescribeDdosEventListResponse {
+}
+export { DescribeDdosEventListResponse };

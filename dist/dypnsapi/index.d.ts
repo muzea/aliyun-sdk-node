@@ -1,32 +1,16 @@
+import { CreateVerifySchemeRequest } from "./CreateVerifyScheme/req";
+import { CreateVerifySchemeResponse } from "./CreateVerifyScheme/res";
+import { GetMobileRequest } from "./GetMobile/req";
+import { GetMobileResponse } from "./GetMobile/res";
+import { TwiceTelVerifyRequest } from "./TwiceTelVerify/req";
+import { TwiceTelVerifyResponse } from "./TwiceTelVerify/res";
+import { VerifyMobileRequest } from "./VerifyMobile/req";
+import { VerifyMobileResponse } from "./VerifyMobile/res";
+
 interface DYPNSAPI {
-    CreateVerifyScheme(query: {
-        "RegionId"?: string;
-        "SchemeName": string;
-        "AppName": string;
-        "OsType": string;
-        "OwnerId"?: number;
-        "PackName"?: string;
-        "PackSign"?: string;
-        "BundleId"?: string;
-    }): Promise<{}>;
-    GetMobile(query: {
-        "RegionId"?: string;
-        "AccessToken": string;
-        "OwnerId"?: number;
-        "OutId"?: string;
-    }): Promise<{}>;
-    TwiceTelVerify(query: {
-        "RegionId"?: string;
-        "Since": string;
-        "PhoneNumber": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    VerifyMobile(query: {
-        "RegionId"?: string;
-        "AccessCode": string;
-        "PhoneNumber": string;
-        "OwnerId"?: number;
-        "OutId"?: string;
-    }): Promise<{}>;
+    CreateVerifyScheme(query: CreateVerifySchemeRequest): Promise<CreateVerifySchemeResponse>;
+    GetMobile(query: GetMobileRequest): Promise<GetMobileResponse>;
+    TwiceTelVerify(query: TwiceTelVerifyRequest): Promise<TwiceTelVerifyResponse>;
+    VerifyMobile(query: VerifyMobileRequest): Promise<VerifyMobileResponse>;
 }
 export default DYPNSAPI;

@@ -1,0 +1,3 @@
+interface ModifyAclRuleResponse {
+}
+export { ModifyAclRuleResponse };

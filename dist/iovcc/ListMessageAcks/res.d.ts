@@ -1,0 +1,3 @@
+interface ListMessageAcksResponse {
+}
+export { ListMessageAcksResponse };

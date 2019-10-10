@@ -1,0 +1,3 @@
+interface GetFluencyDataResponse {
+}
+export { GetFluencyDataResponse };

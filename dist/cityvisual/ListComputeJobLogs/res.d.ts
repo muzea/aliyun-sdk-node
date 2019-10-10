@@ -1,0 +1,3 @@
+interface ListComputeJobLogsResponse {
+}
+export { ListComputeJobLogsResponse };

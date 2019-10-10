@@ -1,0 +1,3 @@
+interface PutBucketACLResponse {
+}
+export { PutBucketACLResponse };

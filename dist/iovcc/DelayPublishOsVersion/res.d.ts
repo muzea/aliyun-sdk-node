@@ -1,0 +1,3 @@
+interface DelayPublishOsVersionResponse {
+}
+export { DelayPublishOsVersionResponse };

@@ -1,0 +1,3 @@
+interface DeleteAccountResponse {
+}
+export { DeleteAccountResponse };

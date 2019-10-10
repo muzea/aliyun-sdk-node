@@ -1,0 +1,3 @@
+interface UpdateAppVersionReleaseNoteResponse {
+}
+export { UpdateAppVersionReleaseNoteResponse };

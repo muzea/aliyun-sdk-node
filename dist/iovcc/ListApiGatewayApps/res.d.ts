@@ -1,0 +1,3 @@
+interface ListApiGatewayAppsResponse {
+}
+export { ListApiGatewayAppsResponse };

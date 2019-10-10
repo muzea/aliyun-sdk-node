@@ -1,0 +1,3 @@
+interface BatchGetEdgeInstanceDeviceConfigResponse {
+}
+export { BatchGetEdgeInstanceDeviceConfigResponse };

@@ -1,0 +1,3 @@
+interface BindDriverToEdgeInstanceResponse {
+}
+export { BindDriverToEdgeInstanceResponse };

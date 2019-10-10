@@ -1,0 +1,3 @@
+interface FindPrepublishesByVersionIdResponse {
+}
+export { FindPrepublishesByVersionIdResponse };

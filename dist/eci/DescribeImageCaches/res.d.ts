@@ -1,0 +1,3 @@
+interface DescribeImageCachesResponse {
+}
+export { DescribeImageCachesResponse };

@@ -1,0 +1,3 @@
+interface UploadCcWhiteBlackListResponse {
+}
+export { UploadCcWhiteBlackListResponse };

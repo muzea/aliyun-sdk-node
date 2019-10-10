@@ -1,0 +1,3 @@
+interface DeleteVsStreamsNotifyUrlConfigResponse {
+}
+export { DeleteVsStreamsNotifyUrlConfigResponse };

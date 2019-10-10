@@ -1,0 +1,3 @@
+interface ListVersionDeviceGroupsResponse {
+}
+export { ListVersionDeviceGroupsResponse };

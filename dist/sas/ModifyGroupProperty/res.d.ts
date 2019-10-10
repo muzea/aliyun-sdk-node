@@ -1,0 +1,3 @@
+interface ModifyGroupPropertyResponse {
+}
+export { ModifyGroupPropertyResponse };

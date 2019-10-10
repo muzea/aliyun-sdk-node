@@ -1,0 +1,34 @@
+interface CreateHybridClusterRequest {
+    "RegionId": string;
+    "Name": string;
+    "OsTag": string;
+    "VpcId": string;
+    "VSwitchId": string;
+    "EcsOrder.Compute.InstanceType": string;
+    "ZoneId"?: string;
+    "Description"?: string;
+    "EhpcVersion"?: string;
+    "ClientVersion"?: string;
+    "Domain"?: string;
+    "Nodes"?: string[];
+    "Location"?: string;
+    "SecurityGroupId"?: string;
+    "SecurityGroupName"?: string;
+    "VolumeType"?: string;
+    "VolumeId"?: string;
+    "VolumeProtocol"?: string;
+    "VolumeMountpoint"?: string;
+    "RemoteDirectory"?: string;
+    "OnPremiseVolumeProtocol"?: string;
+    "OnPremiseVolumeMountPoint"?: string;
+    "OnPremiseVolumeRemotePath"?: string;
+    "OnPremiseVolumeLocalPath"?: string;
+    "Password"?: string;
+    "KeyPairName"?: string;
+    "Application"?: string[];
+    "PostInstallScript"?: string[];
+    "JobQueue"?: string;
+    "ResourceGroupId"?: string;
+    "SchedulerPreInstall"?: boolean;
+}
+export { CreateHybridClusterRequest };

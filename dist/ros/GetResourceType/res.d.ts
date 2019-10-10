@@ -1,0 +1,3 @@
+interface GetResourceTypeResponse {
+}
+export { GetResourceTypeResponse };

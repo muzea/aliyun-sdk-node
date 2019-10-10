@@ -1,734 +1,319 @@
+import { AddContainerAppRequest } from "./AddContainerApp/req";
+import { AddContainerAppResponse } from "./AddContainerApp/res";
+import { AddLocalNodesRequest } from "./AddLocalNodes/req";
+import { AddLocalNodesResponse } from "./AddLocalNodes/res";
+import { AddNodesRequest } from "./AddNodes/req";
+import { AddNodesResponse } from "./AddNodes/res";
+import { AddQueueRequest } from "./AddQueue/req";
+import { AddQueueResponse } from "./AddQueue/res";
+import { AddUsersRequest } from "./AddUsers/req";
+import { AddUsersResponse } from "./AddUsers/res";
+import { CreateClusterRequest } from "./CreateCluster/req";
+import { CreateClusterResponse } from "./CreateCluster/res";
+import { CreateHybridClusterRequest } from "./CreateHybridCluster/req";
+import { CreateHybridClusterResponse } from "./CreateHybridCluster/res";
+import { CreateJobFileRequest } from "./CreateJobFile/req";
+import { CreateJobFileResponse } from "./CreateJobFile/res";
+import { CreateJobTemplateRequest } from "./CreateJobTemplate/req";
+import { CreateJobTemplateResponse } from "./CreateJobTemplate/res";
+import { DeleteClusterRequest } from "./DeleteCluster/req";
+import { DeleteClusterResponse } from "./DeleteCluster/res";
+import { DeleteContainerAppsRequest } from "./DeleteContainerApps/req";
+import { DeleteContainerAppsResponse } from "./DeleteContainerApps/res";
+import { DeleteImageRequest } from "./DeleteImage/req";
+import { DeleteImageResponse } from "./DeleteImage/res";
+import { DeleteJobTemplatesRequest } from "./DeleteJobTemplates/req";
+import { DeleteJobTemplatesResponse } from "./DeleteJobTemplates/res";
+import { DeleteJobsRequest } from "./DeleteJobs/req";
+import { DeleteJobsResponse } from "./DeleteJobs/res";
+import { DeleteNodesRequest } from "./DeleteNodes/req";
+import { DeleteNodesResponse } from "./DeleteNodes/res";
+import { DeleteQueueRequest } from "./DeleteQueue/req";
+import { DeleteQueueResponse } from "./DeleteQueue/res";
+import { DeleteUsersRequest } from "./DeleteUsers/req";
+import { DeleteUsersResponse } from "./DeleteUsers/res";
+import { DescribeAutoScaleConfigRequest } from "./DescribeAutoScaleConfig/req";
+import { DescribeAutoScaleConfigResponse } from "./DescribeAutoScaleConfig/res";
+import { DescribeClusterRequest } from "./DescribeCluster/req";
+import { DescribeClusterResponse } from "./DescribeCluster/res";
+import { DescribeContainerAppRequest } from "./DescribeContainerApp/req";
+import { DescribeContainerAppResponse } from "./DescribeContainerApp/res";
+import { DescribeImageRequest } from "./DescribeImage/req";
+import { DescribeImageResponse } from "./DescribeImage/res";
+import { DescribeImageGatewayConfigRequest } from "./DescribeImageGatewayConfig/req";
+import { DescribeImageGatewayConfigResponse } from "./DescribeImageGatewayConfig/res";
+import { DescribeImagePriceRequest } from "./DescribeImagePrice/req";
+import { DescribeImagePriceResponse } from "./DescribeImagePrice/res";
+import { DescribeJobRequest } from "./DescribeJob/req";
+import { DescribeJobResponse } from "./DescribeJob/res";
+import { DescribePriceRequest } from "./DescribePrice/req";
+import { DescribePriceResponse } from "./DescribePrice/res";
+import { EditJobTemplateRequest } from "./EditJobTemplate/req";
+import { EditJobTemplateResponse } from "./EditJobTemplate/res";
+import { GetAccountingReportRequest } from "./GetAccountingReport/req";
+import { GetAccountingReportResponse } from "./GetAccountingReport/res";
+import { GetAutoScaleConfigRequest } from "./GetAutoScaleConfig/req";
+import { GetAutoScaleConfigResponse } from "./GetAutoScaleConfig/res";
+import { GetCloudMetricLogsRequest } from "./GetCloudMetricLogs/req";
+import { GetCloudMetricLogsResponse } from "./GetCloudMetricLogs/res";
+import { GetCloudMetricProfilingRequest } from "./GetCloudMetricProfiling/req";
+import { GetCloudMetricProfilingResponse } from "./GetCloudMetricProfiling/res";
+import { GetClusterVolumesRequest } from "./GetClusterVolumes/req";
+import { GetClusterVolumesResponse } from "./GetClusterVolumes/res";
+import { GetHybridClusterConfigRequest } from "./GetHybridClusterConfig/req";
+import { GetHybridClusterConfigResponse } from "./GetHybridClusterConfig/res";
+import { GetVisualServiceStatusRequest } from "./GetVisualServiceStatus/req";
+import { GetVisualServiceStatusResponse } from "./GetVisualServiceStatus/res";
+import { InstallSoftwareRequest } from "./InstallSoftware/req";
+import { InstallSoftwareResponse } from "./InstallSoftware/res";
+import { InvokeShellCommandRequest } from "./InvokeShellCommand/req";
+import { InvokeShellCommandResponse } from "./InvokeShellCommand/res";
+import { ListAvailableEcsTypesRequest } from "./ListAvailableEcsTypes/req";
+import { ListAvailableEcsTypesResponse } from "./ListAvailableEcsTypes/res";
+import { ListAvailableFileSystemTypesRequest } from "./ListAvailableFileSystemTypes/req";
+import { ListAvailableFileSystemTypesResponse } from "./ListAvailableFileSystemTypes/res";
+import { ListCloudMetricProfilingsRequest } from "./ListCloudMetricProfilings/req";
+import { ListCloudMetricProfilingsResponse } from "./ListCloudMetricProfilings/res";
+import { ListClusterLogsRequest } from "./ListClusterLogs/req";
+import { ListClusterLogsResponse } from "./ListClusterLogs/res";
+import { ListClustersRequest } from "./ListClusters/req";
+import { ListClustersResponse } from "./ListClusters/res";
+import { ListClustersMetaRequest } from "./ListClustersMeta/req";
+import { ListClustersMetaResponse } from "./ListClustersMeta/res";
+import { ListCommandsRequest } from "./ListCommands/req";
+import { ListCommandsResponse } from "./ListCommands/res";
+import { ListContainerAppsRequest } from "./ListContainerApps/req";
+import { ListContainerAppsResponse } from "./ListContainerApps/res";
+import { ListContainerImagesRequest } from "./ListContainerImages/req";
+import { ListContainerImagesResponse } from "./ListContainerImages/res";
+import { ListCpfsFileSystemsRequest } from "./ListCpfsFileSystems/req";
+import { ListCpfsFileSystemsResponse } from "./ListCpfsFileSystems/res";
+import { ListCurrentClientVersionRequest } from "./ListCurrentClientVersion/req";
+import { ListCurrentClientVersionResponse } from "./ListCurrentClientVersion/res";
+import { ListCustomImagesRequest } from "./ListCustomImages/req";
+import { ListCustomImagesResponse } from "./ListCustomImages/res";
+import { ListFileSystemWithMountTargetsRequest } from "./ListFileSystemWithMountTargets/req";
+import { ListFileSystemWithMountTargetsResponse } from "./ListFileSystemWithMountTargets/res";
+import { ListImagesRequest } from "./ListImages/req";
+import { ListImagesResponse } from "./ListImages/res";
+import { ListInstalledSoftwareRequest } from "./ListInstalledSoftware/req";
+import { ListInstalledSoftwareResponse } from "./ListInstalledSoftware/res";
+import { ListInvocationResultsRequest } from "./ListInvocationResults/req";
+import { ListInvocationResultsResponse } from "./ListInvocationResults/res";
+import { ListInvocationStatusRequest } from "./ListInvocationStatus/req";
+import { ListInvocationStatusResponse } from "./ListInvocationStatus/res";
+import { ListJobTemplatesRequest } from "./ListJobTemplates/req";
+import { ListJobTemplatesResponse } from "./ListJobTemplates/res";
+import { ListJobsRequest } from "./ListJobs/req";
+import { ListJobsResponse } from "./ListJobs/res";
+import { ListNodesRequest } from "./ListNodes/req";
+import { ListNodesResponse } from "./ListNodes/res";
+import { ListNodesByQueueRequest } from "./ListNodesByQueue/req";
+import { ListNodesByQueueResponse } from "./ListNodesByQueue/res";
+import { ListNodesNoPagingRequest } from "./ListNodesNoPaging/req";
+import { ListNodesNoPagingResponse } from "./ListNodesNoPaging/res";
+import { ListPreferredEcsTypesRequest } from "./ListPreferredEcsTypes/req";
+import { ListPreferredEcsTypesResponse } from "./ListPreferredEcsTypes/res";
+import { ListQueuesRequest } from "./ListQueues/req";
+import { ListQueuesResponse } from "./ListQueues/res";
+import { ListRegionsRequest } from "./ListRegions/req";
+import { ListRegionsResponse } from "./ListRegions/res";
+import { ListSoftwaresRequest } from "./ListSoftwares/req";
+import { ListSoftwaresResponse } from "./ListSoftwares/res";
+import { ListUsersRequest } from "./ListUsers/req";
+import { ListUsersResponse } from "./ListUsers/res";
+import { ListVolumesRequest } from "./ListVolumes/req";
+import { ListVolumesResponse } from "./ListVolumes/res";
+import { ModifyClusterAttributesRequest } from "./ModifyClusterAttributes/req";
+import { ModifyClusterAttributesResponse } from "./ModifyClusterAttributes/res";
+import { ModifyContainerAppAttributesRequest } from "./ModifyContainerAppAttributes/req";
+import { ModifyContainerAppAttributesResponse } from "./ModifyContainerAppAttributes/res";
+import { ModifyImageGatewayConfigRequest } from "./ModifyImageGatewayConfig/req";
+import { ModifyImageGatewayConfigResponse } from "./ModifyImageGatewayConfig/res";
+import { ModifyUserGroupsRequest } from "./ModifyUserGroups/req";
+import { ModifyUserGroupsResponse } from "./ModifyUserGroups/res";
+import { ModifyUserPasswordsRequest } from "./ModifyUserPasswords/req";
+import { ModifyUserPasswordsResponse } from "./ModifyUserPasswords/res";
+import { ModifyVisualServicePasswdRequest } from "./ModifyVisualServicePasswd/req";
+import { ModifyVisualServicePasswdResponse } from "./ModifyVisualServicePasswd/res";
+import { PullImageRequest } from "./PullImage/req";
+import { PullImageResponse } from "./PullImage/res";
+import { RecoverClusterRequest } from "./RecoverCluster/req";
+import { RecoverClusterResponse } from "./RecoverCluster/res";
+import { RerunJobsRequest } from "./RerunJobs/req";
+import { RerunJobsResponse } from "./RerunJobs/res";
+import { ResetNodesRequest } from "./ResetNodes/req";
+import { ResetNodesResponse } from "./ResetNodes/res";
+import { RunCloudMetricProfilingRequest } from "./RunCloudMetricProfiling/req";
+import { RunCloudMetricProfilingResponse } from "./RunCloudMetricProfiling/res";
+import { SetAutoScaleConfigRequest } from "./SetAutoScaleConfig/req";
+import { SetAutoScaleConfigResponse } from "./SetAutoScaleConfig/res";
+import { SetJobUserRequest } from "./SetJobUser/req";
+import { SetJobUserResponse } from "./SetJobUser/res";
+import { SetQueueRequest } from "./SetQueue/req";
+import { SetQueueResponse } from "./SetQueue/res";
+import { StartClusterRequest } from "./StartCluster/req";
+import { StartClusterResponse } from "./StartCluster/res";
+import { StartNodesRequest } from "./StartNodes/req";
+import { StartNodesResponse } from "./StartNodes/res";
+import { StartVisualServiceRequest } from "./StartVisualService/req";
+import { StartVisualServiceResponse } from "./StartVisualService/res";
+import { StopClusterRequest } from "./StopCluster/req";
+import { StopClusterResponse } from "./StopCluster/res";
+import { StopJobsRequest } from "./StopJobs/req";
+import { StopJobsResponse } from "./StopJobs/res";
+import { StopNodesRequest } from "./StopNodes/req";
+import { StopNodesResponse } from "./StopNodes/res";
+import { StopVisualServiceRequest } from "./StopVisualService/req";
+import { StopVisualServiceResponse } from "./StopVisualService/res";
+import { SubmitJobRequest } from "./SubmitJob/req";
+import { SubmitJobResponse } from "./SubmitJob/res";
+import { UninstallSoftwareRequest } from "./UninstallSoftware/req";
+import { UninstallSoftwareResponse } from "./UninstallSoftware/res";
+import { UpdateClusterVolumesRequest } from "./UpdateClusterVolumes/req";
+import { UpdateClusterVolumesResponse } from "./UpdateClusterVolumes/res";
+import { UpgradeClientRequest } from "./UpgradeClient/req";
+import { UpgradeClientResponse } from "./UpgradeClient/res";
+import { QueryServicePackAndPriceRequest } from "./QueryServicePackAndPrice/req";
+import { QueryServicePackAndPriceResponse } from "./QueryServicePackAndPrice/res";
+import { CreateGWSClusterRequest } from "./CreateGWSCluster/req";
+import { CreateGWSClusterResponse } from "./CreateGWSCluster/res";
+import { CreateGWSImageRequest } from "./CreateGWSImage/req";
+import { CreateGWSImageResponse } from "./CreateGWSImage/res";
+import { CreateGWSInstanceRequest } from "./CreateGWSInstance/req";
+import { CreateGWSInstanceResponse } from "./CreateGWSInstance/res";
+import { DeleteGWSClusterRequest } from "./DeleteGWSCluster/req";
+import { DeleteGWSClusterResponse } from "./DeleteGWSCluster/res";
+import { DeleteGWSInstanceRequest } from "./DeleteGWSInstance/req";
+import { DeleteGWSInstanceResponse } from "./DeleteGWSInstance/res";
+import { DescribeGWSClustersRequest } from "./DescribeGWSClusters/req";
+import { DescribeGWSClustersResponse } from "./DescribeGWSClusters/res";
+import { DescribeGWSImagesRequest } from "./DescribeGWSImages/req";
+import { DescribeGWSImagesResponse } from "./DescribeGWSImages/res";
+import { DescribeGWSInstancesRequest } from "./DescribeGWSInstances/req";
+import { DescribeGWSInstancesResponse } from "./DescribeGWSInstances/res";
+import { GetGWSConnectTicketRequest } from "./GetGWSConnectTicket/req";
+import { GetGWSConnectTicketResponse } from "./GetGWSConnectTicket/res";
+import { StartGWSInstanceRequest } from "./StartGWSInstance/req";
+import { StartGWSInstanceResponse } from "./StartGWSInstance/res";
+import { StopGWSInstanceRequest } from "./StopGWSInstance/req";
+import { StopGWSInstanceResponse } from "./StopGWSInstance/res";
+import { DescribeNFSClientStatusRequest } from "./DescribeNFSClientStatus/req";
+import { DescribeNFSClientStatusResponse } from "./DescribeNFSClientStatus/res";
+import { InstallNFSClientRequest } from "./InstallNFSClient/req";
+import { InstallNFSClientResponse } from "./InstallNFSClient/res";
+import { MountNFSRequest } from "./MountNFS/req";
+import { MountNFSResponse } from "./MountNFS/res";
+import { UpdateQueueConfigRequest } from "./UpdateQueueConfig/req";
+import { UpdateQueueConfigResponse } from "./UpdateQueueConfig/res";
+import { SetGWSInstanceUserRequest } from "./SetGWSInstanceUser/req";
+import { SetGWSInstanceUserResponse } from "./SetGWSInstanceUser/res";
+
 interface EHPC {
-    AddContainerApp(query: {
-        "RegionId": string;
-        "Name": string;
-        "Repository": string;
-        "Description"?: string;
-        "ImageTag"?: string;
-        "ContainerType"?: string;
-    }): Promise<{}>;
-    AddLocalNodes(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "Nodes": string;
-    }): Promise<{}>;
-    AddNodes(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "Count": number;
-        "ImageOwnerAlias"?: string;
-        "ImageId"?: string;
-        "InstanceType"?: string;
-        "ComputeSpotStrategy"?: string;
-        "ComputeSpotPriceLimit"?: string;
-        "EcsChargeType"?: string;
-        "Period"?: number;
-        "PeriodUnit"?: string;
-        "AutoRenew"?: string;
-        "AutoRenewPeriod"?: number;
-        "JobQueue"?: string;
-        "CreateMode"?: string;
-        "SystemDiskType"?: string;
-        "SystemDiskSize"?: number;
-        "ZoneId"?: string;
-        "VSwitchId"?: string;
-    }): Promise<{}>;
-    AddQueue(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "QueueName": string;
-    }): Promise<{}>;
-    AddUsers(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "User": string[];
-    }): Promise<{}>;
-    CreateCluster(query: {
-        "RegionId": string;
-        "Name": string;
-        "OsTag": string;
-        "EcsOrder.Manager.InstanceType": string;
-        "EcsOrder.Compute.Count": number;
-        "EcsOrder.Compute.InstanceType": string;
-        "EcsOrder.Login.Count": number;
-        "EcsOrder.Login.InstanceType": string;
-        "ZoneId"?: string;
-        "Description"?: string;
-        "EhpcVersion"?: string;
-        "ClientVersion"?: string;
-        "AccountType"?: string;
-        "SchedulerType"?: string;
-        "SecurityGroupId"?: string;
-        "SecurityGroupName"?: string;
-        "VpcId"?: string;
-        "VSwitchId"?: string;
-        "VolumeType"?: string;
-        "VolumeId"?: string;
-        "VolumeProtocol"?: string;
-        "VolumeMountpoint"?: string;
-        "RemoteDirectory"?: string;
-        "DeployMode"?: string;
-        "HaEnable"?: boolean;
-        "EcsChargeType"?: string;
-        "Password"?: string;
-        "KeyPairName"?: string;
-        "ImageOwnerAlias"?: string;
-        "ImageId"?: string;
-        "EcsOrder.Manager.Count"?: number;
-        "SccClusterId"?: string;
-        "ComputeSpotStrategy"?: string;
-        "ComputeSpotPriceLimit"?: string;
-        "Application"?: string[];
-        "AdditionalVolumes"?: string[];
-        "PostInstallScript"?: string[];
-        "Period"?: number;
-        "PeriodUnit"?: string;
-        "AutoRenew"?: string;
-        "AutoRenewPeriod"?: number;
-        "InputFileUrl"?: string;
-        "JobQueue"?: string;
-        "SystemDiskType"?: string;
-        "SystemDiskSize"?: number;
-        "RemoteVisEnable"?: string;
-        "ResourceGroupId"?: string;
-    }): Promise<{}>;
-    CreateHybridCluster(query: {
-        "RegionId": string;
-        "Name": string;
-        "OsTag": string;
-        "VpcId": string;
-        "VSwitchId": string;
-        "EcsOrder.Compute.InstanceType": string;
-        "ZoneId"?: string;
-        "Description"?: string;
-        "EhpcVersion"?: string;
-        "ClientVersion"?: string;
-        "Domain"?: string;
-        "Nodes"?: string[];
-        "Location"?: string;
-        "SecurityGroupId"?: string;
-        "SecurityGroupName"?: string;
-        "VolumeType"?: string;
-        "VolumeId"?: string;
-        "VolumeProtocol"?: string;
-        "VolumeMountpoint"?: string;
-        "RemoteDirectory"?: string;
-        "OnPremiseVolumeProtocol"?: string;
-        "OnPremiseVolumeMountPoint"?: string;
-        "OnPremiseVolumeRemotePath"?: string;
-        "OnPremiseVolumeLocalPath"?: string;
-        "Password"?: string;
-        "KeyPairName"?: string;
-        "Application"?: string[];
-        "PostInstallScript"?: string[];
-        "JobQueue"?: string;
-        "ResourceGroupId"?: string;
-        "SchedulerPreInstall"?: boolean;
-    }): Promise<{}>;
-    CreateJobFile(query: {
-        "RegionId"?: string;
-        "RunasUser": string;
-        "RunasUserPassword": string;
-        "Content": string;
-        "TargetFile": string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    CreateJobTemplate(query: {
-        "RegionId"?: string;
-        "Name": string;
-        "CommandLine": string;
-        "RunasUser"?: string;
-        "Priority"?: number;
-        "PackagePath"?: string;
-        "StdoutRedirectPath"?: string;
-        "StderrRedirectPath"?: string;
-        "ReRunable"?: boolean;
-        "ArrayRequest"?: string;
-        "Variables"?: string;
-    }): Promise<{}>;
-    DeleteCluster(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "ReleaseInstance"?: string;
-    }): Promise<{}>;
-    DeleteContainerApps(query: {
-        "RegionId": string;
-        "ContainerApp": string[];
-    }): Promise<{}>;
-    DeleteImage(query: {
-        "RegionId"?: string;
-        "ClusterId": string;
-        "Repository": string;
-        "ImageTag"?: string;
-        "ContainerType"?: string;
-    }): Promise<{}>;
-    DeleteJobTemplates(query: {
-        "RegionId"?: string;
-        "Templates": string;
-    }): Promise<{}>;
-    DeleteJobs(query: {
-        "RegionId"?: string;
-        "Jobs": string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    DeleteNodes(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "Instance": string[];
-        "ReleaseInstance"?: boolean;
-    }): Promise<{}>;
-    DeleteQueue(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "QueueName": string;
-    }): Promise<{}>;
-    DeleteUsers(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "User": string[];
-    }): Promise<{}>;
-    DescribeAutoScaleConfig(query: {
-        "RegionId": string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    DescribeCluster(query: {
-        "RegionId": string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    DescribeContainerApp(query: {
-        "RegionId": string;
-        "ContainerId": string;
-    }): Promise<{}>;
-    DescribeImage(query: {
-        "RegionId"?: string;
-        "ClusterId": string;
-        "Repository": string;
-        "ImageTag"?: string;
-        "ContainerType"?: string;
-    }): Promise<{}>;
-    DescribeImageGatewayConfig(query: {
-        "RegionId": string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    DescribeImagePrice(query: {
-        "RegionId": string;
-        "ImageId": string;
-        "PriceUnit": string;
-        "SkuCode": string;
-        "Period": number;
-        "Amount": number;
-        "OrderType"?: string;
-    }): Promise<{}>;
-    DescribeJob(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "JobId": string;
-    }): Promise<{}>;
-    DescribePrice(query: {
-        "RegionId": string;
-        "Commodities": string[];
-        "PriceUnit": string;
-        "ChargeType"?: string;
-        "OrderType"?: string;
-    }): Promise<{}>;
-    EditJobTemplate(query: {
-        "RegionId"?: string;
-        "CommandLine": string;
-        "Name": string;
-        "TemplateId": string;
-        "RunasUser"?: string;
-        "Priority"?: number;
-        "PackagePath"?: string;
-        "StdoutRedirectPath"?: string;
-        "StderrRedirectPath"?: string;
-        "ReRunable"?: boolean;
-        "ArrayRequest"?: string;
-        "Variables"?: string;
-    }): Promise<{}>;
-    GetAccountingReport(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "StartTime": number;
-        "EndTime": number;
-        "ReportType"?: string;
-    }): Promise<{}>;
-    GetAutoScaleConfig(query: {
-        "RegionId": string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    GetCloudMetricLogs(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "From": number;
-        "To": number;
-        "Reverse"?: boolean;
-        "AggregationType"?: string;
-        "AggregationInterval"?: number;
-        "MetricScope"?: string;
-        "Filter"?: string;
-        "MetricCategories"?: string;
-    }): Promise<{}>;
-    GetCloudMetricProfiling(query: {
-        "RegionId"?: string;
-        "ProfilingId": string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    GetClusterVolumes(query: {
-        "RegionId": string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    GetHybridClusterConfig(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "Node"?: string;
-    }): Promise<{}>;
-    GetVisualServiceStatus(query: {
-        "RegionId"?: string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    InstallSoftware(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "Application": string;
-    }): Promise<{}>;
-    InvokeShellCommand(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "Command": string;
-        "Instance"?: string[];
-        "WorkingDir"?: string;
-        "Timeout"?: number;
-    }): Promise<{}>;
-    ListAvailableEcsTypes(query: {
-        "RegionId": string;
-        "ZoneId": string;
-        "SpotStrategy"?: string;
-        "InstanceChargeType"?: string;
-        "ShowSoldOut"?: boolean;
-    }): Promise<{}>;
-    ListAvailableFileSystemTypes(query: {
-        "RegionId": string;
-    }): Promise<{}>;
-    ListCloudMetricProfilings(query: {
-        "RegionId"?: string;
-        "ClusterId": string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ListClusterLogs(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ListClusters(query: {
-        "RegionId": string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ListClustersMeta(query: {
-        "RegionId": string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ListCommands(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "CommandId"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ListContainerApps(query: {
-        "RegionId": string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ListContainerImages(query: {
-        "RegionId"?: string;
-        "ClusterId": string;
-        "ContainerType"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ListCpfsFileSystems(query: {
-        "RegionId": string;
-        "FileSystemId"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ListCurrentClientVersion(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ListCustomImages(query: {
-        "RegionId"?: string;
-        "ImageOwnerAlias"?: string;
-        "BaseOsTag"?: string;
-    }): Promise<{}>;
-    ListFileSystemWithMountTargets(query: {
-        "RegionId": string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ListImages(query: {
-        "RegionId": string;
-    }): Promise<{}>;
-    ListInstalledSoftware(query: {
-        "RegionId": string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    ListInvocationResults(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "CommandId": string;
-        "InvokeRecordStatus"?: string;
-        "Instance"?: string[];
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ListInvocationStatus(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "CommandId": string;
-    }): Promise<{}>;
-    ListJobTemplates(query: {
-        "RegionId"?: string;
-        "Name"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ListJobs(query: {
-        "RegionId"?: string;
-        "ClusterId": string;
-        "Owner"?: string;
-        "State"?: string;
-        "Rerunable"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ListNodes(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "Role"?: string;
-        "HostName"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ListNodesByQueue(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "QueueName": string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ListNodesNoPaging(query: {
-        "RegionId"?: string;
-        "ClusterId": string;
-        "Role"?: string;
-        "HostName"?: string;
-        "OnlyDetached"?: boolean;
-    }): Promise<{}>;
-    ListPreferredEcsTypes(query: {
-        "RegionId": string;
-        "ZoneId": string;
-        "SpotStrategy"?: string;
-        "InstanceChargeType"?: string;
-    }): Promise<{}>;
-    ListQueues(query: {
-        "RegionId": string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    ListRegions(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ListSoftwares(query: {
-        "RegionId": string;
-        "EhpcVersion"?: string;
-    }): Promise<{}>;
-    ListUsers(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ListVolumes(query: {
-        "RegionId": string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ModifyClusterAttributes(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "Name"?: string;
-        "Description"?: string;
-    }): Promise<{}>;
-    ModifyContainerAppAttributes(query: {
-        "RegionId": string;
-        "ContainerId": string;
-        "Description"?: string;
-    }): Promise<{}>;
-    ModifyImageGatewayConfig(query: {
-        "RegionId"?: string;
-        "ClusterId": string;
-        "DBType"?: string;
-        "DBUsername"?: string;
-        "DBPassword"?: string;
-        "DBServerInfo"?: string;
-        "DefaultRepoLocation"?: string;
-        "PullUpdateTimeout"?: number;
-        "ImageExpirationTimeout"?: string;
-        "Repo"?: string[];
-    }): Promise<{}>;
-    ModifyUserGroups(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "User": string[];
-    }): Promise<{}>;
-    ModifyUserPasswords(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "User": string[];
-    }): Promise<{}>;
-    ModifyVisualServicePasswd(query: {
-        "RegionId"?: string;
-        "RunasUser": string;
-        "RunasUserPassword": string;
-        "Passwd": string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    PullImage(query: {
-        "RegionId"?: string;
-        "Repository": string;
-        "ClusterId": string;
-        "ImageTag"?: string;
-        "ContainerType"?: string;
-    }): Promise<{}>;
-    RecoverCluster(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "OsTag"?: string;
-        "AccountType"?: string;
-        "SchedulerType"?: string;
-        "ImageOwnerAlias"?: string;
-        "ImageId"?: string;
-        "ClientVersion"?: string;
-    }): Promise<{}>;
-    RerunJobs(query: {
-        "RegionId"?: string;
-        "Jobs": string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    ResetNodes(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "Instance": string[];
-    }): Promise<{}>;
-    RunCloudMetricProfiling(query: {
-        "RegionId"?: string;
-        "HostName": string;
-        "ProcessId": number;
-        "ClusterId": string;
-        "Duration"?: number;
-        "Freq"?: number;
-    }): Promise<{}>;
-    SetAutoScaleConfig(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "MaxNodesInCluster": number;
-        "EnableAutoGrow"?: boolean;
-        "EnableAutoShrink"?: boolean;
-        "GrowIntervalInMinutes"?: number;
-        "ShrinkIntervalInMinutes"?: number;
-        "ShrinkIdleTimes"?: number;
-        "GrowTimeoutInMinutes"?: number;
-        "ExtraNodesGrowRatio"?: number;
-        "GrowRatio"?: number;
-        "ExcludeNodes"?: string;
-        "SpotStrategy"?: string;
-        "SpotPriceLimit"?: number;
-        "Queues"?: string[];
-    }): Promise<{}>;
-    SetJobUser(query: {
-        "RegionId"?: string;
-        "RunasUser": string;
-        "RunasUserPassword": string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    SetQueue(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "QueueName": string;
-        "Node": string[];
-    }): Promise<{}>;
-    StartCluster(query: {
-        "RegionId": string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    StartNodes(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "Instance": string[];
-        "Role"?: string;
-    }): Promise<{}>;
-    StartVisualService(query: {
-        "RegionId"?: string;
-        "CidrIp": string;
-        "Port": number;
-        "ClusterId": string;
-    }): Promise<{}>;
-    StopCluster(query: {
-        "RegionId": string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    StopJobs(query: {
-        "RegionId"?: string;
-        "Jobs": string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    StopNodes(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "Instance": string[];
-        "Role"?: string;
-    }): Promise<{}>;
-    StopVisualService(query: {
-        "RegionId"?: string;
-        "CidrIp": string;
-        "Port": number;
-        "ClusterId": string;
-    }): Promise<{}>;
-    SubmitJob(query: {
-        "RegionId"?: string;
-        "CommandLine": string;
-        "RunasUser": string;
-        "RunasUserPassword": string;
-        "ClusterId": string;
-        "Name"?: string;
-        "Priority"?: number;
-        "PackagePath"?: string;
-        "StdoutRedirectPath"?: string;
-        "StderrRedirectPath"?: string;
-        "ReRunable"?: boolean;
-        "ArrayRequest"?: string;
-        "Variables"?: string;
-        "InputFileUrl"?: string;
-        "UnzipCmd"?: string;
-        "PostCmdLine"?: string;
-        "ContainerId"?: string;
-        "JobQueue"?: string;
-    }): Promise<{}>;
-    UninstallSoftware(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "Application": string;
-    }): Promise<{}>;
-    UpdateClusterVolumes(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "AdditionalVolumes"?: string[];
-    }): Promise<{}>;
-    UpgradeClient(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "ClientVersion"?: string;
-    }): Promise<{}>;
-    QueryServicePackAndPrice(query: {
-        "RegionId": string;
-    }): Promise<{}>;
-    CreateGWSCluster(query: {
-        "RegionId"?: string;
-        "ClusterType": string;
-        "VpcId": string;
-        "Name"?: string;
-    }): Promise<{}>;
-    CreateGWSImage(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "Name"?: string;
-    }): Promise<{}>;
-    CreateGWSInstance(query: {
-        "RegionId"?: string;
-        "ImageId": string;
-        "SystemDiskSize": number;
-        "SystemDiskCategory": string;
-        "InstanceType": string;
-        "InstanceChargeType": string;
-        "WorkMode": string;
-        "AllocatePublicAddress": boolean;
-        "ClusterId": string;
-        "InternetChargeType"?: string;
-        "InternetMaxBandwidthIn"?: number;
-        "InternetMaxBandwidthOut"?: number;
-        "Name"?: string;
-        "Period"?: string;
-        "PeriodUnit"?: string;
-        "AutoRenew"?: boolean;
-        "AppList"?: string;
-    }): Promise<{}>;
-    DeleteGWSCluster(query: {
-        "RegionId": string;
-        "ClusterId": string;
-    }): Promise<{}>;
-    DeleteGWSInstance(query: {
-        "RegionId": string;
-        "InstanceId": string;
-    }): Promise<{}>;
-    DescribeGWSClusters(query: {
-        "RegionId": string;
-        "ClusterId"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    DescribeGWSImages(query: {
-        "RegionId": string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    DescribeGWSInstances(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "InstanceId"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    GetGWSConnectTicket(query: {
-        "RegionId": string;
-        "InstanceId": string;
-        "AppName"?: string;
-    }): Promise<{}>;
-    StartGWSInstance(query: {
-        "RegionId": string;
-        "InstanceId": string;
-    }): Promise<{}>;
-    StopGWSInstance(query: {
-        "RegionId": string;
-        "InstanceId": string;
-    }): Promise<{}>;
-    DescribeNFSClientStatus(query: {
-        "RegionId": string;
-        "InstanceId": string;
-    }): Promise<{}>;
-    InstallNFSClient(query: {
-        "RegionId": string;
-        "InstanceId": string;
-    }): Promise<{}>;
-    MountNFS(query: {
-        "RegionId": string;
-        "InstanceId": string;
-        "NfsDir": string;
-        "MountDir": string;
-    }): Promise<{}>;
-    UpdateQueueConfig(query: {
-        "RegionId": string;
-        "ClusterId": string;
-        "QueueName": string;
-        "ResourceGroupId": string;
-        "ComputeInstanceType"?: string;
-    }): Promise<{}>;
-    SetGWSInstanceUser(query: {
-        "RegionId": string;
-        "InstanceId": string;
-        "UserUid": string;
-        "UserName": string;
-    }): Promise<{}>;
+    AddContainerApp(query: AddContainerAppRequest): Promise<AddContainerAppResponse>;
+    AddLocalNodes(query: AddLocalNodesRequest): Promise<AddLocalNodesResponse>;
+    AddNodes(query: AddNodesRequest): Promise<AddNodesResponse>;
+    AddQueue(query: AddQueueRequest): Promise<AddQueueResponse>;
+    AddUsers(query: AddUsersRequest): Promise<AddUsersResponse>;
+    CreateCluster(query: CreateClusterRequest): Promise<CreateClusterResponse>;
+    CreateHybridCluster(query: CreateHybridClusterRequest): Promise<CreateHybridClusterResponse>;
+    CreateJobFile(query: CreateJobFileRequest): Promise<CreateJobFileResponse>;
+    CreateJobTemplate(query: CreateJobTemplateRequest): Promise<CreateJobTemplateResponse>;
+    DeleteCluster(query: DeleteClusterRequest): Promise<DeleteClusterResponse>;
+    DeleteContainerApps(query: DeleteContainerAppsRequest): Promise<DeleteContainerAppsResponse>;
+    DeleteImage(query: DeleteImageRequest): Promise<DeleteImageResponse>;
+    DeleteJobTemplates(query: DeleteJobTemplatesRequest): Promise<DeleteJobTemplatesResponse>;
+    DeleteJobs(query: DeleteJobsRequest): Promise<DeleteJobsResponse>;
+    DeleteNodes(query: DeleteNodesRequest): Promise<DeleteNodesResponse>;
+    DeleteQueue(query: DeleteQueueRequest): Promise<DeleteQueueResponse>;
+    DeleteUsers(query: DeleteUsersRequest): Promise<DeleteUsersResponse>;
+    DescribeAutoScaleConfig(query: DescribeAutoScaleConfigRequest): Promise<DescribeAutoScaleConfigResponse>;
+    DescribeCluster(query: DescribeClusterRequest): Promise<DescribeClusterResponse>;
+    DescribeContainerApp(query: DescribeContainerAppRequest): Promise<DescribeContainerAppResponse>;
+    DescribeImage(query: DescribeImageRequest): Promise<DescribeImageResponse>;
+    DescribeImageGatewayConfig(query: DescribeImageGatewayConfigRequest): Promise<DescribeImageGatewayConfigResponse>;
+    DescribeImagePrice(query: DescribeImagePriceRequest): Promise<DescribeImagePriceResponse>;
+    DescribeJob(query: DescribeJobRequest): Promise<DescribeJobResponse>;
+    DescribePrice(query: DescribePriceRequest): Promise<DescribePriceResponse>;
+    EditJobTemplate(query: EditJobTemplateRequest): Promise<EditJobTemplateResponse>;
+    GetAccountingReport(query: GetAccountingReportRequest): Promise<GetAccountingReportResponse>;
+    GetAutoScaleConfig(query: GetAutoScaleConfigRequest): Promise<GetAutoScaleConfigResponse>;
+    GetCloudMetricLogs(query: GetCloudMetricLogsRequest): Promise<GetCloudMetricLogsResponse>;
+    GetCloudMetricProfiling(query: GetCloudMetricProfilingRequest): Promise<GetCloudMetricProfilingResponse>;
+    GetClusterVolumes(query: GetClusterVolumesRequest): Promise<GetClusterVolumesResponse>;
+    GetHybridClusterConfig(query: GetHybridClusterConfigRequest): Promise<GetHybridClusterConfigResponse>;
+    GetVisualServiceStatus(query: GetVisualServiceStatusRequest): Promise<GetVisualServiceStatusResponse>;
+    InstallSoftware(query: InstallSoftwareRequest): Promise<InstallSoftwareResponse>;
+    InvokeShellCommand(query: InvokeShellCommandRequest): Promise<InvokeShellCommandResponse>;
+    ListAvailableEcsTypes(query: ListAvailableEcsTypesRequest): Promise<ListAvailableEcsTypesResponse>;
+    ListAvailableFileSystemTypes(query: ListAvailableFileSystemTypesRequest): Promise<ListAvailableFileSystemTypesResponse>;
+    ListCloudMetricProfilings(query: ListCloudMetricProfilingsRequest): Promise<ListCloudMetricProfilingsResponse>;
+    ListClusterLogs(query: ListClusterLogsRequest): Promise<ListClusterLogsResponse>;
+    ListClusters(query: ListClustersRequest): Promise<ListClustersResponse>;
+    ListClustersMeta(query: ListClustersMetaRequest): Promise<ListClustersMetaResponse>;
+    ListCommands(query: ListCommandsRequest): Promise<ListCommandsResponse>;
+    ListContainerApps(query: ListContainerAppsRequest): Promise<ListContainerAppsResponse>;
+    ListContainerImages(query: ListContainerImagesRequest): Promise<ListContainerImagesResponse>;
+    ListCpfsFileSystems(query: ListCpfsFileSystemsRequest): Promise<ListCpfsFileSystemsResponse>;
+    ListCurrentClientVersion(query: ListCurrentClientVersionRequest): Promise<ListCurrentClientVersionResponse>;
+    ListCustomImages(query: ListCustomImagesRequest): Promise<ListCustomImagesResponse>;
+    ListFileSystemWithMountTargets(query: ListFileSystemWithMountTargetsRequest): Promise<ListFileSystemWithMountTargetsResponse>;
+    ListImages(query: ListImagesRequest): Promise<ListImagesResponse>;
+    ListInstalledSoftware(query: ListInstalledSoftwareRequest): Promise<ListInstalledSoftwareResponse>;
+    ListInvocationResults(query: ListInvocationResultsRequest): Promise<ListInvocationResultsResponse>;
+    ListInvocationStatus(query: ListInvocationStatusRequest): Promise<ListInvocationStatusResponse>;
+    ListJobTemplates(query: ListJobTemplatesRequest): Promise<ListJobTemplatesResponse>;
+    ListJobs(query: ListJobsRequest): Promise<ListJobsResponse>;
+    ListNodes(query: ListNodesRequest): Promise<ListNodesResponse>;
+    ListNodesByQueue(query: ListNodesByQueueRequest): Promise<ListNodesByQueueResponse>;
+    ListNodesNoPaging(query: ListNodesNoPagingRequest): Promise<ListNodesNoPagingResponse>;
+    ListPreferredEcsTypes(query: ListPreferredEcsTypesRequest): Promise<ListPreferredEcsTypesResponse>;
+    ListQueues(query: ListQueuesRequest): Promise<ListQueuesResponse>;
+    ListRegions(query: ListRegionsRequest): Promise<ListRegionsResponse>;
+    ListSoftwares(query: ListSoftwaresRequest): Promise<ListSoftwaresResponse>;
+    ListUsers(query: ListUsersRequest): Promise<ListUsersResponse>;
+    ListVolumes(query: ListVolumesRequest): Promise<ListVolumesResponse>;
+    ModifyClusterAttributes(query: ModifyClusterAttributesRequest): Promise<ModifyClusterAttributesResponse>;
+    ModifyContainerAppAttributes(query: ModifyContainerAppAttributesRequest): Promise<ModifyContainerAppAttributesResponse>;
+    ModifyImageGatewayConfig(query: ModifyImageGatewayConfigRequest): Promise<ModifyImageGatewayConfigResponse>;
+    ModifyUserGroups(query: ModifyUserGroupsRequest): Promise<ModifyUserGroupsResponse>;
+    ModifyUserPasswords(query: ModifyUserPasswordsRequest): Promise<ModifyUserPasswordsResponse>;
+    ModifyVisualServicePasswd(query: ModifyVisualServicePasswdRequest): Promise<ModifyVisualServicePasswdResponse>;
+    PullImage(query: PullImageRequest): Promise<PullImageResponse>;
+    RecoverCluster(query: RecoverClusterRequest): Promise<RecoverClusterResponse>;
+    RerunJobs(query: RerunJobsRequest): Promise<RerunJobsResponse>;
+    ResetNodes(query: ResetNodesRequest): Promise<ResetNodesResponse>;
+    RunCloudMetricProfiling(query: RunCloudMetricProfilingRequest): Promise<RunCloudMetricProfilingResponse>;
+    SetAutoScaleConfig(query: SetAutoScaleConfigRequest): Promise<SetAutoScaleConfigResponse>;
+    SetJobUser(query: SetJobUserRequest): Promise<SetJobUserResponse>;
+    SetQueue(query: SetQueueRequest): Promise<SetQueueResponse>;
+    StartCluster(query: StartClusterRequest): Promise<StartClusterResponse>;
+    StartNodes(query: StartNodesRequest): Promise<StartNodesResponse>;
+    StartVisualService(query: StartVisualServiceRequest): Promise<StartVisualServiceResponse>;
+    StopCluster(query: StopClusterRequest): Promise<StopClusterResponse>;
+    StopJobs(query: StopJobsRequest): Promise<StopJobsResponse>;
+    StopNodes(query: StopNodesRequest): Promise<StopNodesResponse>;
+    StopVisualService(query: StopVisualServiceRequest): Promise<StopVisualServiceResponse>;
+    SubmitJob(query: SubmitJobRequest): Promise<SubmitJobResponse>;
+    UninstallSoftware(query: UninstallSoftwareRequest): Promise<UninstallSoftwareResponse>;
+    UpdateClusterVolumes(query: UpdateClusterVolumesRequest): Promise<UpdateClusterVolumesResponse>;
+    UpgradeClient(query: UpgradeClientRequest): Promise<UpgradeClientResponse>;
+    QueryServicePackAndPrice(query: QueryServicePackAndPriceRequest): Promise<QueryServicePackAndPriceResponse>;
+    CreateGWSCluster(query: CreateGWSClusterRequest): Promise<CreateGWSClusterResponse>;
+    CreateGWSImage(query: CreateGWSImageRequest): Promise<CreateGWSImageResponse>;
+    CreateGWSInstance(query: CreateGWSInstanceRequest): Promise<CreateGWSInstanceResponse>;
+    DeleteGWSCluster(query: DeleteGWSClusterRequest): Promise<DeleteGWSClusterResponse>;
+    DeleteGWSInstance(query: DeleteGWSInstanceRequest): Promise<DeleteGWSInstanceResponse>;
+    DescribeGWSClusters(query: DescribeGWSClustersRequest): Promise<DescribeGWSClustersResponse>;
+    DescribeGWSImages(query: DescribeGWSImagesRequest): Promise<DescribeGWSImagesResponse>;
+    DescribeGWSInstances(query: DescribeGWSInstancesRequest): Promise<DescribeGWSInstancesResponse>;
+    GetGWSConnectTicket(query: GetGWSConnectTicketRequest): Promise<GetGWSConnectTicketResponse>;
+    StartGWSInstance(query: StartGWSInstanceRequest): Promise<StartGWSInstanceResponse>;
+    StopGWSInstance(query: StopGWSInstanceRequest): Promise<StopGWSInstanceResponse>;
+    DescribeNFSClientStatus(query: DescribeNFSClientStatusRequest): Promise<DescribeNFSClientStatusResponse>;
+    InstallNFSClient(query: InstallNFSClientRequest): Promise<InstallNFSClientResponse>;
+    MountNFS(query: MountNFSRequest): Promise<MountNFSResponse>;
+    UpdateQueueConfig(query: UpdateQueueConfigRequest): Promise<UpdateQueueConfigResponse>;
+    SetGWSInstanceUser(query: SetGWSInstanceUserRequest): Promise<SetGWSInstanceUserResponse>;
 }
 export default EHPC;

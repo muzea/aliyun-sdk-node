@@ -1,0 +1,3 @@
+interface QueryEdgeInstanceDeviceResponse {
+}
+export { QueryEdgeInstanceDeviceResponse };

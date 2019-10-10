@@ -1,0 +1,3 @@
+interface UpdateOwnedLocalJoinPermissionResponse {
+}
+export { UpdateOwnedLocalJoinPermissionResponse };

@@ -1,0 +1,3 @@
+interface DescribeCrawlerRequestsResponse {
+}
+export { DescribeCrawlerRequestsResponse };

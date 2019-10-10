@@ -1,0 +1,3 @@
+interface SubmitRollbackShardingKeyModifyResponse {
+}
+export { SubmitRollbackShardingKeyModifyResponse };

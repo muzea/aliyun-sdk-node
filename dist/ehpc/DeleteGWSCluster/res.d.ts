@@ -1,0 +1,3 @@
+interface DeleteGWSClusterResponse {
+}
+export { DeleteGWSClusterResponse };

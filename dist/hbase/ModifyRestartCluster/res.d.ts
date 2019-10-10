@@ -1,0 +1,3 @@
+interface ModifyRestartClusterResponse {
+}
+export { ModifyRestartClusterResponse };

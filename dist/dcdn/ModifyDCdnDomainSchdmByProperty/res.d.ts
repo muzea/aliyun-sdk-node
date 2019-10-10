@@ -1,0 +1,3 @@
+interface ModifyDCdnDomainSchdmByPropertyResponse {
+}
+export { ModifyDCdnDomainSchdmByPropertyResponse };

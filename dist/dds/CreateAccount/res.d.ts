@@ -1,0 +1,3 @@
+interface CreateAccountResponse {
+}
+export { CreateAccountResponse };

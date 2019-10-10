@@ -1,0 +1,3 @@
+interface GetNodeGroupTransferPacketsDownloadUrlResponse {
+}
+export { GetNodeGroupTransferPacketsDownloadUrlResponse };

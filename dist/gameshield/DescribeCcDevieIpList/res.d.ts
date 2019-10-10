@@ -1,0 +1,3 @@
+interface DescribeCcDevieIpListResponse {
+}
+export { DescribeCcDevieIpListResponse };

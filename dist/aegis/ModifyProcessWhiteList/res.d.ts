@@ -1,0 +1,3 @@
+interface ModifyProcessWhiteListResponse {
+}
+export { ModifyProcessWhiteListResponse };

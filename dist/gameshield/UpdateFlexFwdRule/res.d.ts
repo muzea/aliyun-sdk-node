@@ -1,0 +1,3 @@
+interface UpdateFlexFwdRuleResponse {
+}
+export { UpdateFlexFwdRuleResponse };

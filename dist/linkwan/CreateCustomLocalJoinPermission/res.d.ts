@@ -1,0 +1,3 @@
+interface CreateCustomLocalJoinPermissionResponse {
+}
+export { CreateCustomLocalJoinPermissionResponse };

@@ -1,0 +1,3 @@
+interface ModifyDomainConfigResponse {
+}
+export { ModifyDomainConfigResponse };

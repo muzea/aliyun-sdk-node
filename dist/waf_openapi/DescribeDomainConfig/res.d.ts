@@ -1,0 +1,3 @@
+interface DescribeDomainConfigResponse {
+}
+export { DescribeDomainConfigResponse };

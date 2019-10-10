@@ -1,0 +1,3 @@
+interface DownloadUserTotalFlowReportResponse {
+}
+export { DownloadUserTotalFlowReportResponse };

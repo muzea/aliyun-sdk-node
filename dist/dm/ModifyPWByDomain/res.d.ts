@@ -1,0 +1,3 @@
+interface ModifyPWByDomainResponse {
+}
+export { ModifyPWByDomainResponse };

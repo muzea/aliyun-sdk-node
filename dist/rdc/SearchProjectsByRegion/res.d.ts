@@ -1,0 +1,3 @@
+interface SearchProjectsByRegionResponse {
+}
+export { SearchProjectsByRegionResponse };

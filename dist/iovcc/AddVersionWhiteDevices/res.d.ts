@@ -1,0 +1,3 @@
+interface AddVersionWhiteDevicesResponse {
+}
+export { AddVersionWhiteDevicesResponse };

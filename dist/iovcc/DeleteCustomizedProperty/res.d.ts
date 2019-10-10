@@ -1,0 +1,3 @@
+interface DeleteCustomizedPropertyResponse {
+}
+export { DeleteCustomizedPropertyResponse };

@@ -1,0 +1,3 @@
+interface DescribeDomainRealTimeDetailDataResponse {
+}
+export { DescribeDomainRealTimeDetailDataResponse };

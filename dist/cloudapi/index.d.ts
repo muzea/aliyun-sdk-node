@@ -1,728 +1,316 @@
+import { DeleteApiGroupRequest } from "./DeleteApiGroup/req";
+import { DeleteApiGroupResponse } from "./DeleteApiGroup/res";
+import { DescribeApiHistoryRequest } from "./DescribeApiHistory/req";
+import { DescribeApiHistoryResponse } from "./DescribeApiHistory/res";
+import { DescribeAppRequest } from "./DescribeApp/req";
+import { DescribeAppResponse } from "./DescribeApp/res";
+import { DescribeIpControlsRequest } from "./DescribeIpControls/req";
+import { DescribeIpControlsResponse } from "./DescribeIpControls/res";
+import { CreateLogConfigRequest } from "./CreateLogConfig/req";
+import { CreateLogConfigResponse } from "./CreateLogConfig/res";
+import { SetDomainRequest } from "./SetDomain/req";
+import { SetDomainResponse } from "./SetDomain/res";
+import { AbolishApiRequest } from "./AbolishApi/req";
+import { AbolishApiResponse } from "./AbolishApi/res";
+import { AddIpControlPolicyItemRequest } from "./AddIpControlPolicyItem/req";
+import { AddIpControlPolicyItemResponse } from "./AddIpControlPolicyItem/res";
+import { AddTrafficSpecialControlRequest } from "./AddTrafficSpecialControl/req";
+import { AddTrafficSpecialControlResponse } from "./AddTrafficSpecialControl/res";
+import { CreateApiRequest } from "./CreateApi/req";
+import { CreateApiResponse } from "./CreateApi/res";
+import { CreateApiGroupRequest } from "./CreateApiGroup/req";
+import { CreateApiGroupResponse } from "./CreateApiGroup/res";
+import { CreateApiStageVariableRequest } from "./CreateApiStageVariable/req";
+import { CreateApiStageVariableResponse } from "./CreateApiStageVariable/res";
+import { CreateAppRequest } from "./CreateApp/req";
+import { CreateAppResponse } from "./CreateApp/res";
+import { CreateIntranetDomainRequest } from "./CreateIntranetDomain/req";
+import { CreateIntranetDomainResponse } from "./CreateIntranetDomain/res";
+import { CreateIpControlRequest } from "./CreateIpControl/req";
+import { CreateIpControlResponse } from "./CreateIpControl/res";
+import { CreateSignatureRequest } from "./CreateSignature/req";
+import { CreateSignatureResponse } from "./CreateSignature/res";
+import { CreateTrafficControlRequest } from "./CreateTrafficControl/req";
+import { CreateTrafficControlResponse } from "./CreateTrafficControl/res";
+import { DeleteAllTrafficSpecialControlRequest } from "./DeleteAllTrafficSpecialControl/req";
+import { DeleteAllTrafficSpecialControlResponse } from "./DeleteAllTrafficSpecialControl/res";
+import { DeleteApiRequest } from "./DeleteApi/req";
+import { DeleteApiResponse } from "./DeleteApi/res";
+import { DeleteApiStageVariableRequest } from "./DeleteApiStageVariable/req";
+import { DeleteApiStageVariableResponse } from "./DeleteApiStageVariable/res";
+import { DeleteAppRequest } from "./DeleteApp/req";
+import { DeleteAppResponse } from "./DeleteApp/res";
+import { DeleteDomainRequest } from "./DeleteDomain/req";
+import { DeleteDomainResponse } from "./DeleteDomain/res";
+import { DeleteDomainCertificateRequest } from "./DeleteDomainCertificate/req";
+import { DeleteDomainCertificateResponse } from "./DeleteDomainCertificate/res";
+import { DeleteIpControlRequest } from "./DeleteIpControl/req";
+import { DeleteIpControlResponse } from "./DeleteIpControl/res";
+import { DeleteLogConfigRequest } from "./DeleteLogConfig/req";
+import { DeleteLogConfigResponse } from "./DeleteLogConfig/res";
+import { DeleteSignatureRequest } from "./DeleteSignature/req";
+import { DeleteSignatureResponse } from "./DeleteSignature/res";
+import { DeleteTrafficControlRequest } from "./DeleteTrafficControl/req";
+import { DeleteTrafficControlResponse } from "./DeleteTrafficControl/res";
+import { DeleteTrafficSpecialControlRequest } from "./DeleteTrafficSpecialControl/req";
+import { DeleteTrafficSpecialControlResponse } from "./DeleteTrafficSpecialControl/res";
+import { DeployApiRequest } from "./DeployApi/req";
+import { DeployApiResponse } from "./DeployApi/res";
+import { DescribeApiRequest } from "./DescribeApi/req";
+import { DescribeApiResponse } from "./DescribeApi/res";
+import { DescribeApiDocRequest } from "./DescribeApiDoc/req";
+import { DescribeApiDocResponse } from "./DescribeApiDoc/res";
+import { DescribeApiErrorDataRequest } from "./DescribeApiErrorData/req";
+import { DescribeApiErrorDataResponse } from "./DescribeApiErrorData/res";
+import { DescribeApiGroupRequest } from "./DescribeApiGroup/req";
+import { DescribeApiGroupResponse } from "./DescribeApiGroup/res";
+import { DescribeApiGroupsRequest } from "./DescribeApiGroups/req";
+import { DescribeApiGroupsResponse } from "./DescribeApiGroups/res";
+import { DescribeApiHistoriesRequest } from "./DescribeApiHistories/req";
+import { DescribeApiHistoriesResponse } from "./DescribeApiHistories/res";
+import { DescribeApiIpControlsRequest } from "./DescribeApiIpControls/req";
+import { DescribeApiIpControlsResponse } from "./DescribeApiIpControls/res";
+import { DescribeApiLatencyDataRequest } from "./DescribeApiLatencyData/req";
+import { DescribeApiLatencyDataResponse } from "./DescribeApiLatencyData/res";
+import { DescribeApiQpsDataRequest } from "./DescribeApiQpsData/req";
+import { DescribeApiQpsDataResponse } from "./DescribeApiQpsData/res";
+import { DescribeApiSignaturesRequest } from "./DescribeApiSignatures/req";
+import { DescribeApiSignaturesResponse } from "./DescribeApiSignatures/res";
+import { DescribeApiStageRequest } from "./DescribeApiStage/req";
+import { DescribeApiStageResponse } from "./DescribeApiStage/res";
+import { DescribeApiTrafficControlsRequest } from "./DescribeApiTrafficControls/req";
+import { DescribeApiTrafficControlsResponse } from "./DescribeApiTrafficControls/res";
+import { DescribeApiTrafficDataRequest } from "./DescribeApiTrafficData/req";
+import { DescribeApiTrafficDataResponse } from "./DescribeApiTrafficData/res";
+import { DescribeApisRequest } from "./DescribeApis/req";
+import { DescribeApisResponse } from "./DescribeApis/res";
+import { DescribeApisByAppRequest } from "./DescribeApisByApp/req";
+import { DescribeApisByAppResponse } from "./DescribeApisByApp/res";
+import { DescribeApisByIpControlRequest } from "./DescribeApisByIpControl/req";
+import { DescribeApisByIpControlResponse } from "./DescribeApisByIpControl/res";
+import { DescribeApisBySignatureRequest } from "./DescribeApisBySignature/req";
+import { DescribeApisBySignatureResponse } from "./DescribeApisBySignature/res";
+import { DescribeApisByTrafficControlRequest } from "./DescribeApisByTrafficControl/req";
+import { DescribeApisByTrafficControlResponse } from "./DescribeApisByTrafficControl/res";
+import { DescribeAppAttributesRequest } from "./DescribeAppAttributes/req";
+import { DescribeAppAttributesResponse } from "./DescribeAppAttributes/res";
+import { DescribeAppSecurityRequest } from "./DescribeAppSecurity/req";
+import { DescribeAppSecurityResponse } from "./DescribeAppSecurity/res";
+import { DescribeAppsRequest } from "./DescribeApps/req";
+import { DescribeAppsResponse } from "./DescribeApps/res";
+import { DescribeAuthorizedApisRequest } from "./DescribeAuthorizedApis/req";
+import { DescribeAuthorizedApisResponse } from "./DescribeAuthorizedApis/res";
+import { DescribeAuthorizedAppsRequest } from "./DescribeAuthorizedApps/req";
+import { DescribeAuthorizedAppsResponse } from "./DescribeAuthorizedApps/res";
+import { DescribeDeployedApiRequest } from "./DescribeDeployedApi/req";
+import { DescribeDeployedApiResponse } from "./DescribeDeployedApi/res";
+import { DescribeDeployedApisRequest } from "./DescribeDeployedApis/req";
+import { DescribeDeployedApisResponse } from "./DescribeDeployedApis/res";
+import { DescribeDomainRequest } from "./DescribeDomain/req";
+import { DescribeDomainResponse } from "./DescribeDomain/res";
+import { DescribeDomainsResolutionRequest } from "./DescribeDomainsResolution/req";
+import { DescribeDomainsResolutionResponse } from "./DescribeDomainsResolution/res";
+import { DescribeHistoryApisRequest } from "./DescribeHistoryApis/req";
+import { DescribeHistoryApisResponse } from "./DescribeHistoryApis/res";
+import { DescribeIpControlPolicyItemsRequest } from "./DescribeIpControlPolicyItems/req";
+import { DescribeIpControlPolicyItemsResponse } from "./DescribeIpControlPolicyItems/res";
+import { DescribeLogConfigRequest } from "./DescribeLogConfig/req";
+import { DescribeLogConfigResponse } from "./DescribeLogConfig/res";
+import { DescribePurchasedApiGroupRequest } from "./DescribePurchasedApiGroup/req";
+import { DescribePurchasedApiGroupResponse } from "./DescribePurchasedApiGroup/res";
+import { DescribePurchasedApiGroupsRequest } from "./DescribePurchasedApiGroups/req";
+import { DescribePurchasedApiGroupsResponse } from "./DescribePurchasedApiGroups/res";
+import { DescribePurchasedApisRequest } from "./DescribePurchasedApis/req";
+import { DescribePurchasedApisResponse } from "./DescribePurchasedApis/res";
+import { DescribeRegionsRequest } from "./DescribeRegions/req";
+import { DescribeRegionsResponse } from "./DescribeRegions/res";
+import { DescribeSignaturesRequest } from "./DescribeSignatures/req";
+import { DescribeSignaturesResponse } from "./DescribeSignatures/res";
+import { DescribeSignaturesByApiRequest } from "./DescribeSignaturesByApi/req";
+import { DescribeSignaturesByApiResponse } from "./DescribeSignaturesByApi/res";
+import { DescribeSystemParametersRequest } from "./DescribeSystemParameters/req";
+import { DescribeSystemParametersResponse } from "./DescribeSystemParameters/res";
+import { DescribeTrafficControlsRequest } from "./DescribeTrafficControls/req";
+import { DescribeTrafficControlsResponse } from "./DescribeTrafficControls/res";
+import { DescribeTrafficControlsByApiRequest } from "./DescribeTrafficControlsByApi/req";
+import { DescribeTrafficControlsByApiResponse } from "./DescribeTrafficControlsByApi/res";
+import { DescribeVpcAccessesRequest } from "./DescribeVpcAccesses/req";
+import { DescribeVpcAccessesResponse } from "./DescribeVpcAccesses/res";
+import { ImportSwaggerRequest } from "./ImportSwagger/req";
+import { ImportSwaggerResponse } from "./ImportSwagger/res";
+import { ListTagResourcesRequest } from "./ListTagResources/req";
+import { ListTagResourcesResponse } from "./ListTagResources/res";
+import { ModifyApiRequest } from "./ModifyApi/req";
+import { ModifyApiResponse } from "./ModifyApi/res";
+import { ModifyApiGroupRequest } from "./ModifyApiGroup/req";
+import { ModifyApiGroupResponse } from "./ModifyApiGroup/res";
+import { ModifyAppRequest } from "./ModifyApp/req";
+import { ModifyAppResponse } from "./ModifyApp/res";
+import { ModifyIpControlRequest } from "./ModifyIpControl/req";
+import { ModifyIpControlResponse } from "./ModifyIpControl/res";
+import { ModifyIpControlPolicyItemRequest } from "./ModifyIpControlPolicyItem/req";
+import { ModifyIpControlPolicyItemResponse } from "./ModifyIpControlPolicyItem/res";
+import { ModifyLogConfigRequest } from "./ModifyLogConfig/req";
+import { ModifyLogConfigResponse } from "./ModifyLogConfig/res";
+import { ModifySignatureRequest } from "./ModifySignature/req";
+import { ModifySignatureResponse } from "./ModifySignature/res";
+import { ModifyTrafficControlRequest } from "./ModifyTrafficControl/req";
+import { ModifyTrafficControlResponse } from "./ModifyTrafficControl/res";
+import { ReactivateDomainRequest } from "./ReactivateDomain/req";
+import { ReactivateDomainResponse } from "./ReactivateDomain/res";
+import { RemoveApisAuthoritiesRequest } from "./RemoveApisAuthorities/req";
+import { RemoveApisAuthoritiesResponse } from "./RemoveApisAuthorities/res";
+import { RemoveAppsAuthoritiesRequest } from "./RemoveAppsAuthorities/req";
+import { RemoveAppsAuthoritiesResponse } from "./RemoveAppsAuthorities/res";
+import { RemoveIpControlApisRequest } from "./RemoveIpControlApis/req";
+import { RemoveIpControlApisResponse } from "./RemoveIpControlApis/res";
+import { RemoveIpControlPolicyItemRequest } from "./RemoveIpControlPolicyItem/req";
+import { RemoveIpControlPolicyItemResponse } from "./RemoveIpControlPolicyItem/res";
+import { RemoveSignatureApisRequest } from "./RemoveSignatureApis/req";
+import { RemoveSignatureApisResponse } from "./RemoveSignatureApis/res";
+import { RemoveTrafficControlApisRequest } from "./RemoveTrafficControlApis/req";
+import { RemoveTrafficControlApisResponse } from "./RemoveTrafficControlApis/res";
+import { RemoveVpcAccessRequest } from "./RemoveVpcAccess/req";
+import { RemoveVpcAccessResponse } from "./RemoveVpcAccess/res";
+import { ResetAppCodeRequest } from "./ResetAppCode/req";
+import { ResetAppCodeResponse } from "./ResetAppCode/res";
+import { ResetAppSecretRequest } from "./ResetAppSecret/req";
+import { ResetAppSecretResponse } from "./ResetAppSecret/res";
+import { SdkGenerateByAppRequest } from "./SdkGenerateByApp/req";
+import { SdkGenerateByAppResponse } from "./SdkGenerateByApp/res";
+import { SdkGenerateByGroupRequest } from "./SdkGenerateByGroup/req";
+import { SdkGenerateByGroupResponse } from "./SdkGenerateByGroup/res";
+import { SetApisAuthoritiesRequest } from "./SetApisAuthorities/req";
+import { SetApisAuthoritiesResponse } from "./SetApisAuthorities/res";
+import { SetAppsAuthoritiesRequest } from "./SetAppsAuthorities/req";
+import { SetAppsAuthoritiesResponse } from "./SetAppsAuthorities/res";
+import { SetDomainCertificateRequest } from "./SetDomainCertificate/req";
+import { SetDomainCertificateResponse } from "./SetDomainCertificate/res";
+import { SetDomainWebSocketStatusRequest } from "./SetDomainWebSocketStatus/req";
+import { SetDomainWebSocketStatusResponse } from "./SetDomainWebSocketStatus/res";
+import { SetIpControlApisRequest } from "./SetIpControlApis/req";
+import { SetIpControlApisResponse } from "./SetIpControlApis/res";
+import { SetSignatureApisRequest } from "./SetSignatureApis/req";
+import { SetSignatureApisResponse } from "./SetSignatureApis/res";
+import { SetTrafficControlApisRequest } from "./SetTrafficControlApis/req";
+import { SetTrafficControlApisResponse } from "./SetTrafficControlApis/res";
+import { SetVpcAccessRequest } from "./SetVpcAccess/req";
+import { SetVpcAccessResponse } from "./SetVpcAccess/res";
+import { SwitchApiRequest } from "./SwitchApi/req";
+import { SwitchApiResponse } from "./SwitchApi/res";
+import { TagResourcesRequest } from "./TagResources/req";
+import { TagResourcesResponse } from "./TagResources/res";
+import { UntagResourcesRequest } from "./UntagResources/req";
+import { UntagResourcesResponse } from "./UntagResources/res";
+import { CreateInstanceRequest } from "./CreateInstance/req";
+import { CreateInstanceResponse } from "./CreateInstance/res";
+import { DeleteInstanceRequest } from "./DeleteInstance/req";
+import { DeleteInstanceResponse } from "./DeleteInstance/res";
+
 interface CLOUDAPI {
-    DeleteApiGroup(query: {
-        "RegionId"?: string;
-        "GroupId": string;
-        "Tag"?: string[];
-    }): Promise<{}>;
-    DescribeApiHistory(query: {
-        "RegionId": string;
-        "ApiId": string;
-        "StageName": string;
-        "HistoryVersion": string;
-        "GroupId"?: string;
-    }): Promise<{}>;
-    DescribeApp(query: {
-        "RegionId"?: string;
-        "AppId"?: number;
-    }): Promise<{}>;
-    DescribeIpControls(query: {
-        "RegionId"?: string;
-        "IpControlId"?: string;
-        "IpControlName"?: string;
-        "IpControlType"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    CreateLogConfig(query: {
-        "RegionId"?: string;
-        "SlsLogStore": string;
-        "SlsProject": string;
-        "LogType"?: string;
-    }): Promise<{}>;
-    SetDomain(query: {
-        "RegionId"?: string;
-        "DomainName": string;
-        "GroupId": string;
-    }): Promise<{}>;
-    AbolishApi(query: {
-        "RegionId": string;
-        "ApiId": string;
-        "StageName": string;
-        "GroupId"?: string;
-    }): Promise<{}>;
-    AddIpControlPolicyItem(query: {
-        "RegionId"?: string;
-        "CidrIp": string;
-        "IpControlId": string;
-        "AppId"?: string;
-    }): Promise<{}>;
-    AddTrafficSpecialControl(query: {
-        "RegionId"?: string;
-        "SpecialType": string;
-        "SpecialKey": string;
-        "TrafficValue": number;
-        "TrafficControlId": string;
-    }): Promise<{}>;
-    CreateApi(query: {
-        "RegionId": string;
-        "GroupId": string;
-        "ApiName": string;
-        "Visibility": string;
-        "RequestConfig": string;
-        "ServiceConfig": string;
-        "ResultType"?: string;
-        "ResultSample"?: string;
-        "Description"?: string;
-        "AuthType"?: string;
-        "RequestParameters"?: string;
-        "SystemParameters"?: string;
-        "ConstantParameters"?: string;
-        "ServiceParameters"?: string;
-        "ServiceParametersMap"?: string;
-        "FailResultSample"?: string;
-        "ErrorCodeSamples"?: string;
-        "ResultDescriptions"?: string;
-        "OpenIdConnectConfig"?: string;
-        "AllowSignatureMethod"?: string;
-        "WebSocketApiType"?: string;
-        "ResultBodyModel"?: string;
-        "ForceNonceCheck"?: boolean;
-        "DisableInternet"?: boolean;
-        "AppCodeAuthType"?: string;
-    }): Promise<{}>;
-    CreateApiGroup(query: {
-        "RegionId"?: string;
-        "Description"?: string;
-        "GroupName": string;
-        "Source"?: string;
-        "InstanceId"?: string;
-        "Tag"?: string[];
-    }): Promise<{}>;
-    CreateApiStageVariable(query: {
-        "RegionId"?: string;
-        "StageId": string;
-        "VariableName": string;
-        "GroupId": string;
-        "SupportRoute"?: boolean;
-        "VariableValue"?: string;
-        "StageRouteModel"?: string;
-    }): Promise<{}>;
-    CreateApp(query: {
-        "RegionId"?: string;
-        "AppName": string;
-        "Description"?: string;
-        "Tag"?: string[];
-    }): Promise<{}>;
-    CreateIntranetDomain(query: {
-        "RegionId"?: string;
-        "GroupId": string;
-        "DeleteInternetDomain"?: boolean;
-    }): Promise<{}>;
-    CreateIpControl(query: {
-        "RegionId"?: string;
-        "IpControlType": string;
-        "IpControlName": string;
-        "Description"?: string;
-        "IpControlPolicys"?: string[];
-    }): Promise<{}>;
-    CreateSignature(query: {
-        "RegionId"?: string;
-        "SignatureKey": string;
-        "SignatureSecret": string;
-        "SignatureName": string;
-    }): Promise<{}>;
-    CreateTrafficControl(query: {
-        "RegionId"?: string;
-        "TrafficControlUnit": string;
-        "ApiDefault": number;
-        "TrafficControlName": string;
-        "UserDefault"?: number;
-        "AppDefault"?: number;
-        "Description"?: string;
-    }): Promise<{}>;
-    DeleteAllTrafficSpecialControl(query: {
-        "RegionId"?: string;
-        "TrafficControlId": string;
-    }): Promise<{}>;
-    DeleteApi(query: {
-        "RegionId": string;
-        "ApiId": string;
-        "GroupId"?: string;
-    }): Promise<{}>;
-    DeleteApiStageVariable(query: {
-        "RegionId"?: string;
-        "StageId": string;
-        "VariableName": string;
-        "GroupId": string;
-    }): Promise<{}>;
-    DeleteApp(query: {
-        "RegionId"?: string;
-        "AppId": number;
-        "Tag"?: string[];
-    }): Promise<{}>;
-    DeleteDomain(query: {
-        "RegionId"?: string;
-        "DomainName": string;
-        "GroupId": string;
-    }): Promise<{}>;
-    DeleteDomainCertificate(query: {
-        "RegionId"?: string;
-        "DomainName": string;
-        "CertificateId": string;
-        "GroupId": string;
-    }): Promise<{}>;
-    DeleteIpControl(query: {
-        "RegionId"?: string;
-        "IpControlId": string;
-    }): Promise<{}>;
-    DeleteLogConfig(query: {
-        "RegionId"?: string;
-        "LogType"?: string;
-    }): Promise<{}>;
-    DeleteSignature(query: {
-        "RegionId"?: string;
-        "SignatureId": string;
-    }): Promise<{}>;
-    DeleteTrafficControl(query: {
-        "RegionId"?: string;
-        "TrafficControlId": string;
-    }): Promise<{}>;
-    DeleteTrafficSpecialControl(query: {
-        "RegionId"?: string;
-        "SpecialType": string;
-        "SpecialKey": string;
-        "TrafficControlId": string;
-    }): Promise<{}>;
-    DeployApi(query: {
-        "RegionId": string;
-        "ApiId": string;
-        "StageName": string;
-        "Description": string;
-        "GroupId"?: string;
-    }): Promise<{}>;
-    DescribeApi(query: {
-        "RegionId": string;
-        "ApiId": string;
-        "GroupId"?: string;
-    }): Promise<{}>;
-    DescribeApiDoc(query: {
-        "RegionId": string;
-        "ApiId": string;
-        "GroupId"?: string;
-        "StageName"?: string;
-    }): Promise<{}>;
-    DescribeApiErrorData(query: {
-        "RegionId": string;
-        "ApiId": string;
-        "StartTime": string;
-        "EndTime": string;
-        "GroupId"?: string;
-    }): Promise<{}>;
-    DescribeApiGroup(query: {
-        "RegionId"?: string;
-        "GroupId": string;
-        "Tag"?: string[];
-    }): Promise<{}>;
-    DescribeApiGroups(query: {
-        "RegionId": string;
-        "GroupId"?: string;
-        "GroupName"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-        "Tag"?: string[];
-        "EnableTagAuth"?: boolean;
-    }): Promise<{}>;
-    DescribeApiHistories(query: {
-        "RegionId": string;
-        "GroupId": string;
-        "StageName"?: string;
-        "ApiId"?: string;
-        "ApiName"?: string;
-        "PageSize"?: string;
-        "PageNumber"?: string;
-    }): Promise<{}>;
-    DescribeApiIpControls(query: {
-        "RegionId"?: string;
-        "GroupId": string;
-        "StageName": string;
-        "ApiIds"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    DescribeApiLatencyData(query: {
-        "RegionId": string;
-        "ApiId": string;
-        "StartTime": string;
-        "EndTime": string;
-        "GroupId"?: string;
-    }): Promise<{}>;
-    DescribeApiQpsData(query: {
-        "RegionId": string;
-        "ApiId": string;
-        "StartTime": string;
-        "EndTime": string;
-        "GroupId"?: string;
-    }): Promise<{}>;
-    DescribeApiSignatures(query: {
-        "RegionId"?: string;
-        "GroupId": string;
-        "StageName": string;
-        "ApiIds"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    DescribeApiStage(query: {
-        "RegionId"?: string;
-        "StageId": string;
-        "GroupId": string;
-    }): Promise<{}>;
-    DescribeApiTrafficControls(query: {
-        "RegionId"?: string;
-        "GroupId": string;
-        "StageName": string;
-        "ApiIds"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    DescribeApiTrafficData(query: {
-        "RegionId": string;
-        "ApiId": string;
-        "StartTime": string;
-        "EndTime": string;
-        "GroupId"?: string;
-    }): Promise<{}>;
-    DescribeApis(query: {
-        "RegionId": string;
-        "GroupId"?: string;
-        "ApiId"?: string;
-        "ApiName"?: string;
-        "CatalogId"?: string;
-        "Visibility"?: string;
-        "PageSize"?: number;
-        "PageNumber"?: number;
-        "EnableTagAuth"?: boolean;
-        "Tag"?: string[];
-    }): Promise<{}>;
-    DescribeApisByApp(query: {
-        "RegionId"?: string;
-        "AppId": number;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    DescribeApisByIpControl(query: {
-        "RegionId"?: string;
-        "IpControlId": string;
-        "PageSize"?: number;
-        "PageNumber"?: number;
-    }): Promise<{}>;
-    DescribeApisBySignature(query: {
-        "RegionId"?: string;
-        "SignatureId": string;
-        "PageSize"?: number;
-        "PageNumber"?: number;
-    }): Promise<{}>;
-    DescribeApisByTrafficControl(query: {
-        "RegionId"?: string;
-        "TrafficControlId": string;
-        "PageSize"?: number;
-        "PageNumber"?: number;
-    }): Promise<{}>;
-    DescribeAppAttributes(query: {
-        "RegionId"?: string;
-        "AppId"?: number;
-        "AppName"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-        "Tag"?: string[];
-        "EnableTagAuth"?: boolean;
-    }): Promise<{}>;
-    DescribeAppSecurity(query: {
-        "RegionId"?: string;
-        "AppId": number;
-        "Tag"?: string[];
-    }): Promise<{}>;
-    DescribeApps(query: {
-        "RegionId"?: string;
-        "AppId"?: number;
-        "AppOwner"?: number;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    DescribeAuthorizedApis(query: {
-        "RegionId": string;
-        "AppId": number;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    DescribeAuthorizedApps(query: {
-        "RegionId": string;
-        "ApiId": string;
-        "GroupId"?: string;
-        "StageName"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-        "AppId"?: number;
-        "AppName"?: string;
-        "AppOwnerId"?: number;
-    }): Promise<{}>;
-    DescribeDeployedApi(query: {
-        "RegionId": string;
-        "ApiId": string;
-        "StageName": string;
-        "GroupId"?: string;
-    }): Promise<{}>;
-    DescribeDeployedApis(query: {
-        "RegionId": string;
-        "GroupId"?: string;
-        "StageName"?: string;
-        "ApiId"?: string;
-        "ApiName"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-        "Tag"?: string[];
-        "EnableTagAuth"?: boolean;
-    }): Promise<{}>;
-    DescribeDomain(query: {
-        "RegionId"?: string;
-        "DomainName": string;
-        "GroupId": string;
-    }): Promise<{}>;
-    DescribeDomainsResolution(query: {
-        "RegionId"?: string;
-        "DomainNames": string;
-        "GroupId": string;
-    }): Promise<{}>;
-    DescribeHistoryApis(query: {
-        "RegionId": string;
-        "GroupId": string;
-        "StageName"?: string;
-        "ApiId"?: string;
-        "ApiName"?: string;
-        "PageSize"?: string;
-        "PageNumber"?: string;
-    }): Promise<{}>;
-    DescribeIpControlPolicyItems(query: {
-        "RegionId"?: string;
-        "IpControlId"?: string;
-        "PolicyItemId"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    DescribeLogConfig(query: {
-        "RegionId"?: string;
-        "LogType"?: string;
-    }): Promise<{}>;
-    DescribePurchasedApiGroup(query: {
-        "RegionId"?: string;
-        "GroupId": string;
-    }): Promise<{}>;
-    DescribePurchasedApiGroups(query: {
-        "RegionId": string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    DescribePurchasedApis(query: {
-        "RegionId": string;
-        "GroupId"?: string;
-        "StageName"?: string;
-        "ApiId"?: string;
-        "ApiName"?: string;
-        "Visibility"?: string;
-        "PageSize"?: number;
-        "PageNumber"?: number;
-    }): Promise<{}>;
-    DescribeRegions(query: {
-        "RegionId": string;
-        "Language"?: string;
-    }): Promise<{}>;
-    DescribeSignatures(query: {
-        "RegionId"?: string;
-        "SignatureId"?: string;
-        "SignatureName"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    DescribeSignaturesByApi(query: {
-        "RegionId"?: string;
-        "ApiId": string;
-        "StageName": string;
-        "GroupId": string;
-    }): Promise<{}>;
-    DescribeSystemParameters(query: {
-        "RegionId": string;
-    }): Promise<{}>;
-    DescribeTrafficControls(query: {
-        "RegionId"?: string;
-        "TrafficControlId"?: string;
-        "GroupId"?: string;
-        "ApiId"?: string;
-        "StageName"?: string;
-        "TrafficControlName"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    DescribeTrafficControlsByApi(query: {
-        "RegionId"?: string;
-        "ApiId": string;
-        "StageName": string;
-        "GroupId": string;
-    }): Promise<{}>;
-    DescribeVpcAccesses(query: {
-        "RegionId": string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ImportSwagger(query: {
-        "RegionId": string;
-        "DataFormat": string;
-        "Data": string;
-        "Overwrite": boolean;
-        "GroupId": string;
-    }): Promise<{}>;
-    ListTagResources(query: {
-        "RegionId"?: string;
-        "NextToken"?: string;
-        "ResourceType": string;
-        "ResourceId"?: string[];
-        "Tag"?: string[];
-    }): Promise<{}>;
-    ModifyApi(query: {
-        "RegionId"?: string;
-        "ApiName": string;
-        "Visibility": string;
-        "RequestConfig": string;
-        "ServiceConfig": string;
-        "GroupId"?: string;
-        "ResultType"?: string;
-        "ResultSample"?: string;
-        "ApiId": string;
-        "Description"?: string;
-        "AuthType"?: string;
-        "RequestParameters"?: string;
-        "SystemParameters"?: string;
-        "ConstantParameters"?: string;
-        "ServiceParameters"?: string;
-        "ServiceParametersMap"?: string;
-        "FailResultSample"?: string;
-        "ErrorCodeSamples"?: string;
-        "ResultDescriptions"?: string;
-        "OpenIdConnectConfig"?: string;
-        "AllowSignatureMethod"?: string;
-        "WebSocketApiType"?: string;
-        "ResultBodyModel"?: string;
-        "ForceNonceCheck"?: boolean;
-        "DisableInternet"?: boolean;
-        "AppCodeAuthType"?: string;
-    }): Promise<{}>;
-    ModifyApiGroup(query: {
-        "RegionId"?: string;
-        "GroupId": string;
-        "GroupName"?: string;
-        "Description"?: string;
-        "Tag"?: string[];
-    }): Promise<{}>;
-    ModifyApp(query: {
-        "RegionId"?: string;
-        "AppId": number;
-        "AppName"?: string;
-        "Description"?: string;
-        "Tag"?: string[];
-    }): Promise<{}>;
-    ModifyIpControl(query: {
-        "RegionId"?: string;
-        "IpControlId": string;
-        "IpControlName"?: string;
-        "Description"?: string;
-    }): Promise<{}>;
-    ModifyIpControlPolicyItem(query: {
-        "RegionId"?: string;
-        "PolicyItemId": string;
-        "CidrIp": string;
-        "IpControlId": string;
-        "AppId"?: string;
-    }): Promise<{}>;
-    ModifyLogConfig(query: {
-        "RegionId"?: string;
-        "SlsLogStore": string;
-        "SlsProject": string;
-        "LogType"?: string;
-    }): Promise<{}>;
-    ModifySignature(query: {
-        "RegionId"?: string;
-        "SignatureId": string;
-        "SignatureName"?: string;
-        "SignatureKey"?: string;
-        "SignatureSecret"?: string;
-    }): Promise<{}>;
-    ModifyTrafficControl(query: {
-        "RegionId"?: string;
-        "TrafficControlId": string;
-        "TrafficControlName"?: string;
-        "TrafficControlUnit"?: string;
-        "ApiDefault"?: number;
-        "UserDefault"?: number;
-        "AppDefault"?: number;
-        "Description"?: string;
-    }): Promise<{}>;
-    ReactivateDomain(query: {
-        "RegionId"?: string;
-        "DomainName": string;
-        "GroupId": string;
-    }): Promise<{}>;
-    RemoveApisAuthorities(query: {
-        "RegionId": string;
-        "AppId": number;
-        "StageName": string;
-        "ApiIds": string;
-        "GroupId"?: string;
-        "Description"?: string;
-    }): Promise<{}>;
-    RemoveAppsAuthorities(query: {
-        "RegionId": string;
-        "ApiId": string;
-        "StageName": string;
-        "AppIds": string;
-        "GroupId"?: string;
-    }): Promise<{}>;
-    RemoveIpControlApis(query: {
-        "RegionId"?: string;
-        "GroupId": string;
-        "StageName": string;
-        "IpControlId": string;
-        "ApiIds"?: string;
-    }): Promise<{}>;
-    RemoveIpControlPolicyItem(query: {
-        "RegionId"?: string;
-        "PolicyItemIds": string;
-        "IpControlId": string;
-    }): Promise<{}>;
-    RemoveSignatureApis(query: {
-        "RegionId"?: string;
-        "GroupId": string;
-        "StageName": string;
-        "SignatureId": string;
-        "ApiIds"?: string;
-    }): Promise<{}>;
-    RemoveTrafficControlApis(query: {
-        "RegionId"?: string;
-        "GroupId": string;
-        "StageName": string;
-        "TrafficControlId": string;
-        "ApiIds"?: string;
-    }): Promise<{}>;
-    RemoveVpcAccess(query: {
-        "RegionId": string;
-        "VpcId": string;
-        "InstanceId": string;
-        "Port": number;
-    }): Promise<{}>;
-    ResetAppCode(query: {
-        "RegionId"?: string;
-        "AppCode": string;
-    }): Promise<{}>;
-    ResetAppSecret(query: {
-        "RegionId"?: string;
-        "AppKey": string;
-    }): Promise<{}>;
-    SdkGenerateByApp(query: {
-        "RegionId"?: string;
-        "Language": string;
-        "AppId": number;
-    }): Promise<{}>;
-    SdkGenerateByGroup(query: {
-        "RegionId": string;
-        "GroupId": string;
-        "Language": string;
-    }): Promise<{}>;
-    SetApisAuthorities(query: {
-        "RegionId": string;
-        "AppId": number;
-        "StageName": string;
-        "GroupId"?: string;
-        "ApiIds"?: string;
-        "Description"?: string;
-        "AuthVaildTime"?: string;
-        "AuthValidTime"?: string;
-    }): Promise<{}>;
-    SetAppsAuthorities(query: {
-        "RegionId": string;
-        "ApiId": string;
-        "StageName": string;
-        "AppIds": string;
-        "GroupId"?: string;
-        "Description"?: string;
-        "AuthVaildTime"?: string;
-        "AuthValidTime"?: string;
-    }): Promise<{}>;
-    SetDomainCertificate(query: {
-        "RegionId"?: string;
-        "DomainName": string;
-        "CertificateName": string;
-        "GroupId": string;
-        "CertificateBody"?: string;
-        "CertificatePrivateKey"?: string;
-    }): Promise<{}>;
-    SetDomainWebSocketStatus(query: {
-        "RegionId"?: string;
-        "DomainName": string;
-        "ActionValue": string;
-        "GroupId": string;
-    }): Promise<{}>;
-    SetIpControlApis(query: {
-        "RegionId"?: string;
-        "GroupId": string;
-        "ApiIds": string;
-        "StageName": string;
-        "IpControlId": string;
-    }): Promise<{}>;
-    SetSignatureApis(query: {
-        "RegionId"?: string;
-        "GroupId": string;
-        "ApiIds": string;
-        "StageName": string;
-        "SignatureId": string;
-    }): Promise<{}>;
-    SetTrafficControlApis(query: {
-        "RegionId"?: string;
-        "GroupId": string;
-        "ApiIds": string;
-        "StageName": string;
-        "TrafficControlId": string;
-    }): Promise<{}>;
-    SetVpcAccess(query: {
-        "RegionId": string;
-        "Name": string;
-        "VpcId": string;
-        "InstanceId": string;
-        "Port": number;
-    }): Promise<{}>;
-    SwitchApi(query: {
-        "RegionId": string;
-        "ApiId": string;
-        "StageName": string;
-        "Description": string;
-        "HistoryVersion": string;
-        "GroupId"?: string;
-    }): Promise<{}>;
-    TagResources(query: {
-        "RegionId"?: string;
-        "Tag": string[];
-        "ResourceId": string[];
-        "ResourceType": string;
-    }): Promise<{}>;
-    UntagResources(query: {
-        "RegionId"?: string;
-        "ResourceId": string[];
-        "ResourceType": string;
-        "TagKey"?: string[];
-        "All"?: boolean;
-    }): Promise<{}>;
-    CreateInstance(query: {
-        "RegionId": string;
-        "ChargeType": string;
-        "InstanceName": string;
-        "InstanceSpec": string;
-        "Token": string;
-        "ZoneId"?: string;
-        "HttpsPolicy"?: string;
-        "Duration"?: number;
-        "PricingCycle"?: string;
-        "AutoPay"?: boolean;
-    }): Promise<{}>;
-    DeleteInstance(query: {
-        "RegionId": string;
-        "InstanceId": string;
-        "Token": string;
-    }): Promise<{}>;
+    DeleteApiGroup(query: DeleteApiGroupRequest): Promise<DeleteApiGroupResponse>;
+    DescribeApiHistory(query: DescribeApiHistoryRequest): Promise<DescribeApiHistoryResponse>;
+    DescribeApp(query: DescribeAppRequest): Promise<DescribeAppResponse>;
+    DescribeIpControls(query: DescribeIpControlsRequest): Promise<DescribeIpControlsResponse>;
+    CreateLogConfig(query: CreateLogConfigRequest): Promise<CreateLogConfigResponse>;
+    SetDomain(query: SetDomainRequest): Promise<SetDomainResponse>;
+    AbolishApi(query: AbolishApiRequest): Promise<AbolishApiResponse>;
+    AddIpControlPolicyItem(query: AddIpControlPolicyItemRequest): Promise<AddIpControlPolicyItemResponse>;
+    AddTrafficSpecialControl(query: AddTrafficSpecialControlRequest): Promise<AddTrafficSpecialControlResponse>;
+    CreateApi(query: CreateApiRequest): Promise<CreateApiResponse>;
+    CreateApiGroup(query: CreateApiGroupRequest): Promise<CreateApiGroupResponse>;
+    CreateApiStageVariable(query: CreateApiStageVariableRequest): Promise<CreateApiStageVariableResponse>;
+    CreateApp(query: CreateAppRequest): Promise<CreateAppResponse>;
+    CreateIntranetDomain(query: CreateIntranetDomainRequest): Promise<CreateIntranetDomainResponse>;
+    CreateIpControl(query: CreateIpControlRequest): Promise<CreateIpControlResponse>;
+    CreateSignature(query: CreateSignatureRequest): Promise<CreateSignatureResponse>;
+    CreateTrafficControl(query: CreateTrafficControlRequest): Promise<CreateTrafficControlResponse>;
+    DeleteAllTrafficSpecialControl(query: DeleteAllTrafficSpecialControlRequest): Promise<DeleteAllTrafficSpecialControlResponse>;
+    DeleteApi(query: DeleteApiRequest): Promise<DeleteApiResponse>;
+    DeleteApiStageVariable(query: DeleteApiStageVariableRequest): Promise<DeleteApiStageVariableResponse>;
+    DeleteApp(query: DeleteAppRequest): Promise<DeleteAppResponse>;
+    DeleteDomain(query: DeleteDomainRequest): Promise<DeleteDomainResponse>;
+    DeleteDomainCertificate(query: DeleteDomainCertificateRequest): Promise<DeleteDomainCertificateResponse>;
+    DeleteIpControl(query: DeleteIpControlRequest): Promise<DeleteIpControlResponse>;
+    DeleteLogConfig(query: DeleteLogConfigRequest): Promise<DeleteLogConfigResponse>;
+    DeleteSignature(query: DeleteSignatureRequest): Promise<DeleteSignatureResponse>;
+    DeleteTrafficControl(query: DeleteTrafficControlRequest): Promise<DeleteTrafficControlResponse>;
+    DeleteTrafficSpecialControl(query: DeleteTrafficSpecialControlRequest): Promise<DeleteTrafficSpecialControlResponse>;
+    DeployApi(query: DeployApiRequest): Promise<DeployApiResponse>;
+    DescribeApi(query: DescribeApiRequest): Promise<DescribeApiResponse>;
+    DescribeApiDoc(query: DescribeApiDocRequest): Promise<DescribeApiDocResponse>;
+    DescribeApiErrorData(query: DescribeApiErrorDataRequest): Promise<DescribeApiErrorDataResponse>;
+    DescribeApiGroup(query: DescribeApiGroupRequest): Promise<DescribeApiGroupResponse>;
+    DescribeApiGroups(query: DescribeApiGroupsRequest): Promise<DescribeApiGroupsResponse>;
+    DescribeApiHistories(query: DescribeApiHistoriesRequest): Promise<DescribeApiHistoriesResponse>;
+    DescribeApiIpControls(query: DescribeApiIpControlsRequest): Promise<DescribeApiIpControlsResponse>;
+    DescribeApiLatencyData(query: DescribeApiLatencyDataRequest): Promise<DescribeApiLatencyDataResponse>;
+    DescribeApiQpsData(query: DescribeApiQpsDataRequest): Promise<DescribeApiQpsDataResponse>;
+    DescribeApiSignatures(query: DescribeApiSignaturesRequest): Promise<DescribeApiSignaturesResponse>;
+    DescribeApiStage(query: DescribeApiStageRequest): Promise<DescribeApiStageResponse>;
+    DescribeApiTrafficControls(query: DescribeApiTrafficControlsRequest): Promise<DescribeApiTrafficControlsResponse>;
+    DescribeApiTrafficData(query: DescribeApiTrafficDataRequest): Promise<DescribeApiTrafficDataResponse>;
+    DescribeApis(query: DescribeApisRequest): Promise<DescribeApisResponse>;
+    DescribeApisByApp(query: DescribeApisByAppRequest): Promise<DescribeApisByAppResponse>;
+    DescribeApisByIpControl(query: DescribeApisByIpControlRequest): Promise<DescribeApisByIpControlResponse>;
+    DescribeApisBySignature(query: DescribeApisBySignatureRequest): Promise<DescribeApisBySignatureResponse>;
+    DescribeApisByTrafficControl(query: DescribeApisByTrafficControlRequest): Promise<DescribeApisByTrafficControlResponse>;
+    DescribeAppAttributes(query: DescribeAppAttributesRequest): Promise<DescribeAppAttributesResponse>;
+    DescribeAppSecurity(query: DescribeAppSecurityRequest): Promise<DescribeAppSecurityResponse>;
+    DescribeApps(query: DescribeAppsRequest): Promise<DescribeAppsResponse>;
+    DescribeAuthorizedApis(query: DescribeAuthorizedApisRequest): Promise<DescribeAuthorizedApisResponse>;
+    DescribeAuthorizedApps(query: DescribeAuthorizedAppsRequest): Promise<DescribeAuthorizedAppsResponse>;
+    DescribeDeployedApi(query: DescribeDeployedApiRequest): Promise<DescribeDeployedApiResponse>;
+    DescribeDeployedApis(query: DescribeDeployedApisRequest): Promise<DescribeDeployedApisResponse>;
+    DescribeDomain(query: DescribeDomainRequest): Promise<DescribeDomainResponse>;
+    DescribeDomainsResolution(query: DescribeDomainsResolutionRequest): Promise<DescribeDomainsResolutionResponse>;
+    DescribeHistoryApis(query: DescribeHistoryApisRequest): Promise<DescribeHistoryApisResponse>;
+    DescribeIpControlPolicyItems(query: DescribeIpControlPolicyItemsRequest): Promise<DescribeIpControlPolicyItemsResponse>;
+    DescribeLogConfig(query: DescribeLogConfigRequest): Promise<DescribeLogConfigResponse>;
+    DescribePurchasedApiGroup(query: DescribePurchasedApiGroupRequest): Promise<DescribePurchasedApiGroupResponse>;
+    DescribePurchasedApiGroups(query: DescribePurchasedApiGroupsRequest): Promise<DescribePurchasedApiGroupsResponse>;
+    DescribePurchasedApis(query: DescribePurchasedApisRequest): Promise<DescribePurchasedApisResponse>;
+    DescribeRegions(query: DescribeRegionsRequest): Promise<DescribeRegionsResponse>;
+    DescribeSignatures(query: DescribeSignaturesRequest): Promise<DescribeSignaturesResponse>;
+    DescribeSignaturesByApi(query: DescribeSignaturesByApiRequest): Promise<DescribeSignaturesByApiResponse>;
+    DescribeSystemParameters(query: DescribeSystemParametersRequest): Promise<DescribeSystemParametersResponse>;
+    DescribeTrafficControls(query: DescribeTrafficControlsRequest): Promise<DescribeTrafficControlsResponse>;
+    DescribeTrafficControlsByApi(query: DescribeTrafficControlsByApiRequest): Promise<DescribeTrafficControlsByApiResponse>;
+    DescribeVpcAccesses(query: DescribeVpcAccessesRequest): Promise<DescribeVpcAccessesResponse>;
+    ImportSwagger(query: ImportSwaggerRequest): Promise<ImportSwaggerResponse>;
+    ListTagResources(query: ListTagResourcesRequest): Promise<ListTagResourcesResponse>;
+    ModifyApi(query: ModifyApiRequest): Promise<ModifyApiResponse>;
+    ModifyApiGroup(query: ModifyApiGroupRequest): Promise<ModifyApiGroupResponse>;
+    ModifyApp(query: ModifyAppRequest): Promise<ModifyAppResponse>;
+    ModifyIpControl(query: ModifyIpControlRequest): Promise<ModifyIpControlResponse>;
+    ModifyIpControlPolicyItem(query: ModifyIpControlPolicyItemRequest): Promise<ModifyIpControlPolicyItemResponse>;
+    ModifyLogConfig(query: ModifyLogConfigRequest): Promise<ModifyLogConfigResponse>;
+    ModifySignature(query: ModifySignatureRequest): Promise<ModifySignatureResponse>;
+    ModifyTrafficControl(query: ModifyTrafficControlRequest): Promise<ModifyTrafficControlResponse>;
+    ReactivateDomain(query: ReactivateDomainRequest): Promise<ReactivateDomainResponse>;
+    RemoveApisAuthorities(query: RemoveApisAuthoritiesRequest): Promise<RemoveApisAuthoritiesResponse>;
+    RemoveAppsAuthorities(query: RemoveAppsAuthoritiesRequest): Promise<RemoveAppsAuthoritiesResponse>;
+    RemoveIpControlApis(query: RemoveIpControlApisRequest): Promise<RemoveIpControlApisResponse>;
+    RemoveIpControlPolicyItem(query: RemoveIpControlPolicyItemRequest): Promise<RemoveIpControlPolicyItemResponse>;
+    RemoveSignatureApis(query: RemoveSignatureApisRequest): Promise<RemoveSignatureApisResponse>;
+    RemoveTrafficControlApis(query: RemoveTrafficControlApisRequest): Promise<RemoveTrafficControlApisResponse>;
+    RemoveVpcAccess(query: RemoveVpcAccessRequest): Promise<RemoveVpcAccessResponse>;
+    ResetAppCode(query: ResetAppCodeRequest): Promise<ResetAppCodeResponse>;
+    ResetAppSecret(query: ResetAppSecretRequest): Promise<ResetAppSecretResponse>;
+    SdkGenerateByApp(query: SdkGenerateByAppRequest): Promise<SdkGenerateByAppResponse>;
+    SdkGenerateByGroup(query: SdkGenerateByGroupRequest): Promise<SdkGenerateByGroupResponse>;
+    SetApisAuthorities(query: SetApisAuthoritiesRequest): Promise<SetApisAuthoritiesResponse>;
+    SetAppsAuthorities(query: SetAppsAuthoritiesRequest): Promise<SetAppsAuthoritiesResponse>;
+    SetDomainCertificate(query: SetDomainCertificateRequest): Promise<SetDomainCertificateResponse>;
+    SetDomainWebSocketStatus(query: SetDomainWebSocketStatusRequest): Promise<SetDomainWebSocketStatusResponse>;
+    SetIpControlApis(query: SetIpControlApisRequest): Promise<SetIpControlApisResponse>;
+    SetSignatureApis(query: SetSignatureApisRequest): Promise<SetSignatureApisResponse>;
+    SetTrafficControlApis(query: SetTrafficControlApisRequest): Promise<SetTrafficControlApisResponse>;
+    SetVpcAccess(query: SetVpcAccessRequest): Promise<SetVpcAccessResponse>;
+    SwitchApi(query: SwitchApiRequest): Promise<SwitchApiResponse>;
+    TagResources(query: TagResourcesRequest): Promise<TagResourcesResponse>;
+    UntagResources(query: UntagResourcesRequest): Promise<UntagResourcesResponse>;
+    CreateInstance(query: CreateInstanceRequest): Promise<CreateInstanceResponse>;
+    DeleteInstance(query: DeleteInstanceRequest): Promise<DeleteInstanceResponse>;
 }
 export default CLOUDAPI;

@@ -1,0 +1,3 @@
+interface DescribeUserIdentityResponse {
+}
+export { DescribeUserIdentityResponse };

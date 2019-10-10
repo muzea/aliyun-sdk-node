@@ -1,0 +1,3 @@
+interface CreateDeviceResponse {
+}
+export { CreateDeviceResponse };

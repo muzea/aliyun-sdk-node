@@ -1,0 +1,3 @@
+interface ReviewAnalysisResponse {
+}
+export { ReviewAnalysisResponse };

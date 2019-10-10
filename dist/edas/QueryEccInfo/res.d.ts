@@ -1,0 +1,3 @@
+interface QueryEccInfoResponse {
+}
+export { QueryEccInfoResponse };

@@ -1,0 +1,3 @@
+interface DescribeRiskCheckItemResultResponse {
+}
+export { DescribeRiskCheckItemResultResponse };

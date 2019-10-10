@@ -1,0 +1,3 @@
+interface GenerateSysAppDownloadInfoResponse {
+}
+export { GenerateSysAppDownloadInfoResponse };

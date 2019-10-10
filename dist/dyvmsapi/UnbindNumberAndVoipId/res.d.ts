@@ -1,0 +1,3 @@
+interface UnbindNumberAndVoipIdResponse {
+}
+export { UnbindNumberAndVoipIdResponse };

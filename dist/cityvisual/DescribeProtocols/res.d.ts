@@ -1,0 +1,3 @@
+interface DescribeProtocolsResponse {
+}
+export { DescribeProtocolsResponse };

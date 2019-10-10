@@ -1,0 +1,3 @@
+interface GetGatewayPacketStatResponse {
+}
+export { GetGatewayPacketStatResponse };

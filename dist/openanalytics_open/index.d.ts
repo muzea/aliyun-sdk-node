@@ -1,127 +1,67 @@
+import { AddAccountRequest } from "./AddAccount/req";
+import { AddAccountResponse } from "./AddAccount/res";
+import { AddEndPointRequest } from "./AddEndPoint/req";
+import { AddEndPointResponse } from "./AddEndPoint/res";
+import { DeleteAccountRequest } from "./DeleteAccount/req";
+import { DeleteAccountResponse } from "./DeleteAccount/res";
+import { DescribeRegionListRequest } from "./DescribeRegionList/req";
+import { DescribeRegionListResponse } from "./DescribeRegionList/res";
+import { GetConsolePermissionRequest } from "./GetConsolePermission/req";
+import { GetConsolePermissionResponse } from "./GetConsolePermission/res";
+import { GetEndPointRequest } from "./GetEndPoint/req";
+import { GetEndPointResponse } from "./GetEndPoint/res";
+import { GetEndPointByDomainRequest } from "./GetEndPointByDomain/req";
+import { GetEndPointByDomainResponse } from "./GetEndPointByDomain/res";
+import { GetRegionStatusRequest } from "./GetRegionStatus/req";
+import { GetRegionStatusResponse } from "./GetRegionStatus/res";
+import { InitializeRegionRequest } from "./InitializeRegion/req";
+import { InitializeRegionResponse } from "./InitializeRegion/res";
+import { QueryAccountListRequest } from "./QueryAccountList/req";
+import { QueryAccountListResponse } from "./QueryAccountList/res";
+import { QueryDataSourceDefRequest } from "./QueryDataSourceDef/req";
+import { QueryDataSourceDefResponse } from "./QueryDataSourceDef/res";
+import { QueryEndPointListRequest } from "./QueryEndPointList/req";
+import { QueryEndPointListResponse } from "./QueryEndPointList/res";
+import { RemoveEndPointRequest } from "./RemoveEndPoint/req";
+import { RemoveEndPointResponse } from "./RemoveEndPoint/res";
+import { ResetMainPasswordRequest } from "./ResetMainPassword/req";
+import { ResetMainPasswordResponse } from "./ResetMainPassword/res";
+import { SetAllowIPRequest } from "./SetAllowIP/req";
+import { SetAllowIPResponse } from "./SetAllowIP/res";
+import { UnSubscribeRegionRequest } from "./UnSubscribeRegion/req";
+import { UnSubscribeRegionResponse } from "./UnSubscribeRegion/res";
+import { UpdateAccountPasswordRequest } from "./UpdateAccountPassword/req";
+import { UpdateAccountPasswordResponse } from "./UpdateAccountPassword/res";
+import { QueryDiscountListRequest } from "./QueryDiscountList/req";
+import { QueryDiscountListResponse } from "./QueryDiscountList/res";
+import { QueryServiceAccountListRequest } from "./QueryServiceAccountList/req";
+import { QueryServiceAccountListResponse } from "./QueryServiceAccountList/res";
+import { QueryTaskSumRequest } from "./QueryTaskSum/req";
+import { QueryTaskSumResponse } from "./QueryTaskSum/res";
+import { GetAllowIPRequest } from "./GetAllowIP/req";
+import { GetAllowIPResponse } from "./GetAllowIP/res";
+
 interface OPENANALYTICS_OPEN {
-    AddAccount(query: {
-        "RegionId"?: string;
-        "RegionID": string;
-        "AccountName": string;
-        "Password"?: string;
-        "UseRandomPassword"?: boolean;
-        "IsShort"?: boolean;
-        "EnableKMS"?: boolean;
-        "Remark"?: string;
-    }): Promise<{}>;
-    AddEndPoint(query: {
-        "RegionId"?: string;
-        "RegionID": string;
-        "NetworkType": string;
-        "VpcID": string;
-        "Vswitch": string;
-        "Zone": string;
-        "Product"?: string;
-    }): Promise<{}>;
-    DeleteAccount(query: {
-        "RegionId"?: string;
-        "RegionID": string;
-        "AccountName": string;
-        "IsShort"?: boolean;
-        "IsServiceUser"?: boolean;
-    }): Promise<{}>;
-    DescribeRegionList(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    GetConsolePermission(query: {
-        "RegionId"?: string;
-        "RegionID": string;
-    }): Promise<{}>;
-    GetEndPoint(query: {
-        "RegionId"?: string;
-        "RegionID": string;
-        "EndPointID": string;
-    }): Promise<{}>;
-    GetEndPointByDomain(query: {
-        "RegionId"?: string;
-        "RegionID": string;
-        "DomainURL": string;
-    }): Promise<{}>;
-    GetRegionStatus(query: {
-        "RegionId"?: string;
-        "RegionID": string;
-    }): Promise<{}>;
-    InitializeRegion(query: {
-        "RegionId"?: string;
-        "RegionID": string;
-        "UseRandomPassword": boolean;
-        "InitPassword"?: string;
-        "EnableKMS"?: boolean;
-    }): Promise<{}>;
-    QueryAccountList(query: {
-        "RegionId"?: string;
-        "RegionID": string;
-        "PageSize": number;
-        "PageNumber": number;
-    }): Promise<{}>;
-    QueryDataSourceDef(query: {
-        "RegionId"?: string;
-        "RegionID": string;
-    }): Promise<{}>;
-    QueryEndPointList(query: {
-        "RegionId"?: string;
-        "RegionID": string;
-    }): Promise<{}>;
-    RemoveEndPoint(query: {
-        "RegionId"?: string;
-        "RegionID": string;
-        "EndPointID": string;
-    }): Promise<{}>;
-    ResetMainPassword(query: {
-        "RegionId"?: string;
-        "RegionID": string;
-        "UseRandomPassword": boolean;
-        "InitPassword"?: string;
-        "EnableKMS"?: boolean;
-    }): Promise<{}>;
-    SetAllowIP(query: {
-        "RegionId"?: string;
-        "RegionID": string;
-        "NetworkType": string;
-        "AllowIP": string;
-        "Product"?: string;
-        "Append"?: boolean;
-    }): Promise<{}>;
-    UnSubscribeRegion(query: {
-        "RegionId"?: string;
-        "RegionID": string;
-    }): Promise<{}>;
-    UpdateAccountPassword(query: {
-        "RegionId"?: string;
-        "RegionID": string;
-        "AccountName": string;
-        "IsShort"?: boolean;
-        "Password"?: string;
-        "EnableKMS"?: boolean;
-        "UseRandomPassword"?: boolean;
-    }): Promise<{}>;
-    QueryDiscountList(query: {
-        "RegionId"?: string;
-        "PageSize": number;
-        "PageNumber": number;
-        "RegionID": string;
-    }): Promise<{}>;
-    QueryServiceAccountList(query: {
-        "RegionId"?: string;
-        "RegionID": string;
-    }): Promise<{}>;
-    QueryTaskSum(query: {
-        "RegionId"?: string;
-        "RegionID": string;
-        "TwoDaysAgoBeginTs": string;
-        "YesterdayBeginTs": string;
-        "TodayBeginTs": string;
-    }): Promise<{}>;
-    GetAllowIP(query: {
-        "RegionId"?: string;
-        "RegionID": string;
-        "NetworkType": string;
-        "Product"?: string;
-    }): Promise<{}>;
+    AddAccount(query: AddAccountRequest): Promise<AddAccountResponse>;
+    AddEndPoint(query: AddEndPointRequest): Promise<AddEndPointResponse>;
+    DeleteAccount(query: DeleteAccountRequest): Promise<DeleteAccountResponse>;
+    DescribeRegionList(query: DescribeRegionListRequest): Promise<DescribeRegionListResponse>;
+    GetConsolePermission(query: GetConsolePermissionRequest): Promise<GetConsolePermissionResponse>;
+    GetEndPoint(query: GetEndPointRequest): Promise<GetEndPointResponse>;
+    GetEndPointByDomain(query: GetEndPointByDomainRequest): Promise<GetEndPointByDomainResponse>;
+    GetRegionStatus(query: GetRegionStatusRequest): Promise<GetRegionStatusResponse>;
+    InitializeRegion(query: InitializeRegionRequest): Promise<InitializeRegionResponse>;
+    QueryAccountList(query: QueryAccountListRequest): Promise<QueryAccountListResponse>;
+    QueryDataSourceDef(query: QueryDataSourceDefRequest): Promise<QueryDataSourceDefResponse>;
+    QueryEndPointList(query: QueryEndPointListRequest): Promise<QueryEndPointListResponse>;
+    RemoveEndPoint(query: RemoveEndPointRequest): Promise<RemoveEndPointResponse>;
+    ResetMainPassword(query: ResetMainPasswordRequest): Promise<ResetMainPasswordResponse>;
+    SetAllowIP(query: SetAllowIPRequest): Promise<SetAllowIPResponse>;
+    UnSubscribeRegion(query: UnSubscribeRegionRequest): Promise<UnSubscribeRegionResponse>;
+    UpdateAccountPassword(query: UpdateAccountPasswordRequest): Promise<UpdateAccountPasswordResponse>;
+    QueryDiscountList(query: QueryDiscountListRequest): Promise<QueryDiscountListResponse>;
+    QueryServiceAccountList(query: QueryServiceAccountListRequest): Promise<QueryServiceAccountListResponse>;
+    QueryTaskSum(query: QueryTaskSumRequest): Promise<QueryTaskSumResponse>;
+    GetAllowIP(query: GetAllowIPRequest): Promise<GetAllowIPResponse>;
 }
 export default OPENANALYTICS_OPEN;

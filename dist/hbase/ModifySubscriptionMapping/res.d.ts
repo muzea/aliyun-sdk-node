@@ -1,0 +1,3 @@
+interface ModifySubscriptionMappingResponse {
+}
+export { ModifySubscriptionMappingResponse };

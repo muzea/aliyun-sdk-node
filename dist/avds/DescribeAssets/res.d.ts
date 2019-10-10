@@ -1,0 +1,3 @@
+interface DescribeAssetsResponse {
+}
+export { DescribeAssetsResponse };

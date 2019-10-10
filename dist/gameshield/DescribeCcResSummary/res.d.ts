@@ -1,0 +1,3 @@
+interface DescribeCcResSummaryResponse {
+}
+export { DescribeCcResSummaryResponse };

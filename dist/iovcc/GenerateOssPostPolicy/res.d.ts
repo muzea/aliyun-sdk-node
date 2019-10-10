@@ -1,0 +1,3 @@
+interface GenerateOssPostPolicyResponse {
+}
+export { GenerateOssPostPolicyResponse };

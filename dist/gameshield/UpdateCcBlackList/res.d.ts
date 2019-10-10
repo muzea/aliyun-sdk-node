@@ -1,0 +1,3 @@
+interface UpdateCcBlackListResponse {
+}
+export { UpdateCcBlackListResponse };

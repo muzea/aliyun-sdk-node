@@ -1,0 +1,3 @@
+interface ListConnectLogsResponse {
+}
+export { ListConnectLogsResponse };

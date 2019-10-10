@@ -1,0 +1,3 @@
+interface UpdateCcWhiteListResponse {
+}
+export { UpdateCcWhiteListResponse };

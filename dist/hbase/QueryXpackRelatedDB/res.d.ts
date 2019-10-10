@@ -1,0 +1,3 @@
+interface QueryXpackRelatedDBResponse {
+}
+export { QueryXpackRelatedDBResponse };

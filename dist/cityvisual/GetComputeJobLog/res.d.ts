@@ -1,0 +1,3 @@
+interface GetComputeJobLogResponse {
+}
+export { GetComputeJobLogResponse };

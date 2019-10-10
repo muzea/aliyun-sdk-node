@@ -1,0 +1,3 @@
+interface DescribeDDoSEventsResponse {
+}
+export { DescribeDDoSEventsResponse };

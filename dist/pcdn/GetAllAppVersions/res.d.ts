@@ -1,0 +1,3 @@
+interface GetAllAppVersionsResponse {
+}
+export { GetAllAppVersionsResponse };

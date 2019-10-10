@@ -1,262 +1,115 @@
+import { AddConsumerRequest } from "./AddConsumer/req";
+import { AddConsumerResponse } from "./AddConsumer/res";
+import { AddDomainRequest } from "./AddDomain/req";
+import { AddDomainResponse } from "./AddDomain/res";
+import { AddPcdnControlRuleRequest } from "./AddPcdnControlRule/req";
+import { AddPcdnControlRuleResponse } from "./AddPcdnControlRule/res";
+import { DeleteDomainRequest } from "./DeleteDomain/req";
+import { DeleteDomainResponse } from "./DeleteDomain/res";
+import { DeletePcdnControlRuleRequest } from "./DeletePcdnControlRule/req";
+import { DeletePcdnControlRuleResponse } from "./DeletePcdnControlRule/res";
+import { DisablePcdnControlRuleRequest } from "./DisablePcdnControlRule/req";
+import { DisablePcdnControlRuleResponse } from "./DisablePcdnControlRule/res";
+import { EditPcdnControlRuleRequest } from "./EditPcdnControlRule/req";
+import { EditPcdnControlRuleResponse } from "./EditPcdnControlRule/res";
+import { EnablePcdnControlRuleRequest } from "./EnablePcdnControlRule/req";
+import { EnablePcdnControlRuleResponse } from "./EnablePcdnControlRule/res";
+import { GetAccessDataRequest } from "./GetAccessData/req";
+import { GetAccessDataResponse } from "./GetAccessData/res";
+import { GetAllAppVersionsRequest } from "./GetAllAppVersions/req";
+import { GetAllAppVersionsResponse } from "./GetAllAppVersions/res";
+import { GetAllIspRequest } from "./GetAllIsp/req";
+import { GetAllIspResponse } from "./GetAllIsp/res";
+import { GetAllMarketsRequest } from "./GetAllMarkets/req";
+import { GetAllMarketsResponse } from "./GetAllMarkets/res";
+import { GetAllPlatformTypesRequest } from "./GetAllPlatformTypes/req";
+import { GetAllPlatformTypesResponse } from "./GetAllPlatformTypes/res";
+import { GetAllRegionsRequest } from "./GetAllRegions/req";
+import { GetAllRegionsResponse } from "./GetAllRegions/res";
+import { GetBalanceBandwidthDataRequest } from "./GetBalanceBandwidthData/req";
+import { GetBalanceBandwidthDataResponse } from "./GetBalanceBandwidthData/res";
+import { GetBalanceTrafficDataRequest } from "./GetBalanceTrafficData/req";
+import { GetBalanceTrafficDataResponse } from "./GetBalanceTrafficData/res";
+import { GetBandwidthDataRequest } from "./GetBandwidthData/req";
+import { GetBandwidthDataResponse } from "./GetBandwidthData/res";
+import { GetClientsRatioRequest } from "./GetClientsRatio/req";
+import { GetClientsRatioResponse } from "./GetClientsRatio/res";
+import { GetConsumerStatusRequest } from "./GetConsumerStatus/req";
+import { GetConsumerStatusResponse } from "./GetConsumerStatus/res";
+import { GetControlRulesRequest } from "./GetControlRules/req";
+import { GetControlRulesResponse } from "./GetControlRules/res";
+import { GetCoverRateDataRequest } from "./GetCoverRateData/req";
+import { GetCoverRateDataResponse } from "./GetCoverRateData/res";
+import { GetCurrentModeRequest } from "./GetCurrentMode/req";
+import { GetCurrentModeResponse } from "./GetCurrentMode/res";
+import { GetDomainCountRequest } from "./GetDomainCount/req";
+import { GetDomainCountResponse } from "./GetDomainCount/res";
+import { GetDomainsRequest } from "./GetDomains/req";
+import { GetDomainsResponse } from "./GetDomains/res";
+import { GetExpenseSummaryRequest } from "./GetExpenseSummary/req";
+import { GetExpenseSummaryResponse } from "./GetExpenseSummary/res";
+import { GetFeeHistoryRequest } from "./GetFeeHistory/req";
+import { GetFeeHistoryResponse } from "./GetFeeHistory/res";
+import { GetFirstFrameDelayDataRequest } from "./GetFirstFrameDelayData/req";
+import { GetFirstFrameDelayDataResponse } from "./GetFirstFrameDelayData/res";
+import { GetFluencyDataRequest } from "./GetFluencyData/req";
+import { GetFluencyDataResponse } from "./GetFluencyData/res";
+import { GetLogsListRequest } from "./GetLogsList/req";
+import { GetLogsListResponse } from "./GetLogsList/res";
+import { GetShareRateDataRequest } from "./GetShareRateData/req";
+import { GetShareRateDataResponse } from "./GetShareRateData/res";
+import { GetTokenListRequest } from "./GetTokenList/req";
+import { GetTokenListResponse } from "./GetTokenList/res";
+import { GetTrafficByRegionRequest } from "./GetTrafficByRegion/req";
+import { GetTrafficByRegionResponse } from "./GetTrafficByRegion/res";
+import { GetTrafficDataRequest } from "./GetTrafficData/req";
+import { GetTrafficDataResponse } from "./GetTrafficData/res";
+import { PushObjectCacheRequest } from "./PushObjectCache/req";
+import { PushObjectCacheResponse } from "./PushObjectCache/res";
+import { StartDomainRequest } from "./StartDomain/req";
+import { StartDomainResponse } from "./StartDomain/res";
+import { StopDomainRequest } from "./StopDomain/req";
+import { StopDomainResponse } from "./StopDomain/res";
+import { ValidateOrderRequest } from "./ValidateOrder/req";
+import { ValidateOrderResponse } from "./ValidateOrder/res";
+
 interface PCDN {
-    AddConsumer(query: {
-        "RegionId"?: string;
-        "Version": string;
-        "BusinessType": string;
-        "Company": string;
-        "Site": string;
-        "Requirement": string;
-        "Mobile": string;
-        "Ca"?: string;
-        "Operator"?: string;
-        "Email"?: string;
-        "BandwidthRequirement"?: string;
-    }): Promise<{}>;
-    AddDomain(query: {
-        "RegionId"?: string;
-        "Version": string;
-        "BusinessType": string;
-        "Domain": string;
-        "LiveFormat"?: string;
-        "SliceDomain"?: string;
-        "Region"?: string;
-        "DemoUrls"?: string;
-    }): Promise<{}>;
-    AddPcdnControlRule(query: {
-        "RegionId"?: string;
-        "Version": string;
-        "Name": string;
-        "Region": string;
-        "IspName": string;
-        "PlatformType": string;
-        "BusinessType": string;
-        "Market": string;
-        "AppVersion": string;
-    }): Promise<{}>;
-    DeleteDomain(query: {
-        "RegionId"?: string;
-        "Version": string;
-        "Domain": string;
-    }): Promise<{}>;
-    DeletePcdnControlRule(query: {
-        "RegionId"?: string;
-        "Version": string;
-        "ResourceId": string;
-    }): Promise<{}>;
-    DisablePcdnControlRule(query: {
-        "RegionId"?: string;
-        "Version": string;
-        "ResourceId": string;
-    }): Promise<{}>;
-    EditPcdnControlRule(query: {
-        "RegionId"?: string;
-        "Version": string;
-        "Name": string;
-        "ResourceId": string;
-        "Region": string;
-        "IspName": string;
-        "PlatformType": string;
-        "BusinessType": string;
-        "Market": string;
-        "AppVersion": string;
-    }): Promise<{}>;
-    EnablePcdnControlRule(query: {
-        "RegionId"?: string;
-        "Version": string;
-        "ResourceId": string;
-    }): Promise<{}>;
-    GetAccessData(query: {
-        "RegionId"?: string;
-        "Version": string;
-        "Region": string;
-        "IspName": string;
-        "PlatformType": string;
-        "BusinessType": string;
-        "StartDate": string;
-        "EndDate": string;
-        "Domain"?: string;
-    }): Promise<{}>;
-    GetAllAppVersions(query: {
-        "RegionId"?: string;
-        "Version": string;
-    }): Promise<{}>;
-    GetAllIsp(query: {
-        "RegionId"?: string;
-        "Version": string;
-    }): Promise<{}>;
-    GetAllMarkets(query: {
-        "RegionId"?: string;
-        "Version": string;
-    }): Promise<{}>;
-    GetAllPlatformTypes(query: {
-        "RegionId"?: string;
-        "Version": string;
-    }): Promise<{}>;
-    GetAllRegions(query: {
-        "RegionId"?: string;
-        "Version": string;
-    }): Promise<{}>;
-    GetBalanceBandwidthData(query: {
-        "RegionId"?: string;
-        "Version": string;
-        "ResourceId": string;
-        "DataInterval"?: number;
-    }): Promise<{}>;
-    GetBalanceTrafficData(query: {
-        "RegionId"?: string;
-        "Version": string;
-        "ResourceId": string;
-        "DataInterval"?: number;
-    }): Promise<{}>;
-    GetBandwidthData(query: {
-        "RegionId"?: string;
-        "Version": string;
-        "Region": string;
-        "IspName": string;
-        "PlatformType": string;
-        "BusinessType": string;
-        "StartDate": string;
-        "EndDate": string;
-        "Domain"?: string;
-    }): Promise<{}>;
-    GetClientsRatio(query: {
-        "RegionId"?: string;
-        "Version": string;
-    }): Promise<{}>;
-    GetConsumerStatus(query: {
-        "RegionId"?: string;
-        "Version": string;
-    }): Promise<{}>;
-    GetControlRules(query: {
-        "RegionId"?: string;
-        "Version": string;
-        "Page": string;
-        "PageSize": string;
-    }): Promise<{}>;
-    GetCoverRateData(query: {
-        "RegionId"?: string;
-        "Version": string;
-        "Region": string;
-        "IspName": string;
-        "PlatformType": string;
-        "BusinessType": string;
-        "StartDate": string;
-        "EndDate": string;
-        "Domain"?: string;
-    }): Promise<{}>;
-    GetCurrentMode(query: {
-        "RegionId"?: string;
-        "Version": string;
-    }): Promise<{}>;
-    GetDomainCount(query: {
-        "RegionId"?: string;
-        "Version": string;
-    }): Promise<{}>;
-    GetDomains(query: {
-        "RegionId"?: string;
-        "Version": string;
-        "Page": string;
-        "PageSize": string;
-        "Domain"?: string;
-    }): Promise<{}>;
-    GetExpenseSummary(query: {
-        "RegionId"?: string;
-        "Version": string;
-        "StartDate"?: string;
-        "EndDate"?: string;
-        "Domain"?: string;
-        "Region"?: string;
-        "IspName"?: string;
-        "PlatformType"?: string;
-        "BusinessType"?: string;
-    }): Promise<{}>;
-    GetFeeHistory(query: {
-        "RegionId"?: string;
-        "Version": string;
-        "Page": string;
-        "PageSize": string;
-    }): Promise<{}>;
-    GetFirstFrameDelayData(query: {
-        "RegionId"?: string;
-        "Version": string;
-        "Region": string;
-        "IspName": string;
-        "PlatformType": string;
-        "BusinessType": string;
-        "StartDate": string;
-        "EndDate": string;
-        "Domain"?: string;
-    }): Promise<{}>;
-    GetFluencyData(query: {
-        "RegionId"?: string;
-        "Version": string;
-        "Region": string;
-        "IspName": string;
-        "PlatformType": string;
-        "BusinessType": string;
-        "StartDate": string;
-        "EndDate": string;
-        "Domain"?: string;
-    }): Promise<{}>;
-    GetLogsList(query: {
-        "RegionId"?: string;
-        "Version": string;
-        "Domain"?: string;
-        "Date"?: string;
-        "StartTime"?: string;
-        "EndTime"?: string;
-    }): Promise<{}>;
-    GetShareRateData(query: {
-        "RegionId"?: string;
-        "Version": string;
-        "Region": string;
-        "IspName": string;
-        "PlatformType": string;
-        "BusinessType": string;
-        "StartDate": string;
-        "EndDate": string;
-        "Domain"?: string;
-    }): Promise<{}>;
-    GetTokenList(query: {
-        "RegionId"?: string;
-        "Version": string;
-    }): Promise<{}>;
-    GetTrafficByRegion(query: {
-        "RegionId"?: string;
-        "Version": string;
-    }): Promise<{}>;
-    GetTrafficData(query: {
-        "RegionId"?: string;
-        "Version": string;
-        "Region": string;
-        "IspName": string;
-        "PlatformType": string;
-        "BusinessType": string;
-        "StartDate": string;
-        "EndDate": string;
-        "Domain"?: string;
-    }): Promise<{}>;
-    PushObjectCache(query: {
-        "RegionId"?: string;
-        "Version": string;
-        "URLs": string;
-        "EffectTime": string;
-    }): Promise<{}>;
-    StartDomain(query: {
-        "RegionId"?: string;
-        "Version": string;
-        "Domain": string;
-    }): Promise<{}>;
-    StopDomain(query: {
-        "RegionId"?: string;
-        "Version": string;
-        "Domain": string;
-    }): Promise<{}>;
-    ValidateOrder(query: {
-        "RegionId"?: string;
-        "data": string;
-        "product"?: string;
-        "Version": string;
-    }): Promise<{}>;
+    AddConsumer(query: AddConsumerRequest): Promise<AddConsumerResponse>;
+    AddDomain(query: AddDomainRequest): Promise<AddDomainResponse>;
+    AddPcdnControlRule(query: AddPcdnControlRuleRequest): Promise<AddPcdnControlRuleResponse>;
+    DeleteDomain(query: DeleteDomainRequest): Promise<DeleteDomainResponse>;
+    DeletePcdnControlRule(query: DeletePcdnControlRuleRequest): Promise<DeletePcdnControlRuleResponse>;
+    DisablePcdnControlRule(query: DisablePcdnControlRuleRequest): Promise<DisablePcdnControlRuleResponse>;
+    EditPcdnControlRule(query: EditPcdnControlRuleRequest): Promise<EditPcdnControlRuleResponse>;
+    EnablePcdnControlRule(query: EnablePcdnControlRuleRequest): Promise<EnablePcdnControlRuleResponse>;
+    GetAccessData(query: GetAccessDataRequest): Promise<GetAccessDataResponse>;
+    GetAllAppVersions(query: GetAllAppVersionsRequest): Promise<GetAllAppVersionsResponse>;
+    GetAllIsp(query: GetAllIspRequest): Promise<GetAllIspResponse>;
+    GetAllMarkets(query: GetAllMarketsRequest): Promise<GetAllMarketsResponse>;
+    GetAllPlatformTypes(query: GetAllPlatformTypesRequest): Promise<GetAllPlatformTypesResponse>;
+    GetAllRegions(query: GetAllRegionsRequest): Promise<GetAllRegionsResponse>;
+    GetBalanceBandwidthData(query: GetBalanceBandwidthDataRequest): Promise<GetBalanceBandwidthDataResponse>;
+    GetBalanceTrafficData(query: GetBalanceTrafficDataRequest): Promise<GetBalanceTrafficDataResponse>;
+    GetBandwidthData(query: GetBandwidthDataRequest): Promise<GetBandwidthDataResponse>;
+    GetClientsRatio(query: GetClientsRatioRequest): Promise<GetClientsRatioResponse>;
+    GetConsumerStatus(query: GetConsumerStatusRequest): Promise<GetConsumerStatusResponse>;
+    GetControlRules(query: GetControlRulesRequest): Promise<GetControlRulesResponse>;
+    GetCoverRateData(query: GetCoverRateDataRequest): Promise<GetCoverRateDataResponse>;
+    GetCurrentMode(query: GetCurrentModeRequest): Promise<GetCurrentModeResponse>;
+    GetDomainCount(query: GetDomainCountRequest): Promise<GetDomainCountResponse>;
+    GetDomains(query: GetDomainsRequest): Promise<GetDomainsResponse>;
+    GetExpenseSummary(query: GetExpenseSummaryRequest): Promise<GetExpenseSummaryResponse>;
+    GetFeeHistory(query: GetFeeHistoryRequest): Promise<GetFeeHistoryResponse>;
+    GetFirstFrameDelayData(query: GetFirstFrameDelayDataRequest): Promise<GetFirstFrameDelayDataResponse>;
+    GetFluencyData(query: GetFluencyDataRequest): Promise<GetFluencyDataResponse>;
+    GetLogsList(query: GetLogsListRequest): Promise<GetLogsListResponse>;
+    GetShareRateData(query: GetShareRateDataRequest): Promise<GetShareRateDataResponse>;
+    GetTokenList(query: GetTokenListRequest): Promise<GetTokenListResponse>;
+    GetTrafficByRegion(query: GetTrafficByRegionRequest): Promise<GetTrafficByRegionResponse>;
+    GetTrafficData(query: GetTrafficDataRequest): Promise<GetTrafficDataResponse>;
+    PushObjectCache(query: PushObjectCacheRequest): Promise<PushObjectCacheResponse>;
+    StartDomain(query: StartDomainRequest): Promise<StartDomainResponse>;
+    StopDomain(query: StopDomainRequest): Promise<StopDomainResponse>;
+    ValidateOrder(query: ValidateOrderRequest): Promise<ValidateOrderResponse>;
 }
 export default PCDN;

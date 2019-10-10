@@ -1,0 +1,3 @@
+interface BatchSetVsDomainConfigsResponse {
+}
+export { BatchSetVsDomainConfigsResponse };

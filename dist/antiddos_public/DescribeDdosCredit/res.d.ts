@@ -1,0 +1,3 @@
+interface DescribeDdosCreditResponse {
+}
+export { DescribeDdosCreditResponse };

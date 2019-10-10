@@ -1,176 +1,67 @@
+import { CompareFacesRequest } from "./CompareFaces/req";
+import { CompareFacesResponse } from "./CompareFaces/res";
+import { CreateAuthKeyRequest } from "./CreateAuthKey/req";
+import { CreateAuthKeyResponse } from "./CreateAuthKey/res";
+import { CreateRPSDKRequest } from "./CreateRPSDK/req";
+import { CreateRPSDKResponse } from "./CreateRPSDK/res";
+import { CreateVerifySDKRequest } from "./CreateVerifySDK/req";
+import { CreateVerifySDKResponse } from "./CreateVerifySDK/res";
+import { CreateVerifySettingRequest } from "./CreateVerifySetting/req";
+import { CreateVerifySettingResponse } from "./CreateVerifySetting/res";
+import { DescribeDeviceInfoRequest } from "./DescribeDeviceInfo/req";
+import { DescribeDeviceInfoResponse } from "./DescribeDeviceInfo/res";
+import { DescribeFaceUsageRequest } from "./DescribeFaceUsage/req";
+import { DescribeFaceUsageResponse } from "./DescribeFaceUsage/res";
+import { DescribeOssUploadTokenRequest } from "./DescribeOssUploadToken/req";
+import { DescribeOssUploadTokenResponse } from "./DescribeOssUploadToken/res";
+import { DescribeRPSDKRequest } from "./DescribeRPSDK/req";
+import { DescribeRPSDKResponse } from "./DescribeRPSDK/res";
+import { DescribeUploadInfoRequest } from "./DescribeUploadInfo/req";
+import { DescribeUploadInfoResponse } from "./DescribeUploadInfo/res";
+import { DescribeUserStatusRequest } from "./DescribeUserStatus/req";
+import { DescribeUserStatusResponse } from "./DescribeUserStatus/res";
+import { DescribeVerifyRecordsRequest } from "./DescribeVerifyRecords/req";
+import { DescribeVerifyRecordsResponse } from "./DescribeVerifyRecords/res";
+import { DescribeVerifyResultRequest } from "./DescribeVerifyResult/req";
+import { DescribeVerifyResultResponse } from "./DescribeVerifyResult/res";
+import { DescribeVerifySDKRequest } from "./DescribeVerifySDK/req";
+import { DescribeVerifySDKResponse } from "./DescribeVerifySDK/res";
+import { DescribeVerifySettingRequest } from "./DescribeVerifySetting/req";
+import { DescribeVerifySettingResponse } from "./DescribeVerifySetting/res";
+import { DescribeVerifyTokenRequest } from "./DescribeVerifyToken/req";
+import { DescribeVerifyTokenResponse } from "./DescribeVerifyToken/res";
+import { DescribeVerifyUsageRequest } from "./DescribeVerifyUsage/req";
+import { DescribeVerifyUsageResponse } from "./DescribeVerifyUsage/res";
+import { DetectFaceAttributesRequest } from "./DetectFaceAttributes/req";
+import { DetectFaceAttributesResponse } from "./DetectFaceAttributes/res";
+import { ModifyDeviceInfoRequest } from "./ModifyDeviceInfo/req";
+import { ModifyDeviceInfoResponse } from "./ModifyDeviceInfo/res";
+import { UpdateVerifySettingRequest } from "./UpdateVerifySetting/req";
+import { UpdateVerifySettingResponse } from "./UpdateVerifySetting/res";
+import { VerifyMaterialRequest } from "./VerifyMaterial/req";
+import { VerifyMaterialResponse } from "./VerifyMaterial/res";
+
 interface CLOUDAUTH {
-    CompareFaces(query: {
-        "RegionId"?: string;
-        "SourceIp"?: string;
-        "TargetImageType"?: string;
-        "SourceImageType"?: string;
-        "SourceImageValue"?: string;
-        "TargetImageValue"?: string;
-    }): Promise<{}>;
-    CreateAuthKey(query: {
-        "RegionId"?: string;
-        "SourceIp"?: string;
-        "Lang"?: string;
-        "BizType"?: string;
-        "UserDeviceId"?: string;
-        "Test"?: boolean;
-        "AuthYears"?: number;
-    }): Promise<{}>;
-    CreateRPSDK(query: {
-        "RegionId"?: string;
-        "AppUrl": string;
-        "SourceIp"?: string;
-        "Lang"?: string;
-        "Platform"?: string;
-    }): Promise<{}>;
-    CreateVerifySDK(query: {
-        "RegionId"?: string;
-        "AppUrl": string;
-        "SourceIp"?: string;
-        "Lang"?: string;
-        "Platform"?: string;
-    }): Promise<{}>;
-    CreateVerifySetting(query: {
-        "RegionId"?: string;
-        "BizType": string;
-        "BizName": string;
-        "Solution": string;
-        "SourceIp"?: string;
-        "GuideStep"?: boolean;
-        "PrivacyStep"?: boolean;
-        "ResultStep"?: boolean;
-    }): Promise<{}>;
-    DescribeDeviceInfo(query: {
-        "RegionId"?: string;
-        "SourceIp"?: string;
-        "Lang"?: string;
-        "TotalCount"?: number;
-        "PageSize"?: number;
-        "CurrentPage"?: number;
-        "DeviceId"?: string;
-        "BizType"?: string;
-        "UserDeviceId"?: string;
-        "ExpiredStartDay"?: string;
-        "ExpiredEndDay"?: string;
-    }): Promise<{}>;
-    DescribeFaceUsage(query: {
-        "RegionId"?: string;
-        "StartDate": string;
-        "EndDate": string;
-        "SourceIp"?: string;
-    }): Promise<{}>;
-    DescribeOssUploadToken(query: {
-        "RegionId"?: string;
-        "SourceIp"?: string;
-    }): Promise<{}>;
-    DescribeRPSDK(query: {
-        "RegionId"?: string;
-        "TaskId": string;
-        "SourceIp"?: string;
-        "Lang"?: string;
-    }): Promise<{}>;
-    DescribeUploadInfo(query: {
-        "RegionId"?: string;
-        "SourceIp"?: string;
-    }): Promise<{}>;
-    DescribeUserStatus(query: {
-        "RegionId"?: string;
-        "SourceIp"?: string;
-    }): Promise<{}>;
-    DescribeVerifyRecords(query: {
-        "RegionId"?: string;
-        "PageSize": number;
-        "CurrentPage": number;
-        "SourceIp"?: string;
-        "TotalCount"?: number;
-        "BizType"?: string;
-        "StartDate"?: string;
-        "EndDate"?: string;
-        "BizId"?: string;
-        "IdCardNum"?: string;
-        "StatusList"?: string;
-        "QueryId"?: string;
-    }): Promise<{}>;
-    DescribeVerifyResult(query: {
-        "RegionId"?: string;
-        "BizId": string;
-        "BizType": string;
-        "SourceIp"?: string;
-    }): Promise<{}>;
-    DescribeVerifySDK(query: {
-        "RegionId"?: string;
-        "TaskId": string;
-        "SourceIp"?: string;
-        "Lang"?: string;
-    }): Promise<{}>;
-    DescribeVerifySetting(query: {
-        "RegionId"?: string;
-        "SourceIp"?: string;
-    }): Promise<{}>;
-    DescribeVerifyToken(query: {
-        "RegionId"?: string;
-        "BizType": string;
-        "BizId": string;
-        "SourceIp"?: string;
-        "IdCardBackImageUrl"?: string;
-        "FailedRedirectUrl"?: string;
-        "FaceRetainedImageUrl"?: string;
-        "CallbackSeed"?: string;
-        "IdCardFrontImageUrl"?: string;
-        "UserId"?: string;
-        "Name"?: string;
-        "IdCardNumber"?: string;
-        "PassedRedirectUrl"?: string;
-        "CallbackUrl"?: string;
-    }): Promise<{}>;
-    DescribeVerifyUsage(query: {
-        "RegionId"?: string;
-        "StartDate": string;
-        "EndDate": string;
-        "SourceIp"?: string;
-        "BizType"?: string;
-    }): Promise<{}>;
-    DetectFaceAttributes(query: {
-        "RegionId"?: string;
-        "MaterialValue": string;
-        "DontSaveDB": boolean;
-        "ClientTag": string;
-        "MaxNumPhotosPerCategory": number;
-        "RetAttributes": string;
-        "MaxFaceNum": number;
-        "SourceIp"?: string;
-    }): Promise<{}>;
-    ModifyDeviceInfo(query: {
-        "RegionId"?: string;
-        "DeviceId": string;
-        "SourceIp"?: string;
-        "Lang"?: string;
-        "UserDeviceId"?: string;
-        "BizType"?: string;
-        "Duration"?: string;
-        "ExpiredDay"?: string;
-    }): Promise<{}>;
-    UpdateVerifySetting(query: {
-        "RegionId"?: string;
-        "BizType": string;
-        "SourceIp"?: string;
-        "BizName"?: string;
-        "Solution"?: string;
-        "GuideStep"?: boolean;
-        "PrivacyStep"?: boolean;
-        "ResultStep"?: boolean;
-    }): Promise<{}>;
-    VerifyMaterial(query: {
-        "RegionId"?: string;
-        "FaceImageUrl": string;
-        "BizType": string;
-        "BizId": string;
-        "Name": string;
-        "IdCardNumber": string;
-        "SourceIp"?: string;
-        "IdCardBackImageUrl"?: string;
-        "IdCardFrontImageUrl"?: string;
-        "UserId"?: string;
-    }): Promise<{}>;
+    CompareFaces(query: CompareFacesRequest): Promise<CompareFacesResponse>;
+    CreateAuthKey(query: CreateAuthKeyRequest): Promise<CreateAuthKeyResponse>;
+    CreateRPSDK(query: CreateRPSDKRequest): Promise<CreateRPSDKResponse>;
+    CreateVerifySDK(query: CreateVerifySDKRequest): Promise<CreateVerifySDKResponse>;
+    CreateVerifySetting(query: CreateVerifySettingRequest): Promise<CreateVerifySettingResponse>;
+    DescribeDeviceInfo(query: DescribeDeviceInfoRequest): Promise<DescribeDeviceInfoResponse>;
+    DescribeFaceUsage(query: DescribeFaceUsageRequest): Promise<DescribeFaceUsageResponse>;
+    DescribeOssUploadToken(query: DescribeOssUploadTokenRequest): Promise<DescribeOssUploadTokenResponse>;
+    DescribeRPSDK(query: DescribeRPSDKRequest): Promise<DescribeRPSDKResponse>;
+    DescribeUploadInfo(query: DescribeUploadInfoRequest): Promise<DescribeUploadInfoResponse>;
+    DescribeUserStatus(query: DescribeUserStatusRequest): Promise<DescribeUserStatusResponse>;
+    DescribeVerifyRecords(query: DescribeVerifyRecordsRequest): Promise<DescribeVerifyRecordsResponse>;
+    DescribeVerifyResult(query: DescribeVerifyResultRequest): Promise<DescribeVerifyResultResponse>;
+    DescribeVerifySDK(query: DescribeVerifySDKRequest): Promise<DescribeVerifySDKResponse>;
+    DescribeVerifySetting(query: DescribeVerifySettingRequest): Promise<DescribeVerifySettingResponse>;
+    DescribeVerifyToken(query: DescribeVerifyTokenRequest): Promise<DescribeVerifyTokenResponse>;
+    DescribeVerifyUsage(query: DescribeVerifyUsageRequest): Promise<DescribeVerifyUsageResponse>;
+    DetectFaceAttributes(query: DetectFaceAttributesRequest): Promise<DetectFaceAttributesResponse>;
+    ModifyDeviceInfo(query: ModifyDeviceInfoRequest): Promise<ModifyDeviceInfoResponse>;
+    UpdateVerifySetting(query: UpdateVerifySettingRequest): Promise<UpdateVerifySettingResponse>;
+    VerifyMaterial(query: VerifyMaterialRequest): Promise<VerifyMaterialResponse>;
 }
 export default CLOUDAUTH;

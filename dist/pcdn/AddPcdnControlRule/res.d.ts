@@ -1,0 +1,3 @@
+interface AddPcdnControlRuleResponse {
+}
+export { AddPcdnControlRuleResponse };

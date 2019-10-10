@@ -1,0 +1,3 @@
+interface ConfigureMigrationJobAlertResponse {
+}
+export { ConfigureMigrationJobAlertResponse };

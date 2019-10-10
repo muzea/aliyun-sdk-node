@@ -1,0 +1,3 @@
+interface UpdateEmbeddedNsAutoSyncEnablingStateResponse {
+}
+export { UpdateEmbeddedNsAutoSyncEnablingStateResponse };

@@ -1,0 +1,3 @@
+interface DescribeBgpPackByIpResponse {
+}
+export { DescribeBgpPackByIpResponse };

@@ -1,0 +1,3 @@
+interface DeleteObjectResponse {
+}
+export { DeleteObjectResponse };

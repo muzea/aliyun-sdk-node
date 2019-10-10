@@ -1,0 +1,3 @@
+interface DescribeParameterGroupsResponse {
+}
+export { DescribeParameterGroupsResponse };

@@ -1,0 +1,3 @@
+interface DescribeBackupsResponse {
+}
+export { DescribeBackupsResponse };

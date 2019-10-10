@@ -1,0 +1,3 @@
+interface PostObjectResponse {
+}
+export { PostObjectResponse };

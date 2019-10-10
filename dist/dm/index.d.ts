@@ -1,464 +1,196 @@
+import { DeleteInvalidAddressRequest } from "./DeleteInvalidAddress/req";
+import { DeleteInvalidAddressResponse } from "./DeleteInvalidAddress/res";
+import { GetIpProtectionRequest } from "./GetIpProtection/req";
+import { GetIpProtectionResponse } from "./GetIpProtection/res";
+import { AddIpfilterRequest } from "./AddIpfilter/req";
+import { AddIpfilterResponse } from "./AddIpfilter/res";
+import { ApproveMailTemplateRequest } from "./ApproveMailTemplate/req";
+import { ApproveMailTemplateResponse } from "./ApproveMailTemplate/res";
+import { ApproveReplyMailAddressRequest } from "./ApproveReplyMailAddress/req";
+import { ApproveReplyMailAddressResponse } from "./ApproveReplyMailAddress/res";
+import { ApproveSmsTemplateRequest } from "./ApproveSmsTemplate/req";
+import { ApproveSmsTemplateResponse } from "./ApproveSmsTemplate/res";
+import { ApproveTemplateRequest } from "./ApproveTemplate/req";
+import { ApproveTemplateResponse } from "./ApproveTemplate/res";
+import { BatchSendMailRequest } from "./BatchSendMail/req";
+import { BatchSendMailResponse } from "./BatchSendMail/res";
+import { CheckDomainRequest } from "./CheckDomain/req";
+import { CheckDomainResponse } from "./CheckDomain/res";
+import { CheckInvalidAddressRequest } from "./CheckInvalidAddress/req";
+import { CheckInvalidAddressResponse } from "./CheckInvalidAddress/res";
+import { CheckReplyToMailAddressRequest } from "./CheckReplyToMailAddress/req";
+import { CheckReplyToMailAddressResponse } from "./CheckReplyToMailAddress/res";
+import { CreateDayuRequest } from "./CreateDayu/req";
+import { CreateDayuResponse } from "./CreateDayu/res";
+import { CreateDomainRequest } from "./CreateDomain/req";
+import { CreateDomainResponse } from "./CreateDomain/res";
+import { CreateMailAddressRequest } from "./CreateMailAddress/req";
+import { CreateMailAddressResponse } from "./CreateMailAddress/res";
+import { CreateReceiverRequest } from "./CreateReceiver/req";
+import { CreateReceiverResponse } from "./CreateReceiver/res";
+import { CreateSignRequest } from "./CreateSign/req";
+import { CreateSignResponse } from "./CreateSign/res";
+import { CreateTagRequest } from "./CreateTag/req";
+import { CreateTagResponse } from "./CreateTag/res";
+import { CreateTemplateRequest } from "./CreateTemplate/req";
+import { CreateTemplateResponse } from "./CreateTemplate/res";
+import { DeleteDomainRequest } from "./DeleteDomain/req";
+import { DeleteDomainResponse } from "./DeleteDomain/res";
+import { DeleteIpfilterByEdmIdRequest } from "./DeleteIpfilterByEdmId/req";
+import { DeleteIpfilterByEdmIdResponse } from "./DeleteIpfilterByEdmId/res";
+import { DeleteMailAddressRequest } from "./DeleteMailAddress/req";
+import { DeleteMailAddressResponse } from "./DeleteMailAddress/res";
+import { DeleteReceiverRequest } from "./DeleteReceiver/req";
+import { DeleteReceiverResponse } from "./DeleteReceiver/res";
+import { DeleteReceiverDetailRequest } from "./DeleteReceiverDetail/req";
+import { DeleteReceiverDetailResponse } from "./DeleteReceiverDetail/res";
+import { DeleteSignRequest } from "./DeleteSign/req";
+import { DeleteSignResponse } from "./DeleteSign/res";
+import { DeleteTagRequest } from "./DeleteTag/req";
+import { DeleteTagResponse } from "./DeleteTag/res";
+import { DeleteTemplateRequest } from "./DeleteTemplate/req";
+import { DeleteTemplateResponse } from "./DeleteTemplate/res";
+import { DescAccountSummaryRequest } from "./DescAccountSummary/req";
+import { DescAccountSummaryResponse } from "./DescAccountSummary/res";
+import { DescAccountSummary2Request } from "./DescAccountSummary2/req";
+import { DescAccountSummary2Response } from "./DescAccountSummary2/res";
+import { DescDomainRequest } from "./DescDomain/req";
+import { DescDomainResponse } from "./DescDomain/res";
+import { DescTemplateRequest } from "./DescTemplate/req";
+import { DescTemplateResponse } from "./DescTemplate/res";
+import { EnableAccountRequest } from "./EnableAccount/req";
+import { EnableAccountResponse } from "./EnableAccount/res";
+import { GetAccountListRequest } from "./GetAccountList/req";
+import { GetAccountListResponse } from "./GetAccountList/res";
+import { GetIpfilterListRequest } from "./GetIpfilterList/req";
+import { GetIpfilterListResponse } from "./GetIpfilterList/res";
+import { GetMailAddressMsgCallBackUrlRequest } from "./GetMailAddressMsgCallBackUrl/req";
+import { GetMailAddressMsgCallBackUrlResponse } from "./GetMailAddressMsgCallBackUrl/res";
+import { GetRegionListRequest } from "./GetRegionList/req";
+import { GetRegionListResponse } from "./GetRegionList/res";
+import { GetSenderAddressListRequest } from "./GetSenderAddressList/req";
+import { GetSenderAddressListResponse } from "./GetSenderAddressList/res";
+import { GetTrackListRequest } from "./GetTrackList/req";
+import { GetTrackListResponse } from "./GetTrackList/res";
+import { GetTrackListByMailFromAndTagNameRequest } from "./GetTrackListByMailFromAndTagName/req";
+import { GetTrackListByMailFromAndTagNameResponse } from "./GetTrackListByMailFromAndTagName/res";
+import { MigrateMarketRequest } from "./MigrateMarket/req";
+import { MigrateMarketResponse } from "./MigrateMarket/res";
+import { ModifyAccountNotificationRequest } from "./ModifyAccountNotification/req";
+import { ModifyAccountNotificationResponse } from "./ModifyAccountNotification/res";
+import { ModifyMailAddressRequest } from "./ModifyMailAddress/req";
+import { ModifyMailAddressResponse } from "./ModifyMailAddress/res";
+import { ModifyPWByDomainRequest } from "./ModifyPWByDomain/req";
+import { ModifyPWByDomainResponse } from "./ModifyPWByDomain/res";
+import { ModifySenderAddressNotificationRequest } from "./ModifySenderAddressNotification/req";
+import { ModifySenderAddressNotificationResponse } from "./ModifySenderAddressNotification/res";
+import { ModifyTagRequest } from "./ModifyTag/req";
+import { ModifyTagResponse } from "./ModifyTag/res";
+import { ModifyTemplateRequest } from "./ModifyTemplate/req";
+import { ModifyTemplateResponse } from "./ModifyTemplate/res";
+import { QueryDomainByParamRequest } from "./QueryDomainByParam/req";
+import { QueryDomainByParamResponse } from "./QueryDomainByParam/res";
+import { QueryInvalidAddressRequest } from "./QueryInvalidAddress/req";
+import { QueryInvalidAddressResponse } from "./QueryInvalidAddress/res";
+import { QueryMailAddressByParamRequest } from "./QueryMailAddressByParam/req";
+import { QueryMailAddressByParamResponse } from "./QueryMailAddressByParam/res";
+import { QueryReceiverByParamRequest } from "./QueryReceiverByParam/req";
+import { QueryReceiverByParamResponse } from "./QueryReceiverByParam/res";
+import { QueryReceiverDetailRequest } from "./QueryReceiverDetail/req";
+import { QueryReceiverDetailResponse } from "./QueryReceiverDetail/res";
+import { QuerySignByParamRequest } from "./QuerySignByParam/req";
+import { QuerySignByParamResponse } from "./QuerySignByParam/res";
+import { QuerySmsStatisticsRequest } from "./QuerySmsStatistics/req";
+import { QuerySmsStatisticsResponse } from "./QuerySmsStatistics/res";
+import { QueryTagByParamRequest } from "./QueryTagByParam/req";
+import { QueryTagByParamResponse } from "./QueryTagByParam/res";
+import { QueryTaskByParamRequest } from "./QueryTaskByParam/req";
+import { QueryTaskByParamResponse } from "./QueryTaskByParam/res";
+import { QueryTemplateByParamRequest } from "./QueryTemplateByParam/req";
+import { QueryTemplateByParamResponse } from "./QueryTemplateByParam/res";
+import { SaveReceiverDetailRequest } from "./SaveReceiverDetail/req";
+import { SaveReceiverDetailResponse } from "./SaveReceiverDetail/res";
+import { SendTestByTemplateRequest } from "./SendTestByTemplate/req";
+import { SendTestByTemplateResponse } from "./SendTestByTemplate/res";
+import { SenderStatisticsByTagNameAndBatchIDRequest } from "./SenderStatisticsByTagNameAndBatchID/req";
+import { SenderStatisticsByTagNameAndBatchIDResponse } from "./SenderStatisticsByTagNameAndBatchID/res";
+import { SenderStatisticsDetailByParamRequest } from "./SenderStatisticsDetailByParam/req";
+import { SenderStatisticsDetailByParamResponse } from "./SenderStatisticsDetailByParam/res";
+import { SingleSendMailRequest } from "./SingleSendMail/req";
+import { SingleSendMailResponse } from "./SingleSendMail/res";
+import { SingleSendSmsRequest } from "./SingleSendSms/req";
+import { SingleSendSmsResponse } from "./SingleSendSms/res";
+import { UpdateDomainTrackNameRequest } from "./UpdateDomainTrackName/req";
+import { UpdateDomainTrackNameResponse } from "./UpdateDomainTrackName/res";
+import { UpdateIpProtectionRequest } from "./UpdateIpProtection/req";
+import { UpdateIpProtectionResponse } from "./UpdateIpProtection/res";
+import { UpdateMailAddressMsgCallBackUrlRequest } from "./UpdateMailAddressMsgCallBackUrl/req";
+import { UpdateMailAddressMsgCallBackUrlResponse } from "./UpdateMailAddressMsgCallBackUrl/res";
+
 interface DM {
-    DeleteInvalidAddress(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "ToAddress"?: string;
-    }): Promise<{}>;
-    GetIpProtection(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    AddIpfilter(query: {
-        "RegionId"?: string;
-        "IpAddress": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    ApproveMailTemplate(query: {
-        "RegionId"?: string;
-        "TemplateId": number;
-        "OwnerId"?: number;
-        "FromType"?: number;
-    }): Promise<{}>;
-    ApproveReplyMailAddress(query: {
-        "RegionId"?: string;
-        "Ticket": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    ApproveSmsTemplate(query: {
-        "RegionId"?: string;
-        "TemplateId": number;
-        "OwnerId"?: number;
-        "FromType"?: number;
-    }): Promise<{}>;
-    ApproveTemplate(query: {
-        "RegionId"?: string;
-        "TemplateId": number;
-        "OwnerId"?: number;
-        "FromType"?: number;
-    }): Promise<{}>;
-    BatchSendMail(query: {
-        "RegionId"?: string;
-        "TemplateName": string;
-        "AccountName": string;
-        "ReceiversName": string;
-        "AddressType": number;
-        "OwnerId"?: number;
-        "TagName"?: string;
-        "ReplyAddress"?: string;
-        "ReplyAddressAlias"?: string;
-        "ClickTrace"?: string;
-    }): Promise<{}>;
-    CheckDomain(query: {
-        "RegionId"?: string;
-        "DomainId": number;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    CheckInvalidAddress(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "ToAddress"?: string;
-    }): Promise<{}>;
-    CheckReplyToMailAddress(query: {
-        "RegionId"?: string;
-        "MailAddressId": number;
-        "OwnerId"?: number;
-        "Lang"?: string;
-        "Region"?: string;
-    }): Promise<{}>;
-    CreateDayu(query: {
-        "RegionId"?: string;
-        "AccountType": number;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    CreateDomain(query: {
-        "RegionId"?: string;
-        "DomainName": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    CreateMailAddress(query: {
-        "RegionId"?: string;
-        "AccountName": string;
-        "Sendtype": string;
-        "OwnerId"?: number;
-        "ReplyAddress"?: string;
-    }): Promise<{}>;
-    CreateReceiver(query: {
-        "RegionId"?: string;
-        "ReceiversName": string;
-        "ReceiversAlias": string;
-        "OwnerId"?: number;
-        "Desc"?: string;
-    }): Promise<{}>;
-    CreateSign(query: {
-        "RegionId"?: string;
-        "SignName": string;
-        "OwnerId"?: number;
-        "Remark"?: string;
-        "SignType"?: number;
-        "FileNames"?: string;
-        "FromType"?: number;
-    }): Promise<{}>;
-    CreateTag(query: {
-        "RegionId"?: string;
-        "TagName": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    CreateTemplate(query: {
-        "RegionId"?: string;
-        "TemplateName": string;
-        "OwnerId"?: number;
-        "TemplateType"?: number;
-        "TemplateSubject"?: string;
-        "TemplateNickName"?: string;
-        "TemplateText"?: string;
-        "SmsType"?: number;
-        "SmsContent"?: string;
-        "Remark"?: string;
-        "FromType"?: number;
-    }): Promise<{}>;
-    DeleteDomain(query: {
-        "RegionId"?: string;
-        "DomainId": number;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DeleteIpfilterByEdmId(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "FromType"?: number;
-        "Id"?: string;
-    }): Promise<{}>;
-    DeleteMailAddress(query: {
-        "RegionId"?: string;
-        "MailAddressId": number;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DeleteReceiver(query: {
-        "RegionId"?: string;
-        "ReceiverId": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DeleteReceiverDetail(query: {
-        "RegionId"?: string;
-        "ReceiverId": string;
-        "OwnerId"?: number;
-        "Email"?: string;
-    }): Promise<{}>;
-    DeleteSign(query: {
-        "RegionId"?: string;
-        "SignId": number;
-        "OwnerId"?: number;
-        "FromType"?: number;
-    }): Promise<{}>;
-    DeleteTag(query: {
-        "RegionId"?: string;
-        "TagId": number;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DeleteTemplate(query: {
-        "RegionId"?: string;
-        "TemplateId": number;
-        "OwnerId"?: number;
-        "FromType"?: number;
-    }): Promise<{}>;
-    DescAccountSummary(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DescAccountSummary2(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "FromType"?: number;
-    }): Promise<{}>;
-    DescDomain(query: {
-        "RegionId"?: string;
-        "DomainId": number;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DescTemplate(query: {
-        "RegionId"?: string;
-        "TemplateId": number;
-        "OwnerId"?: number;
-        "FromType"?: number;
-    }): Promise<{}>;
-    EnableAccount(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    GetAccountList(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "Total"?: string;
-        "Offset"?: string;
-        "PageSize"?: string;
-        "OffsetCreateTime"?: string;
-        "OffsetCreateTimeDesc"?: string;
-        "PageNumber"?: string;
-    }): Promise<{}>;
-    GetIpfilterList(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    GetMailAddressMsgCallBackUrl(query: {
-        "RegionId"?: string;
-        "MailFrom": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    GetRegionList(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "Total"?: string;
-        "Offset"?: string;
-        "PageSize"?: string;
-        "OffsetCreateTime"?: string;
-        "OffsetCreateTimeDesc"?: string;
-        "PageNumber"?: string;
-    }): Promise<{}>;
-    GetSenderAddressList(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "Total"?: string;
-        "Offset"?: string;
-        "PageSize"?: string;
-        "PageNo"?: string;
-        "Keyword"?: string;
-        "NotifyUrl"?: string;
-    }): Promise<{}>;
-    GetTrackList(query: {
-        "RegionId"?: string;
-        "StartTime": string;
-        "EndTime": string;
-        "OwnerId"?: number;
-        "Total"?: string;
-        "Offset"?: string;
-        "PageSize"?: string;
-        "OffsetCreateTime"?: string;
-        "OffsetCreateTimeDesc"?: string;
-        "PageNumber"?: string;
-    }): Promise<{}>;
-    GetTrackListByMailFromAndTagName(query: {
-        "RegionId"?: string;
-        "StartTime": string;
-        "EndTime": string;
-        "Total"?: string;
-        "OwnerId"?: number;
-        "Offset"?: string;
-        "PageSize"?: string;
-        "OffsetCreateTime"?: string;
-        "OffsetCreateTimeDesc"?: string;
-        "PageNumber"?: string;
-        "AccountName"?: string;
-        "TagName"?: string;
-    }): Promise<{}>;
-    MigrateMarket(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "Version"?: string;
-        "FromType"?: number;
-    }): Promise<{}>;
-    ModifyAccountNotification(query: {
-        "RegionId"?: string;
-        "Status": string;
-        "OwnerId"?: number;
-        "Region"?: string;
-    }): Promise<{}>;
-    ModifyMailAddress(query: {
-        "RegionId"?: string;
-        "MailAddressId": number;
-        "OwnerId"?: number;
-        "ReplyAddress"?: string;
-        "Password"?: string;
-    }): Promise<{}>;
-    ModifyPWByDomain(query: {
-        "RegionId"?: string;
-        "DomainName": string;
-        "Password": string;
-    }): Promise<{}>;
-    ModifySenderAddressNotification(query: {
-        "RegionId"?: string;
-        "SenderAddressId": string;
-        "SenderAddress": string;
-        "Region": string;
-        "Status": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    ModifyTag(query: {
-        "RegionId"?: string;
-        "TagId": number;
-        "TagName": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    ModifyTemplate(query: {
-        "RegionId"?: string;
-        "TemplateId": number;
-        "TemplateName": string;
-        "OwnerId"?: number;
-        "TemplateSubject"?: string;
-        "TemplateNickName"?: string;
-        "TemplateText"?: string;
-        "SmsType"?: number;
-        "SmsContent"?: string;
-        "Remark"?: string;
-        "FromType"?: number;
-    }): Promise<{}>;
-    QueryDomainByParam(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "PageNo"?: number;
-        "PageSize"?: number;
-        "KeyWord"?: string;
-        "Status"?: number;
-    }): Promise<{}>;
-    QueryInvalidAddress(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "StartTime"?: string;
-        "EndTime"?: string;
-        "KeyWord"?: string;
-        "Length"?: number;
-        "NextStart"?: string;
-    }): Promise<{}>;
-    QueryMailAddressByParam(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "PageNo"?: number;
-        "PageSize"?: number;
-        "KeyWord"?: string;
-        "Sendtype"?: string;
-    }): Promise<{}>;
-    QueryReceiverByParam(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "PageNo"?: number;
-        "PageSize"?: number;
-        "KeyWord"?: string;
-        "Status"?: number;
-    }): Promise<{}>;
-    QueryReceiverDetail(query: {
-        "RegionId"?: string;
-        "ReceiverId": string;
-        "OwnerId"?: number;
-        "PageSize"?: number;
-        "KeyWord"?: string;
-        "NextStart"?: string;
-    }): Promise<{}>;
-    QuerySignByParam(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "PageNo"?: number;
-        "PageSize"?: number;
-        "KeyWord"?: string;
-        "FromType"?: number;
-    }): Promise<{}>;
-    QuerySmsStatistics(query: {
-        "RegionId"?: string;
-        "StartTime": string;
-        "EndTime": string;
-        "OwnerId"?: number;
-        "FromType"?: number;
-    }): Promise<{}>;
-    QueryTagByParam(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "PageNo"?: number;
-        "PageSize"?: number;
-        "KeyWord"?: string;
-    }): Promise<{}>;
-    QueryTaskByParam(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "PageNo"?: number;
-        "PageSize"?: number;
-        "KeyWord"?: string;
-        "Status"?: number;
-    }): Promise<{}>;
-    QueryTemplateByParam(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "PageNo"?: number;
-        "PageSize"?: number;
-        "KeyWord"?: string;
-        "Status"?: number;
-        "FromType"?: number;
-    }): Promise<{}>;
-    SaveReceiverDetail(query: {
-        "RegionId"?: string;
-        "ReceiverId": string;
-        "Detail": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    SendTestByTemplate(query: {
-        "RegionId"?: string;
-        "TemplateId": number;
-        "AccountName": string;
-        "Email": string;
-        "OwnerId"?: number;
-        "UserName"?: string;
-        "NickName"?: string;
-        "Birthday"?: string;
-        "Gender"?: string;
-        "Mobile"?: string;
-    }): Promise<{}>;
-    SenderStatisticsByTagNameAndBatchID(query: {
-        "RegionId"?: string;
-        "StartTime": string;
-        "EndTime": string;
-        "OwnerId"?: number;
-        "AccountName"?: string;
-        "TagName"?: string;
-    }): Promise<{}>;
-    SenderStatisticsDetailByParam(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "AccountName"?: string;
-        "ToAddress"?: string;
-        "Status"?: number;
-        "StartTime"?: string;
-        "EndTime"?: string;
-        "TagName"?: string;
-        "Length"?: number;
-        "NextStart"?: string;
-    }): Promise<{}>;
-    SingleSendMail(query: {
-        "RegionId"?: string;
-        "AccountName": string;
-        "AddressType": number;
-        "ReplyToAddress": boolean;
-        "ToAddress": string;
-        "Subject": string;
-        "OwnerId"?: number;
-        "TagName"?: string;
-        "HtmlBody"?: string;
-        "TextBody"?: string;
-        "FromAlias"?: string;
-        "ReplyAddress"?: string;
-        "ReplyAddressAlias"?: string;
-        "ClickTrace"?: string;
-    }): Promise<{}>;
-    SingleSendSms(query: {
-        "RegionId"?: string;
-        "SignName": string;
-        "TemplateCode": string;
-        "RecNum": string;
-        "ParamString": string;
-        "OwnerId"?: number;
-        "Version"?: string;
-    }): Promise<{}>;
-    UpdateDomainTrackName(query: {
-        "RegionId"?: string;
-        "DomainId": number;
-        "CnameTrackRecord": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    UpdateIpProtection(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "IpProtection"?: string;
-    }): Promise<{}>;
-    UpdateMailAddressMsgCallBackUrl(query: {
-        "RegionId"?: string;
-        "MailFrom": string;
-        "OwnerId"?: number;
-        "NotifyUrl"?: string;
-    }): Promise<{}>;
+    DeleteInvalidAddress(query: DeleteInvalidAddressRequest): Promise<DeleteInvalidAddressResponse>;
+    GetIpProtection(query: GetIpProtectionRequest): Promise<GetIpProtectionResponse>;
+    AddIpfilter(query: AddIpfilterRequest): Promise<AddIpfilterResponse>;
+    ApproveMailTemplate(query: ApproveMailTemplateRequest): Promise<ApproveMailTemplateResponse>;
+    ApproveReplyMailAddress(query: ApproveReplyMailAddressRequest): Promise<ApproveReplyMailAddressResponse>;
+    ApproveSmsTemplate(query: ApproveSmsTemplateRequest): Promise<ApproveSmsTemplateResponse>;
+    ApproveTemplate(query: ApproveTemplateRequest): Promise<ApproveTemplateResponse>;
+    BatchSendMail(query: BatchSendMailRequest): Promise<BatchSendMailResponse>;
+    CheckDomain(query: CheckDomainRequest): Promise<CheckDomainResponse>;
+    CheckInvalidAddress(query: CheckInvalidAddressRequest): Promise<CheckInvalidAddressResponse>;
+    CheckReplyToMailAddress(query: CheckReplyToMailAddressRequest): Promise<CheckReplyToMailAddressResponse>;
+    CreateDayu(query: CreateDayuRequest): Promise<CreateDayuResponse>;
+    CreateDomain(query: CreateDomainRequest): Promise<CreateDomainResponse>;
+    CreateMailAddress(query: CreateMailAddressRequest): Promise<CreateMailAddressResponse>;
+    CreateReceiver(query: CreateReceiverRequest): Promise<CreateReceiverResponse>;
+    CreateSign(query: CreateSignRequest): Promise<CreateSignResponse>;
+    CreateTag(query: CreateTagRequest): Promise<CreateTagResponse>;
+    CreateTemplate(query: CreateTemplateRequest): Promise<CreateTemplateResponse>;
+    DeleteDomain(query: DeleteDomainRequest): Promise<DeleteDomainResponse>;
+    DeleteIpfilterByEdmId(query: DeleteIpfilterByEdmIdRequest): Promise<DeleteIpfilterByEdmIdResponse>;
+    DeleteMailAddress(query: DeleteMailAddressRequest): Promise<DeleteMailAddressResponse>;
+    DeleteReceiver(query: DeleteReceiverRequest): Promise<DeleteReceiverResponse>;
+    DeleteReceiverDetail(query: DeleteReceiverDetailRequest): Promise<DeleteReceiverDetailResponse>;
+    DeleteSign(query: DeleteSignRequest): Promise<DeleteSignResponse>;
+    DeleteTag(query: DeleteTagRequest): Promise<DeleteTagResponse>;
+    DeleteTemplate(query: DeleteTemplateRequest): Promise<DeleteTemplateResponse>;
+    DescAccountSummary(query: DescAccountSummaryRequest): Promise<DescAccountSummaryResponse>;
+    DescAccountSummary2(query: DescAccountSummary2Request): Promise<DescAccountSummary2Response>;
+    DescDomain(query: DescDomainRequest): Promise<DescDomainResponse>;
+    DescTemplate(query: DescTemplateRequest): Promise<DescTemplateResponse>;
+    EnableAccount(query: EnableAccountRequest): Promise<EnableAccountResponse>;
+    GetAccountList(query: GetAccountListRequest): Promise<GetAccountListResponse>;
+    GetIpfilterList(query: GetIpfilterListRequest): Promise<GetIpfilterListResponse>;
+    GetMailAddressMsgCallBackUrl(query: GetMailAddressMsgCallBackUrlRequest): Promise<GetMailAddressMsgCallBackUrlResponse>;
+    GetRegionList(query: GetRegionListRequest): Promise<GetRegionListResponse>;
+    GetSenderAddressList(query: GetSenderAddressListRequest): Promise<GetSenderAddressListResponse>;
+    GetTrackList(query: GetTrackListRequest): Promise<GetTrackListResponse>;
+    GetTrackListByMailFromAndTagName(query: GetTrackListByMailFromAndTagNameRequest): Promise<GetTrackListByMailFromAndTagNameResponse>;
+    MigrateMarket(query: MigrateMarketRequest): Promise<MigrateMarketResponse>;
+    ModifyAccountNotification(query: ModifyAccountNotificationRequest): Promise<ModifyAccountNotificationResponse>;
+    ModifyMailAddress(query: ModifyMailAddressRequest): Promise<ModifyMailAddressResponse>;
+    ModifyPWByDomain(query: ModifyPWByDomainRequest): Promise<ModifyPWByDomainResponse>;
+    ModifySenderAddressNotification(query: ModifySenderAddressNotificationRequest): Promise<ModifySenderAddressNotificationResponse>;
+    ModifyTag(query: ModifyTagRequest): Promise<ModifyTagResponse>;
+    ModifyTemplate(query: ModifyTemplateRequest): Promise<ModifyTemplateResponse>;
+    QueryDomainByParam(query: QueryDomainByParamRequest): Promise<QueryDomainByParamResponse>;
+    QueryInvalidAddress(query: QueryInvalidAddressRequest): Promise<QueryInvalidAddressResponse>;
+    QueryMailAddressByParam(query: QueryMailAddressByParamRequest): Promise<QueryMailAddressByParamResponse>;
+    QueryReceiverByParam(query: QueryReceiverByParamRequest): Promise<QueryReceiverByParamResponse>;
+    QueryReceiverDetail(query: QueryReceiverDetailRequest): Promise<QueryReceiverDetailResponse>;
+    QuerySignByParam(query: QuerySignByParamRequest): Promise<QuerySignByParamResponse>;
+    QuerySmsStatistics(query: QuerySmsStatisticsRequest): Promise<QuerySmsStatisticsResponse>;
+    QueryTagByParam(query: QueryTagByParamRequest): Promise<QueryTagByParamResponse>;
+    QueryTaskByParam(query: QueryTaskByParamRequest): Promise<QueryTaskByParamResponse>;
+    QueryTemplateByParam(query: QueryTemplateByParamRequest): Promise<QueryTemplateByParamResponse>;
+    SaveReceiverDetail(query: SaveReceiverDetailRequest): Promise<SaveReceiverDetailResponse>;
+    SendTestByTemplate(query: SendTestByTemplateRequest): Promise<SendTestByTemplateResponse>;
+    SenderStatisticsByTagNameAndBatchID(query: SenderStatisticsByTagNameAndBatchIDRequest): Promise<SenderStatisticsByTagNameAndBatchIDResponse>;
+    SenderStatisticsDetailByParam(query: SenderStatisticsDetailByParamRequest): Promise<SenderStatisticsDetailByParamResponse>;
+    SingleSendMail(query: SingleSendMailRequest): Promise<SingleSendMailResponse>;
+    SingleSendSms(query: SingleSendSmsRequest): Promise<SingleSendSmsResponse>;
+    UpdateDomainTrackName(query: UpdateDomainTrackNameRequest): Promise<UpdateDomainTrackNameResponse>;
+    UpdateIpProtection(query: UpdateIpProtectionRequest): Promise<UpdateIpProtectionResponse>;
+    UpdateMailAddressMsgCallBackUrl(query: UpdateMailAddressMsgCallBackUrlRequest): Promise<UpdateMailAddressMsgCallBackUrlResponse>;
 }
 export default DM;

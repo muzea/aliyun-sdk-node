@@ -1,0 +1,3 @@
+interface XpackRelateDBResponse {
+}
+export { XpackRelateDBResponse };

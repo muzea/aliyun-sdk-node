@@ -1,0 +1,3 @@
+interface RemoveEndPointResponse {
+}
+export { RemoveEndPointResponse };

@@ -1,0 +1,3 @@
+interface DescribeCapResponse {
+}
+export { DescribeCapResponse };

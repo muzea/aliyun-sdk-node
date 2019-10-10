@@ -1,0 +1,3 @@
+interface DescribeSDKStatisticLogResponse {
+}
+export { DescribeSDKStatisticLogResponse };

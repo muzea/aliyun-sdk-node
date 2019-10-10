@@ -1,0 +1,3 @@
+interface SubmitAssistReportResponse {
+}
+export { SubmitAssistReportResponse };

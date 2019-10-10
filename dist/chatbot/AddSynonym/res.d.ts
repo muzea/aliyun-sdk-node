@@ -1,0 +1,3 @@
+interface AddSynonymResponse {
+}
+export { AddSynonymResponse };

@@ -1,0 +1,3 @@
+interface DescribeGtmRecoveryPlanAvailableConfigResponse {
+}
+export { DescribeGtmRecoveryPlanAvailableConfigResponse };

@@ -1,0 +1,3 @@
+interface GetBucketLifecycleResponse {
+}
+export { GetBucketLifecycleResponse };

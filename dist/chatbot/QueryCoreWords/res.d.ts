@@ -1,0 +1,3 @@
+interface QueryCoreWordsResponse {
+}
+export { QueryCoreWordsResponse };

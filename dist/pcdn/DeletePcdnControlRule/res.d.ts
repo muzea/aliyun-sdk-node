@@ -1,0 +1,3 @@
+interface DeletePcdnControlRuleResponse {
+}
+export { DeletePcdnControlRuleResponse };

@@ -1,0 +1,3 @@
+interface CloseEdgeInstanceDeploymentResponse {
+}
+export { CloseEdgeInstanceDeploymentResponse };

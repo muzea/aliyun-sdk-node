@@ -1,0 +1,3 @@
+interface ApproveJoinCompanyResponse {
+}
+export { ApproveJoinCompanyResponse };

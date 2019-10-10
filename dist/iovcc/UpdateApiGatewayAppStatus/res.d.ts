@@ -1,0 +1,3 @@
+interface UpdateApiGatewayAppStatusResponse {
+}
+export { UpdateApiGatewayAppStatusResponse };

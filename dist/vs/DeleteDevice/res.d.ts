@@ -1,0 +1,3 @@
+interface DeleteDeviceResponse {
+}
+export { DeleteDeviceResponse };

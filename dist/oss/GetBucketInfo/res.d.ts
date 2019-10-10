@@ -1,0 +1,3 @@
+interface GetBucketInfoResponse {
+}
+export { GetBucketInfoResponse };

@@ -1,0 +1,3 @@
+interface DescribeVsDomainSnapshotDataResponse {
+}
+export { DescribeVsDomainSnapshotDataResponse };

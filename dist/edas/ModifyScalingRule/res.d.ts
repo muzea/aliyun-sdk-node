@@ -1,0 +1,3 @@
+interface ModifyScalingRuleResponse {
+}
+export { ModifyScalingRuleResponse };

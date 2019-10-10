@@ -1,0 +1,3 @@
+interface ListBoundLabGatewaysResponse {
+}
+export { ListBoundLabGatewaysResponse };

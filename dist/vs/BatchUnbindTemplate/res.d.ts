@@ -1,0 +1,3 @@
+interface BatchUnbindTemplateResponse {
+}
+export { BatchUnbindTemplateResponse };

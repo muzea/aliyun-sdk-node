@@ -1,0 +1,3 @@
+interface GetObjectMetaResponse {
+}
+export { GetObjectMetaResponse };

@@ -1,0 +1,3 @@
+interface CreateCategoryResponse {
+}
+export { CreateCategoryResponse };

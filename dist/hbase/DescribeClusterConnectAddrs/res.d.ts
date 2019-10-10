@@ -1,0 +1,3 @@
+interface DescribeClusterConnectAddrsResponse {
+}
+export { DescribeClusterConnectAddrsResponse };

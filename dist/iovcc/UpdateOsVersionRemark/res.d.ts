@@ -1,0 +1,3 @@
+interface UpdateOsVersionRemarkResponse {
+}
+export { UpdateOsVersionRemarkResponse };

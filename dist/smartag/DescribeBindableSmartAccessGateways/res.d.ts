@@ -1,0 +1,3 @@
+interface DescribeBindableSmartAccessGatewaysResponse {
+}
+export { DescribeBindableSmartAccessGatewaysResponse };

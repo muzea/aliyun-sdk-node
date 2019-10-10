@@ -1,293 +1,142 @@
+import { OnsConsumerResetOffsetRequest } from "./OnsConsumerResetOffset/req";
+import { OnsConsumerResetOffsetResponse } from "./OnsConsumerResetOffset/res";
+import { OnsMessageSendRequest } from "./OnsMessageSend/req";
+import { OnsMessageSendResponse } from "./OnsMessageSend/res";
+import { OnsConsumerAccumulateRequest } from "./OnsConsumerAccumulate/req";
+import { OnsConsumerAccumulateResponse } from "./OnsConsumerAccumulate/res";
+import { OnsConsumerGetConnectionRequest } from "./OnsConsumerGetConnection/req";
+import { OnsConsumerGetConnectionResponse } from "./OnsConsumerGetConnection/res";
+import { OnsConsumerStatusRequest } from "./OnsConsumerStatus/req";
+import { OnsConsumerStatusResponse } from "./OnsConsumerStatus/res";
+import { OnsConsumerTimeSpanRequest } from "./OnsConsumerTimeSpan/req";
+import { OnsConsumerTimeSpanResponse } from "./OnsConsumerTimeSpan/res";
+import { OnsDLQMessageGetByIdRequest } from "./OnsDLQMessageGetById/req";
+import { OnsDLQMessageGetByIdResponse } from "./OnsDLQMessageGetById/res";
+import { OnsDLQMessagePageQueryByGroupIdRequest } from "./OnsDLQMessagePageQueryByGroupId/req";
+import { OnsDLQMessagePageQueryByGroupIdResponse } from "./OnsDLQMessagePageQueryByGroupId/res";
+import { OnsDLQMessageResendByIdRequest } from "./OnsDLQMessageResendById/req";
+import { OnsDLQMessageResendByIdResponse } from "./OnsDLQMessageResendById/res";
+import { OnsGroupDeleteRequest } from "./OnsGroupDelete/req";
+import { OnsGroupDeleteResponse } from "./OnsGroupDelete/res";
+import { OnsGroupListRequest } from "./OnsGroupList/req";
+import { OnsGroupListResponse } from "./OnsGroupList/res";
+import { OnsGroupSubDetailRequest } from "./OnsGroupSubDetail/req";
+import { OnsGroupSubDetailResponse } from "./OnsGroupSubDetail/res";
+import { OnsInstanceBaseInfoRequest } from "./OnsInstanceBaseInfo/req";
+import { OnsInstanceBaseInfoResponse } from "./OnsInstanceBaseInfo/res";
+import { OnsInstanceDeleteRequest } from "./OnsInstanceDelete/req";
+import { OnsInstanceDeleteResponse } from "./OnsInstanceDelete/res";
+import { OnsInstanceInServiceListRequest } from "./OnsInstanceInServiceList/req";
+import { OnsInstanceInServiceListResponse } from "./OnsInstanceInServiceList/res";
+import { OnsInstanceUpdateRequest } from "./OnsInstanceUpdate/req";
+import { OnsInstanceUpdateResponse } from "./OnsInstanceUpdate/res";
+import { OnsMessageGetByKeyRequest } from "./OnsMessageGetByKey/req";
+import { OnsMessageGetByKeyResponse } from "./OnsMessageGetByKey/res";
+import { OnsMessageGetByMsgIdRequest } from "./OnsMessageGetByMsgId/req";
+import { OnsMessageGetByMsgIdResponse } from "./OnsMessageGetByMsgId/res";
+import { OnsMessagePageQueryByTopicRequest } from "./OnsMessagePageQueryByTopic/req";
+import { OnsMessagePageQueryByTopicResponse } from "./OnsMessagePageQueryByTopic/res";
+import { OnsMessageTraceRequest } from "./OnsMessageTrace/req";
+import { OnsMessageTraceResponse } from "./OnsMessageTrace/res";
+import { OnsMqttGroupIdCreateRequest } from "./OnsMqttGroupIdCreate/req";
+import { OnsMqttGroupIdCreateResponse } from "./OnsMqttGroupIdCreate/res";
+import { OnsMqttGroupIdDeleteRequest } from "./OnsMqttGroupIdDelete/req";
+import { OnsMqttGroupIdDeleteResponse } from "./OnsMqttGroupIdDelete/res";
+import { OnsMqttGroupIdListRequest } from "./OnsMqttGroupIdList/req";
+import { OnsMqttGroupIdListResponse } from "./OnsMqttGroupIdList/res";
+import { OnsMqttQueryClientByClientIdRequest } from "./OnsMqttQueryClientByClientId/req";
+import { OnsMqttQueryClientByClientIdResponse } from "./OnsMqttQueryClientByClientId/res";
+import { OnsMqttQueryClientByGroupIdRequest } from "./OnsMqttQueryClientByGroupId/req";
+import { OnsMqttQueryClientByGroupIdResponse } from "./OnsMqttQueryClientByGroupId/res";
+import { OnsMqttQueryClientByTopicRequest } from "./OnsMqttQueryClientByTopic/req";
+import { OnsMqttQueryClientByTopicResponse } from "./OnsMqttQueryClientByTopic/res";
+import { OnsMqttQueryMsgTransTrendRequest } from "./OnsMqttQueryMsgTransTrend/req";
+import { OnsMqttQueryMsgTransTrendResponse } from "./OnsMqttQueryMsgTransTrend/res";
+import { OnsRegionListRequest } from "./OnsRegionList/req";
+import { OnsRegionListResponse } from "./OnsRegionList/res";
+import { OnsTopicDeleteRequest } from "./OnsTopicDelete/req";
+import { OnsTopicDeleteResponse } from "./OnsTopicDelete/res";
+import { OnsTopicListRequest } from "./OnsTopicList/req";
+import { OnsTopicListResponse } from "./OnsTopicList/res";
+import { OnsTopicStatusRequest } from "./OnsTopicStatus/req";
+import { OnsTopicStatusResponse } from "./OnsTopicStatus/res";
+import { OnsTopicSubDetailRequest } from "./OnsTopicSubDetail/req";
+import { OnsTopicSubDetailResponse } from "./OnsTopicSubDetail/res";
+import { OnsTopicUpdateRequest } from "./OnsTopicUpdate/req";
+import { OnsTopicUpdateResponse } from "./OnsTopicUpdate/res";
+import { OnsTraceGetResultRequest } from "./OnsTraceGetResult/req";
+import { OnsTraceGetResultResponse } from "./OnsTraceGetResult/res";
+import { OnsTraceQueryByMsgIdRequest } from "./OnsTraceQueryByMsgId/req";
+import { OnsTraceQueryByMsgIdResponse } from "./OnsTraceQueryByMsgId/res";
+import { OnsTrendGroupOutputTpsRequest } from "./OnsTrendGroupOutputTps/req";
+import { OnsTrendGroupOutputTpsResponse } from "./OnsTrendGroupOutputTps/res";
+import { OnsTrendTopicInputTpsRequest } from "./OnsTrendTopicInputTps/req";
+import { OnsTrendTopicInputTpsResponse } from "./OnsTrendTopicInputTps/res";
+import { OnsWarnCreateRequest } from "./OnsWarnCreate/req";
+import { OnsWarnCreateResponse } from "./OnsWarnCreate/res";
+import { OnsWarnDeleteRequest } from "./OnsWarnDelete/req";
+import { OnsWarnDeleteResponse } from "./OnsWarnDelete/res";
+import { OnsGroupConsumerUpdateRequest } from "./OnsGroupConsumerUpdate/req";
+import { OnsGroupConsumerUpdateResponse } from "./OnsGroupConsumerUpdate/res";
+import { OnsGroupCreateRequest } from "./OnsGroupCreate/req";
+import { OnsGroupCreateResponse } from "./OnsGroupCreate/res";
+import { OnsInstanceCreateRequest } from "./OnsInstanceCreate/req";
+import { OnsInstanceCreateResponse } from "./OnsInstanceCreate/res";
+import { OnsMessagePushRequest } from "./OnsMessagePush/req";
+import { OnsMessagePushResponse } from "./OnsMessagePush/res";
+import { OnsMqttQueryHistoryOnlineRequest } from "./OnsMqttQueryHistoryOnline/req";
+import { OnsMqttQueryHistoryOnlineResponse } from "./OnsMqttQueryHistoryOnline/res";
+import { OnsTopicCreateRequest } from "./OnsTopicCreate/req";
+import { OnsTopicCreateResponse } from "./OnsTopicCreate/res";
+import { OnsTraceQueryByMsgKeyRequest } from "./OnsTraceQueryByMsgKey/req";
+import { OnsTraceQueryByMsgKeyResponse } from "./OnsTraceQueryByMsgKey/res";
+
 interface ONS {
-    OnsConsumerResetOffset(query: {
-        "RegionId"?: string;
-        "Topic": string;
-        "Type": number;
-        "GroupId": string;
-        "ResetTimestamp"?: number;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsMessageSend(query: {
-        "RegionId"?: string;
-        "Message": string;
-        "Topic": string;
-        "Tag"?: string;
-        "Key"?: string;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsConsumerAccumulate(query: {
-        "RegionId"?: string;
-        "GroupId": string;
-        "Detail"?: boolean;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsConsumerGetConnection(query: {
-        "RegionId"?: string;
-        "GroupId": string;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsConsumerStatus(query: {
-        "RegionId"?: string;
-        "GroupId": string;
-        "Detail"?: boolean;
-        "NeedJstack"?: boolean;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsConsumerTimeSpan(query: {
-        "RegionId"?: string;
-        "Topic": string;
-        "GroupId": string;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsDLQMessageGetById(query: {
-        "RegionId"?: string;
-        "GroupId": string;
-        "MsgId": string;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsDLQMessagePageQueryByGroupId(query: {
-        "RegionId"?: string;
-        "BeginTime": number;
-        "EndTime": number;
-        "CurrentPage": number;
-        "GroupId": string;
-        "TaskId"?: string;
-        "PageSize"?: number;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsDLQMessageResendById(query: {
-        "RegionId"?: string;
-        "GroupId": string;
-        "MsgId": string;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsGroupDelete(query: {
-        "RegionId"?: string;
-        "InstanceId"?: string;
-        "GroupId": string;
-    }): Promise<{}>;
-    OnsGroupList(query: {
-        "RegionId"?: string;
-        "InstanceId"?: string;
-        "GroupId"?: string;
-    }): Promise<{}>;
-    OnsGroupSubDetail(query: {
-        "RegionId"?: string;
-        "GroupId": string;
-        "InstanceId": string;
-    }): Promise<{}>;
-    OnsInstanceBaseInfo(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-    }): Promise<{}>;
-    OnsInstanceDelete(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-    }): Promise<{}>;
-    OnsInstanceInServiceList(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    OnsInstanceUpdate(query: {
-        "RegionId"?: string;
-        "InstanceName"?: string;
-        "InstanceId": string;
-        "Remark"?: string;
-    }): Promise<{}>;
-    OnsMessageGetByKey(query: {
-        "RegionId"?: string;
-        "Key": string;
-        "Topic": string;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsMessageGetByMsgId(query: {
-        "RegionId"?: string;
-        "Topic": string;
-        "MsgId": string;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsMessagePageQueryByTopic(query: {
-        "RegionId"?: string;
-        "BeginTime": number;
-        "EndTime": number;
-        "CurrentPage": number;
-        "Topic": string;
-        "TaskId"?: string;
-        "PageSize"?: number;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsMessageTrace(query: {
-        "RegionId"?: string;
-        "MsgId": string;
-        "Topic": string;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsMqttGroupIdCreate(query: {
-        "RegionId": string;
-        "GroupId": string;
-        "Topic"?: string;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsMqttGroupIdDelete(query: {
-        "RegionId": string;
-        "GroupId": string;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsMqttGroupIdList(query: {
-        "RegionId"?: string;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsMqttQueryClientByClientId(query: {
-        "RegionId"?: string;
-        "ClientId": string;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsMqttQueryClientByGroupId(query: {
-        "RegionId"?: string;
-        "GroupId": string;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsMqttQueryClientByTopic(query: {
-        "RegionId"?: string;
-        "SubTopic": string;
-        "ParentTopic": string;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsMqttQueryMsgTransTrend(query: {
-        "RegionId"?: string;
-        "TransType": string;
-        "ParentTopic": string;
-        "BeginTime": number;
-        "EndTime": number;
-        "TpsType": string;
-        "SubTopic"?: string;
-        "MsgType"?: string;
-        "Qos"?: number;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsRegionList(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    OnsTopicDelete(query: {
-        "RegionId"?: string;
-        "Topic": string;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsTopicList(query: {
-        "RegionId"?: string;
-        "Topic"?: string;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsTopicStatus(query: {
-        "RegionId"?: string;
-        "Topic": string;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsTopicSubDetail(query: {
-        "RegionId"?: string;
-        "Topic": string;
-        "InstanceId": string;
-    }): Promise<{}>;
-    OnsTopicUpdate(query: {
-        "RegionId"?: string;
-        "Perm": number;
-        "Topic": string;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsTraceGetResult(query: {
-        "RegionId"?: string;
-        "QueryId": string;
-    }): Promise<{}>;
-    OnsTraceQueryByMsgId(query: {
-        "RegionId"?: string;
-        "MsgId": string;
-        "BeginTime": number;
-        "EndTime": number;
-        "Topic": string;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsTrendGroupOutputTps(query: {
-        "RegionId"?: string;
-        "Topic": string;
-        "BeginTime": number;
-        "EndTime": number;
-        "Type": number;
-        "GroupId": string;
-        "InstanceId"?: string;
-        "Period"?: number;
-    }): Promise<{}>;
-    OnsTrendTopicInputTps(query: {
-        "RegionId"?: string;
-        "BeginTime": number;
-        "EndTime": number;
-        "Type": number;
-        "Topic": string;
-        "InstanceId"?: string;
-        "Period"?: number;
-    }): Promise<{}>;
-    OnsWarnCreate(query: {
-        "RegionId"?: string;
-        "Topic": string;
-        "Threshold": string;
-        "Contacts": string;
-        "DelayTime": string;
-        "BlockTime": string;
-        "AlertTime": string;
-        "Level": string;
-        "InstanceId"?: string;
-        "GroupId": string;
-    }): Promise<{}>;
-    OnsWarnDelete(query: {
-        "RegionId"?: string;
-        "Topic": string;
-        "InstanceId"?: string;
-        "GroupId": string;
-    }): Promise<{}>;
-    OnsGroupConsumerUpdate(query: {
-        "RegionId"?: string;
-        "ReadEnable": boolean;
-        "InstanceId"?: string;
-        "GroupId": string;
-    }): Promise<{}>;
-    OnsGroupCreate(query: {
-        "RegionId"?: string;
-        "InstanceId"?: string;
-        "GroupId": string;
-        "Remark"?: string;
-    }): Promise<{}>;
-    OnsInstanceCreate(query: {
-        "RegionId"?: string;
-        "InstanceName": string;
-        "Remark"?: string;
-    }): Promise<{}>;
-    OnsMessagePush(query: {
-        "RegionId"?: string;
-        "ClientId": string;
-        "MsgId": string;
-        "Topic": string;
-        "GroupId": string;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsMqttQueryHistoryOnline(query: {
-        "RegionId"?: string;
-        "BeginTime": number;
-        "EndTime": number;
-        "GroupId": string;
-        "InstanceId"?: string;
-    }): Promise<{}>;
-    OnsTopicCreate(query: {
-        "RegionId"?: string;
-        "MessageType": number;
-        "InstanceId"?: string;
-        "Topic": string;
-        "Remark"?: string;
-    }): Promise<{}>;
-    OnsTraceQueryByMsgKey(query: {
-        "RegionId"?: string;
-        "MsgKey": string;
-        "BeginTime": number;
-        "EndTime": number;
-        "Topic": string;
-        "InstanceId"?: string;
-    }): Promise<{}>;
+    OnsConsumerResetOffset(query: OnsConsumerResetOffsetRequest): Promise<OnsConsumerResetOffsetResponse>;
+    OnsMessageSend(query: OnsMessageSendRequest): Promise<OnsMessageSendResponse>;
+    OnsConsumerAccumulate(query: OnsConsumerAccumulateRequest): Promise<OnsConsumerAccumulateResponse>;
+    OnsConsumerGetConnection(query: OnsConsumerGetConnectionRequest): Promise<OnsConsumerGetConnectionResponse>;
+    OnsConsumerStatus(query: OnsConsumerStatusRequest): Promise<OnsConsumerStatusResponse>;
+    OnsConsumerTimeSpan(query: OnsConsumerTimeSpanRequest): Promise<OnsConsumerTimeSpanResponse>;
+    OnsDLQMessageGetById(query: OnsDLQMessageGetByIdRequest): Promise<OnsDLQMessageGetByIdResponse>;
+    OnsDLQMessagePageQueryByGroupId(query: OnsDLQMessagePageQueryByGroupIdRequest): Promise<OnsDLQMessagePageQueryByGroupIdResponse>;
+    OnsDLQMessageResendById(query: OnsDLQMessageResendByIdRequest): Promise<OnsDLQMessageResendByIdResponse>;
+    OnsGroupDelete(query: OnsGroupDeleteRequest): Promise<OnsGroupDeleteResponse>;
+    OnsGroupList(query: OnsGroupListRequest): Promise<OnsGroupListResponse>;
+    OnsGroupSubDetail(query: OnsGroupSubDetailRequest): Promise<OnsGroupSubDetailResponse>;
+    OnsInstanceBaseInfo(query: OnsInstanceBaseInfoRequest): Promise<OnsInstanceBaseInfoResponse>;
+    OnsInstanceDelete(query: OnsInstanceDeleteRequest): Promise<OnsInstanceDeleteResponse>;
+    OnsInstanceInServiceList(query: OnsInstanceInServiceListRequest): Promise<OnsInstanceInServiceListResponse>;
+    OnsInstanceUpdate(query: OnsInstanceUpdateRequest): Promise<OnsInstanceUpdateResponse>;
+    OnsMessageGetByKey(query: OnsMessageGetByKeyRequest): Promise<OnsMessageGetByKeyResponse>;
+    OnsMessageGetByMsgId(query: OnsMessageGetByMsgIdRequest): Promise<OnsMessageGetByMsgIdResponse>;
+    OnsMessagePageQueryByTopic(query: OnsMessagePageQueryByTopicRequest): Promise<OnsMessagePageQueryByTopicResponse>;
+    OnsMessageTrace(query: OnsMessageTraceRequest): Promise<OnsMessageTraceResponse>;
+    OnsMqttGroupIdCreate(query: OnsMqttGroupIdCreateRequest): Promise<OnsMqttGroupIdCreateResponse>;
+    OnsMqttGroupIdDelete(query: OnsMqttGroupIdDeleteRequest): Promise<OnsMqttGroupIdDeleteResponse>;
+    OnsMqttGroupIdList(query: OnsMqttGroupIdListRequest): Promise<OnsMqttGroupIdListResponse>;
+    OnsMqttQueryClientByClientId(query: OnsMqttQueryClientByClientIdRequest): Promise<OnsMqttQueryClientByClientIdResponse>;
+    OnsMqttQueryClientByGroupId(query: OnsMqttQueryClientByGroupIdRequest): Promise<OnsMqttQueryClientByGroupIdResponse>;
+    OnsMqttQueryClientByTopic(query: OnsMqttQueryClientByTopicRequest): Promise<OnsMqttQueryClientByTopicResponse>;
+    OnsMqttQueryMsgTransTrend(query: OnsMqttQueryMsgTransTrendRequest): Promise<OnsMqttQueryMsgTransTrendResponse>;
+    OnsRegionList(query: OnsRegionListRequest): Promise<OnsRegionListResponse>;
+    OnsTopicDelete(query: OnsTopicDeleteRequest): Promise<OnsTopicDeleteResponse>;
+    OnsTopicList(query: OnsTopicListRequest): Promise<OnsTopicListResponse>;
+    OnsTopicStatus(query: OnsTopicStatusRequest): Promise<OnsTopicStatusResponse>;
+    OnsTopicSubDetail(query: OnsTopicSubDetailRequest): Promise<OnsTopicSubDetailResponse>;
+    OnsTopicUpdate(query: OnsTopicUpdateRequest): Promise<OnsTopicUpdateResponse>;
+    OnsTraceGetResult(query: OnsTraceGetResultRequest): Promise<OnsTraceGetResultResponse>;
+    OnsTraceQueryByMsgId(query: OnsTraceQueryByMsgIdRequest): Promise<OnsTraceQueryByMsgIdResponse>;
+    OnsTrendGroupOutputTps(query: OnsTrendGroupOutputTpsRequest): Promise<OnsTrendGroupOutputTpsResponse>;
+    OnsTrendTopicInputTps(query: OnsTrendTopicInputTpsRequest): Promise<OnsTrendTopicInputTpsResponse>;
+    OnsWarnCreate(query: OnsWarnCreateRequest): Promise<OnsWarnCreateResponse>;
+    OnsWarnDelete(query: OnsWarnDeleteRequest): Promise<OnsWarnDeleteResponse>;
+    OnsGroupConsumerUpdate(query: OnsGroupConsumerUpdateRequest): Promise<OnsGroupConsumerUpdateResponse>;
+    OnsGroupCreate(query: OnsGroupCreateRequest): Promise<OnsGroupCreateResponse>;
+    OnsInstanceCreate(query: OnsInstanceCreateRequest): Promise<OnsInstanceCreateResponse>;
+    OnsMessagePush(query: OnsMessagePushRequest): Promise<OnsMessagePushResponse>;
+    OnsMqttQueryHistoryOnline(query: OnsMqttQueryHistoryOnlineRequest): Promise<OnsMqttQueryHistoryOnlineResponse>;
+    OnsTopicCreate(query: OnsTopicCreateRequest): Promise<OnsTopicCreateResponse>;
+    OnsTraceQueryByMsgKey(query: OnsTraceQueryByMsgKeyRequest): Promise<OnsTraceQueryByMsgKeyResponse>;
 }
 export default ONS;

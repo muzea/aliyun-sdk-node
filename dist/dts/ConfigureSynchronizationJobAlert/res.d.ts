@@ -1,0 +1,3 @@
+interface ConfigureSynchronizationJobAlertResponse {
+}
+export { ConfigureSynchronizationJobAlertResponse };

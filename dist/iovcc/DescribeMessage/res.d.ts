@@ -1,0 +1,3 @@
+interface DescribeMessageResponse {
+}
+export { DescribeMessageResponse };

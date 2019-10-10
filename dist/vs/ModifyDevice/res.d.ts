@@ -1,0 +1,3 @@
+interface ModifyDeviceResponse {
+}
+export { ModifyDeviceResponse };

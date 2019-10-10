@@ -1,0 +1,3 @@
+interface GetBucketAclResponse {
+}
+export { GetBucketAclResponse };

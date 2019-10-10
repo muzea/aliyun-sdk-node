@@ -1,0 +1,3 @@
+interface UpdateQueueConfigResponse {
+}
+export { UpdateQueueConfigResponse };

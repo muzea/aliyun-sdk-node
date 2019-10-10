@@ -1,0 +1,3 @@
+interface ListNodesByOwnedJoinPermissionIdResponse {
+}
+export { ListNodesByOwnedJoinPermissionIdResponse };

@@ -1,0 +1,3 @@
+interface GetDeviceSystemUpdateFunnelEventsResponse {
+}
+export { GetDeviceSystemUpdateFunnelEventsResponse };

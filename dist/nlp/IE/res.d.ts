@@ -1,0 +1,3 @@
+interface IEResponse {
+}
+export { IEResponse };

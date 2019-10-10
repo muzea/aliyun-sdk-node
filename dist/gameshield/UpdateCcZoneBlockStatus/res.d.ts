@@ -1,0 +1,3 @@
+interface UpdateCcZoneBlockStatusResponse {
+}
+export { UpdateCcZoneBlockStatusResponse };

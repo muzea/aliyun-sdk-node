@@ -1,0 +1,3 @@
+interface QueryPrepublishPassedDeviceCountResponse {
+}
+export { QueryPrepublishPassedDeviceCountResponse };

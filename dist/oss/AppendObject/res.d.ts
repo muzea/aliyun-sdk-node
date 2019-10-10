@@ -1,0 +1,3 @@
+interface AppendObjectResponse {
+}
+export { AppendObjectResponse };

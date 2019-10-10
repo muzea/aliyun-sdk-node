@@ -1,0 +1,3 @@
+interface DeleteCameraResponse {
+}
+export { DeleteCameraResponse };

@@ -1,0 +1,3 @@
+interface UnbindNodesFromMulticastGroupResponse {
+}
+export { UnbindNodesFromMulticastGroupResponse };

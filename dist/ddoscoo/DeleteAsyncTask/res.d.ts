@@ -1,0 +1,3 @@
+interface DeleteAsyncTaskResponse {
+}
+export { DeleteAsyncTaskResponse };

@@ -1,0 +1,3 @@
+interface SmsConversionResponse {
+}
+export { SmsConversionResponse };

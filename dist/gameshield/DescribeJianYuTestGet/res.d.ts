@@ -1,0 +1,3 @@
+interface DescribeJianYuTestGetResponse {
+}
+export { DescribeJianYuTestGetResponse };

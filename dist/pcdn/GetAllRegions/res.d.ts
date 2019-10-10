@@ -1,0 +1,3 @@
+interface GetAllRegionsResponse {
+}
+export { GetAllRegionsResponse };

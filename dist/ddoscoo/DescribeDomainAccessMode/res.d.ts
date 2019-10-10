@@ -1,0 +1,3 @@
+interface DescribeDomainAccessModeResponse {
+}
+export { DescribeDomainAccessModeResponse };

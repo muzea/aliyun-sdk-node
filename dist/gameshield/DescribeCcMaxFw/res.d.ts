@@ -1,0 +1,3 @@
+interface DescribeCcMaxFwResponse {
+}
+export { DescribeCcMaxFwResponse };

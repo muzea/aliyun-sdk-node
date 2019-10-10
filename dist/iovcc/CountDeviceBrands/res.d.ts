@@ -1,0 +1,3 @@
+interface CountDeviceBrandsResponse {
+}
+export { CountDeviceBrandsResponse };

@@ -1,0 +1,3 @@
+interface ModifyJobGroupResponse {
+}
+export { ModifyJobGroupResponse };

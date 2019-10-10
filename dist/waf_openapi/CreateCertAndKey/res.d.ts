@@ -1,0 +1,3 @@
+interface CreateCertAndKeyResponse {
+}
+export { CreateCertAndKeyResponse };

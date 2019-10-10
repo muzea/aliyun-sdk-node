@@ -1,0 +1,3 @@
+interface ModifyWafSwitchResponse {
+}
+export { ModifyWafSwitchResponse };

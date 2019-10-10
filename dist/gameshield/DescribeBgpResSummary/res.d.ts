@@ -1,0 +1,3 @@
+interface DescribeBgpResSummaryResponse {
+}
+export { DescribeBgpResSummaryResponse };

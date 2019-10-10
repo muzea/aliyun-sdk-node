@@ -1,0 +1,3 @@
+interface BatchStopDcdnDomainResponse {
+}
+export { BatchStopDcdnDomainResponse };

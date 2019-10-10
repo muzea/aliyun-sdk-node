@@ -1,0 +1,3 @@
+interface QueryPersonalInfoResponse {
+}
+export { QueryPersonalInfoResponse };

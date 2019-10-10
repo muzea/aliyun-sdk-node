@@ -1,0 +1,3 @@
+interface DescribeOpenAccountResponse {
+}
+export { DescribeOpenAccountResponse };

@@ -1,0 +1,3 @@
+interface GetLabGatewayResponse {
+}
+export { GetLabGatewayResponse };

@@ -1,0 +1,3 @@
+interface BatchStartDcdnDomainResponse {
+}
+export { BatchStartDcdnDomainResponse };

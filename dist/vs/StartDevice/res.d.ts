@@ -1,0 +1,3 @@
+interface StartDeviceResponse {
+}
+export { StartDeviceResponse };

@@ -1,0 +1,3 @@
+interface DescribeUserFlowReportResponse {
+}
+export { DescribeUserFlowReportResponse };

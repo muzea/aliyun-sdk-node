@@ -1,0 +1,3 @@
+interface GetGatewayTransferPacketsDownloadUrlResponse {
+}
+export { GetGatewayTransferPacketsDownloadUrlResponse };

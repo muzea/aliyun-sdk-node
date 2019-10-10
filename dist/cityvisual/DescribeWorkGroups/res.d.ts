@@ -1,0 +1,3 @@
+interface DescribeWorkGroupsResponse {
+}
+export { DescribeWorkGroupsResponse };

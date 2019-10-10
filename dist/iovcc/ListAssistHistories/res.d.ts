@@ -1,0 +1,3 @@
+interface ListAssistHistoriesResponse {
+}
+export { ListAssistHistoriesResponse };

@@ -1,0 +1,3 @@
+interface DescribeWebPathsResponse {
+}
+export { DescribeWebPathsResponse };

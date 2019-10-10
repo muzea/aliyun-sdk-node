@@ -1,0 +1,3 @@
+interface DeployFunctionFileResponse {
+}
+export { DeployFunctionFileResponse };

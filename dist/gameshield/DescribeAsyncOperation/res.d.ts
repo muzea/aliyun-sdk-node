@@ -1,0 +1,3 @@
+interface DescribeAsyncOperationResponse {
+}
+export { DescribeAsyncOperationResponse };

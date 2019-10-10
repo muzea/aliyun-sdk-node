@@ -1,0 +1,3 @@
+interface GetJobResponse {
+}
+export { GetJobResponse };

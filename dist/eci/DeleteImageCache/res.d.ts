@@ -1,0 +1,3 @@
+interface DeleteImageCacheResponse {
+}
+export { DeleteImageCacheResponse };

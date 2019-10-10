@@ -1,0 +1,3 @@
+interface UpdateEntityResponse {
+}
+export { UpdateEntityResponse };

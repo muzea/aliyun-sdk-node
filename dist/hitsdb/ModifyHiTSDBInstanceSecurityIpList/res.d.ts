@@ -1,0 +1,3 @@
+interface ModifyHiTSDBInstanceSecurityIpListResponse {
+}
+export { ModifyHiTSDBInstanceSecurityIpListResponse };

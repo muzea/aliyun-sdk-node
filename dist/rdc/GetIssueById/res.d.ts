@@ -1,0 +1,3 @@
+interface GetIssueByIdResponse {
+}
+export { GetIssueByIdResponse };

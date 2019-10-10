@@ -1,0 +1,3 @@
+interface DescribeGtmRecoveryPlansResponse {
+}
+export { DescribeGtmRecoveryPlansResponse };

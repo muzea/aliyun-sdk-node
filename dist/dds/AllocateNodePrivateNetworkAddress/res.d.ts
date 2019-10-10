@@ -1,0 +1,3 @@
+interface AllocateNodePrivateNetworkAddressResponse {
+}
+export { AllocateNodePrivateNetworkAddressResponse };

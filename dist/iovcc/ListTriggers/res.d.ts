@@ -1,0 +1,3 @@
+interface ListTriggersResponse {
+}
+export { ListTriggersResponse };

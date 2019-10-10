@@ -1,0 +1,3 @@
+interface GetFlowResponse {
+}
+export { GetFlowResponse };

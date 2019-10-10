@@ -1,0 +1,3 @@
+interface ModifyUIProxyAccountPasswordResponse {
+}
+export { ModifyUIProxyAccountPasswordResponse };

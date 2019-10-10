@@ -1,0 +1,3 @@
+interface DescribeGroupListResponse {
+}
+export { DescribeGroupListResponse };

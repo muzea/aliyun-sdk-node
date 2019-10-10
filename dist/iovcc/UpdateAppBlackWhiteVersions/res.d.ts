@@ -1,0 +1,3 @@
+interface UpdateAppBlackWhiteVersionsResponse {
+}
+export { UpdateAppBlackWhiteVersionsResponse };

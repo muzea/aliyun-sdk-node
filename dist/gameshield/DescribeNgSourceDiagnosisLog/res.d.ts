@@ -1,0 +1,3 @@
+interface DescribeNgSourceDiagnosisLogResponse {
+}
+export { DescribeNgSourceDiagnosisLogResponse };

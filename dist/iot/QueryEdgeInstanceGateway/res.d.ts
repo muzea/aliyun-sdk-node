@@ -1,0 +1,3 @@
+interface QueryEdgeInstanceGatewayResponse {
+}
+export { QueryEdgeInstanceGatewayResponse };

@@ -1,0 +1,3 @@
+interface ListNodeTransferPacketPathsResponse {
+}
+export { ListNodeTransferPacketPathsResponse };

@@ -1,0 +1,3 @@
+interface CountNodesByOwnedJoinPermissionIdResponse {
+}
+export { CountNodesByOwnedJoinPermissionIdResponse };

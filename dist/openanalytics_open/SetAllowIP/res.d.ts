@@ -1,0 +1,3 @@
+interface SetAllowIPResponse {
+}
+export { SetAllowIPResponse };

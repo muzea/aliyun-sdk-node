@@ -1,0 +1,3 @@
+interface UpdateHiTSDBInstanceDataTtlResponse {
+}
+export { UpdateHiTSDBInstanceDataTtlResponse };

@@ -1,0 +1,3 @@
+interface UpdateShadowSchemaResponse {
+}
+export { UpdateShadowSchemaResponse };

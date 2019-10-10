@@ -1,0 +1,3 @@
+interface UpdateFlexAccTcpPortsResponse {
+}
+export { UpdateFlexAccTcpPortsResponse };

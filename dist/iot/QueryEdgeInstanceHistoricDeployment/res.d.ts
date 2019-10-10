@@ -1,0 +1,3 @@
+interface QueryEdgeInstanceHistoricDeploymentResponse {
+}
+export { QueryEdgeInstanceHistoricDeploymentResponse };

@@ -1,0 +1,3 @@
+interface MultimodAddComponentsResponse {
+}
+export { MultimodAddComponentsResponse };

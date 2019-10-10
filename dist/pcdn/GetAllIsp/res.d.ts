@@ -1,0 +1,3 @@
+interface GetAllIspResponse {
+}
+export { GetAllIspResponse };

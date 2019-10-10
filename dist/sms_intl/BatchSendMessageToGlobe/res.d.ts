@@ -1,0 +1,3 @@
+interface BatchSendMessageToGlobeResponse {
+}
+export { BatchSendMessageToGlobeResponse };

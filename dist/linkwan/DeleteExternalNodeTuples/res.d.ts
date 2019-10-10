@@ -1,0 +1,3 @@
+interface DeleteExternalNodeTuplesResponse {
+}
+export { DeleteExternalNodeTuplesResponse };

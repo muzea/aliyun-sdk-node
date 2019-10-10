@@ -1,0 +1,3 @@
+interface CreateTransmitLineResponse {
+}
+export { CreateTransmitLineResponse };

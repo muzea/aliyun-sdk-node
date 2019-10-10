@@ -1,0 +1,3 @@
+interface DescribeEventTasksResponse {
+}
+export { DescribeEventTasksResponse };

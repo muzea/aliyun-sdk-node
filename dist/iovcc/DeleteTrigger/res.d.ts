@@ -1,0 +1,3 @@
+interface DeleteTriggerResponse {
+}
+export { DeleteTriggerResponse };

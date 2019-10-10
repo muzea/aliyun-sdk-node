@@ -1,0 +1,3 @@
+interface AddVersionBlackDevicesResponse {
+}
+export { AddVersionBlackDevicesResponse };

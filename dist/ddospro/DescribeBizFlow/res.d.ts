@@ -1,0 +1,3 @@
+interface DescribeBizFlowResponse {
+}
+export { DescribeBizFlowResponse };

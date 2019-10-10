@@ -1,1048 +1,484 @@
+import { ActivateMediaWorkflowRequest } from "./ActivateMediaWorkflow/req";
+import { ActivateMediaWorkflowResponse } from "./ActivateMediaWorkflow/res";
+import { AddAsrPipelineRequest } from "./AddAsrPipeline/req";
+import { AddAsrPipelineResponse } from "./AddAsrPipeline/res";
+import { AddCategoryRequest } from "./AddCategory/req";
+import { AddCategoryResponse } from "./AddCategory/res";
+import { AddCoverPipelineRequest } from "./AddCoverPipeline/req";
+import { AddCoverPipelineResponse } from "./AddCoverPipeline/res";
+import { AddMediaTagRequest } from "./AddMediaTag/req";
+import { AddMediaTagResponse } from "./AddMediaTag/res";
+import { AddMediaWorkflowRequest } from "./AddMediaWorkflow/req";
+import { AddMediaWorkflowResponse } from "./AddMediaWorkflow/res";
+import { AddPipelineRequest } from "./AddPipeline/req";
+import { AddPipelineResponse } from "./AddPipeline/res";
+import { AddPornPipelineRequest } from "./AddPornPipeline/req";
+import { AddPornPipelineResponse } from "./AddPornPipeline/res";
+import { AddTemplateRequest } from "./AddTemplate/req";
+import { AddTemplateResponse } from "./AddTemplate/res";
+import { AddTerrorismPipelineRequest } from "./AddTerrorismPipeline/req";
+import { AddTerrorismPipelineResponse } from "./AddTerrorismPipeline/res";
+import { AddWaterMarkTemplateRequest } from "./AddWaterMarkTemplate/req";
+import { AddWaterMarkTemplateResponse } from "./AddWaterMarkTemplate/res";
+import { BindInputBucketRequest } from "./BindInputBucket/req";
+import { BindInputBucketResponse } from "./BindInputBucket/res";
+import { CancelJobRequest } from "./CancelJob/req";
+import { CancelJobResponse } from "./CancelJob/res";
+import { CreateSessionRequest } from "./CreateSession/req";
+import { CreateSessionResponse } from "./CreateSession/res";
+import { DeactivateMediaWorkflowRequest } from "./DeactivateMediaWorkflow/req";
+import { DeactivateMediaWorkflowResponse } from "./DeactivateMediaWorkflow/res";
+import { DecryptKeyRequest } from "./DecryptKey/req";
+import { DecryptKeyResponse } from "./DecryptKey/res";
+import { DeleteCategoryRequest } from "./DeleteCategory/req";
+import { DeleteCategoryResponse } from "./DeleteCategory/res";
+import { DeleteMediaRequest } from "./DeleteMedia/req";
+import { DeleteMediaResponse } from "./DeleteMedia/res";
+import { DeleteMediaTagRequest } from "./DeleteMediaTag/req";
+import { DeleteMediaTagResponse } from "./DeleteMediaTag/res";
+import { DeletePipelineRequest } from "./DeletePipeline/req";
+import { DeletePipelineResponse } from "./DeletePipeline/res";
+import { DeleteTemplateRequest } from "./DeleteTemplate/req";
+import { DeleteTemplateResponse } from "./DeleteTemplate/res";
+import { GetLicenseRequest } from "./GetLicense/req";
+import { GetLicenseResponse } from "./GetLicense/res";
+import { GetPackageRequest } from "./GetPackage/req";
+import { GetPackageResponse } from "./GetPackage/res";
+import { ListAllCategoryRequest } from "./ListAllCategory/req";
+import { ListAllCategoryResponse } from "./ListAllCategory/res";
+import { ListAllMediaBucketRequest } from "./ListAllMediaBucket/req";
+import { ListAllMediaBucketResponse } from "./ListAllMediaBucket/res";
+import { ListCensorPipelineRequest } from "./ListCensorPipeline/req";
+import { ListCensorPipelineResponse } from "./ListCensorPipeline/res";
+import { ListCoverPipelineRequest } from "./ListCoverPipeline/req";
+import { ListCoverPipelineResponse } from "./ListCoverPipeline/res";
+import { ListJobRequest } from "./ListJob/req";
+import { ListJobResponse } from "./ListJob/res";
+import { ListMediaRequest } from "./ListMedia/req";
+import { ListMediaResponse } from "./ListMedia/res";
+import { ListPornPipelineRequest } from "./ListPornPipeline/req";
+import { ListPornPipelineResponse } from "./ListPornPipeline/res";
+import { LogicalDeleteResourceRequest } from "./LogicalDeleteResource/req";
+import { LogicalDeleteResourceResponse } from "./LogicalDeleteResource/res";
+import { PlayInfoRequest } from "./PlayInfo/req";
+import { PlayInfoResponse } from "./PlayInfo/res";
+import { PlayerAuthRequest } from "./PlayerAuth/req";
+import { PlayerAuthResponse } from "./PlayerAuth/res";
+import { QueryAnalysisJobListRequest } from "./QueryAnalysisJobList/req";
+import { QueryAnalysisJobListResponse } from "./QueryAnalysisJobList/res";
+import { QueryAsrJobListRequest } from "./QueryAsrJobList/req";
+import { QueryAsrJobListResponse } from "./QueryAsrJobList/res";
+import { QueryAsrPipelineListRequest } from "./QueryAsrPipelineList/req";
+import { QueryAsrPipelineListResponse } from "./QueryAsrPipelineList/res";
+import { QueryAuthConfigRequest } from "./QueryAuthConfig/req";
+import { QueryAuthConfigResponse } from "./QueryAuthConfig/res";
+import { QueryCensorJobListRequest } from "./QueryCensorJobList/req";
+import { QueryCensorJobListResponse } from "./QueryCensorJobList/res";
+import { QueryCensorPipelineListRequest } from "./QueryCensorPipelineList/req";
+import { QueryCensorPipelineListResponse } from "./QueryCensorPipelineList/res";
+import { QueryComplexJobListRequest } from "./QueryComplexJobList/req";
+import { QueryComplexJobListResponse } from "./QueryComplexJobList/res";
+import { QueryJobListRequest } from "./QueryJobList/req";
+import { QueryJobListResponse } from "./QueryJobList/res";
+import { QueryMediaDetailJobListRequest } from "./QueryMediaDetailJobList/req";
+import { QueryMediaDetailJobListResponse } from "./QueryMediaDetailJobList/res";
+import { QueryMediaInfoJobListRequest } from "./QueryMediaInfoJobList/req";
+import { QueryMediaInfoJobListResponse } from "./QueryMediaInfoJobList/res";
+import { QueryMediaListByURLRequest } from "./QueryMediaListByURL/req";
+import { QueryMediaListByURLResponse } from "./QueryMediaListByURL/res";
+import { QueryMediaWorkflowExecutionListRequest } from "./QueryMediaWorkflowExecutionList/req";
+import { QueryMediaWorkflowExecutionListResponse } from "./QueryMediaWorkflowExecutionList/res";
+import { QueryMediaWorkflowListRequest } from "./QueryMediaWorkflowList/req";
+import { QueryMediaWorkflowListResponse } from "./QueryMediaWorkflowList/res";
+import { QueryPipelineListRequest } from "./QueryPipelineList/req";
+import { QueryPipelineListResponse } from "./QueryPipelineList/res";
+import { QueryPornJobListRequest } from "./QueryPornJobList/req";
+import { QueryPornJobListResponse } from "./QueryPornJobList/res";
+import { QueryPornPipelineListRequest } from "./QueryPornPipelineList/req";
+import { QueryPornPipelineListResponse } from "./QueryPornPipelineList/res";
+import { QuerySnapshotJobListRequest } from "./QuerySnapshotJobList/req";
+import { QuerySnapshotJobListResponse } from "./QuerySnapshotJobList/res";
+import { QuerySubtitleJobListRequest } from "./QuerySubtitleJobList/req";
+import { QuerySubtitleJobListResponse } from "./QuerySubtitleJobList/res";
+import { QueryTemplateListRequest } from "./QueryTemplateList/req";
+import { QueryTemplateListResponse } from "./QueryTemplateList/res";
+import { QueryTerrorismJobListRequest } from "./QueryTerrorismJobList/req";
+import { QueryTerrorismJobListResponse } from "./QueryTerrorismJobList/res";
+import { QueryTerrorismPipelineListRequest } from "./QueryTerrorismPipelineList/req";
+import { QueryTerrorismPipelineListResponse } from "./QueryTerrorismPipelineList/res";
+import { QueryVideoGifJobListRequest } from "./QueryVideoGifJobList/req";
+import { QueryVideoGifJobListResponse } from "./QueryVideoGifJobList/res";
+import { QueryVideoSplitJobListRequest } from "./QueryVideoSplitJobList/req";
+import { QueryVideoSplitJobListResponse } from "./QueryVideoSplitJobList/res";
+import { QueryVideoSummaryJobListRequest } from "./QueryVideoSummaryJobList/req";
+import { QueryVideoSummaryJobListResponse } from "./QueryVideoSummaryJobList/res";
+import { QueryWaterMarkTemplateListRequest } from "./QueryWaterMarkTemplateList/req";
+import { QueryWaterMarkTemplateListResponse } from "./QueryWaterMarkTemplateList/res";
+import { RefreshCdnDomainConfigsCacheRequest } from "./RefreshCdnDomainConfigsCache/req";
+import { RefreshCdnDomainConfigsCacheResponse } from "./RefreshCdnDomainConfigsCache/res";
+import { RegisterMediaDetailPersonRequest } from "./RegisterMediaDetailPerson/req";
+import { RegisterMediaDetailPersonResponse } from "./RegisterMediaDetailPerson/res";
+import { RegisterMediaDetailScenarioRequest } from "./RegisterMediaDetailScenario/req";
+import { RegisterMediaDetailScenarioResponse } from "./RegisterMediaDetailScenario/res";
+import { ReportAnnotationJobResultRequest } from "./ReportAnnotationJobResult/req";
+import { ReportAnnotationJobResultResponse } from "./ReportAnnotationJobResult/res";
+import { ReportCensorJobResultRequest } from "./ReportCensorJobResult/req";
+import { ReportCensorJobResultResponse } from "./ReportCensorJobResult/res";
+import { ReportCoverJobResultRequest } from "./ReportCoverJobResult/req";
+import { ReportCoverJobResultResponse } from "./ReportCoverJobResult/res";
+import { ReportFacerecogJobResultRequest } from "./ReportFacerecogJobResult/req";
+import { ReportFacerecogJobResultResponse } from "./ReportFacerecogJobResult/res";
+import { ReportFpShotJobResultRequest } from "./ReportFpShotJobResult/req";
+import { ReportFpShotJobResultResponse } from "./ReportFpShotJobResult/res";
+import { ReportPornJobResultRequest } from "./ReportPornJobResult/req";
+import { ReportPornJobResultResponse } from "./ReportPornJobResult/res";
+import { ReportTagJobResultRequest } from "./ReportTagJobResult/req";
+import { ReportTagJobResultResponse } from "./ReportTagJobResult/res";
+import { ReportTerrorismJobResultRequest } from "./ReportTerrorismJobResult/req";
+import { ReportTerrorismJobResultResponse } from "./ReportTerrorismJobResult/res";
+import { ReportVideoSplitJobResultRequest } from "./ReportVideoSplitJobResult/req";
+import { ReportVideoSplitJobResultResponse } from "./ReportVideoSplitJobResult/res";
+import { SearchMediaRequest } from "./SearchMedia/req";
+import { SearchMediaResponse } from "./SearchMedia/res";
+import { SearchPipelineRequest } from "./SearchPipeline/req";
+import { SearchPipelineResponse } from "./SearchPipeline/res";
+import { SearchTemplateRequest } from "./SearchTemplate/req";
+import { SearchTemplateResponse } from "./SearchTemplate/res";
+import { SearchWaterMarkTemplateRequest } from "./SearchWaterMarkTemplate/req";
+import { SearchWaterMarkTemplateResponse } from "./SearchWaterMarkTemplate/res";
+import { SubmitAnalysisJobRequest } from "./SubmitAnalysisJob/req";
+import { SubmitAnalysisJobResponse } from "./SubmitAnalysisJob/res";
+import { SubmitAnnotationJobRequest } from "./SubmitAnnotationJob/req";
+import { SubmitAnnotationJobResponse } from "./SubmitAnnotationJob/res";
+import { SubmitAsrJobRequest } from "./SubmitAsrJob/req";
+import { SubmitAsrJobResponse } from "./SubmitAsrJob/res";
+import { SubmitCoverJobRequest } from "./SubmitCoverJob/req";
+import { SubmitCoverJobResponse } from "./SubmitCoverJob/res";
+import { SubmitEditingJobsRequest } from "./SubmitEditingJobs/req";
+import { SubmitEditingJobsResponse } from "./SubmitEditingJobs/res";
+import { SubmitFacerecogJobRequest } from "./SubmitFacerecogJob/req";
+import { SubmitFacerecogJobResponse } from "./SubmitFacerecogJob/res";
+import { SubmitFpShotJobRequest } from "./SubmitFpShotJob/req";
+import { SubmitFpShotJobResponse } from "./SubmitFpShotJob/res";
+import { SubmitImageQualityJobRequest } from "./SubmitImageQualityJob/req";
+import { SubmitImageQualityJobResponse } from "./SubmitImageQualityJob/res";
+import { SubmitMediaCensorJobRequest } from "./SubmitMediaCensorJob/req";
+import { SubmitMediaCensorJobResponse } from "./SubmitMediaCensorJob/res";
+import { SubmitMediaDetailJobRequest } from "./SubmitMediaDetailJob/req";
+import { SubmitMediaDetailJobResponse } from "./SubmitMediaDetailJob/res";
+import { SubmitSubtitleJobRequest } from "./SubmitSubtitleJob/req";
+import { SubmitSubtitleJobResponse } from "./SubmitSubtitleJob/res";
+import { SubmitTagJobRequest } from "./SubmitTagJob/req";
+import { SubmitTagJobResponse } from "./SubmitTagJob/res";
+import { SubmitTerrorismJobRequest } from "./SubmitTerrorismJob/req";
+import { SubmitTerrorismJobResponse } from "./SubmitTerrorismJob/res";
+import { SubmitVideoGifJobRequest } from "./SubmitVideoGifJob/req";
+import { SubmitVideoGifJobResponse } from "./SubmitVideoGifJob/res";
+import { SubmitVideoPoseJobRequest } from "./SubmitVideoPoseJob/req";
+import { SubmitVideoPoseJobResponse } from "./SubmitVideoPoseJob/res";
+import { SubmitVideoSummaryJobRequest } from "./SubmitVideoSummaryJob/req";
+import { SubmitVideoSummaryJobResponse } from "./SubmitVideoSummaryJob/res";
+import { UnbindInputBucketRequest } from "./UnbindInputBucket/req";
+import { UnbindInputBucketResponse } from "./UnbindInputBucket/res";
+import { UnbindOutputBucketRequest } from "./UnbindOutputBucket/req";
+import { UnbindOutputBucketResponse } from "./UnbindOutputBucket/res";
+import { UpdateAsrPipelineRequest } from "./UpdateAsrPipeline/req";
+import { UpdateAsrPipelineResponse } from "./UpdateAsrPipeline/res";
+import { UpdateCategoryNameRequest } from "./UpdateCategoryName/req";
+import { UpdateCategoryNameResponse } from "./UpdateCategoryName/res";
+import { UpdateCoverPipelineRequest } from "./UpdateCoverPipeline/req";
+import { UpdateCoverPipelineResponse } from "./UpdateCoverPipeline/res";
+import { UpdateMediaRequest } from "./UpdateMedia/req";
+import { UpdateMediaResponse } from "./UpdateMedia/res";
+import { UpdateMediaCategoryRequest } from "./UpdateMediaCategory/req";
+import { UpdateMediaCategoryResponse } from "./UpdateMediaCategory/res";
+import { UpdateMediaPublishStateRequest } from "./UpdateMediaPublishState/req";
+import { UpdateMediaPublishStateResponse } from "./UpdateMediaPublishState/res";
+import { UpdateMediaWorkflowRequest } from "./UpdateMediaWorkflow/req";
+import { UpdateMediaWorkflowResponse } from "./UpdateMediaWorkflow/res";
+import { UpdatePipelineRequest } from "./UpdatePipeline/req";
+import { UpdatePipelineResponse } from "./UpdatePipeline/res";
+import { UpdateTemplateRequest } from "./UpdateTemplate/req";
+import { UpdateTemplateResponse } from "./UpdateTemplate/res";
+import { UpdateTerrorismPipelineRequest } from "./UpdateTerrorismPipeline/req";
+import { UpdateTerrorismPipelineResponse } from "./UpdateTerrorismPipeline/res";
+import { AddMCTemplateRequest } from "./AddMCTemplate/req";
+import { AddMCTemplateResponse } from "./AddMCTemplate/res";
+import { CreateMcuTemplateRequest } from "./CreateMcuTemplate/req";
+import { CreateMcuTemplateResponse } from "./CreateMcuTemplate/res";
+import { DeleteMcuTemplateRequest } from "./DeleteMcuTemplate/req";
+import { DeleteMcuTemplateResponse } from "./DeleteMcuTemplate/res";
+import { QueryFpCompareJobListRequest } from "./QueryFpCompareJobList/req";
+import { QueryFpCompareJobListResponse } from "./QueryFpCompareJobList/res";
+import { QueryMCTemplateListRequest } from "./QueryMCTemplateList/req";
+import { QueryMCTemplateListResponse } from "./QueryMCTemplateList/res";
+import { QueryMcuJobRequest } from "./QueryMcuJob/req";
+import { QueryMcuJobResponse } from "./QueryMcuJob/res";
+import { QueryMcuTemplateRequest } from "./QueryMcuTemplate/req";
+import { QueryMcuTemplateResponse } from "./QueryMcuTemplate/res";
+import { QueryMediaCensorJobListRequest } from "./QueryMediaCensorJobList/req";
+import { QueryMediaCensorJobListResponse } from "./QueryMediaCensorJobList/res";
+import { QueryMediaFpDeleteJobListRequest } from "./QueryMediaFpDeleteJobList/req";
+import { QueryMediaFpDeleteJobListResponse } from "./QueryMediaFpDeleteJobList/res";
+import { SubmitBeautifyJobsRequest } from "./SubmitBeautifyJobs/req";
+import { SubmitBeautifyJobsResponse } from "./SubmitBeautifyJobs/res";
+import { SubmitImageSearchJobRequest } from "./SubmitImageSearchJob/req";
+import { SubmitImageSearchJobResponse } from "./SubmitImageSearchJob/res";
+import { SubmitMCJobRequest } from "./SubmitMCJob/req";
+import { SubmitMCJobResponse } from "./SubmitMCJob/res";
+import { SubmitMcuJobRequest } from "./SubmitMcuJob/req";
+import { SubmitMcuJobResponse } from "./SubmitMcuJob/res";
+import { UpdateMCTemplateRequest } from "./UpdateMCTemplate/req";
+import { UpdateMCTemplateResponse } from "./UpdateMCTemplate/res";
+import { AddCensorPipelineRequest } from "./AddCensorPipeline/req";
+import { AddCensorPipelineResponse } from "./AddCensorPipeline/res";
+import { AddMediaRequest } from "./AddMedia/req";
+import { AddMediaResponse } from "./AddMedia/res";
+import { BindOutputBucketRequest } from "./BindOutputBucket/req";
+import { BindOutputBucketResponse } from "./BindOutputBucket/res";
+import { CategoryTreeRequest } from "./CategoryTree/req";
+import { CategoryTreeResponse } from "./CategoryTree/res";
+import { CheckResourceRequest } from "./CheckResource/req";
+import { CheckResourceResponse } from "./CheckResource/res";
+import { DeleteMCTemplateRequest } from "./DeleteMCTemplate/req";
+import { DeleteMCTemplateResponse } from "./DeleteMCTemplate/res";
+import { DeleteMcuJobRequest } from "./DeleteMcuJob/req";
+import { DeleteMcuJobResponse } from "./DeleteMcuJob/res";
+import { DeleteMediaWorkflowRequest } from "./DeleteMediaWorkflow/req";
+import { DeleteMediaWorkflowResponse } from "./DeleteMediaWorkflow/res";
+import { DeleteWaterMarkTemplateRequest } from "./DeleteWaterMarkTemplate/req";
+import { DeleteWaterMarkTemplateResponse } from "./DeleteWaterMarkTemplate/res";
+import { DescribeMtsUserResourcePackageRequest } from "./DescribeMtsUserResourcePackage/req";
+import { DescribeMtsUserResourcePackageResponse } from "./DescribeMtsUserResourcePackage/res";
+import { ListAsrPipelineRequest } from "./ListAsrPipeline/req";
+import { ListAsrPipelineResponse } from "./ListAsrPipeline/res";
+import { ListMediaWorkflowExecutionsRequest } from "./ListMediaWorkflowExecutions/req";
+import { ListMediaWorkflowExecutionsResponse } from "./ListMediaWorkflowExecutions/res";
+import { ListTerrorismPipelineRequest } from "./ListTerrorismPipeline/req";
+import { ListTerrorismPipelineResponse } from "./ListTerrorismPipeline/res";
+import { PhysicalDeleteResourceRequest } from "./PhysicalDeleteResource/req";
+import { PhysicalDeleteResourceResponse } from "./PhysicalDeleteResource/res";
+import { QueryAnnotationJobListRequest } from "./QueryAnnotationJobList/req";
+import { QueryAnnotationJobListResponse } from "./QueryAnnotationJobList/res";
+import { QueryCoverJobListRequest } from "./QueryCoverJobList/req";
+import { QueryCoverJobListResponse } from "./QueryCoverJobList/res";
+import { QueryCoverPipelineListRequest } from "./QueryCoverPipelineList/req";
+import { QueryCoverPipelineListResponse } from "./QueryCoverPipelineList/res";
+import { QueryEditingJobListRequest } from "./QueryEditingJobList/req";
+import { QueryEditingJobListResponse } from "./QueryEditingJobList/res";
+import { QueryFacerecogJobListRequest } from "./QueryFacerecogJobList/req";
+import { QueryFacerecogJobListResponse } from "./QueryFacerecogJobList/res";
+import { QueryFpImportResultRequest } from "./QueryFpImportResult/req";
+import { QueryFpImportResultResponse } from "./QueryFpImportResult/res";
+import { QueryFpShotJobListRequest } from "./QueryFpShotJobList/req";
+import { QueryFpShotJobListResponse } from "./QueryFpShotJobList/res";
+import { QueryImageSearchJobListRequest } from "./QueryImageSearchJobList/req";
+import { QueryImageSearchJobListResponse } from "./QueryImageSearchJobList/res";
+import { QueryMCJobListRequest } from "./QueryMCJobList/req";
+import { QueryMCJobListResponse } from "./QueryMCJobList/res";
+import { QueryMediaCensorJobDetailRequest } from "./QueryMediaCensorJobDetail/req";
+import { QueryMediaCensorJobDetailResponse } from "./QueryMediaCensorJobDetail/res";
+import { QueryMediaListRequest } from "./QueryMediaList/req";
+import { QueryMediaListResponse } from "./QueryMediaList/res";
+import { QueryTagJobListRequest } from "./QueryTagJobList/req";
+import { QueryTagJobListResponse } from "./QueryTagJobList/res";
+import { QueryVideoPoseJobListRequest } from "./QueryVideoPoseJobList/req";
+import { QueryVideoPoseJobListResponse } from "./QueryVideoPoseJobList/res";
+import { ReportMediaDetailJobResultRequest } from "./ReportMediaDetailJobResult/req";
+import { ReportMediaDetailJobResultResponse } from "./ReportMediaDetailJobResult/res";
+import { SearchMediaWorkflowRequest } from "./SearchMediaWorkflow/req";
+import { SearchMediaWorkflowResponse } from "./SearchMediaWorkflow/res";
+import { SetAuthConfigRequest } from "./SetAuthConfig/req";
+import { SetAuthConfigResponse } from "./SetAuthConfig/res";
+import { SubmitComplexJobRequest } from "./SubmitComplexJob/req";
+import { SubmitComplexJobResponse } from "./SubmitComplexJob/res";
+import { SubmitFpCompareJobRequest } from "./SubmitFpCompareJob/req";
+import { SubmitFpCompareJobResponse } from "./SubmitFpCompareJob/res";
+import { SubmitJobsRequest } from "./SubmitJobs/req";
+import { SubmitJobsResponse } from "./SubmitJobs/res";
+import { SubmitMediaFpDeleteJobRequest } from "./SubmitMediaFpDeleteJob/req";
+import { SubmitMediaFpDeleteJobResponse } from "./SubmitMediaFpDeleteJob/res";
+import { SubmitMediaInfoJobRequest } from "./SubmitMediaInfoJob/req";
+import { SubmitMediaInfoJobResponse } from "./SubmitMediaInfoJob/res";
+import { SubmitPornJobRequest } from "./SubmitPornJob/req";
+import { SubmitPornJobResponse } from "./SubmitPornJob/res";
+import { SubmitSnapshotJobRequest } from "./SubmitSnapshotJob/req";
+import { SubmitSnapshotJobResponse } from "./SubmitSnapshotJob/res";
+import { SubmitVideoSplitJobRequest } from "./SubmitVideoSplitJob/req";
+import { SubmitVideoSplitJobResponse } from "./SubmitVideoSplitJob/res";
+import { UpdateCensorPipelineRequest } from "./UpdateCensorPipeline/req";
+import { UpdateCensorPipelineResponse } from "./UpdateCensorPipeline/res";
+import { UpdateMcuTemplateRequest } from "./UpdateMcuTemplate/req";
+import { UpdateMcuTemplateResponse } from "./UpdateMcuTemplate/res";
+import { UpdateMediaCoverRequest } from "./UpdateMediaCover/req";
+import { UpdateMediaCoverResponse } from "./UpdateMediaCover/res";
+import { UpdateMediaWorkflowTriggerModeRequest } from "./UpdateMediaWorkflowTriggerMode/req";
+import { UpdateMediaWorkflowTriggerModeResponse } from "./UpdateMediaWorkflowTriggerMode/res";
+import { UpdatePornPipelineRequest } from "./UpdatePornPipeline/req";
+import { UpdatePornPipelineResponse } from "./UpdatePornPipeline/res";
+import { UpdateWaterMarkTemplateRequest } from "./UpdateWaterMarkTemplate/req";
+import { UpdateWaterMarkTemplateResponse } from "./UpdateWaterMarkTemplate/res";
+
 interface MTS {
-    ActivateMediaWorkflow(query: {
-        "RegionId"?: string;
-        "MediaWorkflowId": string;
-    }): Promise<{}>;
-    AddAsrPipeline(query: {
-        "RegionId"?: string;
-        "Name": string;
-        "Priority"?: number;
-        "NotifyConfig"?: string;
-    }): Promise<{}>;
-    AddCategory(query: {
-        "RegionId"?: string;
-        "CateName": string;
-        "ParentId"?: number;
-    }): Promise<{}>;
-    AddCoverPipeline(query: {
-        "RegionId"?: string;
-        "Name": string;
-        "Priority"?: string;
-        "NotifyConfig"?: string;
-        "Role"?: string;
-    }): Promise<{}>;
-    AddMediaTag(query: {
-        "RegionId"?: string;
-        "MediaId": string;
-        "Tag"?: string;
-    }): Promise<{}>;
-    AddMediaWorkflow(query: {
-        "RegionId"?: string;
-        "Topology": string;
-        "Name": string;
-        "TriggerMode"?: string;
-    }): Promise<{}>;
-    AddPipeline(query: {
-        "RegionId"?: string;
-        "Name": string;
-        "Speed"?: string;
-        "SpeedLevel"?: number;
-        "NotifyConfig"?: string;
-        "Role"?: string;
-    }): Promise<{}>;
-    AddPornPipeline(query: {
-        "RegionId"?: string;
-        "Name": string;
-        "Priority"?: number;
-        "NotifyConfig"?: string;
-    }): Promise<{}>;
-    AddTemplate(query: {
-        "RegionId"?: string;
-        "Name": string;
-        "Container"?: string;
-        "Video"?: string;
-        "Audio"?: string;
-        "TransConfig"?: string;
-        "MuxConfig"?: string;
-    }): Promise<{}>;
-    AddTerrorismPipeline(query: {
-        "RegionId"?: string;
-        "Name": string;
-        "Priority"?: number;
-        "NotifyConfig"?: string;
-    }): Promise<{}>;
-    AddWaterMarkTemplate(query: {
-        "RegionId"?: string;
-        "Config": string;
-        "Name": string;
-    }): Promise<{}>;
-    BindInputBucket(query: {
-        "RegionId"?: string;
-        "Bucket": string;
-        "RoleArn"?: string;
-    }): Promise<{}>;
-    CancelJob(query: {
-        "RegionId"?: string;
-        "JobId": string;
-    }): Promise<{}>;
-    CreateSession(query: {
-        "RegionId"?: string;
-        "SessionTime": number;
-        "MediaId": string;
-        "EndUserId": string;
-    }): Promise<{}>;
-    DeactivateMediaWorkflow(query: {
-        "RegionId"?: string;
-        "MediaWorkflowId": string;
-    }): Promise<{}>;
-    DecryptKey(query: {
-        "RegionId"?: string;
-        "Rand": string;
-        "CiphertextBlob": string;
-    }): Promise<{}>;
-    DeleteCategory(query: {
-        "RegionId"?: string;
-        "CateId": number;
-    }): Promise<{}>;
-    DeleteMedia(query: {
-        "RegionId"?: string;
-        "MediaIds": string;
-    }): Promise<{}>;
-    DeleteMediaTag(query: {
-        "RegionId"?: string;
-        "MediaId": string;
-        "Tag"?: string;
-    }): Promise<{}>;
-    DeletePipeline(query: {
-        "RegionId"?: string;
-        "PipelineId": string;
-    }): Promise<{}>;
-    DeleteTemplate(query: {
-        "RegionId"?: string;
-        "TemplateId": string;
-    }): Promise<{}>;
-    GetLicense(query: {
-        "RegionId"?: string;
-        "Data": string;
-        "MediaId": string;
-        "LicenseUrl": string;
-        "Header"?: string;
-        "Type"?: string;
-    }): Promise<{}>;
-    GetPackage(query: {
-        "RegionId"?: string;
-        "Data": string;
-    }): Promise<{}>;
-    ListAllCategory(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    ListAllMediaBucket(query: {
-        "RegionId"?: string;
-        "NextPageToken"?: string;
-        "MaximumPageSize"?: number;
-    }): Promise<{}>;
-    ListCensorPipeline(query: {
-        "RegionId"?: string;
-        "PageSize"?: number;
-        "PageNumber"?: number;
-        "State"?: string;
-    }): Promise<{}>;
-    ListCoverPipeline(query: {
-        "RegionId"?: string;
-        "PageSize"?: number;
-        "PageNumber"?: number;
-        "State"?: string;
-    }): Promise<{}>;
-    ListJob(query: {
-        "RegionId"?: string;
-        "NextPageToken"?: string;
-        "MaximumPageSize"?: number;
-        "State"?: string;
-        "StartOfJobCreatedTimeRange"?: string;
-        "EndOfJobCreatedTimeRange"?: string;
-        "PipelineId"?: string;
-    }): Promise<{}>;
-    ListMedia(query: {
-        "RegionId"?: string;
-        "NextPageToken"?: string;
-        "MaximumPageSize"?: number;
-        "From"?: string;
-        "To"?: string;
-    }): Promise<{}>;
-    ListPornPipeline(query: {
-        "RegionId"?: string;
-        "PageSize"?: number;
-        "PageNumber"?: number;
-        "State"?: string;
-    }): Promise<{}>;
-    LogicalDeleteResource(query: {
-        "RegionId"?: string;
-        "Pk": string;
-        "Bid": string;
-        "Hid": number;
-        "Country": string;
-        "TaskIdentifier": string;
-        "TaskExtraData": string;
-        "GmtWakeup": string;
-        "Invoker": string;
-        "Interrupt"?: boolean;
-        "Success"?: boolean;
-        "Message"?: string;
-    }): Promise<{}>;
-    PlayInfo(query: {
-        "RegionId"?: string;
-        "Formats": string;
-        "AuthInfo": string;
-        "MediaId": string;
-        "AuthTimeout"?: number;
-        "Rand"?: string;
-        "PlayDomain"?: string;
-        "HlsUriToken"?: string;
-        "Terminal"?: string;
-    }): Promise<{}>;
-    PlayerAuth(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    QueryAnalysisJobList(query: {
-        "RegionId"?: string;
-        "AnalysisJobIds": string;
-    }): Promise<{}>;
-    QueryAsrJobList(query: {
-        "RegionId"?: string;
-        "JobIds": string;
-    }): Promise<{}>;
-    QueryAsrPipelineList(query: {
-        "RegionId"?: string;
-        "PipelineIds": string;
-    }): Promise<{}>;
-    QueryAuthConfig(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    QueryCensorJobList(query: {
-        "RegionId"?: string;
-        "JobIds": string;
-    }): Promise<{}>;
-    QueryCensorPipelineList(query: {
-        "RegionId"?: string;
-        "PipelineIds": string;
-    }): Promise<{}>;
-    QueryComplexJobList(query: {
-        "RegionId"?: string;
-        "JobIds"?: string;
-    }): Promise<{}>;
-    QueryJobList(query: {
-        "RegionId"?: string;
-        "JobIds"?: string;
-    }): Promise<{}>;
-    QueryMediaDetailJobList(query: {
-        "RegionId"?: string;
-        "JobIds": string;
-    }): Promise<{}>;
-    QueryMediaInfoJobList(query: {
-        "RegionId"?: string;
-        "MediaInfoJobIds": string;
-    }): Promise<{}>;
-    QueryMediaListByURL(query: {
-        "RegionId"?: string;
-        "FileURLs": string;
-        "IncludePlayList"?: boolean;
-        "IncludeSnapshotList"?: boolean;
-        "IncludeMediaInfo"?: boolean;
-        "IncludeSummaryList"?: boolean;
-    }): Promise<{}>;
-    QueryMediaWorkflowExecutionList(query: {
-        "RegionId"?: string;
-        "RunIds": string;
-    }): Promise<{}>;
-    QueryMediaWorkflowList(query: {
-        "RegionId"?: string;
-        "MediaWorkflowIds": string;
-    }): Promise<{}>;
-    QueryPipelineList(query: {
-        "RegionId"?: string;
-        "PipelineIds": string;
-    }): Promise<{}>;
-    QueryPornJobList(query: {
-        "RegionId"?: string;
-        "JobIds": string;
-    }): Promise<{}>;
-    QueryPornPipelineList(query: {
-        "RegionId"?: string;
-        "PipelineIds": string;
-    }): Promise<{}>;
-    QuerySnapshotJobList(query: {
-        "RegionId"?: string;
-        "SnapshotJobIds": string;
-    }): Promise<{}>;
-    QuerySubtitleJobList(query: {
-        "RegionId"?: string;
-        "JobIds"?: string;
-    }): Promise<{}>;
-    QueryTemplateList(query: {
-        "RegionId"?: string;
-        "TemplateIds": string;
-    }): Promise<{}>;
-    QueryTerrorismJobList(query: {
-        "RegionId"?: string;
-        "JobIds": string;
-    }): Promise<{}>;
-    QueryTerrorismPipelineList(query: {
-        "RegionId"?: string;
-        "PipelineIds": string;
-    }): Promise<{}>;
-    QueryVideoGifJobList(query: {
-        "RegionId"?: string;
-        "JobIds": string;
-    }): Promise<{}>;
-    QueryVideoSplitJobList(query: {
-        "RegionId"?: string;
-        "JobIds": string;
-    }): Promise<{}>;
-    QueryVideoSummaryJobList(query: {
-        "RegionId"?: string;
-        "JobIds": string;
-    }): Promise<{}>;
-    QueryWaterMarkTemplateList(query: {
-        "RegionId"?: string;
-        "WaterMarkTemplateIds": string;
-    }): Promise<{}>;
-    RefreshCdnDomainConfigsCache(query: {
-        "RegionId"?: string;
-        "Domains": string;
-    }): Promise<{}>;
-    RegisterMediaDetailPerson(query: {
-        "RegionId"?: string;
-        "PersonName": string;
-        "Images": string;
-        "Category": string;
-        "PersonLib"?: string;
-    }): Promise<{}>;
-    RegisterMediaDetailScenario(query: {
-        "RegionId"?: string;
-        "Scenario": string;
-        "Description": string;
-        "JobId": string;
-    }): Promise<{}>;
-    ReportAnnotationJobResult(query: {
-        "RegionId"?: string;
-        "Annotation": string;
-        "Details": string;
-        "JobId": string;
-    }): Promise<{}>;
-    ReportCensorJobResult(query: {
-        "RegionId"?: string;
-        "Label": string;
-        "JobId": string;
-        "Detail"?: string;
-    }): Promise<{}>;
-    ReportCoverJobResult(query: {
-        "RegionId"?: string;
-        "Result": string;
-        "JobId": string;
-    }): Promise<{}>;
-    ReportFacerecogJobResult(query: {
-        "RegionId"?: string;
-        "Facerecog": string;
-        "Details": string;
-        "JobId": string;
-    }): Promise<{}>;
-    ReportFpShotJobResult(query: {
-        "RegionId"?: string;
-        "Result": string;
-        "JobId": string;
-        "Details"?: string;
-    }): Promise<{}>;
-    ReportPornJobResult(query: {
-        "RegionId"?: string;
-        "Label": string;
-        "JobId": string;
-        "Detail"?: string;
-    }): Promise<{}>;
-    ReportTagJobResult(query: {
-        "RegionId"?: string;
-        "Tag": string;
-        "Result": string;
-        "JobId": string;
-    }): Promise<{}>;
-    ReportTerrorismJobResult(query: {
-        "RegionId"?: string;
-        "Label": string;
-        "JobId": string;
-        "Detail"?: string;
-    }): Promise<{}>;
-    ReportVideoSplitJobResult(query: {
-        "RegionId"?: string;
-        "Result": string;
-        "JobId": string;
-        "Details"?: string;
-    }): Promise<{}>;
-    SearchMedia(query: {
-        "RegionId"?: string;
-        "From"?: string;
-        "To"?: string;
-        "KeyWord"?: string;
-        "Title"?: string;
-        "Description"?: string;
-        "Tag"?: string;
-        "CateId"?: string;
-        "SortBy"?: string;
-        "PageSize"?: number;
-        "PageNumber"?: number;
-    }): Promise<{}>;
-    SearchPipeline(query: {
-        "RegionId"?: string;
-        "PageSize"?: number;
-        "PageNumber"?: number;
-        "State"?: string;
-    }): Promise<{}>;
-    SearchTemplate(query: {
-        "RegionId"?: string;
-        "PageSize"?: number;
-        "PageNumber"?: number;
-        "State"?: string;
-    }): Promise<{}>;
-    SearchWaterMarkTemplate(query: {
-        "RegionId"?: string;
-        "PageSize"?: number;
-        "PageNumber"?: number;
-        "State"?: string;
-    }): Promise<{}>;
-    SubmitAnalysisJob(query: {
-        "RegionId"?: string;
-        "PipelineId": string;
-        "Input": string;
-        "AnalysisConfig"?: string;
-        "UserData"?: string;
-        "Priority"?: string;
-    }): Promise<{}>;
-    SubmitAnnotationJob(query: {
-        "RegionId"?: string;
-        "PipelineId": string;
-        "Input": string;
-        "AnnotationConfig"?: string;
-        "UserData"?: string;
-    }): Promise<{}>;
-    SubmitAsrJob(query: {
-        "RegionId"?: string;
-        "PipelineId": string;
-        "Input": string;
-        "AsrConfig"?: string;
-        "UserData"?: string;
-    }): Promise<{}>;
-    SubmitCoverJob(query: {
-        "RegionId"?: string;
-        "CoverConfig": string;
-        "PipelineId": string;
-        "Input": string;
-        "UserData"?: string;
-    }): Promise<{}>;
-    SubmitEditingJobs(query: {
-        "RegionId"?: string;
-        "EditingJobOutputs": string;
-        "OutputBucket": string;
-        "PipelineId": string;
-        "EditingInputs": string;
-        "OutputLocation"?: string;
-    }): Promise<{}>;
-    SubmitFacerecogJob(query: {
-        "RegionId"?: string;
-        "PipelineId": string;
-        "Input": string;
-        "FacerecogConfig"?: string;
-        "UserData"?: string;
-    }): Promise<{}>;
-    SubmitFpShotJob(query: {
-        "RegionId"?: string;
-        "PipelineId": string;
-        "Input": string;
-        "FpShotConfig"?: string;
-        "UserData"?: string;
-    }): Promise<{}>;
-    SubmitImageQualityJob(query: {
-        "RegionId"?: string;
-        "Input": string;
-        "PipelineId"?: string;
-        "UserData"?: string;
-    }): Promise<{}>;
-    SubmitMediaCensorJob(query: {
-        "RegionId"?: string;
-        "VideoCensorConfig": string;
-        "PipelineId": string;
-        "Input"?: string;
-        "CoverImages"?: string;
-        "Title"?: string;
-        "Description"?: string;
-        "Barrages"?: string;
-        "UserData"?: string;
-    }): Promise<{}>;
-    SubmitMediaDetailJob(query: {
-        "RegionId"?: string;
-        "PipelineId": string;
-        "MediaDetailConfig": string;
-        "Input": string;
-        "UserData"?: string;
-    }): Promise<{}>;
-    SubmitSubtitleJob(query: {
-        "RegionId"?: string;
-        "OutputConfig": string;
-        "PipelineId": string;
-        "InputConfig": string;
-        "UserData"?: string;
-    }): Promise<{}>;
-    SubmitTagJob(query: {
-        "RegionId"?: string;
-        "PipelineId": string;
-        "Input": string;
-        "TagConfig"?: string;
-        "UserData"?: string;
-    }): Promise<{}>;
-    SubmitTerrorismJob(query: {
-        "RegionId"?: string;
-        "PipelineId": string;
-        "Input": string;
-        "TerrorismConfig"?: string;
-        "UserData"?: string;
-    }): Promise<{}>;
-    SubmitVideoGifJob(query: {
-        "RegionId"?: string;
-        "PipelineId": string;
-        "Input": string;
-        "VideoGifConfig"?: string;
-        "UserData"?: string;
-    }): Promise<{}>;
-    SubmitVideoPoseJob(query: {
-        "RegionId"?: string;
-        "OutputConfig": string;
-        "PipelineId": string;
-        "Input": string;
-        "UserData"?: string;
-    }): Promise<{}>;
-    SubmitVideoSummaryJob(query: {
-        "RegionId"?: string;
-        "PipelineId": string;
-        "Input": string;
-        "VideoSummaryConfig"?: string;
-        "UserData"?: string;
-    }): Promise<{}>;
-    UnbindInputBucket(query: {
-        "RegionId"?: string;
-        "Bucket": string;
-        "RoleArn"?: string;
-    }): Promise<{}>;
-    UnbindOutputBucket(query: {
-        "RegionId"?: string;
-        "Bucket": string;
-    }): Promise<{}>;
-    UpdateAsrPipeline(query: {
-        "RegionId"?: string;
-        "Name": string;
-        "State": string;
-        "Priority": number;
-        "PipelineId": string;
-        "NotifyConfig"?: string;
-    }): Promise<{}>;
-    UpdateCategoryName(query: {
-        "RegionId"?: string;
-        "CateName": string;
-        "CateId": string;
-    }): Promise<{}>;
-    UpdateCoverPipeline(query: {
-        "RegionId"?: string;
-        "Name": string;
-        "State": string;
-        "Priority": number;
-        "PipelineId": string;
-        "NotifyConfig"?: string;
-        "Role"?: string;
-    }): Promise<{}>;
-    UpdateMedia(query: {
-        "RegionId"?: string;
-        "MediaId": string;
-        "Title"?: string;
-        "Description"?: string;
-        "CoverURL"?: string;
-        "CateId"?: number;
-        "Tags"?: string;
-    }): Promise<{}>;
-    UpdateMediaCategory(query: {
-        "RegionId"?: string;
-        "MediaId": string;
-        "CateId"?: number;
-    }): Promise<{}>;
-    UpdateMediaPublishState(query: {
-        "RegionId"?: string;
-        "MediaId": string;
-        "Publish"?: boolean;
-    }): Promise<{}>;
-    UpdateMediaWorkflow(query: {
-        "RegionId"?: string;
-        "Topology": string;
-        "MediaWorkflowId": string;
-    }): Promise<{}>;
-    UpdatePipeline(query: {
-        "RegionId"?: string;
-        "Name": string;
-        "State": string;
-        "PipelineId": string;
-        "NotifyConfig"?: string;
-        "Role"?: string;
-    }): Promise<{}>;
-    UpdateTemplate(query: {
-        "RegionId"?: string;
-        "Name": string;
-        "TemplateId": string;
-        "Container"?: string;
-        "Video"?: string;
-        "Audio"?: string;
-        "MuxConfig"?: string;
-        "TransConfig"?: string;
-    }): Promise<{}>;
-    UpdateTerrorismPipeline(query: {
-        "RegionId"?: string;
-        "Name": string;
-        "State": string;
-        "Priority": number;
-        "PipelineId": string;
-        "NotifyConfig"?: string;
-    }): Promise<{}>;
-    AddMCTemplate(query: {
-        "RegionId"?: string;
-        "Name": string;
-        "OwnerId"?: number;
-        "Porn"?: string;
-        "Terrorism"?: string;
-        "Politics"?: string;
-        "Ad"?: string;
-        "Qrcode"?: string;
-        "Live"?: string;
-        "Logo"?: string;
-        "Abuse"?: string;
-        "Contraband"?: string;
-        "spam"?: string;
-    }): Promise<{}>;
-    CreateMcuTemplate(query: {
-        "RegionId"?: string;
-        "Template": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DeleteMcuTemplate(query: {
-        "RegionId"?: string;
-        "TemplateId": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    QueryFpCompareJobList(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "JobIds"?: string;
-    }): Promise<{}>;
-    QueryMCTemplateList(query: {
-        "RegionId"?: string;
-        "TemplateIds": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    QueryMcuJob(query: {
-        "RegionId"?: string;
-        "JobIds": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    QueryMcuTemplate(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "TemplateId"?: string;
-    }): Promise<{}>;
-    QueryMediaCensorJobList(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "JobId"?: string;
-        "NextPageToken"?: string;
-        "MaximumPageSize"?: number;
-        "State"?: string;
-        "StartOfJobCreatedTimeRange"?: string;
-        "EndOfJobCreatedTimeRange"?: string;
-        "PipelineId"?: string;
-    }): Promise<{}>;
-    QueryMediaFpDeleteJobList(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "JobIds"?: string;
-    }): Promise<{}>;
-    SubmitBeautifyJobs(query: {
-        "RegionId"?: string;
-        "BeautifyConfig": string;
-        "OwnerId"?: number;
-        "UserData"?: string;
-        "PipelineId"?: string;
-        "Async"?: boolean;
-    }): Promise<{}>;
-    SubmitImageSearchJob(query: {
-        "RegionId"?: string;
-        "InputImage": string;
-        "PipelineId": string;
-        "InputVideo": string;
-        "OwnerId"?: number;
-        "FpDBId"?: string;
-        "Config"?: string;
-        "UserData"?: string;
-    }): Promise<{}>;
-    SubmitMCJob(query: {
-        "RegionId"?: string;
-        "CensorConfig": string;
-        "PipelineId": string;
-        "OwnerId"?: number;
-        "Video"?: string;
-        "Images"?: string;
-        "Texts"?: string;
-        "UserData"?: string;
-    }): Promise<{}>;
-    SubmitMcuJob(query: {
-        "RegionId"?: string;
-        "PipelineId": string;
-        "Template": string;
-        "Input": string;
-        "OwnerId"?: number;
-        "TemplateId"?: string;
-        "UserData"?: string;
-    }): Promise<{}>;
-    UpdateMCTemplate(query: {
-        "RegionId"?: string;
-        "Name": string;
-        "TemplateId": string;
-        "OwnerId"?: number;
-        "Porn"?: string;
-        "Terrorism"?: string;
-        "Politics"?: string;
-        "Ad"?: string;
-        "Qrcode"?: string;
-        "Live"?: string;
-        "Logo"?: string;
-        "Abuse"?: string;
-        "Contraband"?: string;
-        "spam"?: string;
-    }): Promise<{}>;
-    AddCensorPipeline(query: {
-        "RegionId"?: string;
-        "Name": string;
-        "OwnerId"?: number;
-        "Priority"?: number;
-        "NotifyConfig"?: string;
-    }): Promise<{}>;
-    AddMedia(query: {
-        "RegionId"?: string;
-        "FileURL": string;
-        "OwnerId"?: number;
-        "Title"?: string;
-        "Description"?: string;
-        "CoverURL"?: string;
-        "Tags"?: string;
-        "MediaWorkflowId"?: string;
-        "MediaWorkflowUserData"?: string;
-        "InputUnbind"?: boolean;
-        "CateId"?: number;
-        "OverrideParams"?: string;
-    }): Promise<{}>;
-    BindOutputBucket(query: {
-        "RegionId"?: string;
-        "Bucket": string;
-        "OwnerId"?: number;
-        "RoleArn"?: string;
-    }): Promise<{}>;
-    CategoryTree(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    CheckResource(query: {
-        "RegionId"?: string;
-        "Pk": string;
-        "Bid": string;
-        "Hid": number;
-        "Country": string;
-        "TaskIdentifier": string;
-        "TaskExtraData": string;
-        "GmtWakeup": string;
-        "Invoker": string;
-        "Interrupt"?: boolean;
-        "Success"?: boolean;
-        "Message"?: string;
-        "Level"?: number;
-        "Url"?: string;
-        "Prompt"?: string;
-    }): Promise<{}>;
-    DeleteMCTemplate(query: {
-        "RegionId"?: string;
-        "TemplateId": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DeleteMcuJob(query: {
-        "RegionId"?: string;
-        "JobIds": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DeleteMediaWorkflow(query: {
-        "RegionId"?: string;
-        "MediaWorkflowId": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DeleteWaterMarkTemplate(query: {
-        "RegionId"?: string;
-        "WaterMarkTemplateId": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DescribeMtsUserResourcePackage(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    ListAsrPipeline(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "PageSize"?: number;
-        "PageNumber"?: number;
-        "State"?: string;
-    }): Promise<{}>;
-    ListMediaWorkflowExecutions(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "MediaWorkflowId"?: string;
-        "MediaWorkflowName"?: string;
-        "InputFileURL"?: string;
-        "NextPageToken"?: string;
-        "MaximumPageSize"?: number;
-    }): Promise<{}>;
-    ListTerrorismPipeline(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "PageSize"?: number;
-        "PageNumber"?: number;
-        "State"?: string;
-    }): Promise<{}>;
-    PhysicalDeleteResource(query: {
-        "RegionId"?: string;
-        "Pk": string;
-        "Bid": string;
-        "Hid": number;
-        "Country": string;
-        "TaskIdentifier": string;
-        "TaskExtraData": string;
-        "GmtWakeup": string;
-        "Invoker": string;
-        "Interrupt"?: boolean;
-        "Success"?: boolean;
-        "Message"?: string;
-    }): Promise<{}>;
-    QueryAnnotationJobList(query: {
-        "RegionId"?: string;
-        "AnnotationJobIds": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    QueryCoverJobList(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "CoverJobIds"?: string;
-        "NextPageToken"?: string;
-        "MaximumPageSize"?: number;
-        "State"?: string;
-        "StartOfJobCreatedTimeRange"?: string;
-        "EndOfJobCreatedTimeRange"?: string;
-        "PipelineId"?: string;
-    }): Promise<{}>;
-    QueryCoverPipelineList(query: {
-        "RegionId"?: string;
-        "PipelineIds": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    QueryEditingJobList(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "JobIds"?: string;
-    }): Promise<{}>;
-    QueryFacerecogJobList(query: {
-        "RegionId"?: string;
-        "FacerecogJobIds": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    QueryFpImportResult(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "StartTime"?: number;
-        "EndTime"?: number;
-        "PageSize"?: number;
-        "PageIndex"?: number;
-    }): Promise<{}>;
-    QueryFpShotJobList(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "JobIds"?: string;
-        "NextPageToken"?: string;
-        "MaximumPageSize"?: number;
-        "State"?: string;
-        "StartOfJobCreatedTimeRange"?: string;
-        "EndOfJobCreatedTimeRange"?: string;
-        "PrimaryKeyList"?: string;
-        "PipelineId"?: string;
-    }): Promise<{}>;
-    QueryImageSearchJobList(query: {
-        "RegionId"?: string;
-        "JobIds": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    QueryMCJobList(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "JobIds"?: string;
-        "NextPageToken"?: string;
-        "MaximumPageSize"?: number;
-        "State"?: string;
-        "StartOfJobCreatedTimeRange"?: string;
-        "EndOfJobCreatedTimeRange"?: string;
-        "PipelineId"?: string;
-    }): Promise<{}>;
-    QueryMediaCensorJobDetail(query: {
-        "RegionId"?: string;
-        "JobId": string;
-        "OwnerId"?: number;
-        "NextPageToken"?: string;
-        "MaximumPageSize"?: number;
-    }): Promise<{}>;
-    QueryMediaList(query: {
-        "RegionId"?: string;
-        "MediaIds": string;
-        "OwnerId"?: number;
-        "IncludePlayList"?: boolean;
-        "IncludeSnapshotList"?: boolean;
-        "IncludeMediaInfo"?: boolean;
-        "IncludeSummaryList"?: boolean;
-    }): Promise<{}>;
-    QueryTagJobList(query: {
-        "RegionId"?: string;
-        "TagJobIds": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    QueryVideoPoseJobList(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "JobIds"?: string;
-    }): Promise<{}>;
-    ReportMediaDetailJobResult(query: {
-        "RegionId"?: string;
-        "Tag": string;
-        "Results": string;
-        "JobId": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    SearchMediaWorkflow(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "PageSize"?: number;
-        "PageNumber"?: number;
-        "StateList"?: string;
-    }): Promise<{}>;
-    SetAuthConfig(query: {
-        "RegionId"?: string;
-        "OwnerId"?: string;
-        "Key1"?: string;
-        "Key2"?: string;
-    }): Promise<{}>;
-    SubmitComplexJob(query: {
-        "RegionId"?: string;
-        "ComplexConfigs": string;
-        "TranscodeOutput": string;
-        "OutputBucket": string;
-        "PipelineId": string;
-        "Inputs": string;
-        "OwnerId"?: number;
-        "OutputLocation"?: string;
-        "UserData"?: string;
-    }): Promise<{}>;
-    SubmitFpCompareJob(query: {
-        "RegionId"?: string;
-        "QueryMedia": string;
-        "PipelineId": string;
-        "MasterMedia": string;
-        "OwnerId"?: number;
-        "FpDBId"?: string;
-        "MatchedFrameStorage"?: string;
-        "UserData"?: string;
-    }): Promise<{}>;
-    SubmitJobs(query: {
-        "RegionId"?: string;
-        "Outputs": string;
-        "OutputBucket": string;
-        "PipelineId": string;
-        "Input": string;
-        "OwnerId"?: number;
-        "OutputLocation"?: string;
-    }): Promise<{}>;
-    SubmitMediaFpDeleteJob(query: {
-        "RegionId"?: string;
-        "PrimaryKey": string;
-        "FpDBId": string;
-        "PipelineId": string;
-        "OwnerId"?: number;
-        "UserData"?: string;
-    }): Promise<{}>;
-    SubmitMediaInfoJob(query: {
-        "RegionId"?: string;
-        "Input": string;
-        "OwnerId"?: number;
-        "UserData"?: string;
-        "PipelineId"?: string;
-        "Async"?: boolean;
-    }): Promise<{}>;
-    SubmitPornJob(query: {
-        "RegionId"?: string;
-        "PipelineId": string;
-        "PornConfig": string;
-        "Input": string;
-        "OwnerId"?: number;
-        "UserData"?: string;
-    }): Promise<{}>;
-    SubmitSnapshotJob(query: {
-        "RegionId"?: string;
-        "SnapshotConfig": string;
-        "Input": string;
-        "OwnerId"?: number;
-        "UserData"?: string;
-        "PipelineId"?: string;
-    }): Promise<{}>;
-    SubmitVideoSplitJob(query: {
-        "RegionId"?: string;
-        "PipelineId": string;
-        "Input": string;
-        "OwnerId"?: number;
-        "VideoSplitConfig"?: string;
-        "UserData"?: string;
-    }): Promise<{}>;
-    UpdateCensorPipeline(query: {
-        "RegionId"?: string;
-        "Name": string;
-        "State": string;
-        "Priority": number;
-        "PipelineId": string;
-        "OwnerId"?: number;
-        "NotifyConfig"?: string;
-    }): Promise<{}>;
-    UpdateMcuTemplate(query: {
-        "RegionId"?: string;
-        "Template": string;
-        "TemplateId": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    UpdateMediaCover(query: {
-        "RegionId"?: string;
-        "MediaId": string;
-        "OwnerId"?: number;
-        "CoverURL"?: string;
-    }): Promise<{}>;
-    UpdateMediaWorkflowTriggerMode(query: {
-        "RegionId"?: string;
-        "TriggerMode": string;
-        "MediaWorkflowId": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    UpdatePornPipeline(query: {
-        "RegionId"?: string;
-        "Name": string;
-        "State": string;
-        "Priority": number;
-        "PipelineId": string;
-        "OwnerId"?: number;
-        "NotifyConfig"?: string;
-    }): Promise<{}>;
-    UpdateWaterMarkTemplate(query: {
-        "RegionId"?: string;
-        "Name": string;
-        "Config": string;
-        "WaterMarkTemplateId": string;
-        "OwnerId"?: number;
-    }): Promise<{}>;
+    ActivateMediaWorkflow(query: ActivateMediaWorkflowRequest): Promise<ActivateMediaWorkflowResponse>;
+    AddAsrPipeline(query: AddAsrPipelineRequest): Promise<AddAsrPipelineResponse>;
+    AddCategory(query: AddCategoryRequest): Promise<AddCategoryResponse>;
+    AddCoverPipeline(query: AddCoverPipelineRequest): Promise<AddCoverPipelineResponse>;
+    AddMediaTag(query: AddMediaTagRequest): Promise<AddMediaTagResponse>;
+    AddMediaWorkflow(query: AddMediaWorkflowRequest): Promise<AddMediaWorkflowResponse>;
+    AddPipeline(query: AddPipelineRequest): Promise<AddPipelineResponse>;
+    AddPornPipeline(query: AddPornPipelineRequest): Promise<AddPornPipelineResponse>;
+    AddTemplate(query: AddTemplateRequest): Promise<AddTemplateResponse>;
+    AddTerrorismPipeline(query: AddTerrorismPipelineRequest): Promise<AddTerrorismPipelineResponse>;
+    AddWaterMarkTemplate(query: AddWaterMarkTemplateRequest): Promise<AddWaterMarkTemplateResponse>;
+    BindInputBucket(query: BindInputBucketRequest): Promise<BindInputBucketResponse>;
+    CancelJob(query: CancelJobRequest): Promise<CancelJobResponse>;
+    CreateSession(query: CreateSessionRequest): Promise<CreateSessionResponse>;
+    DeactivateMediaWorkflow(query: DeactivateMediaWorkflowRequest): Promise<DeactivateMediaWorkflowResponse>;
+    DecryptKey(query: DecryptKeyRequest): Promise<DecryptKeyResponse>;
+    DeleteCategory(query: DeleteCategoryRequest): Promise<DeleteCategoryResponse>;
+    DeleteMedia(query: DeleteMediaRequest): Promise<DeleteMediaResponse>;
+    DeleteMediaTag(query: DeleteMediaTagRequest): Promise<DeleteMediaTagResponse>;
+    DeletePipeline(query: DeletePipelineRequest): Promise<DeletePipelineResponse>;
+    DeleteTemplate(query: DeleteTemplateRequest): Promise<DeleteTemplateResponse>;
+    GetLicense(query: GetLicenseRequest): Promise<GetLicenseResponse>;
+    GetPackage(query: GetPackageRequest): Promise<GetPackageResponse>;
+    ListAllCategory(query: ListAllCategoryRequest): Promise<ListAllCategoryResponse>;
+    ListAllMediaBucket(query: ListAllMediaBucketRequest): Promise<ListAllMediaBucketResponse>;
+    ListCensorPipeline(query: ListCensorPipelineRequest): Promise<ListCensorPipelineResponse>;
+    ListCoverPipeline(query: ListCoverPipelineRequest): Promise<ListCoverPipelineResponse>;
+    ListJob(query: ListJobRequest): Promise<ListJobResponse>;
+    ListMedia(query: ListMediaRequest): Promise<ListMediaResponse>;
+    ListPornPipeline(query: ListPornPipelineRequest): Promise<ListPornPipelineResponse>;
+    LogicalDeleteResource(query: LogicalDeleteResourceRequest): Promise<LogicalDeleteResourceResponse>;
+    PlayInfo(query: PlayInfoRequest): Promise<PlayInfoResponse>;
+    PlayerAuth(query: PlayerAuthRequest): Promise<PlayerAuthResponse>;
+    QueryAnalysisJobList(query: QueryAnalysisJobListRequest): Promise<QueryAnalysisJobListResponse>;
+    QueryAsrJobList(query: QueryAsrJobListRequest): Promise<QueryAsrJobListResponse>;
+    QueryAsrPipelineList(query: QueryAsrPipelineListRequest): Promise<QueryAsrPipelineListResponse>;
+    QueryAuthConfig(query: QueryAuthConfigRequest): Promise<QueryAuthConfigResponse>;
+    QueryCensorJobList(query: QueryCensorJobListRequest): Promise<QueryCensorJobListResponse>;
+    QueryCensorPipelineList(query: QueryCensorPipelineListRequest): Promise<QueryCensorPipelineListResponse>;
+    QueryComplexJobList(query: QueryComplexJobListRequest): Promise<QueryComplexJobListResponse>;
+    QueryJobList(query: QueryJobListRequest): Promise<QueryJobListResponse>;
+    QueryMediaDetailJobList(query: QueryMediaDetailJobListRequest): Promise<QueryMediaDetailJobListResponse>;
+    QueryMediaInfoJobList(query: QueryMediaInfoJobListRequest): Promise<QueryMediaInfoJobListResponse>;
+    QueryMediaListByURL(query: QueryMediaListByURLRequest): Promise<QueryMediaListByURLResponse>;
+    QueryMediaWorkflowExecutionList(query: QueryMediaWorkflowExecutionListRequest): Promise<QueryMediaWorkflowExecutionListResponse>;
+    QueryMediaWorkflowList(query: QueryMediaWorkflowListRequest): Promise<QueryMediaWorkflowListResponse>;
+    QueryPipelineList(query: QueryPipelineListRequest): Promise<QueryPipelineListResponse>;
+    QueryPornJobList(query: QueryPornJobListRequest): Promise<QueryPornJobListResponse>;
+    QueryPornPipelineList(query: QueryPornPipelineListRequest): Promise<QueryPornPipelineListResponse>;
+    QuerySnapshotJobList(query: QuerySnapshotJobListRequest): Promise<QuerySnapshotJobListResponse>;
+    QuerySubtitleJobList(query: QuerySubtitleJobListRequest): Promise<QuerySubtitleJobListResponse>;
+    QueryTemplateList(query: QueryTemplateListRequest): Promise<QueryTemplateListResponse>;
+    QueryTerrorismJobList(query: QueryTerrorismJobListRequest): Promise<QueryTerrorismJobListResponse>;
+    QueryTerrorismPipelineList(query: QueryTerrorismPipelineListRequest): Promise<QueryTerrorismPipelineListResponse>;
+    QueryVideoGifJobList(query: QueryVideoGifJobListRequest): Promise<QueryVideoGifJobListResponse>;
+    QueryVideoSplitJobList(query: QueryVideoSplitJobListRequest): Promise<QueryVideoSplitJobListResponse>;
+    QueryVideoSummaryJobList(query: QueryVideoSummaryJobListRequest): Promise<QueryVideoSummaryJobListResponse>;
+    QueryWaterMarkTemplateList(query: QueryWaterMarkTemplateListRequest): Promise<QueryWaterMarkTemplateListResponse>;
+    RefreshCdnDomainConfigsCache(query: RefreshCdnDomainConfigsCacheRequest): Promise<RefreshCdnDomainConfigsCacheResponse>;
+    RegisterMediaDetailPerson(query: RegisterMediaDetailPersonRequest): Promise<RegisterMediaDetailPersonResponse>;
+    RegisterMediaDetailScenario(query: RegisterMediaDetailScenarioRequest): Promise<RegisterMediaDetailScenarioResponse>;
+    ReportAnnotationJobResult(query: ReportAnnotationJobResultRequest): Promise<ReportAnnotationJobResultResponse>;
+    ReportCensorJobResult(query: ReportCensorJobResultRequest): Promise<ReportCensorJobResultResponse>;
+    ReportCoverJobResult(query: ReportCoverJobResultRequest): Promise<ReportCoverJobResultResponse>;
+    ReportFacerecogJobResult(query: ReportFacerecogJobResultRequest): Promise<ReportFacerecogJobResultResponse>;
+    ReportFpShotJobResult(query: ReportFpShotJobResultRequest): Promise<ReportFpShotJobResultResponse>;
+    ReportPornJobResult(query: ReportPornJobResultRequest): Promise<ReportPornJobResultResponse>;
+    ReportTagJobResult(query: ReportTagJobResultRequest): Promise<ReportTagJobResultResponse>;
+    ReportTerrorismJobResult(query: ReportTerrorismJobResultRequest): Promise<ReportTerrorismJobResultResponse>;
+    ReportVideoSplitJobResult(query: ReportVideoSplitJobResultRequest): Promise<ReportVideoSplitJobResultResponse>;
+    SearchMedia(query: SearchMediaRequest): Promise<SearchMediaResponse>;
+    SearchPipeline(query: SearchPipelineRequest): Promise<SearchPipelineResponse>;
+    SearchTemplate(query: SearchTemplateRequest): Promise<SearchTemplateResponse>;
+    SearchWaterMarkTemplate(query: SearchWaterMarkTemplateRequest): Promise<SearchWaterMarkTemplateResponse>;
+    SubmitAnalysisJob(query: SubmitAnalysisJobRequest): Promise<SubmitAnalysisJobResponse>;
+    SubmitAnnotationJob(query: SubmitAnnotationJobRequest): Promise<SubmitAnnotationJobResponse>;
+    SubmitAsrJob(query: SubmitAsrJobRequest): Promise<SubmitAsrJobResponse>;
+    SubmitCoverJob(query: SubmitCoverJobRequest): Promise<SubmitCoverJobResponse>;
+    SubmitEditingJobs(query: SubmitEditingJobsRequest): Promise<SubmitEditingJobsResponse>;
+    SubmitFacerecogJob(query: SubmitFacerecogJobRequest): Promise<SubmitFacerecogJobResponse>;
+    SubmitFpShotJob(query: SubmitFpShotJobRequest): Promise<SubmitFpShotJobResponse>;
+    SubmitImageQualityJob(query: SubmitImageQualityJobRequest): Promise<SubmitImageQualityJobResponse>;
+    SubmitMediaCensorJob(query: SubmitMediaCensorJobRequest): Promise<SubmitMediaCensorJobResponse>;
+    SubmitMediaDetailJob(query: SubmitMediaDetailJobRequest): Promise<SubmitMediaDetailJobResponse>;
+    SubmitSubtitleJob(query: SubmitSubtitleJobRequest): Promise<SubmitSubtitleJobResponse>;
+    SubmitTagJob(query: SubmitTagJobRequest): Promise<SubmitTagJobResponse>;
+    SubmitTerrorismJob(query: SubmitTerrorismJobRequest): Promise<SubmitTerrorismJobResponse>;
+    SubmitVideoGifJob(query: SubmitVideoGifJobRequest): Promise<SubmitVideoGifJobResponse>;
+    SubmitVideoPoseJob(query: SubmitVideoPoseJobRequest): Promise<SubmitVideoPoseJobResponse>;
+    SubmitVideoSummaryJob(query: SubmitVideoSummaryJobRequest): Promise<SubmitVideoSummaryJobResponse>;
+    UnbindInputBucket(query: UnbindInputBucketRequest): Promise<UnbindInputBucketResponse>;
+    UnbindOutputBucket(query: UnbindOutputBucketRequest): Promise<UnbindOutputBucketResponse>;
+    UpdateAsrPipeline(query: UpdateAsrPipelineRequest): Promise<UpdateAsrPipelineResponse>;
+    UpdateCategoryName(query: UpdateCategoryNameRequest): Promise<UpdateCategoryNameResponse>;
+    UpdateCoverPipeline(query: UpdateCoverPipelineRequest): Promise<UpdateCoverPipelineResponse>;
+    UpdateMedia(query: UpdateMediaRequest): Promise<UpdateMediaResponse>;
+    UpdateMediaCategory(query: UpdateMediaCategoryRequest): Promise<UpdateMediaCategoryResponse>;
+    UpdateMediaPublishState(query: UpdateMediaPublishStateRequest): Promise<UpdateMediaPublishStateResponse>;
+    UpdateMediaWorkflow(query: UpdateMediaWorkflowRequest): Promise<UpdateMediaWorkflowResponse>;
+    UpdatePipeline(query: UpdatePipelineRequest): Promise<UpdatePipelineResponse>;
+    UpdateTemplate(query: UpdateTemplateRequest): Promise<UpdateTemplateResponse>;
+    UpdateTerrorismPipeline(query: UpdateTerrorismPipelineRequest): Promise<UpdateTerrorismPipelineResponse>;
+    AddMCTemplate(query: AddMCTemplateRequest): Promise<AddMCTemplateResponse>;
+    CreateMcuTemplate(query: CreateMcuTemplateRequest): Promise<CreateMcuTemplateResponse>;
+    DeleteMcuTemplate(query: DeleteMcuTemplateRequest): Promise<DeleteMcuTemplateResponse>;
+    QueryFpCompareJobList(query: QueryFpCompareJobListRequest): Promise<QueryFpCompareJobListResponse>;
+    QueryMCTemplateList(query: QueryMCTemplateListRequest): Promise<QueryMCTemplateListResponse>;
+    QueryMcuJob(query: QueryMcuJobRequest): Promise<QueryMcuJobResponse>;
+    QueryMcuTemplate(query: QueryMcuTemplateRequest): Promise<QueryMcuTemplateResponse>;
+    QueryMediaCensorJobList(query: QueryMediaCensorJobListRequest): Promise<QueryMediaCensorJobListResponse>;
+    QueryMediaFpDeleteJobList(query: QueryMediaFpDeleteJobListRequest): Promise<QueryMediaFpDeleteJobListResponse>;
+    SubmitBeautifyJobs(query: SubmitBeautifyJobsRequest): Promise<SubmitBeautifyJobsResponse>;
+    SubmitImageSearchJob(query: SubmitImageSearchJobRequest): Promise<SubmitImageSearchJobResponse>;
+    SubmitMCJob(query: SubmitMCJobRequest): Promise<SubmitMCJobResponse>;
+    SubmitMcuJob(query: SubmitMcuJobRequest): Promise<SubmitMcuJobResponse>;
+    UpdateMCTemplate(query: UpdateMCTemplateRequest): Promise<UpdateMCTemplateResponse>;
+    AddCensorPipeline(query: AddCensorPipelineRequest): Promise<AddCensorPipelineResponse>;
+    AddMedia(query: AddMediaRequest): Promise<AddMediaResponse>;
+    BindOutputBucket(query: BindOutputBucketRequest): Promise<BindOutputBucketResponse>;
+    CategoryTree(query: CategoryTreeRequest): Promise<CategoryTreeResponse>;
+    CheckResource(query: CheckResourceRequest): Promise<CheckResourceResponse>;
+    DeleteMCTemplate(query: DeleteMCTemplateRequest): Promise<DeleteMCTemplateResponse>;
+    DeleteMcuJob(query: DeleteMcuJobRequest): Promise<DeleteMcuJobResponse>;
+    DeleteMediaWorkflow(query: DeleteMediaWorkflowRequest): Promise<DeleteMediaWorkflowResponse>;
+    DeleteWaterMarkTemplate(query: DeleteWaterMarkTemplateRequest): Promise<DeleteWaterMarkTemplateResponse>;
+    DescribeMtsUserResourcePackage(query: DescribeMtsUserResourcePackageRequest): Promise<DescribeMtsUserResourcePackageResponse>;
+    ListAsrPipeline(query: ListAsrPipelineRequest): Promise<ListAsrPipelineResponse>;
+    ListMediaWorkflowExecutions(query: ListMediaWorkflowExecutionsRequest): Promise<ListMediaWorkflowExecutionsResponse>;
+    ListTerrorismPipeline(query: ListTerrorismPipelineRequest): Promise<ListTerrorismPipelineResponse>;
+    PhysicalDeleteResource(query: PhysicalDeleteResourceRequest): Promise<PhysicalDeleteResourceResponse>;
+    QueryAnnotationJobList(query: QueryAnnotationJobListRequest): Promise<QueryAnnotationJobListResponse>;
+    QueryCoverJobList(query: QueryCoverJobListRequest): Promise<QueryCoverJobListResponse>;
+    QueryCoverPipelineList(query: QueryCoverPipelineListRequest): Promise<QueryCoverPipelineListResponse>;
+    QueryEditingJobList(query: QueryEditingJobListRequest): Promise<QueryEditingJobListResponse>;
+    QueryFacerecogJobList(query: QueryFacerecogJobListRequest): Promise<QueryFacerecogJobListResponse>;
+    QueryFpImportResult(query: QueryFpImportResultRequest): Promise<QueryFpImportResultResponse>;
+    QueryFpShotJobList(query: QueryFpShotJobListRequest): Promise<QueryFpShotJobListResponse>;
+    QueryImageSearchJobList(query: QueryImageSearchJobListRequest): Promise<QueryImageSearchJobListResponse>;
+    QueryMCJobList(query: QueryMCJobListRequest): Promise<QueryMCJobListResponse>;
+    QueryMediaCensorJobDetail(query: QueryMediaCensorJobDetailRequest): Promise<QueryMediaCensorJobDetailResponse>;
+    QueryMediaList(query: QueryMediaListRequest): Promise<QueryMediaListResponse>;
+    QueryTagJobList(query: QueryTagJobListRequest): Promise<QueryTagJobListResponse>;
+    QueryVideoPoseJobList(query: QueryVideoPoseJobListRequest): Promise<QueryVideoPoseJobListResponse>;
+    ReportMediaDetailJobResult(query: ReportMediaDetailJobResultRequest): Promise<ReportMediaDetailJobResultResponse>;
+    SearchMediaWorkflow(query: SearchMediaWorkflowRequest): Promise<SearchMediaWorkflowResponse>;
+    SetAuthConfig(query: SetAuthConfigRequest): Promise<SetAuthConfigResponse>;
+    SubmitComplexJob(query: SubmitComplexJobRequest): Promise<SubmitComplexJobResponse>;
+    SubmitFpCompareJob(query: SubmitFpCompareJobRequest): Promise<SubmitFpCompareJobResponse>;
+    SubmitJobs(query: SubmitJobsRequest): Promise<SubmitJobsResponse>;
+    SubmitMediaFpDeleteJob(query: SubmitMediaFpDeleteJobRequest): Promise<SubmitMediaFpDeleteJobResponse>;
+    SubmitMediaInfoJob(query: SubmitMediaInfoJobRequest): Promise<SubmitMediaInfoJobResponse>;
+    SubmitPornJob(query: SubmitPornJobRequest): Promise<SubmitPornJobResponse>;
+    SubmitSnapshotJob(query: SubmitSnapshotJobRequest): Promise<SubmitSnapshotJobResponse>;
+    SubmitVideoSplitJob(query: SubmitVideoSplitJobRequest): Promise<SubmitVideoSplitJobResponse>;
+    UpdateCensorPipeline(query: UpdateCensorPipelineRequest): Promise<UpdateCensorPipelineResponse>;
+    UpdateMcuTemplate(query: UpdateMcuTemplateRequest): Promise<UpdateMcuTemplateResponse>;
+    UpdateMediaCover(query: UpdateMediaCoverRequest): Promise<UpdateMediaCoverResponse>;
+    UpdateMediaWorkflowTriggerMode(query: UpdateMediaWorkflowTriggerModeRequest): Promise<UpdateMediaWorkflowTriggerModeResponse>;
+    UpdatePornPipeline(query: UpdatePornPipelineRequest): Promise<UpdatePornPipelineResponse>;
+    UpdateWaterMarkTemplate(query: UpdateWaterMarkTemplateRequest): Promise<UpdateWaterMarkTemplateResponse>;
 }
 export default MTS;

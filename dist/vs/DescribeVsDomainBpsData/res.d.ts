@@ -1,0 +1,3 @@
+interface DescribeVsDomainBpsDataResponse {
+}
+export { DescribeVsDomainBpsDataResponse };

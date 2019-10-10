@@ -1,0 +1,3 @@
+interface DescribeBackupPolicyResponse {
+}
+export { DescribeBackupPolicyResponse };

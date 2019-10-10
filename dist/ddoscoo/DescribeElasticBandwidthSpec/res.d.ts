@@ -1,0 +1,3 @@
+interface DescribeElasticBandwidthSpecResponse {
+}
+export { DescribeElasticBandwidthSpecResponse };

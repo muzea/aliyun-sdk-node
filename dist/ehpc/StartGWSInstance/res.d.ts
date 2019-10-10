@@ -1,0 +1,3 @@
+interface StartGWSInstanceResponse {
+}
+export { StartGWSInstanceResponse };

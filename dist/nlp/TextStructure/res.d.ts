@@ -1,0 +1,3 @@
+interface TextStructureResponse {
+}
+export { TextStructureResponse };

@@ -1,0 +1,3 @@
+interface JoinCompanyResponse {
+}
+export { JoinCompanyResponse };

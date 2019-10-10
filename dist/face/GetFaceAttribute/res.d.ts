@@ -1,0 +1,3 @@
+interface GetFaceAttributeResponse {
+}
+export { GetFaceAttributeResponse };

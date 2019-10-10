@@ -1,0 +1,3 @@
+interface GetGatewayStatusStatResponse {
+}
+export { GetGatewayStatusStatResponse };

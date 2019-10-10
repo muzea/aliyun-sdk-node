@@ -1,0 +1,3 @@
+interface UpdateLabGatewayResponse {
+}
+export { UpdateLabGatewayResponse };

@@ -1,0 +1,3 @@
+interface SentimentResponse {
+}
+export { SentimentResponse };

@@ -1,0 +1,3 @@
+interface GetGatewayTupleOrderResponse {
+}
+export { GetGatewayTupleOrderResponse };

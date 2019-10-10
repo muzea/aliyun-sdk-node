@@ -1,0 +1,3 @@
+interface PushMessageToAndroidResponse {
+}
+export { PushMessageToAndroidResponse };

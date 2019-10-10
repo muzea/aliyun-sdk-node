@@ -1,0 +1,3 @@
+interface GetTemplateResponse {
+}
+export { GetTemplateResponse };

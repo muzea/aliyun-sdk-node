@@ -1,0 +1,3 @@
+interface UpdateOsBlackWhiteVersionsResponse {
+}
+export { UpdateOsBlackWhiteVersionsResponse };

@@ -1,0 +1,3 @@
+interface ListNodeGroupTransferPacketsResponse {
+}
+export { ListNodeGroupTransferPacketsResponse };

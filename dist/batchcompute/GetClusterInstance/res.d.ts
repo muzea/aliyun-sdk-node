@@ -1,0 +1,3 @@
+interface GetClusterInstanceResponse {
+}
+export { GetClusterInstanceResponse };

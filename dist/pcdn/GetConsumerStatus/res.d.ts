@@ -1,0 +1,3 @@
+interface GetConsumerStatusResponse {
+}
+export { GetConsumerStatusResponse };

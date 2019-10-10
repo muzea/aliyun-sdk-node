@@ -1,0 +1,3 @@
+interface SendMessageWithTemplateResponse {
+}
+export { SendMessageWithTemplateResponse };

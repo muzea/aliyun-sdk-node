@@ -1,0 +1,3 @@
+interface SignalResourceResponse {
+}
+export { SignalResourceResponse };

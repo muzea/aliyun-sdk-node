@@ -1,0 +1,3 @@
+interface ModifyDBProxyEndpointResponse {
+}
+export { ModifyDBProxyEndpointResponse };

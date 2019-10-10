@@ -1,21 +1,13 @@
+import { AssumeRoleRequest } from "./AssumeRole/req";
+import { AssumeRoleResponse } from "./AssumeRole/res";
+import { AssumeRoleWithSAMLRequest } from "./AssumeRoleWithSAML/req";
+import { AssumeRoleWithSAMLResponse } from "./AssumeRoleWithSAML/res";
+import { GetCallerIdentityRequest } from "./GetCallerIdentity/req";
+import { GetCallerIdentityResponse } from "./GetCallerIdentity/res";
+
 interface STS {
-    AssumeRole(query: {
-        "RegionId"?: string;
-        "RoleArn": string;
-        "RoleSessionName": string;
-        "DurationSeconds"?: number;
-        "Policy"?: string;
-    }): Promise<{}>;
-    AssumeRoleWithSAML(query: {
-        "RegionId"?: string;
-        "SAMLProviderArn"?: string;
-        "RoleArn"?: string;
-        "SAMLAssertion"?: string;
-        "Policy"?: string;
-        "DurationSeconds"?: number;
-    }): Promise<{}>;
-    GetCallerIdentity(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
+    AssumeRole(query: AssumeRoleRequest): Promise<AssumeRoleResponse>;
+    AssumeRoleWithSAML(query: AssumeRoleWithSAMLRequest): Promise<AssumeRoleWithSAMLResponse>;
+    GetCallerIdentity(query: GetCallerIdentityRequest): Promise<GetCallerIdentityResponse>;
 }
 export default STS;

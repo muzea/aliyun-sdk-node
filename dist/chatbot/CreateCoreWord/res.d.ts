@@ -1,0 +1,3 @@
+interface CreateCoreWordResponse {
+}
+export { CreateCoreWordResponse };

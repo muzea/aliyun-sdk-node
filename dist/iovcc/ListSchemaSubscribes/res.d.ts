@@ -1,0 +1,3 @@
+interface ListSchemaSubscribesResponse {
+}
+export { ListSchemaSubscribesResponse };

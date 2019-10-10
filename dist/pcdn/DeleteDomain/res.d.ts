@@ -1,0 +1,3 @@
+interface DeleteDomainResponse {
+}
+export { DeleteDomainResponse };

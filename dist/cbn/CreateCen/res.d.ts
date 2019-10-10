@@ -1,0 +1,8 @@
+// this file was automatically generated, DO NOT EDIT
+// structs
+// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cbn.CreateCenResponse
+export interface CreateCenResponse {
+	RequestId: string;
+	CenId: string;
+}
+

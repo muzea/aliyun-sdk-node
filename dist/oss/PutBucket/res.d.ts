@@ -1,0 +1,3 @@
+interface PutBucketResponse {
+}
+export { PutBucketResponse };

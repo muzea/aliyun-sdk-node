@@ -1,0 +1,3 @@
+interface DisableKnowledgeResponse {
+}
+export { DisableKnowledgeResponse };

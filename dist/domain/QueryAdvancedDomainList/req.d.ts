@@ -1,0 +1,30 @@
+interface QueryAdvancedDomainListRequest {
+    "RegionId"?: string;
+    "PageNum": number;
+    "PageSize": number;
+    "EndExpirationDate"?: number;
+    "UserClientIp"?: string;
+    "Lang"?: string;
+    "StartExpirationDate"?: number;
+    "ProductDomainType"?: string;
+    "DomainGroupId"?: number;
+    "DomainNameSort"?: boolean;
+    "DomainStatus"?: number;
+    "EndLength"?: number;
+    "Excluded"?: string;
+    "ExcludedPrefix"?: boolean;
+    "ExcludedSuffix"?: boolean;
+    "ExpirationDateSort"?: boolean;
+    "Form"?: number;
+    "KeyWord"?: string;
+    "KeyWordPrefix"?: boolean;
+    "KeyWordSuffix"?: boolean;
+    "ProductDomainTypeSort"?: boolean;
+    "RegistrationDateSort"?: boolean;
+    "StartLength"?: number;
+    "TradeType"?: number;
+    "Suffixs"?: string;
+    "StartRegistrationDate"?: number;
+    "EndRegistrationDate"?: number;
+}
+export { QueryAdvancedDomainListRequest };

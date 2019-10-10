@@ -1,0 +1,3 @@
+interface CountLabGatewaysResponse {
+}
+export { CountLabGatewaysResponse };

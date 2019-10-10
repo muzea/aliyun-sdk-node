@@ -1,0 +1,3 @@
+interface UpdateAccountPasswordResponse {
+}
+export { UpdateAccountPasswordResponse };

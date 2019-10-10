@@ -1,0 +1,3 @@
+interface ModifySubscriptionPermissionResponse {
+}
+export { ModifySubscriptionPermissionResponse };

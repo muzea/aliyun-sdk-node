@@ -1,0 +1,3 @@
+interface DescribeIpFlowReportResponse {
+}
+export { DescribeIpFlowReportResponse };

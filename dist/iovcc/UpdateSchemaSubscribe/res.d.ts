@@ -1,0 +1,3 @@
+interface UpdateSchemaSubscribeResponse {
+}
+export { UpdateSchemaSubscribeResponse };

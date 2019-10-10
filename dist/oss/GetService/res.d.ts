@@ -1,0 +1,3 @@
+interface GetServiceResponse {
+}
+export { GetServiceResponse };

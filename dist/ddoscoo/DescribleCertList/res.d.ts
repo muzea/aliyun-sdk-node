@@ -1,0 +1,3 @@
+interface DescribleCertListResponse {
+}
+export { DescribleCertListResponse };

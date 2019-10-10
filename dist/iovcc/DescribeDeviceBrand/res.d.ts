@@ -1,0 +1,3 @@
+interface DescribeDeviceBrandResponse {
+}
+export { DescribeDeviceBrandResponse };

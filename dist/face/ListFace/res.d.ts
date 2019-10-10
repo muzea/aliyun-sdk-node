@@ -1,0 +1,3 @@
+interface ListFaceResponse {
+}
+export { ListFaceResponse };

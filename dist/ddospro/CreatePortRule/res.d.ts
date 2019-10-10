@@ -1,0 +1,3 @@
+interface CreatePortRuleResponse {
+}
+export { CreatePortRuleResponse };

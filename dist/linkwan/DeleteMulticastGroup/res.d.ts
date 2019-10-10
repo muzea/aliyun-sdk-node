@@ -1,0 +1,3 @@
+interface DeleteMulticastGroupResponse {
+}
+export { DeleteMulticastGroupResponse };

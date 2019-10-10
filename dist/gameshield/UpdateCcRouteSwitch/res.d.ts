@@ -1,0 +1,3 @@
+interface UpdateCcRouteSwitchResponse {
+}
+export { UpdateCcRouteSwitchResponse };

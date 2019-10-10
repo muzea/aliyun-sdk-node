@@ -1,0 +1,3 @@
+interface ModifyParameterGroupResponse {
+}
+export { ModifyParameterGroupResponse };

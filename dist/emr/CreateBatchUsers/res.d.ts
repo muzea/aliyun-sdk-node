@@ -1,0 +1,9 @@
+// this file was automatically generated, DO NOT EDIT
+// structs
+// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/emr.CreateBatchUsersResponse
+export interface CreateBatchUsersResponse {
+	Paging: boolean;
+	RequestId: string;
+	Data: boolean;
+}
+

@@ -1,0 +1,3 @@
+interface ListStreamsForCamerasResponse {
+}
+export { ListStreamsForCamerasResponse };

@@ -1,0 +1,3 @@
+interface CancelImageResponse {
+}
+export { CancelImageResponse };

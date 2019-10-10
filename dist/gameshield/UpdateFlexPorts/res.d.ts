@@ -1,0 +1,3 @@
+interface UpdateFlexPortsResponse {
+}
+export { UpdateFlexPortsResponse };

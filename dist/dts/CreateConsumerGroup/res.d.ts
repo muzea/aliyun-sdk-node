@@ -1,0 +1,3 @@
+interface CreateConsumerGroupResponse {
+}
+export { CreateConsumerGroupResponse };

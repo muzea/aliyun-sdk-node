@@ -1,155 +1,52 @@
+import { CreateContainerGroupRequest } from "./CreateContainerGroup/req";
+import { CreateContainerGroupResponse } from "./CreateContainerGroup/res";
+import { DeleteContainerGroupRequest } from "./DeleteContainerGroup/req";
+import { DeleteContainerGroupResponse } from "./DeleteContainerGroup/res";
+import { DescribeContainerGroupsRequest } from "./DescribeContainerGroups/req";
+import { DescribeContainerGroupsResponse } from "./DescribeContainerGroups/res";
+import { DescribeContainerLogRequest } from "./DescribeContainerLog/req";
+import { DescribeContainerLogResponse } from "./DescribeContainerLog/res";
+import { CreateContainerGroupFromTemplateRequest } from "./CreateContainerGroupFromTemplate/req";
+import { CreateContainerGroupFromTemplateResponse } from "./CreateContainerGroupFromTemplate/res";
+import { DescribeContainerGroupMetricRequest } from "./DescribeContainerGroupMetric/req";
+import { DescribeContainerGroupMetricResponse } from "./DescribeContainerGroupMetric/res";
+import { DescribeContainerGroupPriceRequest } from "./DescribeContainerGroupPrice/req";
+import { DescribeContainerGroupPriceResponse } from "./DescribeContainerGroupPrice/res";
+import { DescribeMultiContainerGroupMetricRequest } from "./DescribeMultiContainerGroupMetric/req";
+import { DescribeMultiContainerGroupMetricResponse } from "./DescribeMultiContainerGroupMetric/res";
+import { ExecContainerCommandRequest } from "./ExecContainerCommand/req";
+import { ExecContainerCommandResponse } from "./ExecContainerCommand/res";
+import { ExportContainerGroupTemplateRequest } from "./ExportContainerGroupTemplate/req";
+import { ExportContainerGroupTemplateResponse } from "./ExportContainerGroupTemplate/res";
+import { RestartContainerGroupRequest } from "./RestartContainerGroup/req";
+import { RestartContainerGroupResponse } from "./RestartContainerGroup/res";
+import { UpdateContainerGroupRequest } from "./UpdateContainerGroup/req";
+import { UpdateContainerGroupResponse } from "./UpdateContainerGroup/res";
+import { UpdateContainerGroupByTemplateRequest } from "./UpdateContainerGroupByTemplate/req";
+import { UpdateContainerGroupByTemplateResponse } from "./UpdateContainerGroupByTemplate/res";
+import { CreateImageCacheRequest } from "./CreateImageCache/req";
+import { CreateImageCacheResponse } from "./CreateImageCache/res";
+import { DeleteImageCacheRequest } from "./DeleteImageCache/req";
+import { DeleteImageCacheResponse } from "./DeleteImageCache/res";
+import { DescribeImageCachesRequest } from "./DescribeImageCaches/req";
+import { DescribeImageCachesResponse } from "./DescribeImageCaches/res";
+
 interface ECI {
-    CreateContainerGroup(query: {
-        "RegionId": string;
-        "SecurityGroupId": string;
-        "VSwitchId": string;
-        "ContainerGroupName": string;
-        "Container": string[];
-        "OwnerId"?: number;
-        "ZoneId"?: string;
-        "RestartPolicy"?: string;
-        "Tag"?: string[];
-        "ImageRegistryCredential"?: string[];
-        "Volume"?: string[];
-        "EipInstanceId"?: string;
-        "InitContainer"?: string[];
-        "DnsConfig.NameServer"?: string[];
-        "DnsConfig.Search"?: string[];
-        "DnsConfig.Option"?: string[];
-        "Cpu"?: number;
-        "Memory"?: number;
-        "ResourceGroupId"?: string;
-        "DnsPolicy"?: string;
-        "ClientToken"?: string;
-        "HostAliase"?: string[];
-        "Arn"?: string[];
-        "InstanceType"?: string;
-        "SecurityContext.Sysctl"?: string[];
-        "SlsEnable"?: boolean;
-        "ImageSnapshotId"?: string;
-        "RamRoleName"?: string;
-        "NtpServer"?: string[];
-    }): Promise<{}>;
-    DeleteContainerGroup(query: {
-        "RegionId": string;
-        "ContainerGroupId": string;
-        "OwnerId"?: number;
-        "ClientToken"?: string;
-    }): Promise<{}>;
-    DescribeContainerGroups(query: {
-        "RegionId": string;
-        "OwnerId"?: number;
-        "ZoneId"?: string;
-        "VSwitchId"?: string;
-        "NextToken"?: string;
-        "Limit"?: number;
-        "Tag"?: string[];
-        "ContainerGroupIds"?: string;
-        "ContainerGroupName"?: string;
-        "Status"?: string;
-    }): Promise<{}>;
-    DescribeContainerLog(query: {
-        "RegionId": string;
-        "ContainerGroupId": string;
-        "ContainerName": string;
-        "OwnerId"?: number;
-        "StartTime"?: string;
-        "Tail"?: number;
-    }): Promise<{}>;
-    CreateContainerGroupFromTemplate(query: {
-        "RegionId": string;
-        "Template": string;
-        "OwnerId"?: number;
-        "ClientToken"?: string;
-    }): Promise<{}>;
-    DescribeContainerGroupMetric(query: {
-        "RegionId": string;
-        "ContainerGroupId": string;
-        "OwnerId"?: number;
-        "StartTime"?: string;
-        "EndTime"?: string;
-        "Period"?: string;
-    }): Promise<{}>;
-    DescribeContainerGroupPrice(query: {
-        "RegionId": string;
-        "Cpu": number;
-        "Memory": number;
-        "OwnerId"?: number;
-    }): Promise<{}>;
-    DescribeMultiContainerGroupMetric(query: {
-        "RegionId": string;
-        "ContainerGroupIds": string;
-        "OwnerId"?: number;
-        "ResourceGroupId"?: string;
-    }): Promise<{}>;
-    ExecContainerCommand(query: {
-        "RegionId": string;
-        "ContainerGroupId": string;
-        "ContainerName": string;
-        "Command": string;
-        "OwnerId"?: number;
-        "TTY"?: boolean;
-    }): Promise<{}>;
-    ExportContainerGroupTemplate(query: {
-        "RegionId"?: string;
-        "OwnerId"?: number;
-        "ContainerGroupId"?: string;
-    }): Promise<{}>;
-    RestartContainerGroup(query: {
-        "RegionId": string;
-        "ContainerGroupId": string;
-        "OwnerId"?: number;
-        "ClientToken"?: string;
-    }): Promise<{}>;
-    UpdateContainerGroup(query: {
-        "RegionId": string;
-        "ContainerGroupId": string;
-        "OwnerId"?: number;
-        "RestartPolicy"?: string;
-        "Tag"?: string[];
-        "Volume"?: string[];
-        "DnsConfig.NameServer"?: string[];
-        "DnsConfig.Search"?: string[];
-        "DnsConfig.Option"?: string[];
-        "Container"?: string[];
-        "InitContainer"?: string[];
-        "ImageRegistryCredential"?: string[];
-        "ClientToken"?: string;
-        "Cpu"?: number;
-        "Memory"?: number;
-    }): Promise<{}>;
-    UpdateContainerGroupByTemplate(query: {
-        "RegionId": string;
-        "Template": string;
-        "OwnerId"?: number;
-        "ClientToken"?: string;
-    }): Promise<{}>;
-    CreateImageCache(query: {
-        "RegionId": string;
-        "SecurityGroupId": string;
-        "VSwitchId": string;
-        "ImageCacheName": string;
-        "Image": string[];
-        "OwnerId"?: number;
-        "ZoneId"?: string;
-        "ImageRegistryCredential"?: string[];
-        "EipInstanceId"?: string;
-        "ResourceGroupId"?: string;
-        "ClientToken"?: string;
-    }): Promise<{}>;
-    DeleteImageCache(query: {
-        "RegionId": string;
-        "ImageCacheId": string;
-        "OwnerId"?: number;
-        "ClientToken"?: string;
-    }): Promise<{}>;
-    DescribeImageCaches(query: {
-        "RegionId": string;
-        "ImageCacheId"?: string;
-        "OwnerId"?: number;
-        "ImageCacheName"?: string;
-        "SnapshotId"?: string;
-        "Image"?: string;
-    }): Promise<{}>;
+    CreateContainerGroup(query: CreateContainerGroupRequest): Promise<CreateContainerGroupResponse>;
+    DeleteContainerGroup(query: DeleteContainerGroupRequest): Promise<DeleteContainerGroupResponse>;
+    DescribeContainerGroups(query: DescribeContainerGroupsRequest): Promise<DescribeContainerGroupsResponse>;
+    DescribeContainerLog(query: DescribeContainerLogRequest): Promise<DescribeContainerLogResponse>;
+    CreateContainerGroupFromTemplate(query: CreateContainerGroupFromTemplateRequest): Promise<CreateContainerGroupFromTemplateResponse>;
+    DescribeContainerGroupMetric(query: DescribeContainerGroupMetricRequest): Promise<DescribeContainerGroupMetricResponse>;
+    DescribeContainerGroupPrice(query: DescribeContainerGroupPriceRequest): Promise<DescribeContainerGroupPriceResponse>;
+    DescribeMultiContainerGroupMetric(query: DescribeMultiContainerGroupMetricRequest): Promise<DescribeMultiContainerGroupMetricResponse>;
+    ExecContainerCommand(query: ExecContainerCommandRequest): Promise<ExecContainerCommandResponse>;
+    ExportContainerGroupTemplate(query: ExportContainerGroupTemplateRequest): Promise<ExportContainerGroupTemplateResponse>;
+    RestartContainerGroup(query: RestartContainerGroupRequest): Promise<RestartContainerGroupResponse>;
+    UpdateContainerGroup(query: UpdateContainerGroupRequest): Promise<UpdateContainerGroupResponse>;
+    UpdateContainerGroupByTemplate(query: UpdateContainerGroupByTemplateRequest): Promise<UpdateContainerGroupByTemplateResponse>;
+    CreateImageCache(query: CreateImageCacheRequest): Promise<CreateImageCacheResponse>;
+    DeleteImageCache(query: DeleteImageCacheRequest): Promise<DeleteImageCacheResponse>;
+    DescribeImageCaches(query: DescribeImageCachesRequest): Promise<DescribeImageCachesResponse>;
 }
 export default ECI;

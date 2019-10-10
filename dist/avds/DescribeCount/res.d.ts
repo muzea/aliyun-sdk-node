@@ -1,0 +1,3 @@
+interface DescribeCountResponse {
+}
+export { DescribeCountResponse };

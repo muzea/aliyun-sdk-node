@@ -1,0 +1,3 @@
+interface GetOssUploadMetaResponse {
+}
+export { GetOssUploadMetaResponse };

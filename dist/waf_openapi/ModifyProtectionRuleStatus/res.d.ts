@@ -1,0 +1,3 @@
+interface ModifyProtectionRuleStatusResponse {
+}
+export { ModifyProtectionRuleStatusResponse };

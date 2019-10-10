@@ -1,0 +1,3 @@
+interface HeadObjectResponse {
+}
+export { HeadObjectResponse };

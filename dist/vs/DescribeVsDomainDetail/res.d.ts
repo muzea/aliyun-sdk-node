@@ -1,0 +1,3 @@
+interface DescribeVsDomainDetailResponse {
+}
+export { DescribeVsDomainDetailResponse };

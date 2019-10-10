@@ -1,0 +1,3 @@
+interface BatchGetEdgeInstanceDriverConfigsResponse {
+}
+export { BatchGetEdgeInstanceDriverConfigsResponse };

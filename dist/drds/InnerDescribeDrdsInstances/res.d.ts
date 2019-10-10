@@ -1,0 +1,3 @@
+interface InnerDescribeDrdsInstancesResponse {
+}
+export { InnerDescribeDrdsInstancesResponse };

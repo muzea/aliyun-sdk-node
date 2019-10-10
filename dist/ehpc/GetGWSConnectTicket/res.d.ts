@@ -1,0 +1,3 @@
+interface GetGWSConnectTicketResponse {
+}
+export { GetGWSConnectTicketResponse };

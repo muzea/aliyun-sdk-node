@@ -1,0 +1,3 @@
+interface DescribeClusterWhiteListResponse {
+}
+export { DescribeClusterWhiteListResponse };

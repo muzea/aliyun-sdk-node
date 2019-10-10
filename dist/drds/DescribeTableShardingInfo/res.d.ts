@@ -1,0 +1,3 @@
+interface DescribeTableShardingInfoResponse {
+}
+export { DescribeTableShardingInfoResponse };

@@ -1,0 +1,3 @@
+interface EnableServerlessPublicConnectionResponse {
+}
+export { EnableServerlessPublicConnectionResponse };

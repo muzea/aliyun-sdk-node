@@ -1,0 +1,3 @@
+interface DeleteWorkGroupResponse {
+}
+export { DeleteWorkGroupResponse };

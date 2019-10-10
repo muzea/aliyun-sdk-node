@@ -1,0 +1,3 @@
+interface DeleteEntityResponse {
+}
+export { DeleteEntityResponse };

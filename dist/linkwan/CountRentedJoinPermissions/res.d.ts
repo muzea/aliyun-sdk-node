@@ -1,0 +1,3 @@
+interface CountRentedJoinPermissionsResponse {
+}
+export { CountRentedJoinPermissionsResponse };

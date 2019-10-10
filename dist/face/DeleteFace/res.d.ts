@@ -1,0 +1,3 @@
+interface DeleteFaceResponse {
+}
+export { DeleteFaceResponse };

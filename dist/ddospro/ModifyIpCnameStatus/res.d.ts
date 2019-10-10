@@ -1,0 +1,3 @@
+interface ModifyIpCnameStatusResponse {
+}
+export { ModifyIpCnameStatusResponse };

@@ -1,0 +1,3 @@
+interface QueryCardFlowInfoResponse {
+}
+export { QueryCardFlowInfoResponse };

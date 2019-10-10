@@ -1,0 +1,3 @@
+interface DeleteFlexAccFwdRuleResponse {
+}
+export { DeleteFlexAccFwdRuleResponse };

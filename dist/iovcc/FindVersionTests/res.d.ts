@@ -1,0 +1,3 @@
+interface FindVersionTestsResponse {
+}
+export { FindVersionTestsResponse };

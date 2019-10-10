@@ -1,0 +1,3 @@
+interface UpdateUpstreamAppServerResponse {
+}
+export { UpdateUpstreamAppServerResponse };

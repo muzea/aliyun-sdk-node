@@ -1,0 +1,3 @@
+interface DescribeComputeTasksResponse {
+}
+export { DescribeComputeTasksResponse };

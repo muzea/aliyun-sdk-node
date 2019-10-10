@@ -1,0 +1,3 @@
+interface DescribeStreamURLResponse {
+}
+export { DescribeStreamURLResponse };

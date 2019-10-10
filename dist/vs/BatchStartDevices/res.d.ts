@@ -1,0 +1,3 @@
+interface BatchStartDevicesResponse {
+}
+export { BatchStartDevicesResponse };

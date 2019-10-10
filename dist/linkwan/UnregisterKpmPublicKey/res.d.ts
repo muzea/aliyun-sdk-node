@@ -1,0 +1,3 @@
+interface UnregisterKpmPublicKeyResponse {
+}
+export { UnregisterKpmPublicKeyResponse };

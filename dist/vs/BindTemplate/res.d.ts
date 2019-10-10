@@ -1,0 +1,3 @@
+interface BindTemplateResponse {
+}
+export { BindTemplateResponse };

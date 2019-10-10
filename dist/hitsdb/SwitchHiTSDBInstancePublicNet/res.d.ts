@@ -1,0 +1,3 @@
+interface SwitchHiTSDBInstancePublicNetResponse {
+}
+export { SwitchHiTSDBInstancePublicNetResponse };

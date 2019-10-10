@@ -1,0 +1,3 @@
+interface KWEResponse {
+}
+export { KWEResponse };

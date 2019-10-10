@@ -1,0 +1,3 @@
+interface UpdateDeviceModelResponse {
+}
+export { UpdateDeviceModelResponse };

@@ -1,0 +1,3 @@
+interface DescribeSimpleDomainsResponse {
+}
+export { DescribeSimpleDomainsResponse };

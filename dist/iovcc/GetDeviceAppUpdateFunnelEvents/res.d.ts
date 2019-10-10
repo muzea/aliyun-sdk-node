@@ -1,0 +1,3 @@
+interface GetDeviceAppUpdateFunnelEventsResponse {
+}
+export { GetDeviceAppUpdateFunnelEventsResponse };

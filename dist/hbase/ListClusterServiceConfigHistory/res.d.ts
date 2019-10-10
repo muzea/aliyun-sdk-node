@@ -1,0 +1,3 @@
+interface ListClusterServiceConfigHistoryResponse {
+}
+export { ListClusterServiceConfigHistoryResponse };

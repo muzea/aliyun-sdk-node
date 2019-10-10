@@ -1,0 +1,3 @@
+interface SubmitNodeTupleOrderResponse {
+}
+export { SubmitNodeTupleOrderResponse };

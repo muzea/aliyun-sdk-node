@@ -1,116 +1,73 @@
+import { CancelKeyDeletionRequest } from "./CancelKeyDeletion/req";
+import { CancelKeyDeletionResponse } from "./CancelKeyDeletion/res";
+import { CreateAliasRequest } from "./CreateAlias/req";
+import { CreateAliasResponse } from "./CreateAlias/res";
+import { CreateKeyRequest } from "./CreateKey/req";
+import { CreateKeyResponse } from "./CreateKey/res";
+import { DecryptRequest } from "./Decrypt/req";
+import { DecryptResponse } from "./Decrypt/res";
+import { DeleteAliasRequest } from "./DeleteAlias/req";
+import { DeleteAliasResponse } from "./DeleteAlias/res";
+import { DeleteKeyMaterialRequest } from "./DeleteKeyMaterial/req";
+import { DeleteKeyMaterialResponse } from "./DeleteKeyMaterial/res";
+import { DescribeKeyRequest } from "./DescribeKey/req";
+import { DescribeKeyResponse } from "./DescribeKey/res";
+import { DescribeRegionsRequest } from "./DescribeRegions/req";
+import { DescribeRegionsResponse } from "./DescribeRegions/res";
+import { DescribeServiceRequest } from "./DescribeService/req";
+import { DescribeServiceResponse } from "./DescribeService/res";
+import { DisableKeyRequest } from "./DisableKey/req";
+import { DisableKeyResponse } from "./DisableKey/res";
+import { EnableKeyRequest } from "./EnableKey/req";
+import { EnableKeyResponse } from "./EnableKey/res";
+import { EncryptRequest } from "./Encrypt/req";
+import { EncryptResponse } from "./Encrypt/res";
+import { GenerateDataKeyRequest } from "./GenerateDataKey/req";
+import { GenerateDataKeyResponse } from "./GenerateDataKey/res";
+import { GetParametersForImportRequest } from "./GetParametersForImport/req";
+import { GetParametersForImportResponse } from "./GetParametersForImport/res";
+import { ImportKeyMaterialRequest } from "./ImportKeyMaterial/req";
+import { ImportKeyMaterialResponse } from "./ImportKeyMaterial/res";
+import { ListAliasesRequest } from "./ListAliases/req";
+import { ListAliasesResponse } from "./ListAliases/res";
+import { ListAliasesByKeyIdRequest } from "./ListAliasesByKeyId/req";
+import { ListAliasesByKeyIdResponse } from "./ListAliasesByKeyId/res";
+import { ListKeysRequest } from "./ListKeys/req";
+import { ListKeysResponse } from "./ListKeys/res";
+import { ListResourceTagsRequest } from "./ListResourceTags/req";
+import { ListResourceTagsResponse } from "./ListResourceTags/res";
+import { ScheduleKeyDeletionRequest } from "./ScheduleKeyDeletion/req";
+import { ScheduleKeyDeletionResponse } from "./ScheduleKeyDeletion/res";
+import { TagResourceRequest } from "./TagResource/req";
+import { TagResourceResponse } from "./TagResource/res";
+import { UntagResourceRequest } from "./UntagResource/req";
+import { UntagResourceResponse } from "./UntagResource/res";
+import { UpdateAliasRequest } from "./UpdateAlias/req";
+import { UpdateAliasResponse } from "./UpdateAlias/res";
+
 interface KMS {
-    CancelKeyDeletion(query: {
-        "RegionId"?: string;
-        "KeyId": string;
-    }): Promise<{}>;
-    CreateAlias(query: {
-        "RegionId"?: string;
-        "KeyId": string;
-        "AliasName": string;
-    }): Promise<{}>;
-    CreateKey(query: {
-        "RegionId"?: string;
-        "Description"?: string;
-        "KeyUsage"?: string;
-        "Origin"?: string;
-        "ProtectionLevel"?: string;
-    }): Promise<{}>;
-    Decrypt(query: {
-        "RegionId"?: string;
-        "CiphertextBlob": string;
-        "EncryptionContext"?: string;
-    }): Promise<{}>;
-    DeleteAlias(query: {
-        "RegionId"?: string;
-        "AliasName": string;
-    }): Promise<{}>;
-    DeleteKeyMaterial(query: {
-        "RegionId"?: string;
-        "KeyId": string;
-    }): Promise<{}>;
-    DescribeKey(query: {
-        "RegionId"?: string;
-        "KeyId": string;
-    }): Promise<{}>;
-    DescribeRegions(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    DescribeService(query: {
-        "RegionId"?: string;
-    }): Promise<{}>;
-    DisableKey(query: {
-        "RegionId"?: string;
-        "KeyId": string;
-    }): Promise<{}>;
-    EnableKey(query: {
-        "RegionId"?: string;
-        "KeyId": string;
-    }): Promise<{}>;
-    Encrypt(query: {
-        "RegionId"?: string;
-        "KeyId": string;
-        "Plaintext": string;
-        "EncryptionContext"?: string;
-    }): Promise<{}>;
-    GenerateDataKey(query: {
-        "RegionId"?: string;
-        "KeyId": string;
-        "KeySpec"?: string;
-        "NumberOfBytes"?: number;
-        "EncryptionContext"?: string;
-    }): Promise<{}>;
-    GetParametersForImport(query: {
-        "RegionId"?: string;
-        "KeyId": string;
-        "WrappingAlgorithm": string;
-        "WrappingKeySpec": string;
-    }): Promise<{}>;
-    ImportKeyMaterial(query: {
-        "RegionId"?: string;
-        "KeyId": string;
-        "EncryptedKeyMaterial": string;
-        "ImportToken": string;
-        "KeyMaterialExpireUnix": number;
-    }): Promise<{}>;
-    ListAliases(query: {
-        "RegionId"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ListAliasesByKeyId(query: {
-        "RegionId"?: string;
-        "KeyId": string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ListKeys(query: {
-        "RegionId"?: string;
-        "PageNumber"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    ListResourceTags(query: {
-        "RegionId"?: string;
-        "KeyId": string;
-    }): Promise<{}>;
-    ScheduleKeyDeletion(query: {
-        "RegionId"?: string;
-        "KeyId": string;
-        "PendingWindowInDays"?: number;
-    }): Promise<{}>;
-    TagResource(query: {
-        "RegionId"?: string;
-        "KeyId": string;
-        "Tags": string;
-    }): Promise<{}>;
-    UntagResource(query: {
-        "RegionId"?: string;
-        "KeyId": string;
-        "TagKeys": string;
-    }): Promise<{}>;
-    UpdateAlias(query: {
-        "RegionId"?: string;
-        "KeyId": string;
-        "AliasName": string;
-    }): Promise<{}>;
+    CancelKeyDeletion(query: CancelKeyDeletionRequest): Promise<CancelKeyDeletionResponse>;
+    CreateAlias(query: CreateAliasRequest): Promise<CreateAliasResponse>;
+    CreateKey(query: CreateKeyRequest): Promise<CreateKeyResponse>;
+    Decrypt(query: DecryptRequest): Promise<DecryptResponse>;
+    DeleteAlias(query: DeleteAliasRequest): Promise<DeleteAliasResponse>;
+    DeleteKeyMaterial(query: DeleteKeyMaterialRequest): Promise<DeleteKeyMaterialResponse>;
+    DescribeKey(query: DescribeKeyRequest): Promise<DescribeKeyResponse>;
+    DescribeRegions(query: DescribeRegionsRequest): Promise<DescribeRegionsResponse>;
+    DescribeService(query: DescribeServiceRequest): Promise<DescribeServiceResponse>;
+    DisableKey(query: DisableKeyRequest): Promise<DisableKeyResponse>;
+    EnableKey(query: EnableKeyRequest): Promise<EnableKeyResponse>;
+    Encrypt(query: EncryptRequest): Promise<EncryptResponse>;
+    GenerateDataKey(query: GenerateDataKeyRequest): Promise<GenerateDataKeyResponse>;
+    GetParametersForImport(query: GetParametersForImportRequest): Promise<GetParametersForImportResponse>;
+    ImportKeyMaterial(query: ImportKeyMaterialRequest): Promise<ImportKeyMaterialResponse>;
+    ListAliases(query: ListAliasesRequest): Promise<ListAliasesResponse>;
+    ListAliasesByKeyId(query: ListAliasesByKeyIdRequest): Promise<ListAliasesByKeyIdResponse>;
+    ListKeys(query: ListKeysRequest): Promise<ListKeysResponse>;
+    ListResourceTags(query: ListResourceTagsRequest): Promise<ListResourceTagsResponse>;
+    ScheduleKeyDeletion(query: ScheduleKeyDeletionRequest): Promise<ScheduleKeyDeletionResponse>;
+    TagResource(query: TagResourceRequest): Promise<TagResourceResponse>;
+    UntagResource(query: UntagResourceRequest): Promise<UntagResourceResponse>;
+    UpdateAlias(query: UpdateAliasRequest): Promise<UpdateAliasResponse>;
 }
 export default KMS;

@@ -1,0 +1,3 @@
+interface DeleteUpstreamAppKeyRelationResponse {
+}
+export { DeleteUpstreamAppKeyRelationResponse };

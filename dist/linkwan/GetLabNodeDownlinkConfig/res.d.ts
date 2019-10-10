@@ -1,0 +1,3 @@
+interface GetLabNodeDownlinkConfigResponse {
+}
+export { GetLabNodeDownlinkConfigResponse };

@@ -1,0 +1,3 @@
+interface CreateScanResponse {
+}
+export { CreateScanResponse };

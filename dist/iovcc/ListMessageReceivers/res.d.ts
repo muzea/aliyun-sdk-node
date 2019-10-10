@@ -1,0 +1,3 @@
+interface ListMessageReceiversResponse {
+}
+export { ListMessageReceiversResponse };

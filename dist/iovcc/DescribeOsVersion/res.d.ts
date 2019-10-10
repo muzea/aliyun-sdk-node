@@ -1,0 +1,3 @@
+interface DescribeOsVersionResponse {
+}
+export { DescribeOsVersionResponse };

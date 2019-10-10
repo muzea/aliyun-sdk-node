@@ -1,0 +1,3 @@
+interface WordPosResponse {
+}
+export { WordPosResponse };

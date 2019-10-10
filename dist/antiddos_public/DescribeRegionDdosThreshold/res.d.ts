@@ -1,0 +1,3 @@
+interface DescribeRegionDdosThresholdResponse {
+}
+export { DescribeRegionDdosThresholdResponse };

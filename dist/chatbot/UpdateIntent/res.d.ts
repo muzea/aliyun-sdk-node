@@ -1,0 +1,3 @@
+interface UpdateIntentResponse {
+}
+export { UpdateIntentResponse };

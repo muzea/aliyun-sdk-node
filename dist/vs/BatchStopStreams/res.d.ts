@@ -1,0 +1,3 @@
+interface BatchStopStreamsResponse {
+}
+export { BatchStopStreamsResponse };

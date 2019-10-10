@@ -1,270 +1,64 @@
+import { AddEnterpriseMemberRequest } from "./AddEnterpriseMember/req";
+import { AddEnterpriseMemberResponse } from "./AddEnterpriseMember/res";
+import { CreateEnterpriseRequest } from "./CreateEnterprise/req";
+import { CreateEnterpriseResponse } from "./CreateEnterprise/res";
+import { CreateWorkitemRequest } from "./CreateWorkitem/req";
+import { CreateWorkitemResponse } from "./CreateWorkitem/res";
+import { GetBindedUserByDingIdRequest } from "./GetBindedUserByDingId/req";
+import { GetBindedUserByDingIdResponse } from "./GetBindedUserByDingId/res";
+import { GetCustomFieldsByTemplateIdRequest } from "./GetCustomFieldsByTemplateId/req";
+import { GetCustomFieldsByTemplateIdResponse } from "./GetCustomFieldsByTemplateId/res";
+import { GetIssueByIdRequest } from "./GetIssueById/req";
+import { GetIssueByIdResponse } from "./GetIssueById/res";
+import { GetProjectMembersRequest } from "./GetProjectMembers/req";
+import { GetProjectMembersResponse } from "./GetProjectMembers/res";
+import { GetUserByAliyunPkRequest } from "./GetUserByAliyunPk/req";
+import { GetUserByAliyunPkResponse } from "./GetUserByAliyunPk/res";
+import { GetWorkitemByIdRequest } from "./GetWorkitemById/req";
+import { GetWorkitemByIdResponse } from "./GetWorkitemById/res";
+import { SearchProjectsByRegionRequest } from "./SearchProjectsByRegion/req";
+import { SearchProjectsByRegionResponse } from "./SearchProjectsByRegion/res";
+import { SearchTestCaseRequest } from "./SearchTestCase/req";
+import { SearchTestCaseResponse } from "./SearchTestCase/res";
+import { SearchWorkitemRequest } from "./SearchWorkitem/req";
+import { SearchWorkitemResponse } from "./SearchWorkitem/res";
+import { UpdateWorkitemRequest } from "./UpdateWorkitem/req";
+import { UpdateWorkitemResponse } from "./UpdateWorkitem/res";
+import { AddRamMemberRequest } from "./AddRamMember/req";
+import { AddRamMemberResponse } from "./AddRamMember/res";
+import { ApproveJoinCompanyRequest } from "./ApproveJoinCompany/req";
+import { ApproveJoinCompanyResponse } from "./ApproveJoinCompany/res";
+import { GetChangeLogRequest } from "./GetChangeLog/req";
+import { GetChangeLogResponse } from "./GetChangeLog/res";
+import { GetJoinCodeRequest } from "./GetJoinCode/req";
+import { GetJoinCodeResponse } from "./GetJoinCode/res";
+import { JoinCompanyRequest } from "./JoinCompany/req";
+import { JoinCompanyResponse } from "./JoinCompany/res";
+import { SearchWorkitemWithTotalCountRequest } from "./SearchWorkitemWithTotalCount/req";
+import { SearchWorkitemWithTotalCountResponse } from "./SearchWorkitemWithTotalCount/res";
+import { SyncUserToRdcRequest } from "./SyncUserToRdc/req";
+import { SyncUserToRdcResponse } from "./SyncUserToRdc/res";
+
 interface RDC {
-    AddEnterpriseMember(query: {
-        "RegionId"?: string;
-        "InstanceId": string;
-        "StaffId": string;
-        "Operator": string;
-    }): Promise<{
-        "Message": string;
-        "RequestId": string;
-        "Success": boolean;
-        "Code": number;
-    }>;
-    CreateEnterprise(query: {
-        "RegionId"?: string;
-        "Name": string;
-        "Domain": string;
-        "CreatorStaffId": string;
-        "Description"?: string;
-        "Emails"?: string;
-    }): Promise<{
-        "Data": {
-            "Name": string;
-            "Id": number;
-            "Identifier": string;
-        };
-        "Message": string;
-        "RequestId": string;
-        "Success": boolean;
-        "Code": number;
-    }>;
-    CreateWorkitem(query: {
-        "RegionId"?: string;
-        "CorpIdentifier": string;
-        "Author": string;
-        "AssignedTo": string;
-        "TemplateId": number;
-        "Subject": string;
-        "Stamp": string;
-        "AKProjectId": number;
-        "Description"?: string;
-        "CfList"?: string;
-        "Verifier"?: string;
-        "PriorityId"?: number;
-        "SeriousLevelId"?: number;
-        "WatcherUsers"?: string;
-        "ModuleIds"?: string;
-    }): Promise<{
-        "Data": number;
-        "RequestId": string;
-        "Success": boolean;
-        "Code": number;
-    }>;
-    GetBindedUserByDingId(query: {
-        "RegionId"?: string;
-        "DingId": string;
-    }): Promise<{
-        "result": {
-            "isValid": boolean;
-            "id": number;
-            "uuid": string;
-            "mainAccountType": string;
-            "aliyunUser": {
-                "id": number;
-                "nickName": string;
-                "email": string;
-                "kp": string;
-                "head": string;
-                "taobaoNick": string;
-                "codeUserName": any;
-                "aliyunId": string;
-                "havanaId": string;
-                "accountStructure": number;
-                "realname": any;
-                "parentPk": string;
-                "partnerPk": string;
-            };
-            "dingtalkUser": any;
-            "antFinanialUserDTO": any;
-            "userProfileDTO": {
-                "userId": number;
-                "name": any;
-                "englishName": string;
-                "nickName": string;
-                "mobile": string;
-                "email": string;
-                "avatar": string;
-                "dataSource": string;
-                "codeAccount": any;
-                "weibo": any;
-                "aliWW": any;
-                "tbWW": any;
-                "qq": any;
-                "userOuterId": any;
-                "createdAt": number;
-            };
-            "ddcUser": any;
-            "internalUser": any;
-            "ldapUserDTO": any;
-            "avatar": any;
-            "nickName": string;
-            "guid": string;
-        };
-        "success": boolean;
-        "errorCode": any;
-        "message": any;
-    }>;
-    GetCustomFieldsByTemplateId(query: {
-        "RegionId"?: string;
-        "AKProjectId": number;
-        "TemplateId": number;
-        "CorpIdentifier": string;
-    }): Promise<{}>;
-    GetIssueById(query: {
-        "RegionId"?: string;
-        "Id": number;
-        "CorpIdentifier": string;
-    }): Promise<{}>;
-    GetProjectMembers(query: {
-        "RegionId"?: string;
-        "CorpIdentifier": string;
-        "ProjectId": number;
-        "StaffId"?: string;
-    }): Promise<{}>;
-    GetUserByAliyunPk(query: {
-        "RegionId"?: string;
-        "Pk": string;
-    }): Promise<{
-        "result": {
-            "isValid": boolean;
-            "id": number;
-            "uuid": string;
-            "mainAccountType": string;
-            "aliyunUser": {
-                "id": number;
-                "nickName": string;
-                "email": string;
-                "kp": string;
-                "head": string;
-                "taobaoNick": string;
-                "codeUserName": any;
-                "aliyunId": string;
-                "havanaId": string;
-                "accountStructure": number;
-                "realname": any;
-                "parentPk": string;
-                "partnerPk": string;
-            };
-            "dingtalkUser": any;
-            "antFinanialUserDTO": any;
-            "userProfileDTO": {
-                "userId": number;
-                "name": any;
-                "englishName": string;
-                "nickName": string;
-                "mobile": string;
-                "email": string;
-                "avatar": string;
-                "dataSource": string;
-                "codeAccount": any;
-                "weibo": any;
-                "aliWW": any;
-                "tbWW": any;
-                "qq": any;
-                "userOuterId": any;
-                "createdAt": number;
-            };
-            "ddcUser": any;
-            "internalUser": any;
-            "ldapUserDTO": any;
-            "avatar": any;
-            "nickName": string;
-            "guid": string;
-        };
-        "success": boolean;
-        "errorCode": any;
-        "message": any;
-    }>;
-    GetWorkitemById(query: {
-        "RegionId"?: string;
-        "Id": number;
-        "CorpIdentifier": string;
-    }): Promise<{}>;
-    SearchProjectsByRegion(query: {
-        "RegionId"?: string;
-        "CorpIdentifier": string;
-        "Region": string;
-        "Status"?: string;
-        "ToPage"?: number;
-        "PageSize"?: number;
-    }): Promise<{}>;
-    SearchTestCase(query: {
-        "RegionId"?: string;
-        "CorpIdentifier": string;
-        "AkProjectId": string;
-        "PageSize"?: number;
-        "CaseTag"?: string;
-        "PageNum"?: string;
-        "CreateDateStart"?: string;
-        "CreateDateEnd"?: string;
-        "UpdateDateStart"?: string;
-        "UpdateDateEnd"?: string;
-    }): Promise<{}>;
-    SearchWorkitem(query: {
-        "RegionId"?: string;
-        "AKProjectId": number;
-        "CorpIdentifier": string;
-        "Stamp"?: string;
-        "ToPage"?: number;
-        "PageSize"?: number;
-        "SprintId"?: number;
-    }): Promise<{}>;
-    UpdateWorkitem(query: {
-        "RegionId"?: string;
-        "AKProjectId": number;
-        "CorpIdentifier": string;
-        "Modifier": string;
-        "IssueId": number;
-        "AssignedTo"?: string;
-        "TemplateId"?: number;
-        "Subject"?: string;
-        "Description"?: string;
-        "Stamp"?: string;
-        "CfList"?: string;
-        "Status"?: string;
-        "Priority"?: string;
-        "SeriousLevel"?: string;
-        "Verifier"?: string;
-        "SprintId"?: number;
-        "IgnoreCheck"?: boolean;
-        "Cfs"?: string;
-    }): Promise<{}>;
-    AddRamMember(query: {
-        "RegionId"?: string;
-        "CorpIdentifier": string;
-        "StaffIdentifier": string;
-    }): Promise<{}>;
-    ApproveJoinCompany(query: {
-        "RegionId"?: string;
-        "CorpIdentifier": string;
-        "ApplicationIds": string;
-    }): Promise<{}>;
-    GetChangeLog(query: {
-        "RegionId"?: string;
-        "TargetType": string;
-        "TargetIds": string;
-        "CorpIdentifier": string;
-    }): Promise<{}>;
-    GetJoinCode(query: {
-        "RegionId"?: string;
-        "CorpIdentifier": string;
-    }): Promise<{}>;
-    JoinCompany(query: {
-        "RegionId"?: string;
-        "Code"?: string;
-    }): Promise<{}>;
-    SearchWorkitemWithTotalCount(query: {
-        "RegionId"?: string;
-        "AKProjectId": number;
-        "CorpIdentifier": string;
-        "Stamp"?: string;
-        "ToPage"?: number;
-        "PageSize"?: number;
-        "SprintId"?: number;
-    }): Promise<{}>;
-    SyncUserToRdc(query: {
-        "RegionId"?: string;
-        "LoginTicket"?: string;
-    }): Promise<{}>;
+    AddEnterpriseMember(query: AddEnterpriseMemberRequest): Promise<AddEnterpriseMemberResponse>;
+    CreateEnterprise(query: CreateEnterpriseRequest): Promise<CreateEnterpriseResponse>;
+    CreateWorkitem(query: CreateWorkitemRequest): Promise<CreateWorkitemResponse>;
+    GetBindedUserByDingId(query: GetBindedUserByDingIdRequest): Promise<GetBindedUserByDingIdResponse>;
+    GetCustomFieldsByTemplateId(query: GetCustomFieldsByTemplateIdRequest): Promise<GetCustomFieldsByTemplateIdResponse>;
+    GetIssueById(query: GetIssueByIdRequest): Promise<GetIssueByIdResponse>;
+    GetProjectMembers(query: GetProjectMembersRequest): Promise<GetProjectMembersResponse>;
+    GetUserByAliyunPk(query: GetUserByAliyunPkRequest): Promise<GetUserByAliyunPkResponse>;
+    GetWorkitemById(query: GetWorkitemByIdRequest): Promise<GetWorkitemByIdResponse>;
+    SearchProjectsByRegion(query: SearchProjectsByRegionRequest): Promise<SearchProjectsByRegionResponse>;
+    SearchTestCase(query: SearchTestCaseRequest): Promise<SearchTestCaseResponse>;
+    SearchWorkitem(query: SearchWorkitemRequest): Promise<SearchWorkitemResponse>;
+    UpdateWorkitem(query: UpdateWorkitemRequest): Promise<UpdateWorkitemResponse>;
+    AddRamMember(query: AddRamMemberRequest): Promise<AddRamMemberResponse>;
+    ApproveJoinCompany(query: ApproveJoinCompanyRequest): Promise<ApproveJoinCompanyResponse>;
+    GetChangeLog(query: GetChangeLogRequest): Promise<GetChangeLogResponse>;
+    GetJoinCode(query: GetJoinCodeRequest): Promise<GetJoinCodeResponse>;
+    JoinCompany(query: JoinCompanyRequest): Promise<JoinCompanyResponse>;
+    SearchWorkitemWithTotalCount(query: SearchWorkitemWithTotalCountRequest): Promise<SearchWorkitemWithTotalCountResponse>;
+    SyncUserToRdc(query: SyncUserToRdcRequest): Promise<SyncUserToRdcResponse>;
 }
 export default RDC;

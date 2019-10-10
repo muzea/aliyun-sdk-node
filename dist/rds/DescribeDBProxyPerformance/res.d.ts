@@ -1,0 +1,3 @@
+interface DescribeDBProxyPerformanceResponse {
+}
+export { DescribeDBProxyPerformanceResponse };

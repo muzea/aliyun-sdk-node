@@ -1,0 +1,3 @@
+interface RollbackGtmRecoveryPlanResponse {
+}
+export { RollbackGtmRecoveryPlanResponse };

@@ -1,0 +1,3 @@
+interface DescribePortRulePageResponse {
+}
+export { DescribePortRulePageResponse };

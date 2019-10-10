@@ -1,0 +1,3 @@
+interface DescribePayInfoResponse {
+}
+export { DescribePayInfoResponse };

@@ -1,0 +1,3 @@
+interface GetOpLogResponse {
+}
+export { GetOpLogResponse };

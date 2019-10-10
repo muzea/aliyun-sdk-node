@@ -1,0 +1,3 @@
+interface DoIotSetRemindConfigResponse {
+}
+export { DoIotSetRemindConfigResponse };

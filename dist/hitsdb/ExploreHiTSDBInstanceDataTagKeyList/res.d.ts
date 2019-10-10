@@ -1,0 +1,3 @@
+interface ExploreHiTSDBInstanceDataTagKeyListResponse {
+}
+export { ExploreHiTSDBInstanceDataTagKeyListResponse };

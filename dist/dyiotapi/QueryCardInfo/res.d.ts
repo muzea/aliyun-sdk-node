@@ -1,0 +1,3 @@
+interface QueryCardInfoResponse {
+}
+export { QueryCardInfoResponse };

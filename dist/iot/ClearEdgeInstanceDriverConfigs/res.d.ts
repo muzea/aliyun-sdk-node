@@ -1,0 +1,3 @@
+interface ClearEdgeInstanceDriverConfigsResponse {
+}
+export { ClearEdgeInstanceDriverConfigsResponse };

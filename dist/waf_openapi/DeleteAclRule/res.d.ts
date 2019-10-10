@@ -1,0 +1,3 @@
+interface DeleteAclRuleResponse {
+}
+export { DeleteAclRuleResponse };

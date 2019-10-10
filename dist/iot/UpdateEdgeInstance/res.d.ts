@@ -1,0 +1,3 @@
+interface UpdateEdgeInstanceResponse {
+}
+export { UpdateEdgeInstanceResponse };

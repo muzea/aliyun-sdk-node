@@ -1,0 +1,3 @@
+interface UpdateGtmRecoveryPlanResponse {
+}
+export { UpdateGtmRecoveryPlanResponse };

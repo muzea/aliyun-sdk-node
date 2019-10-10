@@ -1,0 +1,3 @@
+interface FindVersionMessagesResponse {
+}
+export { FindVersionMessagesResponse };

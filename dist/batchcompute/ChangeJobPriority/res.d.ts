@@ -1,0 +1,3 @@
+interface ChangeJobPriorityResponse {
+}
+export { ChangeJobPriorityResponse };

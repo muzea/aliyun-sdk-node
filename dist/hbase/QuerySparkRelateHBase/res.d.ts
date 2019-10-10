@@ -1,0 +1,3 @@
+interface QuerySparkRelateHBaseResponse {
+}
+export { QuerySparkRelateHBaseResponse };

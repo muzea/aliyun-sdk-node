@@ -1,0 +1,3 @@
+interface QueryMessageResponse {
+}
+export { QueryMessageResponse };

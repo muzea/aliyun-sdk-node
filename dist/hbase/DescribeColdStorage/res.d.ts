@@ -1,0 +1,3 @@
+interface DescribeColdStorageResponse {
+}
+export { DescribeColdStorageResponse };

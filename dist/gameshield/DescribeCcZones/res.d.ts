@@ -1,0 +1,3 @@
+interface DescribeCcZonesResponse {
+}
+export { DescribeCcZonesResponse };

@@ -1,0 +1,3 @@
+interface GetBucketLocationResponse {
+}
+export { GetBucketLocationResponse };

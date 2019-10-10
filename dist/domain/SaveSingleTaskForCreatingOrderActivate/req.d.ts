@@ -1,0 +1,36 @@
+interface SaveSingleTaskForCreatingOrderActivateRequest {
+    "RegionId"?: string;
+    "DomainName": string;
+    "ZhRegistrantName"?: string;
+    "Lang"?: string;
+    "SubscriptionDuration"?: number;
+    "RegistrantProfileId"?: number;
+    "EnableDomainProxy"?: boolean;
+    "PermitPremiumActivation"?: boolean;
+    "AliyunDns"?: boolean;
+    "Dns1"?: string;
+    "UserClientIp"?: string;
+    "ZhCity"?: string;
+    "ZhRegistrantOrganization"?: string;
+    "Country"?: string;
+    "Dns2"?: string;
+    "ZhProvince"?: string;
+    "ZhAddress"?: string;
+    "City"?: string;
+    "RegistrantOrganization"?: string;
+    "RegistrantName"?: string;
+    "Province"?: string;
+    "Address"?: string;
+    "Email"?: string;
+    "PostalCode"?: string;
+    "TelArea"?: string;
+    "Telephone"?: string;
+    "TelExt"?: string;
+    "RegistrantType"?: string;
+    "TrademarkDomainActivation"?: boolean;
+    "CouponNo"?: string;
+    "UseCoupon"?: boolean;
+    "PromotionNo"?: string;
+    "UsePromotion"?: boolean;
+}
+export { SaveSingleTaskForCreatingOrderActivateRequest };

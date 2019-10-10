@@ -1,0 +1,3 @@
+interface DescribeTemplateResponse {
+}
+export { DescribeTemplateResponse };

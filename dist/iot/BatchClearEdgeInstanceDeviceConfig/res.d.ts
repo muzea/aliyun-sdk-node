@@ -1,0 +1,3 @@
+interface BatchClearEdgeInstanceDeviceConfigResponse {
+}
+export { BatchClearEdgeInstanceDeviceConfigResponse };

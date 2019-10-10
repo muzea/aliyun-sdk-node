@@ -1,0 +1,3 @@
+interface ModifyDefenseThresholdResponse {
+}
+export { ModifyDefenseThresholdResponse };

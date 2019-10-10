@@ -1,0 +1,3 @@
+interface GetUserLicenseResponse {
+}
+export { GetUserLicenseResponse };

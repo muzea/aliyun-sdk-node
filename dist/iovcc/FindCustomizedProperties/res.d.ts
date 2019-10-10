@@ -1,0 +1,3 @@
+interface FindCustomizedPropertiesResponse {
+}
+export { FindCustomizedPropertiesResponse };

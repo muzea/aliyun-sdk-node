@@ -1,0 +1,3 @@
+interface DescribeDcdnIpaUserDomainsResponse {
+}
+export { DescribeDcdnIpaUserDomainsResponse };

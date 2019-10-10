@@ -1,0 +1,3 @@
+interface StopReplicationJobResponse {
+}
+export { StopReplicationJobResponse };

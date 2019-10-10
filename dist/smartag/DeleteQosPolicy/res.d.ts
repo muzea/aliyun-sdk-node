@@ -1,0 +1,3 @@
+interface DeleteQosPolicyResponse {
+}
+export { DeleteQosPolicyResponse };

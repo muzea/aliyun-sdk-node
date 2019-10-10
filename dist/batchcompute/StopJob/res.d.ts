@@ -1,0 +1,3 @@
+interface StopJobResponse {
+}
+export { StopJobResponse };

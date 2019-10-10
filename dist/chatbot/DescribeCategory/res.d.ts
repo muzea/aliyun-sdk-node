@@ -1,0 +1,3 @@
+interface DescribeCategoryResponse {
+}
+export { DescribeCategoryResponse };

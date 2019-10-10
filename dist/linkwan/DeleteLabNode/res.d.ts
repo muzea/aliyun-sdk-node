@@ -1,0 +1,3 @@
+interface DeleteLabNodeResponse {
+}
+export { DeleteLabNodeResponse };

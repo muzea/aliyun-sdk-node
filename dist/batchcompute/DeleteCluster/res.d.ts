@@ -1,0 +1,3 @@
+interface DeleteClusterResponse {
+}
+export { DeleteClusterResponse };

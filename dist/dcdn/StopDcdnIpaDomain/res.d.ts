@@ -1,0 +1,3 @@
+interface StopDcdnIpaDomainResponse {
+}
+export { StopDcdnIpaDomainResponse };

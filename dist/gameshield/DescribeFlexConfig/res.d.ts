@@ -1,0 +1,3 @@
+interface DescribeFlexConfigResponse {
+}
+export { DescribeFlexConfigResponse };

@@ -1,138 +1,55 @@
+import { DeleteFlowRequest } from "./DeleteFlow/req";
+import { DeleteFlowResponse } from "./DeleteFlow/res";
+import { GetVersionRequest } from "./GetVersion/req";
+import { GetVersionResponse } from "./GetVersion/res";
+import { EnableFlowRequest } from "./EnableFlow/req";
+import { EnableFlowResponse } from "./EnableFlow/res";
+import { ListVersionsRequest } from "./ListVersions/req";
+import { ListVersionsResponse } from "./ListVersions/res";
+import { ListFlowsRequest } from "./ListFlows/req";
+import { ListFlowsResponse } from "./ListFlows/res";
+import { UpdateFlowRequest } from "./UpdateFlow/req";
+import { UpdateFlowResponse } from "./UpdateFlow/res";
+import { DisableFlowRequest } from "./DisableFlow/req";
+import { DisableFlowResponse } from "./DisableFlow/res";
+import { CreateFlowRequest } from "./CreateFlow/req";
+import { CreateFlowResponse } from "./CreateFlow/res";
+import { CloneFlowRequest } from "./CloneFlow/req";
+import { CloneFlowResponse } from "./CloneFlow/res";
+import { GetFlowRequest } from "./GetFlow/req";
+import { GetFlowResponse } from "./GetFlow/res";
+import { InvokeFlowRequest } from "./InvokeFlow/req";
+import { InvokeFlowResponse } from "./InvokeFlow/res";
+
 interface COMPOSER {
     /**
     * 删除一个工作流编排实例
-    */ DeleteFlow(query: {
-        "RegionId"?: string;
-        /**
-        * 需要删除的工作流编排实例 ID
-        * @example `lc-abcdefg`
-        */ "FlowId": string;
-    }): Promise<{}>;
+    */ DeleteFlow(query: DeleteFlowRequest): Promise<DeleteFlowResponse>;
     /**
     * 查询某个工作流的某个特定版本信息
-    */ GetVersion(query: {
-        "RegionId"?: string;
-        /**
-        * 需要查询的工作流编排实例的 ID
-        * @example `lc-abcdefg`
-        */ "FlowId": string;
-        /**
-        * 需要查询的版本
-        * @example `10`
-        */ "VersionId": number;
-    }): Promise<{}>;
+    */ GetVersion(query: GetVersionRequest): Promise<GetVersionResponse>;
     /**
     * 启用一个工作流编排实例
-    */ EnableFlow(query: {
-        "RegionId"?: string;
-        /**
-        * 需要启用的工作流编排实例的 ID
-        * @example `lc-abcdefg`
-        */ "FlowId": string;
-    }): Promise<{}>;
+    */ EnableFlow(query: EnableFlowRequest): Promise<EnableFlowResponse>;
     /**
     * 查询某个工作流编排实例的版本列表
-    */ ListVersions(query: {
-        "RegionId"?: string;
-        /**
-        * 需要查询的工作流编排实例的 ID
-        * @example `lc-abcdefg`
-        */ "FlowId": string;
-        /**
-        * 当前页码
-        * @example `1`
-        */ "PageNumber"?: number;
-        /**
-        * 每页返回的数量
-        * @example `10`
-        */ "PageSize"?: number;
-    }): Promise<{}>;
+    */ ListVersions(query: ListVersionsRequest): Promise<ListVersionsResponse>;
     /**
     * 查询工作流编排实例列表
-    */ ListFlows(query: {
-        "RegionId"?: string;
-        /**
-        * 每页返回的数量
-        * @example `10`
-        */ "PageSize"?: number;
-        /**
-        * 当前页码
-        * @example `1`
-        */ "PageNumber"?: number;
-        /**
-        * 过滤特定的流程名称
-        * @example `test`
-        */ "FlowName"?: string;
-    }): Promise<{}>;
+    */ ListFlows(query: ListFlowsRequest): Promise<ListFlowsResponse>;
     /**
     * 更新一个工作流编排实例的信息
-    */ UpdateFlow(query: {
-        "RegionId"?: string;
-        /**
-        * 需要更新的工作流编排实例的 ID
-        * @example `lc-abcdefg`
-        */ "FlowId": string;
-        /**
-        * 更新后的名称
-        * @example `test`
-        */ "FlowName"?: string;
-        /**
-        * 更新后的描述
-        * @example `这是一个工作流的描述`
-        */ "FlowDescription"?: string;
-        /**
-        * 更新后的工作流定义
-        * @example `{\"schemaVersion\":\"2018-12-12\",\"actions\":{},\"version\":\"1.0.0\",\"triggers\":{}}`
-        */ "Definition"?: string;
-    }): Promise<{}>;
+    */ UpdateFlow(query: UpdateFlowRequest): Promise<UpdateFlowResponse>;
     /**
     * 禁用一个工作流编排实例
-    */ DisableFlow(query: {
-        "RegionId"?: string;
-        /**
-        * @example `lc-abcdefg`
-        */ "FlowId": string;
-    }): Promise<{}>;
+    */ DisableFlow(query: DisableFlowRequest): Promise<DisableFlowResponse>;
     /**
     * 创建一个工作流编排实例
-    */ CreateFlow(query: {
-        "RegionId"?: string;
-        /**
-        * 工作流编排实例的名称
-        * @example `test`
-        */ "FlowName": string;
-        /**
-        * 工作流编排实例的描述
-        * @example `这是一个工作流`
-        */ "FlowDescription"?: string;
-        /**
-        * 工作流定义，需要将 JSON 格式化为 string
-        * @example `{\"schemaVersion\":\"2018-12-12\",\"actions\":{},\"version\":\"1.0.0\",\"triggers\":{}}`
-        */ "Definition"?: string;
-    }): Promise<{}>;
+    */ CreateFlow(query: CreateFlowRequest): Promise<CreateFlowResponse>;
     /**
     * 克隆一个工作流编排实例
-    */ CloneFlow(query: {
-        "RegionId"?: string;
-        /**
-        * 需要克隆的工作流编排实例的 ID
-        * @example `lc-abcdefg`
-        */ "FlowId": string;
-        /**
-        * 需要克隆的版本，如果不指定，则默认克隆最新版本
-        * @example `10`
-        */ "VersionId"?: number;
-    }): Promise<{}>;
-    GetFlow(query: {
-        "RegionId"?: string;
-        "FlowId": string;
-    }): Promise<{}>;
-    InvokeFlow(query: {
-        "RegionId"?: string;
-        "FlowId": string;
-        "Parameters"?: string;
-        "Data"?: string;
-        "ClientToken"?: string;
-    }): Promise<{}>;
+    */ CloneFlow(query: CloneFlowRequest): Promise<CloneFlowResponse>;
+    GetFlow(query: GetFlowRequest): Promise<GetFlowResponse>;
+    InvokeFlow(query: InvokeFlowRequest): Promise<InvokeFlowResponse>;
 }
 export default COMPOSER;

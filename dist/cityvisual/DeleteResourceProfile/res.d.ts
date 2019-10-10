@@ -1,0 +1,3 @@
+interface DeleteResourceProfileResponse {
+}
+export { DeleteResourceProfileResponse };

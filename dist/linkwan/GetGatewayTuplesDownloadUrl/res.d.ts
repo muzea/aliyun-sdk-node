@@ -1,0 +1,3 @@
+interface GetGatewayTuplesDownloadUrlResponse {
+}
+export { GetGatewayTuplesDownloadUrlResponse };

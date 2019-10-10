@@ -1,0 +1,3 @@
+interface ListDeviceTypesResponse {
+}
+export { ListDeviceTypesResponse };

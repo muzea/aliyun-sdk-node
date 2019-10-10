@@ -1,0 +1,3 @@
+interface DescribeDNSMapResponse {
+}
+export { DescribeDNSMapResponse };

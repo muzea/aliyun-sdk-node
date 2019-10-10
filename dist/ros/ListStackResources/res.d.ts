@@ -1,0 +1,3 @@
+interface ListStackResourcesResponse {
+}
+export { ListStackResourcesResponse };
