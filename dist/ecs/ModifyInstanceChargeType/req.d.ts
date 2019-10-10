@@ -15,11 +15,15 @@ interface ModifyInstanceChargeTypeRequest {
     * @example `155780923770`
     */ "OwnerId"?: number;
     /**
+    * 包年包月续费时长。一旦指定了DedicatedHostId，则取值范围不能超过专有宿主机的订阅时长。取值范围：
     * - `PeriodUnit=Week`时，`Period`取值：{“1”, “2”, “3”, “4”}
+    * - `PeriodUnit=Month`时，`Period`取值：{ “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}
     * @example `2`
     */ "Period"?: number;
     /**
+    * 续费时长的时间单位，即参数`Period`的单位。取值范围：
     * - Week
+    * - Month（默认）
     * @example `month`
     */ "PeriodUnit"?: string;
     /**

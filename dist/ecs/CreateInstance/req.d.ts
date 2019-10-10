@@ -27,7 +27,9 @@ interface CreateInstanceRequest {
     * @example `yk201812061032`
     */ "InstanceName"?: string;
     /**
+    * 网络计费类型。取值范围：
     * - PayByBandwidth：按固定带宽计费
+    * - PayByTraffic（默认）：按使用流量计费
     * @example `PayByTraffic`
     */ "InternetChargeType"?: string;
     /**
@@ -37,7 +39,9 @@ interface CreateInstanceRequest {
     * @example `true`
     */ "AutoRenew"?: boolean;
     /**
+    * 每次自动续费的时长，当参数AutoRenew取值True时为必填。
     * PeriodUnit为Week时，AutoRenewPeriod取值{“1”, “2”, “3”}
+    * PeriodUnit为Month时，AutoRenewPeriod取值{“1”, “2”, “3”, “6”, “12”}
     * @example `2`
     */ "AutoRenewPeriod"?: number;
     /**
@@ -161,7 +165,9 @@ interface CreateInstanceRequest {
     * @example `PrePaid`
     */ "InstanceChargeType"?: string;
     /**
+    * 购买资源的时长，单位为：月。当参数`InstanceChargeType`取值为`PrePaid`时才生效且为必选值。一旦指定了`DedicatedHostId`，则取值范围不能超过专有宿主机的订阅时长。取值范围：
     * PeriodUnit为Week时，Period取值：{“1”, “2”, “3”, “4”}
+    * PeriodUnit为Month时，Period取值：{ “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}
     * @example `1`
     */ "Period"?: number;
     /**

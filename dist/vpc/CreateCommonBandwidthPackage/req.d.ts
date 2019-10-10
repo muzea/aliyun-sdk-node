@@ -35,7 +35,9 @@ interface CreateCommonBandwidthPackageRequest {
     * @example `rg-acfmxazdjdhd****`
     */ "ResourceGroupId"?: string;
     /**
+    * 共享带宽的保底百分比，取值为**20**，即保底百分比的范围是20%。
     * 当**InternetChargeType**取值**PayBy95**时需指定此参数。
+    * >仅中国站支持此参数。
     * @example `20`
     */ "Ratio"?: number;
     /**
@@ -43,6 +45,8 @@ interface CreateCommonBandwidthPackageRequest {
     * - **PayByBandwidth**（默认值）：按带宽计费。
     * - **PayBy95**：按增强型95计费。
     * 如需**PayByTraffic**计费方式，请提交工单。
+    *
+    *
     * @example `PayByTraffic`
     */ "InternetChargeType"?: string;
 }

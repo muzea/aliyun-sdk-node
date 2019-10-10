@@ -82,7 +82,9 @@ interface RunInstancesRequest {
     * @example `cn-hangzhou-g`
     */ "ZoneId"?: string;
     /**
+    * 网络计费类型。取值范围：
     * - PayByBandwidth：按固定带宽计费
+    * - PayByTraffic（默认）：按使用流量计费
     * @example `PayByTraffic`
     */ "InternetChargeType"?: string;
     /**
@@ -241,7 +243,11 @@ interface RunInstancesRequest {
     * @example `1`
     */ "AutoRenewPeriod"?: number;
     /**
+    * 实例的付费方式。取值范围：
+    * -   PrePaid：包年包月。
+    * -   PostPaid（默认）：按量付费。
     * 选择包年包月时，您必须确认自己的账号支持余额支付或者信用支付，否则将返回`InvalidPayMethod`的错误提示。
+    *
     * @example `PrePaid`
     */ "InstanceChargeType"?: string;
     /**

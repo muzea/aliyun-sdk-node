@@ -120,10 +120,19 @@ function handleDescription(description) {
   let list = description.split('\n').filter(it => it.length);
   const hasChinaProps = list.some(it => it.includes('props') && it.includes('china'));
   if (hasChinaProps) {
-    list = list.filter(it => it.includes('props') && it.includes('china'));
     list = list.map(it => {
       const $ = cheerio.load(it);
-      return $(':root').text();
+      const elements = $('*');
+      let i = 0;
+      const end = elements.length;
+      while(i < end) {
+        const element = elements[i];
+        if (element.tagName.startsWith('props') && !element.tagName.includes('china')) {
+          $(element).text('');
+        }
+        ++i;
+      }
+      return $.text();
     });
   }
   return list.map(it => `\n* ${it}`).join('');

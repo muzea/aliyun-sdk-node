@@ -18,6 +18,8 @@ interface ModifyInstanceNetworkSpecRequest {
     * @example `10`
     */ "InternetMaxBandwidthIn"?: number;
     /**
+    * 转换网络计费方式。取值范围：
+    * - PayByTraffic：按使用流量计费
     * - PayByBandwidth：按固定带宽计费
     * @example `PayByTraffic`
     */ "NetworkChargeType"?: string;
@@ -34,7 +36,12 @@ interface ModifyInstanceNetworkSpecRequest {
     * @example `2017-12-06T22Z`
     */ "EndTime"?: string;
     /**
+    * 是否自动支付。取值范围：
+    * - true：变更带宽配置后，自动扣费。当您将参数Autopay置为true时，您需要确保账户余额充足，如果账户余额不足会生成异常订单，此订单暂时不支持通过ECS控制台支付，只能作废。
     * - false：变更带宽配置后，只生成订单不扣费。如果您的支付方式余额不足，可以将参数Autopay置为false，即取消自动支付，此时调用该接口会生成正常的未支付订单，此订单可登录[ECS管理控制台](https://ecs.console.aliyun.com)支付。
+    * -
+    * -
+    * 默认值：true
     * @example `true`
     */ "AutoPay"?: boolean;
     /**

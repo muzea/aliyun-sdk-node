@@ -40,6 +40,8 @@ interface CreateBandwidthPackageRequest {
     * @example `cn-shanghai-a`
     */ "Zone"?: string;
     /**
+    * 网络计费类型，取值：
+    * - PayByTraffic：按流量计费
     * - PayByBandwidth：按带宽计费
     * @example `PayByBandwidth`
     */ "InternetChargeType"?: string;

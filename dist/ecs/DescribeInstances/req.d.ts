@@ -71,6 +71,8 @@ interface DescribeInstancesRequest {
     * @example `PostPaid`
     */ "InstanceChargeType"?: string;
     /**
+    * 网络计费方式。取值范围：
+    * - PayByTraffic：按流量计费
     * - PayByBandwidth：按带宽计费
     * @example `PayByTraffic`
     */ "InternetChargeType"?: string;

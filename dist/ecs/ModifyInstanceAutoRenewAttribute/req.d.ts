@@ -13,6 +13,9 @@ interface ModifyInstanceAutoRenewAttributeRequest {
     * @example `155780923770`
     */ "OwnerId"?: number;
     /**
+    * 设置实例自动续费时长。
+    * - `PeriodUnit`为`year`（年）时，`Duration`的取值范围为：{"1", "2", "3"}
+    * - `PeriodUnit`为`month`（月）时，`Duration`的取值范围为：{"1", "2", "3", "6", "12"}
     * - `PeriodUnit`为`week`（周）时，`Duration`的取值范围为：{"1", "2", "3", "4"}
     * @example `2`
     */ "Duration"?: number;
@@ -28,7 +31,10 @@ interface ModifyInstanceAutoRenewAttributeRequest {
     * @example `AutoRenewal`
     */ "RenewalStatus"?: string;
     /**
+    * 续费时长的时间单位，即参数`Period`的单位。取值范围：
     * - week
+    * - month（默认）
+    * - year
     * @example `week`
     */ "PeriodUnit"?: string;
 }

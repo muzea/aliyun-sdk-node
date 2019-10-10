@@ -81,6 +81,10 @@ interface DescribeEipAddressesRequest {
     * 弹性公网IP的计费方式，取值：
     * **PostPaid**：按量计费。
     * **PrePaid**：包年包月。
+    *
+    *
+    *
+    *
     * @example `PostPaid`
     */ "ChargeType"?: string;
 }

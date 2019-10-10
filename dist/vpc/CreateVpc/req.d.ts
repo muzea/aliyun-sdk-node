@@ -32,6 +32,7 @@ interface CreateVpcRequest {
     * @example `This is my first Vpc.`
     */ "Description"?: string;
     /**
+    * 资源组ID。
     * 关于资源组的更多信息，请参见[什么是资源组](~~94475~~)。
     * @example `rg-acfmxazb4ph6aiy****`
     */ "ResourceGroupId"?: string;

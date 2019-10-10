@@ -42,7 +42,10 @@ interface DescribePriceRequest {
     * @example `vpc`
     */ "InstanceNetworkType"?: string;
     /**
+    * 网络带宽计费方式。取值范围：
+    * - PayByBandwidth：按固定带宽计费
     * - PayByTraffic：按带宽流量计费
+    * 默认值：PayByTraffic
     * @example `PayByTraffic`
     */ "InternetChargeType"?: string;
     /**
@@ -182,6 +185,10 @@ interface DescribePriceRequest {
     * @example `1`
     */ "Period"?: number;
     /**
+    * 查询云服务器ECS不同计费周期的价格。取值范围：
+    * - Month：按月计费的价格单位
+    * - Year：按年计费的价格单位
+    * - Hour（默认）：按小时计费的价格单位
     * - Week：按周计费的价格单位
     * @example `Year`
     */ "PriceUnit"?: string;

@@ -77,6 +77,7 @@ interface AllocateDedicatedHostsRequest {
     */ "Period"?: number;
     /**
     * 购买专有宿主机的时长。取值范围：Week | Month（默认）| Year
+    *
     * @example `Month`
     */ "PeriodUnit"?: string;
     /**

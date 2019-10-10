@@ -10,7 +10,10 @@ interface ModifyLoadBalancerInternetSpecRequest {
     */ "LoadBalancerId": string;
     "OwnerId"?: number;
     /**
+    * 公网类型实例的付费方式。取值：
     * - paybybandwidth：按带宽计费。
+    * - paybytraffic：按流量计费 。
+    * > 如果不指定该参数，则表示保持原有的计费方式。
     * @example `paybytraffic`
     */ "InternetChargeType"?: string;
     /**

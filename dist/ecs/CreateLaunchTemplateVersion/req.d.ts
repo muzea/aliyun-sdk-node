@@ -106,7 +106,11 @@ interface CreateLaunchTemplateVersionRequest {
     */ "IoOptimized"?: string;
     "NetworkInterface"?: string[];
     /**
+    * 实例的计费方式。取值范围：
     * - PrePaid：包年包月。选择该类计费方式时，您必须确认自己的账号支持余额支付和信用支付，否则将返回`InvalidPayMethod`的错误提示。
+    * -
+    * -
+    * - PostPaid：按量付费。
     * @example `PrePaid`
     */ "InstanceChargeType"?: string;
     /**
@@ -116,7 +120,9 @@ interface CreateLaunchTemplateVersionRequest {
     * @example `1`
     */ "Period"?: number;
     /**
+    * 网络计费方式。取值范围：
     * - PayByBandwidth：按固定带宽计费
+    * - PayByTraffic：按使用流量计费
     * @example `PayByTraffic`
     */ "InternetChargeType"?: string;
     /**

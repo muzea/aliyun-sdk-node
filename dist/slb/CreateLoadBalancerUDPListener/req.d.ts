@@ -9,6 +9,9 @@ interface CreateLoadBalancerUDPListenerRequest {
     * @example `80`
     */ "ListenerPort": number;
     /**
+    * 监听的带宽峰值。
+    * 取值：**-1|1-5120**。
+    * * **-1**：对于按流量计费的公网负载均衡实例，可以将带宽峰值设置为**-1**，即不限制带宽峰值。
     * * **1-5120**（Mbps）：对于按带宽计费的公网负载均衡实例，可以设置每个监听的带宽峰值，但所有监听的带宽峰值之和不能超过实例的带宽峰值。详情参见[共享实例带宽](~~57846~~)。
     * @example `34`
     */ "Bandwidth": number;

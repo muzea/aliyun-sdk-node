@@ -15,6 +15,8 @@ interface AllocateEipAddressRequest {
     * 当**PricingCycle**取值**Month**时，**Period**取值范围为**1~9**。
     * 当**PricingCycle**取值**Year**时，**Period**取值范围为**1~3**。
     * 如果**InstanceChargeType**参数的值为**PrePaid**时，该参数必选。
+    *
+    *
     * @example `1`
     */ "Period"?: number;
     /**
@@ -33,21 +35,29 @@ interface AllocateEipAddressRequest {
     * **false**：不开启自动付费，生成订单后需要到订单中心完成支付。
     * **true**：开启自动付费，自动支付订单。
     * 当**InstanceChargeType**参数的值为**PrePaid**时，该参数必选；当**InstanceChargeType**参数的值为**PostPaid**时，该参数可不填。
+    *
+    *
     * @example `false`
     */ "AutoPay"?: boolean;
     /**
     * 包年包月的计费周期，取值：
     * **Month**（默认值）：按月付费。
     * **Year**：按年付费。
+    *
     * 当**InstanceChargeType**参数的值为**PrePaid**时，该参数必选；当**InstanceChargeType**参数的值为**PostPaid**时，该参数可不填。
+    *
+    *
     * @example `Month`
     */ "PricingCycle"?: string;
     /**
     * EIP的计费方式，取值：
+    *
     * **PrePaid**：包年包月。
     * **PostPaid**（默认值）：按量计费。
     * 当**InstanceChargeType**取值为**PrePaid**时，**InternetChargeType**必须取值**PayByBandwidth**；当**InstanceChargeType**取值为**PostPaid**时，**InternetChargeType**可取值**PayByBandwidth**或**PayByTraffic**。
     * 包年包月和按量计费的详细信息，请参见[包年包月](~~27767~~)和[按量计费](~~72142~~)。
+    *
+    *
     * @example `PostPaid`
     */ "InstanceChargeType"?: string;
     /**
@@ -56,6 +66,8 @@ interface AllocateEipAddressRequest {
     * **PayByTraffic**：按流量计费。
     * 当**InstanceChargeType**取值为**PrePaid**时，**InternetChargeType**必须取值**PayByBandwidth**。详细信息，请参见[包年包月](~~27767~~)。
     * 当**InstanceChargeType**取值为**PostPaid**时，**InternetChargeType**可取值**PayByBandwidth**或**PayByTraffic**。详细信息，请参见[按使用流量](~~72142~~)和[按固定带宽](~~72142~~)。
+    *
+    *
     * @example `PayByTraffic`
     */ "InternetChargeType"?: string;
     /**

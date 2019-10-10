@@ -22,7 +22,13 @@ interface CreateLaunchTemplateRequest {
     * @example `win2008r2_64_ent_sp1_en-us_40G_alibase_20170915.vhd`
     */ "ImageId"?: string;
     /**
+    * 镜像来源。取值范围：
+    * - system：阿里云提供的公共镜像。
+    * - self：您创建的自定义镜像。
+    * - others：其他阿里云用户共享给您的镜像。
+    * -
     * - marketplace：[镜像市场](https://market.aliyun.com/)提供的镜像。您查询到的云市场镜像可以直接使用，无需提前订阅。您需要自行留意云市场镜像的收费详情。
+    * 默认值：空，空表示返回取值为system、self以及others的结果。
     * @example `system`
     */ "ImageOwnerAlias"?: string;
     "PasswordInherit"?: boolean;
@@ -102,7 +108,11 @@ interface CreateLaunchTemplateRequest {
     */ "IoOptimized"?: string;
     "NetworkInterface"?: string[];
     /**
+    * 实例的计费方式。取值范围：
     * - PrePaid：包年包月。选择该类付费方式时，您必须确认自己的账号支持余额支付和信用支付，否则将返回`InvalidPayMethod`的错误提示。
+    * -
+    * -
+    * - PostPaid：按量付费。
     * @example `PrePaid`
     */ "InstanceChargeType"?: string;
     /**
@@ -112,7 +122,9 @@ interface CreateLaunchTemplateRequest {
     * @example `1`
     */ "Period"?: number;
     /**
+    * 网络计费方式。取值范围：
     * - PayByBandwidth：按固定带宽计费
+    * - PayByTraffic：按使用流量计费
     * @example `PayByTraffic`
     */ "InternetChargeType"?: string;
     /**

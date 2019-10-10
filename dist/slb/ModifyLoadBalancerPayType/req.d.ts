@@ -12,6 +12,8 @@ interface ModifyLoadBalancerPayTypeRequest {
     "access_key_id"?: string;
     "Tags"?: string;
     /**
+    * 实例的计费类型，取值：
+    * * **PayOnDemand**：按量付费。
     * * **PrePay**：预付费。
     * @example `PrePay`
     */ "PayType"?: string;

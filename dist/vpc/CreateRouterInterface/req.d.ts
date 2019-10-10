@@ -103,7 +103,9 @@ interface CreateRouterInterfaceRequest {
     * @example `3`
     */ "Period"?: number;
     /**
+    * 路由器接口的付费方式。取值：
     * - **PrePaid**：预付费
+    * - **PostPaid（默认值）**：后付费。
     * @example `PrePaid`
     */ "InstanceChargeType"?: string;
     /**

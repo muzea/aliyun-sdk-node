@@ -12,7 +12,9 @@ interface CreateLoadBalancerRequest {
     * @example `internet`
     */ "AddressType"?: string;
     /**
+    * 公网类型实例的付费方式。取值：
     * * paybybandwidth：按带宽计费。
+    * * paybytraffic：按流量计费（默认值）。
     * @example `paybytraffic`
     */ "InternetChargeType"?: string;
     /**
@@ -69,6 +71,8 @@ interface CreateLoadBalancerRequest {
     * @example `rg-atstuj3rtopt****`
     */ "ResourceGroupId"?: string;
     /**
+    * 实例的计费类型，取值：
+    * * **PayOnDemand**：按量付费。
     * * **PrePay**：预付费。
     * @example `PayOnDemand`
     */ "PayType"?: string;

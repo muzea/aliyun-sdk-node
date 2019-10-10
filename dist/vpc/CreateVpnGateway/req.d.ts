@@ -20,7 +20,10 @@ interface CreateVpnGatewayRequest {
     * @example `MYVPN`
     */ "Name"?: string;
     /**
+    * VPN网关的计费方式，取值：
     * **PREPAY**：包年包月。
+    *
+    *
     * @example `PREPAY`
     */ "InstanceChargeType"?: string;
     /**

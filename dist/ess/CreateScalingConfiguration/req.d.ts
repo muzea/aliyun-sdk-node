@@ -48,7 +48,9 @@ interface CreateScalingConfigurationRequest {
     * @example `optimized`
     */ "IoOptimized"?: string;
     /**
+    * 网络计费类型，取值范围：
     * - PayByBandwidth：按带宽计费。此时InternetMaxBandwidthOut即为所选的固定带宽值。
+    * - PayByTraffic：按流量计费。此时InternetMaxBandwidthOut只是一个带宽上限，计费以实际产生的网络流量为依据。
     * 如果未指定该参数，经典网络下默认值为PayByBandwidth，专有网络VPC下默认值为PayByTraffic。
     * @example `PayByTraffic`
     */ "InternetChargeType"?: string;
@@ -58,7 +60,9 @@ interface CreateScalingConfigurationRequest {
     * @example `100`
     */ "InternetMaxBandwidthIn"?: number;
     /**
+    * 公网出带宽最大值，单位为Mbps (Mega bit per second)，取值范围：
     * - 按带宽计费：0~100，如果您没有指定该参数，则出带宽将自动被设置为0Mbps。
+    * - 按流量计费：0~100，如果您没有指定该参数，则会出现报错。
     * @example `50`
     */ "InternetMaxBandwidthOut"?: number;
     /**
