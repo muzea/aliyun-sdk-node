@@ -1,3 +1,0 @@
-interface DescribeCcWhiteListResponse {
-}
-export { DescribeCcWhiteListResponse };

@@ -1,5 +1,7 @@
-interface GetCurrentModeRequest {
-    "RegionId"?: string;
+export interface GetCurrentModeRequest {
+    /**
+     * 版本号。
+     * @example `2017-04-11`
+     */
     "Version": string;
 }
-export { GetCurrentModeRequest };

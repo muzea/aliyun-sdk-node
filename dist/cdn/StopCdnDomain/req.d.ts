@@ -1,9 +1,7 @@
-interface StopCdnDomainRequest {
-    "RegionId"?: string;
+export interface StopCdnDomainRequest {
     /**
-    * 需要接入CDN的域名。
-    * @example `www.yourdomain.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 加速域名，仅支持停用单个。
+     * @example `example.com`
+     */
+    "DomainName": string;
 }
-export { StopCdnDomainRequest };

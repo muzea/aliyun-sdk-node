@@ -1,7 +1,6 @@
-interface ModifyRouterInterfaceAttributeRequest {
+export interface ModifyRouterInterfaceAttributeRequest {
     "RegionId": string;
     "RouterInterfaceId": string;
-    "OwnerId"?: number;
     "Name"?: string;
     "Description"?: string;
     "OppositeInterfaceId"?: string;
@@ -11,4 +10,3 @@ interface ModifyRouterInterfaceAttributeRequest {
     "HealthCheckSourceIp"?: string;
     "HealthCheckTargetIp"?: string;
 }
-export { ModifyRouterInterfaceAttributeRequest };

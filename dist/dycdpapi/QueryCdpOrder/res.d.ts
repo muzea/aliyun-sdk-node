@@ -1,3 +1,0 @@
-interface QueryCdpOrderResponse {
-}
-export { QueryCdpOrderResponse };

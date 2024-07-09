@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.DeleteIpv6EgressOnlyRuleResponse
 export interface DeleteIpv6EgressOnlyRuleResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `9DFEDBEE-E5AB-49E8-A2DC-CC114C67AF75`
+     */
+    RequestId: string;
 }
-

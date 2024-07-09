@@ -1,26 +1,43 @@
-interface ModifyVSwitchAttributeRequest {
+export interface ModifyVSwitchAttributeRequest {
     /**
-    * 交换机所属的地域ID。
-    * @example `cn-hangzhou`
-    */ "RegionId"?: string;
-    "OwnerId"?: number;
+     *  交换机的ID。
+     * @example `vsw-25nacdfvue4****`
+     */
+    "VSwitchId": string;
     /**
-    *  交换机的名称。  长度为 2-128个字符，必须以字母或中文开头，可包含数字，点号（.），下划线（_）和短横线（-）。但不能以`http:// `或`https://`开头。
-    * @example `VSwitch-1`
-    */ "VSwitchName"?: string;
+     * 交换机要修改的名称。
+     * 名称长度为1～128个字符，不能以`http://`或`https://`开头。
+     * @example `VSwitch-1`
+     */
+    "VSwitchName"?: string;
     /**
-    *  交换机的ID。
-    * @example `vsw-25naue4gz`
-    */ "VSwitchId": string;
+     * 交换机所属的地域ID。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。
+     * @example `cn-hangzhou`
+     */
+    "RegionId"?: string;
     /**
-    * 交换机的描述信息。
-    * 长度为 2-256个字符，必须以字母或中文开头，但不能以`http://` 或`https://`开头。
-    * @example `This is my vswitch.`
-    */ "Description"?: string;
+     * 交换机要修改的描述信息。
+     * 描述长度为1～256个字符，不能以`http://`或`https://`开头。
+     * @example `This is my vswitch.`
+     */
+    "Description"?: string;
     /**
-    * 交换机的IPv6网段，支持自定义IPv6网段的最后8位。取值：0-255（十进制）。
-    * 交换机的IPv6网段掩码默认为64 位。
-    * @example `0`
-    */ "Ipv6CidrBlock"?: number;
+     * 交换机IPv6网段的最后8比特位，取值：**0**~**255**。
+     * 该参数仅当交换机所属的VPC开通IPv6功能支持配置。
+     * @example `10`
+     */
+    "Ipv6CidrBlock"?: number;
+    /**
+     * 交换机是否开通IPv6功能。取值：
+     * - **true**：开通IPv6功能。
+     * - **false**（默认值）：未开通IPv6功能。
+     * @example `false`
+     */
+    "EnableIPv6"?: boolean;
+    /**
+     * 交换机所在VPC的IPv6网段。
+     * 该参数仅当VPC开通IPv6功能时支持配置。
+     * @example `2408:XXXX:312:3e00::/56`
+     */
+    "VpcIpv6CidrBlock"?: string;
 }
-export { ModifyVSwitchAttributeRequest };

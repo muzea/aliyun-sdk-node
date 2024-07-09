@@ -1,3 +1,0 @@
-interface ListAsyncTaskResponse {
-}
-export { ListAsyncTaskResponse };

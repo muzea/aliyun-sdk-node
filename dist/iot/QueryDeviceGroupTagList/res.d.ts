@@ -1,22 +1,41 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.GroupTagInfo
-export interface GroupTagInfo {
-	TagKey: string;
-	TagValue: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.DataInQueryDeviceGroupTagList
-export interface DataInQueryDeviceGroupTagList {
-	GroupTagInfo: GroupTagInfo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.QueryDeviceGroupTagListResponse
 export interface QueryDeviceGroupTagListResponse {
-	RequestId: string;
-	Success: boolean;
-	Code: string;
-	ErrorMessage: string;
-	Data: DataInQueryDeviceGroupTagList;
+    /**
+     * 调用失败时，返回的错误码。更多信息，请参见[错误码](~~87387~~)。
+     * @example `iot.system.SystemException`
+     */
+    Code: string;
+    /**
+     * 调用失败时，返回的出错信息。
+     * @example `系统异常`
+     */
+    ErrorMessage: string;
+    /**
+     * 阿里云为该请求生成的唯一标识符。
+     * @example `214154FF-9D47-4E3F-AAAD-F4CE67F41060`
+     */
+    RequestId: string;
+    /**
+     * 是否调用成功。
+     * - **true**：调用成功。
+     * - **false**：调用失败。
+     * @example `true`
+     */
+    Success: boolean;
+    Data: {
+        /**
+         * 调用成功时，返回的标签信息。请参见以下**GroupTagInfo**。
+         */
+        GroupTagInfo: {
+            /**
+             * 标签值。
+             * @example `bulb`
+             */
+            TagValue: string;
+            /**
+             * 标签键。
+             * @example `room1`
+             */
+            TagKey: string;
+        }[];
+    };
 }
-

@@ -1,19 +1,24 @@
-interface DescribeProjectMetaRequest {
-    "RegionId"?: string;
+export interface DescribeProjectMetaRequest {
     /**
-    * 根据标签过滤，格式为`[{"name":"标签名","value":"标签值"},{"name":"标签名","value":"标签值"}]​`。
-    * 支持的标签名包括product、groupFlag。
-    * product 标签值为产品英文名称。
-    * groupFlag含义为该产品是否支持应用分组，标签值为true或false​ 。
-    * @example `[{"groupFlag":true}]`
-    */ "Labels"?: string;
+     * 标签。根据标签过滤，标签为每个报警增加特殊标记。
+     * 目前仅支持按照产品过滤，即`name`为`product`的过滤方式，例如：{"name":"product","value":"ECS"}。
+     * >对于阿里云中云监控控制台的特殊标签，不建议您使用。
+     * @example `[{"name":"product","value":"ECS"}]`
+     */
+    "Labels"?: string;
     /**
-    * 分页参数，默认1。
-    * @example `1`
-    */ "PageNumber"?: number;
+     * 页码。
+     * 取值范围：1~100。
+     * 默认值：1。
+     * @example `1`
+     */
+    "PageNumber"?: number;
     /**
-    * 分页大小，默认30
-    * @example `30`
-    */ "PageSize"?: number;
+     * 分页大小。
+     * 取值范围：1~10000。
+     * 默认值：30。
+     * >目前阿里云未限制该参数，如果您需要获取所有结果，则将分页大小设置为较大的值即可。
+     * @example `30`
+     */
+    "PageSize"?: number;
 }
-export { DescribeProjectMetaRequest };

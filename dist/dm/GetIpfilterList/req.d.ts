@@ -1,5 +1,2 @@
-interface GetIpfilterListRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface GetIpfilterListRequest {
 }
-export { GetIpfilterListRequest };

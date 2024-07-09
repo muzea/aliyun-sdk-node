@@ -1,3 +1,0 @@
-interface SearchImagesResponse {
-}
-export { SearchImagesResponse };

@@ -1,3 +1,0 @@
-interface DescribeRequestStatisticLogResponse {
-}
-export { DescribeRequestStatisticLogResponse };

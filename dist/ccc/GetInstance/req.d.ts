@@ -1,5 +1,7 @@
-interface GetInstanceRequest {
-    "RegionId"?: string;
+export interface GetInstanceRequest {
+    /**
+     * 实例ID。
+     * @example `ccc-test`
+     */
     "InstanceId": string;
 }
-export { GetInstanceRequest };

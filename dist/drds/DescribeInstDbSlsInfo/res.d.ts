@@ -1,15 +1,27 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.AuditInfo
-export interface AuditInfo {
-	Project: string;
-	LogStore: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.DescribeInstDbSlsInfoResponse
 export interface DescribeInstDbSlsInfoResponse {
-	RequestId: string;
-	Success: boolean;
-	AuditInfo: AuditInfo;
+    /**
+     * 是否成功。
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 请求ID。
+     * @example `DC3ABA3E-0F8A-4596-9104-F5155C******`
+     */
+    RequestId: string;
+    /**
+     * SQL审计详情。
+     */
+    AuditInfo: {
+        /**
+         * LogStore的名称。
+         * @example `test`
+         */
+        LogStore: string;
+        /**
+         * SLS Project的名称。
+         * @example `test`
+         */
+        Project: string;
+    };
 }
-

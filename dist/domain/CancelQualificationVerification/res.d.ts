@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/domain.CancelQualificationVerificationResponse
 export interface CancelQualificationVerificationResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `9DFCF6F8-243C-****-8035-4B12FEFD7D48`
+     */
+    RequestId: string;
 }
-

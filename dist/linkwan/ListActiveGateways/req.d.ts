@@ -1,4 +1,2 @@
-interface ListActiveGatewaysRequest {
-    "RegionId"?: string;
+export interface ListActiveGatewaysRequest {
 }
-export { ListActiveGatewaysRequest };

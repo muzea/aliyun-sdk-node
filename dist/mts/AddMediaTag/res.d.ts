@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AddMediaTagResponse
 export interface AddMediaTagResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `91B6CAB9-034C-4E4E-A40B-E7F5C81E1A2K`
+     */
+    RequestId: string;
 }
-

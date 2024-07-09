@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.SetLoadBalancerDeleteProtectionResponse
 export interface SetLoadBalancerDeleteProtectionResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `791D8B68-AE0F-4174-AF54-088C8B3C5D54`
+     */
+    RequestId: string;
 }
-

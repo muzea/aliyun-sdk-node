@@ -1,10 +1,12 @@
-interface CreateNatGatewayRequest {
+export interface CreateNatGatewayRequest {
     "RegionId": string;
     "VpcId": string;
-    "BandwidthPackage": string[];
-    "OwnerId"?: number;
     "Name"?: string;
     "Description"?: string;
     "ClientToken"?: string;
+    "BandwidthPackage": {
+        Bandwidth: number;
+        Zone: string;
+        IpCount: number;
+    }[];
 }
-export { CreateNatGatewayRequest };

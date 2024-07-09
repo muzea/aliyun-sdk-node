@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/live.ResumeLiveStreamResponse
 export interface ResumeLiveStreamResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `16BFE188-B193-4C3C-ADC5-79A7E31486EA`
+     */
+    RequestId: string;
 }
-

@@ -1,13 +1,17 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ram.MFADevice
-export interface MFADevice {
-	SerialNumber: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ram.UnbindMFADeviceResponse
 export interface UnbindMFADeviceResponse {
-	RequestId: string;
-	MFADevice: MFADevice;
+    /**
+     * 多因素认证设备信息。
+     */
+    MFADevice: {
+        /**
+         * 设备序列号。
+         * @example `acs:ram::123456789012****:mfa/device002`
+         */
+        SerialNumber: string;
+    };
+    /**
+     * 请求ID。
+     * @example `04F0F334-1335-436C-A1D7-6C044FE73368`
+     */
+    RequestId: string;
 }
-

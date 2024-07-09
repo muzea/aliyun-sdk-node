@@ -1,3 +1,0 @@
-interface DeleteProjectResponse {
-}
-export { DeleteProjectResponse };

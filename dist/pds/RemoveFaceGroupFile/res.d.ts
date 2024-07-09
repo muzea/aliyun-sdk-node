@@ -1,0 +1,1 @@
+export type RemoveFaceGroupFileResponse = any;

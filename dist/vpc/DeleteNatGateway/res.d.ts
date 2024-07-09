@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.DeleteNatGatewayResponse
 export interface DeleteNatGatewayResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `0ED8D006-F706-4D23-88ED-E11ED28DCAC0`
+     */
+    RequestId: string;
 }
-

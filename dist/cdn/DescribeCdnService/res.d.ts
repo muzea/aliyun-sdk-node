@@ -1,23 +1,48 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cdn.LockReason
-export interface LockReason {
-	LockReason: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cdn.OperationLocks
-export interface OperationLocks {
-	LockReason: LockReason[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cdn.DescribeCdnServiceResponse
 export interface DescribeCdnServiceResponse {
-	RequestId: string;
-	InstanceId: string;
-	InternetChargeType: string;
-	OpeningTime: string;
-	ChangingChargeType: string;
-	ChangingAffectTime: string;
-	OperationLocks: OperationLocks;
+    /**
+     * 下次计费类型生效时间，GMT时间。
+     * @example `2019-11-27T16:00:00Z`
+     */
+    ChangingAffectTime: string;
+    /**
+     * 请求ID。
+     * @example `16A96B9A-F203-4EC5-8E43-CB92E68F4CD8`
+     */
+    RequestId: string;
+    /**
+     * 下次生效的计费类型。
+     * - **PayByTraffic**：流量。
+     * - **PayByBandwidth**：带宽峰值。
+     * @example `PayByTraffic`
+     */
+    ChangingChargeType: string;
+    /**
+     * 开通服务时间，ISO 8601时间格式。
+     * @example `2019-02-28T13:11:49Z`
+     */
+    OpeningTime: string;
+    /**
+     * 当前计费类型。
+     * - **PayByTraffic**：流量。
+     * - **PayByBandwidth**：带宽峰值。
+     * @example `PayByTraffic`
+     */
+    InternetChargeType: string;
+    /**
+     * 实例ID。
+     * @example `aliuidxx`
+     */
+    InstanceId: string;
+    OperationLocks: {
+        /**
+         * 业务锁定状态。
+         */
+        LockReason: {
+            /**
+             * 业务锁定的原因。financial：欠费。
+             * @example `financial`
+             */
+            LockReason: string;
+        }[];
+    };
 }
-

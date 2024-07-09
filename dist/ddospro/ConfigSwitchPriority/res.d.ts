@@ -1,3 +1,0 @@
-interface ConfigSwitchPriorityResponse {
-}
-export { ConfigSwitchPriorityResponse };

@@ -1,3 +1,0 @@
-interface DescribeInstanceResponse {
-}
-export { DescribeInstanceResponse };

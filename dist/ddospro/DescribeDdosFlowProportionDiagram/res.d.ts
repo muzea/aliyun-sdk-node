@@ -1,3 +1,0 @@
-interface DescribeDdosFlowProportionDiagramResponse {
-}
-export { DescribeDdosFlowProportionDiagramResponse };

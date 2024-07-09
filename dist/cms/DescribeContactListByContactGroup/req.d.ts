@@ -1,8 +1,7 @@
-interface DescribeContactListByContactGroupRequest {
-    "RegionId"?: string;
+export interface DescribeContactListByContactGroupRequest {
     /**
-    * 报警联系组名。
-    * @example `我的组名`
-    */ "ContactGroupName": string;
+     * 报警联系组名称。
+     * @example `CloudMonitor`
+     */
+    "ContactGroupName": string;
 }
-export { DescribeContactListByContactGroupRequest };

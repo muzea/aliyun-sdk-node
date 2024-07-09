@@ -1,6 +1,7 @@
-interface DeleteTagRequest {
-    "RegionId"?: string;
+export interface DeleteTagRequest {
+    /**
+     * 标签ID
+     * @example `123`
+     */
     "TagId": number;
-    "OwnerId"?: number;
 }
-export { DeleteTagRequest };

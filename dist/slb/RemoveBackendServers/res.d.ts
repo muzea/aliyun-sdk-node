@@ -1,29 +1,42 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.BackendServer
-export interface BackendServer {
-	Port: number;
-	Protocol: string;
-	ServerIp: string;
-	ServerHealthStatus: string;
-	ServerId: string;
-	VpcId: string;
-	ListenerPort: number;
-	Weight: number;
-	Description: string;
-	EniHost: string;
-	Type: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.BackendServersInRemoveBackendServers
-export interface BackendServersInRemoveBackendServers {
-	BackendServer: BackendServer[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.RemoveBackendServersResponse
 export interface RemoveBackendServersResponse {
-	RequestId: string;
-	LoadBalancerId: string;
-	BackendServers: BackendServersInRemoveBackendServers;
+    /**
+     * 负载均衡实例ID。
+     * @example `lb-bp15lbk8uja8rvm4a****`
+     */
+    LoadBalancerId: string;
+    /**
+     * 请求ID。
+     * @example `365F4154-92F6-4AE4-92F8-7FF34******`
+     */
+    RequestId: string;
+    BackendServers: {
+        /**
+         * 后端服务器列表。
+         */
+        BackendServer: {
+            /**
+             * 后端服务器类型，取值：
+             * * **ecs**：ECS实例。
+             * * **eni**：弹性网卡实例。
+             * * **eci**：弹性容器实例。
+             * @example `ecs`
+             */
+            Type: string;
+            /**
+             * 后端服务器的权重，范围为**0~100**。
+             * @example `100`
+             */
+            Weight: number;
+            /**
+             * 后端服务器组描述。
+             * @example `BackendServer1`
+             */
+            Description: string;
+            /**
+             * 后端服务器的实例ID。
+             * @example `i-bp1fq61enf4loa5i****`
+             */
+            ServerId: string;
+        }[];
+    };
 }
-

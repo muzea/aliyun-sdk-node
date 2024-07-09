@@ -1,727 +1,557 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.NonExistIdsInQueryMediaCensorJobList
-export interface NonExistIdsInQueryMediaCensorJobList {
-	String: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TitleCensorResult
-export interface TitleCensorResult {
-	Label: string;
-	Suggestion: string;
-	Scene: string;
-	Rate: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.DescCensorResult
-export interface DescCensorResult {
-	Label: string;
-	Suggestion: string;
-	Scene: string;
-	Rate: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.BarrageCensorResult
-export interface BarrageCensorResult {
-	Label: string;
-	Suggestion: string;
-	Scene: string;
-	Rate: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.InputFile
-export interface InputFile {
-	Bucket: string;
-	Object: string;
-	Location: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Input
-export interface Input {
-	Bucket: string;
-	Duration: string;
-	Start: string;
-	UserData: string;
-	Object: string;
-	Location: string;
-	RoleArn: string;
-	Url: string;
-	InputFile: InputFile;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.OutputFile
-export interface OutputFile {
-	Bucket: string;
-	Object: string;
-	Location: string;
-	RoleArn: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.VideoCensorConfig
-export interface VideoCensorConfig {
-	BizType: string;
-	VideoCensor: string;
-	OutputFile: OutputFile;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.CensorResult
-export interface CensorResult {
-	Label: string;
-	Suggestion: string;
-	Scene: string;
-	Rate: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.CensorResultsInQueryMediaCensorJobList
-export interface CensorResultsInQueryMediaCensorJobList {
-	CensorResult: CensorResult[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.VideoTimeline
-export interface VideoTimeline {
-	Timestamp: string;
-	Object: string;
-	CensorResults: CensorResultsInQueryMediaCensorJobList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.VideoTimelinesInQueryMediaCensorJobList
-export interface VideoTimelinesInQueryMediaCensorJobList {
-	VideoTimeline: VideoTimeline[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.VensorCensorResult
-export interface VensorCensorResult {
-	NextPageToken: string;
-	VideoTimelines: VideoTimelinesInQueryMediaCensorJobList;
-	CensorResults: CensorResultsInQueryMediaCensorJobList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PornVideo
-export interface PornVideo {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PornVideos
-export interface PornVideos {
-	PornVideo: PornVideo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PornAudio
-export interface PornAudio {
-	Suggestion: string;
-	Score: string;
-	StartTime: string;
-	EndTime: string;
-	Text: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PornAudios
-export interface PornAudios {
-	PornAudio: PornAudio[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PornText
-export interface PornText {
-	Suggestion: string;
-	Score: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PornTexts
-export interface PornTexts {
-	PornText: PornText[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PornImage
-export interface PornImage {
-	Suggestion: string;
-	Score: string;
-	Url: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PornImages
-export interface PornImages {
-	PornImage: PornImage[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PornOcr
-export interface PornOcr {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PornOcrs
-export interface PornOcrs {
-	PornOcr: PornOcr[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PornResult
-export interface PornResult {
-	PornVideos: PornVideos;
-	PornAudios: PornAudios;
-	PornTexts: PornTexts;
-	PornImages: PornImages;
-	PornOcrs: PornOcrs;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PoliticsVideo
-export interface PoliticsVideo {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PoliticsVideos
-export interface PoliticsVideos {
-	PoliticsVideo: PoliticsVideo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PoliticsAudio
-export interface PoliticsAudio {
-	Suggestion: string;
-	Score: string;
-	StartTime: string;
-	EndTime: string;
-	Text: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PoliticsAudios
-export interface PoliticsAudios {
-	PoliticsAudio: PoliticsAudio[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PoliticsText
-export interface PoliticsText {
-	Suggestion: string;
-	Score: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PoliticsTexts
-export interface PoliticsTexts {
-	PoliticsText: PoliticsText[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PoliticsImage
-export interface PoliticsImage {
-	Suggestion: string;
-	Score: string;
-	Url: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PoliticsImages
-export interface PoliticsImages {
-	PoliticsImage: PoliticsImage[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PoliticsOcr
-export interface PoliticsOcr {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PoliticsOcrs
-export interface PoliticsOcrs {
-	PoliticsOcr: PoliticsOcr[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PoliticsResult
-export interface PoliticsResult {
-	PoliticsVideos: PoliticsVideos;
-	PoliticsAudios: PoliticsAudios;
-	PoliticsTexts: PoliticsTexts;
-	PoliticsImages: PoliticsImages;
-	PoliticsOcrs: PoliticsOcrs;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.QrcodeVideo
-export interface QrcodeVideo {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.QrcodeVideos
-export interface QrcodeVideos {
-	QrcodeVideo: QrcodeVideo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.QrcodeImage
-export interface QrcodeImage {
-	Suggestion: string;
-	Score: string;
-	Url: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.QrcodeImages
-export interface QrcodeImages {
-	QrcodeImage: QrcodeImage[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.QrcodeResult
-export interface QrcodeResult {
-	QrcodeVideos: QrcodeVideos;
-	QrcodeImages: QrcodeImages;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ContrabandAudio
-export interface ContrabandAudio {
-	Suggestion: string;
-	Score: string;
-	StartTime: string;
-	EndTime: string;
-	Text: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ContrabandAudios
-export interface ContrabandAudios {
-	ContrabandAudio: ContrabandAudio[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ContrabandText
-export interface ContrabandText {
-	Suggestion: string;
-	Score: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ContrabandTexts
-export interface ContrabandTexts {
-	ContrabandText: ContrabandText[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ContrabandOcr
-export interface ContrabandOcr {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ContrabandOcrs
-export interface ContrabandOcrs {
-	ContrabandOcr: ContrabandOcr[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ContrabandResult
-export interface ContrabandResult {
-	ContrabandAudios: ContrabandAudios;
-	ContrabandTexts: ContrabandTexts;
-	ContrabandOcrs: ContrabandOcrs;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AbuseAudio
-export interface AbuseAudio {
-	Suggestion: string;
-	Score: string;
-	StartTime: string;
-	EndTime: string;
-	Text: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AbuseAudios
-export interface AbuseAudios {
-	AbuseAudio: AbuseAudio[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AbuseText
-export interface AbuseText {
-	Suggestion: string;
-	Score: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AbuseTexts
-export interface AbuseTexts {
-	AbuseText: AbuseText[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AbuseOcr
-export interface AbuseOcr {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AbuseOcrs
-export interface AbuseOcrs {
-	AbuseOcr: AbuseOcr[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AbuseResult
-export interface AbuseResult {
-	AbuseAudios: AbuseAudios;
-	AbuseTexts: AbuseTexts;
-	AbuseOcrs: AbuseOcrs;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AdVideo
-export interface AdVideo {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AdVideos
-export interface AdVideos {
-	AdVideo: AdVideo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AdAudio
-export interface AdAudio {
-	Suggestion: string;
-	Score: string;
-	StartTime: string;
-	EndTime: string;
-	Text: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AdAudios
-export interface AdAudios {
-	AdAudio: AdAudio[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AdText
-export interface AdText {
-	Suggestion: string;
-	Score: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AdTexts
-export interface AdTexts {
-	AdText: AdText[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AdImage
-export interface AdImage {
-	Suggestion: string;
-	Score: string;
-	Url: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AdImages
-export interface AdImages {
-	AdImage: AdImage[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AdOcr
-export interface AdOcr {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AdOcrs
-export interface AdOcrs {
-	AdOcr: AdOcr[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AdResult
-export interface AdResult {
-	AdVideos: AdVideos;
-	AdAudios: AdAudios;
-	AdTexts: AdTexts;
-	AdImages: AdImages;
-	AdOcrs: AdOcrs;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TerrorismVideo
-export interface TerrorismVideo {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TerrorismVideos
-export interface TerrorismVideos {
-	TerrorismVideo: TerrorismVideo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TerrorismAudio
-export interface TerrorismAudio {
-	Suggestion: string;
-	Score: string;
-	StartTime: string;
-	EndTime: string;
-	Text: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TerrorismAudios
-export interface TerrorismAudios {
-	TerrorismAudio: TerrorismAudio[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TerrorismText
-export interface TerrorismText {
-	Suggestion: string;
-	Score: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TerrorismTexts
-export interface TerrorismTexts {
-	TerrorismText: TerrorismText[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TerrorismImage
-export interface TerrorismImage {
-	Suggestion: string;
-	Score: string;
-	Url: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TerrorismImages
-export interface TerrorismImages {
-	TerrorismImage: TerrorismImage[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TerrorismOcr
-export interface TerrorismOcr {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TerrorismOcrs
-export interface TerrorismOcrs {
-	TerrorismOcr: TerrorismOcr[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TerrorismResult
-export interface TerrorismResult {
-	TerrorismVideos: TerrorismVideos;
-	TerrorismAudios: TerrorismAudios;
-	TerrorismTexts: TerrorismTexts;
-	TerrorismImages: TerrorismImages;
-	TerrorismOcrs: TerrorismOcrs;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.LiveVideo
-export interface LiveVideo {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.LiveVideos
-export interface LiveVideos {
-	LiveVideo: LiveVideo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.LiveImage
-export interface LiveImage {
-	Suggestion: string;
-	Score: string;
-	Url: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.LiveImages
-export interface LiveImages {
-	LiveImage: LiveImage[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.LiveResult
-export interface LiveResult {
-	LiveVideos: LiveVideos;
-	LiveImages: LiveImages;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.LogoVideo
-export interface LogoVideo {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.LogoVideos
-export interface LogoVideos {
-	LogoVideo: LogoVideo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.LogoImage
-export interface LogoImage {
-	Suggestion: string;
-	Score: string;
-	Url: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.LogoImages
-export interface LogoImages {
-	LogoImage: LogoImage[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.LogoResult
-export interface LogoResult {
-	LogoVideos: LogoVideos;
-	LogoImages: LogoImages;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.SpamAudio
-export interface SpamAudio {
-	Suggestion: string;
-	Score: string;
-	StartTime: string;
-	EndTime: string;
-	Text: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.SpamAudios
-export interface SpamAudios {
-	SpamAudio: SpamAudio[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.SpamText
-export interface SpamText {
-	Suggestion: string;
-	Score: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.SpamTexts
-export interface SpamTexts {
-	SpamText: SpamText[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.SpamOcr
-export interface SpamOcr {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.SpamOcrs
-export interface SpamOcrs {
-	SpamOcr: SpamOcr[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.SpamResult
-export interface SpamResult {
-	SpamAudios: SpamAudios;
-	SpamTexts: SpamTexts;
-	SpamOcrs: SpamOcrs;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ImageSearchShotsItem
-export interface ImageSearchShotsItem {
-	MatchedTimestamp: string;
-	MatchedFrame: string;
-	Similarity: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ImageSearchShots
-export interface ImageSearchShots {
-	ImageSearchShotsItem: ImageSearchShotsItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Result
-export interface Result {
-	Message: string;
-	Code: string;
-	Label: string;
-	Rate: string;
-	Score: string;
-	Suggestion: string;
-	Scene: string;
-	PornResult: PornResult;
-	PoliticsResult: PoliticsResult;
-	QrcodeResult: QrcodeResult;
-	ContrabandResult: ContrabandResult;
-	AbuseResult: AbuseResult;
-	AdResult: AdResult;
-	TerrorismResult: TerrorismResult;
-	LiveResult: LiveResult;
-	LogoResult: LogoResult;
-	SpamResult: SpamResult;
-	ImageSearchShots: ImageSearchShots;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ResultsInQueryMediaCensorJobList
-export interface ResultsInQueryMediaCensorJobList {
-	Result: Result[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.CoverImageCensorResult
-export interface CoverImageCensorResult {
-	Bucket: string;
-	Object: string;
-	Location: string;
-	Results: ResultsInQueryMediaCensorJobList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.CoverImageCensorResultsInQueryMediaCensorJobList
-export interface CoverImageCensorResultsInQueryMediaCensorJobList {
-	CoverImageCensorResult: CoverImageCensorResult[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.MediaCensorJob
-export interface MediaCensorJob {
-	JobId: string;
-	UserData: string;
-	PipelineId: string;
-	State: string;
-	Code: string;
-	Suggestion: string;
-	Message: string;
-	CreationTime: string;
-	FinishTime: string;
-	TitleCensorResult: TitleCensorResult;
-	DescCensorResult: DescCensorResult;
-	BarrageCensorResult: BarrageCensorResult;
-	Input: Input;
-	VideoCensorConfig: VideoCensorConfig;
-	VensorCensorResult: VensorCensorResult;
-	CoverImageCensorResults: CoverImageCensorResultsInQueryMediaCensorJobList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.MediaCensorJobList
-export interface MediaCensorJobList {
-	MediaCensorJob: MediaCensorJob[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.QueryMediaCensorJobListResponse
 export interface QueryMediaCensorJobListResponse {
-	RequestId: string;
-	NextPageToken: string;
-	NonExistIds: NonExistIdsInQueryMediaCensorJobList;
-	MediaCensorJobList: MediaCensorJobList;
+    MediaCensorJobList: {
+        /**
+         * 媒体审核作业列表。
+         */
+        MediaCensorJob: {
+            /**
+             * 任务创建时间。
+             * @example `2021-11-04T07:25:48Z`
+             */
+            CreationTime: string;
+            /**
+             * 完成时间。
+             * @example `2021-11-04T07:25:48Z`
+             */
+            FinishTime: string;
+            /**
+             * 处理建议。可取值：
+             * - **pass**：通过。
+             * - **review**：人工重审。
+             * - **block**：拦截。
+             * @example `pass`
+             */
+            Suggestion: string;
+            CoverImageCensorResults: {
+                /**
+                 * 封面图片审查结果列表。
+                 */
+                CoverImageCensorResult: {
+                    /**
+                     * 封面图片的OSS Object。
+                     * @example `test/ai/censor/v2/vme-****.jpg`
+                     */
+                    Object: string;
+                    /**
+                     * 封面图片的OSS Location。
+                     * @example `oss-cn-shanghai`
+                     */
+                    Location: string;
+                    /**
+                     * 封面图片的OSS Bucket。
+                     * @example `example-Bucket-****`
+                     */
+                    Bucket: string;
+                    Results: {
+                        /**
+                         * 作业审核结果。
+                         */
+                        Result: {
+                            /**
+                             * 作业整体审核结果。取值：
+                             * - **pass**：通过。
+                             * - **review**：人工重审。
+                             * - **block**：拦截。
+                             * > 任何一种类型的审核结果是Review时，整体结果为Review，任何一种类型的审核结果是Block时，整体结果为Block。
+                             * @example `pass`
+                             */
+                            Suggestion: string;
+                            /**
+                             * 审核结果的标签，多个使用半角逗号（,）分隔。
+                             * - 图片智能鉴黄（porn）审核结果分类：
+                             *     - **nomal**：正常。
+                             *     - **sexy**：性感。
+                             *     - **porn**：色情。
+                             * - 图片暴恐涉政（terrorism）结果分类：
+                             *     - **naomal**：正常。
+                             *     - **bloody**：血腥。
+                             *     - **explosion**：爆炸烟光。
+                             *     - **outfit**：特殊装束。
+                             *     - **logo**：特殊标识。
+                             *     - **weapon**：武器。
+                             *     - **politics**：涉政。
+                             *     - **violence**：打斗。
+                             *     - **crowd**：聚众。
+                             *     - **parade**：游行。
+                             *     - **carcrash**：车祸现场。
+                             *     - **flag**：旗帜。
+                             *     - **location**：地标。
+                             *     - **others**：其他。
+                             * - 图文违规（ad）结果分类：
+                             *     - **normal**：正常。
+                             *     - **ad**：其他广告。
+                             *     - **politics**：文字含涉政内容。
+                             *     - **porn**：文字含涉黄内容。
+                             *     - **abuse**：文字含辱骂内容。
+                             *     - **terrorism**：文字含暴恐内容。
+                             *     - **contraband**：文字含违禁内容。
+                             *     - **spam**：文字含其他垃圾内容。
+                             *     - **npx**：牛皮藓广告。
+                             *     - **qrcode**：含二维码。
+                             *     - **programCode**：含小程序码。
+                             * - 图片不良场景（live）结果分类：
+                             *     - **normal**：正常。
+                             *     - **meaningless**：图片中无内容（例如黑屏、白屏）。
+                             *     - **PIP**：画中画。
+                             *     - **smoking**：吸烟。
+                             *     - **drivelive**：车内直播。
+                             * - 图片Logo（Logo）结果分类：
+                             *     - **normal**：正常。
+                             *     - **TV**：含受管控的Logo。
+                             *     - **trademark**：含商标。
+                             * @example `normal`
+                             */
+                            Label: string;
+                            /**
+                             * 审核场景。
+                             * - **porn**：鉴黄。
+                             * - **terrorism**：暴恐涉政。
+                             * - **ad**：图文违规。
+                             * - **live**：不良场景。
+                             * - **Logo**：图片Logo。
+                             * @example `live`
+                             */
+                            Scene: string;
+                            /**
+                             * 分值。可取值：0~100。
+                             * @example `100`
+                             */
+                            Rate: string;
+                        }[];
+                    };
+                }[];
+            };
+            /**
+             * 作业状态。
+             * @example `Success`
+             */
+            State: string;
+            /**
+             * 标题审核结果。
+             */
+            TitleCensorResult: {
+                /**
+                 * 处理建议。取值：
+                 * - **pass**：通过。
+                 * - **review**：人工重审。
+                 * - **block**：拦截。
+                 * @example `block`
+                 */
+                Suggestion: string;
+                /**
+                 * 审核结果的标签，多个使用半角逗号（,）分隔。
+                 * - **normal**：普通
+                 * - **spam**：含垃圾信息
+                 * - **ad**：广告
+                 * - **politics**：涉政
+                 * - **terrorism**：暴恐
+                 * - **abuse**：辱骂
+                 * - **porn**：色情
+                 * - **flood**：灌水
+                 * - **contraband**：违禁
+                 * - **meaningless**：无意义
+                 * - **harmful**：不良场景（支持拜金炫富、追星应援、负面情绪、负面诱导等检测场景）
+                 * @example `meaningless`
+                 */
+                Label: string;
+                /**
+                 * 审核场景。取固定值：**antispam**，文本反垃圾。
+                 * @example `antispam`
+                 */
+                Scene: string;
+                /**
+                 * 分值。
+                 * @example `99.91`
+                 */
+                Rate: string;
+            };
+            /**
+             * 作业失败时错误信息。执行成功时不返回此参数。
+             * @example `The resource operated cannot be found`
+             */
+            Message: string;
+            /**
+             * 作业输入。
+             */
+            Input: {
+                /**
+                 * 输入文件的OSS Object。
+                 * @example `test/ai/censor/test-****.mp4`
+                 */
+                Object: string;
+                /**
+                 * 输入文件的OSS Location。
+                 * @example `oss-cn-shanghai`
+                 */
+                Location: string;
+                /**
+                 * 输入文件的OSS Bucket。
+                 * @example `bucket-test-in-****`
+                 */
+                Bucket: string;
+            };
+            /**
+             * 弹幕审核结果。
+             */
+            BarrageCensorResult: {
+                /**
+                 * 处理建议。可取值：
+                 * - **pass**：通过。
+                 * - **review**：人工重审。
+                 * - **block**：拦截。
+                 * @example `pass`
+                 */
+                Suggestion: string;
+                /**
+                 * 审核结果分类，多个使用半角逗号（,）分隔。取值：
+                 * - **normal**：普通
+                 * - **spam**：含垃圾信息
+                 * - **ad**：广告
+                 * - **politics**：涉政
+                 * - **terrorism**：暴恐
+                 * - **abuse**：辱骂
+                 * - **porn**：色情
+                 * - **flood**：灌水
+                 * - **contraband**：违禁
+                 * - **meaningless**：无意义
+                 * - **harmful**：不良场景（支持拜金炫富、追星应援、负面情绪、负面诱导等检测场景）
+                 * @example `normal`
+                 */
+                Label: string;
+                /**
+                 * 审核场景。固定取值：**antispam**，文本反垃圾。
+                 * @example `antispam`
+                 */
+                Scene: string;
+                /**
+                 * 分值。
+                 * @example `99.91`
+                 */
+                Rate: string;
+            };
+            /**
+             * 描述审核结果。
+             */
+            DescCensorResult: {
+                /**
+                 * 处理建议。可取值：
+                 * - **pass**：通过。
+                 * - **review**：人工重审。
+                 * - **block**：拦截。
+                 * @example `pass`
+                 */
+                Suggestion: string;
+                /**
+                 * 审核结果分类，多个使用半角逗号（,）分隔。取值：
+                 * - **normal**：普通
+                 * - **spam**：含垃圾信息
+                 * - **ad**：广告
+                 * - **politics**：涉政
+                 * - **terrorism**：暴恐
+                 * - **abuse**：辱骂
+                 * - **porn**：色情
+                 * - **flood**：灌水
+                 * - **contraband**：违禁
+                 * - **meaningless**：无意义
+                 * - **harmful**：不良场景（支持拜金炫富、追星应援、负面情绪、负面诱导等检测场景）
+                 * @example `ad`
+                 */
+                Label: string;
+                /**
+                 * 审核场景。固定取值：**antispam**，文本反垃圾。
+                 * @example `antispam`
+                 */
+                Scene: string;
+                /**
+                 * 分值。
+                 * @example `100`
+                 */
+                Rate: string;
+            };
+            /**
+             * 视频审查配置。
+             */
+            VideoCensorConfig: {
+                /**
+                 * 视频截图结果的保存地址。
+                 */
+                OutputFile: {
+                    /**
+                     * 截图输出文件 （OSS Object）。
+                     * > 示例中{Count}是占位符，图片Object依次为`output00001-****.jpg,output00002-****.jpg`等。
+                     * @example `output{Count}.jpg`
+                     */
+                    Object: string;
+                    /**
+                     * 截图输出OSS Bucket所在的OSS Location。
+                     * @example `oss-cn-shanghai`
+                     */
+                    Location: string;
+                    /**
+                     * 截图输出文件所在OSS Bucket。
+                     * @example `test-bucket-****`
+                     */
+                    Bucket: string;
+                };
+                /**
+                 * 是否需要审核视频内容。默认值：true。可取值：
+                 * - **true**：审核。
+                 * - **false**：不审核。
+                 * @example `true`
+                 */
+                VideoCensor: string;
+                /**
+                 * 审核模板。默认common（默认模板）。
+                 * > 不填默认为common，如果是通过提交工单自定义的审核模板，此项返回UID。
+                 * @example `common`
+                 */
+                BizType: string;
+            };
+            /**
+             * 媒体审核作业ID。
+             * @example `f8f166eea7a44e9bb0a4aecf9543****`
+             */
+            JobId: string;
+            /**
+             * 用户自定义数据。
+             * @example `example userdata ****`
+             */
+            UserData: string;
+            /**
+             * 作业失败时错误码。执行成功时此参数不返回。
+             * @example `InvalidParameter.ResourceNotFound`
+             */
+            Code: string;
+            /**
+             * 视频审查结果。
+             */
+            VensorCensorResult: {
+                VideoTimelines: {
+                    /**
+                     * 详细时间点的审核结果，按照时间从小到大排序。
+                     */
+                    VideoTimeline: {
+                        /**
+                         * 视频中的位置。格式：`hh:mm:ss[.SSS]`。
+                         * @example `00:02:59.999`
+                         */
+                        Timestamp: string;
+                        /**
+                         * 截图输出文件（OSS Object）。
+                         * > 示例中{Count}是占位符，图片Object依次为`output00001-****.jpg,output00002-****.jpg`等。
+                         * @example `output{Count}.jpg`
+                         */
+                        Object: string;
+                        CensorResults: {
+                            /**
+                             * 包含多种类型审核结果的标签、分值等。
+                             */
+                            CensorResult: {
+                                /**
+                                 * 处理建议。取值：
+                                 * - **pass**：通过，
+                                 * - **review**：人工重审，
+                                 * - **block**：拦截。
+                                 * @example `block`
+                                 */
+                                Suggestion: string;
+                                /**
+                                 * 审核结果分类，多个使用半角逗号（,）分隔。取值：
+                                 * - 图片鉴黄（porn）审核结果分类：
+                                 *     - **porn**：色情。
+                                 *     - **sexy**：性感。
+                                 *     - **normal**：通过。
+                                 * - 暴恐涉政（terrorism）审核结果分类：
+                                 *     - **normal**：正常。
+                                 *     - **bloody**：血腥。
+                                 *     - **explosion**：爆炸烟光。
+                                 *     - **outfit**：特殊装束。
+                                 *     - **logo**：特殊标识。
+                                 *     - **weapon**：武器。
+                                 *     - **politics**：涉政。
+                                 *     - **violence**：打斗。
+                                 *     - **crowd**：聚众。
+                                 *     - **parade**：游行。
+                                 *     - **carcrash**：车祸现场。
+                                 *     - **flag**：旗帜。
+                                 *     - **location**：地标。
+                                 *     - **others**：其他。
+                                 * - 广告（ad）审核结果分类：
+                                 *     - **normal**：正常。
+                                 *     - **ad**：其他广告。
+                                 *     - **politics**：文字含涉政内容。
+                                 *     - **porn**：文字含涉黄内容。
+                                 *     - **abuse**：文字含辱骂内容。
+                                 *     - **terrorism**：文字含暴恐内容。
+                                 *     - **contraband**：文字含违禁内容。
+                                 *     - **spam**：文字含其他垃圾内容。
+                                 *     - **npx**：牛皮藓广告。
+                                 *     - **qrcode**：含二维码。
+                                 *     - **programCode**：含小程序码。
+                                 * - 不良场景（live）结果分类：
+                                 *     - **normal**：正常。
+                                 *     - **meaningless**：图片中无内容（例如黑屏、白屏）。
+                                 *     - **PIP**：画中画。
+                                 *     - **smoking**：吸烟。
+                                 *     - **drivelive**：车内直播。
+                                 * - Logo（logo）审核结果分类：
+                                 *     - **normal**：正常。
+                                 *     - **TV**：含受管控的Logo。
+                                 *     - **trademark**：含商标。
+                                 * @example `normal`
+                                 */
+                                Label: string;
+                                /**
+                                 * 审核场景。
+                                 * - **porn**：鉴黄。
+                                 * - **terrorism**：暴恐涉政。
+                                 * - **ad**：图文违规。
+                                 * - **live**：不良场景。
+                                 * - **logo**：图片Logo。
+                                 * @example `pron`
+                                 */
+                                Scene: string;
+                                /**
+                                 * 分值。
+                                 * @example `99.99`
+                                 */
+                                Rate: string;
+                            }[];
+                        };
+                    }[];
+                };
+                /**
+                 * 下一页标识。
+                 * @example `ea04afcca7cd4e80b9ece8fbb251****`
+                 */
+                NextPageToken: string;
+                CensorResults: {
+                    /**
+                     * 审核结果集合，包含各种场景（黄、暴、恐、政）的概要信息。
+                     */
+                    CensorResult: {
+                        /**
+                         * 处理建议。取值：
+                         * - **pass**：通过。
+                         * - **review**：人工重审。
+                         * - **block**：拦截。
+                         * @example `review`
+                         */
+                        Suggestion: string;
+                        /**
+                         * 审核结果分类，多个使用半角逗号（,）分隔。取值：
+                         * - 图片鉴黄（porn）审核结果分类：
+                         *     - **porn**：色情。
+                         *     - **sexy**：性感。
+                         *     - **normal**：通过。
+                         * - 暴恐涉政（terrorism）审核结果分类：
+                         *     - **normal**：正常。
+                         *     - **bloody**：血腥。
+                         *     - **explosion**：爆炸烟光。
+                         *     - **outfit**：特殊装束。
+                         *     - **logo**：特殊标识。
+                         *     - **weapon**：武器。
+                         *     - **politics**：涉政。
+                         *     - **violence**：打斗。
+                         *     - **crowd**：聚众。
+                         *     - **parade**：游行。
+                         *     - **carcrash**：车祸现场。
+                         *     - **flag**：旗帜。
+                         *     - **location**：地标。
+                         *     - **others**：其他。
+                         * - 广告（ad）审核结果分类：
+                         *     - **normal**：正常。
+                         *     - **ad**：其他广告。
+                         *     - **politics**：文字含涉政内容。
+                         *     - **porn**：文字含涉黄内容。
+                         *     - **abuse**：文字含辱骂内容。
+                         *     - **terrorism**：文字含暴恐内容。
+                         *     - **contraband**：文字含违禁内容。
+                         *     - **spam**：文字含其他垃圾内容。
+                         *     - **npx**：牛皮藓广告。
+                         *     - **qrcode**：含二维码。
+                         *     - **programCode**：含小程序码。
+                         * - 不良场景（live）结果分类：
+                         *     - **normal**：正常。
+                         *     - **meaningless**：图片中无内容（例如黑屏、白屏）。
+                         *     - **PIP**：画中画。
+                         *     - **smoking**：吸烟。
+                         *     - **drivelive**：车内直播。
+                         * - Logo（logo）审核结果分类：
+                         *     - **normal**：正常。
+                         *     - **TV**：含受管控的Logo。
+                         *     - **trademark**：含商标。
+                         * @example `meaningless`
+                         */
+                        Label: string;
+                        /**
+                         * 审核场景。
+                         * - **porn**：鉴黄。
+                         * - **terrorism**：暴恐涉政。
+                         * - **ad**：图文违规。
+                         * - **live**：不良场景。
+                         * - **logo**：图片Logo。
+                         * @example `terrorism`
+                         */
+                        Scene: string;
+                        /**
+                         * 分值。
+                         * @example `100`
+                         */
+                        Rate: string;
+                    }[];
+                };
+            };
+            /**
+             * 音频审核结果。
+             */
+            AudioCensorResult: {
+                /**
+                 * 处理建议。可取值：
+                 * - **pass**：通过
+                 * - **review**：人工重审
+                 * - **block**：拦截
+                 * @example `pass`
+                 */
+                Suggestion: string;
+                /**
+                 * 检测结果的分类。取值：
+                 * - normal：正常文本
+                 * - spam：含垃圾信息
+                 * - ad：广告
+                 * - politics：涉政
+                 * - terrorism：暴恐
+                 * - abuse：辱骂
+                 * - porn：色情
+                 * - flood：灌水
+                 * - contraband：违禁
+                 * - meaningless：无意义
+                 * - harmful：不良场景（支持拜金炫富、追星应援、负面情绪、负面诱导等检测场景）
+                 * @example `normal`
+                 */
+                Label: string;
+            };
+            /**
+             * 管道ID。
+             * @example `c5b30b7c0d0e4a0abde1d5f9e751****`
+             */
+            PipelineId: string;
+        }[];
+    };
+    /**
+     * 请求ID。
+     * @example `D1D5C080-8E2F-5030-8AB4-13092F17631B`
+     */
+    RequestId: string;
+    /**
+     * 下一页标识，32位UUID。查询结果大于一页时返回，每次查询值都会更新。
+     * @example `9b1a42bc6e8d46e6a1383b7e7f01****`
+     */
+    NextPageToken: string;
+    NonExistIds: {
+        /**
+         * 不存在的作业ID列表。如果为空则不返回此参数。
+         */
+        String: string[];
+    };
 }
-

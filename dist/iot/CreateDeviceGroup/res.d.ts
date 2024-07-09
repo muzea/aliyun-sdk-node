@@ -1,135 +1,49 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.FieldNameList
-export interface FieldNameList {
-	FieldNameList: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.InvalidDeviceNameList
-export interface InvalidDeviceNameList {
-	InvalidDeviceName: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.ResultList
-export interface ResultList {
-	ResultList: map[string]interface {}[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.RequestParamsItem
-export interface RequestParamsItem {
-	Name: string;
-	Type: string;
-	Desc: string;
-	Example: string;
-	Required: boolean;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.RequestParams
-export interface RequestParams {
-	RequestParamsItem: RequestParamsItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.ResponseParamsItem
-export interface ResponseParamsItem {
-	Name: string;
-	Type: string;
-	Desc: string;
-	Example: string;
-	Required: boolean;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.ResponseParams
-export interface ResponseParams {
-	ResponseParamsItem: ResponseParamsItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.SqlTemplateDTO
-export interface SqlTemplateDTO {
-	OriginSql: string;
-	TemplateSql: string;
-	RequestParams: RequestParams;
-	ResponseParams: ResponseParams;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.DesiredPropertyInfo
-export interface DesiredPropertyInfo {
-	Unit: string;
-	Identifier: string;
-	DataType: string;
-	Time: string;
-	Value: string;
-	Name: string;
-	Version: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.ListInQueryDeviceDesiredProperty
-export interface ListInQueryDeviceDesiredProperty {
-	DesiredPropertyInfo: DesiredPropertyInfo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.Data
-export interface Data {
-	DataFormat: number;
-	RequestProtocol: string;
-	UtcCreate: string;
-	DeviceActive: number;
-	RequestMethod: string;
-	Nickname: string;
-	CategoryName: string;
-	PageNo: number;
-	DevEui: string;
-	GroupId: string;
-	FileId: string;
-	LastUpdateTime: number;
-	Versions: string;
-	AliyunCommodityCode: string;
-	UtcCreatedOn: string;
-	ApplyId: number;
-	GmtCreate: number;
-	MessageId: string;
-	DeviceName: string;
-	Size: string;
-	Id2: boolean;
-	Owner: boolean;
-	NodeType: number;
-	ApiSrn: string;
-	Name: string;
-	ProductName: string;
-	GroupName: string;
-	DownloadUrl: string;
-	CategoryKey: string;
-	CreateTime: number;
-	PageSize: number;
-	DateFormat: string;
-	Description: string;
-	ApiPath: string;
-	DeviceOnline: number;
-	Status: number;
-	ProductSecret: string;
-	DeviceSecret: string;
-	Result: string;
-	ProductKey: string;
-	DisplayName: string;
-	JoinEui: string;
-	IotId: string;
-	GroupDesc: string;
-	DeviceCount: number;
-	ProtocolType: string;
-	ProductStatus: string;
-	NetType: number;
-	FieldNameList: FieldNameList;
-	InvalidDeviceNameList: InvalidDeviceNameList;
-	ResultList: ResultList;
-	SqlTemplateDTO: SqlTemplateDTO;
-	List: ListInQueryDeviceDesiredProperty;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.CreateDeviceGroupResponse
 export interface CreateDeviceGroupResponse {
-	RequestId: string;
-	Success: boolean;
-	Code: string;
-	ErrorMessage: string;
-	Data: Data;
+    /**
+     * 调用失败时，返回的错误码。更多信息，请参见[错误码](~~87387~~)。
+     * @example `iot.system.SystemException`
+     */
+    Code: string;
+    /**
+     * 调用失败时，返回的出错信息。
+     * @example `系统异常`
+     */
+    ErrorMessage: string;
+    /**
+     * 阿里云为该请求生成的唯一标识符。
+     * @example `4D6D7F71-1C94-4160-8511-EFF4B8F0634D`
+     */
+    RequestId: string;
+    /**
+     * 是否调用成功。
+     * - **true**：调用成功。
+     * - **false**：调用失败。
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 调用成功时，返回的分组信息。
+     */
+    Data: {
+        /**
+         * 分组ID，系统为分组生成的全局唯一标识符。
+         * @example `HtMLECKbdJQL****`
+         */
+        GroupId: string;
+        /**
+         * 分组名称。
+         * @example `grouptest`
+         */
+        GroupName: string;
+        /**
+         * 分组描述。
+         * @example `Group test`
+         */
+        GroupDesc: string;
+        /**
+         * 创建时间。
+         * @example `2018-10-17T11:19:31.000Z`
+         */
+        UtcCreate: string;
+    };
 }
-

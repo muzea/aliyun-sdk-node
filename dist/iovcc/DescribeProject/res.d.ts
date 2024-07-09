@@ -1,3 +1,0 @@
-interface DescribeProjectResponse {
-}
-export { DescribeProjectResponse };

@@ -1,113 +1,65 @@
-import { DeleteInvalidAddressRequest } from "./DeleteInvalidAddress/req";
-import { DeleteInvalidAddressResponse } from "./DeleteInvalidAddress/res";
-import { GetIpProtectionRequest } from "./GetIpProtection/req";
-import { GetIpProtectionResponse } from "./GetIpProtection/res";
-import { AddIpfilterRequest } from "./AddIpfilter/req";
-import { AddIpfilterResponse } from "./AddIpfilter/res";
-import { ApproveMailTemplateRequest } from "./ApproveMailTemplate/req";
-import { ApproveMailTemplateResponse } from "./ApproveMailTemplate/res";
-import { ApproveReplyMailAddressRequest } from "./ApproveReplyMailAddress/req";
-import { ApproveReplyMailAddressResponse } from "./ApproveReplyMailAddress/res";
-import { ApproveSmsTemplateRequest } from "./ApproveSmsTemplate/req";
-import { ApproveSmsTemplateResponse } from "./ApproveSmsTemplate/res";
-import { ApproveTemplateRequest } from "./ApproveTemplate/req";
-import { ApproveTemplateResponse } from "./ApproveTemplate/res";
-import { BatchSendMailRequest } from "./BatchSendMail/req";
-import { BatchSendMailResponse } from "./BatchSendMail/res";
 import { CheckDomainRequest } from "./CheckDomain/req";
 import { CheckDomainResponse } from "./CheckDomain/res";
-import { CheckInvalidAddressRequest } from "./CheckInvalidAddress/req";
-import { CheckInvalidAddressResponse } from "./CheckInvalidAddress/res";
-import { CheckReplyToMailAddressRequest } from "./CheckReplyToMailAddress/req";
-import { CheckReplyToMailAddressResponse } from "./CheckReplyToMailAddress/res";
-import { CreateDayuRequest } from "./CreateDayu/req";
-import { CreateDayuResponse } from "./CreateDayu/res";
 import { CreateDomainRequest } from "./CreateDomain/req";
 import { CreateDomainResponse } from "./CreateDomain/res";
+import { ApproveReplyMailAddressRequest } from "./ApproveReplyMailAddress/req";
+import { ApproveReplyMailAddressResponse } from "./ApproveReplyMailAddress/res";
 import { CreateMailAddressRequest } from "./CreateMailAddress/req";
 import { CreateMailAddressResponse } from "./CreateMailAddress/res";
-import { CreateReceiverRequest } from "./CreateReceiver/req";
-import { CreateReceiverResponse } from "./CreateReceiver/res";
-import { CreateSignRequest } from "./CreateSign/req";
-import { CreateSignResponse } from "./CreateSign/res";
-import { CreateTagRequest } from "./CreateTag/req";
-import { CreateTagResponse } from "./CreateTag/res";
-import { CreateTemplateRequest } from "./CreateTemplate/req";
-import { CreateTemplateResponse } from "./CreateTemplate/res";
-import { DeleteDomainRequest } from "./DeleteDomain/req";
-import { DeleteDomainResponse } from "./DeleteDomain/res";
-import { DeleteIpfilterByEdmIdRequest } from "./DeleteIpfilterByEdmId/req";
-import { DeleteIpfilterByEdmIdResponse } from "./DeleteIpfilterByEdmId/res";
 import { DeleteMailAddressRequest } from "./DeleteMailAddress/req";
 import { DeleteMailAddressResponse } from "./DeleteMailAddress/res";
-import { DeleteReceiverRequest } from "./DeleteReceiver/req";
-import { DeleteReceiverResponse } from "./DeleteReceiver/res";
+import { CreateReceiverRequest } from "./CreateReceiver/req";
+import { CreateReceiverResponse } from "./CreateReceiver/res";
 import { DeleteReceiverDetailRequest } from "./DeleteReceiverDetail/req";
 import { DeleteReceiverDetailResponse } from "./DeleteReceiverDetail/res";
-import { DeleteSignRequest } from "./DeleteSign/req";
-import { DeleteSignResponse } from "./DeleteSign/res";
+import { DeleteReceiverRequest } from "./DeleteReceiver/req";
+import { DeleteReceiverResponse } from "./DeleteReceiver/res";
 import { DeleteTagRequest } from "./DeleteTag/req";
 import { DeleteTagResponse } from "./DeleteTag/res";
-import { DeleteTemplateRequest } from "./DeleteTemplate/req";
-import { DeleteTemplateResponse } from "./DeleteTemplate/res";
+import { AddIpfilterRequest } from "./AddIpfilter/req";
+import { AddIpfilterResponse } from "./AddIpfilter/res";
+import { BatchSendMailRequest } from "./BatchSendMail/req";
+import { BatchSendMailResponse } from "./BatchSendMail/res";
+import { CheckReplyToMailAddressRequest } from "./CheckReplyToMailAddress/req";
+import { CheckReplyToMailAddressResponse } from "./CheckReplyToMailAddress/res";
+import { CreateTagRequest } from "./CreateTag/req";
+import { CreateTagResponse } from "./CreateTag/res";
+import { DeleteDomainRequest } from "./DeleteDomain/req";
+import { DeleteDomainResponse } from "./DeleteDomain/res";
+import { DeleteInvalidAddressRequest } from "./DeleteInvalidAddress/req";
+import { DeleteInvalidAddressResponse } from "./DeleteInvalidAddress/res";
+import { DeleteIpfilterByEdmIdRequest } from "./DeleteIpfilterByEdmId/req";
+import { DeleteIpfilterByEdmIdResponse } from "./DeleteIpfilterByEdmId/res";
 import { DescAccountSummaryRequest } from "./DescAccountSummary/req";
 import { DescAccountSummaryResponse } from "./DescAccountSummary/res";
-import { DescAccountSummary2Request } from "./DescAccountSummary2/req";
-import { DescAccountSummary2Response } from "./DescAccountSummary2/res";
 import { DescDomainRequest } from "./DescDomain/req";
 import { DescDomainResponse } from "./DescDomain/res";
-import { DescTemplateRequest } from "./DescTemplate/req";
-import { DescTemplateResponse } from "./DescTemplate/res";
-import { EnableAccountRequest } from "./EnableAccount/req";
-import { EnableAccountResponse } from "./EnableAccount/res";
-import { GetAccountListRequest } from "./GetAccountList/req";
-import { GetAccountListResponse } from "./GetAccountList/res";
+import { GetIpProtectionRequest } from "./GetIpProtection/req";
+import { GetIpProtectionResponse } from "./GetIpProtection/res";
 import { GetIpfilterListRequest } from "./GetIpfilterList/req";
 import { GetIpfilterListResponse } from "./GetIpfilterList/res";
-import { GetMailAddressMsgCallBackUrlRequest } from "./GetMailAddressMsgCallBackUrl/req";
-import { GetMailAddressMsgCallBackUrlResponse } from "./GetMailAddressMsgCallBackUrl/res";
-import { GetRegionListRequest } from "./GetRegionList/req";
-import { GetRegionListResponse } from "./GetRegionList/res";
-import { GetSenderAddressListRequest } from "./GetSenderAddressList/req";
-import { GetSenderAddressListResponse } from "./GetSenderAddressList/res";
 import { GetTrackListRequest } from "./GetTrackList/req";
 import { GetTrackListResponse } from "./GetTrackList/res";
 import { GetTrackListByMailFromAndTagNameRequest } from "./GetTrackListByMailFromAndTagName/req";
 import { GetTrackListByMailFromAndTagNameResponse } from "./GetTrackListByMailFromAndTagName/res";
-import { MigrateMarketRequest } from "./MigrateMarket/req";
-import { MigrateMarketResponse } from "./MigrateMarket/res";
-import { ModifyAccountNotificationRequest } from "./ModifyAccountNotification/req";
-import { ModifyAccountNotificationResponse } from "./ModifyAccountNotification/res";
 import { ModifyMailAddressRequest } from "./ModifyMailAddress/req";
 import { ModifyMailAddressResponse } from "./ModifyMailAddress/res";
 import { ModifyPWByDomainRequest } from "./ModifyPWByDomain/req";
 import { ModifyPWByDomainResponse } from "./ModifyPWByDomain/res";
-import { ModifySenderAddressNotificationRequest } from "./ModifySenderAddressNotification/req";
-import { ModifySenderAddressNotificationResponse } from "./ModifySenderAddressNotification/res";
 import { ModifyTagRequest } from "./ModifyTag/req";
 import { ModifyTagResponse } from "./ModifyTag/res";
-import { ModifyTemplateRequest } from "./ModifyTemplate/req";
-import { ModifyTemplateResponse } from "./ModifyTemplate/res";
 import { QueryDomainByParamRequest } from "./QueryDomainByParam/req";
 import { QueryDomainByParamResponse } from "./QueryDomainByParam/res";
 import { QueryInvalidAddressRequest } from "./QueryInvalidAddress/req";
 import { QueryInvalidAddressResponse } from "./QueryInvalidAddress/res";
-import { QueryMailAddressByParamRequest } from "./QueryMailAddressByParam/req";
-import { QueryMailAddressByParamResponse } from "./QueryMailAddressByParam/res";
 import { QueryReceiverByParamRequest } from "./QueryReceiverByParam/req";
 import { QueryReceiverByParamResponse } from "./QueryReceiverByParam/res";
 import { QueryReceiverDetailRequest } from "./QueryReceiverDetail/req";
 import { QueryReceiverDetailResponse } from "./QueryReceiverDetail/res";
-import { QuerySignByParamRequest } from "./QuerySignByParam/req";
-import { QuerySignByParamResponse } from "./QuerySignByParam/res";
-import { QuerySmsStatisticsRequest } from "./QuerySmsStatistics/req";
-import { QuerySmsStatisticsResponse } from "./QuerySmsStatistics/res";
 import { QueryTagByParamRequest } from "./QueryTagByParam/req";
 import { QueryTagByParamResponse } from "./QueryTagByParam/res";
 import { QueryTaskByParamRequest } from "./QueryTaskByParam/req";
 import { QueryTaskByParamResponse } from "./QueryTaskByParam/res";
-import { QueryTemplateByParamRequest } from "./QueryTemplateByParam/req";
-import { QueryTemplateByParamResponse } from "./QueryTemplateByParam/res";
 import { SaveReceiverDetailRequest } from "./SaveReceiverDetail/req";
 import { SaveReceiverDetailResponse } from "./SaveReceiverDetail/res";
 import { SendTestByTemplateRequest } from "./SendTestByTemplate/req";
@@ -118,79 +70,181 @@ import { SenderStatisticsDetailByParamRequest } from "./SenderStatisticsDetailBy
 import { SenderStatisticsDetailByParamResponse } from "./SenderStatisticsDetailByParam/res";
 import { SingleSendMailRequest } from "./SingleSendMail/req";
 import { SingleSendMailResponse } from "./SingleSendMail/res";
-import { SingleSendSmsRequest } from "./SingleSendSms/req";
-import { SingleSendSmsResponse } from "./SingleSendSms/res";
-import { UpdateDomainTrackNameRequest } from "./UpdateDomainTrackName/req";
-import { UpdateDomainTrackNameResponse } from "./UpdateDomainTrackName/res";
 import { UpdateIpProtectionRequest } from "./UpdateIpProtection/req";
 import { UpdateIpProtectionResponse } from "./UpdateIpProtection/res";
-import { UpdateMailAddressMsgCallBackUrlRequest } from "./UpdateMailAddressMsgCallBackUrl/req";
-import { UpdateMailAddressMsgCallBackUrlResponse } from "./UpdateMailAddressMsgCallBackUrl/res";
+import { QueryMailAddressByParamRequest } from "./QueryMailAddressByParam/req";
+import { QueryMailAddressByParamResponse } from "./QueryMailAddressByParam/res";
+import { ListUserSuppressionRequest } from "./ListUserSuppression/req";
+import { ListUserSuppressionResponse } from "./ListUserSuppression/res";
+import { UpdateUserRequest } from "./UpdateUser/req";
+import { UpdateUserResponse } from "./UpdateUser/res";
+import { GetUserRequest } from "./GetUser/req";
+import { GetUserResponse } from "./GetUser/res";
 
 interface DM {
-    DeleteInvalidAddress(query: DeleteInvalidAddressRequest): Promise<DeleteInvalidAddressResponse>;
-    GetIpProtection(query: GetIpProtectionRequest): Promise<GetIpProtectionResponse>;
-    AddIpfilter(query: AddIpfilterRequest): Promise<AddIpfilterResponse>;
-    ApproveMailTemplate(query: ApproveMailTemplateRequest): Promise<ApproveMailTemplateResponse>;
-    ApproveReplyMailAddress(query: ApproveReplyMailAddressRequest): Promise<ApproveReplyMailAddressResponse>;
-    ApproveSmsTemplate(query: ApproveSmsTemplateRequest): Promise<ApproveSmsTemplateResponse>;
-    ApproveTemplate(query: ApproveTemplateRequest): Promise<ApproveTemplateResponse>;
-    BatchSendMail(query: BatchSendMailRequest): Promise<BatchSendMailResponse>;
+    /**
+     * 调用CheckDomain验证域名。
+     */
     CheckDomain(query: CheckDomainRequest): Promise<CheckDomainResponse>;
-    CheckInvalidAddress(query: CheckInvalidAddressRequest): Promise<CheckInvalidAddressResponse>;
-    CheckReplyToMailAddress(query: CheckReplyToMailAddressRequest): Promise<CheckReplyToMailAddressResponse>;
-    CreateDayu(query: CreateDayuRequest): Promise<CreateDayuResponse>;
+    /**
+     * 调用CreateDomain创建域名。
+     */
     CreateDomain(query: CreateDomainRequest): Promise<CreateDomainResponse>;
+    /**
+     * 调用ApproveReplyMailAddress验证回信地址。
+     */
+    ApproveReplyMailAddress(query: ApproveReplyMailAddressRequest): Promise<ApproveReplyMailAddressResponse>;
+    /**
+     * 调用CreateMailAddress创建发信地址。
+     */
     CreateMailAddress(query: CreateMailAddressRequest): Promise<CreateMailAddressResponse>;
-    CreateReceiver(query: CreateReceiverRequest): Promise<CreateReceiverResponse>;
-    CreateSign(query: CreateSignRequest): Promise<CreateSignResponse>;
-    CreateTag(query: CreateTagRequest): Promise<CreateTagResponse>;
-    CreateTemplate(query: CreateTemplateRequest): Promise<CreateTemplateResponse>;
-    DeleteDomain(query: DeleteDomainRequest): Promise<DeleteDomainResponse>;
-    DeleteIpfilterByEdmId(query: DeleteIpfilterByEdmIdRequest): Promise<DeleteIpfilterByEdmIdResponse>;
+    /**
+     * 调用DeleteMailAddress删除发信地址。
+     */
     DeleteMailAddress(query: DeleteMailAddressRequest): Promise<DeleteMailAddressResponse>;
-    DeleteReceiver(query: DeleteReceiverRequest): Promise<DeleteReceiverResponse>;
+    /**
+     * 调用CreateReceiver创建收件人列表。
+     */
+    CreateReceiver(query: CreateReceiverRequest): Promise<CreateReceiverResponse>;
+    /**
+     * 删除单个收件人。
+     */
     DeleteReceiverDetail(query: DeleteReceiverDetailRequest): Promise<DeleteReceiverDetailResponse>;
-    DeleteSign(query: DeleteSignRequest): Promise<DeleteSignResponse>;
+    /**
+     * 调用DeleteReceiver删除收件人列表。
+     */
+    DeleteReceiver(query: DeleteReceiverRequest): Promise<DeleteReceiverResponse>;
+    /**
+     * 调用DeleteTag删除标签。
+     */
     DeleteTag(query: DeleteTagRequest): Promise<DeleteTagResponse>;
-    DeleteTemplate(query: DeleteTemplateRequest): Promise<DeleteTemplateResponse>;
+    /**
+     * 添加IP白名单。
+     */
+    AddIpfilter(query: AddIpfilterRequest): Promise<AddIpfilterResponse>;
+    /**
+     * 批量发送邮件。
+     */
+    BatchSendMail(query: BatchSendMailRequest): Promise<BatchSendMailResponse>;
+    /**
+     * 调用CheckReplyToMailAddress验证回信地址发送邮件。
+     */
+    CheckReplyToMailAddress(query: CheckReplyToMailAddressRequest): Promise<CheckReplyToMailAddressResponse>;
+    /**
+     * 创建标签。
+     */
+    CreateTag(query: CreateTagRequest): Promise<CreateTagResponse>;
+    /**
+     * 删除域名。
+     */
+    DeleteDomain(query: DeleteDomainRequest): Promise<DeleteDomainResponse>;
+    /**
+     * 从全局无效地址库移除无效地址
+     */
+    DeleteInvalidAddress(query: DeleteInvalidAddressRequest): Promise<DeleteInvalidAddressResponse>;
+    /**
+     * 删除IP保护信息。
+     */
+    DeleteIpfilterByEdmId(query: DeleteIpfilterByEdmIdRequest): Promise<DeleteIpfilterByEdmIdResponse>;
+    /**
+     * 获取账户信息。
+     */
     DescAccountSummary(query: DescAccountSummaryRequest): Promise<DescAccountSummaryResponse>;
-    DescAccountSummary2(query: DescAccountSummary2Request): Promise<DescAccountSummary2Response>;
+    /**
+     * 调用DescDomain配置域名。
+     */
     DescDomain(query: DescDomainRequest): Promise<DescDomainResponse>;
-    DescTemplate(query: DescTemplateRequest): Promise<DescTemplateResponse>;
-    EnableAccount(query: EnableAccountRequest): Promise<EnableAccountResponse>;
-    GetAccountList(query: GetAccountListRequest): Promise<GetAccountListResponse>;
+    /**
+     * 调用GetIpProtection获取IP防护功能是否开启。
+     */
+    GetIpProtection(query: GetIpProtectionRequest): Promise<GetIpProtectionResponse>;
+    /**
+     * 调用GetIpfilterList获取 IP 筛选器列表。
+     */
     GetIpfilterList(query: GetIpfilterListRequest): Promise<GetIpfilterListResponse>;
-    GetMailAddressMsgCallBackUrl(query: GetMailAddressMsgCallBackUrlRequest): Promise<GetMailAddressMsgCallBackUrlResponse>;
-    GetRegionList(query: GetRegionListRequest): Promise<GetRegionListResponse>;
-    GetSenderAddressList(query: GetSenderAddressListRequest): Promise<GetSenderAddressListResponse>;
+    /**
+     * 邮件跟踪获取发送数据。
+     */
     GetTrackList(query: GetTrackListRequest): Promise<GetTrackListResponse>;
+    /**
+     * 调用GetTrackListByMailFromAndTagName邮件跟踪获取指定条件下的发送数据。
+     */
     GetTrackListByMailFromAndTagName(query: GetTrackListByMailFromAndTagNameRequest): Promise<GetTrackListByMailFromAndTagNameResponse>;
-    MigrateMarket(query: MigrateMarketRequest): Promise<MigrateMarketResponse>;
-    ModifyAccountNotification(query: ModifyAccountNotificationRequest): Promise<ModifyAccountNotificationResponse>;
+    /**
+     * 调用ModifyMailAddress设置发信地址smtp密码。
+     */
     ModifyMailAddress(query: ModifyMailAddressRequest): Promise<ModifyMailAddressResponse>;
+    /**
+     * 设置域名的SMTP的密码。
+     */
     ModifyPWByDomain(query: ModifyPWByDomainRequest): Promise<ModifyPWByDomainResponse>;
-    ModifySenderAddressNotification(query: ModifySenderAddressNotificationRequest): Promise<ModifySenderAddressNotificationResponse>;
+    /**
+     * 调用ModifyTag修改标签。
+     */
     ModifyTag(query: ModifyTagRequest): Promise<ModifyTagResponse>;
-    ModifyTemplate(query: ModifyTemplateRequest): Promise<ModifyTemplateResponse>;
+    /**
+     * 调用QueryDomainByParam查询域名列表信息。
+     */
     QueryDomainByParam(query: QueryDomainByParamRequest): Promise<QueryDomainByParamResponse>;
+    /**
+     * 调用QueryInvalidAddress获取无效地址信息。
+     */
     QueryInvalidAddress(query: QueryInvalidAddressRequest): Promise<QueryInvalidAddressResponse>;
-    QueryMailAddressByParam(query: QueryMailAddressByParamRequest): Promise<QueryMailAddressByParamResponse>;
+    /**
+     * 调用QueryReceiverByParam查询收件人列表。
+     */
     QueryReceiverByParam(query: QueryReceiverByParamRequest): Promise<QueryReceiverByParamResponse>;
+    /**
+     * 调用QueryReceiverDetail查询某个收件人列表详情。
+     */
     QueryReceiverDetail(query: QueryReceiverDetailRequest): Promise<QueryReceiverDetailResponse>;
-    QuerySignByParam(query: QuerySignByParamRequest): Promise<QuerySignByParamResponse>;
-    QuerySmsStatistics(query: QuerySmsStatisticsRequest): Promise<QuerySmsStatisticsResponse>;
+    /**
+     * 调用QueryTagByParam获取标签。
+     */
     QueryTagByParam(query: QueryTagByParamRequest): Promise<QueryTagByParamResponse>;
+    /**
+     * 查询任务。
+     */
     QueryTaskByParam(query: QueryTaskByParamRequest): Promise<QueryTaskByParamResponse>;
-    QueryTemplateByParam(query: QueryTemplateByParamRequest): Promise<QueryTemplateByParamResponse>;
+    /**
+     * 调用SaveReceiverDetail创建单个收件人。
+     */
     SaveReceiverDetail(query: SaveReceiverDetailRequest): Promise<SaveReceiverDetailResponse>;
+    /**
+     * 调用SendTestByTemplate发送测试邮件。
+     */
     SendTestByTemplate(query: SendTestByTemplateRequest): Promise<SendTestByTemplateResponse>;
+    /**
+     * 调用SenderStatisticsByTagNameAndBatchID获取指定条件下的发送数据。
+     */
     SenderStatisticsByTagNameAndBatchID(query: SenderStatisticsByTagNameAndBatchIDRequest): Promise<SenderStatisticsByTagNameAndBatchIDResponse>;
+    /**
+     * 调用SenderStatisticsDetailByParam获取发送详情。
+     */
     SenderStatisticsDetailByParam(query: SenderStatisticsDetailByParamRequest): Promise<SenderStatisticsDetailByParamResponse>;
+    /**
+     * 发送单条邮件。
+     */
     SingleSendMail(query: SingleSendMailRequest): Promise<SingleSendMailResponse>;
-    SingleSendSms(query: SingleSendSmsRequest): Promise<SingleSendSmsResponse>;
-    UpdateDomainTrackName(query: UpdateDomainTrackNameRequest): Promise<UpdateDomainTrackNameResponse>;
+    /**
+     * 开启或者关闭IP保护功能。
+     */
     UpdateIpProtection(query: UpdateIpProtectionRequest): Promise<UpdateIpProtectionResponse>;
-    UpdateMailAddressMsgCallBackUrl(query: UpdateMailAddressMsgCallBackUrlRequest): Promise<UpdateMailAddressMsgCallBackUrlResponse>;
+    /**
+     * 调用QueryMailAddressByParam查询发信地址列表。
+     */
+    QueryMailAddressByParam(query: QueryMailAddressByParamRequest): Promise<QueryMailAddressByParamResponse>;
+    /**
+     * 列出用户手动录入和系统判别的无效地址
+     */
+    ListUserSuppression(query: ListUserSuppressionRequest): Promise<ListUserSuppressionResponse>;
+    /**
+     * 更新用户相关的信息，包括设置等信息。
+     */
+    UpdateUser(query: UpdateUserRequest): Promise<UpdateUserResponse>;
+    /**
+     * 获取用户相关的信息，包含设置等信息。
+     */
+    GetUser(query: GetUserRequest): Promise<GetUserResponse>;
 }
 export default DM;

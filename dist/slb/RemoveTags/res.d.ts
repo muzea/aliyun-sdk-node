@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.RemoveTagsResponse
 export interface RemoveTagsResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `365F4154-92F6-4AE4-92F8-7FF3******`
+     */
+    RequestId: string;
 }
-

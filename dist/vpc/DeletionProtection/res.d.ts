@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.DeletionProtectionResponse
 export interface DeletionProtectionResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `BAAEF103-96C4-4454-9210-066F2405F511`
+     */
+    RequestId: string;
 }
-

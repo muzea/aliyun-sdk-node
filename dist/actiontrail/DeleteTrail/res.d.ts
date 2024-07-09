@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/actiontrail.DeleteTrailResponse
 export interface DeleteTrailResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `145318BE-DEE1-4C57-AA7C-5BE7D34A6AE0`
+     */
+    RequestId: string;
 }
-

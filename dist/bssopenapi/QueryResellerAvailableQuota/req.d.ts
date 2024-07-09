@@ -1,6 +1,7 @@
-interface QueryResellerAvailableQuotaRequest {
-    "RegionId"?: string;
-    "OwnerId": number;
+export interface QueryResellerAvailableQuotaRequest {
+    /**
+     * 无需填写
+     * @example `无`
+     */
     "ItemCodes"?: string;
 }
-export { QueryResellerAvailableQuotaRequest };

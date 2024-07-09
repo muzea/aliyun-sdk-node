@@ -1,3 +1,0 @@
-interface CountProjectsResponse {
-}
-export { CountProjectsResponse };

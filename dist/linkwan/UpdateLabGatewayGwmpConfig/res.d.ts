@@ -1,3 +1,0 @@
-interface UpdateLabGatewayGwmpConfigResponse {
-}
-export { UpdateLabGatewayGwmpConfigResponse };

@@ -1,3 +1,0 @@
-interface UpdateLabNodeJoinAcceptConfigResponse {
-}
-export { UpdateLabNodeJoinAcceptConfigResponse };

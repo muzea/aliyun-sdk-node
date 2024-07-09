@@ -1,3 +1,0 @@
-interface GetRegionStatusResponse {
-}
-export { GetRegionStatusResponse };

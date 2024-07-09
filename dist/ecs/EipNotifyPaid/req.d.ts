@@ -1,8 +1,5 @@
-interface EipNotifyPaidRequest {
-    "RegionId"?: string;
+export interface EipNotifyPaidRequest {
     "data": string;
-    "OwnerId"?: number;
     "ClientToken"?: string;
     "UserCidr"?: string;
 }
-export { EipNotifyPaidRequest };

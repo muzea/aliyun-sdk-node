@@ -1,3 +1,0 @@
-interface QueryTaskSumResponse {
-}
-export { QueryTaskSumResponse };

@@ -1,57 +1,37 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/baas.NodeInfoListItem
-export interface NodeInfoListItem {
-	NodeName: string;
-	Status: boolean;
-	BlockHeight: number;
-	Version: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/baas.ResultItem
-export interface ResultItem {
-	Name: string;
-	Domain: string;
-	Createtime: number;
-	WithPeer: boolean;
-	Title: string;
-	Online: boolean;
-	CreateTime: number;
-	InviteTime: string;
-	DestroyTime: string;
-	TransactionSum: number;
-	RegionId: string;
-	Content: string;
-	ChannelId: string;
-	Normal: boolean;
-	ApproveTime: string;
-	AbnormalNodes: number;
-	OrganizationId: string;
-	Description: string;
-	NodeNumber: number;
-	Id: number;
-	Path: string;
-	Status: number;
-	Username: string;
-	ReqAddr: string;
-	Updatetime: number;
-	Version: string;
-	RejectReason: string;
-	IsRole: boolean;
-	Bizid: string;
-	State: string;
-	SignedAddr: string;
-	ConfirmTime: string;
-	AcceptTime: string;
-	BlockHeight: number;
-	NodeInfoList: NodeInfoListItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/baas.DescribeRegionsResponse
 export interface DescribeRegionsResponse {
-	RequestId: string;
-	Success: boolean;
-	ErrorCode: number;
-	Result: ResultItem[];
+    /**
+     * 请求ID
+     * @example `D1597848-E708-522C-9275-3A202FC8B63A`
+     */
+    RequestId: string;
+    /**
+     * 请求是否成功
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 错误码
+     * @example `200`
+     */
+    ErrorCode: number;
+    /**
+     * 地域列表
+     */
+    Regions: {
+        /**
+         * 地域对应的接入地址（Endpoint）。
+         * @example `baas.cn-hangzhou.aliyuncs.com`
+         */
+        RegionEndpoint: string;
+        /**
+         * 地域名称
+         * @example `华东1（杭州）`
+         */
+        LocalName: string;
+        /**
+         * 地域ID
+         * @example `cn-hangzhou`
+         */
+        RegionId: string;
+    }[];
 }
-

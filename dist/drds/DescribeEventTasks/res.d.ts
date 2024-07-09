@@ -1,3 +1,0 @@
-interface DescribeEventTasksResponse {
-}
-export { DescribeEventTasksResponse };

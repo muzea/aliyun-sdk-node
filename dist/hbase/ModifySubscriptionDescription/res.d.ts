@@ -1,3 +1,0 @@
-interface ModifySubscriptionDescriptionResponse {
-}
-export { ModifySubscriptionDescriptionResponse };

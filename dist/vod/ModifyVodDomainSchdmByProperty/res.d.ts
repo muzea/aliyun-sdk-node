@@ -1,3 +1,0 @@
-interface ModifyVodDomainSchdmByPropertyResponse {
-}
-export { ModifyVodDomainSchdmByPropertyResponse };

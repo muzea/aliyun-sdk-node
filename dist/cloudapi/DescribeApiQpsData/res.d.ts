@@ -1,25 +1,41 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cloudapi.MonitorItem
-export interface MonitorItem {
-	ItemTime: string;
-	ItemValue: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cloudapi.CallSuccesses
-export interface CallSuccesses {
-	MonitorItem: MonitorItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cloudapi.CallFails
-export interface CallFails {
-	MonitorItem: MonitorItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cloudapi.DescribeApiQpsDataResponse
 export interface DescribeApiQpsDataResponse {
-	RequestId: string;
-	CallSuccesses: CallSuccesses;
-	CallFails: CallFails;
+    /**
+     * 请求ID
+     * @example `CEF72CEB-54B6-4AE8-B225-F876FF7BZ001`
+     */
+    RequestId: string;
+    CallSuccesses: {
+        /**
+         * 由 MonitorItem 组成的格式，返回API调用成功监控信息
+         */
+        MonitorItem: {
+            /**
+             * 对应值
+             * @example `650`
+             */
+            ItemValue: string;
+            /**
+             * 对应时间，按照ISO8601标准表示，并需要使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ
+             * @example `2016-07-28T08:24:00Z`
+             */
+            ItemTime: string;
+        }[];
+    };
+    CallFails: {
+        /**
+         * 由 MonitorItem 组成的格式，返回API调用失败监控信息
+         */
+        MonitorItem: {
+            /**
+             * 对应值
+             * @example `0`
+             */
+            ItemValue: string;
+            /**
+             * 对应时间，按照ISO8601标准表示，并需要使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ
+             * @example `2016-07-28T08:20:00Z`
+             */
+            ItemTime: string;
+        }[];
+    };
 }
-

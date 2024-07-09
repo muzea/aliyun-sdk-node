@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dds.ModifyDBInstanceConnectionStringResponse
 export interface ModifyDBInstanceConnectionStringResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `FF36A84C-0694-42D0-861D-C383E8E4FAAF`
+     */
+    RequestId: string;
 }
-

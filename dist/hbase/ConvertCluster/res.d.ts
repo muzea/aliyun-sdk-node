@@ -1,3 +1,0 @@
-interface ConvertClusterResponse {
-}
-export { ConvertClusterResponse };

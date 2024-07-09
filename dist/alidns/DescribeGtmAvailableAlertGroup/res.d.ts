@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/alidns.DescribeGtmAvailableAlertGroupResponse
 export interface DescribeGtmAvailableAlertGroupResponse {
-	RequestId: string;
-	AvailableAlertGroup: string;
+    /**
+     * 唯一请求识别码。
+     * @example `29D0F8F8-5499-4F6C-9FDC-1EE13BF55925`
+     */
+    RequestId: string;
+    /**
+     * 可用报警组。
+     * @example `[\"研发组\",\"GTM测试组\"]`
+     */
+    AvailableAlertGroup: string;
 }
-

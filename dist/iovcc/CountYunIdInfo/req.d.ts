@@ -1,4 +1,2 @@
-interface CountYunIdInfoRequest {
-    "RegionId"?: string;
+export interface CountYunIdInfoRequest {
 }
-export { CountYunIdInfoRequest };

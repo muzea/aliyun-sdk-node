@@ -1,3 +1,0 @@
-interface CreateSubscriptionResponse {
-}
-export { CreateSubscriptionResponse };

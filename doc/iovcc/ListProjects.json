@@ -1,18 +1,1 @@
-{
-  "name": "ListProjects",
-  "protocol": "HTTPS|HTTP",
-  "method": "POST|GET",
-  "path": "/",
-  "timeout": 10000,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Host",
-      "checkBlank": "false",
-      "required": false,
-      "docRequired": false
-    }
-  },
-  "res": {}
-}
+{"methods":["post","get"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"read","systemTags":{"operationType":"get"},"parameters":[],"responses":{"200":{"schema":{"type":"object","properties":{"RequestId":{"description":"请求ID","type":"string","example":"3305DEE5-4020-4FF0-9D42-5882B1580088"},"Projects":{"description":"项目列表信息","type":"array","items":{"type":"object","properties":{"Status":{"description":"状态，0表示正常","type":"integer","format":"int32","example":"0"},"Description":{"description":"项目描述","type":"string","example":"test"},"UserId":{"description":"项目所属用户ID","type":"string","example":"1768723179523459"},"ProjectId":{"description":"项目ID","type":"string","example":"11"},"GmtCreate":{"description":"创建时间","type":"integer","format":"int64","example":"1508341160000"},"GmtModified":{"description":"修改时间","type":"integer","format":"int64","example":"1525687817000"},"Name":{"description":"项目名称","type":"string","example":"aicc_test11"},"Id":{"description":"主键ID","type":"integer","format":"int64","example":"11"},"Creator":{"description":"项目创建人","type":"string","example":"user001"}}}}}}}},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"RequestId\\\": \\\"3305DEE5-4020-4FF0-9D42-5882B1580088\\\",\\n  \\\"Projects\\\": [\\n    {\\n      \\\"Status\\\": 0,\\n      \\\"Description\\\": \\\"test\\\",\\n      \\\"UserId\\\": \\\"1768723179523459\\\",\\n      \\\"ProjectId\\\": \\\"11\\\",\\n      \\\"GmtCreate\\\": 1508341160000,\\n      \\\"GmtModified\\\": 1525687817000,\\n      \\\"Name\\\": \\\"aicc_test11\\\",\\n      \\\"Id\\\": 11,\\n      \\\"Creator\\\": \\\"user001\\\"\\n    }\\n  ]\\n}\",\"errorExample\":\"{\\n  \\\"RequestId\\\": \\\"6F25F67C-F411-499F-BCE2-67CA563CB064\\\",\\n  \\\"HostId\\\": \\\"iovcc.cn-shanghai.aliyuncs.com\\\",\\n  \\\"Code\\\": \\\"InvalidTenant\\\",\\n  \\\"Message\\\": \\\"User is not a valid tenant\\\"\\n}\"},{\"type\":\"xml\",\"example\":\"<ListProjectsResponse>\\r\\n\\t<Projects>\\r\\n\\t\\t<Name>aicc_test22</Name>\\r\\n\\t\\t<Status>0</Status>\\r\\n\\t\\t<Description>test3</Description>\\r\\n\\t\\t<Creator>aicc-qa</Creator>\\r\\n\\t\\t<Id>11</Id>\\r\\n\\t\\t<UserId>1768723179523459</UserId>\\r\\n\\t\\t<GmtCreate>1508341160000</GmtCreate>\\r\\n\\t\\t<GmtModified>1525687817000</GmtModified>\\r\\n\\t\\t<ProjectId>11</ProjectId>\\r\\n\\t</Projects>\\r\\n\\t<RequestId>3305DEE5-4020-4FF0-9D42-5882B1580088</RequestId>\\r\\n</ListProjectsResponse>\",\"errorExample\":\"\"}]","title":"查询项目列表","summary":"调用ListProjects查询项目列表。","requestParamsDescription":" ","responseParamsDescription":" ","extraInfo":" "}

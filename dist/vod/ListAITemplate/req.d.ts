@@ -1,9 +1,9 @@
-interface ListAITemplateRequest {
-    "RegionId"?: string;
+export interface ListAITemplateRequest {
     /**
-    * 模板类型。
-    * @example `AIMediaAudit`
-    */ "TemplateType": string;
-    "OwnerId"?: number;
+     * AI模板类型。取值：
+     * - **AIMediaAudit**：智能审核。
+     * - **AIImage**：智能封面。
+     * @example `AIMediaAudit`
+     */
+    "TemplateType": string;
 }
-export { ListAITemplateRequest };

@@ -1,24 +1,16 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/imm.OCRBoundary
-export interface OCRBoundary {
-	Width: number;
-	Height: number;
-	Top: number;
-	Left: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/imm.OCRItem
-export interface OCRItem {
-	OCRContents: string;
-	OCRConfidence: number;
-	OCRBoundary: OCRBoundary;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/imm.DetectImageTextsResponse
 export interface DetectImageTextsResponse {
-	RequestId: string;
-	ImageUri: string;
-	OCR: OCRItem[];
+    /**
+     * 请求唯一ID。
+     * @example `1B3D5E0A-D8B8-4DA0-8127-ED32C851****`
+     */
+    RequestId: string;
+    /**
+     * OCR文本全文，由OCRContents拼接而成。
+     * @example `智能媒体管理。`
+     */
+    OCRTexts: string;
+    /**
+     * OCR文本片段列表。
+     */
+    OCRContents: any[];
 }
-

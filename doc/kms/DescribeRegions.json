@@ -1,16 +1,1 @@
-{
-  "name": "DescribeRegions",
-  "protocol": "HTTPS",
-  "method": "POST|GET",
-  "path": "/",
-  "timeout": 20,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Query",
-      "required": false
-    }
-  },
-  "res": {}
-}
+{"methods":["post","get"],"schemes":["https"],"security":[{"AK":[]}],"operationType":"read","deprecated":false,"systemTags":{"operationType":"get"},"parameters":[],"responses":{"200":{"schema":{"type":"object","properties":{"RequestId":{"description":"请求ID。","type":"string","example":"815240e2-aa37-4c26-9cca-05d4df3e8fe6"},"Regions":{"type":"object","properties":{"Region":{"description":"地域。","type":"array","items":{"type":"object","properties":{"RegionId":{"description":"地域ID。","type":"string","example":"cn-hangzhou"}}}}}}}}}},"errorCodes":{"400":[{"errorCode":"InvalidParameter","errorMessage":"The specified parameter is not valid."}],"404":[{"errorCode":"InvalidAccessKeyId.NotFound","errorMessage":"The Access Key ID provided does not exist in our records."}]},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"RequestId\\\": \\\"815240e2-aa37-4c26-9cca-05d4df3e8fe6\\\",\\n  \\\"Regions\\\": {\\n    \\\"Region\\\": [\\n      {\\n        \\\"RegionId\\\": \\\"cn-hangzhou\\\"\\n      }\\n    ]\\n  }\\n}\",\"errorExample\":\"//xml response\\n<KMS>\\n\\t<Regions>\\n\\t\\t<Region>\\n\\t\\t\\t<RegionId>cn-beijing</RegionId>\\n\\t\\t</Region>\\n\\t\\t<Region>\\n\\t\\t\\t<RegionId>cn-hangzhou</RegionId>\\n\\t\\t</Region>\\n\\t</Regions>\\n\\t<RequestId>815240e2-aa37-4c26-9cca-05d4df3e8fe6</RequestId>\\n</KMS>\\n\"},{\"type\":\"xml\",\"example\":\"<KMS>\\r\\n\\t<Regions>\\r\\n\\t\\t<Region>\\r\\n\\t\\t\\t<RegionId>cn-beijing</RegionId>\\r\\n\\t\\t</Region>\\r\\n\\t\\t<Region>\\r\\n\\t\\t\\t<RegionId>cn-hangzhou</RegionId>\\r\\n\\t\\t</Region>\\r\\n\\t</Regions>\\r\\n\\t<RequestId>815240e2-aa37-4c26-9cca-05d4df3e8fe6</RequestId>\\r\\n</KMS>\",\"errorExample\":\"//json response\\n{\\n        \\\"Regions\\\": {\\n                \\\"Region\\\": [\\n                        {\\n                                \\\"RegionId\\\": \\\"cn-beijing\\\"\\n                        },\\n                        {\\n                                \\\"RegionId\\\": \\\"cn-hangzhou\\\"\\n                        }\\n                ]\\n        },\\n        \\\"RequestId\\\": \\\"815240e2-aa37-4c26-9cca-05d4df3e8fe6\\\"\\n}\\n\"}]","title":"查询当前账号的可用地域列表","summary":"调用DescribeRegions接口查询当前账号的可用地域列表。","requestParamsDescription":" ","responseParamsDescription":" ","extraInfo":" "}

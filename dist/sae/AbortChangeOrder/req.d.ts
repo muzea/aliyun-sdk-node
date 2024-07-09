@@ -1,8 +1,7 @@
-interface AbortChangeOrderRequest {
-    "RegionId"?: string;
+export interface AbortChangeOrderRequest {
     /**
-    * 变更单ID
-    * @example `xxx-xxxx-xxx-xxx`
-    */ "ChangeOrderId": string;
+     * 变更单ID。
+     * @example `be2e1c76-682b-4897-98d3-1d8d6478****`
+     */
+    "ChangeOrderId": string;
 }
-export { AbortChangeOrderRequest };

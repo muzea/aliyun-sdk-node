@@ -1,5 +1,7 @@
-interface GetApplicationRequest {
-    "RegionId"?: string;
+export interface GetApplicationRequest {
+    /**
+     * 应用ID。
+     * @example `29f0******************`
+     */
     "AppId": string;
 }
-export { GetApplicationRequest };

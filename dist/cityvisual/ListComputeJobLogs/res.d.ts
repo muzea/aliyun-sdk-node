@@ -1,3 +1,0 @@
-interface ListComputeJobLogsResponse {
-}
-export { ListComputeJobLogsResponse };

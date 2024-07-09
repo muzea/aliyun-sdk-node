@@ -1,14 +1,21 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cdn.Tag
-export interface Tag {
-	Key: string;
-	Value: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cdn.DescribeUserTagsResponse
 export interface DescribeUserTagsResponse {
-	RequestId: string;
-	Tags: Tag[];
+    /**
+     * 请求ID。
+     * @example `34AB41F1-04A5-496F-8C8D-634BDBE6A9FB`
+     */
+    RequestId: string;
+    /**
+     * 标签列表。
+     */
+    Tags: {
+        /**
+         * 标签键。
+         * @example `env`
+         */
+        Key: string;
+        /**
+         * 标签值列表。
+         */
+        Value: string[];
+    }[];
 }
-

@@ -1,23 +1,23 @@
-interface DescribeMonitorGroupNotifyPolicyListRequest {
+export interface DescribeMonitorGroupNotifyPolicyListRequest {
     /**
-    * 资源所属的地域ID。
-    * @example `cn-hangzhou`
-    */ "RegionId": string;
+     * 暂停通知类型。
+     * 目前仅支持PauseNotify。
+     * @example `PauseNotify`
+     */
+    "PolicyType": string;
     /**
-    * 禁用的类型，目前只能选择PauseNotify。
-    * @example `PauseNotify`
-    */ "PolicyType": string;
+     * 页码。默认值：1。
+     * @example `1`
+     */
+    "PageNumber"?: number;
     /**
-    * 页码，默认值为1。
-    * @example `1`
-    */ "PageNumber"?: number;
+     * 每页记录条数。默认值：10。
+     * @example `100`
+     */
+    "PageSize"?: number;
     /**
-    * 每页记录条数，默认值为10。
-    * @example `100`
-    */ "PageSize"?: number;
-    /**
-    * 应用分组ID。
-    * @example `12346`
-    */ "GroupId"?: string;
+     * 应用分组ID。
+     * @example `6780****`
+     */
+    "GroupId"?: string;
 }
-export { DescribeMonitorGroupNotifyPolicyListRequest };

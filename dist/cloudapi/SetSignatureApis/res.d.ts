@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cloudapi.SetSignatureApisResponse
 export interface SetSignatureApisResponse {
-	RequestId: string;
+    /**
+     * 请求ID
+     * @example `27F9C50D-7EB4-5623-8472-45B3C7602C91`
+     */
+    RequestId: string;
 }
-

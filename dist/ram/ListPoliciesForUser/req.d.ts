@@ -1,8 +1,7 @@
-interface ListPoliciesForUserRequest {
-    "RegionId"?: string;
+export interface ListPoliciesForUserRequest {
     /**
-    * 指定用户名。
-    * @example `zhangq****`
-    */ "UserName"?: string;
+     * RAM用户名。
+     * @example `zhangq****`
+     */
+    "UserName"?: string;
 }
-export { ListPoliciesForUserRequest };

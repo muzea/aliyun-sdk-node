@@ -1,0 +1,7 @@
+export interface DeleteOIDCProviderRequest {
+    /**
+     * OIDC身份提供商的名称。
+     * @example `TestOIDCProvider`
+     */
+    "OIDCProviderName"?: string;
+}

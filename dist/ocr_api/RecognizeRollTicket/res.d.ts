@@ -1,0 +1,22 @@
+export interface RecognizeRollTicketResponse {
+    /**
+     * 请求唯一 ID
+     * @example `43A29C77-405E-4CC0-BC55-EE694AD00655`
+     */
+    RequestId: string;
+    /**
+     * 返回数据
+     * @example `{ 	"data": { 		"title": "用增值税普通发票(卷票)", 		"invoiceCode": "041001800107", 		"invoiceNumber": "04594258", 		"machineCode": "661718338084", 		"sellerName": "中国石化销售有限公司河南许昌石油分公司第二经营部", 		"sellerTaxNumber": "914110237241033719", 		"purchaserName": "上海恒企教育培训有限公司许昌许都广场分公司", 		"purchaserTaxCode": "212", 		"invoiceDate": "2019年4月27日", 		"cashier": "安冬梅", 		"totalAmountInWords": "陆佰元整", 		"totalAmount": "600.00", 		"checkCode": "65584298472538424744", 		"invoiceDetails": [{ 			"itemName": "*预付卡销售*加油卡充值款", 			"quantity": "1.00", 			"unitPrice": "600.00", 			"amount": "600.00" 		}, { 			"itemName": "*预付卡销售*积分*预付卡销售*积分", 			"quantity": "1.0", 			"unitPrice": "13.78", 			"amount": "13.78" 		}] 	}, 	"height": 934, 	"orgHeight": 934, 	"orgWidth": 438, 	"prism_keyValueInfo": [{ 		"key": "title", 		"keyProb": 95, 		"value": "用增值税普通发票(卷票)", 		"valuePos": [{ 			"x": 89, 			"y": 61 		}, { 			"x": 90, 			"y": 23 		}, { 			"x": 435, 			"y": 40 		}, { 			"x": 434, 			"y": 78 		}], 		"valueProb": 95 	}, { 		"key": "invoiceCode", 		"keyProb": 99, 		"value": "041001800107", 		"valuePos": [{ 			"x": 130, 			"y": 199 		}, { 			"x": 132, 			"y": 175 		}, { 			"x": 304, 			"y": 187 		}, { 			"x": 303, 			"y": 210 		}], 		"valueProb": 99 	}, { 		"key": "invoiceNumber", 		"keyProb": 99, 		"value": "04594258", 		"valuePos": [{ 			"x": 132, 			"y": 230 		}, { 			"x": 133, 			"y": 210 		}, { 			"x": 247, 			"y": 216 		}, { 			"x": 245, 			"y": 237 		}], 		"valueProb": 99 	}, { 		"key": "machineCode", 		"keyProb": 100, 		"value": "661718338084", 		"valuePos": [{ 			"x": 294, 			"y": 254 		}, { 			"x": 294, 			"y": 238 		}, { 			"x": 394, 			"y": 243 		}, { 			"x": 393, 			"y": 258 		}], 		"valueProb": 100 	}, { 		"key": "sellerName", 		"keyProb": 100, 		"value": "中国石化销售有限公司河南许昌石油分公司第二经营部", 		"valuePos": [{ 			"x": 124, 			"y": 290 		}, { 			"x": 125, 			"y": 260 		}, { 			"x": 370, 			"y": 266 		}, { 			"x": 369, 			"y": 297 		}], 		"valueProb": 100 	}, { 		"key": "sellerTaxNumber", 		"keyProb": 98, 		"value": "914110237241033719", 		"valuePos": [{ 			"x": 139, 			"y": 323 		}, { 			"x": 140, 			"y": 310 		}, { 			"x": 293, 			"y": 312 		}, { 			"x": 293, 			"y": 326 		}], 		"valueProb": 98 	}, { 		"key": "purchaserName", 		"keyProb": 100, 		"value": "上海恒企教育培训有限公司许昌许都广场分公司", 		"valuePos": [{ 			"x": 125, 			"y": 349 		}, { 			"x": 365, 			"y": 349 		}, { 			"x": 365, 			"y": 382 		}, { 			"x": 125, 			"y": 382 		}], 		"valueProb": 100 	}, { 		"key": "purchaserTaxCode", 		"keyProb": 70, 		"value": "212", 		"valuePos": [{ 			"x": 138, 			"y": 394 		}, { 			"x": 138, 			"y": 410 		}, { 			"x": 38, 			"y": 411 		}, { 			"x": 37, 			"y": 396 		}], 		"valueProb": 70 	}, { 		"key": "invoiceDate", 		"keyProb": 100, 		"value": "2019年4月27日", 		"valuePos": [{ 			"x": 106, 			"y": 345 		}, { 			"x": 107, 			"y": 329 		}, { 			"x": 217, 			"y": 331 		}, { 			"x": 217, 			"y": 348 		}], 		"valueProb": 100 	}, { 		"key": "cashier", 		"keyProb": 100, 		"value": "安冬梅", 		"valuePos": [{ 			"x": 274, 			"y": 348 		}, { 			"x": 275, 			"y": 332 		}, { 			"x": 324, 			"y": 333 		}, { 			"x": 324, 			"y": 350 		}], 		"valueProb": 100 	}, { 		"key": "totalAmountInWords", 		"keyProb": 100, 		"value": "陆佰元整", 		"valuePos": [{ 			"x": 120, 			"y": 804 		}, { 			"x": 190, 			"y": 800 		}, { 			"x": 191, 			"y": 818 		}, { 			"x": 120, 			"y": 821 		}], 		"valueProb": 100 	}, { 		"key": "totalAmount", 		"keyProb": 100, 		"value": "600.00", 		"valuePos": [{ 			"x": 121, 			"y": 785 		}, { 			"x": 181, 			"y": 783 		}, { 			"x": 182, 			"y": 796 		}, { 			"x": 121, 			"y": 799 		}], 		"valueProb": 100 	}, { 		"key": "checkCode", 		"keyProb": 96, 		"value": "65584298472538424744", 		"valuePos": [{ 			"x": 95, 			"y": 827 		}, { 			"x": 283, 			"y": 817 		}, { 			"x": 284, 			"y": 831 		}, { 			"x": 96, 			"y": 841 		}], 		"valueProb": 96 	}, { 		"key": "invoiceDetails", 		"keyProb": 100, 		"value": "[{\"itemName\":\"*预付卡销售*加油卡充值款\",\"quantity\":\"1.00\",\"unitPrice\":\"600.00\",\"amount\":\"600.00\"},{\"itemName\":\"*预付卡销售*积分*预付卡销售*积分\",\"quantity\":\"1.0\",\"unitPrice\":\"13.78\",\"amount\":\"13.78\"}]", 		"valueProb": 100 	}], 	"width": 438 }`
+     */
+    Data: string;
+    /**
+     * 状态码
+     * @example `200`
+     */
+    Code: string;
+    /**
+     * 详细信息
+     * @example `message`
+     */
+    Message: string;
+}

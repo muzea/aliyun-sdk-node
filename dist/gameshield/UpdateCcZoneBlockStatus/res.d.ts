@@ -1,3 +1,0 @@
-interface UpdateCcZoneBlockStatusResponse {
-}
-export { UpdateCcZoneBlockStatusResponse };

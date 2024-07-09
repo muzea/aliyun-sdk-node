@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ram.RemoveUserFromGroupResponse
 export interface RemoveUserFromGroupResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `A07EF215-B9B3-8CB2-2899-3F9575C6E320`
+     */
+    RequestId: string;
 }
-

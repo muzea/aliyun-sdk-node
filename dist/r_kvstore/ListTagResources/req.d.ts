@@ -1,18 +1,39 @@
-interface ListTagResourcesRequest {
+export interface ListTagResourcesRequest {
     /**
-    * 地域ID，可调用[DescribeRegions](~~61012~~)查询，使用此参数指定要创建实例的地域。
-    * @example `cn-hangzhou`
-    */ "RegionId": string;
+     * 实例所属的地域ID。
+     * @example `cn-hangzhou`
+     */
+    "RegionId": string;
     /**
-    * 资源类型，唯一值：INSTANCE。
-    * @example `INSTANCE`
-    */ "ResourceType": string;
-    "OwnerId"?: number;
+     * 资源类型，取值固定为**INSTANCE**。
+     * @example `INSTANCE`
+     */
+    "ResourceType": string;
+    /**
+     * 下一个查询开始Token，用来返回更多结果。
+     * > 第一次查询不需要提供本参数，如果一次查询没有返回全部结果，则可在后续查询中传入前一次返回的**NextToken**值以继续查询。
+     * @example `212db86sca4384811e0b5e8707ec2****`
+     */
+    "NextToken"?: string;
+    /**
+     * 实例ID列表。
+     * > * 本参数和**Tag**参数两者中必须传入一项。
+     * @example `r-bp1zxszhcgatnx****`
+     */
     "ResourceId"?: string[];
-    "Tag"?: string[];
     /**
-    * 用来返回更多结果。第一次查询不需要提供这个参数，如果一次查询没有返回全部结果，则可在后续查询中传入前一次返回的token继续查询。
-    * @example `212db86sca4384811e0b5e8707ec21345`
-    */ "NextToken"?: string;
+     * 实例的标签信息。本参数和**ResourceId**参数两者中必须传入一项。
+     */
+    "Tag"?: {
+        /**
+         * 标签的键。
+         * @example `demokey`
+         */
+        Key: string;
+        /**
+         * 标签的值。
+         * @example `demovalue`
+         */
+        Value: string;
+    }[];
 }
-export { ListTagResourcesRequest };

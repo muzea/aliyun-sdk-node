@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.DeleteDomainExtensionResponse
 export interface DeleteDomainExtensionResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `149A2470-F010-4437-BF68-343******`
+     */
+    RequestId: string;
 }
-

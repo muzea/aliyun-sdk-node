@@ -1,31 +1,41 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.SlaveZone
-export interface SlaveZone {
-	ZoneId: string;
-	LocalName: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.SlaveZones
-export interface SlaveZones {
-	SlaveZone: SlaveZone[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.Zone
-export interface Zone {
-	ZoneId: string;
-	LocalName: string;
-	SlaveZones: SlaveZones;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.Zones
-export interface Zones {
-	Zone: Zone[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.DescribeZonesResponse
 export interface DescribeZonesResponse {
-	RequestId: string;
-	Zones: Zones;
+    /**
+     * 请求ID。
+     * @example `A48D35FF-440A-4BC0-A4A2-A9BF69B7E43A`
+     */
+    RequestId: string;
+    Zones: {
+        /**
+         * 可用区列表。
+         */
+        Zone: {
+            /**
+             * 可用区ID。
+             * @example `cn-hangzhou-b`
+             */
+            ZoneId: string;
+            /**
+             * 可用区名称。
+             * @example `杭州 可用区B`
+             */
+            LocalName: string;
+            SlaveZones: {
+                /**
+                 * 主可用区对应的备可用区列表。
+                 */
+                SlaveZone: {
+                    /**
+                     * 备可用区ID。
+                     * @example `cn-hangzhou-g`
+                     */
+                    ZoneId: string;
+                    /**
+                     * 备可用区名称。
+                     * @example `杭州 可用区G`
+                     */
+                    LocalName: string;
+                }[];
+            };
+        }[];
+    };
 }
-

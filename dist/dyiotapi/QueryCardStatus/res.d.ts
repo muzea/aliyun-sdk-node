@@ -1,3 +1,0 @@
-interface QueryCardStatusResponse {
-}
-export { QueryCardStatusResponse };

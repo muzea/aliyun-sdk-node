@@ -1,3 +1,0 @@
-interface UpdateKnowledgeResponse {
-}
-export { UpdateKnowledgeResponse };

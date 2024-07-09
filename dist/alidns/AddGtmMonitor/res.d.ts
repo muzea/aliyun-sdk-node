@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/alidns.AddGtmMonitorResponse
 export interface AddGtmMonitorResponse {
-	RequestId: string;
-	MonitorConfigId: string;
+    /**
+     * 请求ID
+     * @example `6856BCF6-11D6-4D7E-AC53-FD579933522B`
+     */
+    RequestId: string;
+    /**
+     * 健康检查配置ID
+     * @example `1234abc`
+     */
+    MonitorConfigId: string;
 }
-

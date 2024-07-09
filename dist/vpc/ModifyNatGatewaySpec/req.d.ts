@@ -1,26 +1,34 @@
-interface ModifyNatGatewaySpecRequest {
+export interface ModifyNatGatewaySpecRequest {
     /**
-    * NAT网关的所属地域。
-    * @example `cn-hangzhou`
-    */ "RegionId": string;
+     * 公网NAT网关所属的地域ID。
+     * 您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。
+     * @example `cn-hangzhou`
+     */
+    "RegionId": string;
     /**
-    * 要修改规格的NAT网关的ID。
-    * @example `ngw-bp1uewa15k4iy5770ya89`
-    */ "NatGatewayId": string;
+     * 要修改规格的公网NAT网关的ID。
+     * @example `ngw-bp1uewa15k4iy5770****`
+     */
+    "NatGatewayId": string;
     /**
-    * NAT网关的规格。取值：
-    * - Small(默认值)：小型
-    * - Middle：中型
-    * - Large：大型
-    * @example `Small`
-    */ "Spec": string;
-    "OwnerId"?: number;
+     * 公网NAT网关的规格，取值：
+     * - **Small**：小型。
+     * - **Middle**：中型。
+     * - **Large**：大型。
+     * @example `Middle`
+     */
+    "Spec": string;
+    /**
+     * 是否自动付费。
+     * - **true**：开启自动付费，自动支付订单。
+     * - **false**（默认值）：不开启自动付费，生成订单后需要到订单中心完成支付。
+     * @example `false`
+     */
     "AutoPay"?: boolean;
     /**
-    * 用于保证请求的幂等性。
-    * 由客户端生成该参数值，要保证在不同请求间唯一，最大值不能超过64个ASCII字符。
-    * 更多信息，参考[如何保证幂等性](~~36569~~)。
-    * @example `SHA234js121223xxxxx`
-    */ "ClientToken"?: string;
+     * 客户端Token，用于保证请求的幂等性。
+     * 从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。
+     * @example `123e4567-e89b-12d3-a456-426655****`
+     */
+    "ClientToken"?: string;
 }
-export { ModifyNatGatewaySpecRequest };

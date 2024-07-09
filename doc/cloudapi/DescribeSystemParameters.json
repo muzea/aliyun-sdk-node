@@ -1,18 +1,1 @@
-{
-  "name": "DescribeSystemParameters",
-  "protocol": "HTTP|HTTPS",
-  "method": "POST|GET",
-  "path": "/",
-  "timeout": 10000,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "System",
-      "checkBlank": "false",
-      "required": true,
-      "docRequired": false
-    }
-  },
-  "res": {}
-}
+{"methods":["post","get"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"read","systemTags":{"operationType":"get"},"parameters":[],"responses":{"200":{"schema":{"type":"object","properties":{"RequestId":{"description":"请求ID","type":"string","example":"0CCDF65E-6050-412D-AD68-FA3D9196836C"},"SystemParams":{"type":"object","properties":{"SystemParamItem":{"description":"由 SystemParam 组成的数组格式，返回系统参数信息","type":"array","items":{"type":"object","properties":{"DemoValue":{"description":"示例","type":"string","example":"192.168.1.1"},"Description":{"description":"参数描述","type":"string","example":"客户端IP"},"ParamName":{"description":"参数名称","type":"string","example":"CaClientIp"},"ParamType":{"description":"参数类型","type":"string","example":"string"}}}}}}}}}},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"RequestId\\\": \\\"0CCDF65E-6050-412D-AD68-FA3D9196836C\\\",\\n  \\\"SystemParams\\\": {\\n    \\\"SystemParamItem\\\": [\\n      {\\n        \\\"DemoValue\\\": \\\"192.168.1.1\\\",\\n        \\\"Description\\\": \\\"客户端IP\\\",\\n        \\\"ParamName\\\": \\\"CaClientIp\\\",\\n        \\\"ParamType\\\": \\\"string\\\"\\n      }\\n    ]\\n  }\\n}\",\"errorExample\":\"\"},{\"type\":\"xml\",\"example\":\"<DescribeSystemParametersResponse>\\r\\n    <RequestId>0CCDF65E-6050-412D-AD68-FA3D9196836C</RequestId>\\r\\n    <SystemParameters>\\r\\n        <SystemParameter>\\r\\n            <Description>客户端IP</Description>\\r\\n            <DemoValue>192.168.1.1</DemoValue>\\r\\n            <ParamName>CaClientIp</ParamName>\\r\\n            <ParamType>string</ParamType>\\r\\n        </SystemParameter>\\r\\n        <SystemParameter>\\r\\n            <Description>请求域名</Description>\\r\\n            <DemoValue>api.aliyun.com</DemoValue>\\r\\n            <ParamName>CaDomain</ParamName>\\r\\n            <ParamType>string</ParamType>\\r\\n        </SystemParameter>\\r\\n        <SystemParameter>\\r\\n            <Description>请求时间（格林威治时间）</Description>\\r\\n            <DemoValue>2016-01-30T03:53:16Z</DemoValue>\\r\\n            <ParamName>CaRequestHandleTime</ParamName>\\r\\n            <ParamType>string</ParamType>\\r\\n        </SystemParameter>\\r\\n        <SystemParameter>\\r\\n            <Description>ConsumerAppId</Description>\\r\\n            <DemoValue>123456</DemoValue>\\r\\n            <ParamName>CaAppId</ParamName>\\r\\n            <ParamType>string</ParamType>\\r\\n        </SystemParameter>\\r\\n        <SystemParameter>\\r\\n            <Description>RequestId</Description>\\r\\n            <DemoValue>7157EBD9-4684-4827-B3B0-9B32D186819B</DemoValue>\\r\\n            <ParamName>CaRequestId</ParamName>\\r\\n            <ParamType>string</ParamType>\\r\\n        </SystemParameter>\\r\\n        <SystemParameter>\\r\\n            <Description>Http Schema</Description>\\r\\n            <DemoValue>https</DemoValue>\\r\\n            <ParamName>CaHttpSchema</ParamName>\\r\\n            <ParamType>string</ParamType>\\r\\n        </SystemParameter>\\r\\n        <SystemParameter>\\r\\n            <Description>代理</Description>\\r\\n            <DemoValue>AliCloudApiGateway</DemoValue>\\r\\n            <ParamName>CaProxy</ParamName>\\r\\n            <ParamType>string</ParamType>\\r\\n        </SystemParameter>\\r\\n    </SystemParameters>\\r\\n</DescribeSystemParametersResponse>\",\"errorExample\":\"\"}]","title":"查询系统参数列表","summary":"查询系统支持的公共参数。","description":"- 此功能面向开放API的用户\n- 此接口返回定义API时可选择接收的系统参数列表\n","requestParamsDescription":" ","responseParamsDescription":" ","extraInfo":" "}

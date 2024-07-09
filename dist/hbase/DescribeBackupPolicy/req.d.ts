@@ -1,7 +1,7 @@
-interface DescribeBackupPolicyRequest {
-    "RegionId"?: string;
+export interface DescribeBackupPolicyRequest {
+    /**
+     * 集群Id。
+     * @example `hb-t4naqsay5gn******`
+     */
     "ClusterId": string;
-    "OwnerId"?: number;
-    "ZoneId"?: string;
 }
-export { DescribeBackupPolicyRequest };

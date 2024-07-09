@@ -1,13 +1,13 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/xtrace.TagKeys
-export interface TagKeys {
-	TagKey: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/xtrace.GetTagKeyResponse
 export interface GetTagKeyResponse {
-	RequestId: string;
-	TagKeys: TagKeys;
+    /**
+     * 请求ID。
+     * @example `1E2B6A4C-6B83-4062-8B6F-AEEC1F******`
+     */
+    RequestId: string;
+    TagKeys: {
+        /**
+         * 标签键列表。
+         */
+        TagKey: string[];
+    };
 }
-

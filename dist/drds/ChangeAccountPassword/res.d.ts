@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.ChangeAccountPasswordResponse
 export interface ChangeAccountPasswordResponse {
-	RequestId: string;
-	Success: boolean;
+    /**
+     * 是否成功。
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 请求ID。
+     * @example `DSSDF-SEWE-*****`
+     */
+    RequestId: string;
 }
-

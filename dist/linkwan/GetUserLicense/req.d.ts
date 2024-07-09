@@ -1,4 +1,2 @@
-interface GetUserLicenseRequest {
-    "RegionId"?: string;
+export interface GetUserLicenseRequest {
 }
-export { GetUserLicenseRequest };

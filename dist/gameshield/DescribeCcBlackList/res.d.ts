@@ -1,3 +1,0 @@
-interface DescribeCcBlackListResponse {
-}
-export { DescribeCcBlackListResponse };

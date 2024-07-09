@@ -1,19 +1,13 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/domain.SuccessListInTransferInCheckMailToken
-export interface SuccessListInTransferInCheckMailToken {
-	SuccessDomain: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/domain.FailListInTransferInCheckMailToken
-export interface FailListInTransferInCheckMailToken {
-	FailDomain: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/domain.TransferInCheckMailTokenResponse
 export interface TransferInCheckMailTokenResponse {
-	RequestId: string;
-	SuccessList: SuccessListInTransferInCheckMailToken;
-	FailList: FailListInTransferInCheckMailToken;
+    /**
+     * 唯一请求识别码。
+     * @example `AF7D4DCE-0776-47F2-A9B2-6FB85A87AA60`
+     */
+    RequestId: string;
+    SuccessList: {
+        SuccessDomain: string[];
+    };
+    FailList: {
+        FailDomain: string[];
+    };
 }
-

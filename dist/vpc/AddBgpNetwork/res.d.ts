@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.AddBgpNetworkResponse
 export interface AddBgpNetworkResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `9C7FA9D6-72E0-48A9-A9C3-2DA8569CD5EB`
+     */
+    RequestId: string;
 }
-

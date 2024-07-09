@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/polardb.CreateBackupResponse
 export interface CreateBackupResponse {
-	RequestId: string;
-	BackupJobId: string;
+    /**
+     * 请求ID。
+     * @example `F3322AFE-083E-4D77-A074-421301******`
+     */
+    RequestId: string;
+    /**
+     * 备份集ID。
+     * @example `11111111`
+     */
+    BackupJobId: string;
 }
-

@@ -1,34 +1,39 @@
-interface AddLiveSnapshotDetectPornConfigRequest {
-    "RegionId"?: string;
+export interface AddLiveSnapshotDetectPornConfigRequest {
     /**
-    *
-    * 直播流所属应用名称。
-    * 支持*，表示全部。
-    * @example `testApp`
-    */ "AppName": string;
+     * 主播流域名。
+     * @example `example.com`
+     */
+    "DomainName": string;
     /**
-    * OSS域名。
-    * @example `oss.aliyunlive.com`
-    */ "OssEndpoint": string;
+     * 播流所属应用名称。
+     * @example `testApp`
+     */
+    "AppName": string;
     /**
-    * OSS存储bucket名称。
-    * @example `livebucket`
-    */ "OssBucket": string;
+     * OSS存储Endpoint名称。
+     * 审核完成后，您可以根据审核回调信息，在OSS控制台查找指定的审核内容。OSS Endpoint需要提前创建，创建方法请参考[配置审核](~~199449~~) 。
+     * @example `cn-oss-****.aliyuncs.com`
+     */
+    "OssEndpoint": string;
     /**
-    * 用户域名。
-    * @example `www.yourdomain.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * OSS存储Bucket名称。
+     * 审核完成后，您可以根据审核回调信息，在OSS控制台查找指定的审核内容。OSS Bucket需要提前创建，创建方法请参考[配置审核](~~199449~~) 。
+     * @example `livebucket`
+     */
+    "OssBucket": string;
     /**
-    * 保存涉黄涉政等违规图片的对象模板。
-    * 如不明确给出，默认为`{AppName}/{StreamName}/{Date}/{Hour}/{Minute}_{Second}.jpg`。
-    * @example `record/{AppName}/{StreamName}/{Sequence}`
-    */ "OssObject"?: string;
+     * 保存涉黄涉政等违规图片名称。
+     * @example `record/{AppName}/{StreamName}/{Sequence}.jpg`
+     */
+    "OssObject"?: string;
+    /**
+     * 采样间隔。取值范围：**5~3600**。单位：秒。
+     * @example `10`
+     */
+    "Interval"?: number;
+    /**
+     * 检测场景列表。
+     * @example `live`
+     */
     "Scene"?: string[];
-    /**
-    * 采样间隔。单位：秒。
-    * 取值范围：**5~3600**。
-    * @example `10`
-    */ "Interval"?: number;
 }
-export { AddLiveSnapshotDetectPornConfigRequest };

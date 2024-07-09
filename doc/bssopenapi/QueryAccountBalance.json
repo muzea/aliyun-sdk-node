@@ -1,16 +1,1 @@
-{
-  "name": "QueryAccountBalance",
-  "protocol": "HTTPS|HTTP",
-  "method": "POST|GET",
-  "path": "/",
-  "timeout": 6000,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Query",
-      "required": false
-    }
-  },
-  "res": {}
-}
+{"summary":"查询用户账户余额信息。","methods":["post","get"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"read","systemTags":{"operationType":"get"},"parameters":[],"responses":{"200":{"headers":{},"schema":{"type":"object","properties":{"Code":{"description":"状态码。","type":"string","example":"200"},"Message":{"description":"错误信息。","type":"string","example":"success"},"RequestId":{"description":"请求ID。","type":"string","example":"16176743-6DC7-4CB3-BB25-A13982D8DFAD"},"Success":{"description":"是否成功。","type":"boolean","example":"true"},"Data":{"description":"返回数据。","type":"object","properties":{"AvailableAmount":{"description":"可用额度。","type":"string","example":"10000.00"},"CreditAmount":{"description":"信控余额。","type":"string","example":"0.00"},"MybankCreditAmount":{"description":"网商银行信用额度。","type":"string","example":"0.00"},"Currency":{"description":"币种。取值范围：\n- CNY：人民币。\n- USD：美元。\n- JPY：日元。","type":"string","example":"CNY"},"AvailableCashAmount":{"description":"现金余额。","type":"string","example":"10000.00"},"QuotaLimit":{"description":"生态客户Quota限额","type":"string","example":"10000.00\n"}}}}}}},"errorCodes":{"400":[{"errorCode":"NotApplicable","errorMessage":"This API is not applicable for caller."},{"errorCode":"NotAuthorized","errorMessage":"This API is not authorized for caller."},{"errorCode":"MissingParameter","errorMessage":"  Some parameters arte mandatoryfor this request."},{"errorCode":"InvalidParameter","errorMessage":"Some parametersare not valid."},{"errorCode":"InvalidOwner","errorMessage":"The specifiedowner doesn’t belong to caller"},{"errorCode":"InternalError","errorMessage":"The request processing has failed due to some unknown error, exception or failure."},{"errorCode":"NoPermission","errorMessage":"You are not authorized to perform this action."}],"500":[{"errorCode":"UndefinedError","errorMessage":"The request processing has failed due to some unknown error."}]},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"Code\\\": \\\"200\\\",\\n  \\\"Message\\\": \\\"success\\\",\\n  \\\"RequestId\\\": \\\"16176743-6DC7-4CB3-BB25-A13982D8DFAD\\\",\\n  \\\"Success\\\": true,\\n  \\\"Data\\\": {\\n    \\\"AvailableAmount\\\": \\\"10000.00\\\",\\n    \\\"CreditAmount\\\": \\\"0.00\\\",\\n    \\\"MybankCreditAmount\\\": \\\"0.00\\\",\\n    \\\"Currency\\\": \\\"CNY\\\",\\n    \\\"AvailableCashAmount\\\": \\\"10000.00\\\",\\n    \\\"QuotaLimit\\\": \\\"10000.00\\\\n\\\"\\n  }\\n}\",\"errorExample\":\"\"},{\"type\":\"xml\",\"example\":\"<QueryAccountBalanceResponse>\\n    <Message>success</Message>\\n    <RequestId>16176743-6DC7-4CB3-BB25-A13982D8DFAD</RequestId>\\n    <Data>\\n        <AvailableCashAmount>0.00</AvailableCashAmount>\\n        <MybankCreditAmount>0.00</MybankCreditAmount>\\n        <Currency>CNY</Currency>\\n        <AvailableAmount>-11.19</AvailableAmount>\\n        <CreditAmount>0.00</CreditAmount>\\n    </Data>\\n    <Code>200</Code>\\n    <Success>true</Success>\\n</QueryAccountBalanceResponse>\",\"errorExample\":\"\"}]","title":"查询用户账户余额信息","requestParamsDescription":" ","responseParamsDescription":" ","extraInfo":" "}

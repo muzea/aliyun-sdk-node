@@ -1,13 +1,10 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/xtrace.TagValues
-export interface TagValues {
-	TagValue: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/xtrace.GetTagValResponse
 export interface GetTagValResponse {
-	RequestId: string;
-	TagValues: TagValues;
+    /**
+     * 请求ID。
+     * @example `1E2B6A4C-6B83-4062-8B6F-AEEC1F******`
+     */
+    RequestId: string;
+    TagValues: {
+        TagValue: string[];
+    };
 }
-

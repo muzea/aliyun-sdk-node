@@ -1,16 +1,1 @@
-{
-  "name": "ListSummaryApps",
-  "protocol": "HTTP|HTTPS",
-  "method": "POST|GET",
-  "path": "/",
-  "timeout": 10000,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Query",
-      "required": false
-    }
-  },
-  "res": {}
-}
+{"methods":["post","get"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"read","deprecated":true,"systemTags":{"operationType":"list","riskType":"none","chargeType":"free"},"parameters":[],"responses":{"200":{"schema":{"type":"object","properties":{"RequestId":{"description":"请求ID。","type":"string","example":"9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC"},"SummaryAppInfos":{"type":"object","properties":{"SummaryAppInfo":{"description":"app详情，SummaryAppInfo组成的集合。","type":"array","items":{"type":"object","properties":{"AppName":{"description":"应用的名称。","type":"string","example":"abc"},"AppKey":{"description":"AppKey信息。","type":"integer","format":"int64","example":"23****07"}}}}}}}}}},"staticInfo":{"substitutions":["Mhub::2017-08-25::ListApps"]},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"RequestId\\\": \\\"9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC\\\",\\n  \\\"SummaryAppInfos\\\": {\\n    \\\"SummaryAppInfo\\\": [\\n      {\\n        \\\"AppName\\\": \\\"abc\\\",\\n        \\\"AppKey\\\": 0\\n      }\\n    ]\\n  }\\n}\",\"errorExample\":\"\"},{\"type\":\"xml\",\"example\":\"<ListSummaryAppsResponse>\\n    <RequestId>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</RequestId>\\n    <SummaryAppInfos>\\n        <AppName>abc</AppName>\\n    </SummaryAppInfos>\\n</ListSummaryAppsResponse>\",\"errorExample\":\"\"}]","title":"查询用户已创建的app列表","summary":"查询云账号下所有app的列表。"}

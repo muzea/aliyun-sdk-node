@@ -1,39 +1,57 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.ReadOnlyInstanceInfo
-export interface ReadOnlyInstanceInfo {
-	ReadOnlyInstanceIds: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.ReadOnlyInstanceIds
-export interface ReadOnlyInstanceIds {
-	ReadOnlyInstanceId: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.DataItem
-export interface DataItem {
-	UsedInstanceType: string;
-	RdsInstanceId: string;
-	Enabled: string;
-	CreateTime: string;
-	Detailed: string;
-	OriginalTableName: string;
-	TableName: string;
-	DbName: string;
-	UsedInstanceId: string;
-	ReadOnlyInstanceInfo: ReadOnlyInstanceInfo;
-	ReadOnlyInstanceIds: ReadOnlyInstanceIds;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.DataInDescribeDrdsSqlAuditStatus
-export interface DataInDescribeDrdsSqlAuditStatus {
-	DataItem: DataItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.DescribeDrdsSqlAuditStatusResponse
 export interface DescribeDrdsSqlAuditStatusResponse {
-	RequestId: string;
-	Success: boolean;
-	Data: DataInDescribeDrdsSqlAuditStatus;
+    /**
+     * 请求结果。
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 请求ID。
+     * @example `DC3ABA3E-0F8A-4596-9104-F5155C******`
+     */
+    RequestId: string;
+    Data: {
+        /**
+         * 结果集。
+         */
+        Data: {
+            /**
+             * 外部投递的SLS LogStore。
+             * >仅当开启外部投递时会显示该参数。
+             * @example `test`
+             */
+            ExtraSlsLogStore: string;
+            /**
+             * 数据库名称。
+             * @example `test`
+             */
+            DbName: string;
+            /**
+             * 是否支持完整的报表，取值为true或false。
+             * @example `true`
+             */
+            Detailed: string;
+            /**
+             * 是否开启外部投递，取值为true或false。
+             * @example `false`
+             */
+            ExtraWriteEnabled: boolean;
+            /**
+             * 是否可用，取值为true或false。
+             * @example `true`
+             */
+            Enabled: string;
+            /**
+             * 外部投递的Uid。
+             * >仅当开启外部投递时会显示该参数。
+             * @example `111`
+             */
+            ExtraAliUid: number;
+            /**
+             * 外部投递的SLS project。
+             * >仅当开启外部投递时会显示该参数。
+             * @example `test`
+             */
+            ExtraSlsProject: string;
+        }[];
+    };
 }
-

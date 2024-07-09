@@ -1,203 +1,63 @@
-interface DescribeScheduledTasksRequest {
-    /**
-    * 定时任务所属伸缩组的地域ID。
-    * @example `cn-qingdao`
-    */ "RegionId": string;
-    /**
-    * @example `123456123456`
-    */ "OwnerId"?: number;
-    /**
-    * 定时任务列表的页码，起始值：1。
-    * 默认值：1。
-    * @example `1`
-    */ "PageNumber"?: number;
-    /**
-    * 分页查询时设置的每页行数，最大值：50。
-    * 默认值：10。
-    * @example `50`
-    */ "PageSize"?: number;
-    /**
-    * ScheduledAction.N为对应定时任务在触发时需要执行的操作，N的取值范围：1～20。
-    * @example `ari:acs:ess:cn-qingdao:1344371:scalingrule/cCBpdYdQuBe2cUxOdu6piOk`
-    */ "ScheduledAction.1"?: string;
-    /**
-    * @example `ari:acs:ess:cn-qingdao:1344371:scalingrule/cCBpdYdQuBe2cUxOdu6piOk`
-    */ "ScheduledAction.2"?: string;
-    /**
-    * @example `ari:acs:ess:cn-qingdao:1344371:scalingrule/cCBpdYdQuBe2cUxOdu6piOk`
-    */ "ScheduledAction.3"?: string;
-    /**
-    * @example `ari:acs:ess:cn-qingdao:1344371:scalingrule/cCBpdYdQuBe2cUxOdu6piOk`
-    */ "ScheduledAction.4"?: string;
-    /**
-    * @example `ari:acs:ess:cn-qingdao:1344371:scalingrule/cCBpdYdQuBe2cUxOdu6piOk`
-    */ "ScheduledAction.5"?: string;
-    /**
-    * @example `ari:acs:ess:cn-qingdao:1344371:scalingrule/cCBpdYdQuBe2cUxOdu6piOk`
-    */ "ScheduledAction.6"?: string;
-    /**
-    * @example `ari:acs:ess:cn-qingdao:1344371:scalingrule/cCBpdYdQuBe2cUxOdu6piOk`
-    */ "ScheduledAction.7"?: string;
-    /**
-    * @example `ari:acs:ess:cn-qingdao:1344371:scalingrule/cCBpdYdQuBe2cUxOdu6piOk`
-    */ "ScheduledAction.8"?: string;
-    /**
-    * @example `ari:acs:ess:cn-qingdao:1344371:scalingrule/cCBpdYdQuBe2cUxOdu6piOk`
-    */ "ScheduledAction.9"?: string;
-    /**
-    * @example `ari:acs:ess:cn-qingdao:1344371:scalingrule/cCBpdYdQuBe2cUxOdu6piOk`
-    */ "ScheduledAction.10"?: string;
-    /**
-    * @example `ari:acs:ess:cn-qingdao:1344371:scalingrule/cCBpdYdQuBe2cUxOdu6piOk`
-    */ "ScheduledAction.11"?: string;
-    /**
-    * @example `ari:acs:ess:cn-qingdao:1344371:scalingrule/cCBpdYdQuBe2cUxOdu6piOk`
-    */ "ScheduledAction.12"?: string;
-    /**
-    * @example `ari:acs:ess:cn-qingdao:1344371:scalingrule/cCBpdYdQuBe2cUxOdu6piOk`
-    */ "ScheduledAction.13"?: string;
-    /**
-    * @example `ari:acs:ess:cn-qingdao:1344371:scalingrule/cCBpdYdQuBe2cUxOdu6piOk`
-    */ "ScheduledAction.14"?: string;
-    /**
-    * @example `ari:acs:ess:cn-qingdao:1344371:scalingrule/cCBpdYdQuBe2cUxOdu6piOk`
-    */ "ScheduledAction.15"?: string;
-    /**
-    * @example `ari:acs:ess:cn-qingdao:1344371:scalingrule/cCBpdYdQuBe2cUxOdu6piOk`
-    */ "ScheduledAction.16"?: string;
-    /**
-    * @example `ari:acs:ess:cn-qingdao:1344371:scalingrule/cCBpdYdQuBe2cUxOdu6piOk`
-    */ "ScheduledAction.17"?: string;
-    /**
-    * @example `ari:acs:ess:cn-qingdao:1344371:scalingrule/cCBpdYdQuBe2cUxOdu6piOk`
-    */ "ScheduledAction.18"?: string;
-    /**
-    * @example `ari:acs:ess:cn-qingdao:1344371:scalingrule/cCBpdYdQuBe2cUxOdu6piOk`
-    */ "ScheduledAction.19"?: string;
-    /**
-    * @example `ari:acs:ess:cn-qingdao:1344371:scalingrule/cCBpdYdQuBe2cUxOdu6piOk`
-    */ "ScheduledAction.20"?: string;
-    /**
-    * ScheduledTaskId.N为待查询定时任务的ID，N的取值范围：1～20。
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskId.1"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskId.2"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskId.3"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskId.4"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskId.5"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskId.6"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskId.7"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskId.8"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskId.9"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskId.10"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskId.11"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskId.12"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskId.13"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskId.14"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskId.15"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskId.16"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskId.17"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskId.18"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskId.19"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskId.20"?: string;
-    /**
-    * ScheduledTaskName.N为待查询定时任务的名称，N的取值范围：1～20。
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskName.1"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskName.2"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskName.3"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskName.4"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskName.5"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskName.6"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskName.7"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskName.8"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskName.9"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskName.10"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskName.11"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskName.12"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskName.13"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskName.14"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskName.15"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskName.16"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskName.17"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskName.18"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskName.19"?: string;
-    /**
-    * @example `edRtShc57WGXdt8TlPbr****`
-    */ "ScheduledTaskName.20"?: string;
+export interface DescribeScheduledTasksRequest {
+    /**
+     * 定时任务所属伸缩组的地域ID。
+     * @example `cn-qingdao`
+     */
+    "RegionId": string;
+    /**
+     * 定时任务列表的页码，起始值：1。
+     * 默认值：1。
+     * @example `1`
+     */
+    "PageNumber"?: number;
+    /**
+     * 分页查询时设置的每页行数，最大值：50。
+     * 默认值：10。
+     * @example `50`
+     */
+    "PageSize"?: number;
+    /**
+     * 执行定时任务的伸缩组的ID。
+     * @example `asg-bp1bo5tca4m56nap****`
+     */
+    "ScalingGroupId"?: string;
+    /**
+     * 仅当定时任务指定了伸缩规则时，定时任务触发时使用的伸缩规则。
+     */
+    "ScheduledActions"?: string[];
+    /**
+     * 待查询定时任务的ID。
+     */
+    "ScheduledTaskIds"?: string[];
+    /**
+     * 待查询定时任务的名称。
+     */
+    "ScheduledTaskNames"?: string[];
+    /**
+     * 任务名称，支持根据关键字模糊搜索。
+     * @example `scheduled****`
+     */
+    "TaskName"?: string;
+    /**
+     * 重复执行定时任务的类型，取值范围：
+     * - Daily：每多少天重复执行一次定时任务。
+     * - Weekly：每周指定几天重复执行一次定时任务。
+     * - Monthly：每月内指定几天重复执行一次定时任务。
+     * - Cron：按照指定的Cron表达式执行定时任务。
+     * @example `Weekly`
+     */
+    "RecurrenceType"?: string;
+    /**
+     * 重复执行定时任务的数值。
+     * 仅支持当RecurrenceType为Weekly时指定此字段，可以填入多个值，填多个值时使用半角逗号（,）分隔。例如，周日、周一、周二、周三、周四、周五、周六的值依次为：0,1,2,3,4,5,6。
+     * @example `1,2,3`
+     */
+    "RecurrenceValue"?: string;
+    /**
+     * 定时任务是否已启动。
+     * - true：任务已启动。
+     * - false：任务已停止。
+     * @example `true`
+     */
+    "TaskEnabled"?: boolean;
 }
-export { DescribeScheduledTasksRequest };

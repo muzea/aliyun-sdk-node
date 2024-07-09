@@ -1,9 +1,7 @@
-interface DescribeCdnDomainDetailRequest {
-    "RegionId"?: string;
+export interface DescribeCdnDomainDetailRequest {
     /**
-    * 需要接入CDN的域名。
-    * @example `www.yourdomain.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 加速域名信息，仅支持单个查询。
+     * @example `example.com`
+     */
+    "DomainName": string;
 }
-export { DescribeCdnDomainDetailRequest };

@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cbn.ModifyCenAttributeResponse
 export interface ModifyCenAttributeResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `13526224-5780-4426-8BDF-BC8B08700F22`
+     */
+    RequestId: string;
 }
-

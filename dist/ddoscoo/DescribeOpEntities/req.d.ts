@@ -1,35 +1,43 @@
-interface DescribeOpEntitiesRequest {
+export interface DescribeOpEntitiesRequest {
     /**
-    * @example `cn`
-    */ "RegionId"?: string;
+     * DDoS高防实例在资源管理产品中所属的资源组ID。默认为空，即属于默认资源组。
+     * @example `default`
+     */
+    "ResourceGroupId"?: string;
     /**
-    * 结束时间时间戳，单位：毫秒。
-    * @example `1536715558000`
-    */ "EndTime": number;
+     * 使用操作对象筛选结果，传入要查询的操作对象的类型。取值：
+     * - **1**：DDoS高防IP
+     * - **2**：DDoS高防抗D包
+     * - **3**：ECS实例
+     * - **4**：全量日志
+     * @example `1`
+     */
+    "EntityType"?: number;
     /**
-    * 页号，即从第几页开始显示。
-    * @example `1`
-    */ "PageNo": number;
+     * 使用操作对象筛选结果，传入要查询的操作对象。
+     * @example `203.***.***.132`
+     */
+    "EntityObject"?: string;
     /**
-    * 分页大小，即每页显示多少条结果。最大值50。
-    * @example `10`
-    */ "PageSize": number;
+     * 查询开始时间。时间戳格式，单位：毫秒。
+     * > 查询时间的跨度不允许超过近30天。
+     * @example `1582992000000`
+     */
+    "StartTime": number;
     /**
-    * @example `1.1.1.1`
-    */ "SourceIp"?: string;
+     * 查询结束时间。时间戳格式，单位：毫秒。
+     * > 查询时间的跨度不允许超过近30天。
+     * @example `1583683200000`
+     */
+    "EndTime": number;
     /**
-    * 开始时间时间戳，单位：毫秒。
-    * @example `1534123558000`
-    */ "StartTime": number;
+     * 分页查询请求时返回的页码。例如，查询第一页的返回结果，则填写**1**。
+     * @example `1`
+     */
+    "PageNumber": number;
     /**
-    * 资源组ID。
-    * @example `test`
-    */ "ResourceGroupId"?: string;
-    /**
-    * @example `1`
-    */ "EntityType"?: number;
-    /**
-    * @example `xx`
-    */ "EntityObject"?: string;
+     * 页面显示的记录数量。最大值：**50**。
+     * @example `10`
+     */
+    "PageSize": number;
 }
-export { DescribeOpEntitiesRequest };

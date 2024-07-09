@@ -1,3 +1,0 @@
-interface DescribePayInfoResponse {
-}
-export { DescribePayInfoResponse };

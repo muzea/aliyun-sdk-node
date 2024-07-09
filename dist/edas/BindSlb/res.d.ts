@@ -1,50 +1,67 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/edas.Data
-export interface Data {
-	PackageType: string;
-	ChangeOrderId: string;
-	WebContainer: string;
-	CommandArgs: string;
-	MinReadyInstances: number;
-	PackageVersion: string;
-	AppDescription: string;
-	Replicas: number;
-	SlbPort: number;
-	ImageUrl: string;
-	VpcId: string;
-	CustomHostAlias: string;
-	BatchWaitTime: number;
-	ExtSlbIp: string;
-	Memory: number;
-	VSwitchId: string;
-	JarStartArgs: string;
-	ExtSlbId: string;
-	Liveness: string;
-	Jdk: string;
-	ExtSlbName: string;
-	SlbName: string;
-	Readiness: string;
-	Command: string;
-	VServerGroupId: string;
-	AppId: string;
-	ExtVServerGroupId: string;
-	JarStartOptions: string;
-	NamespaceId: string;
-	Envs: string;
-	Cpu: number;
-	SlbId: string;
-	AppName: string;
-	PackageUrl: string;
-	BuildPackId: number;
-	SlbIp: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/edas.BindSlbResponse
 export interface BindSlbResponse {
-	Code: number;
-	Message: string;
-	RequestId: string;
-	Data: Data;
+    /**
+     * 接口响应码。
+     * @example `200`
+     */
+    Code: number;
+    /**
+     * 附加信息。
+     * @example `bind slb success`
+     */
+    Message: string;
+    /**
+     * 请求ID。
+     * @example `23DR4FDXXXXXXXXXX`
+     */
+    RequestId: string;
+    /**
+     * 返回数据。
+     */
+    Data: {
+        /**
+         * 私网虚拟服务组ID。
+         * @example `“”`
+         */
+        VServerGroupId: string;
+        /**
+         * 私网SLB实例ID。
+         * @example `lb-wz96ph63r************`
+         */
+        SlbId: string;
+        /**
+         * 公网SLB IP地址。
+         * @example `“”`
+         */
+        ExtSlbIp: string;
+        /**
+         * SLB监听端口。
+         * @example `80`
+         */
+        SlbPort: number;
+        /**
+         * 公网SLB名称。
+         * @example `“”`
+         */
+        ExtSlbName: string;
+        /**
+         * 公网SLB实例ID。
+         * @example `“”`
+         */
+        ExtSlbId: string;
+        /**
+         * 公网SLB虚拟服务器组ID。
+         * @example `“”`
+         */
+        ExtVServerGroupId: string;
+        /**
+         * 私网SLB名称。
+         * @example `test**********`
+         */
+        SlbName: string;
+        /**
+         * 私网SLB IP地址。
+         * @example `192.16*.*.*`
+         */
+        SlbIp: string;
+    };
 }
-

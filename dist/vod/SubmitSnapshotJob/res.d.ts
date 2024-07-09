@@ -1,13 +1,17 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vod.SnapshotJob
-export interface SnapshotJob {
-	JobId: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vod.SubmitSnapshotJobResponse
 export interface SubmitSnapshotJobResponse {
-	RequestId: string;
-	SnapshotJob: SnapshotJob;
+    /**
+     * 请求ID。
+     * @example `25818875-5F78-5EB0-4AF6-D7393642****`
+     */
+    RequestId: string;
+    /**
+     * 截图作业信息。
+     */
+    SnapshotJob: {
+        /**
+         * 截图作业ID。
+         * @example `ad90a501b1b94b72374ad0050464****`
+         */
+        JobId: string;
+    };
 }
-

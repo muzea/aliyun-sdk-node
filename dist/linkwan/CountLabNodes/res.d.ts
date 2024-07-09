@@ -1,3 +1,0 @@
-interface CountLabNodesResponse {
-}
-export { CountLabNodesResponse };

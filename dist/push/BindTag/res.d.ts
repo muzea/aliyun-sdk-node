@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/push.BindTagResponse
 export interface BindTagResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `82FD0A09-5BB8-40FB-8221-9A11FE92D620`
+     */
+    RequestId: string;
 }
-

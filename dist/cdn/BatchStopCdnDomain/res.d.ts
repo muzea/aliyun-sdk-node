@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cdn.BatchStopCdnDomainResponse
 export interface BatchStopCdnDomainResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `324AEFFF-308C-4DA7-8CD3-01B277B98F28`
+     */
+    RequestId: string;
 }
-

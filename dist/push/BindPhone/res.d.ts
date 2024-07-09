@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/push.BindPhoneResponse
 export interface BindPhoneResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `0D1126F0-F8FF-513D-BAFA-F140447BDED4`
+     */
+    RequestId: string;
 }
-

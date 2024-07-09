@@ -1,3 +1,0 @@
-interface PreCheckModifyTableShardingKeyParamResponse {
-}
-export { PreCheckModifyTableShardingKeyParamResponse };

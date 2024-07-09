@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.ModifyInstanceMinorVersionResponse
 export interface ModifyInstanceMinorVersionResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `28761557-0B33-41DF-AEEB-322DFF96****`
+     */
+    RequestId: string;
 }
-

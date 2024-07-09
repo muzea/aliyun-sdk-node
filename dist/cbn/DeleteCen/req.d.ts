@@ -1,9 +1,7 @@
-interface DeleteCenRequest {
-    "RegionId"?: string;
+export interface DeleteCenRequest {
     /**
-    * 云企业网实例的ID。
-    * @example `cen-7qthudw0ll6jmc****`
-    */ "CenId": string;
-    "OwnerId"?: number;
+     * 云企业网实例ID。
+     * @example `cen-7qthudw0ll6jmc****`
+     */
+    "CenId": string;
 }
-export { DeleteCenRequest };

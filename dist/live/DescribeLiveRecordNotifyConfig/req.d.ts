@@ -1,9 +1,7 @@
-interface DescribeLiveRecordNotifyConfigRequest {
-    "RegionId"?: string;
+export interface DescribeLiveRecordNotifyConfigRequest {
     /**
-    * 您的加速域名。
-    * @example `www.yourdomain.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 主播流域名。
+     * @example `example.com`
+     */
+    "DomainName": string;
 }
-export { DescribeLiveRecordNotifyConfigRequest };

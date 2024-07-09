@@ -1,3 +1,0 @@
-interface DescribeStreamsResponse {
-}
-export { DescribeStreamsResponse };

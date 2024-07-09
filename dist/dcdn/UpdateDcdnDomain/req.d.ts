@@ -1,21 +1,22 @@
-interface UpdateDcdnDomainRequest {
-    "RegionId"?: string;
+export interface UpdateDcdnDomainRequest {
     /**
-    * 需要接入全站加速的域名。
-    * @example `example.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 加速域名，仅支持修改单个域名。
+     * @example `example.com`
+     */
+    "DomainName": string;
     /**
-    * 回源地址列表。
-    * @example `[{"content":"1.1.1.1","type":"ipaddr","priority":"20","port":80}]`
-    */ "Sources"?: string;
+     * 回源地址列表。
+     * @example `[{"content":"10.10.10.10","type":"ipaddr","priority":"20","port":80}]`
+     */
+    "Sources"?: string;
     /**
-    * 资源组ID。
-    * @example `123`
-    */ "ResourceGroupId"?: string;
+     * 资源组ID。
+     * @example `rg-xxxxx`
+     */
+    "ResourceGroupId"?: string;
     /**
-    * 顶级接入域。
-    * @example `yourTopLevelDomain  `
-    */ "TopLevelDomain"?: string;
+     * 顶级接入域。
+     * @example `yourTopLevelDomain  `
+     */
+    "TopLevelDomain"?: string;
 }
-export { UpdateDcdnDomainRequest };

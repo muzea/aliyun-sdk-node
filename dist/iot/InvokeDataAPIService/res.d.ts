@@ -1,135 +1,67 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.FieldNameList
-export interface FieldNameList {
-	FieldNameList: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.InvalidDeviceNameList
-export interface InvalidDeviceNameList {
-	InvalidDeviceName: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.ResultList
-export interface ResultList {
-	ResultList: map[string]interface {}[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.RequestParamsItem
-export interface RequestParamsItem {
-	Name: string;
-	Type: string;
-	Desc: string;
-	Example: string;
-	Required: boolean;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.RequestParams
-export interface RequestParams {
-	RequestParamsItem: RequestParamsItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.ResponseParamsItem
-export interface ResponseParamsItem {
-	Name: string;
-	Type: string;
-	Desc: string;
-	Example: string;
-	Required: boolean;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.ResponseParams
-export interface ResponseParams {
-	ResponseParamsItem: ResponseParamsItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.SqlTemplateDTO
-export interface SqlTemplateDTO {
-	OriginSql: string;
-	TemplateSql: string;
-	RequestParams: RequestParams;
-	ResponseParams: ResponseParams;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.DesiredPropertyInfo
-export interface DesiredPropertyInfo {
-	Unit: string;
-	Identifier: string;
-	DataType: string;
-	Time: string;
-	Value: string;
-	Name: string;
-	Version: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.ListInQueryDeviceDesiredProperty
-export interface ListInQueryDeviceDesiredProperty {
-	DesiredPropertyInfo: DesiredPropertyInfo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.Data
-export interface Data {
-	DataFormat: number;
-	RequestProtocol: string;
-	UtcCreate: string;
-	DeviceActive: number;
-	RequestMethod: string;
-	Nickname: string;
-	CategoryName: string;
-	PageNo: number;
-	DevEui: string;
-	GroupId: string;
-	FileId: string;
-	LastUpdateTime: number;
-	Versions: string;
-	AliyunCommodityCode: string;
-	UtcCreatedOn: string;
-	ApplyId: number;
-	GmtCreate: number;
-	MessageId: string;
-	DeviceName: string;
-	Size: string;
-	Id2: boolean;
-	Owner: boolean;
-	NodeType: number;
-	ApiSrn: string;
-	Name: string;
-	ProductName: string;
-	GroupName: string;
-	DownloadUrl: string;
-	CategoryKey: string;
-	CreateTime: number;
-	PageSize: number;
-	DateFormat: string;
-	Description: string;
-	ApiPath: string;
-	DeviceOnline: number;
-	Status: number;
-	ProductSecret: string;
-	DeviceSecret: string;
-	Result: string;
-	ProductKey: string;
-	DisplayName: string;
-	JoinEui: string;
-	IotId: string;
-	GroupDesc: string;
-	DeviceCount: number;
-	ProtocolType: string;
-	ProductStatus: string;
-	NetType: number;
-	FieldNameList: FieldNameList;
-	InvalidDeviceNameList: InvalidDeviceNameList;
-	ResultList: ResultList;
-	SqlTemplateDTO: SqlTemplateDTO;
-	List: ListInQueryDeviceDesiredProperty;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.InvokeDataAPIServiceResponse
 export interface InvokeDataAPIServiceResponse {
-	RequestId: string;
-	Success: boolean;
-	ErrorMessage: string;
-	Code: string;
-	Data: Data;
+    /**
+     * 调用失败时，返回的错误码。更多信息，请参见[错误码](~~135176~~)。
+     * @example `Success`
+     */
+    Code: string;
+    /**
+     * 调用失败时，返回的出错信息。
+     * @example `请求参数错误`
+     */
+    ErrorMessage: string;
+    /**
+     * 阿里云为该请求生成的唯一标识符。
+     * @example `E68FE5DC-4D7B-4987-B785-DF8C6F191F5D`
+     */
+    RequestId: string;
+    /**
+     * 表示是否调用成功。
+     * - **true**：调用成功。
+     * - **false**：调用失败。
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 调用成功时，返回注册的设备信息。
+     */
+    Data: {
+        /**
+         * 显示的查询结果的页码。分页码从0开始，默认为0。
+         * 如果您要自定义显示结果页，建议您在请求参数中增加自定义参数，如**pageNo**。
+         * @example `0`
+         */
+        PageNo: number;
+        /**
+         * 每页显示的查询结果记录数。
+         * 如果您要自定义每页显示的记录数，建议您在请求参数中增加自定义参数，如**pageSize**。
+         * @example `1`
+         */
+        PageSize: number;
+        /**
+         * API资源标识符，API的全局唯一标识。
+         * 示例：`acs:iot:*:127103983461****:serveapi/device/getDeviceCountByStatus2`
+         * 以上示例中的信息说明如下：
+         * - `127103983461****`是阿里云主账号ID。
+         * - `/device/getDeviceCountByStatus`是API调用地址的自定义部分。
+         * @example `acs:iot:*:127103983461****:serveapi/device/getDeviceCountByStatus2`
+         */
+        ApiSrn: string;
+        /**
+         * 总数。
+         * @example `2`
+         */
+        TotalSize: number;
+        FieldNameList: {
+            /**
+             * 结果字段列表。
+             */
+            FieldNameList: string[];
+        };
+        ResultList: {
+            /**
+             * 结果列表。
+             */
+            ResultList: any[];
+        };
+    };
 }
-

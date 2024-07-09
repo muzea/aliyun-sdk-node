@@ -1,3 +1,0 @@
-interface ModifyAclRuleResponse {
-}
-export { ModifyAclRuleResponse };

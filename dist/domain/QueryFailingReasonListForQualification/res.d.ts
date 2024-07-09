@@ -1,15 +1,22 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/domain.FailRecord
-export interface FailRecord {
-	Date: string;
-	FailReason: string;
-	DomainNameVerificationStatus: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/domain.QueryFailingReasonListForQualificationResponse
 export interface QueryFailingReasonListForQualificationResponse {
-	RequestId: string;
-	Data: FailRecord[];
+    /**
+     * 请求ID。
+     * @example `9DFCF6F8-243C-****-8035-4B12FEFD7D48`
+     */
+    RequestId: string;
+    /**
+     * 域名资质审核失败列表。
+     */
+    Data: {
+        /**
+         * 审核日期。
+         * @example `2017-03-17 11:08:02`
+         */
+        Date: string;
+        /**
+         * 域名资质审核失败原因。
+         * @example `证件审核不通过`
+         */
+        FailReason: string;
+    }[];
 }
-

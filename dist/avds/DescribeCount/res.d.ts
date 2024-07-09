@@ -1,3 +1,0 @@
-interface DescribeCountResponse {
-}
-export { DescribeCountResponse };

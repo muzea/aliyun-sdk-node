@@ -1,7 +1,29 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cdn.BatchSetCdnDomainConfigResponse
 export interface BatchSetCdnDomainConfigResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `04F0F334-1335-436C-A1D7-6C044FE73368`
+     */
+    RequestId: string;
+    DomainConfigList: {
+        /**
+         * 域名配置清单。
+         */
+        DomainConfigModel: {
+            /**
+             * 配置ID。
+             * @example `1234567`
+             */
+            ConfigId: number;
+            /**
+             * 域名。
+             * @example `www.example.com`
+             */
+            DomainName: string;
+            /**
+             * 功能名称。
+             * @example `set_resp_header`
+             */
+            FunctionName: string;
+        }[];
+    };
 }
-

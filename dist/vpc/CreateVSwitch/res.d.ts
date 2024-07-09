@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.CreateVSwitchResponse
 export interface CreateVSwitchResponse {
-	RequestId: string;
-	VSwitchId: string;
+    /**
+     * 创建的交换机的ID。
+     * @example `vsw-25navfgbue4g****`
+     */
+    VSwitchId: string;
+    /**
+     * 请求ID。
+     * @example `0ED8D006-F706-4D23-88ED-E11ED28DCAC0`
+     */
+    RequestId: string;
 }
-

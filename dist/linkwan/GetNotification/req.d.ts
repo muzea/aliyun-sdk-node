@@ -1,8 +1,7 @@
-interface GetNotificationRequest {
-    "RegionId"?: string;
+export interface GetNotificationRequest {
     /**
-    * 通知ID。
-    * @example `123`
-    */ "NotificationId": string;
+     * 通知ID。
+     * @example `123`
+     */
+    "NotificationId": string;
 }
-export { GetNotificationRequest };

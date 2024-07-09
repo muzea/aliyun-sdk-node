@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.ModifySecurityIpsResponse
 export interface ModifySecurityIpsResponse {
-	RequestId: string;
-	TaskId: string;
+    /**
+     * 任务ID。
+     * @example `11585****`
+     */
+    TaskId: string;
+    /**
+     * 请求ID。
+     * @example ` 1AD222E9-E606-4A42-BF6D-8A4442913CEF`
+     */
+    RequestId: string;
 }
-

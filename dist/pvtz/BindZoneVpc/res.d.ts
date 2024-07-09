@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/pvtz.BindZoneVpcResponse
 export interface BindZoneVpcResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `46973D4C-E3E4-4ABA-9190-9A9DE406C7E`
+     */
+    RequestId: string;
 }
-

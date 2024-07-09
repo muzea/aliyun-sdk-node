@@ -1,3 +1,0 @@
-interface DeleteCameraResponse {
-}
-export { DeleteCameraResponse };

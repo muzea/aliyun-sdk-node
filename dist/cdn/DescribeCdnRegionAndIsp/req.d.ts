@@ -1,5 +1,2 @@
-interface DescribeCdnRegionAndIspRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeCdnRegionAndIspRequest {
 }
-export { DescribeCdnRegionAndIspRequest };

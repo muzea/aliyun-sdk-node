@@ -1,96 +1,54 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.RestoreRegions
-export interface RestoreRegions {
-	RestoreRegion: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.LatencyTopNItem
-export interface LatencyTopNItem {
-	SQLExecuteTimes: number;
-	AvgLatency: number;
-	SQLText: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.LatencyTopNItemsInDescribeSQLReports
-export interface LatencyTopNItemsInDescribeSQLReports {
-	LatencyTopNItem: LatencyTopNItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.QPSTopNItem
-export interface QPSTopNItem {
-	SQLExecuteTimes: number;
-	SQLText: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.QPSTopNItemsInDescribeSQLReports
-export interface QPSTopNItemsInDescribeSQLReports {
-	QPSTopNItem: QPSTopNItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.Item
-export interface Item {
-	CrossBackupSetSize: number;
-	Category: string;
-	DBInstanceDescription: string;
-	Engine: string;
-	CrossLogBackupId: number;
-	CrossDownloadLink: string;
-	LogFileName: string;
-	ReportTime: string;
-	BackupSetStatus: number;
-	DBInstanceStatusDesc: string;
-	BackupEnabled: string;
-	RegionId: string;
-	CrossBackupRegion: string;
-	Duration: number;
-	CrossBackupId: number;
-	BackupStartTime: string;
-	LinkExpiredTime: string;
-	DBInstanceId: string;
-	BackupSetScale: number;
-	DBInstanceStorageType: string;
-	AutoRenew: string;
-	CrossLogBackupSize: number;
-	LogEndTime: string;
-	BackupEnabledTime: string;
-	CrossBackupSetFile: string;
-	CrossBackupDownloadLink: string;
-	EngineVersion: string;
-	CrossBackupSetLocation: string;
-	LogBackupEnabled: string;
-	LogBackupEnabledTime: string;
-	BackupEndTime: string;
-	BackupMethod: string;
-	LogBeginTime: string;
-	RelService: string;
-	BackupType: string;
-	Retention: number;
-	DBInstanceStatus: string;
-	RetentType: number;
-	CrossIntranetDownloadLink: string;
-	InstanceId: number;
-	ConsistentTime: string;
-	CrossBackupType: string;
-	Status: string;
-	RelServiceId: string;
-	LockMode: string;
-	RestoreRegions: RestoreRegions;
-	LatencyTopNItems: LatencyTopNItemsInDescribeSQLReports;
-	QPSTopNItems: QPSTopNItemsInDescribeSQLReports;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.ItemsInDescribeInstanceAutoRenewalAttribute
-export interface ItemsInDescribeInstanceAutoRenewalAttribute {
-	Item: Item[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.DescribeInstanceAutoRenewalAttributeResponse
 export interface DescribeInstanceAutoRenewalAttributeResponse {
-	RequestId: string;
-	PageNumber: number;
-	TotalRecordCount: number;
-	PageRecordCount: number;
-	Items: ItemsInDescribeInstanceAutoRenewalAttribute;
+    /**
+     * 请求ID。
+     * @example `4182309D-CD29-49B1-B4A5-D7CB4D56C31F`
+     */
+    RequestId: string;
+    /**
+     * 当前页数。
+     * @example `1`
+     */
+    PageNumber: number;
+    /**
+     * 每页显示记录数。
+     * @example `1`
+     */
+    PageRecordCount: number;
+    /**
+     * 总记录数。
+     * @example `1`
+     */
+    TotalRecordCount: number;
+    Items: {
+        /**
+         * 实例续费信息列表。
+         */
+        Item: {
+            /**
+             * 实例状态。
+             * @example `Normal`
+             */
+            Status: string;
+            /**
+             * 续费周期。
+             * @example `1`
+             */
+            Duration: number;
+            /**
+             * 实例ID。
+             * @example `rm-bp****`
+             */
+            DBInstanceId: string;
+            /**
+             * 是否自动续费。
+             * @example `True`
+             */
+            AutoRenew: string;
+            /**
+             * 地域ID。
+             * @example `cn-hangzhou`
+             */
+            RegionId: string;
+        }[];
+    };
 }
-

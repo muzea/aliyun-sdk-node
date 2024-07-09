@@ -1,3 +1,0 @@
-interface DescribeCcEventsResponse {
-}
-export { DescribeCcEventsResponse };

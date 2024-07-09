@@ -1,3 +1,0 @@
-interface DescribeCcFlowResponse {
-}
-export { DescribeCcFlowResponse };

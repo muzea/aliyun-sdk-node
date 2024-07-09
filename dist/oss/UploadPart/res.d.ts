@@ -1,3 +1,1 @@
-interface UploadPartResponse {
-}
-export { UploadPartResponse };
+export type UploadPartResponse = any;

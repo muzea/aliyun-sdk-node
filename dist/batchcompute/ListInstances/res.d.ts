@@ -1,3 +1,0 @@
-interface ListInstancesResponse {
-}
-export { ListInstancesResponse };

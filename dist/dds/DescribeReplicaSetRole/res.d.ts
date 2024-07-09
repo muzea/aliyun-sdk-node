@@ -1,27 +1,54 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dds.ReplicaSet
-export interface ReplicaSet {
-	VPCCloudInstanceId: string;
-	ConnectionPort: string;
-	RoleId: string;
-	ExpiredTime: string;
-	VPCId: string;
-	VSwitchId: string;
-	ReplicaSetRole: string;
-	ConnectionDomain: string;
-	NetworkType: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dds.ReplicaSetsInDescribeReplicaSetRole
-export interface ReplicaSetsInDescribeReplicaSetRole {
-	ReplicaSet: ReplicaSet[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dds.DescribeReplicaSetRoleResponse
 export interface DescribeReplicaSetRoleResponse {
-	RequestId: string;
-	DBInstanceId: string;
-	ReplicaSets: ReplicaSetsInDescribeReplicaSetRole;
+    /**
+     * 请求ID。
+     * @example `DB4A0595-FCA9-437F-B2BB-25DBFC009D3E`
+     */
+    RequestId: string;
+    /**
+     * 实例ID。
+     * @example `dds-bpxxxxxxxx`
+     */
+    DBInstanceId: string;
+    ReplicaSets: {
+        /**
+         * 副本集角色信息列表。
+         */
+        ReplicaSet: {
+            /**
+             * 节点的连接端口。
+             * @example `3717`
+             */
+            ConnectionPort: string;
+            /**
+             * 该节点在副本集中的角色。
+             * - **Primary**：主节点。
+             * - **Secondary**：从节点。
+             * @example `Primary`
+             */
+            ReplicaSetRole: string;
+            /**
+             * 保留的经典网络地址剩余时长，单位为秒。
+             * @example `1209582`
+             */
+            ExpiredTime: string;
+            /**
+             * 节点的连接地址。
+             * @example `dds-bpxxxxxxxx.mongodb.rds.aliyuncs.com`
+             */
+            ConnectionDomain: string;
+            /**
+             * 网络类型。
+             * - **VPC**：专有网络。
+             * - **Classic**：经典网络。
+             * - **Public**：公网。
+             * @example `VPC`
+             */
+            NetworkType: string;
+            /**
+             * 节点的角色ID。
+             * @example `651xxxxx`
+             */
+            RoleId: string;
+        }[];
+    };
 }
-

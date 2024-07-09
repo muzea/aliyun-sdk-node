@@ -1,16 +1,1 @@
-{
-  "name": "ListAliyunRegion",
-  "protocol": "HTTPS|HTTP",
-  "method": "POST",
-  "path": "/pop/v5/resource/region_list",
-  "timeout": 10000,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Query",
-      "required": false
-    }
-  },
-  "res": {}
-}
+{"path":"/pop/v5/resource/region_list","methods":["post"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"read","deprecated":false,"systemTags":{},"responses":{"200":{"schema":{"type":"object","properties":{"Code":{"description":"HTTP状态码","type":"integer","format":"int32","example":"200"},"Message":{"description":"请求返回信息","type":"string","example":"success"},"RequestId":{"description":"请求ID","type":"string","example":"b197-40ab-9155-7ca7"},"RegionEntityList":{"type":"object","properties":{"RegionEntity":{"description":"地域列表","type":"array","items":{"type":"object","properties":{"Name":{"description":"地域名称","type":"string","example":"China East 1 (Hangzhou)"},"Id":{"description":"地域ID","type":"string","example":"cn-hangzhou"}}}}}}}}}},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"Code\\\": 200,\\n  \\\"Message\\\": \\\"success\\\",\\n  \\\"RequestId\\\": \\\"b197-40ab-9155-7ca7\\\",\\n  \\\"RegionEntityList\\\": {\\n    \\\"RegionEntity\\\": [\\n      {\\n        \\\"Name\\\": \\\"China East 1 (Hangzhou)\\\",\\n        \\\"Id\\\": \\\"cn-hangzhou\\\"\\n      }\\n    ]\\n  }\\n}\",\"errorExample\":\"\"},{\"type\":\"xml\",\"example\":\"<Message>success</Message>\\n<RegionEntityList>\\n    <RegionEntity>\\n        <Name>China East 1 (Hangzhou)</Name>\\n        <Id>cn-hangzhou</Id>\\n    </RegionEntity>\\n    <RegionEntity>\\n        <Name>China North 1 (Qingdao)</Name>\\n        <Id>cn-qingdao</Id>\\n    </RegionEntity>\\n    <RegionEntity>\\n        <Name>China North 2 (Beijing)</Name>\\n        <Id>cn-beijing</Id>\\n    </RegionEntity>\\n    <RegionEntity>\\n        <Name>China South 1 (Shenzhen)</Name>\\n        <Id>cn-shenzhen</Id>\\n    </RegionEntity>\\n    <RegionEntity>\\n        <Name>China East 2 (Shanghai)</Name>\\n        <Id>cn-shanghai</Id>\\n    </RegionEntity>\\n    <RegionEntity>\\n        <Name>Asia Pacific SE 1 (Singapore)</Name>\\n        <Id>ap-southeast-1</Id>\\n    </RegionEntity>\\n    <RegionEntity>\\n        <Name>Hong Kong (China)</Name>\\n        <Id>cn-hongkong</Id>\\n    </RegionEntity>\\n    <RegionEntity>\\n        <Name>Australia(Sydney)</Name>\\n        <Id>ap-southeast-2</Id>\\n    </RegionEntity>\\n    <RegionEntity>\\n        <Name>America(Virginia)</Name>\\n        <Id>us-east-1</Id>\\n    </RegionEntity>\\n    <RegionEntity>\\n        <Name>China North 3</Name>\\n        <Id>cn-zhangjiakou</Id>\\n    </RegionEntity>\\n    <RegionEntity>\\n        <Name>Germany (Frankfurt)</Name>\\n        <Id>eu-central-1</Id>\\n    </RegionEntity>\\n    <RegionEntity>\\n        <Name>public</Name>\\n        <Id>public</Id>\\n    </RegionEntity>\\n</RegionEntityList>\\n<Code>200</Code>\",\"errorExample\":\"\"}]","title":"获取阿里云地域列表","summary":"获取阿里云地域列表。","requestParamsDescription":" 无请求参数。","responseParamsDescription":" ","parameters":[]}

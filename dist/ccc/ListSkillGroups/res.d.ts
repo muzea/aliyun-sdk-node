@@ -1,110 +1,87 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.ContactFlowVersion
-export interface ContactFlowVersion {
-	Canvas: string;
-	Content: string;
-	LockedBy: string;
-	ContactFlowVersionDescription: string;
-	Version: string;
-	LastModified: string;
-	LastModifiedBy: string;
-	Status: string;
-	ContactFlowVersionId: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.VersionsInListContactFlows
-export interface VersionsInListContactFlows {
-	ContactFlowVersion: ContactFlowVersion[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.PhoneNumbersInListVoiceAppraise
-export interface PhoneNumbersInListVoiceAppraise {
-	PhoneNumber: PhoneNumber[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.ContactFlow
-export interface ContactFlow {
-	ContactFlowDescription: string;
-	InstanceId: string;
-	ContactFlowName: string;
-	ContactFlowId: string;
-	AppliedVersion: string;
-	Type: string;
-	Versions: VersionsInListContactFlows;
-	PhoneNumbers: PhoneNumbersInListVoiceAppraise;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.PrivacyNumber
-export interface PrivacyNumber {
-	PoolId: string;
-	BizId: string;
-	RegionNameCity: string;
-	TelX: string;
-	PhoneNumber: string;
-	PoolName: string;
-	Extra: string;
-	SubId: string;
-	Type: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.SkillGroupsInAddBulkPhoneNumbers
-export interface SkillGroupsInAddBulkPhoneNumbers {
-	SkillGroup: SkillGroup[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.PhoneNumber
-export interface PhoneNumber {
-	Usage: string;
-	Trunks: number;
-	PrivateFlag: boolean;
-	City: string;
-	Number: string;
-	Province: string;
-	Assignee: string;
-	InstanceId: string;
-	RemainingTime: number;
-	NumberCommodityStatus: number;
-	TestOnly: boolean;
-	PhoneNumberDescription: string;
-	AllowOutbound: boolean;
-	SipTelX: string;
-	PhoneNumberId: string;
-	ContactFlow: ContactFlow;
-	PrivacyNumber: PrivacyNumber;
-	SkillGroups: SkillGroupsInAddBulkPhoneNumbers;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.OutboundPhoneNumbersInListSkillGroups
-export interface OutboundPhoneNumbersInListSkillGroups {
-	PhoneNumber: PhoneNumber[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.SkillGroup
-export interface SkillGroup {
-	SkillGroupName: string;
-	AccQueueName: string;
-	SkillGroupId: string;
-	SkillGroupDescription: string;
-	RoutingStrategy: string;
-	InstanceId: string;
-	AccSkillGroupName: string;
-	UserCount: number;
-	OutboundPhoneNumbers: OutboundPhoneNumbersInListSkillGroups;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.SkillGroupsInListSkillGroups
-export interface SkillGroupsInListSkillGroups {
-	SkillGroup: SkillGroup[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.ListSkillGroupsResponse
 export interface ListSkillGroupsResponse {
-	RequestId: string;
-	Success: boolean;
-	Code: string;
-	Message: string;
-	HttpStatusCode: number;
-	SkillGroups: SkillGroupsInListSkillGroups;
+    /**
+     * 响应码。
+     * @example `OK`
+     */
+    Code: string;
+    /**
+     * HTTP状态码。
+     * @example `200`
+     */
+    HttpStatusCode: number;
+    /**
+     * 响应信息。
+     * @example `无`
+     */
+    Message: string;
+    /**
+     * 请求ID。
+     * @example `BA03159C-E808-4FF1-B27E-A61B6E888D7F`
+     */
+    RequestId: string;
+    /**
+     * 数据。
+     */
+    Data: {
+        /**
+         * 分页序号，范围1-100。
+         * @example `1`
+         */
+        PageNumber: number;
+        /**
+         * 分页大小，范围1-100。
+         * @example `10`
+         */
+        PageSize: number;
+        /**
+         * 总数。
+         * @example `1`
+         */
+        TotalCount: number;
+        /**
+         * 技能组列表。
+         */
+        List: {
+            /**
+             * 技能组展示名。
+             * @example `测试技能组`
+             */
+            DisplayName: string;
+            /**
+             * 技能组的描述。
+             * @example `云呼叫中心的测试技能组。`
+             */
+            Description: string;
+            /**
+             * 技能组关联的号码数量。
+             * @example `1`
+             */
+            PhoneNumberCount: number;
+            /**
+             * 技能组ID。
+             * @example `skillgroup@ccc-test`
+             */
+            SkillGroupId: string;
+            /**
+             * 技能组名称。
+             * @example `skillgroup`
+             */
+            SkillGroupName: string;
+            /**
+             * 技能组关联的坐席数量。
+             * @example `2`
+             */
+            UserCount: number;
+            /**
+             * 实例ID。
+             * @example `ccc-test`
+             */
+            InstanceId: string;
+            /**
+             * 媒体类型，默认是语音(AUDIO), 其他可选参数包括CHAT和VIDEO。
+             * @example `CHAT`
+             */
+            MediaType: string;
+        }[];
+    };
 }
-

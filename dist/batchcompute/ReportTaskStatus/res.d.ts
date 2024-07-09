@@ -1,3 +1,0 @@
-interface ReportTaskStatusResponse {
-}
-export { ReportTaskStatusResponse };

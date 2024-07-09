@@ -1,9 +1,7 @@
-interface DeleteEditingProjectRequest {
-    "RegionId"?: string;
+export interface DeleteEditingProjectRequest {
     /**
-    * 云剪辑工程ID。支持多个云剪辑工程，以逗号分隔。
-    * @example `fb2101bf24bf41c78b2754cb318787dc`
-    */ "ProjectIds": string;
-    "OwnerId"?: string;
+     * 云剪辑工程ID。多个ID使用英文逗号（,）分隔。
+     * @example `fb2101bf24bf41*****cb318787dc`
+     */
+    "ProjectIds": string;
 }
-export { DeleteEditingProjectRequest };

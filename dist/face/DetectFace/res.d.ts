@@ -1,3 +1,0 @@
-interface DetectFaceResponse {
-}
-export { DetectFaceResponse };

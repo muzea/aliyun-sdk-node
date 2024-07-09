@@ -1,3 +1,0 @@
-interface DescribeJobGroupsResponse {
-}
-export { DescribeJobGroupsResponse };

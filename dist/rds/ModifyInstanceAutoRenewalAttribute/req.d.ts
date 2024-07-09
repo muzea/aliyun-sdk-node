@@ -1,24 +1,30 @@
-interface ModifyInstanceAutoRenewalAttributeRequest {
+export interface ModifyInstanceAutoRenewalAttributeRequest {
     /**
-    * 地域名称的ID，例如：cn-hangzhou
-    * @example `cn-hangzhou`
-    */ "RegionId": string;
+     * 地域ID。可调用DescribeRegions获取。
+     * @example `cn-hangzhou`
+     */
+    "RegionId": string;
     /**
-    * 实例名。
-    * @example ` rm-bp1842vmucoa5w874`
-    */ "DBInstanceId": string;
-    "OwnerId"?: number;
+     * 用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。
+     * @example `ETnLKlblzczshOTUbOCz****`
+     */
+    "ClientToken"?: string;
     /**
-    * 用于保证幂等性。
-    * @example `ETnLKlblzczshOTUbOCziJZNwHlYBQ`
-    */ "ClientToken"?: string;
+     * 实例ID。可调用DescribeDBInstances获取。
+     * @example `rm-bp****`
+     */
+    "DBInstanceId": string;
     /**
-    * 自动续费周期，当AutoRenew=”True”时，该值有效且必填。取值为1-12。表示实例到期时，自动续费1-12个月。
-    * @example `True`
-    */ "Duration"?: string;
+     * 自动续费时的续费月数。取值：**1~12**。
+     * >当**AutoRenew**=**True**时必须传入此参数。
+     * @example `2`
+     */
+    "Duration"?: string;
     /**
-    * 取值为：<br>AutoRenew=”True”设置自动续费;<br>AutoRenew=”False” 取消自动续费。
-    * @example `True`
-    */ "AutoRenew"?: string;
+     * 开启或关闭自动续费。取值：
+     * - **True**
+     * - **False**
+     * @example `True`
+     */
+    "AutoRenew"?: string;
 }
-export { ModifyInstanceAutoRenewalAttributeRequest };

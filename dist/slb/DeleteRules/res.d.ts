@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.DeleteRulesResponse
 export interface DeleteRulesResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C`
+     */
+    RequestId: string;
 }
-

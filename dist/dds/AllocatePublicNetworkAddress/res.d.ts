@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dds.AllocatePublicNetworkAddressResponse
 export interface AllocatePublicNetworkAddressResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `8AA45036-497F-52E7-B951-F9C7B239****`
+     */
+    RequestId: string;
 }
-

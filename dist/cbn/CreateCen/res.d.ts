@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cbn.CreateCenResponse
 export interface CreateCenResponse {
-	RequestId: string;
-	CenId: string;
+    /**
+     * 云企业网实例的ID。
+     * @example `cen-dc4vwznpwbobrl****`
+     */
+    CenId: string;
+    /**
+     * 请求ID。
+     * @example `0C2EE7A8-74D4-4081-8236-CEBDE3BBCF50`
+     */
+    RequestId: string;
 }
-

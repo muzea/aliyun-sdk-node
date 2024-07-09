@@ -1,3 +1,0 @@
-interface AddFaceResponse {
-}
-export { AddFaceResponse };

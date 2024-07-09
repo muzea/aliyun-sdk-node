@@ -1,29 +1,34 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dds.Items
-export interface Items {
-	Region: string;
-	Count: number;
-	DBInstanceDescription: string;
-	Engine: string;
-	ReadWriteType: string;
-	DomainMode: string;
-	ReplicaStatus: string;
-	ReplicaMode: string;
-	DBInstanceStatus: string;
-	RegionId: string;
-	Role: string;
-	InstanceNetworkType: string;
-	ReplicaDescription: string;
-	DBInstanceId: string;
-	TaskType: string;
-	ReplicaId: string;
-	DBInstances: Items[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dds.DescribeActiveOperationTaskTypeResponse
 export interface DescribeActiveOperationTaskTypeResponse {
-	RequestId: string;
-	TypeList: Items[];
+    /**
+     * 请求ID。
+     * @example `C7EE83BF-7BA8-5087-BAC9-ED85ED54****`
+     */
+    RequestId: string;
+    /**
+     * 任务列表。
+     */
+    TypeList: {
+        /**
+         * 任务的类型。返回值：
+         * - **rds_apsaradb_transfer**：实例迁移。
+         * - **rds_apsaradb_upgrade**：小版本升级。
+         * @example `rds_apsaradb_upgrade`
+         */
+        TaskType: string;
+        /**
+         * 任务类型（英文）。
+         * @example `rds_apsaradb_upgrade`
+         */
+        TaskTypeInfoEn: string;
+        /**
+         * 任务类型（中文）。
+         * @example `小版本升级`
+         */
+        TaskTypeInfoZh: string;
+        /**
+         * 待处理的任务数量。
+         * @example `1`
+         */
+        Count: number;
+    }[];
 }
-

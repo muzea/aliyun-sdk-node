@@ -1,3 +1,1 @@
-interface GetSymlinkResponse {
-}
-export { GetSymlinkResponse };
+export type GetSymlinkResponse = any;

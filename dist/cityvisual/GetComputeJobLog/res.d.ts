@@ -1,3 +1,0 @@
-interface GetComputeJobLogResponse {
-}
-export { GetComputeJobLogResponse };

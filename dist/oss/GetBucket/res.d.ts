@@ -1,3 +1,0 @@
-interface GetBucketResponse {
-}
-export { GetBucketResponse };

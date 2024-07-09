@@ -1,7 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ehpc.RecoverClusterResponse
 export interface RecoverClusterResponse {
-	RequestId: string;
+    /**
+     * 任务ID。
+     * @example `18FB21E3-F423-4B84-BB63-D8887A29****`
+     */
+    TaskId: string;
+    /**
+     * 请求ID。
+     * @example `18FB21E3-F423-4B84-BB63-D8887A29****`
+     */
+    RequestId: string;
 }
-

@@ -1,26 +1,33 @@
-interface DescribeCenRegionDomainRouteEntriesRequest {
-    "RegionId"?: string;
+export interface DescribeCenRegionDomainRouteEntriesRequest {
     /**
-    * 指定待查询的云企业网实例的ID。
-    * @example `cen-7qthudw0ll6j****`
-    */ "CenId": string;
+     * 云企业网实例ID。
+     * @example `cen-7qthudw0ll6j****`
+     */
+    "CenId": string;
     /**
-    * 指定待查询的地域的ID。
-    * @example `cn-hangzhou`
-    */ "CenRegionId": string;
+     * 地域ID。
+     * 您可以通过调用[DescribeChildInstanceRegions](~~132080~~)接口获取地域ID。
+     * @example `cn-hangzhou`
+     */
+    "CenRegionId": string;
     /**
-    * @example `111`
-    */ "OwnerId"?: number;
+     * 查询页码。默认值为**1**。
+     * @example `1`
+     */
+    "PageNumber"?: number;
     /**
-    * 列表的页码，默认值为**1**。
-    * @example `1`
-    */ "PageNumber"?: number;
+     * 分页查询时每页显示的条目数。默认值为**10**，取值范围：**1**~**500**。
+     * @example `10`
+     */
+    "PageSize"?: number;
     /**
-    * 分页查询时每页的行数，最大值为**50**，默认值为**10**。
-    * @example `1`
-    */ "PageSize"?: number;
-    /**
-    * @example `111`
-    */ "Status"?: string;
+     * 路由条目的状态。取值：
+     * - **Active**（默认值）：可用。
+     * - **Candidate**：备份。
+     * - **Rejected**：拒绝。
+     * - **Prohibited**：禁用。
+     * - **All**：表示查询当前地域下所有状态的路由条目信息。
+     * @example `Active`
+     */
+    "Status"?: string;
 }
-export { DescribeCenRegionDomainRouteEntriesRequest };

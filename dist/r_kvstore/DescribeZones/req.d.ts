@@ -1,13 +1,14 @@
-interface DescribeZonesRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeZonesRequest {
     /**
-    * 返回值的语言，取值：
-    * * zh-CN（中文）
-    * * en-US（英文）
-    * * ja（日文）
-    * > 默认值：zh-CN。
-    * @example `en-US`
-    */ "AcceptLanguage"?: string;
+     * 地域ID。
+     * @example `cn-huhehaote`
+     */
+    "RegionId"?: string;
+    /**
+     * 设置返回后可用区名称的语言，取值：
+     * * **zh-CN**（默认）：中文。
+     * * **en-US**：英文。
+     * @example `en-US`
+     */
+    "AcceptLanguage"?: string;
 }
-export { DescribeZonesRequest };

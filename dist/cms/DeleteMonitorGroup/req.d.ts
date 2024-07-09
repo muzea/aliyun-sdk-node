@@ -1,8 +1,7 @@
-interface DeleteMonitorGroupRequest {
-    "RegionId"?: string;
+export interface DeleteMonitorGroupRequest {
     /**
-    * 应用分组ID。
-    * @example `12345`
-    */ "GroupId"?: number;
+     * 应用分组ID。
+     * @example `123456`
+     */
+    "GroupId": number;
 }
-export { DeleteMonitorGroupRequest };

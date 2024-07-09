@@ -1,12 +1,14 @@
-interface DescribeSiteMonitorAttributeRequest {
-    "RegionId"?: string;
+export interface DescribeSiteMonitorAttributeRequest {
     /**
-    * 要查询的任务ID。
-    * @example `a1ecd34a-8157-44d9-b065-14950837****`
-    */ "TaskId": string;
+     * 监控任务ID。
+     * @example `cc641dff-c19d-45f3-ad0a-818a0c4f****`
+     */
+    "TaskId": string;
     /**
-    * 任务详情的返回是否包含报警规则。
-    * @example `false`
-    */ "IncludeAlert"?: boolean;
+     * 返回的任务详情是否包含报警规则。
+     * - true：如果该参数的取值为true，则返回报警规则。
+     * - false（默认值）：如果该参数的取值为false，则不返回报警规则。
+     * @example `false`
+     */
+    "IncludeAlert"?: boolean;
 }
-export { DescribeSiteMonitorAttributeRequest };

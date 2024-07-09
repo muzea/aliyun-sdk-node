@@ -1,3 +1,0 @@
-interface CreateProjectResponse {
-}
-export { CreateProjectResponse };

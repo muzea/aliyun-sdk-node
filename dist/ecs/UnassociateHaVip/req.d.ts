@@ -1,9 +1,7 @@
-interface UnassociateHaVipRequest {
+export interface UnassociateHaVipRequest {
+    "ClientToken"?: string;
     "RegionId": string;
     "HaVipId": string;
     "InstanceId": string;
-    "OwnerId"?: number;
-    "ClientToken"?: string;
     "Force"?: string;
 }
-export { UnassociateHaVipRequest };

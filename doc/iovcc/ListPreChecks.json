@@ -1,18 +1,1 @@
-{
-  "name": "ListPreChecks",
-  "protocol": "HTTPS|HTTP",
-  "method": "POST|GET",
-  "path": "/",
-  "timeout": 10000,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Host",
-      "checkBlank": "false",
-      "required": false,
-      "docRequired": false
-    }
-  },
-  "res": {}
-}
+{"methods":["post","get"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"read","systemTags":{"operationType":"list"},"parameters":[],"responses":{"200":{"schema":{"type":"object","properties":{"RequestId":{"description":"本次请求编号","type":"string","example":"BB80AC68-1E8A-4A46-B348-7D875AE9132A"},"PreChecks":{"description":"预检返回结果","type":"array","items":{"type":"object","properties":{"Key":{"description":"检查项","type":"string","example":"IovccEnabled"},"Link":{"description":"检查项主页","type":"string","example":"https://www.aliyun.com/product/iovcc"},"Price":{"description":"检查项收费模式","type":"string","example":"FreeTrial"},"State":{"description":"检查结果","type":"string","example":"Enabled"}}}}}}}},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"RequestId\\\": \\\"BB80AC68-1E8A-4A46-B348-7D875AE9132A\\\",\\n  \\\"PreChecks\\\": [\\n    {\\n      \\\"Key\\\": \\\"IovccEnabled\\\",\\n      \\\"Link\\\": \\\"https://www.aliyun.com/product/iovcc\\\",\\n      \\\"Price\\\": \\\"FreeTrial\\\",\\n      \\\"State\\\": \\\"Enabled\\\"\\n    }\\n  ]\\n}\",\"errorExample\":\"{\\n  \\\"RequestId\\\": \\\"6F25F67C-F411-499F-BCE2-67CA563CB064\\\",\\n  \\\"HostId\\\": \\\"iovcc.cn-shanghai.aliyuncs.com\\\",\\n  \\\"Code\\\": \\\"InvalidTenant\\\",\\n  \\\"Message\\\": \\\"User is not a valid tenant\\\"\\n}\"},{\"type\":\"xml\",\"example\":\"<ListPreChecksResponse>\\n\\t<PreChecks>\\n\\t\\t<Link>https://www.aliyun.com/product/iovcc</Link>\\n\\t\\t<Key>IovccEnabled</Key>\\n\\t\\t<State>Enabled</State>\\n\\t\\t<Price>FreeTrial</Price>\\n\\t</PreChecks>\\n\\t<RequestId>D1BE8AC4-BE5B-4B04-B78B-A64C6BDB2AC2</RequestId>\\n</ListPreChecksResponse>\",\"errorExample\":\"\"}]","title":"查询预检查结果","summary":"调用ListPreChecks查询预检查结果。","description":"> 查询用户是否已开通本产品以及依赖的其它云产品。","requestParamsDescription":" ","responseParamsDescription":" ","extraInfo":" "}

@@ -1,5 +1,7 @@
-interface DeleteBucketWebsiteRequest {
-    "BucketName": any;
-    "website": any;
+export interface DeleteBucketWebsiteRequest {
+    /**
+     * Bucket名称。
+     * @example `examplebucket`
+     */
+    "bucket": string;
 }
-export { DeleteBucketWebsiteRequest };

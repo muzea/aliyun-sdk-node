@@ -1,7 +1,10 @@
-interface SetCasterSyncGroupRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface SetCasterSyncGroupRequest {
+    "SyncGroup"?: {
+        HostResourceId: string;
+        Mode: number;
+        ResourceIds: string[];
+        SyncDelayThreshold: number;
+        SyncOffsets: number[];
+    }[];
     "CasterId": string;
-    "SyncGroup"?: string[];
 }
-export { SetCasterSyncGroupRequest };

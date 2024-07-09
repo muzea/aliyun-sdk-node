@@ -1,21 +1,26 @@
-interface DescribeAutoSnapshotPoliciesRequest {
-    "RegionId": string;
+export interface DescribeAutoSnapshotPoliciesRequest {
     /**
-    * 文件系统类型，可选值：extreme。
-    * @example `extreme`
-    */ "FileSystemType": string;
+     * 自动快照策略ID。
+     * @example `sp-extreme-233e6****`
+     */
+    "AutoSnapshotPolicyId"?: string;
     /**
-    * 自动快照策略 ID。
-    * @example `sp-extreme-233e6ylv0`
-    */ "AutoSnapshotPolicyId"?: string;
+     * 每个分页包含的自动快照策略的个数。
+     * 取值范围：1~100
+     * 默认值：10
+     * @example `10`
+     */
+    "PageSize"?: number;
     /**
-    *
-    * 分页展示返回的自动快照策略时的每页行数。 最大值：100，默认值：10。
-    * @example `10`
-    */ "PageSize"?: number;
+     * 自动快照策略列表的页码。
+     * 起始值（默认值）：1
+     * @example `1`
+     */
+    "PageNumber"?: number;
     /**
-    * 自动快照策略返回结果分多页展示。 起始值：1，默认值：1。
-    * @example `1`
-    */ "PageNumber"?: number;
+     * 文件系统类型。
+     * 取值：extreme（极速型NAS）
+     * @example `extreme`
+     */
+    "FileSystemType"?: string;
 }
-export { DescribeAutoSnapshotPoliciesRequest };

@@ -1,3 +1,0 @@
-interface DescribeWebServersResponse {
-}
-export { DescribeWebServersResponse };

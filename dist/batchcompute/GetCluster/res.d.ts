@@ -1,3 +1,0 @@
-interface GetClusterResponse {
-}
-export { GetClusterResponse };

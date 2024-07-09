@@ -1,9 +1,7 @@
-interface DescribeDcdnDomainCertificateInfoRequest {
-    "RegionId"?: string;
+export interface DescribeDcdnDomainCertificateInfoRequest {
     /**
-    * 加速域名。
-    * @example `test.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 加速域名，仅支持查询单个域名。
+     * @example `example.com`
+     */
+    "DomainName": string;
 }
-export { DescribeDcdnDomainCertificateInfoRequest };

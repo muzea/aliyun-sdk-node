@@ -1,9 +1,7 @@
-interface UpgradeDBInstanceKernelVersionRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface UpgradeDBInstanceKernelVersionRequest {
     /**
-    * 实例ID。
-    * @example `dds-bpxxxxxxxx`
-    */ "DBInstanceId"?: string;
+     * 实例ID。
+     * @example `dds-bp2235****`
+     */
+    "DBInstanceId": string;
 }
-export { UpgradeDBInstanceKernelVersionRequest };

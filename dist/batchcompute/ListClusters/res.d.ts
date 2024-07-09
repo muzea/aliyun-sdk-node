@@ -1,3 +1,0 @@
-interface ListClustersResponse {
-}
-export { ListClustersResponse };

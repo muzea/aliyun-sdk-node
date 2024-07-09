@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/alidns.UpdateGtmAddressPoolResponse
 export interface UpdateGtmAddressPoolResponse {
-	RequestId: string;
+    /**
+     * 唯一请求标识。
+     * @example `6856BCF6-11D6-4D7E-AC53-FD579933522B`
+     */
+    RequestId: string;
 }
-

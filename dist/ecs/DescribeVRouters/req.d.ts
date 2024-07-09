@@ -1,8 +1,6 @@
-interface DescribeVRoutersRequest {
-    "RegionId": string;
-    "OwnerId"?: number;
+export interface DescribeVRoutersRequest {
     "VRouterId"?: string;
+    "RegionId": string;
     "PageNumber"?: number;
     "PageSize"?: number;
 }
-export { DescribeVRoutersRequest };

@@ -1,8 +1,14 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.CheckCreateDdrDBInstanceResponse
 export interface CheckCreateDdrDBInstanceResponse {
-	RequestId: string;
-	IsValid: string;
+    /**
+     * 是否能创建容灾恢复实例。取值：
+     * - **true**
+     * - **false**
+     * @example `true`
+     */
+    IsValid: string;
+    /**
+     * 请求ID。
+     * @example `1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC`
+     */
+    RequestId: string;
 }
-

@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.RollbackInstanceVersionResponse
 export interface RollbackInstanceVersionResponse {
-	RequestId: string;
-	Data: string;
+    /**
+     * 实例版本是否回滚成功。
+     * @example `true`
+     */
+    Data: string;
+    /**
+     * 请求ID。
+     * @example `DSSDF-SEWE-*****`
+     */
+    RequestId: string;
 }
-

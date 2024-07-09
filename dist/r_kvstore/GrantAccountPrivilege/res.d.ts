@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.GrantAccountPrivilegeResponse
 export interface GrantAccountPrivilegeResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `3845BDF5-15A6-4444-B770-78501819****`
+     */
+    RequestId: string;
 }
-

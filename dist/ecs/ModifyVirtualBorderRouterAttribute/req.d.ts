@@ -1,4 +1,4 @@
-interface ModifyVirtualBorderRouterAttributeRequest {
+export interface ModifyVirtualBorderRouterAttributeRequest {
     "RegionId": string;
     "VbrId": string;
     "VlanId"?: number;
@@ -8,8 +8,6 @@ interface ModifyVirtualBorderRouterAttributeRequest {
     "PeeringSubnetMask"?: string;
     "Description"?: string;
     "Name"?: string;
-    "OwnerId"?: number;
     "ClientToken"?: string;
     "UserCidr"?: string;
 }
-export { ModifyVirtualBorderRouterAttributeRequest };

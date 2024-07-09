@@ -1,16 +1,1 @@
-{
-  "name": "CreateInstance",
-  "protocol": "HTTPS|HTTP",
-  "method": "POST",
-  "path": "/openapi/instances",
-  "timeout": 10000,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Query",
-      "required": false
-    }
-  },
-  "res": {}
-}
+{"path":"/v2/openapi/instances","methods":["post"],"schemes":["http","https"],"security":[{"AK":[]}],"consumes":["application/json"],"produces":["application/json"],"operationType":"write","systemTags":{"operationType":"create","abilityTreeCode":"18666","abilityTreeNodes":["FEATUREairec5G3YBA"]},"parameters":[],"responses":{"200":{"schema":{"description":"返回参数。","type":"object","properties":{"result":{"description":"返回参数。","type":"object","properties":{"instanceId":{"description":"实例ID。","type":"string","example":"airec-cn-****"}}},"code":{"description":"错误码。","type":"string","example":"InternalServerError"},"requestId":{"description":"请求ID。","type":"string","example":"8F81A922-6C81-46D6-B78C-CC35E16B1691"},"message":{"description":"错误信息。","type":"string","example":"An internal server error occurred"}}}},"5XX":{"schema":{"type":"object","properties":{"requestId":{"type":"string"}}}}},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"result\\\": {\\n    \\\"instanceId\\\": \\\"airec-cn-****\\\"\\n  },\\n  \\\"code\\\": \\\"InternalServerError\\\",\\n  \\\"requestId\\\": \\\"8F81A922-6C81-46D6-B78C-CC35E16B1691\\\",\\n  \\\"message\\\": \\\"An internal server error occurred\\\"\\n}\",\"errorExample\":\"\"},{\"type\":\"xml\",\"example\":\"<RequestId>8F81A922-6C81-46D6-B78C-CC35E16B1691</RequestId>\\n<Result>\\n    <InstanceId>airec-cn-xxxxx</InstanceId>\\n</Result>\",\"errorExample\":\"\"}]","title":"创建一个预付费实例","summary":"创建一个智能推荐实例。","requestParamsDescription":"| 参数 | 类型 | 是否必需 | 描述 |\n| :--- | :--- | :--- | :--- |\n| type | String |是| 指定实例的类型，分为算法配置版（ Algorithm Configuration Edition ）和行业运营版（Industry Operation Edition）。|\n| chargeType | String |是|实例的付费方式。取值范围： PREPAY：预付费，包年包月。选择该类付费方式时，您必须确认自己的账号支持余额支付/信用支付，否则将返回 InvalidPayMethod 的错误提示，并且需要指定paymentInfo参数。POSTPAY：按量付费（当前暂不支持）。|\n| quota| Map| 是|您要申请的配额信息|\n| userCountPerUnit|Integer|是|您要申请的用户表文档数的配额信息，限制请看系统限制。|\n| itemCountPerUnit|Integer|是|您要申请的物品表文档数的配额信息，限制请看系统限制。|\n| qps|Integer|是|您要申请的推荐请求的QPS配额信息，限制请看系统限制。|\n| paymentInfo|Map|否|付费信息。|\n| duration|Integer|否|付费周期，包含1，2，3，4，5，6，7，8，9，10，12|\n| pricingCycle|String|否|周期单位，包含：月（Month），年（Year）等|\n| autoRenew|Boolean|否|是否自动续费，包含：是（true）和否（false）|","responseParamsDescription":" ","extraInfo":" "}

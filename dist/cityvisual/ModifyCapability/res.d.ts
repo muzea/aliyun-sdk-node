@@ -1,3 +1,0 @@
-interface ModifyCapabilityResponse {
-}
-export { ModifyCapabilityResponse };

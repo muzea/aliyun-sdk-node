@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.RemoveTagsFromResourceResponse
 export interface RemoveTagsFromResourceResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `AE00ACCD-1CF9-4920-9BB9-0175EFF43405`
+     */
+    RequestId: string;
 }
-

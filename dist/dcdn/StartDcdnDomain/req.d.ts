@@ -1,9 +1,7 @@
-interface StartDcdnDomainRequest {
-    "RegionId"?: string;
+export interface StartDcdnDomainRequest {
     /**
-    * 需要接入全站加速的域名。
-    * @example `example.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 加速域名，仅支持启用单个。
+     * @example `example.com`
+     */
+    "DomainName": string;
 }
-export { StartDcdnDomainRequest };

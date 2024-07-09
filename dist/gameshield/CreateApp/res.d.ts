@@ -1,3 +1,0 @@
-interface CreateAppResponse {
-}
-export { CreateAppResponse };

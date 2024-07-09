@@ -1,3 +1,0 @@
-interface DescribeWorkGroupsResponse {
-}
-export { DescribeWorkGroupsResponse };

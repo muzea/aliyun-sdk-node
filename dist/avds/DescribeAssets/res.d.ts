@@ -1,3 +1,0 @@
-interface DescribeAssetsResponse {
-}
-export { DescribeAssetsResponse };

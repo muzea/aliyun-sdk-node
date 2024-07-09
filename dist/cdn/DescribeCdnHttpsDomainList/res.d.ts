@@ -1,39 +1,66 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cdn.CertInfo
-export interface CertInfo {
-	CertName: string;
-	CertOrg: string;
-	DomainList: string;
-	Issuer: string;
-	DomainNames: string;
-	CertExpireTime: string;
-	CertStatus: string;
-	CertType: string;
-	DomainName: string;
-	DomainCnameStatus: string;
-	ServerCertificate: string;
-	ServerCertificateStatus: string;
-	CertUpdateTime: string;
-	CertSubjectCommonName: string;
-	CertCommonName: string;
-	CertCaIsLegacy: string;
-	Status: string;
-	CertExpired: string;
-	CertDomainName: string;
-	CertLife: string;
-	CertStartTime: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cdn.CertInfosInDescribeCdnHttpsDomainList
-export interface CertInfosInDescribeCdnHttpsDomainList {
-	CertInfo: CertInfo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cdn.DescribeCdnHttpsDomainListResponse
 export interface DescribeCdnHttpsDomainListResponse {
-	RequestId: string;
-	TotalCount: number;
-	CertInfos: CertInfosInDescribeCdnHttpsDomainList;
+    /**
+     * 总条数。
+     * @example `16`
+     */
+    TotalCount: number;
+    /**
+     * 请求ID。
+     * @example `F5E8DF64-7175-4186-9B06-F002C0BBD0C5`
+     */
+    RequestId: string;
+    CertInfos: {
+        /**
+         * 证书信息列表。
+         */
+        CertInfo: {
+            /**
+             * 证书开始时间。
+             * @example `2018-11-26 14:45:09`
+             */
+            CertStartTime: string;
+            /**
+             * 证书过期时间。
+             * @example `2018-12-26 14:45:09`
+             */
+            CertExpireTime: string;
+            /**
+             * 证书更新时间。
+             * @example `2019-01-08 18:33:16`
+             */
+            CertUpdateTime: string;
+            /**
+             * 证书类型。
+             * - **free**：免费证书。
+             * - **cas**：云盾证书。
+             * - **upload**：自定义上传。
+             * @example `free`
+             */
+            CertType: string;
+            /**
+             * 证书名称。
+             * @example `test`
+             */
+            CertName: string;
+            /**
+             * 证书状态。
+             * - **ok**：正常。
+             * - **mismatch**：域名与证书不匹配。
+             * - **expired**：已过期。
+             * - **expire_soon**：即将过期。
+             * @example `mismatch`
+             */
+            CertStatus: string;
+            /**
+             * 加速域名。
+             * @example `example.com`
+             */
+            DomainName: string;
+            /**
+             * 证书主域名。
+             * @example `example.org`
+             */
+            CertCommonName: string;
+        }[];
+    };
 }
-

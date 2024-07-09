@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/domain.CheckMaxYearOfServerLockResponse
 export interface CheckMaxYearOfServerLockResponse {
-	RequestId: string;
-	MaxYear: number;
+    /**
+     * 请求ID。
+     * @example `9DFCF6F8-243C-****-8035-4B12FEFD7D48`
+     */
+    RequestId: string;
+    /**
+     * 可购买的最大年限。
+     * @example `10`
+     */
+    MaxYear: number;
 }
-

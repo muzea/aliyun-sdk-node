@@ -1,3 +1,0 @@
-interface DescribeCcTotalFwResponse {
-}
-export { DescribeCcTotalFwResponse };

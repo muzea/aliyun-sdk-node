@@ -1,117 +1,54 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/airec.Meta
-export interface Meta {
-	Path: string;
-	Partition: string;
-	Timestamp: number;
-	ProjectName: string;
-	BucketName: string;
-	TableName: string;
-	AccessKeyId: string;
-	Type: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/airec.Overall
-export interface Overall {
-	BhvCount: number;
-	ItemItemCount: number;
-	UserUserCount: number;
-	ItemRepetitiveRate: number;
-	UserRepetitiveRate: number;
-	UserLegalRate: number;
-	ItemLegalRate: number;
-	BhvLegalRate: number;
-	UserCompleteRate: number;
-	ItemCompleteRate: number;
-	UserLoginRate: number;
-	ItemLoginRate: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/airec.SettingsItemInDeleteMix
-export interface SettingsItemInDeleteMix {
-	Name: string;
-	Value: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/airec.Parameter
-export interface Parameter {
-	CategoryIndex: number;
-	Window: number;
-	Settings: SettingsItemInDeleteMix[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/airec.ListItem
-export interface ListItem {
-	BizDate: number;
-	Pv: number;
-	Uv: number;
-	Click: number;
-	Ctr: number;
-	UvCtr: number;
-	PerUvBhv: number;
-	PerUvClick: number;
-	ClickUser: number;
-	ActiveItem: number;
-	TraceId: string;
-	SceneId: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/airec.DetailItem
-export interface DetailItem {
-	BizDate: number;
-	Pv: number;
-	Uv: number;
-	Click: number;
-	Ctr: number;
-	UvCtr: number;
-	PerUvBhv: number;
-	PerUvClick: number;
-	ClickUser: number;
-	ActiveItem: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/airec.Result
-export interface Result {
-	Name: string;
-	UserCountUsed: number;
-	ChargeType: string;
-	ItemCountUsed: number;
-	CurrentQps: number;
-	ItemCount: number;
-	GmtCreate: string;
-	DataSetVersion: string;
-	RegionId: string;
-	InstanceId: string;
-	CommodityCode: string;
-	Num: number;
-	Type: string;
-	ScenarioBased: boolean;
-	ExpiredTime: string;
-	GmtModified: string;
-	Industry: string;
-	TableName: string;
-	UserCount: number;
-	DurationSeconds: number;
-	Scene: string;
-	Qps: number;
-	Status: string;
-	LockMode: string;
-	TraceId: string[];
-	Uid: string[];
-	SceneId: string[];
-	Meta: Meta;
-	Overall: Overall;
-	Parameter: Parameter;
-	List: ListItem[];
-	Detail: DetailItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/airec.DescribeQuotaResponse
 export interface DescribeQuotaResponse {
-	RequestId: string;
-	Code: string;
-	Message: string;
-	Result: Result;
+    /**
+     * 返回结果
+     */
+    result: {
+        /**
+         * 已经使用的物品数
+         * @example `100`
+         */
+        itemCountUsed: number;
+        /**
+         * 物品表文档数，取值范围：1~1000
+         * @example `100`
+         */
+        itemCount: number;
+        /**
+         * 用户表文档数，取值范围如下：
+         * 1~1000
+         * @example `100`
+         */
+        userCount: number;
+        /**
+         * 已使用的用户数
+         * @example `100`
+         */
+        userCountUsed: number;
+        /**
+         * 查询的QPS值，取值范围如下：
+         * 最小值 10、最大值 500
+         * @example `10`
+         */
+        qps: number;
+        /**
+         * 弹性QPS数量
+         * @example `10`
+         */
+        currentQps: number;
+    };
+    /**
+     * 错误码
+     * @example `200`
+     */
+    code: string;
+    /**
+     * 请求ID
+     * @example `8F81A922-6C81-46D6-B78C-CC35E16B1691`
+     */
+    requestId: string;
+    /**
+     * 错误详情
+     * @example `success`
+     */
+    message: string;
 }
-

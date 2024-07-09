@@ -1,16 +1,1 @@
-{
-  "name": "ListComponents",
-  "protocol": "HTTPS|HTTP",
-  "method": "GET",
-  "path": "/pop/v5/resource/components",
-  "timeout": 2000,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Query",
-      "required": false
-    }
-  },
-  "res": {}
-}
+{"path":"/pop/v5/resource/components","methods":["get"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"read","deprecated":false,"systemTags":{"operationType":"list"},"responses":{"200":{"schema":{"type":"object","properties":{"Code":{"description":"HTTP状态码。","type":"integer","format":"int32","example":"200"},"Message":{"description":"返回信息。","type":"string","example":"success"},"ComponentList":{"type":"object","properties":{"Component":{"description":"组件列表。","type":"array","items":{"type":"object","properties":{"Type":{"description":"组件类型：\n- JDK\n- TOMCAT\n- TENGINE","type":"string","example":"JDK"},"ComponentKey":{"description":"组件Key。","type":"string","example":"JDK 7"},"Version":{"description":"组件版本。","type":"string","example":"oraclejdk7"},"Expired":{"description":"是否过期：\n- false：未过期\n- true：已过期","type":"boolean","example":"false"},"ComponentId":{"description":"组件ID。","type":"string","example":"1"},"Desc":{"description":"组件描述。","type":"string","example":"JDK 7"}}}}}}}}}},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"Code\\\": 200,\\n  \\\"Message\\\": \\\"success\\\",\\n  \\\"ComponentList\\\": {\\n    \\\"Component\\\": [\\n      {\\n        \\\"Type\\\": \\\"JDK\\\",\\n        \\\"ComponentKey\\\": \\\"JDK 7\\\",\\n        \\\"Version\\\": \\\"oraclejdk7\\\",\\n        \\\"Expired\\\": false,\\n        \\\"ComponentId\\\": \\\"1\\\",\\n        \\\"Desc\\\": \\\"JDK 7\\\"\\n      }\\n    ]\\n  }\\n}\",\"errorExample\":\"\"},{\"type\":\"xml\",\"example\":\"<Message>success</Message>\\n<ComponentList>\\n    <Component>\\n        <Desc>JDK 7</Desc>\\n        <Type>JDK</Type>\\n        <Version>oraclejdk7</Version>\\n        <ComponentKey>JDK 7</ComponentKey>\\n        <Expired>false</Expired>\\n        <ComponentId>1</ComponentId>\\n    </Component>\\n</ComponentList>\\n<Code>200</Code>\",\"errorExample\":\"\"}]","title":"查询组件列表","summary":"调用ListComponents接口查询组件列表，本API适用于ECS集群中的应用。","requestParamsDescription":"无请求参数。","responseParamsDescription":" ","extraInfo":" ","parameters":[]}

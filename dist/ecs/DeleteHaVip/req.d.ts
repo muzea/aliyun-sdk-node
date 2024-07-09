@@ -1,7 +1,5 @@
-interface DeleteHaVipRequest {
+export interface DeleteHaVipRequest {
+    "ClientToken"?: string;
     "RegionId": string;
     "HaVipId": string;
-    "OwnerId"?: number;
-    "ClientToken"?: string;
 }
-export { DeleteHaVipRequest };

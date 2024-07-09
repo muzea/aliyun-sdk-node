@@ -1,9 +1,7 @@
-interface DescribeRoleZoneInfoRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeRoleZoneInfoRequest {
     /**
-    * 实例ID。
-    * @example `dds-bpxxxxxxxx`
-    */ "DBInstanceId": string;
+     * 实例ID。
+     * @example `dds-bpxxxxxxxx`
+     */
+    "DBInstanceId": string;
 }
-export { DescribeRoleZoneInfoRequest };

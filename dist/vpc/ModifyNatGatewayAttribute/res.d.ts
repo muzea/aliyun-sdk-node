@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.ModifyNatGatewayAttributeResponse
 export interface ModifyNatGatewayAttributeResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `AB5F62CF-2B60-4458-A756-42C9DFE108D1`
+     */
+    RequestId: string;
 }
-

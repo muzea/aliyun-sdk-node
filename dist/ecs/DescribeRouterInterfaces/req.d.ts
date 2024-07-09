@@ -1,8 +1,9 @@
-interface DescribeRouterInterfacesRequest {
+export interface DescribeRouterInterfacesRequest {
     "RegionId": string;
-    "OwnerId"?: number;
     "PageNumber"?: number;
     "PageSize"?: number;
-    "Filter"?: string[];
+    "Filter"?: {
+        Key: string;
+        Value: string[];
+    }[];
 }
-export { DescribeRouterInterfacesRequest };

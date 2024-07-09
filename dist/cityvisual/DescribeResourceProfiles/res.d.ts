@@ -1,3 +1,0 @@
-interface DescribeResourceProfilesResponse {
-}
-export { DescribeResourceProfilesResponse };

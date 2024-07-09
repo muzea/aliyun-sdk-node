@@ -1,9 +1,7 @@
-interface DescribeDBInstanceSSLRequest {
-    "RegionId"?: string;
+export interface DescribeDBInstanceSSLRequest {
     /**
-    * 实例ID。
-    * @example `rm-uf6wjk5xxxxxxx`
-    */ "DBInstanceId": string;
-    "OwnerId"?: number;
+     * 实例ID。可调用DescribeDBInstances获取。
+     * @example `rm-bp162dfr55g47****`
+     */
+    "DBInstanceId": string;
 }
-export { DescribeDBInstanceSSLRequest };

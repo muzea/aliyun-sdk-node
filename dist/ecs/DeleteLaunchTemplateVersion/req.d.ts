@@ -1,21 +1,22 @@
-interface DeleteLaunchTemplateVersionRequest {
+export interface DeleteLaunchTemplateVersionRequest {
     /**
-    * 模板所属的地域 ID。您可以调用 [DescribeRegions](~~25609~~) 查看最新的阿里云地域列表。
-    * @example `cn-hangzhou`
-    */ "RegionId": string;
+     * 模板所属的地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。
+     * @example `cn-hangzhou`
+     */
+    "RegionId": string;
+    /**
+     * 待删除的模板版本号。
+     * @example `2`
+     */
     "DeleteVersion": number[];
-    "SourceRegionId"?: string;
     /**
-    * RAM 用户的虚拟账号 ID。
-    * @example `155780923770`
-    */ "OwnerId"?: number;
+     * 需要删除的启动模板ID。更多信息，请参见[DescribeLaunchTemplates](~~73759~~)。
+     * @example `lt-bp1apo0bbbkuy0rj****`
+     */
+    "LaunchTemplateId"?: string;
     /**
-    * 需要删除的启动模板 ID。更多详情，请调用 [DescribeLaunchTemplates](~~73759~~)。
-    * @example `lt-bp1apo0bbbkuy0rj3***`
-    */ "LaunchTemplateId"?: string;
-    /**
-    * 启动模板名称。
-    * @example `JoshuaWinPostPaid`
-    */ "LaunchTemplateName"?: string;
+     * 启动模板名称。
+     * @example `testLaunchTemplateName`
+     */
+    "LaunchTemplateName"?: string;
 }
-export { DeleteLaunchTemplateVersionRequest };

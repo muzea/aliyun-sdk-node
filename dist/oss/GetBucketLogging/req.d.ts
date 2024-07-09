@@ -1,5 +1,7 @@
-interface GetBucketLoggingRequest {
-    "BucketName": any;
-    "logging": any;
+export interface GetBucketLoggingRequest {
+    /**
+     * Bucket名称。
+     * @example `examplebucket`
+     */
+    "bucket": string;
 }
-export { GetBucketLoggingRequest };

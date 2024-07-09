@@ -1,21 +1,24 @@
-interface DescribePropertyUserItemRequest {
-    "RegionId"?: string;
-    "SourceIp"?: string;
+export interface DescribePropertyUserItemRequest {
     /**
-    * 是否强制刷新待查询数据。
-    * @example `true`
-    */ "ForceFlush"?: boolean;
+     * 设置是否强制刷新待查询数据。取值：
+     * - **true**：强制刷新
+     * - **false**：不强制刷新
+     * @example `true`
+     */
+    "ForceFlush"?: boolean;
     /**
-    * 指定待查询的账号信息。
-    * @example `adm`
-    */ "User"?: string;
+     * 资产指纹的账号信息。
+     * @example `adm`
+     */
+    "User"?: string;
     /**
-    * 指定返回结果的当前页码。
-    * @example `1`
-    */ "CurrentPage"?: number;
+     * 分页查询时，显示的当前页的页码。
+     * @example `1`
+     */
+    "CurrentPage"?: number;
     /**
-    * 指定列表每页显示数据条数 。
-    * @example `2`
-    */ "PageSize"?: number;
+     * 分页查询时，每页显示数据的最大条数。
+     * @example `2`
+     */
+    "PageSize"?: number;
 }
-export { DescribePropertyUserItemRequest };

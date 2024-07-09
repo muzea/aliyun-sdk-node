@@ -1,0 +1,1 @@
+export type CreateIndexResponse = any;

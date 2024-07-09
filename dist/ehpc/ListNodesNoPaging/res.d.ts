@@ -1,60 +1,46 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ehpc.RolesInListNodesNoPaging
-export interface RolesInListNodesNoPaging {
-	Role: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ehpc.TotalResources
-export interface TotalResources {
-	Gpu: number;
-	Memory: number;
-	Cpu: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ehpc.UsedResources
-export interface UsedResources {
-	Gpu: number;
-	Memory: number;
-	Cpu: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ehpc.NodeInfo
-export interface NodeInfo {
-	LockReason: string;
-	Expired: boolean;
-	ExpiredTime: string;
-	ImageId: string;
-	VSwitchId: string;
-	Version: string;
-	ImageOwnerAlias: string;
-	CreateMode: string;
-	Location: string;
-	RegionId: string;
-	ZoneId: string;
-	CreatedByEhpc: boolean;
-	Id: string;
-	HostName: string;
-	Status: string;
-	AddTime: string;
-	SpotStrategy: string;
-	VpcId: string;
-	Roles: RolesInListNodesNoPaging;
-	TotalResources: TotalResources;
-	UsedResources: UsedResources;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ehpc.NodesInListNodesNoPaging
-export interface NodesInListNodesNoPaging {
-	NodeInfo: NodeInfo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ehpc.ListNodesNoPagingResponse
 export interface ListNodesNoPagingResponse {
-	RequestId: string;
-	TotalCount: number;
-	PageNumber: number;
-	PageSize: number;
-	Nodes: NodesInListNodesNoPaging;
+    /**
+     * 请求ID。
+     * @example `04F0F334-1335-436C-A1D7-6C044FE7****`
+     */
+    RequestId: string;
+    Nodes: {
+        /**
+         * 节点列表信息。
+         */
+        NodeInfo: {
+            /**
+             * 节点状态。可能值：
+             * - uninit：安装中
+             * - exception：异常
+             * - running：运行中
+             * - initing：初始化中
+             * - releasing：释放中
+             * - untracking：未加入集群
+             * - stopped：已停止
+             * @example `untracking`
+             */
+            Status: string;
+            /**
+             * 节点名称。
+             * @example `compute0`
+             */
+            HostName: string;
+            /**
+             * 节点规格。
+             * @example `ecs.n1.tiny`
+             */
+            InstanceType: string;
+            /**
+             * 镜像ID。
+             * @example `centos_7_02_64_20G_alibase_20170818****`
+             */
+            ImageId: string;
+            /**
+             * 节点ID。
+             * @example `i-bp13p7vlcb1uihfv****`
+             */
+            Id: string;
+        }[];
+    };
 }
-

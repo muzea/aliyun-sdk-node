@@ -1,45 +1,68 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/alidns.AddrPool
-export interface AddrPool {
-	AddrCount: number;
-	Name: string;
-	MinAvailableAddrNum: number;
-	UpdateTime: string;
-	MonitorConfigId: string;
-	CreateTimestamp: number;
-	CreateTime: string;
-	AddrPoolName: string;
-	AddrPoolId: string;
-	UpdateTimestamp: number;
-	Status: string;
-	MonitorStatus: string;
-	Type: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/alidns.AddrPoolsInDescribeGtmAccessStrategyAvailableConfig
-export interface AddrPoolsInDescribeGtmAccessStrategyAvailableConfig {
-	AddrPool: AddrPool[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/alidns.Line
-export interface Line {
-	GroupCode: string;
-	LineCode: string;
-	LineName: string;
-	GroupName: string;
-	Status: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/alidns.LinesInDescribeGtmAccessStrategyAvailableConfig
-export interface LinesInDescribeGtmAccessStrategyAvailableConfig {
-	Line: Line[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/alidns.DescribeGtmAccessStrategyAvailableConfigResponse
 export interface DescribeGtmAccessStrategyAvailableConfigResponse {
-	RequestId: string;
-	AddrPools: AddrPoolsInDescribeGtmAccessStrategyAvailableConfig;
-	Lines: LinesInDescribeGtmAccessStrategyAvailableConfig;
+    /**
+     * 唯一请求识别码。
+     * @example `C2851BA9-CE56-49AF-8D12-4FC6A49EE688`
+     */
+    RequestId: string;
+    AddrPools: {
+        /**
+         * 地址池列表。
+         */
+        AddrPool: {
+            /**
+             * 地址池ID。
+             * @example `hra0ix`
+             */
+            AddrPoolId: string;
+            /**
+             * 地址池名称。
+             * @example `test`
+             */
+            AddrPoolName: string;
+        }[];
+    };
+    Lines: {
+        /**
+         * 解析请求来源列表。
+         */
+        Line: {
+            /**
+             * 线路当前状态。其中：
+             * - **FORBIDDEN**：不可选
+             * - **OPTIONAL**：可选择
+             * @example `FORBIDDEN`
+             */
+            Status: string;
+            /**
+             * 父线路的code，如果没有则为空。
+             * @example `无`
+             */
+            FatherCode: string;
+            /**
+             * 解析请求来源编码。
+             * @example `cn_region_huanan`
+             */
+            LineCode: string;
+            /**
+             * 解析请求来源分组名称。
+             * @example `Mainland China`
+             */
+            GroupName: string;
+            /**
+             * 解析请求来源名称。
+             * @example `South China`
+             */
+            LineName: string;
+            /**
+             * 解析请求来源分组编号。
+             * @example `CN_REGION`
+             */
+            GroupCode: string;
+        }[];
+    };
+    /**
+     * 建议设置全局线路。
+     * @example `True`
+     */
+    SuggestSetDefaultLine: boolean;
 }
-

@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.DeleteVpnRouteEntryResponse
 export interface DeleteVpnRouteEntryResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `5BE01CD7-5A50-472D-AC14-CA181C5C03BE	`
+     */
+    RequestId: string;
 }
-

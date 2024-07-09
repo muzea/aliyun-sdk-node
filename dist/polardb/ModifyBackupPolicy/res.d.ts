@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/polardb.ModifyBackupPolicyResponse
 export interface ModifyBackupPolicyResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `C5A5DF0E-5968-4DC1-882E-AC2FE7******`
+     */
+    RequestId: string;
 }
-

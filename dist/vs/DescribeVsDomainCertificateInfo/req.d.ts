@@ -1,7 +1,7 @@
-interface DescribeVsDomainCertificateInfoRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
-    "ShowLog"?: string;
+export interface DescribeVsDomainCertificateInfoRequest {
+    /**
+     * 域名
+     * @example `example.aliyundoc.com`
+     */
     "DomainName": string;
 }
-export { DescribeVsDomainCertificateInfoRequest };

@@ -1,3 +1,0 @@
-interface ReallocNgResourceResponse {
-}
-export { ReallocNgResourceResponse };

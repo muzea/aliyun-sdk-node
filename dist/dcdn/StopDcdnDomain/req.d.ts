@@ -1,9 +1,7 @@
-interface StopDcdnDomainRequest {
-    "RegionId"?: string;
+export interface StopDcdnDomainRequest {
     /**
-    * 需要接入全站加速的域名。
-    * @example `example.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 加速域名，仅支持停用单个。
+     * @example `example.com`
+     */
+    "DomainName": string;
 }
-export { StopDcdnDomainRequest };

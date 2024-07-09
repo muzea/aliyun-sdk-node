@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/market.PushMeteringDataResponse
 export interface PushMeteringDataResponse {
-	RequestId: string;
-	Success: boolean;
+    /**
+     * 成功状态标识
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     *  请求ID
+     * @example `6EF60BEC-0242-43AF-BB20-270359FB54A7`
+     */
+    RequestId: string;
 }
-

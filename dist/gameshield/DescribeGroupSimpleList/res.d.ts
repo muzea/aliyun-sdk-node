@@ -1,3 +1,0 @@
-interface DescribeGroupSimpleListResponse {
-}
-export { DescribeGroupSimpleListResponse };

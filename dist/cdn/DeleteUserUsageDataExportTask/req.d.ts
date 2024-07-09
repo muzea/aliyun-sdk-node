@@ -1,9 +1,7 @@
-interface DeleteUserUsageDataExportTaskRequest {
-    "RegionId"?: string;
+export interface DeleteUserUsageDataExportTaskRequest {
     /**
-    * 任务ID。
-    * @example `10`
-    */ "TaskId": string;
-    "OwnerId"?: number;
+     * 任务ID。
+     * @example `10`
+     */
+    "TaskId": string;
 }
-export { DeleteUserUsageDataExportTaskRequest };

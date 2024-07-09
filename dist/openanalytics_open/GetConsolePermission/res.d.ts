@@ -1,3 +1,0 @@
-interface GetConsolePermissionResponse {
-}
-export { GetConsolePermissionResponse };

@@ -1,3 +1,0 @@
-interface DescribeCcResSummaryResponse {
-}
-export { DescribeCcResSummaryResponse };

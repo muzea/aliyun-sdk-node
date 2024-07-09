@@ -1,3 +1,1 @@
-interface PutBucketLoggingResponse {
-}
-export { PutBucketLoggingResponse };
+export type PutBucketLoggingResponse = any;

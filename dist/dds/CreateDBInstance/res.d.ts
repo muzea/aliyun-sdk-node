@@ -1,9 +1,17 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dds.CreateDBInstanceResponse
 export interface CreateDBInstanceResponse {
-	RequestId: string;
-	OrderId: string;
-	DBInstanceId: string;
+    /**
+     * 请求ID。
+     * @example `D8F1D721-6439-4257-A89C-F1E8E9C9****`
+     */
+    RequestId: string;
+    /**
+     * 实例ID。
+     * @example `dds-bp144a7f2db8****`
+     */
+    DBInstanceId: string;
+    /**
+     * 订单ID。
+     * @example `21077576248****`
+     */
+    OrderId: string;
 }
-

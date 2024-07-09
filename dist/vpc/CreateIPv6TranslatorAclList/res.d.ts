@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.CreateIPv6TranslatorAclListResponse
 export interface CreateIPv6TranslatorAclListResponse {
-	RequestId: string;
-	AclId: string;
+    /**
+     * 访问控制策略组ID。
+     * @example `ipv6transacl-bp1de2xxxx`
+     */
+    AclId: string;
+    /**
+     * 请求ID。
+     * @example `8B2F5262-6B57-43F2-xxxxx`
+     */
+    RequestId: string;
 }
-

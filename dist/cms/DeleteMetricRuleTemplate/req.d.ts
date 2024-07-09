@@ -1,8 +1,7 @@
-interface DeleteMetricRuleTemplateRequest {
-    "RegionId"?: string;
+export interface DeleteMetricRuleTemplateRequest {
     /**
-    * 报警模板ID。
-    * @example `12345`
-    */ "TemplateId": string;
+     * 报警规则模板ID。
+     * @example `123****`
+     */
+    "TemplateId": string;
 }
-export { DeleteMetricRuleTemplateRequest };

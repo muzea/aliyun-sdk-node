@@ -1,16 +1,1 @@
-{
-  "name": "ListActivatedFeatures",
-  "protocol": "HTTPS",
-  "method": "POST|GET",
-  "path": "/",
-  "timeout": 10000,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Query",
-      "required": false
-    }
-  },
-  "res": {}
-}
+{"methods":["post","get"],"schemes":["https"],"security":[{"AK":[]}],"operationType":"read","systemTags":{},"parameters":[{"name":"Environment","in":"query","schema":{"description":"当前的调用环境，默认为空，表示公共实例，如果是物联网平台实例化环境，请传入“IotInstance”","type":"string","required":false,"example":"IotInstance"}}],"responses":{"200":{"schema":{"type":"object","properties":{"Success":{"description":"是否成功。\n\n","type":"boolean","example":"true"},"RequestId":{"description":"请求ID。\n\n","type":"string","example":"89EF6CAA-958F-F32C-BE45-FE003C6DE097\t"},"Data":{"type":"array","items":{"description":"当前用户账号在物联网络管理平台所能使用的功能的列表。\n\n    GATEWAY_TUPLE：网关密钥管理功能\n\n    NODE_TUPLE：节点密钥管理功能\n\n    NODE：节点管理功能\n\n    GATEWAY：网关管理功能\n\n    LOCAL_JOIN_PERMISSION：本地凭证管理功能\n\n    ROAMING_JOIN_PERMISSION：漫游凭证管理功能\n\n    JOIN_PERMISSION_AUTHORIZATION：凭证权限授受能力\n\n    LAB_NODE：实验室节点功能\n\n    LAB_GATEWAY：实验室网关功能\n\n    NOTIFICATION：通知功能\n\n    UNICAST：单播指令下行功能\n\n    MULTICAST：组播指令下行功能\n\n    RELAY：中继管理功能\n\n    D2D：点对点通信能力\n","type":"string","example":"GATEWAY_TUPLE"}}}}}},"errorCodes":{"400":[{"errorCode":"ForbiddenByRam","errorMessage":"User not authorized to operate on the specified resource, or this API does not support RAM."},{"errorCode":"ForbiddenByRiskControl","errorMessage":"This operation cannot be performed because of security risks."},{"errorCode":"InternalError","errorMessage":"The request processing has failed due to some unknown error, exception or failure."}]},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"Success\\\": true,\\n  \\\"RequestId\\\": \\\"89EF6CAA-958F-F32C-BE45-FE003C6DE097\\\\t\\\",\\n  \\\"Data\\\": [\\n    \\\"GATEWAY_TUPLE\\\"\\n  ]\\n}\",\"errorExample\":\"\"},{\"type\":\"xml\",\"example\":\"<RequestId>89EF6CAA-958F-F32C-BE45-FE003C6DE097</RequestId>\\n<Success>true</Success>\\n<Data>GATEWAY</Data>\\n<Data>JOIN_PERMISSION_AUTHORIZATION</Data>\\n<Data>LOCAL_JOIN_PERMISSION</Data>\\n<Data>ROAMING_JOIN_PERMISSION</Data>\\n<Data>LAB_NODE</Data>\\n<Data>LAB_GATEWAY</Data>\\n<Data>GATEWAY_TUPLE</Data>\\n<Data>NODE_TUPLE</Data>\\n<Data>NOTIFICATION</Data>\\n<Data>KPM_PRODUCT_LINE</Data>\\n<Data>NODE</Data>\\n<Data>UNICAST</Data>\\n<Data>MULTICAST</Data>\",\"errorExample\":\"\"}]","title":"列举物联网络管理平台所能使用的功能","summary":"列举当前用户账号在物联网络管理平台所能使用的功能。","requestParamsDescription":" ","extraInfo":" "}

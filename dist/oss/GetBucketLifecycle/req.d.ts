@@ -1,5 +1,7 @@
-interface GetBucketLifecycleRequest {
-    "BucketName": any;
-    "lifecycle": any;
+export interface GetBucketLifecycleRequest {
+    /**
+     * Bucket名称。
+     * @example `examplebucket`
+     */
+    "bucket": string;
 }
-export { GetBucketLifecycleRequest };

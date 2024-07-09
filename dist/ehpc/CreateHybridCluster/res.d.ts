@@ -1,8 +1,17 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ehpc.CreateHybridClusterResponse
 export interface CreateHybridClusterResponse {
-	RequestId: string;
-	ClusterId: string;
+    /**
+     * 请求ID。
+     * @example `F6757FA4-8FED-4602-B7F5-3550C0842122`
+     */
+    RequestId: string;
+    /**
+     * 任务ID。
+     * @example `F6757FA4-8FED-4602-B7F5-3550C0842122`
+     */
+    TaskId: string;
+    /**
+     * 集群ID。
+     * @example `ehpc-hz-FYUr32****`
+     */
+    ClusterId: string;
 }
-

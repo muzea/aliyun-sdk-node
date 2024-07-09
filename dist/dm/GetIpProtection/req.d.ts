@@ -1,5 +1,2 @@
-interface GetIpProtectionRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface GetIpProtectionRequest {
 }
-export { GetIpProtectionRequest };

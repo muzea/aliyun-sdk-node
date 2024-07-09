@@ -1,26 +1,73 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.LockReason
-export interface LockReason {
-	LockReason: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.OperationLocks
-export interface OperationLocks {
-	LockReason: LockReason[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.DescribeDcdnServiceResponse
 export interface DescribeDcdnServiceResponse {
-	RequestId: string;
-	InstanceId: string;
-	InternetChargeType: string;
-	OpeningTime: string;
-	ChangingChargeType: string;
-	ChangingAffectTime: string;
-	WebsocketChangingType: string;
-	WebsocketType: string;
-	WebsocketChangingTime: string;
-	OperationLocks: OperationLocks;
+    /**
+     * 与ChangingAffectTime值一样，Websocket变配生效时间，需要与当前时间比较，晚于当前时间才在前端显示。
+     * @example `2018-03-19T11:16:11Z`
+     */
+    WebsocketChangingTime: string;
+    /**
+     * Websocket下次生效的计费类型，包括**websockettraffic**（流量）和**websocketbps**（带宽）。
+     * @example `websocketbps`
+     */
+    WebsocketChangingType: string;
+    /**
+     * 下次生效时间，GMT时间。
+     * @example `2018-03-31T16:00:00Z`
+     */
+    ChangingAffectTime: string;
+    /**
+     * 下次生效的计费类型。
+     * - **PayByTraffic**：流量。
+     * - **PayByBandwidth**：带宽。
+     * - **PayByBandwidth95**：月95。
+     * - **PayByBandwidth_monthavg**：月平均带宽。
+     * - **PayByBandwidth_month4th**：月第四峰值。
+     * - **PayByBandwidth_monthday95avg**：月平均95。
+     * - **PayByBandwidth_nighthalf95**：月95夜间减半。
+     * @example `PayByBandwidth`
+     */
+    ChangingChargeType: string;
+    /**
+     * 请求ID。
+     * @example `EF2AEBC2-EDBD-41CF-BF64-7E095D42D6EF`
+     */
+    RequestId: string;
+    /**
+     * 开通服务时间，ISO 8601时间格式。
+     * @example `2018-03-19T11:16:11Z`
+     */
+    OpeningTime: string;
+    /**
+     * 当前计费类型。
+     * - **PayByTraffic**：流量。
+     * - **PayByBandwidth**：带宽。
+     * - **PayByBandwidth95**：月95。
+     * - **PayByBandwidth_monthavg**：月平均带宽。
+     * - **PayByBandwidth_month4th**：月第四峰值。
+     * - **PayByBandwidth_monthday95avg**：月平均95。
+     * - **PayByBandwidth_nighthalf95**：月95夜间减半。
+     * @example `PayByTraffic`
+     */
+    InternetChargeType: string;
+    /**
+     * Websocket当前计费类型，包括**websockettraffic**（流量）和**websocketbps**（带宽）。
+     * @example `websocketbps`
+     */
+    WebsocketType: string;
+    /**
+     * 实例ID。
+     * @example `FP-mkqgwxxxx`
+     */
+    InstanceId: string;
+    OperationLocks: {
+        /**
+         * 业务锁定状态。
+         */
+        LockReason: {
+            /**
+             * 锁定原因。例如：financial（欠费）。
+             * @example `financial`
+             */
+            LockReason: string;
+        }[];
+    };
 }
-

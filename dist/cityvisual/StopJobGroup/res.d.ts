@@ -1,3 +1,0 @@
-interface StopJobGroupResponse {
-}
-export { StopJobGroupResponse };

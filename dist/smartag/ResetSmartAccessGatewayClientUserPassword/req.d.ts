@@ -1,17 +1,27 @@
-interface ResetSmartAccessGatewayClientUserPasswordRequest {
+export interface ResetSmartAccessGatewayClientUserPasswordRequest {
     /**
-    * 智能接入网关APP客户端地域。
-    * @example `cn-shanghai`
-    */ "RegionId": string;
+     * 智能接入网关App实例所属的地域ID。
+     * @example `cn-shanghai`
+     */
+    "RegionId": string;
     /**
-    * 智能接入网关APP实例ID。
-    * @example `sag-jdfnf*********`
-    */ "SmartAGId": string;
+     * 智能接入网关App实例ID。
+     * @example `sag-kzo5dvms3dqii3****`
+     */
+    "SmartAGId": string;
     /**
-    * 用户名，同一个智能接入网关APP实例下的用户名不可以重复。
-    * 用户名和密码相互依赖，若指定用户名则必须指定密码，反之，若指定密码则必须指定用户名。
-    * @example `doctest`
-    */ "UserName": string;
-    "OwnerId"?: number;
+     * 待重置密码的客户端的用户名。
+     * @example `username`
+     */
+    "UserName": string;
+    /**
+     * 客户端的新密码。
+     * - 如果您不输入本参数，系统将随机生成一个新密码。
+     * - 如果您输入本参数，则表示您自定义新密码。
+     *
+     *         密码长度为8~32个字符，必须以大小写字母或数字开头，可以包含下划线（_） 、at（@）和短划线（-）。
+     * 系统重置密码后，会通过邮件向您发送新的密码。
+     * @example `Password****`
+     */
+    "Password"?: string;
 }
-export { ResetSmartAccessGatewayClientUserPasswordRequest };

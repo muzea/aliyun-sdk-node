@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/live.DeleteLiveDomainResponse
 export interface DeleteLiveDomainResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `94E3559F-7B6A-4A5E-AFFD-44E2A208A249`
+     */
+    RequestId: string;
 }
-

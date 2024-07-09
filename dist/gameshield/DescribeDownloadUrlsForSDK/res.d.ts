@@ -1,3 +1,0 @@
-interface DescribeDownloadUrlsForSDKResponse {
-}
-export { DescribeDownloadUrlsForSDKResponse };

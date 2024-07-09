@@ -1,3 +1,0 @@
-interface UpdateLabGatewayResponse {
-}
-export { UpdateLabGatewayResponse };

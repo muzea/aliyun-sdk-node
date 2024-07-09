@@ -1,27 +1,40 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.ZoneIdList
-export interface ZoneIdList {
-	ZoneId: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.KVStoreRegion
-export interface KVStoreRegion {
-	RegionId: string;
-	ZoneIds: string;
-	LocalName: string;
-	RegionEndpoint: string;
-	ZoneIdList: ZoneIdList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.RegionIds
-export interface RegionIds {
-	KVStoreRegion: KVStoreRegion[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.DescribeRegionsResponse
 export interface DescribeRegionsResponse {
-	RequestId: string;
-	RegionIds: RegionIds;
+    /**
+     * 请求ID。
+     * @example `AD425AD3-CC7B-4EE2-A5CB-2F61BA73****`
+     */
+    RequestId: string;
+    RegionIds: {
+        /**
+         * **RegionIds**为对象
+         */
+        KVStoreRegion: {
+            /**
+             * 地域的Endpoint。
+             * @example `r-kvstore.aliyuncs.com`
+             */
+            RegionEndpoint: string;
+            /**
+             * 地域名称。
+             * @example `华东1（杭州）`
+             */
+            LocalName: string;
+            /**
+             * 地域ID。
+             * @example `cn-hangzhou`
+             */
+            RegionId: string;
+            /**
+             * 可用区ID。
+             * @example `cn-hangzhou-h`
+             */
+            ZoneIds: string;
+            ZoneIdList: {
+                /**
+                 * 可用区ID列表。
+                 */
+                ZoneId: string[];
+            };
+        }[];
+    };
 }
-

@@ -1,3 +1,1 @@
-interface AbortMultipartUploadResponse {
-}
-export { AbortMultipartUploadResponse };
+export type AbortMultipartUploadResponse = any;

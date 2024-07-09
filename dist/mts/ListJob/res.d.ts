@@ -1,1576 +1,1282 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.NetworkCost
-export interface NetworkCost {
-	AvgBitrate: string;
-	PreloadTime: string;
-	CostBandwidth: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.VideoStream
-export interface VideoStream {
-	Height: string;
-	Dar: string;
-	NumFrames: string;
-	CodecName: string;
-	Profile: string;
-	Fps: string;
-	Timebase: string;
-	Bitrate: string;
-	Sar: string;
-	Level: string;
-	PixFmt: string;
-	CodecTag: string;
-	CodecTagString: string;
-	Index: string;
-	Lang: string;
-	HasBFrames: string;
-	Width: string;
-	StartTime: string;
-	Rotate: string;
-	Duration: string;
-	CodecTimeBase: string;
-	CodecLongName: string;
-	AvgFPS: string;
-	NetworkCost: NetworkCost;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.VideoStreamListInQueryVideoPoseJobList
-export interface VideoStreamListInQueryVideoPoseJobList {
-	VideoStream: VideoStream[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.SubtitleStream
-export interface SubtitleStream {
-	StartTime: string;
-	CodecName: string;
-	Duration: string;
-	CodecTimeBase: string;
-	Timebase: string;
-	CodecTag: string;
-	CodecTagString: string;
-	CodecLongName: string;
-	Index: string;
-	Lang: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.SubtitleStreamListInQueryComplexJobList
-export interface SubtitleStreamListInQueryComplexJobList {
-	SubtitleStream: SubtitleStream[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AudioStream
-export interface AudioStream {
-	NumFrames: string;
-	CodecName: string;
-	Timebase: string;
-	Bitrate: string;
-	SampleFmt: string;
-	CodecTag: string;
-	CodecTagString: string;
-	Index: string;
-	Channels: string;
-	Lang: string;
-	StartTime: string;
-	Samplerate: string;
-	Duration: string;
-	CodecTimeBase: string;
-	CodecLongName: string;
-	ChannelLayout: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AudioStreamListInQueryVideoPoseJobList
-export interface AudioStreamListInQueryVideoPoseJobList {
-	AudioStream: AudioStream[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Streams
-export interface Streams {
-	VideoStreamList: VideoStreamListInQueryVideoPoseJobList;
-	SubtitleStreamList: SubtitleStreamListInQueryComplexJobList;
-	AudioStreamList: AudioStreamListInQueryVideoPoseJobList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Format
-export interface Format {
-	FormatName: string;
-	NumPrograms: string;
-	StartTime: string;
-	FormatLongName: string;
-	Duration: string;
-	Size: string;
-	Bitrate: string;
-	NumStreams: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.SourceLogo
-export interface SourceLogo {
-	Source: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.SourceLogos
-export interface SourceLogos {
-	SourceLogo: SourceLogo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Properties
-export interface Properties {
-	Height: string;
-	Width: string;
-	FileSize: string;
-	Duration: string;
-	Fps: string;
-	Bitrate: string;
-	FileFormat: string;
-	Streams: Streams;
-	Format: Format;
-	SourceLogos: SourceLogos;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Gif
-export interface Gif {
-	FinalDelay: string;
-	Loop: string;
-	IsCustomPalette: string;
-	DitherMode: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Webp
-export interface Webp {
-	Loop: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Segment
-export interface Segment {
-	Duration: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.MuxConfig
-export interface MuxConfig {
-	Gif: Gif;
-	Webp: Webp;
-	Segment: Segment;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.InputFile
-export interface InputFile {
-	Bucket: string;
-	Object: string;
-	Location: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.DigiWaterMark
-export interface DigiWaterMark {
-	Alpha: string;
-	Type: string;
-	InputFile: InputFile;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.BitrateBnd
-export interface BitrateBnd {
-	Min: string;
-	Max: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Video
-export interface Video {
-	Height: string;
-	Preset: string;
-	MaxFps: string;
-	Gop: string;
-	Qscale: string;
-	LongShortMode: string;
-	Profile: string;
-	Fps: string;
-	Bitrate: string;
-	Bufsize: string;
-	PixFmt: string;
-	Remove: string;
-	Crop: string;
-	Crf: string;
-	ScanMode: string;
-	Width: string;
-	ResoPriority: string;
-	Codec: string;
-	Maxrate: string;
-	Degrain: string;
-	Pad: string;
-	BitrateBnd: BitrateBnd;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ClipsConfigVideo
-export interface ClipsConfigVideo {
-	T: string;
-	L: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ClipsConfig
-export interface ClipsConfig {
-	ClipsConfigVideo: ClipsConfigVideo;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TimeSpan
-export interface TimeSpan {
-	Duration: string;
-	Seek: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Effect
-export interface Effect {
-	Effect: string;
-	EffectConfig: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.EffectsInQueryComplexJobList
-export interface EffectsInQueryComplexJobList {
-	Effect: Effect[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Clip
-export interface Clip {
-	MaxScore: string;
-	StartTarget: string;
-	Out: string;
-	In: string;
-	clipID: string;
-	SourceStrmMap: string;
-	MinScore: string;
-	SourceID: string;
-	AvgScore: string;
-	SourceType: string;
-	StartTime: string;
-	EndTime: string;
-	Id: string;
-	EndTarget: string;
-	Type: string;
-	ClipsConfig: ClipsConfig;
-	TimeSpan: TimeSpan;
-	Effects: EffectsInQueryComplexJobList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.OutputFile
-export interface OutputFile {
-	Bucket: string;
-	Object: string;
-	Location: string;
-	RoleArn: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TS
-export interface TS {
-	Md5Support: boolean;
-	SizeSupport: boolean;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.M3U8NonStandardSupport
-export interface M3U8NonStandardSupport {
-	TS: TS;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Volume
-export interface Volume {
-	Level: string;
-	Method: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Audio
-export interface Audio {
-	Qscale: string;
-	Samplerate: string;
-	Profile: string;
-	Bitrate: string;
-	Remove: string;
-	Codec: string;
-	Channels: string;
-	Volume: Volume;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TransConfig
-export interface TransConfig {
-	IsCheckResoFail: string;
-	AdjDarMethod: string;
-	IsCheckAudioBitrate: string;
-	Duration: string;
-	IsCheckReso: string;
-	IsCheckAudioBitrateFail: string;
-	IsCheckVideoBitrate: string;
-	TransMode: string;
-	IsCheckVideoBitrateFail: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Subtitle
-export interface Subtitle {
-	Map: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.SubtitleListInQueryComplexJobList
-export interface SubtitleListInQueryComplexJobList {
-	Subtitle: Subtitle[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Input
-export interface Input {
-	Bucket: string;
-	Duration: string;
-	Start: string;
-	UserData: string;
-	Object: string;
-	Location: string;
-	RoleArn: string;
-	Url: string;
-	InputFile: InputFile;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ExtSubtitle
-export interface ExtSubtitle {
-	CharEnc: string;
-	FontName: string;
-	Input: Input;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ExtSubtitleListInQueryComplexJobList
-export interface ExtSubtitleListInQueryComplexJobList {
-	ExtSubtitle: ExtSubtitle[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.SubtitleConfig
-export interface SubtitleConfig {
-	SubtitleList: SubtitleListInQueryComplexJobList;
-	ExtSubtitleList: ExtSubtitleListInQueryComplexJobList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Container
-export interface Container {
-	Format: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Encryption
-export interface Encryption {
-	Key: string;
-	KeyUri: string;
-	SkipCnt: string;
-	KeyType: string;
-	Id: string;
-	Type: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.SuperReso
-export interface SuperReso {
-	IsHalfSample: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TailSlate
-export interface TailSlate {
-	Height: string;
-	Width: string;
-	TailUrl: string;
-	IsMergeAudio: boolean;
-	Start: string;
-	BgColor: string;
-	BlendDuration: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TailSlateListInListJob
-export interface TailSlateListInListJob {
-	TailSlate: TailSlate[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.WaterMark
-export interface WaterMark {
-	Height: string;
-	Width: string;
-	Dx: string;
-	Dy: string;
-	WaterMarkTemplateId: string;
-	ReferPos: string;
-	Type: string;
-	InputFile: InputFile;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.WaterMarkListInListJob
-export interface WaterMarkListInListJob {
-	WaterMark: WaterMark[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Merge
-export interface Merge {
-	MergeURL: string;
-	Duration: string;
-	Start: string;
-	RoleArn: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.MergeListInListJob
-export interface MergeListInListJob {
-	Merge: Merge[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.OutSubtitleFile
-export interface OutSubtitleFile {
-	Bucket: string;
-	Object: string;
-	Location: string;
-	RoleArn: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.OutSubtitle
-export interface OutSubtitle {
-	Map: string;
-	Message: string;
-	Success: boolean;
-	OutSubtitleFile: OutSubtitleFile;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.OutSubtitleListInListJob
-export interface OutSubtitleListInListJob {
-	OutSubtitle: OutSubtitle[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Opening
-export interface Opening {
-	Height: string;
-	Width: string;
-	openUrl: string;
-	Start: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.OpeningListInListJob
-export interface OpeningListInListJob {
-	Opening: Opening[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Amix
-export interface Amix {
-	AmixURL: string;
-	Map: string;
-	MixDurMode: string;
-	Start: string;
-	Duration: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AmixList
-export interface AmixList {
-	Amix: Amix[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Output
-export interface Output {
-	TemplateId: string;
-	DeWatermark: string;
-	MergeConfigUrl: string;
-	UserData: string;
-	Rotate: string;
-	AudioStreamMap: string;
-	VideoStreamMap: string;
-	Priority: string;
-	WaterMarkConfigUrl: string;
-	Properties: Properties;
-	MuxConfig: MuxConfig;
-	DigiWaterMark: DigiWaterMark;
-	Video: Video;
-	Clip: Clip;
-	OutputFile: OutputFile;
-	M3U8NonStandardSupport: M3U8NonStandardSupport;
-	Audio: Audio;
-	TransConfig: TransConfig;
-	SubtitleConfig: SubtitleConfig;
-	Container: Container;
-	Encryption: Encryption;
-	SuperReso: SuperReso;
-	TailSlateList: TailSlateListInListJob;
-	WaterMarkList: WaterMarkListInListJob;
-	MergeList: MergeListInListJob;
-	OutSubtitleList: OutSubtitleListInListJob;
-	OpeningList: OpeningListInListJob;
-	AmixList: AmixList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.VideoFile
-export interface VideoFile {
-	Bucket: string;
-	Object: string;
-	Location: string;
-	RoleArn: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.DataFile
-export interface DataFile {
-	Bucket: string;
-	Object: string;
-	Location: string;
-	RoleArn: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.OutputConfig
-export interface OutputConfig {
-	VideoFile: VideoFile;
-	DataFile: DataFile;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.BeautifyConfig
-export interface BeautifyConfig {
-	OutputFile: OutputFile;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TimelineConfigAudio
-export interface TimelineConfigAudio {
-	Samplerate: string;
-	ChannelLayout: string;
-	Channels: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TimelineConfigVideo
-export interface TimelineConfigVideo {
-	Height: string;
-	Width: string;
-	ReclosePrec: string;
-	Fps: string;
-	IsOneTrackData: string;
-	RenderRatio: string;
-	BgColor: string;
-	IsGpuData: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TimelineConfig
-export interface TimelineConfig {
-	TimelineConfigAudio: TimelineConfigAudio;
-	TimelineConfigVideo: TimelineConfigVideo;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ClipsInQueryComplexJobList
-export interface ClipsInQueryComplexJobList {
-	Clip: Clip[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Track
-export interface Track {
-	Order: string;
-	Id: string;
-	Type: string;
-	Clips: ClipsInQueryComplexJobList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TrackListInQueryComplexJobList
-export interface TrackListInQueryComplexJobList {
-	Track: Track[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Timeline
-export interface Timeline {
-	Duration: string;
-	Start: string;
-	TimelineConfig: TimelineConfig;
-	TrackList: TrackListInQueryComplexJobList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ClipListInQueryComplexJobList
-export interface ClipListInQueryComplexJobList {
-	Clip: Clip[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Editing
-export interface Editing {
-	Timeline: Timeline;
-	ClipList: ClipListInQueryComplexJobList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.WaterMarkListInQueryEditingJobList
-export interface WaterMarkListInQueryEditingJobList {
-	WaterMark: WaterMark[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.MergeListInQueryEditingJobList
-export interface MergeListInQueryEditingJobList {
-	Merge: Merge[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.EditingConfig
-export interface EditingConfig {
-	TemplateId: string;
-	DeWatermark: string;
-	MergeConfigUrl: string;
-	UserData: string;
-	Rotate: string;
-	AudioStreamMap: string;
-	VideoStreamMap: string;
-	Priority: string;
-	WaterMarkConfigUrl: string;
-	Properties: Properties;
-	DigiWaterMark: DigiWaterMark;
-	Video: Video;
-	Clip: Clip;
-	MuxConfig: MuxConfig;
-	OutputFile: OutputFile;
-	M3U8NonStandardSupport: M3U8NonStandardSupport;
-	Audio: Audio;
-	SubtitleConfig: SubtitleConfig;
-	Editing: Editing;
-	Container: Container;
-	TransConfig: TransConfig;
-	Encryption: Encryption;
-	SuperReso: SuperReso;
-	WaterMarkList: WaterMarkListInQueryEditingJobList;
-	MergeList: MergeListInQueryEditingJobList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PornVideo
-export interface PornVideo {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PornVideos
-export interface PornVideos {
-	PornVideo: PornVideo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PornAudio
-export interface PornAudio {
-	Suggestion: string;
-	Score: string;
-	StartTime: string;
-	EndTime: string;
-	Text: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PornAudios
-export interface PornAudios {
-	PornAudio: PornAudio[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PornText
-export interface PornText {
-	Suggestion: string;
-	Score: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PornTexts
-export interface PornTexts {
-	PornText: PornText[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PornImage
-export interface PornImage {
-	Suggestion: string;
-	Score: string;
-	Url: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PornImages
-export interface PornImages {
-	PornImage: PornImage[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PornOcr
-export interface PornOcr {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PornOcrs
-export interface PornOcrs {
-	PornOcr: PornOcr[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PornResult
-export interface PornResult {
-	PornVideos: PornVideos;
-	PornAudios: PornAudios;
-	PornTexts: PornTexts;
-	PornImages: PornImages;
-	PornOcrs: PornOcrs;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PoliticsVideo
-export interface PoliticsVideo {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PoliticsVideos
-export interface PoliticsVideos {
-	PoliticsVideo: PoliticsVideo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PoliticsAudio
-export interface PoliticsAudio {
-	Suggestion: string;
-	Score: string;
-	StartTime: string;
-	EndTime: string;
-	Text: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PoliticsAudios
-export interface PoliticsAudios {
-	PoliticsAudio: PoliticsAudio[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PoliticsText
-export interface PoliticsText {
-	Suggestion: string;
-	Score: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PoliticsTexts
-export interface PoliticsTexts {
-	PoliticsText: PoliticsText[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PoliticsImage
-export interface PoliticsImage {
-	Suggestion: string;
-	Score: string;
-	Url: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PoliticsImages
-export interface PoliticsImages {
-	PoliticsImage: PoliticsImage[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PoliticsOcr
-export interface PoliticsOcr {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PoliticsOcrs
-export interface PoliticsOcrs {
-	PoliticsOcr: PoliticsOcr[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PoliticsResult
-export interface PoliticsResult {
-	PoliticsVideos: PoliticsVideos;
-	PoliticsAudios: PoliticsAudios;
-	PoliticsTexts: PoliticsTexts;
-	PoliticsImages: PoliticsImages;
-	PoliticsOcrs: PoliticsOcrs;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.QrcodeVideo
-export interface QrcodeVideo {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.QrcodeVideos
-export interface QrcodeVideos {
-	QrcodeVideo: QrcodeVideo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.QrcodeImage
-export interface QrcodeImage {
-	Suggestion: string;
-	Score: string;
-	Url: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.QrcodeImages
-export interface QrcodeImages {
-	QrcodeImage: QrcodeImage[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.QrcodeResult
-export interface QrcodeResult {
-	QrcodeVideos: QrcodeVideos;
-	QrcodeImages: QrcodeImages;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ContrabandAudio
-export interface ContrabandAudio {
-	Suggestion: string;
-	Score: string;
-	StartTime: string;
-	EndTime: string;
-	Text: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ContrabandAudios
-export interface ContrabandAudios {
-	ContrabandAudio: ContrabandAudio[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ContrabandText
-export interface ContrabandText {
-	Suggestion: string;
-	Score: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ContrabandTexts
-export interface ContrabandTexts {
-	ContrabandText: ContrabandText[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ContrabandOcr
-export interface ContrabandOcr {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ContrabandOcrs
-export interface ContrabandOcrs {
-	ContrabandOcr: ContrabandOcr[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ContrabandResult
-export interface ContrabandResult {
-	ContrabandAudios: ContrabandAudios;
-	ContrabandTexts: ContrabandTexts;
-	ContrabandOcrs: ContrabandOcrs;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AbuseAudio
-export interface AbuseAudio {
-	Suggestion: string;
-	Score: string;
-	StartTime: string;
-	EndTime: string;
-	Text: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AbuseAudios
-export interface AbuseAudios {
-	AbuseAudio: AbuseAudio[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AbuseText
-export interface AbuseText {
-	Suggestion: string;
-	Score: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AbuseTexts
-export interface AbuseTexts {
-	AbuseText: AbuseText[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AbuseOcr
-export interface AbuseOcr {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AbuseOcrs
-export interface AbuseOcrs {
-	AbuseOcr: AbuseOcr[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AbuseResult
-export interface AbuseResult {
-	AbuseAudios: AbuseAudios;
-	AbuseTexts: AbuseTexts;
-	AbuseOcrs: AbuseOcrs;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AdVideo
-export interface AdVideo {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AdVideos
-export interface AdVideos {
-	AdVideo: AdVideo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AdAudio
-export interface AdAudio {
-	Suggestion: string;
-	Score: string;
-	StartTime: string;
-	EndTime: string;
-	Text: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AdAudios
-export interface AdAudios {
-	AdAudio: AdAudio[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AdText
-export interface AdText {
-	Suggestion: string;
-	Score: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AdTexts
-export interface AdTexts {
-	AdText: AdText[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AdImage
-export interface AdImage {
-	Suggestion: string;
-	Score: string;
-	Url: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AdImages
-export interface AdImages {
-	AdImage: AdImage[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AdOcr
-export interface AdOcr {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AdOcrs
-export interface AdOcrs {
-	AdOcr: AdOcr[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AdResult
-export interface AdResult {
-	AdVideos: AdVideos;
-	AdAudios: AdAudios;
-	AdTexts: AdTexts;
-	AdImages: AdImages;
-	AdOcrs: AdOcrs;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TerrorismVideo
-export interface TerrorismVideo {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TerrorismVideos
-export interface TerrorismVideos {
-	TerrorismVideo: TerrorismVideo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TerrorismAudio
-export interface TerrorismAudio {
-	Suggestion: string;
-	Score: string;
-	StartTime: string;
-	EndTime: string;
-	Text: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TerrorismAudios
-export interface TerrorismAudios {
-	TerrorismAudio: TerrorismAudio[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TerrorismText
-export interface TerrorismText {
-	Suggestion: string;
-	Score: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TerrorismTexts
-export interface TerrorismTexts {
-	TerrorismText: TerrorismText[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TerrorismImage
-export interface TerrorismImage {
-	Suggestion: string;
-	Score: string;
-	Url: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TerrorismImages
-export interface TerrorismImages {
-	TerrorismImage: TerrorismImage[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TerrorismOcr
-export interface TerrorismOcr {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TerrorismOcrs
-export interface TerrorismOcrs {
-	TerrorismOcr: TerrorismOcr[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TerrorismResult
-export interface TerrorismResult {
-	TerrorismVideos: TerrorismVideos;
-	TerrorismAudios: TerrorismAudios;
-	TerrorismTexts: TerrorismTexts;
-	TerrorismImages: TerrorismImages;
-	TerrorismOcrs: TerrorismOcrs;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.LiveVideo
-export interface LiveVideo {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.LiveVideos
-export interface LiveVideos {
-	LiveVideo: LiveVideo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.LiveImage
-export interface LiveImage {
-	Suggestion: string;
-	Score: string;
-	Url: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.LiveImages
-export interface LiveImages {
-	LiveImage: LiveImage[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.LiveResult
-export interface LiveResult {
-	LiveVideos: LiveVideos;
-	LiveImages: LiveImages;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.LogoVideo
-export interface LogoVideo {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.LogoVideos
-export interface LogoVideos {
-	LogoVideo: LogoVideo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.LogoImage
-export interface LogoImage {
-	Suggestion: string;
-	Score: string;
-	Url: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.LogoImages
-export interface LogoImages {
-	LogoImage: LogoImage[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.LogoResult
-export interface LogoResult {
-	LogoVideos: LogoVideos;
-	LogoImages: LogoImages;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.SpamAudio
-export interface SpamAudio {
-	Suggestion: string;
-	Score: string;
-	StartTime: string;
-	EndTime: string;
-	Text: string;
-	Object: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.SpamAudios
-export interface SpamAudios {
-	SpamAudio: SpamAudio[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.SpamText
-export interface SpamText {
-	Suggestion: string;
-	Score: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.SpamTexts
-export interface SpamTexts {
-	SpamText: SpamText[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.SpamOcr
-export interface SpamOcr {
-	Suggestion: string;
-	Score: string;
-	Time: string;
-	Object: string;
-	Text: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.SpamOcrs
-export interface SpamOcrs {
-	SpamOcr: SpamOcr[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.SpamResult
-export interface SpamResult {
-	SpamAudios: SpamAudios;
-	SpamTexts: SpamTexts;
-	SpamOcrs: SpamOcrs;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ImageSearchShotsItem
-export interface ImageSearchShotsItem {
-	MatchedTimestamp: string;
-	MatchedFrame: string;
-	Similarity: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ImageSearchShots
-export interface ImageSearchShots {
-	ImageSearchShotsItem: ImageSearchShotsItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Result
-export interface Result {
-	Message: string;
-	Code: string;
-	Label: string;
-	Rate: string;
-	Score: string;
-	Suggestion: string;
-	Scene: string;
-	PornResult: PornResult;
-	PoliticsResult: PoliticsResult;
-	QrcodeResult: QrcodeResult;
-	ContrabandResult: ContrabandResult;
-	AbuseResult: AbuseResult;
-	AdResult: AdResult;
-	TerrorismResult: TerrorismResult;
-	LiveResult: LiveResult;
-	LogoResult: LogoResult;
-	SpamResult: SpamResult;
-	ImageSearchShots: ImageSearchShots;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Category
-export interface Category {
-	Score: string;
-	CateId: string;
-	Label: string;
-	ParentId: string;
-	Level: string;
-	CateName: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Categories
-export interface Categories {
-	Category: Category[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.CategoryResult
-export interface CategoryResult {
-	Details: string;
-	Categories: Categories;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.MNSMessageResult
-export interface MNSMessageResult {
-	MessageId: string;
-	ErrorMessage: string;
-	ErrorCode: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.VideoSplit
-export interface VideoSplit {
-	StartTime: string;
-	EndTime: string;
-	Path: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.VideoSplitList
-export interface VideoSplitList {
-	VideoSplit: VideoSplit[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.VideoSplitResult
-export interface VideoSplitResult {
-	VideoSplitList: VideoSplitList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.MediaDetailConfig
-export interface MediaDetailConfig {
-	Scenario: string;
-	DetailType: string;
-	OutputFile: OutputFile;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.VideoGifResult
-export interface VideoGifResult {
-	OutputFile: OutputFile;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AsrConfig
-export interface AsrConfig {
-	Scene: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TagsInQueryMediaDetailJobList
-export interface TagsInQueryMediaDetailJobList {
-	String: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.FrameTags
-export interface FrameTags {
-	String: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Celebrity
-export interface Celebrity {
-	Name: string;
-	Score: string;
-	Target: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.CelebritiesInQueryMediaDetailJobList
-export interface CelebritiesInQueryMediaDetailJobList {
-	Celebrity: Celebrity[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Sensitive
-export interface Sensitive {
-	Name: string;
-	Score: string;
-	Target: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Sensitives
-export interface Sensitives {
-	Sensitive: Sensitive[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Politician
-export interface Politician {
-	Name: string;
-	Score: string;
-	Target: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Politicians
-export interface Politicians {
-	Politician: Politician[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.FrameTagInfo
-export interface FrameTagInfo {
-	Category: string;
-	Score: string;
-	Tag: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.FrameTagInfosInQueryMediaDetailJobList
-export interface FrameTagInfosInQueryMediaDetailJobList {
-	FrameTagInfo: FrameTagInfo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ClipsInQueryMediaDetailJobList
-export interface ClipsInQueryMediaDetailJobList {
-	Clip: Clip[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Custom
-export interface Custom {
-	Name: string;
-	Clips: ClipsInQueryMediaDetailJobList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Customs
-export interface Customs {
-	Custom: Custom[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.MediaDetailRecgResult
-export interface MediaDetailRecgResult {
-	ImageUrl: string;
-	Time: string;
-	OcrText: string;
-	FrameTags: FrameTags;
-	Celebrities: CelebritiesInQueryMediaDetailJobList;
-	Sensitives: Sensitives;
-	Politicians: Politicians;
-	FrameTagInfos: FrameTagInfosInQueryMediaDetailJobList;
-	Customs: Customs;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.MediaDetailRecgResults
-export interface MediaDetailRecgResults {
-	MediaDetailRecgResult: MediaDetailRecgResult[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.MediaDetailResult
-export interface MediaDetailResult {
-	Status: string;
-	Tags: TagsInQueryMediaDetailJobList;
-	MediaDetailRecgResults: MediaDetailRecgResults;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AsrText
-export interface AsrText {
-	SpeechRate: string;
-	Text: string;
-	EndTime: string;
-	ChannelId: string;
-	StartTime: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AsrTextListInQueryMcuJob
-export interface AsrTextListInQueryMcuJob {
-	AsrText: AsrText[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AsrResult
-export interface AsrResult {
-	Duration: string;
-	AsrTextList: AsrTextListInQueryMcuJob;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.WaterMarkListInQueryComplexJobList
-export interface WaterMarkListInQueryComplexJobList {
-	WaterMark: WaterMark[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.MergeListInQueryComplexJobList
-export interface MergeListInQueryComplexJobList {
-	Merge: Merge[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TranscodeOutput
-export interface TranscodeOutput {
-	TemplateId: string;
-	DeWatermark: string;
-	MergeConfigUrl: string;
-	UserData: string;
-	Priority: string;
-	Rotate: string;
-	AudioStreamMap: string;
-	WaterMarkConfigUrl: string;
-	VideoStreamMap: string;
-	Properties: Properties;
-	M3U8NonStandardSupport: M3U8NonStandardSupport;
-	DigiWaterMark: DigiWaterMark;
-	Audio: Audio;
-	Video: Video;
-	SubtitleConfig: SubtitleConfig;
-	Clip: Clip;
-	MuxConfig: MuxConfig;
-	Container: Container;
-	OutputFile: OutputFile;
-	TransConfig: TransConfig;
-	Encryption: Encryption;
-	SuperReso: SuperReso;
-	WaterMarkList: WaterMarkListInQueryComplexJobList;
-	MergeList: MergeListInQueryComplexJobList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.VideoSummary
-export interface VideoSummary {
-	StartTime: string;
-	EndTime: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.VideoSummaryList
-export interface VideoSummaryList {
-	VideoSummary: VideoSummary[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.VideoSummaryResult
-export interface VideoSummaryResult {
-	OutputFile: OutputFile;
-	VideoSummaryList: VideoSummaryList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.InputConfig
-export interface InputConfig {
-	DeinterlaceMethod: string;
-	IsNormalSar: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.EditingInput
-export interface EditingInput {
-	Id: string;
-	InputFile: InputFile;
-	InputConfig: InputConfig;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.EditingInputsInQueryComplexJobList
-export interface EditingInputsInQueryComplexJobList {
-	EditingInput: EditingInput[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.InputsItem
-export interface InputsItem {
-	EditingInputs: EditingInputsInQueryComplexJobList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.InputsInQueryComplexJobList
-export interface InputsInQueryComplexJobList {
-	InputsItem: InputsItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.EditingInputsInQueryEditingJobList
-export interface EditingInputsInQueryEditingJobList {
-	EditingInput: EditingInput[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.FrameTagInfosInQueryMcuJob
-export interface FrameTagInfosInQueryMcuJob {
-	FrameTagInfo: FrameTagInfo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Tag
-export interface Tag {
-	Time: string;
-	ImageUrl: string;
-	ImageId: string;
-	FrameTagInfos: FrameTagInfosInQueryMcuJob;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TagResult
-export interface TagResult {
-	Tag: Tag[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Ocr
-export interface Ocr {
-	Time: string;
-	OcrText: string;
-	ImageUrl: string;
-	ImageId: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.OcrResult
-export interface OcrResult {
-	Ocr: Ocr[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ComplexEditingConfigsItem
-export interface ComplexEditingConfigsItem {
-	Editing: Editing;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ComplexEditingConfigsInQueryComplexJobList
-export interface ComplexEditingConfigsInQueryComplexJobList {
-	ComplexEditingConfigsItem: ComplexEditingConfigsItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.CelebritiesInQueryMcuJob
-export interface CelebritiesInQueryMcuJob {
-	Celebrity: Celebrity[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Face
-export interface Face {
-	Name: string;
-	Time: string;
-	Score: string;
-	ImageUrl: string;
-	ImageId: string;
-	Target: string;
-	Celebrities: CelebritiesInQueryMcuJob;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.FaceResult
-export interface FaceResult {
-	Face: Face[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Job
-export interface Job {
-	TemplateId: string;
-	ResultOutputFile: string;
-	UserData: string;
-	PipelineId: string;
-	Template: string;
-	Percent: number;
-	Id: string;
-	JobId: string;
-	Message: string;
-	Code: string;
-	CreationTime: string;
-	FinishTime: string;
-	State: string;
-	Output: Output;
-	OutputConfig: OutputConfig;
-	BeautifyConfig: BeautifyConfig;
-	EditingConfig: EditingConfig;
-	Input: Input;
-	Result: Result;
-	CategoryResult: CategoryResult;
-	Properties: Properties;
-	MNSMessageResult: MNSMessageResult;
-	VideoSplitResult: VideoSplitResult;
-	MediaDetailConfig: MediaDetailConfig;
-	VideoGifResult: VideoGifResult;
-	AsrConfig: AsrConfig;
-	MediaDetailResult: MediaDetailResult;
-	AsrResult: AsrResult;
-	transcodeOutput: TranscodeOutput;
-	VideoSummaryResult: VideoSummaryResult;
-	Inputs: InputsInQueryComplexJobList;
-	EditingInputs: EditingInputsInQueryEditingJobList;
-	TagResult: TagResult;
-	OcrResult: OcrResult;
-	ComplexEditingConfigs: ComplexEditingConfigsInQueryComplexJobList;
-	FaceResult: FaceResult;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.JobListInListJob
-export interface JobListInListJob {
-	Job: Job[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.ListJobResponse
 export interface ListJobResponse {
-	RequestId: string;
-	NextPageToken: string;
-	JobList: JobListInListJob;
+    /**
+     * 请求ID。
+     * @example `BC860F04-778A-472F-AB39-E1BF329C1EA8`
+     */
+    RequestId: string;
+    /**
+     * 下一页标识。需记录下来，在下一次请求时传入即可。
+     * @example `16f01ad6175e4230ac42bb5182cd****`
+     */
+    NextPageToken: string;
+    JobList: {
+        /**
+         * 转码作业集合。
+         */
+        Job: {
+            /**
+             * 作业添加时间。
+             * @example `2014-01-10T12:00:00Z`
+             */
+            CreationTime: string;
+            /**
+             * 转码进度。
+             * @example `100`
+             */
+            Percent: number;
+            /**
+             * 作业完成时间。
+             * @example `2014-01-10T12:20:25Z`
+             */
+            FinishTime: string;
+            /**
+             * 作业状态：
+             * - **Submitted**：作业已提交。
+             * - **Transcoding**：转码中。
+             * - **TranscodeSuccess**：转码成功。
+             * - **TranscodeFail**：转码失败。
+             * - **TranscodeCancelled**：转码取消。
+             * @example `TranscodeSuccess`
+             */
+            State: string;
+            /**
+             * 任务ID。
+             * @example `31fa3c9ca8134fb4b0b0f7878301****`
+             */
+            JobId: string;
+            /**
+             * 任务失败时的错误码。任务成功时不返回。
+             * @example `InternalError`
+             */
+            Code: string;
+            /**
+             * 任务失败时的消息。任务成功时不返回。
+             * @example `The operation has failed due to some unknown error, exception or failure.`
+             */
+            Message: string;
+            /**
+             *  作业输出。
+             */
+            Output: {
+                /**
+                 *  视频配置。
+                 */
+                Video: {
+                    /**
+                     * 缓冲区大小。
+                     * @example `6000`
+                     */
+                    Bufsize: string;
+                    /**
+                     * 独立去噪算法强度。
+                     * @example `5`
+                     */
+                    Degrain: string;
+                    /**
+                     * 视频码率范围。
+                     */
+                    BitrateBnd: {
+                        /**
+                         * 最大码率。单位：Kbps。
+                         * @example `1000`
+                         */
+                        Max: string;
+                        /**
+                         * 最小码率。单位：Kbps。
+                         * @example `200`
+                         */
+                        Min: string;
+                    };
+                    /**
+                     * 视频颜色格式。范围：yuv420p，yuvj420p等标准颜色格式。
+                     * @example `yuv420p`
+                     */
+                    PixFmt: string;
+                    /**
+                     * 视频贴黑边。单位：px。
+                     * - 参数格式：width:height:left:top。
+                     * - 示例：1280:800:0:140。
+                     * @example `1280:800:0:140`
+                     */
+                    Pad: string;
+                    /**
+                     * 编解码格式。可取值**H.264**、**H.265**、**GIF**、**WEBP**。
+                     * @example `H.264`
+                     */
+                    Codec: string;
+                    /**
+                     * 高。
+                     * - 单位：px。
+                     * - 默认值：视频原始高度。
+                     * @example `720`
+                     */
+                    Height: string;
+                    /**
+                     * 视频质量控制度。
+                     * @example `15`
+                     */
+                    Qscale: string;
+                    /**
+                     * 视频画面裁剪。支持2种方式。
+                     * - 自动检测黑边并裁切，设置为**border**。
+                     * - 自定义裁切，参数格式：width:height:left:top。示例：1280:800:0:140。
+                     * @example `border`
+                     */
+                    Crop: string;
+                    /**
+                     * 视频平均码率。单位：Kbps。
+                     * @example `428`
+                     */
+                    Bitrate: string;
+                    /**
+                     * 视频码率峰值。单位：Kbps。
+                     * @example `1000`
+                     */
+                    Maxrate: string;
+                    /**
+                     * 最大帧率。
+                     * @example `60`
+                     */
+                    MaxFps: string;
+                    /**
+                     * 编码级别。
+                     * - **baseline**：针对移动设备。
+                     * - **main**：针对标准分辨率设备。
+                     * - **high**：针对高分辨率设备。
+                     * - 默认值：**high**。
+                     * @example `high`
+                     */
+                    Profile: string;
+                    /**
+                     * 码率-质量控制因子。如果设置了Crf，则Bitrate的设置失效。默认值：**26**。
+                     * @example `26`
+                     */
+                    Crf: string;
+                    /**
+                     * 关键帧间最大帧数。默认值：250。
+                     * @example `250`
+                     */
+                    Gop: string;
+                    /**
+                     * 宽。
+                     * - 单位：px。
+                     * - 默认值：视频原始宽度。
+                     * @example `1280`
+                     */
+                    Width: string;
+                    /**
+                     * 帧率。
+                     * - 当输入文件帧率超过60时取60。
+                     * - 默认值：取输入文件帧率。
+                     * @example `25`
+                     */
+                    Fps: string;
+                    /**
+                     * 视频算法器预置。默认值：medium。可取值：
+                     * - **veryfast**：超快。
+                     * - **fast**：快。
+                     * - **medium**：中等。
+                     * - **slow**：慢。
+                     * - **slower**：超慢。
+                     * @example `medium`
+                     */
+                    Preset: string;
+                    /**
+                     * 扫描模式。取值如下：
+                     * - **不设置**：按输入文件的原始模式。
+                     * - **auto**：自动去隔行。
+                     * - **progressive**：顺序扫描（逐行扫描）。
+                     * - **interlaced**：交叉扫描（隔行扫描）。
+                     * - **默认值**：空，即不设置。
+                     * **最佳实践**：交叉扫描虽然比顺序扫描更节省数据量，但画质不佳，所以现在主流视频制作都采用顺序扫描。
+                     * - 如果您设置了**顺序扫描**或**交叉扫描**，但与原视频模式不符，会导致转码失败。
+                     * - 建议您设置**原视频模式**或**自动去隔行**，以提高兼容性。
+                     * @example `interlaced`
+                     */
+                    ScanMode: string;
+                    /**
+                     * 资源优先级。
+                     * @example `1`
+                     */
+                    ResoPriority: string;
+                };
+                /**
+                 * 转码通用配置。如果请求参数中设置了该值，则覆盖指定转码模板中的对应参数。
+                 */
+                TransConfig: {
+                    /**
+                     * 是否检查音频码率。当输出音频码率大于媒体源音频码率时，则视为输出音频码率等于媒体源音频码率，即设置的音频码率参数不会生效。此值优先级小于IsCheckAudioBitrateFail。
+                     * - **true**表示检查。
+                     * - **false**表示不检查。
+                     * - 默认值：
+                     *     - 参数为空，并且codec和输入源不一样：false。
+                     *     - 参数为空，并且codec和输入源一样：true。
+                     * @example `false`
+                     */
+                    IsCheckAudioBitrate: string;
+                    /**
+                     * 转码模式。
+                     * - 可选范围onepass、twopass、CBR。
+                     * - 默认值：onepass。
+                     * @example `onepass`
+                     */
+                    TransMode: string;
+                    /**
+                     * 是否检查分辨率。如果输出分辨率大于输入分辨率（判断条件是宽或高），则输出分辨率等于输入分辨率。
+                     * - **true**表示检查。
+                     * - **false**表示不检查。
+                     * - 默认值：**false**。
+                     * @example `false`
+                     */
+                    IsCheckReso: string;
+                    /**
+                     * 是否检查码率。当输出视频码率大于媒体源视频码率时，则不进行转码，直接返回转码失败。此值优先级大于IsCheckVideoBitrate。
+                     * - **true**表示检查。
+                     * - **false**表示不检查。
+                     * - 默认值：false。
+                     * @example `false`
+                     */
+                    IsCheckVideoBitrateFail: string;
+                    /**
+                     * 分辨率改写方式。默认值：**none**。可选范围：rescale、crop、pad、none。
+                     * @example `none`
+                     */
+                    AdjDarMethod: string;
+                    /**
+                     * 是否检查视频码率。如果视频输出码率大于视频输入码率，则视为视频输出码率等于视频输入码率。
+                     * - **true**表示检查。
+                     * - **false**表示不检查。
+                     * - 默认值：**false**。
+                     * @example `false`
+                     */
+                    IsCheckVideoBitrate: string;
+                    /**
+                     * 是否检查分辨率。如果输出分辨率大于输入分辨率（判断条件是宽或高），则返回转码失败。
+                     * - **true**表示检查。
+                     * - **false**表示不检查。
+                     * - 默认值：**false**。
+                     * @example `false`
+                     */
+                    IsCheckResoFail: string;
+                    /**
+                     * 是否检查音频码率。当输出音频码率大于媒体源音频码率时，则不进行转码，直接返回转码失败，此值优先级大于IsCheckAudioBitrate。
+                     * - **false**：检查。
+                     * - **true**：不检查。
+                     * @example `false`
+                     */
+                    IsCheckAudioBitrateFail: string;
+                };
+                /**
+                 * 数据加密，只支持m3u8格式的输出。
+                 */
+                Encryption: {
+                    /**
+                     * 加密类型。取值：hls-aes-128。
+                     * @example `hls-aes-128`
+                     */
+                    Type: string;
+                    /**
+                     * 加密视频的密钥。
+                     * @example `encryptionkey128`
+                     */
+                    Key: string;
+                    /**
+                     * 密钥加密方式，可取值Base64、KMS。
+                     * > 如密钥为`"encryptionkey128”`, 则`Base64(“encryptionkey128”)`或 `KMS(Base64(“encryptionkey128”)`。
+                     * @example `Base64`
+                     */
+                    KeyType: string;
+                    /**
+                     * 加密ID。
+                     * @example `31fa3c9ca8134f9cec2b4b0b0f78****`
+                     */
+                    Id: string;
+                    /**
+                     * 密钥的访问URL，使用BASE64进行编码。
+                     * @example `https://1161758785*****.cn-shanghai.fc.aliyuncs.com/2016-08-15/proxy/HLS-decyptServer/decyptServer/`
+                     */
+                    KeyUri: string;
+                    /**
+                     * 前面不加密的片数（视频能快速播放起来）。
+                     * @example `3`
+                     */
+                    SkipCnt: string;
+                };
+                WaterMarkList: {
+                    /**
+                     * 水印列表。
+                     */
+                    WaterMark: {
+                        /**
+                         * 水印类型。如果请求参数中设置了此参数，则此值覆盖水印模板对应参数。更多信息，请参见[参数详情](~~29253~~)。可取值：
+                         * - **Image**：图片水印。
+                         * - **Text**：文字水印。
+                         * @example `Image`
+                         */
+                        Type: string;
+                        /**
+                         * 水印的位置。
+                         * - **TopRight**：右上。
+                         * - **TopLeft**：左上。
+                         * - **BottomRight**：右下。
+                         * - **BottomLeft**：左下。
+                         * @example `TopRight`
+                         */
+                        ReferPos: string;
+                        /**
+                         * 水印图片相对输出视频的水平偏移量。如果请求参数中设置了此值，则覆盖水印模板对应参数。默认值为0。值有两种形式：
+                         * - 整数型：代表偏移像素值。
+                         *     - 范围：\[8,4096\]。
+                         *     - 单位：px。
+                         * - 小数型：代表水平偏移量与输出分辨率宽的比率。
+                         *     - 范围：（0,1)。
+                         *     - 支持四位小数，例如：0.9999，超出部分系统自动丢弃。
+                         * @example `100`
+                         */
+                        Dx: string;
+                        /**
+                         * 水印图片宽。如果在请求参数中设置了此值，则覆盖水印模板对应水印图片宽。值有两种形式：
+                         * - 整数型：代表水印图片宽的像素值。
+                         *     - 范围：\[8，4096\]。
+                         *     - 单位：px。
+                         * - 小数型：代表相对输出视频分辨率宽的比率。
+                         *     - 范围：(0,1)。
+                         *     - 支持4位小数，例如：0.9999，超出部分系统自动丢弃。
+                         * @example `50`
+                         */
+                        Width: string;
+                        /**
+                         * 水印图片高。如果在请求参数中设置了此值，则覆盖水印模板对应水印图片高。值有两种形式：
+                         * - 整数型：代表水印图片高的像素值。
+                         *     - 范围：\[8，4096\]。
+                         *     - 单位：px。
+                         * - 小数型：代表相对输出视频分辨率高的比率。
+                         *     - 范围：(0,1)。
+                         *     - 支持4位小数，例如：0.9999，超出部分系统自动丢弃。
+                         * @example `50`
+                         */
+                        Height: string;
+                        /**
+                         * 水印输入文件。
+                         */
+                        InputFile: {
+                            /**
+                             * 输入文件的OSS Object。
+                             * @example `example-logo-****.png`
+                             */
+                            Object: string;
+                            /**
+                             * 输入文件的OSS Location。
+                             * @example `oss-cn-hangzhou`
+                             */
+                            Location: string;
+                            /**
+                             * 输入文件的OSS Bucket。
+                             * @example `example-bucket`
+                             */
+                            Bucket: string;
+                        };
+                        /**
+                         * 水印模板ID。
+                         * @example `88c6ca184c0e47098a5b665e2a12****`
+                         */
+                        WaterMarkTemplateId: string;
+                        /**
+                         * 水印图片相对输出视频的垂直偏移量。如果在请求参数中设置了此值，则覆盖水印模板对应水印图片相对输出视频的垂直偏移量。值有两种形式：
+                         * - 整数型：代表水印图片相对输出视频的垂直偏移量像素。
+                         *     - 范围：\[8，4096\]。
+                         *     - 单位：px。
+                         * - 小数型：代表水印图片相对输出视频的垂直偏移量比率。
+                         *     - 范围：(0,1)。
+                         *     - 支持4位小数，例如：0.9999，超出部分系统自动丢弃。
+                         * @example `100`
+                         */
+                        Dy: string;
+                    }[];
+                };
+                /**
+                 * 水印配置文件URL。
+                 * @example `http://example.com/configure`
+                 */
+                WaterMarkConfigUrl: string;
+                /**
+                 * 模糊处理，JSON对象。更多信息请参见[参数详情](~~29253~~)中的模糊处理详情。
+                 * @example `{"0": [{"l": 10,"t": 10,"w": 10,"h": 10},{"l": 100,"t": 0.1,"w": 10,"h": 10}],"128000": [],"250000": [{"l": 0.2,"t": 0.1,"w": 0.01,"h": 0.05}]}`
+                 */
+                DeWatermark: string;
+                /**
+                 * M3U8非标准支持，JSON对象。更多信息请参见[参数详情](~~29253~~)中的M3U8非标准参数支持详情。
+                 */
+                M3U8NonStandardSupport: {
+                    /**
+                     * JSON对象，TS文件相关非标准支持。更多信息请参见[参数详情](~~29253~~)中的TS参数支持详情。
+                     */
+                    TS: {
+                        /**
+                         * 是否支持在M3U8文件中输出ts文件的大小。
+                         * - **true**：支持。
+                         * - **false**：不支持。
+                         * @example `true`
+                         */
+                        SizeSupport: boolean;
+                        /**
+                         * 是否支持在M3U8文件中输出TS的md5值。可取值：
+                         * - **true**：支持。
+                         * - **false**：不支持。
+                         * @example `true`
+                         */
+                        Md5Support: boolean;
+                    };
+                };
+                /**
+                 * 任务在其对应管道内的优先级。
+                 * - 最高优先级：10。
+                 * - 默认值：**6**。
+                 * @example `6`
+                 */
+                Priority: string;
+                /**
+                 * 音频配置。
+                 */
+                Audio: {
+                    /**
+                     * 音频编码预置。当Codec为aac时可取值：aaclow、aache、aachev2、aacld、aaceld。
+                     * @example `aaclow`
+                     */
+                    Profile: string;
+                    /**
+                     * 音频编解码格式。
+                     * - 支持aac、mp3、vorbis、flac。
+                     * - 默认值：**aac**。
+                     * @example `aac`
+                     */
+                    Codec: string;
+                    /**
+                     * 采样率。
+                     * - 支持22050、32000、44100、48000、96000。
+                     * - 单位：Hz。
+                     * - 默认值：44100。
+                     * - 若视频容器格式为flv，音频编解码格式选择为mp3时，采样率不支持32000、48000、96000；音频编解码格式为mp3时，采样率不支持96000。
+                     * @example `44100`
+                     */
+                    Samplerate: string;
+                    /**
+                     * 音频质量控制度。
+                     * @example `15`
+                     */
+                    Qscale: string;
+                    /**
+                     * 声道数。
+                     * - 当Codec设置为mp3时，声道数只支持1、2。
+                     * - 当Codec设置为aac时，声道数只支持1、2、4、5、6、8。
+                     * - 默认值：2。
+                     * @example `2`
+                     */
+                    Channels: string;
+                    /**
+                     * 音量配置。
+                     */
+                    Volume: {
+                        /**
+                         * 音量调整方式。可取值：
+                         * - **auto**：自动调整。
+                         * - **dynamic**：动态调整。
+                         * - **linear**：线性调整。
+                         * @example `auto`
+                         */
+                        Method: string;
+                        /**
+                         * 音量调整幅度。
+                         * - 单位：db。
+                         * - 默认：-**20db**。
+                         * @example `-20`
+                         */
+                        Level: string;
+                    };
+                    /**
+                     * 输出文件的音频码率。
+                     * - 单位：Kbps。
+                     * - 默认值：**128**。
+                     * @example `128`
+                     */
+                    Bitrate: string;
+                };
+                /**
+                 * 音频流序号。
+                 * - 格式：`0:a:{序号}`。
+                 * - 序号从0开始，序号的含义是音频流列表的下标，若不设置，选择默认的音频流。
+                 * @example `0:a:0`
+                 */
+                AudioStreamMap: string;
+                MergeList: {
+                    /**
+                     * 视频拼接配置。
+                     */
+                    Merge: {
+                        /**
+                         * 起始时间点。
+                         * - 格式：`hh:mm:ss[.SSS]`或者`sssss[.SSS]`。
+                         * - 示例：01:59:59.999或者32000.23。
+                         * @example `01:59:59.999或者32000.23`
+                         */
+                        Start: string;
+                        /**
+                         * 代理授权使用的角色信息。
+                         * @example `acs:ram::<your uid>:role/<your role name>`
+                         */
+                        RoleArn: string;
+                        /**
+                         * 拼接片段地址。
+                         * - 示例：`http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/example-object.flv`。
+                         * - Object需要经过URLEncode，采用UTF-8编码。
+                         * @example `http://example-bucket.oss-cn-hangzhou.aliyuncs.com/example-object.flv`
+                         */
+                        MergeURL: string;
+                        /**
+                         * 起始时间点。
+                         * - 格式：`hh:mm:ss[.SSS]`或者`sssss[.SSS]`。
+                         * - 示例：01:59:59.999或者32000.23。
+                         * @example `01:59:59.999`
+                         */
+                        Duration: string;
+                    }[];
+                };
+                /**
+                 * 分辨率随源。
+                 */
+                SuperReso: {
+                    /**
+                     * 是否获取采样率相关参数。可取值：
+                     * - **true**：是。
+                     * - **false**：否。
+                     * @example `true`
+                     */
+                    IsHalfSample: string;
+                };
+                /**
+                 * 用户自定义数据。
+                 * @example `test-001`
+                 */
+                UserData: string;
+                OutSubtitleList: {
+                    /**
+                     * 输出字幕列表。
+                     */
+                    OutSubtitle: {
+                        /**
+                         * 视频轨。格式：0:{流}:{流序号} ，即0:v:{video_index}。流取值为v: video音频流，序号的含义是音频流列表的下标，序号从0开始。
+                         * @example `0:v:0`
+                         */
+                        Map: string;
+                        /**
+                         * 输出文件详细信息。
+                         */
+                        OutSubtitleFile: {
+                            /**
+                             * 代理授权使用的角色信息。
+                             * @example `acs:ram::<your uid>:role/<your role name>`
+                             */
+                            RoleArn: string;
+                            /**
+                             * 输出文件的OSS Object。
+                             * @example `example-output.flv`
+                             */
+                            Object: string;
+                            /**
+                             * 输出文件的OSS Location。
+                             * @example `oss-cn-hangzhou`
+                             */
+                            Location: string;
+                            /**
+                             * 输入文件的OSS Bucket。
+                             * @example `example-bucket-****`
+                             */
+                            Bucket: string;
+                        };
+                        /**
+                         * 是否成功。可取值：
+                         * - **true**：成功。
+                         * - **false**：失败。
+                         * @example `true`
+                         */
+                        Success: boolean;
+                        /**
+                         * 创建作业失败时错误消息。创建成功时此参数不返回。
+                         * @example `The specified parameter “%s” cannot be null.`
+                         */
+                        Message: string;
+                    }[];
+                };
+                /**
+                 * 视频流序号。
+                 * - 格式：0:a:{序号}，示例：0:a:0。
+                 * - 序号从0开始，序号的含义是视频流列表的下标。
+                 * - 若不设置，选择默认的视频流。
+                 * @example `0:a:0`
+                 */
+                VideoStreamMap: string;
+                /**
+                 * 输出文件。
+                 */
+                OutputFile: {
+                    /**
+                     * 代理授权使用的角色信息。
+                     * @example `acs:ram::<your uid>:role/<your role name>`
+                     */
+                    RoleArn: string;
+                    /**
+                     * 输出文件的OSS Object。
+                     * @example `example-output.flv`
+                     */
+                    Object: string;
+                    /**
+                     * 输出文件的OSS Location。
+                     * @example `oss-cn-hangzhou`
+                     */
+                    Location: string;
+                    /**
+                     * 输入文件的OSS Bucket。
+                     * @example `example-bucket`
+                     */
+                    Bucket: string;
+                };
+                /**
+                 * 视频旋转角度。
+                 * @example `90`
+                 */
+                Rotate: string;
+                /**
+                 * 容器。
+                 */
+                Container: {
+                    /**
+                     * 容器格式。
+                     * - 默认值：mp4。
+                     * - 视频转码可取值flv、mp4、HLS（m3u8+ts）、MPEG-DASH（MPD+fMP4）。
+                     * - 音频转码可取值mp3、mp4、ogg、flac、m4a。
+                     * - 图片可取值gif、WEBP。
+                     * - 容器格式为gif时，VideoCodec设置只能设置为GIF。
+                     * - 容器格式为webp时，VideoCodec设置只能设置为WEBP。
+                     * - 容器格式为flv时，VideoCodec不能设置为H265。
+                     * @example `flv`
+                     */
+                    Format: string;
+                };
+                /**
+                 * 剪辑片段。
+                 */
+                Clip: {
+                    /**
+                     * 剪辑时间段。
+                     */
+                    TimeSpan: {
+                        /**
+                         * 开始时间点。
+                         * - 格式：`hh:mm:ss[.SSS]`或`sssss[.SSS]`。
+                         * - 取值范围 ：`[00:00:00.000,23:59:59.999]`或`[0.000，86399.999]`。
+                         * - 示例：01:59:59.999或32000.23。
+                         * @example `01:00:59.999`
+                         */
+                        Seek: string;
+                        /**
+                         * 持续时长。
+                         * - 格式：`hh:mm:ss[.SSS]`或`sssss[.SSS]`。
+                         * - 取值范围 ：`[00:00:00.000,23:59:59.999]`或`[0.000，86399.999]`。
+                         * - 示例：01:00:59.999或32000.23。
+                         * @example `01:00:59.999`
+                         */
+                        Duration: string;
+                    };
+                };
+                /**
+                 * 拼接配置文件URL地址。MergeList与MergeConfigUrl两个参数只支持二选一。
+                 * - MergeConfigUrl指定的配置文件允许50个拼接片段上限。
+                 * - MergeConfigUrl是拼接配置文件URL地址。
+                 * - 只支持存放在OSS上的配置文件，且需要保证有授权给MPS可访问权限，文件内部内容参见拼接参数详情。
+                 * - mergeConfigfile文件内部内容示例：`{"MergeList":[{"MergeURL":"http://exampleBucket****.oss-cn-hangzhou.aliyuncs.com/video_01.mp4"}]}`。
+                 * @example `{"MergeList":[{"MergeURL":"http://exampleBucket****.oss-cn-hangzhou.aliyuncs.com/video_01.mp4"}]}`
+                 */
+                MergeConfigUrl: string;
+                OpeningList: {
+                    /**
+                     * 开板列表。
+                     */
+                    Opening: {
+                        /**
+                         * 开板视频的OSS URL地址。
+                         * @example `http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/opening_01.flv`
+                         */
+                        openUrl: string;
+                        /**
+                         * 相对正片视频的开始时间。从0开始延迟多长时间后，显示开板视频。
+                         * - 单位：秒。
+                         * - 默认值：**0**。
+                         * @example `0`
+                         */
+                        Start: string;
+                        /**
+                         * 宽。可取值：(0,4096)、-1、full。
+                         * - 默认值：**-1**。
+                         * - -1代表片源的值。
+                         * - full表示填满画面。
+                         * @example `-1`
+                         */
+                        Width: string;
+                        /**
+                         * 高。可取值：(0,4096)、-1、full。
+                         * - 默认值：**-1**。
+                         * - -1代表片源的值。
+                         * - full表示填满画面。
+                         * @example `-1`
+                         */
+                        Height: string;
+                    }[];
+                };
+                /**
+                 * 转码封包配置。
+                 */
+                MuxConfig: {
+                    /**
+                     * Webp对应的封包配置。
+                     */
+                    Webp: {
+                        /**
+                         * 循环次数。
+                         * @example `0`
+                         */
+                        Loop: string;
+                    };
+                    /**
+                     * Gif对应的封包配置。
+                     */
+                    Gif: {
+                        /**
+                         * 终帧暂停时间，单位：厘秒。
+                         * @example `0`
+                         */
+                        FinalDelay: string;
+                        /**
+                         * 调色板颜色抖动方式。可取值：**sierra**、**bayer**。
+                         * @example `bayer`
+                         */
+                        DitherMode: string;
+                        /**
+                         * 循环次数。
+                         * @example `0`
+                         */
+                        Loop: string;
+                        /**
+                         * 自定义调色板功能。可取值：
+                         * - **true**：自定义。
+                         * - **false**：非自定义。
+                         * @example `true`
+                         */
+                        IsCustomPalette: string;
+                    };
+                    /**
+                     * 切片配置，JSON对象。
+                     */
+                    Segment: {
+                        /**
+                         * 分片时长。整数，单位：秒。
+                         * - 可取值范围：\[1,10\]。
+                         * - 默认值：10秒。
+                         * @example `10`
+                         */
+                        Duration: string;
+                    };
+                };
+                TailSlateList: {
+                    /**
+                     * 尾板列表。
+                     */
+                    TailSlate: {
+                        /**
+                         * 开始时间。
+                         * @example `1`
+                         */
+                        Start: string;
+                        /**
+                         * 如果尾板视频的宽、高小于正片时，设置空白处填充的背景色。默认为**White**，更多信息请参见[bgcolor](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/29253/cn_zh/1502784952344/color.txt?spm=a2c4g.11186623.2.63.1df840f74IH4Eq&file=color.txt)。
+                         * @example `White`
+                         */
+                        BgColor: string;
+                        /**
+                         * 是否要拼接尾板视频的音频内容。可取值：
+                         * - **true**：拼接。
+                         * - **false**：不拼接。
+                         * @example `true`
+                         */
+                        IsMergeAudio: boolean;
+                        /**
+                         * 宽。可取值：（0，4096）、-1、full。
+                         * - -1代表片源的值，full表示填满画面。
+                         * - 默认为**-1**。
+                         * @example `-1`
+                         */
+                        Width: string;
+                        /**
+                         * 高，范围（0，4096）、-1、full
+                         * - -1代表片源的值。
+                         * - full表示填满画面。
+                         * - 默认为**-1**。
+                         * @example `-1`
+                         */
+                        Height: string;
+                        /**
+                         * 正片视频和尾板视频过渡的时长。过渡的效果是淡入淡出：正片显示最后一帧，同时播放尾板视频，正片最后一帧逐步变暗，尾板视频逐步变亮。单位秒，默认0。
+                         * @example `0`
+                         */
+                        BlendDuration: string;
+                        /**
+                         * 尾板视频的OSS URL地址。
+                         * @example `http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/opening_01.flv`
+                         */
+                        TailUrl: string;
+                    }[];
+                };
+                /**
+                 * 模板ID。
+                 * @example `S00000000-000010`
+                 */
+                TemplateId: string;
+                /**
+                 * 字幕配置。
+                 */
+                SubtitleConfig: {
+                    ExtSubtitleList: {
+                        /**
+                         * 外部字幕列表，JSON数组。
+                         */
+                        ExtSubtitle: {
+                            /**
+                             * 外部字幕字符编码。
+                             * - 范围：UTF-8、GBK、BIG5、auto。
+                             * - 默认：**auto**。
+                             * > 外部字幕字符编码设置为auto时，存在误检情况，建议您指定具体的字符编码。
+                             * @example `auto`
+                             */
+                            CharEnc: string;
+                            /**
+                             * 外挂字幕转换成硬字幕对应的字体名称。
+                             * @example `"WenQuanYi Zen Hei", "Yuanti SC Regular", "SimSun"`
+                             */
+                            FontName: string;
+                            /**
+                             * 外部输入字幕文件。
+                             * - 目前支持srt、ass格式。更多信息请参见[参数详情](~~29253~~)中的Input参数。
+                             * - 示例：`{“Bucket”:”example-bucket”,“Location”:”oss-cn-hangzhou”,“Object”:”example.srt”}`.
+                             */
+                            Input: {
+                                /**
+                                 * 输入文件的OSS Object。
+                                 * @example `example-output.flv`
+                                 */
+                                Object: string;
+                                /**
+                                 * 输入文件所在的OSS Location。
+                                 * @example `oss-cn-hangzhou`
+                                 */
+                                Location: string;
+                                /**
+                                 * 输入文件所在的OSS Bucket。
+                                 * @example `example-bucket-****`
+                                 */
+                                Bucket: string;
+                            };
+                        }[];
+                    };
+                    SubtitleList: {
+                        /**
+                         * 字幕列表。
+                         */
+                        Subtitle: {
+                            /**
+                             * 视频流序号。序号从0开始，序号的含义是视频流列表的下标，若未设置，选择默认的视频流。
+                             * @example `0`
+                             */
+                            Map: string;
+                        }[];
+                    };
+                };
+                /**
+                 * 媒体属性。
+                 */
+                Properties: {
+                    /**
+                     * 视频宽。
+                     * @example `720`
+                     */
+                    Width: string;
+                    /**
+                     * 视频长。
+                     * @example `1280`
+                     */
+                    Height: string;
+                    /**
+                     * 时长。
+                     * @example `17`
+                     */
+                    Duration: string;
+                    /**
+                     * 帧率。
+                     * @example `30`
+                     */
+                    Fps: string;
+                    /**
+                     * 码率。
+                     * @example `490`
+                     */
+                    Bitrate: string;
+                    /**
+                     * 文件格式。
+                     * @example `mp4`
+                     */
+                    FileFormat: string;
+                    /**
+                     * 流信息。
+                     */
+                    Streams: {
+                        VideoStreamList: {
+                            /**
+                             * 视频流列表。
+                             */
+                            VideoStream: {
+                                /**
+                                 * 视频流序号，标识视频流在整个媒体流中的位置。
+                                 * @example `0`
+                                 */
+                                Index: string;
+                                /**
+                                 * 时基。
+                                 * @example `1/15360`
+                                 */
+                                Timebase: string;
+                                /**
+                                 * 平均帧率。
+                                 * @example `30.0`
+                                 */
+                                AvgFPS: string;
+                                /**
+                                 * 像素格式。
+                                 * @example `yuv420p`
+                                 */
+                                PixFmt: string;
+                                /**
+                                 * 编码信号分辨率比。
+                                 * @example `1:1`
+                                 */
+                                Sar: string;
+                                /**
+                                 * 语言。更多信息，请参见[FFmeg语言定义](https://www.ffmpeg.org/ffmpeg-all.html#Metadata)、[ISO-639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)。
+                                 * @example `und`
+                                 */
+                                Lang: string;
+                                /**
+                                 * 编码格式长述名。
+                                 * @example `H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10`
+                                 */
+                                CodecLongName: string;
+                                /**
+                                 * 视频分辨率长。
+                                 * @example `1280`
+                                 */
+                                Height: string;
+                                /**
+                                 * 总帧率。
+                                 * @example `30`
+                                 */
+                                NumFrames: string;
+                                /**
+                                 * 码率。
+                                 * @example `421.117`
+                                 */
+                                Bitrate: string;
+                                /**
+                                 * 编码格式标记文本。
+                                 * @example `avc1`
+                                 */
+                                CodecTagString: string;
+                                /**
+                                 * 是否有B帧。
+                                 * @example `2`
+                                 */
+                                HasBFrames: string;
+                                /**
+                                 * 编码预置。
+                                 * @example `high`
+                                 */
+                                Profile: string;
+                                /**
+                                 * 开始时间。
+                                 * @example `0.000000`
+                                 */
+                                StartTime: string;
+                                /**
+                                 * 网络带宽消耗。
+                                 */
+                                NetworkCost: {
+                                    /**
+                                     * 预加载时间。
+                                     * @example `8`
+                                     */
+                                    PreloadTime: string;
+                                    /**
+                                     * 平均码率。
+                                     * @example `300`
+                                     */
+                                    AvgBitrate: string;
+                                    /**
+                                     * 最大消耗带宽。
+                                     * @example `10`
+                                     */
+                                    CostBandwidth: string;
+                                };
+                                /**
+                                 * 视频显示分辨率比。
+                                 * @example `9:16`
+                                 */
+                                Dar: string;
+                                /**
+                                 * 编码格式简述名。
+                                 * @example `h264`
+                                 */
+                                CodecName: string;
+                                /**
+                                 * 视频分辨率宽，数字。
+                                 * @example `720`
+                                 */
+                                Width: string;
+                                /**
+                                 * 时长。
+                                 * @example `17.233333`
+                                 */
+                                Duration: string;
+                                /**
+                                 * 帧率。
+                                 * @example `30.0`
+                                 */
+                                Fps: string;
+                                /**
+                                 * 编码格式标记。
+                                 * @example `0x31637661`
+                                 */
+                                CodecTag: string;
+                                /**
+                                 * 编码时基。
+                                 * @example `1/60`
+                                 */
+                                CodecTimeBase: string;
+                                /**
+                                 * 编码等级。
+                                 * @example `31`
+                                 */
+                                Level: string;
+                            }[];
+                        };
+                        AudioStreamList: {
+                            /**
+                             * 音频流列表。
+                             */
+                            AudioStream: {
+                                /**
+                                 * 时基。
+                                 * @example `1/32000`
+                                 */
+                                Timebase: string;
+                                /**
+                                 * 音频流序号，标识音频流在整个媒体流中的位置。
+                                 * @example `1`
+                                 */
+                                Index: string;
+                                /**
+                                 * 采样格式。
+                                 * @example `fltp`
+                                 */
+                                SampleFmt: string;
+                                /**
+                                 * 声道输出样式。
+                                 * @example `mono`
+                                 */
+                                ChannelLayout: string;
+                                /**
+                                 * 语言。更多信息，请参见[FFmeg语言定义](https://www.ffmpeg.org/ffmpeg-all.html#Metadata)、[ISO-639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)。
+                                 * @example `und`
+                                 */
+                                Lang: string;
+                                /**
+                                 * 采样率。
+                                 * @example `32000`
+                                 */
+                                Samplerate: string;
+                                /**
+                                 * 编码格式长述名。
+                                 * @example `AAC (Advanced Audio Coding)`
+                                 */
+                                CodecLongName: string;
+                                /**
+                                 * 声道数。
+                                 * @example `1`
+                                 */
+                                Channels: string;
+                                /**
+                                 * 总帧数。
+                                 * @example `30`
+                                 */
+                                NumFrames: string;
+                                /**
+                                 * 码率。
+                                 * @example `64.136`
+                                 */
+                                Bitrate: string;
+                                /**
+                                 * 编码格式标记文本。
+                                 * @example `mp4a`
+                                 */
+                                CodecTagString: string;
+                                /**
+                                 * 开始时间。
+                                 * @example `0.000000`
+                                 */
+                                StartTime: string;
+                                /**
+                                 * 编码格式简述名。
+                                 * @example `aac`
+                                 */
+                                CodecName: string;
+                                /**
+                                 * 时长。
+                                 * @example `17.223562`
+                                 */
+                                Duration: string;
+                                /**
+                                 * 编码格式标记。
+                                 * @example `0x6134706d`
+                                 */
+                                CodecTag: string;
+                                /**
+                                 * 编码时基。
+                                 * @example `1/32000`
+                                 */
+                                CodecTimeBase: string;
+                            }[];
+                        };
+                        SubtitleStreamList: {
+                            /**
+                             * 字幕流列表。
+                             */
+                            SubtitleStream: {
+                                /**
+                                 * 字幕流序号。
+                                 * 标识字幕流在整个媒体流中的位置。
+                                 * @example `1`
+                                 */
+                                Index: string;
+                                /**
+                                 * 语言。
+                                 * @example `und`
+                                 */
+                                Lang: string;
+                            }[];
+                        };
+                    };
+                    /**
+                     * 格式信息。
+                     */
+                    Format: {
+                        /**
+                         * 起始时间。
+                         * @example `0.064000`
+                         */
+                        StartTime: string;
+                        /**
+                         * 节目流总数。
+                         * @example `0`
+                         */
+                        NumPrograms: string;
+                        /**
+                         * 文件大小。
+                         * @example `1057273`
+                         */
+                        Size: string;
+                        /**
+                         * 媒体流总数。
+                         * @example `2`
+                         */
+                        NumStreams: string;
+                        /**
+                         * 容器、封装格式长述名。
+                         * @example `QuickTime / MOV`
+                         */
+                        FormatLongName: string;
+                        /**
+                         * 总时长。
+                         * @example `17.234000`
+                         */
+                        Duration: string;
+                        /**
+                         * 总码率。
+                         * @example `490.784`
+                         */
+                        Bitrate: string;
+                        /**
+                         * 容器、封装格式简述名。可取值：mov、mp4、m4a、3gp、3g2、mj2。
+                         * @example `mov`
+                         */
+                        FormatName: string;
+                    };
+                    /**
+                     * 文件大小。
+                     * @example `1057273`
+                     */
+                    FileSize: string;
+                };
+            };
+            /**
+             * 管道ID。
+             * @example `88c6ca184c0e47b665e2a1267971****`
+             */
+            PipelineId: string;
+            /**
+             * 作业输入。
+             */
+            Input: {
+                /**
+                 * 作业输入的OSS Object。
+                 * @example `example.flv`
+                 */
+                Object: string;
+                /**
+                 * 作业输入的OSS Location。
+                 * @example `oss-cn-hangzhou`
+                 */
+                Location: string;
+                /**
+                 * 作业输入的OSS Bucket。
+                 * @example `example-bucket`
+                 */
+                Bucket: string;
+            };
+            /**
+             * MNS通知用户作业完成的消息结果。
+             */
+            MNSMessageResult: {
+                /**
+                 * 成功时消息ID。
+                 * @example `123`
+                 */
+                MessageId: string;
+                /**
+                 * 失败时错误信息。成功时此参数不返回。
+                 * @example `The resource operated “%s” cannot be found.`
+                 */
+                ErrorMessage: string;
+                /**
+                 * 失败时错误码。成功时此参数不返回。
+                 * @example `InvalidParameter.ResourceNotFound`
+                 */
+                ErrorCode: string;
+            };
+        }[];
+    };
 }
-

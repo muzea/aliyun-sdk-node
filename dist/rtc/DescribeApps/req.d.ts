@@ -1,31 +1,39 @@
-interface DescribeAppsRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeAppsRequest {
     /**
-    * 应用ID，通过控制台开通创建，长度最大8个字节，不填则返回该用户下所有应用信息。
-    * @example `yourAppId`
-    */ "AppId"?: string;
+     * 应用ID，通过控制台创建和查询，仅支持传单个ID。
+     * 参数为空表示查询所有应用ID。
+     * @example `yourAppId`
+     */
+    "AppId"?: string;
     /**
-    * 状态：
-    * - **1**：可用。
-    * - **2**：停用。
-    * - **3**：欠费停用。
-    * @example `1`
-    */ "Status"?: string;
+     * 应用状态，参数为空表示查询所有状态。取值：
+     * - **1**：可用。
+     * - **2**：停用。
+     * - **3**：欠费停用。
+     * @example `1`
+     */
+    "Status"?: string;
     /**
-    * 排序，不填默认**desc**取最近记录。取值： 、
-    * - **asc**：递增。
-    *
-    * - **desc**：递减。
-    * @example `asc`
-    */ "Order"?: string;
+     * 排序方式。取值：
+     * - **asc**：递增。
+     *
+     * - **desc**（默认值）：递减。
+     * @example `asc`
+     */
+    "Order"?: string;
     /**
-    * 不填则默认**1**页，取值必须大于**0**。
-    * @example `1`
-    */ "PageNum"?: number;
+     * 第几页，默认查询第**1**页。
+     * @example `1`
+     */
+    "PageNum"?: number;
     /**
-    * 不填则默认为**10**， 取值必须大于**0**。
-    * @example `2`
-    */ "PageSize"?: number;
+     * 每页显示个数，默认为**10**。
+     * @example `2`
+     */
+    "PageSize"?: number;
+    /**
+     * 应用版本。
+     * @example `3.0`
+     */
+    "AppVersion"?: string;
 }
-export { DescribeAppsRequest };

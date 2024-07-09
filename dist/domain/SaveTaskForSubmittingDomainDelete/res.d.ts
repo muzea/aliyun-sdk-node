@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/domain.SaveTaskForSubmittingDomainDeleteResponse
 export interface SaveTaskForSubmittingDomainDeleteResponse {
-	RequestId: string;
-	TaskNo: string;
+    /**
+     * 请求ID。
+     * @example `23C9B3C4-9E2C-4405-A88D-BD33E459D140`
+     */
+    RequestId: string;
+    /**
+     * 任务编号。
+     * @example `3cb1adc3-20e8-44ae-9e76-e812fa6fc9d8`
+     */
+    TaskNo: string;
 }
-

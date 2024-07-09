@@ -1,5 +1,7 @@
-interface DeleteBucketLifecycleRequest {
-    "BucketName": any;
-    "lifecycle": any;
+export interface DeleteBucketLifecycleRequest {
+    /**
+     * Bucket名称。
+     * @example `examplebucket`
+     */
+    "bucket": string;
 }
-export { DeleteBucketLifecycleRequest };

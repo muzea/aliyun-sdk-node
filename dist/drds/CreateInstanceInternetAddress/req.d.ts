@@ -1,6 +1,12 @@
-interface CreateInstanceInternetAddressRequest {
-    "RegionId"?: string;
+export interface CreateInstanceInternetAddressRequest {
+    /**
+     * DRDS实例ID。
+     * @example `drds****************`
+     */
     "DrdsInstanceId": string;
-    "DrdsPassword"?: string;
+    /**
+     * DRDS实例所属的地域ID。
+     * @example `cn-hangzhou`
+     */
+    "RegionId"?: string;
 }
-export { CreateInstanceInternetAddressRequest };

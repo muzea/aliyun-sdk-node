@@ -1,6 +1,7 @@
-interface DescribeLiveStreamCountRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeLiveStreamCountRequest {
+    /**
+     * 主播流域名。
+     * @example `example.com`
+     */
     "DomainName": string;
 }
-export { DescribeLiveStreamCountRequest };

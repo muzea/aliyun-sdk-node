@@ -1,3 +1,0 @@
-interface BatchSendMessageToGlobeResponse {
-}
-export { BatchSendMessageToGlobeResponse };

@@ -1,12 +1,17 @@
-interface CreateFabricChannelMemberRequest {
+export interface CreateFabricChannelMemberRequest {
     /**
-    * 地域
-    * @example `cn-hangzhou`
-    */ "RegionId"?: string;
-    "Organization": string[];
+     * 通道ID
+     * @example `chan-channelx-1l1hmckuuisxo`
+     */
+    "ChannelId": string;
     /**
-    * 通道ID
-    * @example `chan-channelx-1l1hmckuuisxo`
-    */ "ChannelId": string;
+     * 组织列表。
+     */
+    "Organization": {
+        /**
+         * 组织ID
+         * @example `peers-aaaaaa1-1oxw31d046jtl`
+         */
+        OrganizationId: string;
+    }[];
 }
-export { CreateFabricChannelMemberRequest };

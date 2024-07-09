@@ -1,8 +1,7 @@
-interface DeleteSnapshotRequest {
-    "RegionId": string;
+export interface DeleteSnapshotRequest {
     /**
-    * 快照 ID。
-    * @example `s-extreme-snapshotid1`
-    */ "SnapshotId": string;
+     * 快照ID。
+     * @example `s-extreme-snapsho****`
+     */
+    "SnapshotId": string;
 }
-export { DeleteSnapshotRequest };

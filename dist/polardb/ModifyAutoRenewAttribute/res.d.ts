@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/polardb.ModifyAutoRenewAttributeResponse
 export interface ModifyAutoRenewAttributeResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `4CE6DF97-AEA4-484F-906F-C407EE******`
+     */
+    RequestId: string;
 }
-

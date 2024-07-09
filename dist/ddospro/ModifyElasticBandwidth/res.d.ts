@@ -1,3 +1,0 @@
-interface ModifyElasticBandwidthResponse {
-}
-export { ModifyElasticBandwidthResponse };

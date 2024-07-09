@@ -1,9 +1,17 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.RestartInstanceResponse
 export interface RestartInstanceResponse {
-	RequestId: string;
-	InstanceId: string;
-	TaskId: string;
+    /**
+     * 请求ID。
+     * @example `EFC9161F-15E3-4A6E-8A99-C33331****`
+     */
+    RequestId: string;
+    /**
+     * 实例ID。
+     * @example `r-bp1zxszhcgatnx****`
+     */
+    InstanceId: string;
+    /**
+     * 任务ID。
+     * @example `11111****`
+     */
+    TaskId: string;
 }
-

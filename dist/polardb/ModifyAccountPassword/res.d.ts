@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/polardb.ModifyAccountPasswordResponse
 export interface ModifyAccountPasswordResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `2FED790E-FB61-4721-8C1C-07C627******`
+     */
+    RequestId: string;
 }
-

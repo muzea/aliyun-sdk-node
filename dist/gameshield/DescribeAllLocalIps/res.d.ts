@@ -1,3 +1,0 @@
-interface DescribeAllLocalIpsResponse {
-}
-export { DescribeAllLocalIpsResponse };

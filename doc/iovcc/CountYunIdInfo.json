@@ -1,18 +1,1 @@
-{
-  "name": "CountYunIdInfo",
-  "protocol": "HTTPS|HTTP",
-  "method": "POST|GET",
-  "path": "/",
-  "timeout": 10000,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Host",
-      "checkBlank": "false",
-      "required": false,
-      "docRequired": false
-    }
-  },
-  "res": {}
-}
+{"methods":["post","get"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"read","systemTags":{"operationType":"get"},"parameters":[],"responses":{"200":{"schema":{"type":"object","properties":{"RequestId":{"description":"请求ID","type":"string","example":"E94C9864-56FB-44AD-AC0C-A1CEFB332254"},"YunIdInfo":{"description":"云设备统计数据信息","type":"array","items":{"type":"object","properties":{"TotalBrandCount":{"description":"总品牌数","type":"integer","format":"int64","example":"5"},"TotalDeviceCount":{"description":"总激活设备数","type":"integer","format":"int64","example":"100"},"TotalDeviceModelCount":{"description":"总机型数","type":"integer","format":"int64","example":"10"}}}}}}}},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"RequestId\\\": \\\"E94C9864-56FB-44AD-AC0C-A1CEFB332254\\\",\\n  \\\"YunIdInfo\\\": [\\n    {\\n      \\\"TotalDeviceModelCount\\\": 10,\\n      \\\"TotalBrandCount\\\": 5,\\n      \\\"TotalDeviceCount\\\": 100\\n    }\\n  ]\\n}\",\"errorExample\":\"{\\n  \\\"Code\\\":\\\"NoPermissionToAccessProject\\\",\\n  \\\"HostId\\\":\\\"iovcc.cn-shanghai.aliyuncs.com\\\",\\n  \\\"Message\\\":\\\"User is not authorized to access the specified project.\\\",\\n  \\\"RequestId\\\":\\\"6F25F67C-F411-499F-BCE2-67CA563CB064\\\"\\n}\"},{\"type\":\"xml\",\"example\":\"<RequestId>E94C9864-56FB-44AD-AC0C-A1CEFB332254</RequestId>\\n<YunIdInfo>\\n    <TotalBrandCount>5</TotalBrandCount>\\n    <TotalDeviceModelCount>10</TotalDeviceModelCount>\\n    <TotalDeviceCount>100</TotalDeviceCount>\\n</YunIdInfo>\",\"errorExample\":\"\"}]","title":"统计租户下的品牌数和机型数以及设备数","summary":"统计租户下的品牌数和机型数以及设备数。","description":"统计租户下的品牌数和机型数以及设备数","requestParamsDescription":" ","responseParamsDescription":" ","extraInfo":" "}

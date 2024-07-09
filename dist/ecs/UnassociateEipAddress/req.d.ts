@@ -1,8 +1,6 @@
-interface UnassociateEipAddressRequest {
+export interface UnassociateEipAddressRequest {
     "RegionId"?: string;
-    "InstanceId": string;
-    "OwnerId"?: number;
     "AllocationId": string;
+    "InstanceId": string;
     "InstanceType"?: string;
 }
-export { UnassociateEipAddressRequest };

@@ -1,10 +1,22 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.SubmitSmoothExpandPreCheckResponse
 export interface SubmitSmoothExpandPreCheckResponse {
-	RequestId: string;
-	Success: boolean;
-	Msg: string;
-	TaskId: number;
+    /**
+     * 提交任务的结果。
+     * @example `success`
+     */
+    Msg: string;
+    /**
+     * 请求ID。
+     * @example `FE104D26-AC19-49B5-AC67-947F69******`
+     */
+    RequestId: string;
+    /**
+     * 任务ID。
+     * @example `11111`
+     */
+    TaskId: number;
+    /**
+     * 请求是否成功。
+     * @example `true`
+     */
+    Success: boolean;
 }
-

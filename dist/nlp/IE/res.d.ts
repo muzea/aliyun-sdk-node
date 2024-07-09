@@ -1,3 +1,0 @@
-interface IEResponse {
-}
-export { IEResponse };

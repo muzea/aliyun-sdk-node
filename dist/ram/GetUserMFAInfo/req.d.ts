@@ -1,8 +1,7 @@
-interface GetUserMFAInfoRequest {
-    "RegionId"?: string;
+export interface GetUserMFAInfoRequest {
     /**
-    * 指定用户名。
-    * @example `zhangq****`
-    */ "UserName"?: string;
+     * RAM用户名称。
+     * @example `test`
+     */
+    "UserName"?: string;
 }
-export { GetUserMFAInfoRequest };

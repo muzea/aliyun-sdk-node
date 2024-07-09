@@ -1,40 +1,30 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.VirtualBorderRouterType
-export interface VirtualBorderRouterType {
-	VbrId: string;
-	CreationTime: string;
-	ActivationTime: string;
-	TerminationTime: string;
-	RecoveryTime: string;
-	Status: string;
-	VlanId: number;
-	CircuitCode: string;
-	RouteTableId: string;
-	VlanInterfaceId: string;
-	LocalGatewayIp: string;
-	PeerGatewayIp: string;
-	PeeringSubnetMask: string;
-	PhysicalConnectionId: string;
-	PhysicalConnectionStatus: string;
-	PhysicalConnectionBusinessStatus: string;
-	PhysicalConnectionOwnerUid: string;
-	AccessPointId: string;
-	Name: string;
-	Description: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.VirtualBorderRouterSet
-export interface VirtualBorderRouterSet {
-	VirtualBorderRouterType: VirtualBorderRouterType[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.DescribeVirtualBorderRoutersResponse
 export interface DescribeVirtualBorderRoutersResponse {
-	RequestId: string;
-	PageNumber: number;
-	PageSize: number;
-	TotalCount: number;
-	VirtualBorderRouterSet: VirtualBorderRouterSet;
+    RequestId: string;
+    PageNumber: number;
+    PageSize: number;
+    TotalCount: number;
+    VirtualBorderRouterSet: {
+        VirtualBorderRouterType: {
+            VlanInterfaceId: string;
+            Status: string;
+            CreationTime: string;
+            CircuitCode: string;
+            PhysicalConnectionOwnerUid: string;
+            LocalGatewayIp: string;
+            ActivationTime: string;
+            PhysicalConnectionBusinessStatus: string;
+            PeeringSubnetMask: string;
+            RouteTableId: string;
+            Description: string;
+            PhysicalConnectionStatus: string;
+            RecoveryTime: string;
+            TerminationTime: string;
+            PeerGatewayIp: string;
+            Name: string;
+            AccessPointId: string;
+            VbrId: string;
+            PhysicalConnectionId: string;
+            VlanId: number;
+        }[];
+    };
 }
-

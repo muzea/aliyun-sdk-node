@@ -1,3 +1,0 @@
-interface QueryAccountListResponse {
-}
-export { QueryAccountListResponse };

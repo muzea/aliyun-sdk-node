@@ -1,7 +1,7 @@
-interface DescribeVsStreamsNotifyUrlConfigRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
-    "ShowLog"?: string;
+export interface DescribeVsStreamsNotifyUrlConfigRequest {
+    /**
+     * 您的加速域名。
+     * @example `example.aliyundoc.com`
+     */
     "DomainName": string;
 }
-export { DescribeVsStreamsNotifyUrlConfigRequest };

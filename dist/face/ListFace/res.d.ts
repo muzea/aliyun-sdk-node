@@ -1,3 +1,0 @@
-interface ListFaceResponse {
-}
-export { ListFaceResponse };

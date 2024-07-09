@@ -1,3 +1,0 @@
-interface GetTaskResponse {
-}
-export { GetTaskResponse };

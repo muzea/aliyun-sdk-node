@@ -1,0 +1,1 @@
+export type GetProvisionConfigResponse = any;

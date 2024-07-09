@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.ModifyInstanceAutoRenewalAttributeResponse
 export interface ModifyInstanceAutoRenewalAttributeResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `52D901ED-E0A5-42FB-B9DB-39C295C3****`
+     */
+    RequestId: string;
 }
-

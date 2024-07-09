@@ -1,5 +1,7 @@
-interface GetAutoScaleConfigRequest {
-    "RegionId": string;
+export interface GetAutoScaleConfigRequest {
+    /**
+     * 集群ID。
+     * @example `ehpc-hz-FYUr32****`
+     */
     "ClusterId": string;
 }
-export { GetAutoScaleConfigRequest };

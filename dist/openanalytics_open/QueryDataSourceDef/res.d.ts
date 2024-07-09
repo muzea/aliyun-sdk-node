@@ -1,3 +1,0 @@
-interface QueryDataSourceDefResponse {
-}
-export { QueryDataSourceDefResponse };

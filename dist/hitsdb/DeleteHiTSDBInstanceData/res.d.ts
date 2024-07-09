@@ -1,3 +1,0 @@
-interface DeleteHiTSDBInstanceDataResponse {
-}
-export { DeleteHiTSDBInstanceDataResponse };

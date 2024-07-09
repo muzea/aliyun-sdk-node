@@ -1,21 +1,29 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/alidns.Statistic
-export interface Statistic {
-	Timestamp: number;
-	Count: number;
-	DomainName: string;
-	SubDomain: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/alidns.StatisticsInDescribeDomainStatistics
-export interface StatisticsInDescribeDomainStatistics {
-	Statistic: Statistic[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/alidns.DescribeDomainStatisticsResponse
 export interface DescribeDomainStatisticsResponse {
-	RequestId: string;
-	Statistics: StatisticsInDescribeDomainStatistics;
+    /**
+     * 唯一请求识别码。
+     * @example `6AEC7A64-3CB1-4C49-8B35-0B901F1E26BF`
+     */
+    RequestId: string;
+    Statistics: {
+        /**
+         * 请求量数据列表。
+         */
+        Statistic: {
+            /**
+             * 统计时间戳。单位：毫秒。
+             * @example `1556640000000`
+             */
+            Timestamp: number;
+            /**
+             * 请求量（次）。
+             * @example `15292887`
+             */
+            Count: number;
+            /**
+             * 域名名称。
+             * @example `example.com`
+             */
+            DomainName: string;
+        }[];
+    };
 }
-

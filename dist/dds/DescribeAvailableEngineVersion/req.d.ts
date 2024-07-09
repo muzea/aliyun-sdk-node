@@ -1,6 +1,7 @@
-interface DescribeAvailableEngineVersionRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeAvailableEngineVersionRequest {
+    /**
+     * 实例ID。
+     * @example `dds-bpxxxxxxxx`
+     */
     "DBInstanceId": string;
 }
-export { DescribeAvailableEngineVersionRequest };

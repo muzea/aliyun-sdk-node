@@ -1,3 +1,0 @@
-interface GetFaceAttributeResponse {
-}
-export { GetFaceAttributeResponse };

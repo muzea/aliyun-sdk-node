@@ -1,6 +1,7 @@
-interface DeleteDomainRequest {
-    "RegionId"?: string;
+export interface DeleteDomainRequest {
+    /**
+     * 域名ID。
+     * @example `326***`
+     */
     "DomainId": number;
-    "OwnerId"?: number;
 }
-export { DeleteDomainRequest };

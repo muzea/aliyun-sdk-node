@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/smartag.BindSmartAccessGatewayResponse
 export interface BindSmartAccessGatewayResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `8A3FF8DD-B27D-4ED2-B032-5EF90B38195D`
+     */
+    RequestId: string;
 }
-

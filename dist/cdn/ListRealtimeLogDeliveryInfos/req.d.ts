@@ -1,5 +1,2 @@
-interface ListRealtimeLogDeliveryInfosRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface ListRealtimeLogDeliveryInfosRequest {
 }
-export { ListRealtimeLogDeliveryInfosRequest };

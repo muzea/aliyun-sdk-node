@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vod.DeleteAppInfoResponse
 export interface DeleteAppInfoResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `25818875-5F78-4A13-BEF6-****`
+     */
+    RequestId: string;
 }
-

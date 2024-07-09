@@ -1,3 +1,0 @@
-interface DescribeCamerasResponse {
-}
-export { DescribeCamerasResponse };

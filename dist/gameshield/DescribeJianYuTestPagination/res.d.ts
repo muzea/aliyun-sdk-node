@@ -1,3 +1,0 @@
-interface DescribeJianYuTestPaginationResponse {
-}
-export { DescribeJianYuTestPaginationResponse };

@@ -1,3 +1,0 @@
-interface PostObjectResponse {
-}
-export { PostObjectResponse };

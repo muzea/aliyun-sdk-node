@@ -1,3 +1,0 @@
-interface PushObjectCacheResponse {
-}
-export { PushObjectCacheResponse };

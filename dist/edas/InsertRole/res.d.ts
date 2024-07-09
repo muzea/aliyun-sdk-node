@@ -1,10 +1,22 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/edas.InsertRoleResponse
 export interface InsertRoleResponse {
-	Code: number;
-	Message: string;
-	RoleId: number;
-	RequestId: string;
+    /**
+     * 状态码
+     * @example `200`
+     */
+    Code: number;
+    /**
+     * 附加信息
+     * @example `success`
+     */
+    Message: string;
+    /**
+     * 唯一请求ID
+     * @example `57609587-DFA2-41EC-****-*********`
+     */
+    RequestId: string;
+    /**
+     * 角色ID
+     * @example `33`
+     */
+    RoleId: number;
 }
-

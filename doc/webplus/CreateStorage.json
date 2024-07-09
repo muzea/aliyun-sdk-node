@@ -1,18 +1,1 @@
-{
-  "name": "CreateStorage",
-  "protocol": "HTTPS|HTTP",
-  "method": "POST",
-  "path": "/pop/v1/wam/storage",
-  "summary_cn": "调用CreateStorage创建一个存储桶。",
-  "abc_id": 127713,
-  "timeout": 10000,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Query",
-      "required": false
-    }
-  },
-  "res": {}
-}
+{"path":"/pop/v1/wam/storage","methods":["post"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"readAndWrite","deprecated":true,"parameters":[{"name":"RegionId","in":"query","schema":{"type":"string"}}],"responses":{"200":{"schema":{"type":"object","properties":{"Storage":{"description":"存储桶信息","type":"object","properties":{"UpdateTime":{"description":"上次更新时间","type":"integer","format":"int64","example":"1564388637126"},"CreateTime":{"description":"存储桶创建时间","type":"integer","format":"int64","example":"1564388637126"},"BucketName":{"description":"存储桶的bucket名","type":"string","example":"webplus-cn-shenzhen-s-5d01fab421ed1528121*****"}}},"Message":{"description":"响应消息，若成功请求为success\n\n","type":"string","example":"success"},"RequestId":{"description":"请求ID","type":"string","example":"E61A371C-53D9-4F66-A90E-4FC09EE*****"},"Code":{"description":"响应代码，若成功请求为OK\n\n","type":"string","example":"OK"}}}}},"errorCodes":{"400":[{"errorCode":"OSSDisabled","errorMessage":"You have not activated the OSS service and cannot use the WebPlus service. Please go to the OSS console (https://oss.console.aliyun.com) to activate OSS and try again."},{"errorCode":"OSSApiCallFailed","errorMessage":"When initializing applications, updating configurations, or destroying applications, WebPlus attempts to communicate with OSS through API communication. An OSS service throw error occurred. The bucket or the file does not exist."}]},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"Code\\\": \\\"OK\\\",\\n  \\\"Message\\\": \\\"success\\\",\\n  \\\"RequestId\\\": \\\"E61A371C-53D9-4F66-A90E-4FC09EE*****\\\",\\n  \\\"Storage\\\": {\\n    \\\"UpdateTime\\\": 1564388637126,\\n    \\\"CreateTime\\\": 1564388637126,\\n    \\\"BucketName\\\": \\\"webplus-cn-shenzhen-s-5d01fab421ed1528121*****\\\"\\n  }\\n}\",\"errorExample\":\"\"},{\"type\":\"xml\",\"example\":\"<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\"?>\\n\\n<CreateStorageResponse>\\n  <Storage>\\n    <BucketName>webplus-cn-shenzhen-s-5d01fab421ed1528121*****</BucketName>\\n    <CreateTime>1564388637551</CreateTime>\\n    <UpdateTime>1564388637551</UpdateTime>\\n  </Storage>\\n  <Message>success</Message>\\n  <RequestId>3373E77A-9FDF-4B7F-981F-17C2446*****</RequestId>\\n  <Code>OK</Code>\\n</CreateStorageResponse>\",\"errorExample\":\"\"}]","title":"创建一个存储桶","summary":"调用CreateStorage创建一个存储桶。","description":"需要先开通OSS服务才能创建存储，具体见 https://oss.console.aliyun.com","requestParamsDescription":" ","responseParamsDescription":" ","extraInfo":" "}

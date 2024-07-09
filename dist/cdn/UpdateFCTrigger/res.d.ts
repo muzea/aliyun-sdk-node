@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cdn.UpdateFCTriggerResponse
 export interface UpdateFCTriggerResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `EC046C5D-8CB4-4B6B-B7F8-B335E51EF90E`
+     */
+    RequestId: string;
 }
-

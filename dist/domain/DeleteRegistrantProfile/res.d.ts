@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/domain.DeleteRegistrantProfileResponse
 export interface DeleteRegistrantProfileResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `C50E41A0-09F1-4491-8DB8-AF55BD2D0CC8`
+     */
+    RequestId: string;
 }
-

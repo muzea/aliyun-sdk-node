@@ -1,3 +1,0 @@
-interface GetPictureSearchResultsResponse {
-}
-export { GetPictureSearchResultsResponse };

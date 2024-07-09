@@ -1,22 +1,39 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.IPv6TranslatorAcl
-export interface IPv6TranslatorAcl {
-	AclId: string;
-	AclName: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.Ipv6TranslatorAcls
-export interface Ipv6TranslatorAcls {
-	IPv6TranslatorAcl: IPv6TranslatorAcl[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.DescribeIPv6TranslatorAclListsResponse
 export interface DescribeIPv6TranslatorAclListsResponse {
-	RequestId: string;
-	TotalCount: number;
-	PageNumber: number;
-	PageSize: number;
-	Ipv6TranslatorAcls: Ipv6TranslatorAcls;
+    /**
+     * 每页条目数。
+     * @example `10`
+     */
+    PageSize: number;
+    /**
+     * 请求ID。
+     * @example `54B48E3D-DF70-471B-AA93-08E683A1B45`
+     */
+    RequestId: string;
+    /**
+     * 当前页码。
+     * @example `1`
+     */
+    PageNumber: number;
+    /**
+     * 查询的条目总数。
+     * @example `20`
+     */
+    TotalCount: number;
+    Ipv6TranslatorAcls: {
+        /**
+         * 查询到的访问控制策略组列表。
+         */
+        IPv6TranslatorAcl: {
+            /**
+             * 访问控制策略组的名称。
+             * @example `acl1`
+             */
+            AclName: string;
+            /**
+             * 访问控制策略组的ID。
+             * @example `ipv6transacl-bp1de2****`
+             */
+            AclId: string;
+        }[];
+    };
 }
-

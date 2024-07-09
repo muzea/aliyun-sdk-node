@@ -1,3 +1,0 @@
-interface DescribeFlowgraphResponse {
-}
-export { DescribeFlowgraphResponse };

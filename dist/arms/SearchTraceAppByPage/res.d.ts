@@ -1,55 +1,105 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/arms.RetcodeApp
-export interface RetcodeApp {
-	AppId: number;
-	RegionId: string;
-	UpdateTime: number;
-	Pid: string;
-	UserId: string;
-	CreateTime: number;
-	AppName: string;
-	Type: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/arms.Contact
-export interface Contact {
-	ContactId: number;
-	ContactName: string;
-	Phone: string;
-	Email: string;
-	UserId: string;
-	DingRobot: string;
-	CreateTime: number;
-	UpdateTime: number;
-	SystemNoc: boolean;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/arms.TraceApp
-export interface TraceApp {
-	AppId: number;
-	RegionId: string;
-	UpdateTime: number;
-	Pid: string;
-	UserId: string;
-	CreateTime: number;
-	AppName: string;
-	Type: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/arms.PageBean
-export interface PageBean {
-	TotalCount: number;
-	PageNumber: number;
-	PageSize: number;
-	RetcodeApps: RetcodeApp[];
-	Contacts: Contact[];
-	TraceApps: TraceApp[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/arms.SearchTraceAppByPageResponse
 export interface SearchTraceAppByPageResponse {
-	RequestId: string;
-	PageBean: PageBean;
+    /**
+     * 请求ID。
+     * @example `4B446DF2-3DDD-4B5B-8E3F-D5225120****`
+     */
+    RequestId: string;
+    /**
+     * 返回的页面信息。
+     */
+    PageBean: {
+        /**
+         * 返回结果的页码。
+         * @example `1`
+         */
+        PageNumber: number;
+        /**
+         * 返回结果的每页项目数量。
+         * @example `10`
+         */
+        PageSize: number;
+        /**
+         * 查询结果的总项目数量。
+         * @example `3`
+         */
+        TotalCount: number;
+        /**
+         * 应用监控任务信息。
+         */
+        TraceApps: {
+            /**
+             * 监控任务类型：
+             * - `TRACE`：应用监控。
+             * - `RETCODE`：前端监控。
+             * @example `TRACE`
+             */
+            Type: string;
+            /**
+             * 应用名称。
+             * @example `test-app`
+             */
+            AppName: string;
+            /**
+             * 更新时间的时间戳。
+             * @example `1531291867000`
+             */
+            UpdateTime: number;
+            /**
+             * 是否在ARMS控制台显示：
+             * - `true`：显示。
+             * - `false`：不显示。
+             * @example `true`
+             */
+            Show: boolean;
+            /**
+             * 创建时间的时间戳。
+             * @example `1531291867000`
+             */
+            CreateTime: number;
+            /**
+             * 应用的ID标识串。
+             * @example `atc889zkcf@d8deedfa9bf****`
+             */
+            Pid: string;
+            /**
+             * 应用ID。
+             * @example `123`
+             */
+            AppId: number;
+            /**
+             * 用户ID。
+             * @example `113197164949****`
+             */
+            UserId: string;
+            /**
+             * 地域ID。
+             * @example `cn-hangzhou`
+             */
+            RegionId: string;
+            /**
+             * 应用别名列表。
+             */
+            Labels: string[];
+            /**
+             * 标签。
+             */
+            Tags: {
+                /**
+                 * 标签的键(key)。
+                 * @example `TestKey`
+                 */
+                Key: string;
+                /**
+                 * 标签的值(value)。
+                 * @example `TestValue`
+                 */
+                Value: string;
+            }[];
+            /**
+             * 资源组 ID。
+             * @example `rg-acfmxyexli2****`
+             */
+            ResourceGroupId: string;
+        }[];
+    };
 }
-

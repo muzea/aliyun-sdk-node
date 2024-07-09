@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dds.ModifyDBInstanceNetExpireTimeResponse
 export interface ModifyDBInstanceNetExpireTimeResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `459E7D5C-38DA-4E14-9C82-5B5AF693DBAB`
+     */
+    RequestId: string;
 }
-

@@ -1,9 +1,15 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vod.MoveAppResourceResponse
 export interface MoveAppResourceResponse {
-	RequestId: string;
-	NonExistResourceIds: string[];
-	FailedResourceIds: string[];
+    /**
+     * 请求ID。
+     * @example `25818875-5F78-4A13-BEF6-****`
+     */
+    RequestId: string;
+    /**
+     * 不存在的资源ID。
+     */
+    NonExistResourceIds: string[];
+    /**
+     * 失败的资源ID。
+     */
+    FailedResourceIds: string[];
 }
-

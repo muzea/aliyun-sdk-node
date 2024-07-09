@@ -1,23 +1,19 @@
-interface DescribeLiveDomainTranscodeDataRequest {
+export interface DescribeLiveDomainTranscodeDataRequest {
     /**
-    * 区域。
-    * @example `cn-shanghai`
-    */ "RegionId"?: string;
+     * 直播域名。
+     * 多个域名之间用英文逗号（,）分隔。
+     * @example `www.example.com`
+     */
+    "DomainName"?: string;
     /**
-    * 获取数据结束时间。需大于起始时间。
-    * 日期格式按照ISO8601表示法，并使用UTC时间格式：`YYYY-MM-DDThh:mm:ssZ`。
-    * @example `2018-01-02T01:00:00Z`
-    */ "EndTime": string;
-    "OwnerId"?: number;
+     * 起始时间。格式为：<i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z（UTC时间）。
+     * >支持查询最近**90**天的数据。
+     * @example `2018-01-01T00:00:00Z`
+     */
+    "StartTime": string;
     /**
-    * 获取数据起始时间点。
-    * 日期格式按照ISO8601表示法，并使用UTC时间格式：`YYYY-MM-DDThh:mm:ssZ`。
-    * > 支持查询2018/01/01起的数据，即**StartTime** ≥ `2018-01-01T00:00:00Z`。
-    * @example `2018-01-01T00:00:00Z`
-    */ "StartTime": string;
-    /**
-    * 需要查询的直播域名。
-    * @example `www.example.com`
-    */ "DomainName"?: string;
+     * 结束时间。需晚于起始时间。格式为：<i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z（UTC时间）。
+     * @example `2018-01-02T01:00:00Z`
+     */
+    "EndTime": string;
 }
-export { DescribeLiveDomainTranscodeDataRequest };

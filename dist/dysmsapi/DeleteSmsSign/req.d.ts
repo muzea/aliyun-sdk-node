@@ -1,13 +1,8 @@
-interface DeleteSmsSignRequest {
-    "RegionId"?: string;
+export interface DeleteSmsSignRequest {
     /**
-    * 短信签名。
-    * > 必须是本账号已申请的短信签名。
-    * @example `阿里云`
-    */ "SignName": string;
-    /**
-    * RAM用户的虚拟账号ID。
-    * @example `155780923770`
-    */ "OwnerId"?: number;
+     * 短信签名。
+     * > 必须是本账号已申请的短信签名。
+     * @example `阿里云`
+     */
+    "SignName": string;
 }
-export { DeleteSmsSignRequest };

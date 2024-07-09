@@ -1,14 +1,27 @@
-interface TagResourcesRequest {
+export interface TagResourcesRequest {
     /**
-    * 地域ID。
-    * @example `ch-shanghai`
-    */ "RegionId"?: string;
+     * 资源类型。固定值：**DOMAIN**。
+     * @example `DOMAIN`
+     */
+    "ResourceType": string;
     /**
-    * 固定值：**DOMAIN**。
-    * @example `DOMAIN`
-    */ "ResourceType": string;
-    "Tag": string[];
-    "OwnerId"?: number;
+     * 资源ID列表。列表元素数量最大：50。
+     * @example `1`
+     */
     "ResourceId": string[];
+    /**
+     * 标签列表。列表元素数量最大：20。
+     */
+    "Tag": {
+        /**
+         * 标签键。
+         * @example `env`
+         */
+        Key: string;
+        /**
+         * 标签值。
+         * @example `value`
+         */
+        Value: string;
+    }[];
 }
-export { TagResourcesRequest };

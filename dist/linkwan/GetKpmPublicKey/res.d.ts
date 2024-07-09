@@ -1,3 +1,0 @@
-interface GetKpmPublicKeyResponse {
-}
-export { GetKpmPublicKeyResponse };

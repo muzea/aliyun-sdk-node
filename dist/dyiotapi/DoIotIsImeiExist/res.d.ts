@@ -1,3 +1,0 @@
-interface DoIotIsImeiExistResponse {
-}
-export { DoIotIsImeiExistResponse };

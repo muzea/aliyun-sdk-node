@@ -1,22 +1,23 @@
-interface DescribeLiveStreamsControlHistoryRequest {
-    "RegionId"?: string;
+export interface DescribeLiveStreamsControlHistoryRequest {
     /**
-    * 查询开始时间。UTC格式：2015-12-01T17:37:00Z。
-    * @example `2017-12-21T08:00:00Z`
-    */ "StartTime": string;
+     * 主播流域名。
+     * @example `example.com`
+     */
+    "DomainName": string;
     /**
-    * 查询结束时间。UTC格式：2015-12-01T17:37:00Z。
-    * EndTime和StartTime之间的间隔不能超过30天。
-    * @example `2017-12-22T08:00:00Z`
-    */ "EndTime": string;
+     * 应用名称。
+     * @example `liveApp****`
+     */
+    "AppName"?: string;
     /**
-    * 您的直播加速域名。
-    * @example `play.yourdomain.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 查询开始时间。格式为：<i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z（UTC时间）。
+     * @example `2017-12-21T08:00:00Z`
+     */
+    "StartTime": string;
     /**
-    * 直播流所属应用名称。
-    * @example `testApp`
-    */ "AppName"?: string;
+     * 查询结束时间。格式为：<i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z（UTC时间）。
+     * EndTime和StartTime之间的间隔不能超过7天。
+     * @example `2017-12-22T08:00:00Z`
+     */
+    "EndTime": string;
 }
-export { DescribeLiveStreamsControlHistoryRequest };

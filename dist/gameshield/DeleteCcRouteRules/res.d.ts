@@ -1,3 +1,0 @@
-interface DeleteCcRouteRulesResponse {
-}
-export { DeleteCcRouteRulesResponse };

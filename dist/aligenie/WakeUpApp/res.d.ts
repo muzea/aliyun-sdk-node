@@ -1,0 +1,1 @@
+export type WakeUpAppResponse = any;

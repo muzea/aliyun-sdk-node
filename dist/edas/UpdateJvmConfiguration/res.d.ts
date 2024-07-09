@@ -1,18 +1,42 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/edas.JvmConfiguration
-export interface JvmConfiguration {
-	MaxPermSize: number;
-	MaxHeapSize: number;
-	Options: string;
-	MinHeapSize: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/edas.UpdateJvmConfigurationResponse
 export interface UpdateJvmConfigurationResponse {
-	Code: number;
-	Message: string;
-	RequestId: string;
-	JvmConfiguration: JvmConfiguration;
+    /**
+     * 接口状态码
+     * @example `200`
+     */
+    Code: number;
+    /**
+     * 附加信息
+     * @example `success`
+     */
+    Message: string;
+    /**
+     * 请求ID
+     * @example `D16979DC-4D42-********************`
+     */
+    RequestId: string;
+    /**
+     * JVM参数
+     */
+    JvmConfiguration: {
+        /**
+         * 持久代内存大小，单位MB。
+         * @example `1000`
+         */
+        MaxPermSize: number;
+        /**
+         * 可选参数
+         * @example `”“`
+         */
+        Options: string;
+        /**
+         * 最大堆内存大小，单位MB。
+         * @example `500`
+         */
+        MaxHeapSize: number;
+        /**
+         * 初始化堆内存大小，单位MB。
+         * @example `500`
+         */
+        MinHeapSize: number;
+    };
 }
-

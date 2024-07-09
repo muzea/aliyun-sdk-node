@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.ModifyDrdsIpWhiteListResponse
 export interface ModifyDrdsIpWhiteListResponse {
-	RequestId: string;
-	Success: boolean;
+    /**
+     * 当前API是否请求成功。
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 请求ID。
+     * @example `933A1EC2-8260-4D4F-A56A-73BA27******`
+     */
+    RequestId: string;
 }
-

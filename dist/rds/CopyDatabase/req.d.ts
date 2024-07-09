@@ -1,5 +1,7 @@
-interface CopyDatabaseRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface CopyDatabaseRequest {
+    /**
+     * 资源组ID。
+     * @example `rg-acfmy*****`
+     */
+    "ResourceGroupId"?: string;
 }
-export { CopyDatabaseRequest };

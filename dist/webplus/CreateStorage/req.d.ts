@@ -1,4 +1,3 @@
-interface CreateStorageRequest {
+export interface CreateStorageRequest {
     "RegionId"?: string;
 }
-export { CreateStorageRequest };

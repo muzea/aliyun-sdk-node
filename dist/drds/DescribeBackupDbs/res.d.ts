@@ -1,14 +1,15 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.DbNamesInDescribeBackupDbs
-export interface DbNamesInDescribeBackupDbs {
-	dbName: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.DescribeBackupDbsResponse
 export interface DescribeBackupDbsResponse {
-	RequestId: string;
-	Success: boolean;
-	DbNames: DbNamesInDescribeBackupDbs;
+    /**
+     * 请求结果。
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 请求ID。
+     * @example `842DFA7F-B09B-42A2-B115-E684AE******`
+     */
+    RequestId: string;
+    DbNames: {
+        dbName: string[];
+    };
 }
-

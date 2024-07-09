@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/pvtz.DeleteZoneResponse
 export interface DeleteZoneResponse {
-	RequestId: string;
-	ZoneId: string;
+    /**
+     * zone ID。
+     * @example `AgIDE1MA_150`
+     */
+    ZoneId: string;
+    /**
+     * 唯一请求识别码。
+     * @example `E246E023-F2EB-4034-83F7-B13FCF31459C`
+     */
+    RequestId: string;
 }
-

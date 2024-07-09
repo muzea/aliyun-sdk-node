@@ -1,13 +1,12 @@
-interface DeleteLiveDomainMappingRequest {
-    "RegionId"?: string;
+export interface DeleteLiveDomainMappingRequest {
     /**
-    * 您的播流域名，域名类型为**liveVideo**。
-    * @example `pull.yourdomain.com`
-    */ "PullDomain": string;
+     * 推流域名。域名类型为：**liveEdge**。
+     * @example `demo.aliyundoc.com`
+     */
+    "PushDomain": string;
     /**
-    * 您的推流域名，域名类型为**liveEdge**。
-    * @example `push.yourdomain.com`
-    */ "PushDomain": string;
-    "OwnerId"?: number;
+     * 播流域名。域名类型为：**liveVideo**。
+     * @example `example.com`
+     */
+    "PullDomain": string;
 }
-export { DeleteLiveDomainMappingRequest };

@@ -1,3 +1,0 @@
-interface ListValueAddedResponse {
-}
-export { ListValueAddedResponse };

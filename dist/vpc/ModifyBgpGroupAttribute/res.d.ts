@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.ModifyBgpGroupAttributeResponse
 export interface ModifyBgpGroupAttributeResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `8C3C6D7C-A1CE-4FD8-BC57-DC493A55F76F`
+     */
+    RequestId: string;
 }
-

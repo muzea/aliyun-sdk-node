@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.CreateBgpGroupResponse
 export interface CreateBgpGroupResponse {
-	RequestId: string;
-	BgpGroupId: string;
+    /**
+     * 创建的BGP组ID。
+     * @example `bgpg-bp1k25cyp26cllath****`
+     */
+    BgpGroupId: string;
+    /**
+     * 请求ID。
+     * @example `C1221A1F-2ACD-4592-8F27-474E02883159`
+     */
+    RequestId: string;
 }
-

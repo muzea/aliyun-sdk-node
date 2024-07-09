@@ -1,8 +1,12 @@
-interface DescribeMonitoringAgentStatusesRequest {
-    "RegionId"?: string;
+export interface DescribeMonitoringAgentStatusesRequest {
     /**
-    * 要获取状态的实例ID，多个实例ID直接用英文逗号分隔。
-    * @example `i-12345w55tr2rcpejp****,i-23456w55tr2rcpejp****`
-    */ "InstanceIds": string;
+     * 实例ID。多个实例ID之间用半角逗号（,）分隔。
+     * @example `i-hp3dunahluwajv6f****`
+     */
+    "InstanceIds"?: string;
+    /**
+     * 可用性监控的任务ID。
+     * @example `126****`
+     */
+    "HostAvailabilityTaskId"?: string;
 }
-export { DescribeMonitoringAgentStatusesRequest };

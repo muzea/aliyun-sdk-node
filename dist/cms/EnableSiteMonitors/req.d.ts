@@ -1,8 +1,7 @@
-interface EnableSiteMonitorsRequest {
-    "RegionId"?: string;
+export interface EnableSiteMonitorsRequest {
     /**
-    * 要启用的任务ID，多个任务用逗号分隔。
-    * @example `49f7b317-7645-4cc9-94fd-ea42e522****,49f7b317-7645-4cc9-94fd-ea42e522****`
-    */ "TaskIds": string;
+     * 站点监控任务ID。多个ID之间用英文逗号（,）分隔。
+     * @example `49f7b317-7645-4cc9-94fd-ea42e522****,49f7b317-7645-4cc9-94fd-ea42e522****`
+     */
+    "TaskIds": string;
 }
-export { EnableSiteMonitorsRequest };

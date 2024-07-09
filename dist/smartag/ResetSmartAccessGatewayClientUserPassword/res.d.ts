@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/smartag.ResetSmartAccessGatewayClientUserPasswordResponse
 export interface ResetSmartAccessGatewayClientUserPasswordResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `BE1F7E80-4558-4021-B6D2-B94DA8AAAF81`
+     */
+    RequestId: string;
 }
-

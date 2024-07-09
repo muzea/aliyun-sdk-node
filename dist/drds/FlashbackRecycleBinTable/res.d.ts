@@ -1,9 +1,17 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.FlashbackRecycleBinTableResponse
 export interface FlashbackRecycleBinTableResponse {
-	RequestId: string;
-	Success: boolean;
-	Data: boolean;
+    /**
+     * 是否成功恢复已删除的逻辑表。
+     * @example `true`
+     */
+    Data: boolean;
+    /**
+     * 请求ID。
+     * @example `463A5F0F-12AD-4544-A902-B2B983******`
+     */
+    RequestId: string;
+    /**
+     * 请求结果。
+     * @example `true`
+     */
+    Success: boolean;
 }
-

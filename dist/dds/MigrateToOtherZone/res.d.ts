@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dds.MigrateToOtherZoneResponse
 export interface MigrateToOtherZoneResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `0FDDC511-7252-4A4A-ADDA-5CB1BF63873D`
+     */
+    RequestId: string;
 }
-

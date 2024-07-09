@@ -1,3 +1,0 @@
-interface DeleteWorkGroupResponse {
-}
-export { DeleteWorkGroupResponse };

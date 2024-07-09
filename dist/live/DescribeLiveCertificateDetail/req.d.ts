@@ -1,9 +1,7 @@
-interface DescribeLiveCertificateDetailRequest {
-    "RegionId"?: string;
+export interface DescribeLiveCertificateDetailRequest {
     /**
-    * 证书名称。
-    * @example `certname`
-    */ "CertName": string;
-    "OwnerId"?: number;
+     * 证书名称。
+     * @example `Cert-****`
+     */
+    "CertName": string;
 }
-export { DescribeLiveCertificateDetailRequest };

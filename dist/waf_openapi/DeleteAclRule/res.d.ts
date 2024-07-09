@@ -1,3 +1,0 @@
-interface DeleteAclRuleResponse {
-}
-export { DeleteAclRuleResponse };

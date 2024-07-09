@@ -1,3 +1,0 @@
-interface DescribeBgpResSummaryResponse {
-}
-export { DescribeBgpResSummaryResponse };

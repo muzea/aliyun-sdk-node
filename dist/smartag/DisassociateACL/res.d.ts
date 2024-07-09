@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/smartag.DisassociateACLResponse
 export interface DisassociateACLResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `B28A9AB3-05BD-4A88-AB6A-A555A0BF70C0`
+     */
+    RequestId: string;
 }
-

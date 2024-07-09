@@ -1,8 +1,7 @@
-interface DeleteContactRequest {
-    "RegionId"?: string;
+export interface DeleteContactRequest {
     /**
-    * 报警联系人姓名。
-    * @example `关某`
-    */ "ContactName": string;
+     * 报警联系人姓名。
+     * @example `张三`
+     */
+    "ContactName": string;
 }
-export { DeleteContactRequest };

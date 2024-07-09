@@ -1,3 +1,0 @@
-interface ListTasksResponse {
-}
-export { ListTasksResponse };

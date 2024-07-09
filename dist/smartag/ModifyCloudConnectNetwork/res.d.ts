@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/smartag.ModifyCloudConnectNetworkResponse
 export interface ModifyCloudConnectNetworkResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `0BAAF2B9-88B8-4574-BDBE-102A90EE3FEE`
+     */
+    RequestId: string;
 }
-

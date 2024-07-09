@@ -1,6 +1,7 @@
-interface DeleteMailAddressRequest {
-    "RegionId"?: string;
+export interface DeleteMailAddressRequest {
+    /**
+     * 发信地址ID
+     * @example `23457`
+     */
     "MailAddressId": number;
-    "OwnerId"?: number;
 }
-export { DeleteMailAddressRequest };

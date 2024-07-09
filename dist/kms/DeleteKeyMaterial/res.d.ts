@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/kms.DeleteKeyMaterialResponse
 export interface DeleteKeyMaterialResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `4162a6af-bc99-40b3-a552-89dcc8aaf7c8`
+     */
+    RequestId: string;
 }
-

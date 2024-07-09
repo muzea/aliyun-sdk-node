@@ -1,9 +1,7 @@
-interface StopDcdnIpaDomainRequest {
-    "RegionId"?: string;
+export interface StopDcdnIpaDomainRequest {
     /**
-    * 需要接入全站加速IPA的域名。
-    * @example `example.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 已经接入全站加速IPA的域名，仅支持单个停用。
+     * @example `example.com`
+     */
+    "DomainName": string;
 }
-export { StopDcdnIpaDomainRequest };

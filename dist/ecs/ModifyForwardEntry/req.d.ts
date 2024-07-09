@@ -1,12 +1,10 @@
-interface ModifyForwardEntryRequest {
-    "RegionId": string;
-    "ForwardEntryId": string;
+export interface ModifyForwardEntryRequest {
     "ForwardTableId": string;
-    "OwnerId"?: number;
+    "ForwardEntryId": string;
     "ExternalIp"?: string;
     "ExternalPort"?: string;
     "InternalIp"?: string;
     "InternalPort"?: string;
     "IpProtocol"?: string;
+    "RegionId": string;
 }
-export { ModifyForwardEntryRequest };

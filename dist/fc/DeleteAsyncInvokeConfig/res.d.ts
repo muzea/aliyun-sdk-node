@@ -1,0 +1,1 @@
+export type DeleteAsyncInvokeConfigResponse = any;

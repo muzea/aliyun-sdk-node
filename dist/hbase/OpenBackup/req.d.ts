@@ -1,6 +1,7 @@
-interface OpenBackupRequest {
-    "RegionId"?: string;
+export interface OpenBackupRequest {
+    /**
+     * 集群Id。
+     * @example `hb-t4naqsay5gn******`
+     */
     "ClusterId": string;
-    "ZoneId"?: string;
 }
-export { OpenBackupRequest };

@@ -1,10 +1,8 @@
-interface SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest {
-    "RegionId"?: string;
+export interface SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest {
+    "UserClientIp"?: string;
+    "Lang"?: string;
     "IdentityCredential": string;
     "IdentityCredentialNo": string;
     "IdentityCredentialType": string;
     "DomainName": string[];
-    "UserClientIp"?: string;
-    "Lang"?: string;
 }
-export { SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest };

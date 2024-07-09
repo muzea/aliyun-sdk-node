@@ -1,16 +1,1 @@
-{
-  "name": "ListAuthority",
-  "protocol": "HTTPS|HTTP",
-  "method": "POST",
-  "path": "/pop/v5/account/authority_list",
-  "timeout": 2000,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Query",
-      "required": false
-    }
-  },
-  "res": {}
-}
+{"path":"/pop/v5/account/authority_list","methods":["post"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"read","deprecated":false,"systemTags":{"operationType":"list"},"responses":{"200":{"schema":{"type":"object","properties":{"Code":{"description":"HTTP状态码","type":"integer","format":"int32","example":"200"},"Message":{"description":"附加信息","type":"string","example":"success"},"RequestId":{"description":"请求ID","type":"string","example":"57609587-DFA2-41EC-****-*********"},"AuthorityList":{"type":"object","properties":{"Authority":{"description":"权限列表","type":"array","items":{"type":"object","properties":{"GroupId":{"description":"权限组ID","type":"string","example":"1"},"Name":{"description":"权限组名称","type":"string","example":"应用管理"},"Description":{"description":"权限组描述","type":"string","example":"对应用的所有操作"},"ActionList":{"type":"object","properties":{"Action":{"description":"权限集合","type":"array","items":{"type":"object","properties":{"Code":{"description":"权限码","type":"string","example":"1"},"Description":{"description":"权限描述","type":"string","example":"创建应用"},"GroupId":{"description":"权限组ID","type":"string","example":"1"},"Name":{"description":"权限名称","type":"string","example":"创建应用"}}}}}}}}}}}}}}},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"Code\\\": 200,\\n  \\\"Message\\\": \\\"success\\\",\\n  \\\"RequestId\\\": \\\"57609587-DFA2-41EC-****-*********\\\",\\n  \\\"AuthorityList\\\": {\\n    \\\"Authority\\\": [\\n      {\\n        \\\"GroupId\\\": \\\"1\\\",\\n        \\\"Name\\\": \\\"应用管理\\\",\\n        \\\"Description\\\": \\\"对应用的所有操作\\\",\\n        \\\"ActionList\\\": {\\n          \\\"Action\\\": [\\n            {\\n              \\\"Code\\\": \\\"1\\\",\\n              \\\"Description\\\": \\\"创建应用\\\",\\n              \\\"GroupId\\\": \\\"1\\\",\\n              \\\"Name\\\": \\\"创建应用\\\"\\n            }\\n          ]\\n        }\\n      }\\n    ]\\n  }\\n}\",\"errorExample\":\"\"},{\"type\":\"xml\",\"example\":\"<RequestId>57609587-DFA2-41EC-****-*********</RequestId>\\n<Message>success</Message>\\n<Code>200</Code>\\n<AuthorityList>\\n    <Authority>\\n        <Description>对应用的所有操作</Description>\\n        <Name>应用管理</Name>\\n        <GroupId>1</GroupId>\\n        <ActionList>\\n            <Action>\\n                <Description>创建应用</Description>\\n                <Code>1</Code>\\n                <Name>创建应用</Name>\\n                <GroupId>1</GroupId>\\n            </Action>\\n        </ActionList>\\n    </Authority>\\n</AuthorityList>\",\"errorExample\":\"\"}]","title":"查询所有权限","summary":"查询所有权限。","requestParamsDescription":"无请求参数。","responseParamsDescription":" ","extraInfo":" ","parameters":[]}

@@ -1,147 +1,78 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.Vpc
-export interface Vpc {
-	VpcInstanceId: string;
-	VswitchInstanceId: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.Region
-export interface Region {
-	RegionId: string;
-	AvailabilityZone: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.Tag
-export interface Tag {
-	Key: string;
-	Value: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.Tags
-export interface Tags {
-	Tag: Tag[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.Warn
-export interface Warn {
-	ComparisonOperator: string;
-	Times: string;
-	Statistics: string;
-	Threshold: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.Info
-export interface Info {
-	ComparisonOperator: string;
-	Times: string;
-	Statistics: string;
-	Threshold: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.Critical
-export interface Critical {
-	ComparisonOperator: string;
-	Times: string;
-	Statistics: string;
-	Threshold: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.Escalations
-export interface Escalations {
-	Warn: Warn;
-	Info: Info;
-	Critical: Critical;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.AlertTemplate
-export interface AlertTemplate {
-	RuleName: string;
-	Category: string;
-	Namespace: string;
-	MetricName: string;
-	Selector: string;
-	Escalations: Escalations;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.AlertTemplates
-export interface AlertTemplates {
-	AlertTemplate: AlertTemplate[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.ContactGroup
-export interface ContactGroup {
-	Name: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.ContactGroupsInDescribeMonitorGroups
-export interface ContactGroupsInDescribeMonitorGroups {
-	ContactGroup: ContactGroup[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.Result
-export interface Result {
-	Message: string;
-	RuleName: string;
-	Code: string;
-	Success: boolean;
-	GroupId: number;
-	RuleId: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.Resource
-export interface Resource {
-	TemplateId: string;
-	Name: string;
-	Category: string;
-	Unit: string;
-	NameDesc: string;
-	Desc: string;
-	BindUrl: string;
-	Dimensions: string;
-	GroupName: string;
-	ServiceId: string;
-	RestVersion: string;
-	RegionId: string;
-	InstanceId: string;
-	NetworkType: string;
-	Description: string;
-	Periods: string;
-	Type: string;
-	Product: string;
-	InstanceName: string;
-	Level: string;
-	Dimension: string;
-	Id: number;
-	GmtCreate: number;
-	EventType: string;
-	Namespace: string;
-	GroupId: number;
-	GmtModified: number;
-	MetricName: string;
-	StatusDesc: string;
-	Labels: string;
-	Status: string;
-	Statistics: string;
-	Vpc: Vpc;
-	Region: Region;
-	Tags: Tags;
-	AlertTemplates: AlertTemplates;
-	ContactGroups: ContactGroupsInDescribeMonitorGroups;
-	AlertResults: Result[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.DataInDescribeSystemEventMetaList
-export interface DataInDescribeSystemEventMetaList {
-	Resource: Resource[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.DescribeSystemEventMetaListResponse
 export interface DescribeSystemEventMetaListResponse {
-	RequestId: string;
-	Success: boolean;
-	Code: number;
-	Message: string;
-	Data: DataInDescribeSystemEventMetaList;
+    /**
+     * 状态码。
+     * > 200表示成功。
+     * @example `200`
+     */
+    Code: number;
+    /**
+     * 返回信息。
+     * @example `success`
+     */
+    Message: string;
+    /**
+     * 请求ID。
+     * @example `A6582C8B-E67C-4A19-BC15-EAEFEBDC7995`
+     */
+    RequestId: string;
+    /**
+     * 操作是否成功。取值：
+     * - true：成功。
+     * - false：失败。
+     * @example `true`
+     */
+    Success: boolean;
+    Data: {
+        /**
+         * Meta返回信息。
+         */
+        Resource: {
+            /**
+             * 事件状态。
+             * @example `failed`
+             */
+            Status: string;
+            /**
+             * 事件类型。取值：
+             * - StatusNotification：故障通知。
+             * - Exception：异常。
+             * - Maintenance：运维。
+             * @example `Exception`
+             */
+            EventType: string;
+            /**
+             * 产品名称缩写。
+             * @example `ADS`
+             */
+            Product: string;
+            /**
+             * 事件名称的描述信息。
+             * @example `查询失败率高`
+             */
+            NameDesc: string;
+            /**
+             * 英文事件名称的描述信息。
+             * @example `High query failure rate.`
+             */
+            NameDesc.En: string;
+            /**
+             * 事件名称。
+             * @example `SelectFailureRate`
+             */
+            Name: string;
+            /**
+             * 事件状态描述。
+             * @example `Operation Failed`
+             */
+            StatusDesc: string;
+            /**
+             * 报警级别。取值：
+             * - CRITICAL：紧急。
+             * - WARN：警告。
+             * - INFO：信息。
+             * @example `INFO`
+             */
+            Level: string;
+        }[];
+    };
 }
-

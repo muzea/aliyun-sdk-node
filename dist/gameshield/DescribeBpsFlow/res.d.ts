@@ -1,3 +1,0 @@
-interface DescribeBpsFlowResponse {
-}
-export { DescribeBpsFlowResponse };

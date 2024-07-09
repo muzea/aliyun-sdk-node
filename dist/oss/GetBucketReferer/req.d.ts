@@ -1,5 +1,7 @@
-interface GetBucketRefererRequest {
-    "BucketName": any;
-    "referer": any;
+export interface GetBucketRefererRequest {
+    /**
+     * Bucket名称。
+     * @example `examplebucket`
+     */
+    "bucket": string;
 }
-export { GetBucketRefererRequest };

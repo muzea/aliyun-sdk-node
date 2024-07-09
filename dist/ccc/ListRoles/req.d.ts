@@ -1,5 +1,7 @@
-interface ListRolesRequest {
-    "RegionId"?: string;
+export interface ListRolesRequest {
+    /**
+     * 实例ID。
+     * @example `ccc-test`
+     */
     "InstanceId": string;
 }
-export { ListRolesRequest };

@@ -1,18 +1,19 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/push.TagInfo
-export interface TagInfo {
-	TagName: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/push.TagInfosInQueryTags
-export interface TagInfosInQueryTags {
-	TagInfo: TagInfo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/push.QueryTagsResponse
 export interface QueryTagsResponse {
-	RequestId: string;
-	TagInfos: TagInfosInQueryTags;
+    /**
+     * 请求ID。
+     * @example `D68AE5C6-8AAF-46C9-B627-3FDACD1A4168`
+     */
+    RequestId: string;
+    TagInfos: {
+        /**
+         * Tag列表。
+         */
+        TagInfo: {
+            /**
+             * 绑定的Tag名称。
+             * @example `test_tag2`
+             */
+            TagName: string;
+        }[];
+    };
 }
-

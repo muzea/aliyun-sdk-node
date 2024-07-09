@@ -1,20 +1,29 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.Region
-export interface Region {
-	RegionId: string;
-	LocalName: string;
-	RegionEndpoint: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.Regions
-export interface Regions {
-	Region: Region[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.DescribeRegionsResponse
 export interface DescribeRegionsResponse {
-	RequestId: string;
-	Regions: Regions;
+    /**
+     * 请求ID。
+     * @example `611CB80C-B6A9-43DB-9E38-0B0AC3D9B58F`
+     */
+    RequestId: string;
+    Regions: {
+        /**
+         * 可用地域的集合。
+         */
+        Region: {
+            /**
+             * 地域服务的Endpoint。
+             * @example `vpc.aliyuncs.com`
+             */
+            RegionEndpoint: string;
+            /**
+             * 地域名称。
+             * @example `华北 1`
+             */
+            LocalName: string;
+            /**
+             * 地域ID。
+             * @example `cn-qingdao`
+             */
+            RegionId: string;
+        }[];
+    };
 }
-

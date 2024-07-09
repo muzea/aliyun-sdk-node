@@ -1,3 +1,0 @@
-interface GetLabNodeDebugConfigResponse {
-}
-export { GetLabNodeDebugConfigResponse };

@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/smartag.ClearSagRouteableAddressResponse
 export interface ClearSagRouteableAddressResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `AEEC8A5A-360E-4865-82D4-38CDE46445FB`
+     */
+    RequestId: string;
 }
-

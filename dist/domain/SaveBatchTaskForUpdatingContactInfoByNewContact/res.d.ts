@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/domain.SaveBatchTaskForUpdatingContactInfoByNewContactResponse
 export interface SaveBatchTaskForUpdatingContactInfoByNewContactResponse {
-	RequestId: string;
-	TaskNo: string;
+    /**
+     * 唯一请求识别码。
+     * @example `464AF466-CA8E-43A8-B61D-test`
+     */
+    RequestId: string;
+    /**
+     * 任务编号。
+     * @example `65de2165-ca09-491f-9fe0-test`
+     */
+    TaskNo: string;
 }
-

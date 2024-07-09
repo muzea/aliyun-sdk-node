@@ -1,3 +1,0 @@
-interface DescribeSubdomainsResponse {
-}
-export { DescribeSubdomainsResponse };

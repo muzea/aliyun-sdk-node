@@ -1,0 +1,1 @@
+export type DeleteOrganizationalUnitResponse = any;

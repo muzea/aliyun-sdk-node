@@ -1,3 +1,0 @@
-interface AddSynonymResponse {
-}
-export { AddSynonymResponse };

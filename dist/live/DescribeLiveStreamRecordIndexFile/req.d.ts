@@ -1,21 +1,22 @@
-interface DescribeLiveStreamRecordIndexFileRequest {
-    "RegionId"?: string;
+export interface DescribeLiveStreamRecordIndexFileRequest {
     /**
-    * 直播流所属应用名称。
-    * @example `testApp`
-    */ "AppName": string;
+     * 主播流域名。
+     * @example `example.com`
+     */
+    "DomainName": string;
     /**
-    * 直播流名称。
-    * @example `testStream`
-    */ "StreamName": string;
+     * 播流所属应用名称。
+     * @example `liveApp****`
+     */
+    "AppName": string;
     /**
-    * 索引文件ID。
-    * @example `xxx`
-    */ "RecordId": string;
+     * 播流名称。
+     * @example `liveStream****`
+     */
+    "StreamName": string;
     /**
-    * 您的加速域名。
-    * @example `www.yourdomain.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 索引文件ID。
+     * @example `c4d7f0a4-b506-43f9-8de3-07732c3f****`
+     */
+    "RecordId": string;
 }
-export { DescribeLiveStreamRecordIndexFileRequest };

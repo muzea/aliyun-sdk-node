@@ -1,22 +1,29 @@
-interface ModifyNotificationConfigurationRequest {
+export interface ModifyNotificationConfigurationRequest {
+    /**
+     * 伸缩组的ID。
+     * @example `asg-bp1igpak5ft1flyp****`
+     */
+    "ScalingGroupId": string;
+    /**
+     * 通知对象标识符，设置本参数时支持以下通知方式：
+     * - 云监控，参数取值格式：`acs:ess:{region-id}:{account-id}:cloudmonitor`。
+     * - 消息服务MNS队列，参数取值格式：`acs:mns:{region-id}:{account-id}:queue/{queuename}`。
+     * - 消息服务MNS主题，参数取值格式：`acs:mns:{region-id}:{account-id}:topic/{topicname}`。
+     * 参数格式中的变量含义如下：
+     * - region-id：伸缩组所在的地域的ID。
+     * - account-id：阿里云账号ID。
+     * - queuename：MNS队列的名称。
+     * - topicname：MNS主题的名称。
+     * @example `acs:ess:cn-beijing:161456884340****:cloudmonitor`
+     */
+    "NotificationArn": string;
+    /**
+     * 一类或者多类弹性伸缩事件及资源变化通知类型。
+     */
+    "NotificationTypes": string[];
+    /**
+     * 伸缩组所属的地域ID。
+     * @example `cn-beijing`
+     */
     "RegionId"?: string;
-    /**
-    * 伸缩组的ID。
-    * @example `AG6CQdPU8OKdwLjgZcJ****`
-    */ "ScalingGroupId": string;
-    /**
-    * 通知对象标识符。格式为`acs:ess:{region}:{account-id}:{resource-relative-id}`，其中：
-    * - region为伸缩组所在地域的ID。更多详情，请参见[地域和可用区](~~40654~~)。
-    * - account-id为您账号的ID。
-    * - resource-relative-id为通知方式，取值范围：
-    *     - cloudmonitor：云监控
-    *     - MNS队列：queue/{queuename}，其中topicname需要替换为具体的MNS队列名称。
-    *     - MNS主题：topic/{topicname}，其中topicname需要替换为具体的MNS主题名称。
-    * @example `acs:ess:cn-hangzhou:123456:cloudmonitor`
-    */ "NotificationArn": string;
-    "NotificationType": string[];
-    /**
-    * @example `123456123456`
-    */ "OwnerId"?: number;
 }
-export { ModifyNotificationConfigurationRequest };

@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/push.BindAliasResponse
 export interface BindAliasResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `159E4422-6624-4750-8943-DFD98D34858C`
+     */
+    RequestId: string;
 }
-

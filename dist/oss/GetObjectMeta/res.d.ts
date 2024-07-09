@@ -1,3 +1,1 @@
-interface GetObjectMetaResponse {
-}
-export { GetObjectMetaResponse };
+export type GetObjectMetaResponse = any;

@@ -1,4 +1,2 @@
-interface ListFreqBandPlanGroupsRequest {
-    "RegionId"?: string;
+export interface ListFreqBandPlanGroupsRequest {
 }
-export { ListFreqBandPlanGroupsRequest };

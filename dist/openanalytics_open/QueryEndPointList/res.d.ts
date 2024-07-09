@@ -1,3 +1,0 @@
-interface QueryEndPointListResponse {
-}
-export { QueryEndPointListResponse };

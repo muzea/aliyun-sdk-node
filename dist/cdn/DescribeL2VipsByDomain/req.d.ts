@@ -1,9 +1,7 @@
-interface DescribeL2VipsByDomainRequest {
-    "RegionId"?: string;
+export interface DescribeL2VipsByDomainRequest {
     /**
-    * 域名，只支持单个域名。
-    * @example `www.yourdomain.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 加速域名，仅支持查询单个域名。
+     * @example `example.com`
+     */
+    "DomainName": string;
 }
-export { DescribeL2VipsByDomainRequest };

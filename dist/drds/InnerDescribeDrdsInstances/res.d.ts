@@ -1,3 +1,0 @@
-interface InnerDescribeDrdsInstancesResponse {
-}
-export { InnerDescribeDrdsInstancesResponse };

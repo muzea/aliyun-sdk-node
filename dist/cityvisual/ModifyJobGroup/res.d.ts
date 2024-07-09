@@ -1,3 +1,0 @@
-interface ModifyJobGroupResponse {
-}
-export { ModifyJobGroupResponse };

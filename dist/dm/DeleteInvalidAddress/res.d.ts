@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dm.DeleteInvalidAddressResponse
 export interface DeleteInvalidAddressResponse {
-	RequestId: string;
+    /**
+     * 请求ID
+     * @example `2D086F6-xxxx-xxxx-xxxx-006DED011A85`
+     */
+    RequestId: string;
 }
-

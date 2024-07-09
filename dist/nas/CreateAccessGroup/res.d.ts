@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/nas.CreateAccessGroupResponse
 export interface CreateAccessGroupResponse {
-	RequestId: string;
-	AccessGroupName: string;
+    /**
+     * 请求ID。
+     * @example `55C5FFD6-BF99-41BD-9C66-FFF39189F4F8`
+     */
+    RequestId: string;
+    /**
+     * 权限组名称。
+     * @example `vpc-test`
+     */
+    AccessGroupName: string;
 }
-

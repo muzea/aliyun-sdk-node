@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/kms.ImportKeyMaterialResponse
 export interface ImportKeyMaterialResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `ec1017cf-ead4-f3ca-babc-c3b34f3dbecb`
+     */
+    RequestId: string;
 }
-

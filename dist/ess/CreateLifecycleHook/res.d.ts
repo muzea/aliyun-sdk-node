@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ess.CreateLifecycleHookResponse
 export interface CreateLifecycleHookResponse {
-	LifecycleHookId: string;
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E`
+     */
+    RequestId: string;
+    /**
+     * 生命周期挂钩的ID。
+     * @example `ash-bp1at9ufhmcf9cmy****`
+     */
+    LifecycleHookId: string;
 }
-

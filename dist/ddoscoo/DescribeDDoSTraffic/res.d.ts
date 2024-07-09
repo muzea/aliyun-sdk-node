@@ -1,3 +1,0 @@
-interface DescribeDDoSTrafficResponse {
-}
-export { DescribeDDoSTrafficResponse };

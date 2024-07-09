@@ -1,3 +1,0 @@
-interface SendMessageWithTemplateResponse {
-}
-export { SendMessageWithTemplateResponse };

@@ -1,3 +1,1 @@
-interface PutObjectResponse {
-}
-export { PutObjectResponse };
+export type PutObjectResponse = any;

@@ -1,3 +1,0 @@
-interface ValidateOrderResponse {
-}
-export { ValidateOrderResponse };

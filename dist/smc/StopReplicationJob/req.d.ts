@@ -1,11 +1,7 @@
-interface StopReplicationJobRequest {
-    "RegionId"?: string;
+export interface StopReplicationJobRequest {
     /**
-    * 迁移任务ID。
-    * @example `j-xxxxxxxxxxxxxxx`
-    */ "JobId": string;
-    /**
-    * @example `000000`
-    */ "OwnerId"?: number;
+     * 迁移任务ID。
+     * @example `j-bw526m1vi6x21qh****`
+     */
+    "JobId": string;
 }
-export { StopReplicationJobRequest };

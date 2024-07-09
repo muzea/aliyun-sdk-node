@@ -1,6 +1,4 @@
-interface DeleteVSwitchRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DeleteVSwitchRequest {
     "VSwitchId": string;
+    "RegionId"?: string;
 }
-export { DeleteVSwitchRequest };

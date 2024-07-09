@@ -1,5 +1,7 @@
-interface ListDeviceTypesRequest {
-    "RegionId"?: string;
+export interface ListDeviceTypesRequest {
+    /**
+     * 项目ID
+     * @example `projectTest`
+     */
     "ProjectId"?: string;
 }
-export { ListDeviceTypesRequest };

@@ -1,9 +1,7 @@
-interface DescribeVodDomainCertificateInfoRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeVodDomainCertificateInfoRequest {
     /**
-    * 点播加速域名。
-    * @example `example.com`
-    */ "DomainName": string;
+     * 点播加速域名。
+     * @example `example.com`
+     */
+    "DomainName": string;
 }
-export { DescribeVodDomainCertificateInfoRequest };

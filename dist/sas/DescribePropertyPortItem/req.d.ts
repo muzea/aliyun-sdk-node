@@ -1,21 +1,22 @@
-interface DescribePropertyPortItemRequest {
-    "RegionId"?: string;
-    "SourceIp"?: string;
+export interface DescribePropertyPortItemRequest {
     /**
-    * 是否强制刷新待查询数据。
-    * @example `true`
-    */ "ForceFlush"?: boolean;
+     * 是否强制刷新待查询数据。
+     * @example `true`
+     */
+    "ForceFlush"?: boolean;
     /**
-    * 指定待查询端口。
-    * @example `22`
-    */ "Port"?: string;
+     * 端口号。
+     * @example `22`
+     */
+    "Port"?: string;
     /**
-    * 指定返回结果的当前页码。
-    * @example `1`
-    */ "CurrentPage"?: number;
+     * 分页查询时，显示的当前页的页码。
+     * @example `1`
+     */
+    "CurrentPage"?: number;
     /**
-    * 指定列表每页显示数据条数。
-    * @example `5`
-    */ "PageSize"?: number;
+     * 分页查询时，显示的每页数据的最大条数。
+     * @example `5`
+     */
+    "PageSize"?: number;
 }
-export { DescribePropertyPortItemRequest };

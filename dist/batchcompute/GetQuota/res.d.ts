@@ -1,3 +1,0 @@
-interface GetQuotaResponse {
-}
-export { GetQuotaResponse };

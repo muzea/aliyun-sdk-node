@@ -1,3 +1,0 @@
-interface ModifyWorkGroupResponse {
-}
-export { ModifyWorkGroupResponse };

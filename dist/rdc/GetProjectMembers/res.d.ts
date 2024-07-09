@@ -1,3 +1,0 @@
-interface GetProjectMembersResponse {
-}
-export { GetProjectMembersResponse };

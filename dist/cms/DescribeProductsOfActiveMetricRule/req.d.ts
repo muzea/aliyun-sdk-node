@@ -1,4 +1,2 @@
-interface DescribeProductsOfActiveMetricRuleRequest {
-    "RegionId"?: string;
+export interface DescribeProductsOfActiveMetricRuleRequest {
 }
-export { DescribeProductsOfActiveMetricRuleRequest };

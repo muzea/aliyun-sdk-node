@@ -1,142 +1,63 @@
-interface DescribeScalingGroupsRequest {
+export interface DescribeScalingGroupsRequest {
     /**
-    * 伸缩组所属地域的ID。
-    * @example `cn-qingdao`
-    */ "RegionId": string;
+     * 伸缩组所属地域的ID。
+     * @example `cn-qingdao`
+     */
+    "RegionId": string;
     /**
-    * @example `123456123456`
-    */ "OwnerId"?: number;
+     * 伸缩组列表的页码。起始值：1。
+     * 默认值：1。
+     * @example `1`
+     */
+    "PageNumber"?: number;
     /**
-    * 伸缩组列表的页码。起始值：1。
-    * 默认值：1 。
-    * @example `1`
-    */ "PageNumber"?: number;
+     * 分页查询时设置的每页行数。最大值：50。
+     * 默认值：10。
+     * @example `10`
+     */
+    "PageSize"?: number;
     /**
-    * 分页查询时设置的每页行数。最大值：50。
-    * 默认值：10。
-    * @example `10`
-    */ "PageSize"?: number;
+     * 伸缩组管理的实例类型。可能值：
+     * - ECS：伸缩组内管理的伸缩实例为ECS实例。
+     * - ECI：伸缩组内管理的伸缩实例为ECI实例。
+     * @example `ECS`
+     */
+    "GroupType"?: string;
     /**
-    * ScalingGroupId.N为待查询伸缩组的ID，N的取值范围：1～20。查询结果会忽略失效的伸缩组ID，并且不报错。
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupId.1"?: string;
+     * 待查询伸缩组的ID。
+     * 查询结果会忽略失效的伸缩组ID，并且不报错。
+     */
+    "ScalingGroupIds"?: string[];
     /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupId.2"?: string;
+     * 待查询的伸缩组的名称。
+     * 查询结果会忽略失效的伸缩组名称，并且不报错。
+     */
+    "ScalingGroupNames"?: string[];
     /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupId.3"?: string;
+     * 伸缩组的名称。
+     * @example `scalinggroup****`
+     */
+    "ScalingGroupName"?: string;
     /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupId.4"?: string;
+     * 待查询的伸缩组所属的资源组ID。
+     * >当没有伸缩组属于当前资源组下时，查询结果为空，并且不会报错。
+     * @example `rg-123******`
+     */
+    "ResourceGroupId"?: string;
     /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupId.5"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupId.6"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupId.7"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupId.8"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupId.9"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupId.10"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupId.12"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupId.13"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupId.14"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupId.15"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupId.16"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupId.17"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupId.18"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupId.19"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupId.20"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupName"?: string;
-    /**
-    * ScalingGroupName.N为待查询伸缩组的名称，N的取值范围：1～20。查询结果会忽略失效的伸缩组名称，并且不报错。
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupName.1"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupName.2"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupName.3"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupName.4"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupName.5"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupName.6"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupName.7"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupName.8"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupName.9"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupName.10"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupName.11"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupName.12"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupName.13"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupName.14"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupName.15"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupName.16"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupName.17"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupName.18"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupName.19"?: string;
-    /**
-    * @example `dyrSuvBOtO1dEdIlIbp****`
-    */ "ScalingGroupName.20"?: string;
+     * 伸缩组的标签信息集合。
+     */
+    "Tags"?: {
+        /**
+         * 伸缩组的标签键。
+         * @example `Department`
+         */
+        Key: string;
+        /**
+         * 伸缩组的标签值。
+         * @example `Finance
+        `
+         */
+        Value: string;
+    }[];
 }
-export { DescribeScalingGroupsRequest };

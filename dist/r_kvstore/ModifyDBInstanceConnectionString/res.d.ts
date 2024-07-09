@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.ModifyDBInstanceConnectionStringResponse
 export interface ModifyDBInstanceConnectionStringResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `1790D68A-465C-44E3-BC24-9732652961F9`
+     */
+    RequestId: string;
 }
-

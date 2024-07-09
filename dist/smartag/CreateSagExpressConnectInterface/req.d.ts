@@ -1,0 +1,41 @@
+export interface CreateSagExpressConnectInterfaceRequest {
+    /**
+     * 智能接入网关实例所属地域ID。
+     * @example `cn-shanghai`
+     */
+    "RegionId": string;
+    /**
+     * 智能接入网关实例ID。
+     * @example `sag-whfn****`
+     */
+    "SmartAGId": string;
+    /**
+     * 绑定的智能接入网关设备序列号。
+     * @example `sag32a30****`
+     */
+    "SmartAGSn": string;
+    /**
+     * 专线端口名称。
+     * @example `5`
+     */
+    "PortName": string;
+    /**
+     * 专线子接口所属VLAN编码。
+     * 取值范围：**0~4094**。
+     * > - VLAN编码为0时，代表此端口为物理端口，不使用VLAN子接口模式。
+     * - VLAN编码为1~4094时，代表此端口使用基于VLAN的三层子接口。
+     * - 最多支持创建5个VLAN。
+     * @example `10`
+     */
+    "Vlan"?: string;
+    /**
+     * IP地址。
+     * @example `192.XX.XX.1`
+     */
+    "IP": string;
+    /**
+     * IP地址掩码。
+     * @example `255.255.255.252`
+     */
+    "Mask": string;
+}

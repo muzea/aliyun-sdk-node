@@ -1,3 +1,0 @@
-interface DescribeDomainQpsWithCacheResponse {
-}
-export { DescribeDomainQpsWithCacheResponse };

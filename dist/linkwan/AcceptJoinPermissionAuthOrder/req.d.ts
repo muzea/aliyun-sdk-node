@@ -1,8 +1,7 @@
-interface AcceptJoinPermissionAuthOrderRequest {
-    "RegionId"?: string;
+export interface AcceptJoinPermissionAuthOrderRequest {
     /**
-    * 要接受的授权工单ID。
-    * @example `123`
-    */ "OrderId": string;
+     * 要接受的授权工单ID。
+     * @example `123`
+     */
+    "OrderId": string;
 }
-export { AcceptJoinPermissionAuthOrderRequest };

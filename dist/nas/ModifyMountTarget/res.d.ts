@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/nas.ModifyMountTargetResponse
 export interface ModifyMountTargetResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `FF387D95-34C4-4879-B65A-99D1FA1B****`
+     */
+    RequestId: string;
 }
-

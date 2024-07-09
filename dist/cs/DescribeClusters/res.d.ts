@@ -1,6 +1,34 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cs.DescribeClustersResponse
-export interface DescribeClustersResponse {
-}
-
+export type DescribeClustersResponse = {
+    cluster_id: string;
+    cluster_type: string;
+    created: string;
+    current_version: string;
+    data_disk_category: string;
+    data_disk_size: number;
+    deletion_protection: boolean;
+    docker_version: string;
+    external_loadbalancer_id: string;
+    init_version: string;
+    master_url: string;
+    meta_data: string;
+    name: string;
+    network_mode: string;
+    private_zone: boolean;
+    profile: string;
+    region_id: string;
+    resource_group_id: string;
+    security_group_id: string;
+    size: number;
+    state: string;
+    subnet_cidr: string;
+    tags: {
+        key: string;
+        value: string;
+    }[];
+    updated: string;
+    vpc_id: string;
+    vswitch_cidr: string;
+    vswitch_id: string;
+    worker_ram_role_name: string;
+    zone_id: string;
+}[];

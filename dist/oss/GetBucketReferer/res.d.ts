@@ -1,3 +1,3 @@
-interface GetBucketRefererResponse {
+export interface GetBucketRefererResponse {
+    RefererConfiguration: any;
 }
-export { GetBucketRefererResponse };

@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/live.UpdateLiveRecordNotifyConfigResponse
 export interface UpdateLiveRecordNotifyConfigResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `16A96B9A-F203-4EC5-8E43-CB92E68F4CD`
+     */
+    RequestId: string;
 }
-

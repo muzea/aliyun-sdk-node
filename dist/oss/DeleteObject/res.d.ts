@@ -1,3 +1,1 @@
-interface DeleteObjectResponse {
-}
-export { DeleteObjectResponse };
+export type DeleteObjectResponse = any;

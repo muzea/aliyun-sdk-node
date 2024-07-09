@@ -1,3 +1,0 @@
-interface DescribeUploadPreSignResponse {
-}
-export { DescribeUploadPreSignResponse };

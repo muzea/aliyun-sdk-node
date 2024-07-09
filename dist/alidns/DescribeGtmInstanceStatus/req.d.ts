@@ -1,7 +1,12 @@
-interface DescribeGtmInstanceStatusRequest {
-    "RegionId"?: string;
-    "InstanceId": string;
+export interface DescribeGtmInstanceStatusRequest {
+    /**
+     * 语言。
+     * @example `en`
+     */
     "Lang"?: string;
-    "UserClientIp"?: string;
+    /**
+     * 实例ID。
+     * @example `gtm-cn-wwo3a3hbz**`
+     */
+    "InstanceId": string;
 }
-export { DescribeGtmInstanceStatusRequest };

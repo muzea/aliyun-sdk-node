@@ -1,9 +1,17 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.SubmitSqlFlashbackTaskResponse
 export interface SubmitSqlFlashbackTaskResponse {
-	RequestId: string;
-	Success: boolean;
-	TaskId: number;
+    /**
+     * 请求ID。
+     * @example `DSSDF-SEWE-*****`
+     */
+    RequestId: string;
+    /**
+     * 请求结果。
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 任务ID。
+     * @example `1111`
+     */
+    TaskId: number;
 }
-

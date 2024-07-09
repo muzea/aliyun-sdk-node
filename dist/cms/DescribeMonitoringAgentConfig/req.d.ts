@@ -1,4 +1,2 @@
-interface DescribeMonitoringAgentConfigRequest {
-    "RegionId"?: string;
+export interface DescribeMonitoringAgentConfigRequest {
 }
-export { DescribeMonitoringAgentConfigRequest };

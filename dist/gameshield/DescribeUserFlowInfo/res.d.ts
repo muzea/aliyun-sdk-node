@@ -1,3 +1,0 @@
-interface DescribeUserFlowInfoResponse {
-}
-export { DescribeUserFlowInfoResponse };

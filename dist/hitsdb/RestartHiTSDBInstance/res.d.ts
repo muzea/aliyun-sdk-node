@@ -1,3 +1,0 @@
-interface RestartHiTSDBInstanceResponse {
-}
-export { RestartHiTSDBInstanceResponse };

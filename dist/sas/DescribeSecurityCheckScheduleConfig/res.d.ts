@@ -1,15 +1,42 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/sas.RiskCheckJobConfig
-export interface RiskCheckJobConfig {
-	StartTime: number;
-	EndTime: number;
-	DaysOfWeek: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/sas.DescribeSecurityCheckScheduleConfigResponse
 export interface DescribeSecurityCheckScheduleConfigResponse {
-	RequestId: string;
-	RiskCheckJobConfig: RiskCheckJobConfig;
+    /**
+     * 本次调用请求的ID，是由阿里云为该请求生成的唯一标识符，可用于排查和定位问题。
+     * @example `48D2E9A9-A1B0-4295-B727-0995757C47E9`
+     */
+    RequestId: string;
+    /**
+     * 自定义检查设置的详细配置信息。
+     */
+    RiskCheckJobConfig: {
+        /**
+         * 检测结束时间。
+         * - **6**：在00:00~06:00结束检测
+         * - **12**：在06:00~12:00结束检测
+         * - **18**：在12:00~18:00结束检测
+         * - **24**：在18:00~24:00结束检测
+         * @example `12`
+         */
+        EndTime: number;
+        /**
+         * 检测开始时间。
+         * - **0**：在00:00~06:00开始检测
+         * - **6**：在06:00~12:00开始检测
+         * - **12**：在12:00~18:00开始检测
+         * - **18**：在18:00~24:00开始检测
+         * @example `6`
+         */
+        StartTime: number;
+        /**
+         * 检测周期。可取值周一至周日，支持设置多天。多天之间使用英文逗号隔开。
+         * - **1**：周一
+         * - **2**：周二
+         * - **3**：周三
+         * - **4**：周四
+         * - **5**：周五
+         * - **6**：周六
+         * - **7**：周日
+         * @example `1,2,3`
+         */
+        DaysOfWeek: string;
+    };
 }
-

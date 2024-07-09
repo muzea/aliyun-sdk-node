@@ -1,3 +1,0 @@
-interface UpdateFlexInnerPolicyResponse {
-}
-export { UpdateFlexInnerPolicyResponse };

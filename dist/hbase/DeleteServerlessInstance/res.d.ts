@@ -1,3 +1,0 @@
-interface DeleteServerlessInstanceResponse {
-}
-export { DeleteServerlessInstanceResponse };

@@ -1,25 +1,32 @@
-interface DescribeDcdnDomainRealTimeBpsDataRequest {
-    "RegionId"?: string;
+export interface DescribeDcdnDomainRealTimeBpsDataRequest {
     /**
-    * 域名。多个之间用逗号（,）隔开。
-    * @example `example.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 加速域名，多个域名用英文逗号（,）分隔。
+     * @example `example.com`
+     */
+    "DomainName": string;
     /**
-    * 运营商英文名，通过**DescribeCdnRegionAndIsp**接口获得，不传为所有运营商。
-    * @example `telecom`
-    */ "IspNameEn"?: string;
+     * 运营商英文名。
+     * 您可以调用[DescribeDcdnRegionAndIsp](~~DescribeDcdnRegionAndIsp~~)接口获取，默认查询所有运营商。
+     * @example `telecom`
+     */
+    "IspNameEn"?: string;
     /**
-    * 区域英文名，通过**DescribeCdnRegionAndIsp**接口获得，不传为所有区域。
-    * @example `beijing`
-    */ "LocationNameEn"?: string;
+     * 地域商英文名。
+     * 您可以调用[DescribeDcdnRegionAndIsp](~~DescribeDcdnRegionAndIsp~~)接口获取，默认查询所有地域。
+     * @example `beijing`
+     */
+    "LocationNameEn"?: string;
     /**
-    * 起始时间，日期格式按照ISO8601表示法，并使用UTC时间。
-    * @example `2018-01-02T11:00:00Z`
-    */ "StartTime"?: string;
+     * 获取数据的开始时间。
+     * 日期格式按照ISO8601表示法，并使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。
+     * @example `2018-01-02T11:00:00Z`
+     */
+    "StartTime"?: string;
     /**
-    * 结束时间，日期格式按照ISO8601表示法，并使用UTC时间。
-    * @example `2018-01-02T11:00:00Z`
-    */ "EndTime"?: string;
+     * 获取数据的结束时间。
+     * 日期格式按照ISO8601表示法，并使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。
+     * > 结束时间需大于起始时间。
+     * @example `2018-01-02T11:00:00Z`
+     */
+    "EndTime"?: string;
 }
-export { DescribeDcdnDomainRealTimeBpsDataRequest };

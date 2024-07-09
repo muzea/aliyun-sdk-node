@@ -1,3 +1,0 @@
-interface TranslateResponse {
-}
-export { TranslateResponse };

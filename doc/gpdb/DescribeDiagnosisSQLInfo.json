@@ -1,0 +1,121 @@
+{
+  "summary": "获取AnalyticDB PostgreSQL版实例中指定查询语句的详细信息。",
+  "methods": ["post", "get"],
+  "schemes": ["http", "https"],
+  "security": [{ "AK": [] }],
+  "operationType": "read",
+  "deprecated": false,
+  "systemTags": { "operationType": "get" },
+  "parameters": [
+    {
+      "name": "DBInstanceId",
+      "in": "query",
+      "schema": {
+        "description": "实例ID。\n\n> 您可以调用[DescribeDBInstances](~~86911~~)接口查看目标地域下所有的AnalyticDB PostgreSQL实例的详情，包括实例ID。",
+        "type": "string",
+        "required": true,
+        "example": "gp-bp12ga6v69h86****"
+      }
+    },
+    {
+      "name": "QueryID",
+      "in": "query",
+      "schema": {
+        "description": "查询ID，即查询的唯一标识。\n\n> 您可以调用[DescribeDiagnosisRecords](~~450511~~)接口获取查询ID。",
+        "type": "string",
+        "required": true,
+        "example": "71403480878****"
+      }
+    },
+    {
+      "name": "Database",
+      "in": "query",
+      "schema": {
+        "description": "数据库名称。",
+        "type": "string",
+        "required": true,
+        "example": "adbtest"
+      }
+    }
+  ],
+  "responses": {
+    "200": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RequestId": {
+            "description": "请求ID。",
+            "type": "string",
+            "example": "425AAA6A-63E0-1929-A1CE-3D9036CBC463"
+          },
+          "QueryID": {
+            "description": "查询ID。",
+            "type": "string",
+            "example": "71403480878****"
+          },
+          "SessionID": {
+            "description": "查询所属的会话ID。",
+            "type": "string",
+            "example": "658****"
+          },
+          "StartTime": {
+            "description": "查询开始的时间，为毫秒级的UNIX时间戳。",
+            "type": "integer",
+            "format": "int64",
+            "example": "1660719602199"
+          },
+          "Duration": {
+            "description": "查询运行的总时间，单位为秒（s）。",
+            "type": "integer",
+            "format": "int32",
+            "example": "16"
+          },
+          "SQLStmt": {
+            "description": "SQL语句。",
+            "type": "string",
+            "example": "select n_live_tup, n_live_tup + n_dead_tup, pg_relation_size(table_name), last_vacuum from pg_stat_user_tables where relid = table_name::regclass"
+          },
+          "User": {
+            "description": "用户名。",
+            "type": "string",
+            "example": "adbpguser"
+          },
+          "Database": {
+            "description": "数据库名称。",
+            "type": "string",
+            "example": "adbtest"
+          },
+          "Status": {
+            "description": "SQL执行状态，取值说明：\n\n- **running**：执行中。\n- **finished**：执行完成。",
+            "type": "string",
+            "example": "finished"
+          },
+          "QueryPlan": {
+            "description": "算子信息。",
+            "type": "string",
+            "example": "{\\\"children\\\":********\\\"startTime\\\":1660719602199}"
+          },
+          "TextPlan": {
+            "description": "查询计划信息。",
+            "type": "string",
+            "example": "******"
+          },
+          "SortedMetrics": {
+            "description": "按照指标的排序结构。",
+            "type": "string",
+            "example": "{\\\"costSort\\\":******:\\\"Seq Scan-9\\\",\\\"value\\\":0.0}]}"
+          },
+          "MaxOutputRows": {
+            "description": "最大输出行数。",
+            "type": "string",
+            "example": "10"
+          }
+        }
+      }
+    }
+  },
+  "responseDemo": "[{\"type\":\"json\",\"example\":\"{\\n  \\\"RequestId\\\": \\\"425AAA6A-63E0-1929-A1CE-3D9036CBC463\\\",\\n  \\\"QueryID\\\": \\\"71403480878****\\\",\\n  \\\"SessionID\\\": \\\"658****\\\",\\n  \\\"StartTime\\\": 1660719602199,\\n  \\\"Duration\\\": 16,\\n  \\\"SQLStmt\\\": \\\"select n_live_tup, n_live_tup + n_dead_tup, pg_relation_size(table_name), last_vacuum from pg_stat_user_tables where relid = table_name::regclass\\\",\\n  \\\"User\\\": \\\"adbpguser\\\",\\n  \\\"Database\\\": \\\"adbtest\\\",\\n  \\\"Status\\\": \\\"finished\\\",\\n  \\\"QueryPlan\\\": \\\"{\\\\\\\\\\\\\\\"children\\\\\\\\\\\\\\\":********\\\\\\\\\\\\\\\"startTime\\\\\\\\\\\\\\\":1660719602199}\\\",\\n  \\\"TextPlan\\\": \\\"******\\\",\\n  \\\"SortedMetrics\\\": \\\"{\\\\\\\\\\\\\\\"costSort\\\\\\\\\\\\\\\":******:\\\\\\\\\\\\\\\"Seq Scan-9\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"value\\\\\\\\\\\\\\\":0.0}]}\\\",\\n  \\\"MaxOutputRows\\\": \\\"10\\\"\\n}\",\"errorExample\":\"\"},{\"type\":\"xml\",\"example\":\"<DescribeDiagnosisSQLInfoResponse>\\n    <code>200</code>\\n    <data>\\n        <Status>finished</Status>\\n        <SortedMetrics>{\\\"costSort\\\":******:\\\"Seq Scan-9\\\",\\\"value\\\":0.0}]}</SortedMetrics>\\n        <SQLStmt>select n_live_tup, n_live_tup + n_dead_tup, pg_relation_size(table_name), last_vacuum\\n        from pg_stat_user_tables\\n        where relid = table_name::regclass</SQLStmt>\\n        <User>adbpguser</User>\\n        <RequestId>425AAA6A-63E0-1929-A1CE-3D9036CBC463</RequestId>\\n        <QueryID>71403480878****</QueryID>\\n        <StartTime>1660719602199</StartTime>\\n        <Duration>16</Duration>\\n        <QueryPlan>{\\\"children\\\":********\\\"startTime\\\":1660719602199}</QueryPlan>\\n        <TextPlan>******</TextPlan>\\n        <MaxOutputRows>10</MaxOutputRows>\\n        <Database>adbtest</Database>\\n        <SessionID>658****</SessionID>\\n    </data>\\n    <httpStatusCode>200</httpStatusCode>\\n    <requestId>425AAA6A-63E0-1929-A1CE-3D9036CBC463</requestId>\\n    <successResponse>true</successResponse>\\n</DescribeDiagnosisSQLInfoResponse>\",\"errorExample\":\"\"}]",
+  "title": "查看SQL语句的详细信息",
+  "description": "本接口用于查看AnalyticDB PostgreSQL版实例中指定查询的详细信息，例如查询语句、执行计划文本和执行计划树等。\n\n目前该功能仅支持存储弹性模式实例，且内核版本为V6.3.10.1及以上版本。如何查看和升级内核小版本，请参见[查看内核小版本](~~277424~~)和[版本升级](~~139271~~)。",
+  "responseParamsDescription": "**QueryPlan**参数说明如下：\n|名称|类型|示例值|描述|\n|-----|-----|-------|-----|\n|OpertorID|Integer|1|算子在查询执行计划中的ID。|\n|OperatorTypeID|integer|10|算子类型ID。|\n|OperatorType|String|AGG|算子类型。|\n|OperatorName|String|AGG-1|算子名称。|\n|NodeWidth|Integer|1|执行计划树中，节点在该层的水平位置，从1开始。|\n|NodeDepth|Integer|2|执行计划树中，节点所处的深度，从1开始。|\n|LevelWidth|Integer|1|执行计划树中，节点所在层的总宽度，从1开始。|\n|MaxDepth|Integer|2|执行计划树的最大深度，该值仅root节点支持，从1开始。|\n|OutputRows|Integer|10|算子执行过程中输出的数据行数。|\n|InputRows|Integer|1000|算子执行过程中输入的数据行数。|\n|Memory|Float|100|算子占用内存，单位为KB。|\n|StartTime|String|1652843003000|算子开始执行的时间。|\n|EndTime|String|1652843003100|算子结束执行的时间。|\n|Duration|Float|6|算子执行消耗的时间，单位为毫秒（ms）。|\n|DiskReadSize|Float|55|算子从磁盘读取数据量，单位为Byte。|\n|DiskReadTime|Float|0.1|算子从磁盘读取数据消耗的时间，单位为毫秒（ms）。|\n|NetIOSize|Float|3000|数据在不同节点间网络传输的数据量，单位为Byte。|\n|NetIOTime|Float|0.1|数据在不同节点间网络传输消耗的时间，单位为毫秒（ms）。|\n|MemoryPercent|Float|20.11|算子使用内存占比。|\n|DurationPercent|Float|16.11|算子执行消耗时间占比。|\n|DiskReadSizePercent|Float|55.11|算子从磁盘读取数据量占比。|\n|DiskReadTimePercent|Float|11.11|算子从磁盘读取数据消耗时间占比。|\n|NetIOSizePercent|Float|30.11|数据在不同节点间网络传输的数据量占比。|\n|NetIOTimePercent|Float|11.11|数据在不同节点间网络传输消耗的时间占比。|\n|Children|算子结构体|递归结构|子节点算子，字段结构与父节点算子结构一致，最下层子节点的该值为空。|"
+}

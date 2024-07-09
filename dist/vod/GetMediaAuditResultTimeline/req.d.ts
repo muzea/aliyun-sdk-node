@@ -1,9 +1,7 @@
-interface GetMediaAuditResultTimelineRequest {
-    "RegionId"?: string;
+export interface GetMediaAuditResultTimelineRequest {
     /**
-    * 视频ID。
-    * @example `XXXXX`
-    */ "MediaId": string;
-    "OwnerId"?: string;
+     * 视频ID。
+     * @example `93ab850b4f6f*****54b6e91d24d81d4`
+     */
+    "MediaId": string;
 }
-export { GetMediaAuditResultTimelineRequest };

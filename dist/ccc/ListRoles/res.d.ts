@@ -1,39 +1,37 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.Privilege
-export interface Privilege {
-	PrivilegeName: string;
-	PrivilegeDescription: string;
-	PrivilegeId: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.PrivilegesInListUsersOfSkillGroup
-export interface PrivilegesInListUsersOfSkillGroup {
-	Privilege: Privilege[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.Role
-export interface Role {
-	RoleId: string;
-	InstanceId: string;
-	UserCount: number;
-	RoleName: string;
-	RoleDescription: string;
-	Privileges: PrivilegesInListUsersOfSkillGroup;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.RolesInListRoles
-export interface RolesInListRoles {
-	Role: Role[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.ListRolesResponse
 export interface ListRolesResponse {
-	RequestId: string;
-	Success: boolean;
-	Code: string;
-	Message: string;
-	HttpStatusCode: number;
-	Roles: RolesInListRoles;
+    /**
+     * 响应码。
+     * @example `OK`
+     */
+    Code: string;
+    /**
+     * HTTP状态码。
+     * @example `200`
+     */
+    HttpStatusCode: number;
+    /**
+     * 响应信息。
+     * @example `无`
+     */
+    Message: string;
+    /**
+     * 请求ID。
+     * @example `711D948F-C616-4E23-8573-0F260513CE09`
+     */
+    RequestId: string;
+    /**
+     * 角色列表。
+     */
+    Data: {
+        /**
+         * 角色名称。
+         * @example `Admin`
+         */
+        Name: string;
+        /**
+         * 角色ID，格式为：角色@实例ID。
+         * @example `Admin@ccc-test`
+         */
+        RoleId: string;
+    }[];
 }
-

@@ -1,3 +1,0 @@
-interface ResizeClusterResponse {
-}
-export { ResizeClusterResponse };

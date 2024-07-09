@@ -1,5 +1,7 @@
-interface DescribeInstanceAccountsRequest {
-    "RegionId"?: string;
+export interface DescribeInstanceAccountsRequest {
+    /**
+     * 实例ID。
+     * @example `drds*********`
+     */
     "DrdsInstanceId": string;
 }
-export { DescribeInstanceAccountsRequest };

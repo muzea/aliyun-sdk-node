@@ -1,96 +1,75 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.RestoreRegions
-export interface RestoreRegions {
-	RestoreRegion: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.LatencyTopNItem
-export interface LatencyTopNItem {
-	SQLExecuteTimes: number;
-	AvgLatency: number;
-	SQLText: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.LatencyTopNItemsInDescribeSQLReports
-export interface LatencyTopNItemsInDescribeSQLReports {
-	LatencyTopNItem: LatencyTopNItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.QPSTopNItem
-export interface QPSTopNItem {
-	SQLExecuteTimes: number;
-	SQLText: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.QPSTopNItemsInDescribeSQLReports
-export interface QPSTopNItemsInDescribeSQLReports {
-	QPSTopNItem: QPSTopNItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.Item
-export interface Item {
-	CrossBackupSetSize: number;
-	Category: string;
-	DBInstanceDescription: string;
-	Engine: string;
-	CrossLogBackupId: number;
-	CrossDownloadLink: string;
-	LogFileName: string;
-	ReportTime: string;
-	BackupSetStatus: number;
-	DBInstanceStatusDesc: string;
-	BackupEnabled: string;
-	RegionId: string;
-	CrossBackupRegion: string;
-	Duration: number;
-	CrossBackupId: number;
-	BackupStartTime: string;
-	LinkExpiredTime: string;
-	DBInstanceId: string;
-	BackupSetScale: number;
-	DBInstanceStorageType: string;
-	AutoRenew: string;
-	CrossLogBackupSize: number;
-	LogEndTime: string;
-	BackupEnabledTime: string;
-	CrossBackupSetFile: string;
-	CrossBackupDownloadLink: string;
-	EngineVersion: string;
-	CrossBackupSetLocation: string;
-	LogBackupEnabled: string;
-	LogBackupEnabledTime: string;
-	BackupEndTime: string;
-	BackupMethod: string;
-	LogBeginTime: string;
-	RelService: string;
-	BackupType: string;
-	Retention: number;
-	DBInstanceStatus: string;
-	RetentType: number;
-	CrossIntranetDownloadLink: string;
-	InstanceId: number;
-	ConsistentTime: string;
-	CrossBackupType: string;
-	Status: string;
-	RelServiceId: string;
-	LockMode: string;
-	RestoreRegions: RestoreRegions;
-	LatencyTopNItems: LatencyTopNItemsInDescribeSQLReports;
-	QPSTopNItems: QPSTopNItemsInDescribeSQLReports;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.ItemsInDescribeSQLLogReportList
-export interface ItemsInDescribeSQLLogReportList {
-	Item: Item[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.DescribeSQLLogReportListResponse
 export interface DescribeSQLLogReportListResponse {
-	RequestId: string;
-	TotalRecordCount: number;
-	PageNumber: number;
-	PageRecordCount: number;
-	Items: ItemsInDescribeSQLLogReportList;
+    /**
+     * 请求ID。
+     * @example `08A3B71B-FE08-4B03-974F-CC7EA6DB1828	`
+     */
+    RequestId: string;
+    /**
+     * 页码。
+     * @example `1`
+     */
+    PageNumber: number;
+    /**
+     * 本页SQL日志运行报告个数。
+     * @example `30`
+     */
+    PageRecordCount: number;
+    /**
+     * 总记录数。
+     * @example `60`
+     */
+    TotalRecordCount: number;
+    Items: {
+        /**
+         * SQL日志运行报告列表。
+         */
+        Item: {
+            /**
+             * 运行报告生成时间。格式：<i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z（UTC时间）
+             * @example `2019-03-27T16:00:00Z`
+             */
+            ReportTime: string;
+            LatencyTopNItems: {
+                /**
+                 * 延迟最高的SQL列表。
+                 */
+                LatencyTopNItem: {
+                    /**
+                     * SQL语句。
+                     * > 展示SQL语句的前128个字符，仅统计执行时间大于100ms的SQL。
+                     * @example `SELECT * FROM table_name;`
+                     */
+                    SQLText: string;
+                    /**
+                     * SQL执行次数。
+                     * @example `5`
+                     */
+                    SQLExecuteTimes: number;
+                    /**
+                     * SQL平均执行时间。单位：ms
+                     * @example `500`
+                     */
+                    AvgLatency: number;
+                }[];
+            };
+            QPSTopNItems: {
+                /**
+                 * 执行次数最多的SQL列表。
+                 */
+                QPSTopNItem: {
+                    /**
+                     * SQL执行次数。
+                     * @example `5`
+                     */
+                    SQLExecuteTimes: number;
+                    /**
+                     * SQL语句。
+                     * > 展示SQL语句的前128个字符，仅统计执行时间大于5ms的SQL。
+                     * @example `SELECT * FROM table_name;`
+                     */
+                    SQLText: string;
+                }[];
+            };
+        }[];
+    };
 }
-

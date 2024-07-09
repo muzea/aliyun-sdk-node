@@ -1,3 +1,0 @@
-interface CreateCustomLocalJoinPermissionResponse {
-}
-export { CreateCustomLocalJoinPermissionResponse };

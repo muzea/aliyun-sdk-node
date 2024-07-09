@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.DeleteNetworkAclResponse
 export interface DeleteNetworkAclResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `4B48E3D-DF70-471B-AA83-089E83A1B45`
+     */
+    RequestId: string;
 }
-

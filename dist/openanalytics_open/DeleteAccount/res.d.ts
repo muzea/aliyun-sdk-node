@@ -1,3 +1,0 @@
-interface DeleteAccountResponse {
-}
-export { DeleteAccountResponse };

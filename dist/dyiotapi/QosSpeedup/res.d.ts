@@ -1,3 +1,0 @@
-interface QosSpeedupResponse {
-}
-export { QosSpeedupResponse };

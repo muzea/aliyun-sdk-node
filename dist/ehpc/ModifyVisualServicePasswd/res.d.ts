@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ehpc.ModifyVisualServicePasswdResponse
 export interface ModifyVisualServicePasswdResponse {
-	RequestId: string;
-	Message: string;
+    /**
+     * 返回消息。
+     * @example `{"Msg": "" }`
+     */
+    Message: string;
+    /**
+     * 请求ID。
+     * @example `896D338C-E4F4-41EC-A154-D605E5DE6880`
+     */
+    RequestId: string;
 }
-

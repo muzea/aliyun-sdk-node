@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cbn.EnableCenVbrHealthCheckResponse
 export interface EnableCenVbrHealthCheckResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `1F59F19C-EFD2-40B1-94D5-65B40CA8E34A`
+     */
+    RequestId: string;
 }
-

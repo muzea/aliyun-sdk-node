@@ -1,3 +1,0 @@
-interface AddAccountResponse {
-}
-export { AddAccountResponse };

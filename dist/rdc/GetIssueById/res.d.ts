@@ -1,3 +1,0 @@
-interface GetIssueByIdResponse {
-}
-export { GetIssueByIdResponse };

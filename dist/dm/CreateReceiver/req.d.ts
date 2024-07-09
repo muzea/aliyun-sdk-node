@@ -1,8 +1,17 @@
-interface CreateReceiverRequest {
-    "RegionId"?: string;
+export interface CreateReceiverRequest {
+    /**
+     * 列表名称
+     * @example `xme`
+     */
     "ReceiversName": string;
+    /**
+     * 列表别称
+     * @example `vme`
+     */
     "ReceiversAlias": string;
-    "OwnerId"?: number;
+    /**
+     * 描述
+     * @example `列表描述`
+     */
     "Desc"?: string;
 }
-export { CreateReceiverRequest };

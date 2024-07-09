@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cloudapi.CreateApiStageVariableResponse
 export interface CreateApiStageVariableResponse {
-	RequestId: string;
+    /**
+     * 请求ID
+     * @example `03442A3D-3B7D-434C-8A95-A5FEB999B529`
+     */
+    RequestId: string;
 }
-

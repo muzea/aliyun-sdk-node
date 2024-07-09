@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/polardb.DeleteBackupResponse
 export interface DeleteBackupResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `3CF4F9FE-BF77-4739-8D68-B8DF5D******`
+     */
+    RequestId: string;
 }
-

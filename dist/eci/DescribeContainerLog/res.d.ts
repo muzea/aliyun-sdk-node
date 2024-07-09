@@ -1,9 +1,17 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/eci.DescribeContainerLogResponse
 export interface DescribeContainerLogResponse {
-	RequestId: string;
-	ContainerName: string;
-	Content: string;
+    /**
+     * 请求ID，唯一标识。
+     * @example `CA850ADA-****-4AC8-****-5B5990EAB7D0`
+     */
+    RequestId: string;
+    /**
+     * 容器名称。
+     * @example `nginx`
+     */
+    ContainerName: string;
+    /**
+     * 日志内容。
+     * @example `{}`
+     */
+    Content: string;
 }
-

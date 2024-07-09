@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/polardb.ModifyDBClusterMigrationResponse
 export interface ModifyDBClusterMigrationResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `A1B303A5-653F-4AEE-A598-023FF9******`
+     */
+    RequestId: string;
 }
-

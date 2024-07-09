@@ -1,7 +1,4 @@
-interface UpdateLiveTopLevelDomainRequest {
-    "RegionId"?: string;
+export interface UpdateLiveTopLevelDomainRequest {
     "DomainName": string;
     "TopLevelDomain": string;
-    "OwnerId"?: number;
 }
-export { UpdateLiveTopLevelDomainRequest };

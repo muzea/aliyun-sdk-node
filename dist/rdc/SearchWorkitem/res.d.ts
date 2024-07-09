@@ -1,3 +1,0 @@
-interface SearchWorkitemResponse {
-}
-export { SearchWorkitemResponse };

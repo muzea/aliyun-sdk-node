@@ -1,9 +1,6 @@
-interface DescribeUpPeakPublishStreamDataRequest {
-    "RegionId"?: string;
-    "EndTime": string;
-    "OwnerId"?: number;
+export interface DescribeUpPeakPublishStreamDataRequest {
     "StartTime": string;
+    "EndTime": string;
     "DomainSwitch"?: string;
     "DomainName"?: string;
 }
-export { DescribeUpPeakPublishStreamDataRequest };

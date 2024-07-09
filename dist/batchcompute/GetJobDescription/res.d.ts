@@ -1,3 +1,0 @@
-interface GetJobDescriptionResponse {
-}
-export { GetJobDescriptionResponse };

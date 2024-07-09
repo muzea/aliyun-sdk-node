@@ -1,7 +1,7 @@
-interface QueryHBaseHaDBRequest {
-    "RegionId"?: string;
-    "ClusterId": string;
-    "OwnerId"?: number;
-    "ZoneId"?: string;
+export interface QueryHBaseHaDBRequest {
+    /**
+     * BDS集群ID
+     * @example `bds-t4n3496whj23ia4k`
+     */
+    "BdsId": string;
 }
-export { QueryHBaseHaDBRequest };

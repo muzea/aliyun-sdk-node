@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.ReleaseDedicatedHostResponse
 export interface ReleaseDedicatedHostResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `A1B15AC8-E6F6-49A4-8985-8C07104B9199`
+     */
+    RequestId: string;
 }
-

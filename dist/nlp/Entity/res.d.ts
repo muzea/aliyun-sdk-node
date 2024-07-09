@@ -1,3 +1,0 @@
-interface EntityResponse {
-}
-export { EntityResponse };

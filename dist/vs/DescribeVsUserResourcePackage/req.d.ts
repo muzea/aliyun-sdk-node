@@ -1,6 +1,2 @@
-interface DescribeVsUserResourcePackageRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
-    "ShowLog"?: string;
+export interface DescribeVsUserResourcePackageRequest {
 }
-export { DescribeVsUserResourcePackageRequest };

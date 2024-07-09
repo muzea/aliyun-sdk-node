@@ -1,9 +1,7 @@
-interface SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileIDRequest {
-    "RegionId"?: string;
+export interface SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileIDRequest {
+    "UserClientIp"?: string;
+    "Lang"?: string;
     "DomainName": string;
     "InstanceId": string;
     "RegistrantProfileId": number;
-    "UserClientIp"?: string;
-    "Lang"?: string;
 }
-export { SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileIDRequest };

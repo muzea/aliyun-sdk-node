@@ -1,3 +1,0 @@
-interface DescribeClusterAttributeResponse {
-}
-export { DescribeClusterAttributeResponse };

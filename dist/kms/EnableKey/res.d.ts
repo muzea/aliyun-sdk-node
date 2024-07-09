@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/kms.EnableKeyResponse
 export interface EnableKeyResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `efb1cbbd-a093-4278-bc03-639dd4fcc207`
+     */
+    RequestId: string;
 }
-

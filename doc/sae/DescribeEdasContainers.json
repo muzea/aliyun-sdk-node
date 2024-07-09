@@ -1,18 +1,1 @@
-{
-  "name": "DescribeEdasContainers",
-  "protocol": "HTTPS|HTTP",
-  "method": "GET",
-  "path": "/pop/v1/sam/resource/edasContainers",
-  "summary_cn": "获取应用微服务容器组件列表",
-  "abc_id": 126239,
-  "timeout": 2000,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Query",
-      "required": false
-    }
-  },
-  "res": {}
-}
+{"path":"/pop/v1/sam/resource/edasContainers","methods":["get"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"read","deprecated":false,"systemTags":{"operationType":"get","abilityTreeCode":"6334","abilityTreeNodes":["FEATUREsaeD9PL61"]},"parameters":[],"responses":{"200":{"schema":{"type":"object","properties":{"RequestId":{"description":"请求ID。","type":"string","example":"91F93257-7A4A-4BD3-9A7E-2F6EAE6D****"},"Message":{"description":"调用结果的附加信息。","type":"string","example":"success"},"TraceId":{"description":"调用链ID，用于精确查询调用信息。","type":"string","example":"0a98a02315955564772843261e****"},"Data":{"description":"组件列表。","type":"array","items":{"type":"object","properties":{"Disabled":{"description":"微服务组件是否禁用。取值说明如下：\n\n- **true**：表示组件被禁用。\n- **false**：表示组件未被禁用。","type":"boolean","example":"false"},"EdasContainerVersion":{"description":"HSF框架中应用运行环境版本，例如Ali-Tomcat容器。","type":"string","example":"3.5.3"}}}},"ErrorCode":{"description":"错误码。取值说明如下：\n\n- 请求成功：不返回**ErrorCode**字段。\n- 请求失败：返回**ErrorCode**字段。具体信息，请参见本文的**错误码**目录。","type":"string","example":"空"},"Code":{"description":"接口状态或POP错误码。取值说明如下：\n\n- **2xx**：成功。\n- **3xx**：重定向。\n- **4xx**：请求错误。\n- **5xx**：服务器错误。","type":"string","example":"200"},"Success":{"description":"获取应用微服务容器组件列表是否成功。取值说明如下：\n\n- **true**：表示获取成功。\n- **false**：表示获取失败。","type":"boolean","example":"true"}}}}},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"RequestId\\\": \\\"91F93257-7A4A-4BD3-9A7E-2F6EAE6D****\\\",\\n  \\\"Message\\\": \\\"success\\\",\\n  \\\"TraceId\\\": \\\"0a98a02315955564772843261e****\\\",\\n  \\\"Data\\\": [\\n    {\\n      \\\"Disabled\\\": false,\\n      \\\"EdasContainerVersion\\\": \\\"3.5.3\\\"\\n    }\\n  ],\\n  \\\"ErrorCode\\\": \\\"空\\\",\\n  \\\"Code\\\": \\\"200\\\",\\n  \\\"Success\\\": true\\n}\",\"errorExample\":\"\"},{\"type\":\"xml\",\"example\":\"<DescribeEdasContainersResponse>\\n    <RequestId>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</RequestId>\\n    <Message>success</Message>\\n    <TraceId>0a98a02315955564772843261e****</TraceId>\\n    <Data>\\n        <Disabled>false</Disabled>\\n        <EdasContainerVersion>3.5.3</EdasContainerVersion>\\n    </Data>\\n    <Code>200</Code>\\n    <Success>true</Success>\\n</DescribeEdasContainersResponse>\",\"errorExample\":\"\"}]","title":"获取应用微服务容器组件列表","summary":"调用DescribeEdasContainers接口获取应用微服务容器组件列表。"}

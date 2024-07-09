@@ -1,3 +1,0 @@
-interface RemoveEndPointResponse {
-}
-export { RemoveEndPointResponse };

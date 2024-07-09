@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cbn.SetCenInterRegionBandwidthLimitResponse
 export interface SetCenInterRegionBandwidthLimitResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `530BC816-F575-412A-AAB2-435125D26328`
+     */
+    RequestId: string;
 }
-

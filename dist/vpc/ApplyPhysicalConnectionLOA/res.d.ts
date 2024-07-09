@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.ApplyPhysicalConnectionLOAResponse
 export interface ApplyPhysicalConnectionLOAResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `A47BD386-7FDE-42C4-8D22-C6223D18AA1C`
+     */
+    RequestId: string;
 }
-

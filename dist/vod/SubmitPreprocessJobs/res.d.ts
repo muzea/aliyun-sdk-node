@@ -1,18 +1,19 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vod.PreprocessJob
-export interface PreprocessJob {
-	JobId: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vod.PreprocessJobs
-export interface PreprocessJobs {
-	PreprocessJob: PreprocessJob[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vod.SubmitPreprocessJobsResponse
 export interface SubmitPreprocessJobsResponse {
-	RequestId: string;
-	PreprocessJobs: PreprocessJobs;
+    /**
+     * 请求ID。
+     * @example `E4EBD2BF-5EB0-4476-8829-9D94E1B1****`
+     */
+    RequestId: string;
+    PreprocessJobs: {
+        /**
+         * 作业信息。
+         */
+        PreprocessJob: {
+            /**
+             * 作业ID。
+             * @example `bb396607fd11fee9effbb99c4****`
+             */
+            JobId: string;
+        }[];
+    };
 }
-

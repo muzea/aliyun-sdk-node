@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.ModifySecurityIpsResponse
 export interface ModifySecurityIpsResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `AAAF99B1-69ED-4E80-8CD5-272C09E4****`
+     */
+    RequestId: string;
 }
-

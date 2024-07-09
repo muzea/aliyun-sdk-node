@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dds.DescribeDBInstanceMonitorResponse
 export interface DescribeDBInstanceMonitorResponse {
-	RequestId: string;
-	Granularity: string;
+    /**
+     * 请求ID。
+     * @example `EFD65226-08CC-4C4D-B6A4-CB3C382F67B0`
+     */
+    RequestId: string;
+    /**
+     * 监控采集粒度。返回值为**5**，单位为秒。
+     * @example `5`
+     */
+    Granularity: string;
 }
-

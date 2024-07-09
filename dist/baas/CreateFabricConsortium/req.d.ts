@@ -1,56 +1,78 @@
-interface CreateFabricConsortiumRequest {
+export interface CreateFabricConsortiumRequest {
     /**
-    * 地域
-    * @example `cn-hangzhou`
-    */ "RegionId"?: string;
+     * 实例所在的位置信息，和**RegionId**一致
+     * @example `cn-hangzhou`
+     */
+    "Location": string;
     /**
-    * Orderer类型
-    * @example `Kafka`
-    */ "OrdererType": string;
+     * Orderer类型：
+     * - kafka （不再支持）
+     * - etcdraft
+     * @example `etcdraft`
+     */
+    "OrdererType": string;
     /**
-    * 联盟名
-    * @example `aaaaa`
-    */ "ConsortiumName": string;
+     * 区域
+     * @example `random`
+     */
+    "ZoneId"?: string;
     /**
-    * 域名
-    * @example `helloworld`
-    */ "Domain": string;
+     * 联盟名
+     * @example `aaaaa`
+     */
+    "ConsortiumName": string;
     /**
-    * 创建通道策略
-    * @example `Any`
-    */ "ChannelPolicy": string;
+     * 域名
+     * @example `helloworld`
+     */
+    "Domain": string;
     /**
-    * 规格
-    * @example `basic`
-    */ "SpecName": string;
+     * 联盟描述
+     * @example `some`
+     */
+    "ConsortiumDescription"?: string;
     /**
-    * 位置信息
-    * @example `cn-hangzhou`
-    */ "Location": string;
+     * 创建通道策略
+     * @example `all`
+     */
+    "ChannelPolicy": string;
     /**
-    * 区域
-    * @example `random`
-    */ "ZoneId"?: string;
+     * 规格：
+     * - starter 体验版
+     * - basic 基础版
+     * - enterprise 企业版
+     * - enterprise-sgx 企业安全版
+     * @example `basic`
+     */
+    "SpecName": string;
     /**
-    * 联盟描述
-    * @example `some`
-    */ "ConsortiumDescription"?: string;
+     * Orderer数量
+     * @example `2`
+     */
+    "OrderersCount"?: number;
     /**
-    * Orderer数量
-    * @example `2`
-    */ "OrderersCount"?: number;
+     * Peer数量
+     * @example `2`
+     */
+    "PeersCount"?: number;
     /**
-    * Peer数量
-    * @example `2`
-    */ "PeersCount"?: number;
-    "Organization"?: string[];
+     * 周期单位
+     * @example `month`
+     */
+    "PaymentDurationUnit": string;
     /**
-    * 周期单位
-    * @example `month`
-    */ "PaymentDurationUnit"?: string;
+     * 计费周期
+     * @example `2`
+     */
+    "PaymentDuration": number;
     /**
-    * 计费周期
-    * @example `2`
-    */ "PaymentDuration"?: number;
+     * 组织列表。
+     */
+    "Organization"?: {
+        /**
+         * 组织ID
+         * @example `peers-yidio-1tuigx42b1goc`
+         */
+        OrganizationId: string;
+    }[];
 }
-export { CreateFabricConsortiumRequest };

@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.ModifyInstanceSpecResponse
 export interface ModifyInstanceSpecResponse {
-	RequestId: string;
-	OrderId: string;
+    /**
+     * 订单ID。
+     * @example `20722623431****`
+     */
+    OrderId: string;
+    /**
+     * 请求ID。
+     * @example `0DA1D7EF-C80D-432C-8758-7D225182626B`
+     */
+    RequestId: string;
 }
-

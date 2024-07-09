@@ -1,18 +1,46 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.NetworkInterfacePermission
-export interface NetworkInterfacePermission {
-	Permission: string;
-	AccountId: number;
-	NetworkInterfaceId: string;
-	ServiceName: string;
-	NetworkInterfacePermissionId: string;
-	PermissionState: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.CreateNetworkInterfacePermissionResponse
 export interface CreateNetworkInterfacePermissionResponse {
-	RequestId: string;
-	NetworkInterfacePermission: NetworkInterfacePermission;
+    /**
+     * 请求ID。
+     * @example `0FCD3DEF-63D3-4605-A818-805C8BD7DB87`
+     */
+    RequestId: string;
+    /**
+     * 弹性网卡权限列表组成的信息集合。
+     */
+    NetworkInterfacePermission: {
+        /**
+         * 弹性网卡权限。
+         * @example `InstanceAttach`
+         */
+        Permission: string;
+        /**
+         * 弹性网卡ID。
+         * @example `eni-bp14v2sdd3v8htln****`
+         */
+        NetworkInterfaceId: string;
+        /**
+         * 阿里云合作伙伴（认证ISV）账号ID。
+         * @example `1234567890`
+         */
+        AccountId: number;
+        /**
+         * 弹性网卡权限ID。
+         * @example `eni-perm-bp1cs4lwn56lfb****`
+         */
+        NetworkInterfacePermissionId: string;
+        /**
+         * 阿里云服务名称。
+         * @example `Elastic Compute Service`
+         */
+        ServiceName: string;
+        /**
+         * 弹性网卡权限状态。可能值：
+         * - Pending：授权中。
+         * - Granted：已授权。
+         * - Revoking：撤销授权中。
+         * - Revoked：已撤销授权。
+         * @example `Granted`
+         */
+        PermissionState: string;
+    };
 }
-

@@ -1,3 +1,0 @@
-interface TriggerLabGatewayConfigReportResponse {
-}
-export { TriggerLabGatewayConfigReportResponse };

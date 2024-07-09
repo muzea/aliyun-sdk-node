@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cloudapi.SetDomainWebSocketStatusResponse
 export interface SetDomainWebSocketStatusResponse {
-	RequestId: string;
+    /**
+     * 本次请求的ID。
+     * @example `61A16D46-EC04-5288-8A18-811B0F536CC2`
+     */
+    RequestId: string;
 }
-

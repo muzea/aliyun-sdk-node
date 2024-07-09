@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/smartag.KickOutClientsResponse
 export interface KickOutClientsResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `76FD7E08-6AA1-4B1B-99FB-8B3CA6C99A8E`
+     */
+    RequestId: string;
 }
-

@@ -1,29 +1,29 @@
-interface DescribeLiveStreamHistoryUserNumRequest {
-    "RegionId"?: string;
+export interface DescribeLiveStreamHistoryUserNumRequest {
     /**
-    * 直播流所属应用名称。
-    * @example `testApp`
-    */ "AppName": string;
+     * 播流域名。
+     * @example `example.com`
+     */
+    "DomainName": string;
     /**
-    * 直播流名。
-    * @example `testStream`
-    */ "StreamName": string;
+     * 直播流所属应用名称。
+     * @example `liveApp****`
+     */
+    "AppName": string;
     /**
-    * 开始时间。
-    * - UTC格式。
-    * - StartTime和EndTime时间间隔在一天内。
-    * @example `2017-12-21T08:00:00Z`
-    */ "StartTime": string;
+     * 直播流名。
+     * @example `liveStream****`
+     */
+    "StreamName": string;
     /**
-    * 结束时间。
-    * - UTC格式。
-    * - StartTime和EndTime时间间隔在一天内，且EndTime不超过当前时间。
-    * @example `2017-12-22T08:00:00Z`
-    */ "EndTime": string;
+     * 起始时间。格式为：<i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z（UTC时间）。
+     * > 支持最大的查询范围是最近**30**天。
+     * @example `2017-12-21T08:00:00Z`
+     */
+    "StartTime": string;
     /**
-    * 您的域名。
-    * @example `www.yourdomain.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 结束时间。需晚于开始时间。格式为：<i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z（UTC时间）。
+     * > StartTime和EndTime时间间隔在一天内，且EndTime不超过当前时间。
+     * @example `2017-12-22T08:00:00Z`
+     */
+    "EndTime": string;
 }
-export { DescribeLiveStreamHistoryUserNumRequest };

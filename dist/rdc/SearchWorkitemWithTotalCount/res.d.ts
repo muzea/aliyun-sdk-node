@@ -1,3 +1,0 @@
-interface SearchWorkitemWithTotalCountResponse {
-}
-export { SearchWorkitemWithTotalCountResponse };

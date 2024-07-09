@@ -1,9 +1,7 @@
-interface DescribeDBInstanceProxyConfigurationRequest {
-    "RegionId"?: string;
+export interface DescribeDBInstanceProxyConfigurationRequest {
     /**
-    * 实例ID。
-    * @example `rm-uf6wjk5xxxxxxxxxx`
-    */ "DBInstanceId": string;
-    "OwnerId"?: number;
+     * 实例ID。可调用DescribeDBInstances获取。
+     * @example `rm-uf6wjk5****`
+     */
+    "DBInstanceId": string;
 }
-export { DescribeDBInstanceProxyConfigurationRequest };

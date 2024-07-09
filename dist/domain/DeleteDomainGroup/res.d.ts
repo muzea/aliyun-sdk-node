@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/domain.DeleteDomainGroupResponse
 export interface DeleteDomainGroupResponse {
-	RequestId: string;
+    /**
+     * 唯一请求识别码。
+     * @example `40F46D3D-F4F3-4CCB-AC30-2DD20E32E528`
+     */
+    RequestId: string;
 }
-

@@ -1,3 +1,0 @@
-interface ModifyPersistenceTimeOutResponse {
-}
-export { ModifyPersistenceTimeOutResponse };

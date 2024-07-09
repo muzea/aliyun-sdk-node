@@ -1,3 +1,0 @@
-interface AddEndPointResponse {
-}
-export { AddEndPointResponse };

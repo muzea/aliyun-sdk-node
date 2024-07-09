@@ -1,3 +1,0 @@
-interface GetCustomFieldsByTemplateIdResponse {
-}
-export { GetCustomFieldsByTemplateIdResponse };

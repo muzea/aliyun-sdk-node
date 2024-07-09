@@ -1,10 +1,7 @@
-interface DeleteAppInfoRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
-    "ResourceRealOwnerId"?: number;
+export interface DeleteAppInfoRequest {
     /**
-    * 应用ID。
-    * @example `app-xxxxx`
-    */ "AppId"?: string;
+     * 应用ID。为调用[创建应用](~~113266~~)接口或[获取应用信息列表](~~114000~~)接口返回参数AppId的值。
+     * @example `app-****`
+     */
+    "AppId": string;
 }
-export { DeleteAppInfoRequest };

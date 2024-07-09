@@ -1,7 +1,8 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/nas.CancelAutoSnapshotPolicyResponse
 export interface CancelAutoSnapshotPolicyResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * 无论调用接口成功与否，都会返回请求ID。
+     * @example `473469C7-AA6F-4DC5-B3DB-A3DC0DED****`
+     */
+    RequestId: string;
 }
-

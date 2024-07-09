@@ -1,18 +1,17 @@
-interface ModifyMonitorGroupRequest {
-    "RegionId"?: string;
+export interface ModifyMonitorGroupRequest {
     /**
-    * 应用分组ID。
-    * @example `12346`
-    */ "GroupId": string;
-    "BindUrls"?: string;
-    "ServiceId"?: number;
+     * 应用分组ID。
+     * @example `123456`
+     */
+    "GroupId": string;
     /**
-    * 应用分组名称。
-    * @example `修改组名1`
-    */ "GroupName"?: string;
+     * 应用分组名称。
+     * @example `ecs_group`
+     */
+    "GroupName"?: string;
     /**
-    * 报警联系人组。
-    * @example `报警联系人组`
-    */ "ContactGroups"?: string;
+     * 报警联系人组。
+     * @example `alarm_ecs_group`
+     */
+    "ContactGroups"?: string;
 }
-export { ModifyMonitorGroupRequest };

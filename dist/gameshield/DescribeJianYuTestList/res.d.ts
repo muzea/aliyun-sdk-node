@@ -1,3 +1,0 @@
-interface DescribeJianYuTestListResponse {
-}
-export { DescribeJianYuTestListResponse };

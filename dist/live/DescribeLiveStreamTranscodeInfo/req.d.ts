@@ -1,12 +1,12 @@
-interface DescribeLiveStreamTranscodeInfoRequest {
+export interface DescribeLiveStreamTranscodeInfoRequest {
     /**
-    * 地域。
-    * @example `cn-shanghai`
-    */ "RegionId"?: string;
-    "OwnerId"?: number;
+     * 主播流域名。
+     * @example `example.com`
+     */
+    "DomainTranscodeName": string;
     /**
-    * 您的加速域名。
-    * @example `play.aliyunlive.com`
-    */ "DomainTranscodeName": string;
+     * 播流所属应用名称。
+     * @example `myapp`
+     */
+    "AppName"?: string;
 }
-export { DescribeLiveStreamTranscodeInfoRequest };

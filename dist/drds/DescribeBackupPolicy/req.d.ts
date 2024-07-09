@@ -1,5 +1,7 @@
-interface DescribeBackupPolicyRequest {
-    "RegionId"?: string;
+export interface DescribeBackupPolicyRequest {
+    /**
+     * 实例ID。
+     * @example `drdshbga71nn****`
+     */
     "DrdsInstanceId": string;
 }
-export { DescribeBackupPolicyRequest };

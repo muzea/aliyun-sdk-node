@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.DeleteCommonBandwidthPackageResponse
 export interface DeleteCommonBandwidthPackageResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `B400EF57-60E3-4D61-B8FB-7FA8F72DF5A6`
+     */
+    RequestId: string;
 }
-

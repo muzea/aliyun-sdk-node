@@ -1,32 +1,69 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/alikafka.OffsetTableItem
-export interface OffsetTableItem {
-	MinOffset: number;
-	MaxOffset: number;
-	LastUpdateTimestamp: number;
-	Topic: string;
-	Partition: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/alikafka.OffsetTable
-export interface OffsetTable {
-	OffsetTableItem: OffsetTableItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/alikafka.TopicStatus
-export interface TopicStatus {
-	TotalCount: number;
-	LastTimeStamp: number;
-	OffsetTable: OffsetTable;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/alikafka.GetTopicStatusResponse
 export interface GetTopicStatusResponse {
-	Success: boolean;
-	RequestId: string;
-	Code: number;
-	Message: string;
-	TopicStatus: TopicStatus;
+    /**
+     * 状态码。返回200代表成功。
+     * @example `200`
+     */
+    Code: number;
+    /**
+     * 返回信息。
+     * @example `operation success.`
+     */
+    Message: string;
+    /**
+     * 请求ID。
+     * @example `E475C7E2-8C35-46EF-BE7D-5D2A9F5D****`
+     */
+    RequestId: string;
+    /**
+     * 调用是否成功。
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * Topic状态。
+     */
+    TopicStatus: {
+        /**
+         * 消息总数。
+         * @example `423`
+         */
+        TotalCount: number;
+        /**
+         * 最后一条被消费的消息的产生时间。单位：ms。
+         * @example `1566470063575`
+         */
+        LastTimeStamp: number;
+        OffsetTable: {
+            /**
+             * 偏移列表。
+             */
+            OffsetTable: {
+                /**
+                 * 分区ID。
+                 * @example `0`
+                 */
+                Partition: number;
+                /**
+                 * 消息最小位点。
+                 * @example `0`
+                 */
+                MinOffset: number;
+                /**
+                 * 最后更新时间。单位：ms。
+                 * @example `1566470063547`
+                 */
+                LastUpdateTimestamp: number;
+                /**
+                 * 消息最大位点。
+                 * @example `76`
+                 */
+                MaxOffset: number;
+                /**
+                 * Topic名称。
+                 * @example `testkafka`
+                 */
+                Topic: string;
+            }[];
+        };
+    };
 }
-

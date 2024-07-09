@@ -1,16 +1,15 @@
-interface DescribeDBInstanceAttributeRequest {
-    "RegionId"?: string;
+export interface DescribeDBInstanceAttributeRequest {
     /**
-    * 实例ID。可以一次输入最多30个，以英文逗号（,）分隔。
-    * @example `rm-uf6wjk5xxxxxxxxxx`
-    */ "DBInstanceId": string;
-    "OwnerId"?: number;
+     * 实例ID。可调用DescribeDBInstances获取。
+     * ><warning>请勿同时配置多个实例ID进行批量查询，否则将会查询超时导致失败。></warning>
+     * @example `rm-uf6wjk5****`
+     */
+    "DBInstanceId": string;
     /**
-    * 实例过期状态，取值：
-    * * **True**：已过期；
-    * * **False**：未过期。
-    * @example `False`
-    */ "Expired"?: string;
-    "ResourceGroupId"?: string;
+     * 实例过期状态，取值如下：
+     * * **True**：已过期。
+     * * **False**：未过期。
+     * @example `False`
+     */
+    "Expired"?: string;
 }
-export { DescribeDBInstanceAttributeRequest };

@@ -1,3 +1,0 @@
-interface DescribeUserFlowReportResponse {
-}
-export { DescribeUserFlowReportResponse };

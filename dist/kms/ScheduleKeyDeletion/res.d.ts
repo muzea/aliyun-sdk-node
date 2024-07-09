@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/kms.ScheduleKeyDeletionResponse
 export interface ScheduleKeyDeletionResponse {
-	RequestId: string;
+    /**
+     * 本次调用请求的ID，是由阿里云为该请求生成的唯一标识符，可用于排查和定位问题。
+     * @example `3da5b8cc-8107-40ac-a170-793cd181d7b7`
+     */
+    RequestId: string;
 }
-

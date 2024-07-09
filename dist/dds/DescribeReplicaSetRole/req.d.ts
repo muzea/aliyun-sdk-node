@@ -1,9 +1,7 @@
-interface DescribeReplicaSetRoleRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeReplicaSetRoleRequest {
     /**
-    * 实例ID。
-    * @example `dds-bpxxxxxxxx`
-    */ "DBInstanceId": string;
+     * 实例ID。
+     * @example `dds-bpxxxxxxxx`
+     */
+    "DBInstanceId": string;
 }
-export { DescribeReplicaSetRoleRequest };

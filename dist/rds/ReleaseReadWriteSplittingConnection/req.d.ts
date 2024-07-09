@@ -1,9 +1,7 @@
-interface ReleaseReadWriteSplittingConnectionRequest {
-    "RegionId"?: string;
+export interface ReleaseReadWriteSplittingConnectionRequest {
     /**
-    * 主实例ID。
-    * @example `rm-uf6wjk5xxxxxxx`
-    */ "DBInstanceId": string;
-    "OwnerId"?: number;
+     * 主实例ID。可调用DescribeDBInstances获取。
+     * @example `rm-uf6wjk5****`
+     */
+    "DBInstanceId": string;
 }
-export { ReleaseReadWriteSplittingConnectionRequest };

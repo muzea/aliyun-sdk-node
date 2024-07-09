@@ -1,3 +1,0 @@
-interface DescribeCapabilitiesResponse {
-}
-export { DescribeCapabilitiesResponse };

@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.ModifyPolarDbReadWeightResponse
 export interface ModifyPolarDbReadWeightResponse {
-	RequestId: string;
-	Success: boolean;
+    /**
+     * 请求结果。
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 请求ID。
+     * @example `B12FC174-D5CE-4A6E-83C1-0F8F86******`
+     */
+    RequestId: string;
 }
-

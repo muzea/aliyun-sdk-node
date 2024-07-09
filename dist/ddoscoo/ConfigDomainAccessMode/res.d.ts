@@ -1,3 +1,0 @@
-interface ConfigDomainAccessModeResponse {
-}
-export { ConfigDomainAccessModeResponse };

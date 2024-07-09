@@ -1,21 +1,24 @@
-interface BatchUpdateCdnDomainRequest {
-    "RegionId"?: string;
+export interface BatchUpdateCdnDomainRequest {
     /**
-    * 需要接入CDN的域名。
-    * @example `example.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 加速域名，多个域名用半角逗号（,）隔开。
+     * @example `example.com,example.org`
+     */
+    "DomainName": string;
     /**
-    * 回源地址列表。
-    * @example `[{"content":"1.1.1.1","type":"ipaddr","priority":"20","port":80,"weight":"15"}]`
-    */ "Sources"?: string;
+     * 回源地址列表。
+     * > 不支持同时传入**Sources**和**TopLevelDomain**参数，如果您同时传入**Sources**和**TopLevelDomain**参数，**TopLevelDomain**将不生效。
+     * @example `[{"content":"10.10.10.10","type":"ipaddr","priority":"20","port":80,"weight":"15"}]`
+     */
+    "Sources"?: string;
     /**
-    * 资源组ID。
-    * @example `abc`
-    */ "ResourceGroupId"?: string;
+     * 资源组ID。
+     * @example `rg-acfmyuji4b6r4**`
+     */
+    "ResourceGroupId"?: string;
     /**
-    * 顶级接入域。
-    * @example `example.com`
-    */ "TopLevelDomain"?: string;
+     * 顶级接入域。
+     * > 不支持同时传入**Sources**和**TopLevelDomain**参数，如果您同时传入**Sources**和**TopLevelDomain**参数，**TopLevelDomain**将不生效。
+     * @example `example.com`
+     */
+    "TopLevelDomain"?: string;
 }
-export { BatchUpdateCdnDomainRequest };

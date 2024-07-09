@@ -1,3 +1,0 @@
-interface ListGroupResponse {
-}
-export { ListGroupResponse };

@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.DeleteRouteTableResponse
 export interface DeleteRouteTableResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `DC668356-BCB4-42FD-9BC3-FA2B2E04B634`
+     */
+    RequestId: string;
 }
-

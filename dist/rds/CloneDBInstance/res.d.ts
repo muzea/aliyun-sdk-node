@@ -1,11 +1,17 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.CloneDBInstanceResponse
 export interface CloneDBInstanceResponse {
-	RequestId: string;
-	DBInstanceId: string;
-	OrderId: string;
-	ConnectionString: string;
-	Port: string;
+    /**
+     * 实例ID。
+     * @example `rm-uf6wjk5****`
+     */
+    DBInstanceId: string;
+    /**
+     * 请求ID。
+     * @example `1E43AAE0-BEE8-43DA-860D-EAF2****`
+     */
+    RequestId: string;
+    /**
+     * 订单ID。
+     * @example `100789370****`
+     */
+    OrderId: string;
 }
-

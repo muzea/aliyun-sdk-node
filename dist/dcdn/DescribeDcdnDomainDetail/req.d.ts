@@ -1,9 +1,7 @@
-interface DescribeDcdnDomainDetailRequest {
-    "RegionId"?: string;
+export interface DescribeDcdnDomainDetailRequest {
     /**
-    * 接入加速的域名。
-    * @example `example.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 加速域名，仅支持单个域名查询。
+     * @example `example.com`
+     */
+    "DomainName": string;
 }
-export { DescribeDcdnDomainDetailRequest };

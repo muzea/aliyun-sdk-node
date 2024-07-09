@@ -1,7 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dm.CreateDomainResponse
 export interface CreateDomainResponse {
-	RequestId: string;
+    /**
+     * 域名ID
+     * @example `158910`
+     */
+    DomainId: string;
+    /**
+     * 请求ID
+     * @example `B49AD828-25D1-488C-90B7-8853C1944486`
+     */
+    RequestId: string;
 }
-

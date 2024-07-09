@@ -1,3 +1,0 @@
-interface DescribeDomainQpsResponse {
-}
-export { DescribeDomainQpsResponse };

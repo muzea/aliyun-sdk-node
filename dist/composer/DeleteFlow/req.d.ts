@@ -1,8 +1,7 @@
-interface DeleteFlowRequest {
-    "RegionId"?: string;
+export interface DeleteFlowRequest {
     /**
-    * 需要删除的工作流编排实例 ID
-    * @example `lc-abcdefg`
-    */ "FlowId": string;
+     * 需要删除的工作流ID
+     * @example `lc-uf6wvbsyvvl5sy`
+     */
+    "FlowId": string;
 }
-export { DeleteFlowRequest };

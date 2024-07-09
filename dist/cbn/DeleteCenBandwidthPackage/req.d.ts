@@ -1,9 +1,7 @@
-interface DeleteCenBandwidthPackageRequest {
-    "RegionId"?: string;
+export interface DeleteCenBandwidthPackageRequest {
     /**
-    * 要删除的带宽包的ID。
-    * @example `cenbwp-4c2zaavbvh5f42****`
-    */ "CenBandwidthPackageId": string;
-    "OwnerId"?: number;
+     * 待删除的带宽包实例ID。
+     * @example `cenbwp-4c2zaavbvh5f42****`
+     */
+    "CenBandwidthPackageId": string;
 }
-export { DeleteCenBandwidthPackageRequest };

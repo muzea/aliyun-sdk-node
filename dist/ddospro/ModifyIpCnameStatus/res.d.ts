@@ -1,3 +1,0 @@
-interface ModifyIpCnameStatusResponse {
-}
-export { ModifyIpCnameStatusResponse };

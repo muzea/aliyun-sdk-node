@@ -1,34 +1,49 @@
-interface ModifySiteMonitorRequest {
-    "RegionId"?: string;
+export interface ModifySiteMonitorRequest {
     /**
-    * 站点监控探测任务ID。
-    * @example `49f7b317-7645-4cc9-94fd-ea42e522****`
-    */ "TaskId": string;
+     * 监控任务的URL或IP地址。
+     * @example `http://www.aliyun.com`
+     */
+    "Address"?: string;
     /**
-    * 任务的探测URL地址或IP地址。
-    * @example `http://www.aliyun.com`
-    */ "Address"?: string;
+     * 监控任务ID。
+     * @example `2c8dbdf9-a3ab-46a1-85a4-f094965e****`
+     */
+    "TaskId": string;
     /**
-    * 站点监控探测任务名称，为4-100位长度的英文字符、数字、下划线以及汉字。
-    * @example `网站探测修改`
-    */ "TaskName"?: string;
+     * 监控任务名称。长度4~100个字符，取值可包含英文字母、数字、下划线（_）和汉字。
+     * @example `HanZhou_ECS2`
+     */
+    "TaskName"?: string;
     /**
-    * 探测频率，单位为分钟，取值范围1、5、15，单位是分钟，默认值为1分钟。
-    * @example `1`
-    */ "Interval"?: string;
+     * 监控频率。取值：1、5、15。单位：分钟。默认值：1。
+     * @example `1`
+     */
+    "Interval"?: string;
     /**
-    * 探针的信息， 格式为jsonArray，例如`[{"city":"546","isp":"465"},{"city":"572","isp":"465"},{"city":"738","isp":"465"}]`（分别对应北京、杭州、青岛)
-    * 可以使用 DescribeISPAreaCity 接口获取探测点信息。如果为空系统则随机选择3个探点探测。
-    *
-    * @example `[{"city":"546","isp":"465"},{"city":"572","isp":"465"},{"city":"738","isp":"465"}]`
-    */ "IspCities"?: string;
+     * 探针信息。格式为JSONArray，例如：`[{"city":"546","isp":"465"},{"city":"572","isp":"465"},{"city":"738","isp":"465"}]`，`city`分别对应北京、杭州和青岛。
+     * > 您可以通过DescribeSiteMonitorISPCityList接口获取探测点信息，请参见[DescribeSiteMonitorISPCityList](~~115045~~)。如果该参数取值为空，则系统随机选择3个探测点。
+     * @example `[{"city":"546","isp":"465"},{"city":"572","isp":"465"},{"city":"738","isp":"465"}]`
+     */
+    "IspCities"?: string;
     /**
-    * 监控对应协议的高级扩展选项， 不同的探测协议类型，有不同的扩展选项。
-    * @example `{"time_out":5000}`
-    */ "OptionsJson"?: string;
+     * 监控任务对应协议类型的高级扩展选项。不同监控任务的协议类型对应不同的扩展选项。
+     * @example `{"time_out":5000}`
+     */
+    "OptionsJson"?: string;
     /**
-    * 关联已存在的报警规则ID。
-    * @example `49f7c317-7645-4cc9-94fd-ea42e122****`
-    */ "AlertIds"?: string;
+     * 报警规则ID。云监控中已存在的报警规则ID，可通过DescribeMetricRuleList接口查询，请参见[DescribeMetricRuleList](~~114941~~)。
+     * @example `49f7c317-7645-4cc9-94fd-ea42e122****`
+     */
+    "AlertIds"?: string;
+    /**
+     * 监控指标的单位。
+     * 单位：毫秒（ms）。
+     * @example `ms`
+     */
+    "IntervalUnit"?: string;
+    /**
+     * 自定义探测周期。只能选择周一至周日的某个时间段进行探测。
+     * @example `{"start_hour":0,"end_hour":24, "days":[0], "time_zone":"Local"}`
+     */
+    "CustomSchedule"?: string;
 }
-export { ModifySiteMonitorRequest };

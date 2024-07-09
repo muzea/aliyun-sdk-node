@@ -1,42 +1,44 @@
-interface DescribeLiveStreamRecordIndexFilesRequest {
-    "RegionId"?: string;
+export interface DescribeLiveStreamRecordIndexFilesRequest {
     /**
-    * 直播流所属应用名称。
-    * @example `testApp`
-    */ "AppName": string;
+     * 主播流域名。
+     * @example `example.com`
+     */
+    "DomainName": string;
     /**
-    * 直播流名称。
-    * @example `testStream`
-    */ "StreamName": string;
+     * 直播流所属应用名称。
+     * @example `liveApp****`
+     */
+    "AppName": string;
     /**
-    * 开始时间。
-    * 格式：UTC时间。示例：2015-12-01T17:36:00Z。
-    * @example `2017-12-21T08:00:00Z`
-    */ "StartTime": string;
+     * 播流名称。
+     * @example `liveStream****`
+     */
+    "StreamName": string;
     /**
-    * 结束时间。与StartTime间隔时间不能超过4天。
-    * 格式：UTC时间。示例：2015-12-01T17:36:00Z。
-    * @example `2017-12-22T08:00:00Z`
-    */ "EndTime": string;
+     * 开始时间。格式为：<i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z（UTC时间）。
+     * @example `2017-12-21T08:00:00Z`
+     */
+    "StartTime": string;
     /**
-    * 您的加速域名。
-    * @example `www.yourdomain.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 结束时间。与StartTime间隔时间不能超过4天。格式为：<i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z（UTC时间）。
+     * @example `2017-12-22T08:00:00Z`
+     */
+    "EndTime": string;
     /**
-    *
-    * 当前页码。默认值为**1**。
-    * @example `1`
-    */ "PageNum"?: number;
+     * 当前页码。默认值为**1**。
+     * @example `1`
+     */
+    "PageNum"?: number;
     /**
-    * 每页大小。可取值为**5~30**，默认值为**10**。
-    * @example `10`
-    */ "PageSize"?: number;
+     * 每页大小。取值范围：**5~30**，默认值为**10**。
+     * @example `10`
+     */
+    "PageSize"?: number;
     /**
-    * 排序。取值：
-    * - asc（默认值）：升序
-    * - desc：降序
-    * @example `asc`
-    */ "Order"?: string;
+     * 按创建时间排序。取值：
+     * - **asc**（默认值）：升序。
+     * - **desc**：降序。
+     * @example `asc`
+     */
+    "Order"?: string;
 }
-export { DescribeLiveStreamRecordIndexFilesRequest };

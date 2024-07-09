@@ -1,3 +1,0 @@
-interface ReplaceCcRouteRulesResponse {
-}
-export { ReplaceCcRouteRulesResponse };

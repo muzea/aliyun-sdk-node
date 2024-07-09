@@ -1,8 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.OnsTopicCreateResponse
 export interface OnsTopicCreateResponse {
-	RequestId: string;
-	HelpUrl: string;
+    /**
+     * 公共参数，每个请求的ID都是唯一的，可用于排查和定位问题。
+     * @example `B6949B58-223E-4B75-B4FE-7797C15E****`
+     */
+    RequestId: string;
 }
-

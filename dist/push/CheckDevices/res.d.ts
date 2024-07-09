@@ -1,19 +1,24 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/push.DeviceCheckInfo
-export interface DeviceCheckInfo {
-	DeviceId: string;
-	Available: boolean;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/push.DeviceCheckInfos
-export interface DeviceCheckInfos {
-	DeviceCheckInfo: DeviceCheckInfo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/push.CheckDevicesResponse
 export interface CheckDevicesResponse {
-	RequestId: string;
-	DeviceCheckInfos: DeviceCheckInfos;
+    /**
+     * 请求ID。
+     * @example `9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC`
+     */
+    RequestId: string;
+    DeviceCheckInfos: {
+        /**
+         * 批量设备有效性检查结果。
+         */
+        DeviceCheckInfo: {
+            /**
+             * 设备ID。
+             * @example `ae296f3b04a58a05b30c95f****`
+             */
+            DeviceId: string;
+            /**
+             * 是否可用。
+             * @example `true`
+             */
+            Available: boolean;
+        }[];
+    };
 }
-

@@ -1,8 +1,7 @@
-interface DescribeDomainCountRequest {
-    "RegionId"?: string;
+export interface DescribeDomainCountRequest {
     /**
-    * 指定的访问源IP地址。
-    * @example `127.1.1.1`
-    */ "SourceIp"?: string;
+     * 访问源的IP地址。
+     * @example `192.172.XX.XX`
+     */
+    "SourceIp"?: string;
 }
-export { DescribeDomainCountRequest };

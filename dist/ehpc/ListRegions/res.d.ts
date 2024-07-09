@@ -1,19 +1,24 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ehpc.RegionInfo
-export interface RegionInfo {
-	RegionId: string;
-	LocalName: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ehpc.Regions
-export interface Regions {
-	RegionInfo: RegionInfo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ehpc.ListRegionsResponse
 export interface ListRegionsResponse {
-	RequestId: string;
-	Regions: Regions;
+    /**
+     * 请求ID。
+     * @example `04F0F334-1335-436C-A1D7-6C044FE73368`
+     */
+    RequestId: string;
+    Regions: {
+        /**
+         * 地域信息组成的列表。
+         */
+        RegionInfo: {
+            /**
+             * 地域名称。
+             * @example `华东1（杭州）`
+             */
+            LocalName: string;
+            /**
+             * 地域ID。
+             * @example `cn-hangzhou`
+             */
+            RegionId: string;
+        }[];
+    };
 }
-

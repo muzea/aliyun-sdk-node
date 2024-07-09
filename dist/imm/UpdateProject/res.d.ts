@@ -1,13 +1,11 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/imm.UpdateProjectResponse
 export interface UpdateProjectResponse {
-	RequestId: string;
-	Project: string;
-	CreateTime: string;
-	ModifyTime: string;
-	ServiceRole: string;
-	CU: number;
-	Type: string;
+    /**
+     * 请求ID。
+     * @example `D33C3574-4093-448E-86E7-15BE2BD3****`
+     */
+    RequestId: string;
+    /**
+     * 项目信息。详细内容请单击Project查看。
+     */
+    Project: any;
 }
-

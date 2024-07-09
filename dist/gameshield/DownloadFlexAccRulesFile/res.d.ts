@@ -1,3 +1,0 @@
-interface DownloadFlexAccRulesFileResponse {
-}
-export { DownloadFlexAccRulesFileResponse };

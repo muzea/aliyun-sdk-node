@@ -1,4 +1,2 @@
-interface ListSubAccountRequest {
-    "RegionId"?: string;
+export interface ListSubAccountRequest {
 }
-export { ListSubAccountRequest };

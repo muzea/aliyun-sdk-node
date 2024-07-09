@@ -1,16 +1,1 @@
-{
-  "name": "ListServiceGroups",
-  "protocol": "HTTPS|HTTP",
-  "method": "GET",
-  "path": "/pop/v5/service/serviceGroups",
-  "timeout": 2000,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Query",
-      "required": false
-    }
-  },
-  "res": {}
-}
+{"path":"/pop/v5/service/serviceGroups","methods":["get"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"read","deprecated":false,"systemTags":{"operationType":"get"},"responses":{"200":{"schema":{"type":"object","properties":{"Code":{"description":"Code码","type":"integer","format":"int32","example":"200"},"Message":{"description":"信息","type":"string","example":"success"},"RequestId":{"description":"请求ID","type":"string","example":"a5281053-08e4-47a5-b2ab-5c0323de7b5a"},"ServiceGroupsList":{"type":"object","properties":{"ListServiceGroups":{"description":"服务分组列表","type":"array","items":{"type":"object","properties":{"GroupId":{"description":"服务分组ID","type":"string","example":"789d9cda-74b1-****-****-05e21a0a7661"},"GroupName":{"description":"服务分组名称","type":"string","example":"edas-test-group"},"CreateTime":{"description":"创建时间的时间戳","type":"string","example":"1575357165770"}}}}}}}}}},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"Code\\\": 200,\\n  \\\"Message\\\": \\\"success\\\",\\n  \\\"RequestId\\\": \\\"a5281053-08e4-47a5-b2ab-5c0323de7b5a\\\",\\n  \\\"ServiceGroupsList\\\": {\\n    \\\"ListServiceGroups\\\": [\\n      {\\n        \\\"GroupId\\\": \\\"789d9cda-74b1-****-****-05e21a0a7661\\\",\\n        \\\"GroupName\\\": \\\"edas-test-group\\\",\\n        \\\"CreateTime\\\": \\\"1575357165770\\\"\\n      }\\n    ]\\n  }\\n}\",\"errorExample\":\"\"},{\"type\":\"xml\",\"example\":\"<ServiceGroupsList>\\n    <ListServiceGroups>\\n        <GroupName>edas-test-group</GroupName>\\n        <CreateTime>1575357165770</CreateTime>\\n        <GroupId>789d9cda-74b1-****-****-05e21a0a7661</GroupId>\\n    </ListServiceGroups>\\n</ServiceGroupsList>\\n<Message>success</Message>\\n<Code>200</Code>\",\"errorExample\":\"\"}]","title":"查询服务分组列表","summary":"调用ListServiceGroups查询HSF应用的服务分组列表。","requestParamsDescription":" 无请求参数。","responseParamsDescription":" ","extraInfo":" ","parameters":[]}

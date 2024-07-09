@@ -1,19 +1,35 @@
-interface DeleteLiveStreamTranscodeRequest {
-    "RegionId"?: string;
+export interface DeleteLiveStreamTranscodeRequest {
     /**
-    * 直播流所属应用名称。
-    * @example `app`
-    */ "App": string;
+     * 主播流域名。
+     * @example `example.com`
+     */
+    "Domain": string;
     /**
-    * 转码模版。目前有：
-    * - 标准质量模板：**lld**、**lsd**、**lhd**、**lud**。
-    * - 高品质（窄带高清™转码）模板：**ld**、**sd**、**hd**、**ud**。
-    * @example `lld`
-    */ "Template": string;
+     * 播流所属应用名称。
+     * @example `liveApp****`
+     */
+    "App": string;
     /**
-    * 您的加速域名。
-    * @example `play.aliyunlive.com`
-    */ "Domain": string;
-    "OwnerId"?: number;
+     * 转码模版。取值：
+     * - 标准质量模板：
+     *
+     *     - lld：流畅。
+     *
+     *     - lsd：标清。
+     *
+     *     - lhd：高清。
+     *
+     *     - lud ：超清。
+     * - 窄带高清™转码模板：
+     *     - ld：流畅。
+     *
+     *     - sd：标清。
+     *
+     *     - hd：高清。
+     *
+     *     - ud：超清。
+     * - 自定义模板：用户自定义命名。
+     * @example `lld`
+     */
+    "Template": string;
 }
-export { DeleteLiveStreamTranscodeRequest };

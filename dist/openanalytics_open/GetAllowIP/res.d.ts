@@ -1,3 +1,0 @@
-interface GetAllowIPResponse {
-}
-export { GetAllowIPResponse };

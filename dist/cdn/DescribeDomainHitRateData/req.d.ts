@@ -1,29 +1,27 @@
-interface DescribeDomainHitRateDataRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeDomainHitRateDataRequest {
     /**
-    * 需要查询的加速域名，只支持一个域名。不填代表查询当前用户下所有域名。
-    * @example `www.yourdomain.com`
-    */ "DomainName"?: string;
+     * 加速域名，多个域名用半角逗号（,）分隔，一次最多支持500个域名查询。
+     * 默认查询所有加速域名。
+     * @example `example.com`
+     */
+    "DomainName"?: string;
     /**
-    * 获取数据起始时间点。
-    * - 日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
-    * - 最小数据粒度为5分钟，不写默认读取过去24小时数据。
-    * @example `2017-12-21T08:00:00:00Z`
-    */ "StartTime"?: string;
+     * 获取数据起始时间点。
+     * 日期格式按照ISO8601表示法，并使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。
+     * @example `2019-12-30T08:00:00Z`
+     */
+    "StartTime"?: string;
     /**
-    * 获取数据结束时间点。
-    * - 日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
-    * - 最小数据粒度为5分钟。
-    * @example `2017-12-22T08:00:00:00Z`
-    */ "EndTime"?: string;
+     * 获取数据结束时间点。
+     * 日期格式按照ISO8601表示法，并使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。
+     * > 结束时间需大于起始时间。
+     * @example `2019-12-30T08:10:00Z`
+     */
+    "EndTime"?: string;
     /**
-    * 查询数据的时间粒度，支持**300**、 **3600**和**86400**秒。
-    * - 3天以内（不包含3天整）支持**300**、**3600**、 **86400**。
-    * - 3-31天（不包含31天整）支持**3600**和**86400**。
-    * - 31天以上支持**86400**。
-    * 不传和传的值不支持时，使用默认值。
-    * @example `300`
-    */ "Interval"?: string;
+     * 指定查询数据的时间粒度，单位：秒。
+     * 根据单次查询的最大时间跨度不同，该参数支持300（5分钟）、3600（1小时）和86400（1天）取值，具体请参见**使用说明**中支持查询的时间粒度。
+     * @example `300`
+     */
+    "Interval"?: string;
 }
-export { DescribeDomainHitRateDataRequest };

@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.DeleteGlobalAccelerationInstanceResponse
 export interface DeleteGlobalAccelerationInstanceResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `E6E63B2A-9820-44A8-A359-9BB2DAEE6424`
+     */
+    RequestId: string;
 }
-

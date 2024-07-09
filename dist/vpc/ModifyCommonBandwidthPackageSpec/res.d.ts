@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.ModifyCommonBandwidthPackageSpecResponse
 export interface ModifyCommonBandwidthPackageSpecResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `7F129000-F929-4AF5-BE8D-BAE434C795306`
+     */
+    RequestId: string;
 }
-

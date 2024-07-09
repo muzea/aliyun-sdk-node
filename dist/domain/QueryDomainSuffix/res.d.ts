@@ -1,13 +1,10 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/domain.SuffixList
-export interface SuffixList {
-	Suffix: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/domain.QueryDomainSuffixResponse
 export interface QueryDomainSuffixResponse {
-	RequestId: string;
-	SuffixList: SuffixList;
+    /**
+     * 唯一请求识别码。
+     * @example `D1C9DE44-1D7F-4F66-9653-00000`
+     */
+    RequestId: string;
+    SuffixList: {
+        Suffix: string[];
+    };
 }
-

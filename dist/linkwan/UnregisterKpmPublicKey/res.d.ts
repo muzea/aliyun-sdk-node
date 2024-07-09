@@ -1,3 +1,0 @@
-interface UnregisterKpmPublicKeyResponse {
-}
-export { UnregisterKpmPublicKeyResponse };

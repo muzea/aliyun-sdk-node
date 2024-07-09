@@ -1,6 +1,7 @@
-interface ListLiveRealtimeLogDeliveryInfosRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface ListLiveRealtimeLogDeliveryInfosRequest {
+    /**
+     * 该参数暂无实际意义。
+     * @example `无`
+     */
     "LiveOpenapiReserve"?: string;
 }
-export { ListLiveRealtimeLogDeliveryInfosRequest };

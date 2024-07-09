@@ -1,3 +1,0 @@
-interface QueryIotCardOfferDtlResponse {
-}
-export { QueryIotCardOfferDtlResponse };

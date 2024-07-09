@@ -1,15 +1,29 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dypnsapi.GetMobileResultDTO
-export interface GetMobileResultDTO {
-	Mobile: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dypnsapi.GetMobileResponse
 export interface GetMobileResponse {
-	RequestId: string;
-	Code: string;
-	Message: string;
-	GetMobileResultDTO: GetMobileResultDTO;
+    /**
+     * 状态码。
+     * - 返回OK代表请求成功。
+     * - 其他错误码，请参见[服务端API返回码](~~85198~~)。
+     * @example `OK`
+     */
+    Code: string;
+    /**
+     * 状态码的描述。
+     * @example `请求成功`
+     */
+    Message: string;
+    /**
+     * 请求ID。
+     * @example `8906582E-6722`
+     */
+    RequestId: string;
+    /**
+     * 结构体。
+     */
+    GetMobileResultDTO: {
+        /**
+         * 手机号。
+         * @example `13900001234`
+         */
+        Mobile: string;
+    };
 }
-

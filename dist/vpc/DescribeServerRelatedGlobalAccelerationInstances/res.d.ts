@@ -1,74 +1,34 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.LockReason
-export interface LockReason {
-	LockReason: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.OperationLocksInDescribeGlobalAccelerationInstances
-export interface OperationLocksInDescribeGlobalAccelerationInstances {
-	LockReason: LockReason[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.PublicIpAddress
-export interface PublicIpAddress {
-	AllocationId: string;
-	IpAddress: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.PublicIpAddressesInDescribeGlobalAccelerationInstances
-export interface PublicIpAddressesInDescribeGlobalAccelerationInstances {
-	PublicIpAddress: PublicIpAddress[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.BackendServer
-export interface BackendServer {
-	RegionId: string;
-	ServerId: string;
-	ServerIpAddress: string;
-	ServerType: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.BackendServers
-export interface BackendServers {
-	BackendServer: BackendServer[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.GlobalAccelerationInstance
-export interface GlobalAccelerationInstance {
-	Name: string;
-	ExpiredTime: string;
-	IpAddress: string;
-	HasReservationData: string;
-	ChargeType: string;
-	ServiceLocation: string;
-	CreationTime: string;
-	ServerIpAddress: string;
-	ReservationBandwidth: string;
-	ReservationActiveTime: string;
-	RegionId: string;
-	AccelerationLocation: string;
-	ReservationInternetChargeType: string;
-	BandwidthType: string;
-	ReservationOrderType: string;
-	Bandwidth: string;
-	InternetChargeType: string;
-	GlobalAccelerationInstanceId: string;
-	Status: string;
-	Description: string;
-	OperationLocks: OperationLocksInDescribeGlobalAccelerationInstances;
-	PublicIpAddresses: PublicIpAddressesInDescribeGlobalAccelerationInstances;
-	BackendServers: BackendServers;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.GlobalAccelerationInstancesInDescribeServerRelatedGlobalAccelerationInstances
-export interface GlobalAccelerationInstancesInDescribeServerRelatedGlobalAccelerationInstances {
-	GlobalAccelerationInstance: GlobalAccelerationInstance[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.DescribeServerRelatedGlobalAccelerationInstancesResponse
 export interface DescribeServerRelatedGlobalAccelerationInstancesResponse {
-	RequestId: string;
-	GlobalAccelerationInstances: GlobalAccelerationInstancesInDescribeServerRelatedGlobalAccelerationInstances;
+    /**
+     * 请求ID。
+     * @example `A8252014-D8DE-4D85-AF35-AFEXXXXXXX`
+     */
+    RequestId: string;
+    GlobalAccelerationInstances: {
+        /**
+         * 全球加速实例信息列表。
+         */
+        GlobalAccelerationInstance: {
+            /**
+             * 后端服务IP地址。
+             * @example `172.24.52.234`
+             */
+            ServerIpAddress: string;
+            /**
+             * 全球加速实例 ID。
+             * @example `ga-t4nku6vv9****`
+             */
+            GlobalAccelerationInstanceId: string;
+            /**
+             * 全球加速实例公网 IP。
+             * @example `12.34.56.78`
+             */
+            IpAddress: string;
+            /**
+             * 全球加速实例所属地域ID。
+             * @example `ap-southeast-1`
+             */
+            RegionId: string;
+        }[];
+    };
 }
-

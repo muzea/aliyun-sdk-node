@@ -1,0 +1,1 @@
+{"methods":["get","post"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"read","systemTags":{},"parameters":[{"name":"DomainName","in":"query","schema":{"type":"string","required":true}}],"responses":{"200":{"schema":{"type":"object","properties":{"Content":{"type":"string"},"RequestId":{"type":"string"}}}}}}

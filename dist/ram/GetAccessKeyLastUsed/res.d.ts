@@ -1,13 +1,17 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ram.AccessKeyLastUsed
-export interface AccessKeyLastUsed {
-	LastUsedDate: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ram.GetAccessKeyLastUsedResponse
 export interface GetAccessKeyLastUsedResponse {
-	RequestId: string;
-	AccessKeyLastUsed: AccessKeyLastUsed;
+    /**
+     * 访问密钥的最后使用信息。
+     */
+    AccessKeyLastUsed: {
+        /**
+         * 最后使用时间。
+         * @example `2020-10-21T06:37:40Z`
+         */
+        LastUsedDate: string;
+    };
+    /**
+     * 请求ID。
+     * @example `5CCE804C-6450-49A7-B1DB-2460F7A97416`
+     */
+    RequestId: string;
 }
-

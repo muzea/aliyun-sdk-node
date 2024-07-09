@@ -1,3 +1,0 @@
-interface AddAssetTagsResponse {
-}
-export { AddAssetTagsResponse };

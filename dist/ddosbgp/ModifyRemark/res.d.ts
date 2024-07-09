@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ddosbgp.ModifyRemarkResponse
 export interface ModifyRemarkResponse {
-	RequestId: string;
+    /**
+     * 本次请求的ID。
+     * @example `6AC3597B-7FD5-5E68-97C3-E11F4D010732`
+     */
+    RequestId: string;
 }
-

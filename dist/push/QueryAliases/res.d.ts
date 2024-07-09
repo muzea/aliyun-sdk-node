@@ -1,18 +1,19 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/push.AliasInfo
-export interface AliasInfo {
-	AliasName: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/push.AliasInfos
-export interface AliasInfos {
-	AliasInfo: AliasInfo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/push.QueryAliasesResponse
 export interface QueryAliasesResponse {
-	RequestId: string;
-	AliasInfos: AliasInfos;
+    /**
+     * 请求ID。
+     * @example `159E4422-6624-4750-8943-DFD98D34858C`
+     */
+    RequestId: string;
+    AliasInfos: {
+        /**
+         * 别名列表。
+         */
+        AliasInfo: {
+            /**
+             * 别名名称。
+             * @example `test_alias1`
+             */
+            AliasName: string;
+        }[];
+    };
 }
-

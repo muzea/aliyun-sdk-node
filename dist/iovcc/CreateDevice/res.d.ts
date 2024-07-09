@@ -1,3 +1,0 @@
-interface CreateDeviceResponse {
-}
-export { CreateDeviceResponse };

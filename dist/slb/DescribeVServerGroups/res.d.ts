@@ -1,66 +1,101 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.Rule
-export interface Rule {
-	Domain: string;
-	HealthCheckTimeout: number;
-	RuleName: string;
-	HealthCheckURI: string;
-	StickySession: string;
-	HealthCheckInterval: number;
-	ListenerSync: string;
-	RuleId: string;
-	HealthCheckDomain: string;
-	Scheduler: string;
-	Url: string;
-	VServerGroupId: string;
-	HealthyThreshold: number;
-	CookieTimeout: number;
-	HealthCheckHttpCode: string;
-	UnhealthyThreshold: number;
-	StickySessionType: string;
-	HealthCheckConnectPort: number;
-	Cookie: string;
-	HealthCheck: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.RulesInDescribeVServerGroups
-export interface RulesInDescribeVServerGroups {
-	Rule: Rule[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.Listener
-export interface Listener {
-	Port: number;
-	Protocol: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.ListenersInDescribeMasterSlaveServerGroups
-export interface ListenersInDescribeMasterSlaveServerGroups {
-	Listener: Listener[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.AssociatedObjects
-export interface AssociatedObjects {
-	Rules: RulesInDescribeVServerGroups;
-	Listeners: ListenersInDescribeMasterSlaveServerGroups;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.VServerGroup
-export interface VServerGroup {
-	VServerGroupId: string;
-	VServerGroupName: string;
-	AssociatedObjects: AssociatedObjects;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.VServerGroups
-export interface VServerGroups {
-	VServerGroup: VServerGroup[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.DescribeVServerGroupsResponse
 export interface DescribeVServerGroupsResponse {
-	RequestId: string;
-	VServerGroups: VServerGroups;
+    /**
+     * 请求ID。
+     * @example `9DEC9C28-AB05-4DDF-9A78-6B08******`
+     */
+    RequestId: string;
+    VServerGroups: {
+        /**
+         * 后端服务器列表。
+         */
+        VServerGroup: {
+            /**
+             * 服务器组ID。
+             * @example `rsp-0bf******`
+             */
+            VServerGroupId: string;
+            /**
+             * 服务器组名称。
+             * @example `Group3`
+             */
+            VServerGroupName: string;
+            /**
+             * 关联信息。
+             */
+            AssociatedObjects: {
+                Listeners: {
+                    /**
+                     * 监听列表。
+                     */
+                    Listener: {
+                        /**
+                         * 监听端口。
+                         * @example `80`
+                         */
+                        Port: number;
+                        /**
+                         * 监听协议。取值：**tcp**、**udp**、**http**或**https**。
+                         * @example `tcp`
+                         */
+                        Protocol: string;
+                    }[];
+                };
+                Rules: {
+                    /**
+                     * 转发规则列表。
+                     */
+                    Rule: {
+                        /**
+                         * 访问路径。
+                         * @example `/example`
+                         */
+                        Url: string;
+                        /**
+                         * 请求域名。
+                         * @example `www.example.com`
+                         */
+                        Domain: string;
+                        /**
+                         * 转发规则名称。
+                         * @example `test`
+                         */
+                        RuleName: string;
+                        /**
+                         * 转发规则ID。
+                         * @example `rule-a3x3pg1******`
+                         */
+                        RuleId: string;
+                    }[];
+                };
+            };
+            /**
+             * 服务器个数。
+             * 该参数对应的功能默认不开放，如需使用请联系销售或提交工单。
+             * @example `1`
+             */
+            ServerCount: number;
+            /**
+             * 传统型负载均衡实例的创建时间，格式：`YYYY-MM-DDThh:mm:ssZ`。
+             * @example `2022-08-31T02:49:05Z`
+             */
+            CreateTime: string;
+            Tags: {
+                /**
+                 * 标签列表。
+                 */
+                Tag: {
+                    /**
+                     * 资源的标签键。
+                     * @example `TestKey`
+                     */
+                    TagKey: string;
+                    /**
+                     * 资源的标签值。
+                     * @example `TestValue`
+                     */
+                    TagValue: string;
+                }[];
+            };
+        }[];
+    };
 }
-

@@ -1,9 +1,17 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cloudapi.CreateAppResponse
 export interface CreateAppResponse {
-	RequestId: string;
-	AppId: number;
-	TagStatus: boolean;
+    /**
+     * 标签是否存在，取值为：-**true**：存在-**false**：不存在
+     * @example `false`
+     */
+    TagStatus: boolean;
+    /**
+     * 请求ID
+     * @example `BA20890E-75C7-41BC-9C8B-73276B58F550`
+     */
+    RequestId: string;
+    /**
+     * APP的唯一编号
+     * @example `20112314518278`
+     */
+    AppId: number;
 }
-

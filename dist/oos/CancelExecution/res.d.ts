@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/oos.CancelExecutionResponse
 export interface CancelExecutionResponse {
-	RequestId: string;
+    /**
+     * 请求ID
+     * @example `14A07460-EBE7-47CA-9757-12CC4761D47A`
+     */
+    RequestId: string;
 }
-

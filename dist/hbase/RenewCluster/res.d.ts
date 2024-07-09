@@ -1,3 +1,0 @@
-interface RenewClusterResponse {
-}
-export { RenewClusterResponse };

@@ -1,20 +1,29 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/scdn.Data
-export interface Data {
-	Domain: string;
-	Cname: string;
-	Status: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/scdn.CnameDatas
-export interface CnameDatas {
-	Data: Data[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/scdn.DescribeScdnDomainCnameResponse
 export interface DescribeScdnDomainCnameResponse {
-	RequestId: string;
-	CnameDatas: CnameDatas;
+    /**
+     * 请求ID
+     * @example `15C66C7B-671A-4297-9187-2C4477247A74`
+     */
+    RequestId: string;
+    CnameDatas: {
+        /**
+         * Cname信息
+         */
+        Data: {
+            /**
+             * 状态
+             * @example `6`
+             */
+            Status: number;
+            /**
+             * 域名
+             * @example `.aliyundoc.com`
+             */
+            Domain: string;
+            /**
+             * Cname
+             * @example `example.com`
+             */
+            Cname: string;
+        }[];
+    };
 }
-

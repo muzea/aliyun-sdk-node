@@ -1,3 +1,0 @@
-interface AddAssetsResponse {
-}
-export { AddAssetsResponse };

@@ -1,3 +1,0 @@
-interface UpdateAppResponse {
-}
-export { UpdateAppResponse };

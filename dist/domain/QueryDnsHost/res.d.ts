@@ -1,14 +1,18 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/domain.DnsHost
-export interface DnsHost {
-	DnsName: string;
-	IpList: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/domain.QueryDnsHostResponse
 export interface QueryDnsHostResponse {
-	RequestId: string;
-	DnsHostList: DnsHost[];
+    /**
+     * 唯一请求识别码。
+     * @example `18A313DD-3AF3-40AA-84F9-56BA45DC511F`
+     */
+    RequestId: string;
+    /**
+     * DNS host信息。
+     */
+    DnsHostList: {
+        /**
+         * DNS 名称。
+         * @example `ns3`
+         */
+        DnsName: string;
+        IpList: string[];
+    }[];
 }
-

@@ -1,3 +1,0 @@
-interface DescribeHostAttackSurfacesFacetsResponse {
-}
-export { DescribeHostAttackSurfacesFacetsResponse };

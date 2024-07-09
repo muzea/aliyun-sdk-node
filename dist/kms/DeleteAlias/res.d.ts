@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/kms.DeleteAliasResponse
 export interface DeleteAliasResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `4c8ae23f-3a42-6791-a4ba-1faa77831c28`
+     */
+    RequestId: string;
 }
-

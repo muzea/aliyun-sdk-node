@@ -1,109 +1,144 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.AvailableResource
-export interface AvailableResource {
-	InstanceClass: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.AvailableResources
-export interface AvailableResources {
-	AvailableResource: AvailableResource[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.SupportedPackageType
-export interface SupportedPackageType {
-	PackageType: string;
-	AvailableResources: AvailableResources;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.SupportedPackageTypes
-export interface SupportedPackageTypes {
-	SupportedPackageType: SupportedPackageType[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.SupportedNodeType
-export interface SupportedNodeType {
-	NodeType: string;
-	SupportedPackageTypes: SupportedPackageTypes;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.SupportedNodeTypes
-export interface SupportedNodeTypes {
-	SupportedNodeType: SupportedNodeType[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.SupportedStorageType
-export interface SupportedStorageType {
-	StorageType: string;
-	SupportedNodeTypes: SupportedNodeTypes;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.SupportedStorageTypes
-export interface SupportedStorageTypes {
-	SupportedStorageType: SupportedStorageType[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.SupportedPerformanceType
-export interface SupportedPerformanceType {
-	PerformanceType: string;
-	SupportedStorageTypes: SupportedStorageTypes;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.SupportedPerformanceTypes
-export interface SupportedPerformanceTypes {
-	SupportedPerformanceType: SupportedPerformanceType[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.SupportedArchitectureType
-export interface SupportedArchitectureType {
-	Architecture: string;
-	SupportedPerformanceTypes: SupportedPerformanceTypes;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.SupportedArchitectureTypes
-export interface SupportedArchitectureTypes {
-	SupportedArchitectureType: SupportedArchitectureType[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.SupportedEngineVersion
-export interface SupportedEngineVersion {
-	Version: string;
-	SupportedArchitectureTypes: SupportedArchitectureTypes;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.SupportedEngineVersions
-export interface SupportedEngineVersions {
-	SupportedEngineVersion: SupportedEngineVersion[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.SupportedEngine
-export interface SupportedEngine {
-	Engine: string;
-	SupportedEngineVersions: SupportedEngineVersions;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.SupportedEngines
-export interface SupportedEngines {
-	SupportedEngine: SupportedEngine[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.AvailableZone
-export interface AvailableZone {
-	RegionId: string;
-	ZoneId: string;
-	Status: string;
-	NetworkTypes: string;
-	SupportedEngines: SupportedEngines;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.AvailableZones
-export interface AvailableZones {
-	AvailableZone: AvailableZone[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.DescribeAvailableResourceResponse
 export interface DescribeAvailableResourceResponse {
-	RequestId: string;
-	AvailableZones: AvailableZones;
+    /**
+     * 请求ID。
+     * @example `493B7308-D9C2-55F6-B042-0313BD63****`
+     */
+    RequestId: string;
+    AvailableZones: {
+        /**
+         * 可用区详情。
+         */
+        AvailableZone: {
+            /**
+             * 可用区ID。
+             * @example `cn-hangzhou-h`
+             */
+            ZoneId: string;
+            /**
+             * 可用区名称。
+             * @example `杭州 可用区H`
+             */
+            ZoneName: string;
+            /**
+             * 地域ID。
+             * @example `cn-hangzhou`
+             */
+            RegionId: string;
+            SupportedEngines: {
+                /**
+                 * 引擎类型。
+                 */
+                SupportedEngine: {
+                    /**
+                     * 实例的引擎类型。
+                     * @example `Redis`
+                     */
+                    Engine: string;
+                    SupportedEditionTypes: {
+                        /**
+                         * 实例类型。
+                         */
+                        SupportedEditionType: {
+                            /**
+                             * 实例类型，返回值：
+                             * * **Community**：社区版。
+                             * * **Enterprise**：企业版。
+                             * @example `Enterprise`
+                             */
+                            EditionType: string;
+                            SupportedSeriesTypes: {
+                                /**
+                                 * 实例的系列。
+                                 */
+                                SupportedSeriesType: {
+                                    /**
+                                     * 系列，返回值：
+                                     * * **enhanced_performance_type**：内存型。
+                                     * * **hybrid_storage**：混合存储型。
+                                     * @example `enhanced_performance_type`
+                                     */
+                                    SeriesType: string;
+                                    SupportedEngineVersions: {
+                                        /**
+                                         * 引擎版本（版本号）列表。
+                                         */
+                                        SupportedEngineVersion: {
+                                            /**
+                                             * 引擎版本。
+                                             * @example `5.0`
+                                             */
+                                            Version: string;
+                                            SupportedArchitectureTypes: {
+                                                /**
+                                                 * 架构类型。
+                                                 */
+                                                SupportedArchitectureType: {
+                                                    /**
+                                                     * 架构，返回值：
+                                                     * * **standard**：标准架构。
+                                                     * * **cluster**：集群架构。
+                                                     * * **rwsplit**：读写分离架构。
+                                                     * @example `cluster`
+                                                     */
+                                                    Architecture: string;
+                                                    SupportedShardNumbers: {
+                                                        /**
+                                                         * 可用分片数列表。
+                                                         */
+                                                        SupportedShardNumber: {
+                                                            /**
+                                                             * 分片数。
+                                                             * @example `8`
+                                                             */
+                                                            ShardNumber: string;
+                                                            SupportedNodeTypes: {
+                                                                /**
+                                                                 * 节点类型列表。
+                                                                 */
+                                                                SupportedNodeType: {
+                                                                    /**
+                                                                     * 节点类型，返回值：
+                                                                     * * **single**：单副本。
+                                                                     * * **double**：双副本。
+                                                                     * @example `double`
+                                                                     */
+                                                                    SupportedNodeType: string;
+                                                                    AvailableResources: {
+                                                                        /**
+                                                                         * 可用规格列表。
+                                                                         */
+                                                                        AvailableResource: {
+                                                                            /**
+                                                                             * 实例规格描述。
+                                                                             * @example `16G集群版（8节点）（QPS:1920000 Connections:240000）`
+                                                                             */
+                                                                            InstanceClassRemark: string;
+                                                                            /**
+                                                                             * 实例的内存容量，单位为MB。
+                                                                             * @example `16384`
+                                                                             */
+                                                                            Capacity: number;
+                                                                            /**
+                                                                             * 规格编码。可在帮助中心的搜索框中搜索规格编码，查看其对应的规格信息。
+                                                                             * @example `redis.amber.logic.sharding.2g.8db.0rodb.24proxy.multithread`
+                                                                             */
+                                                                            InstanceClass: string;
+                                                                        }[];
+                                                                    };
+                                                                }[];
+                                                            };
+                                                        }[];
+                                                    };
+                                                }[];
+                                            };
+                                        }[];
+                                    };
+                                }[];
+                            };
+                        }[];
+                    };
+                }[];
+            };
+        }[];
+    };
 }
-

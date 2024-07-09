@@ -1,9 +1,17 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.StartRestoreResponse
 export interface StartRestoreResponse {
-	RequestId: string;
-	Result: string;
-	Success: boolean;
+    /**
+     * 请求ID。
+     * @example `721C71DD-D3D0-4327-BFDD-678326******`
+     */
+    RequestId: string;
+    /**
+     * 返回结果。
+     * @example `success`
+     */
+    Result: string;
+    /**
+     * 请求结果。
+     * @example `true`
+     */
+    Success: boolean;
 }
-

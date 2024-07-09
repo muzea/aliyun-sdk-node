@@ -1,6 +1,7 @@
-interface DeleteFCTriggerRequest {
-    "RegionId"?: string;
+export interface DeleteFCTriggerRequest {
+    /**
+     * 函数计算服务对应的触发器。
+     * @example `acs:cdn:{RegionID}:{AccountID}:{Filter}`
+     */
     "TriggerARN": string;
-    "OwnerId"?: number;
 }
-export { DeleteFCTriggerRequest };

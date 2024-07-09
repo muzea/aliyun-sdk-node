@@ -1,3 +1,0 @@
-interface JoinCompanyResponse {
-}
-export { JoinCompanyResponse };

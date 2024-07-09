@@ -1,20 +1,37 @@
-interface ImportKeyPairRequest {
+export interface ImportKeyPairRequest {
     /**
-    * 地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。
-    * @example `cn-hangzhou`
-    */ "RegionId": string;
+     * 地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。
+     * @example `cn-hangzhou`
+     */
+    "RegionId": string;
     /**
-    * 密钥对名称。必须保持名称唯一性。 长度为2~128个英文或中文字符。必须以大小字母或中文开头，不能以 http:// 和 https:// 开头。可以包含数字、半角冒号（:）、下划线（_）或者连字符（-）。
-    * @example `FinanceJoshuaV24`
-    */ "KeyPairName": string;
+     * 密钥对名称。必须保持名称唯一性。 长度为2~128个英文或中文字符。必须以大小字母或中文开头，不能以 http:// 和 https:// 开头。可以包含数字、半角冒号（:）、下划线（_）或者短划线（-）。
+     * @example `testKeyPairName`
+     */
+    "KeyPairName": string;
     /**
-    * 密钥对的公钥内容。
-    * @example `xxxxxxxxxxxxxx`
-    */ "PublicKeyBody": string;
-    "SourceRegionId"?: string;
+     * 密钥对的公钥内容。
+     * @example `ABC1234567`
+     */
+    "PublicKeyBody": string;
     /**
-    * RAM用户的虚拟账号ID。
-    * @example `155780923770`
-    */ "OwnerId"?: number;
+     * SSH密钥对所在的企业资源组ID。
+     * @example `rg-bp67acfmxazb4p****`
+     */
+    "ResourceGroupId"?: string;
+    /**
+     * 标签列表。
+     */
+    "Tag"?: {
+        /**
+         * 密钥对的标签键。N的取值范围：1~20。一旦传入该值，则不允许为空字符串。最多支持128个字符，不能以aliyun和acs:开头，不能包含http://或者https://。
+         * @example `TestKey`
+         */
+        Key: string;
+        /**
+         * 密钥对的标签值。N的取值范围：1~20。一旦传入该值，允许为空字符串。最多支持128个字符，不能以acs:开头，不能包含http://或者https://。
+         * @example `TestValue`
+         */
+        Value: string;
+    }[];
 }
-export { ImportKeyPairRequest };

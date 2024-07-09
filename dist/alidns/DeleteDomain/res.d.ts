@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/alidns.DeleteDomainResponse
 export interface DeleteDomainResponse {
-	RequestId: string;
-	DomainName: string;
+    /**
+     * 唯一请求识别码。
+     * @example `536E9CAD-DB30-4647-AC87-AA5CC38C5382`
+     */
+    RequestId: string;
+    /**
+     * 域名名称。
+     * @example `dns-example.top`
+     */
+    DomainName: string;
 }
-

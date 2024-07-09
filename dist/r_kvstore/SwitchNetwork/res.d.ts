@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.SwitchNetworkResponse
 export interface SwitchNetworkResponse {
-	RequestId: string;
-	TaskId: string;
+    /**
+     * 任务ID。
+     * @example `578678678`
+     */
+    TaskId: string;
+    /**
+     * 请求ID。
+     * @example `F0997EE8-F4C2-4503-9168-85177ED78C70`
+     */
+    RequestId: string;
 }
-

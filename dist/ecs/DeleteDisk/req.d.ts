@@ -1,13 +1,7 @@
-interface DeleteDiskRequest {
-    "RegionId"?: string;
+export interface DeleteDiskRequest {
     /**
-    * 需要释放的云盘设备 ID。
-    * @example `d-23jbf2***`
-    */ "DiskId": string;
-    "SourceRegionId"?: string;
-    /**
-    * RAM 用户的虚拟账号 ID。
-    * @example `155780923770`
-    */ "OwnerId"?: number;
+     * 需要释放的云盘设备ID。
+     * @example `d-bp14k9cxvr5uzy5****`
+     */
+    "DiskId": string;
 }
-export { DeleteDiskRequest };

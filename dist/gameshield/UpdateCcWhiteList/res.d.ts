@@ -1,3 +1,0 @@
-interface UpdateCcWhiteListResponse {
-}
-export { UpdateCcWhiteListResponse };

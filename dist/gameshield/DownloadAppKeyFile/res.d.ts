@@ -1,3 +1,0 @@
-interface DownloadAppKeyFileResponse {
-}
-export { DownloadAppKeyFileResponse };

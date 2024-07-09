@@ -1,9 +1,17 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/edas.DeleteServiceGroupResponse
 export interface DeleteServiceGroupResponse {
-	Code: number;
-	Message: string;
-	RequestId: string;
+    /**
+     * Code码
+     * @example `200`
+     */
+    Code: number;
+    /**
+     * 信息
+     * @example `success`
+     */
+    Message: string;
+    /**
+     * 唯一请求ID
+     * @example `ECD1D6FC-4307-4583-BA6F-215F38****`
+     */
+    RequestId: string;
 }
-

@@ -1,5 +1,7 @@
-interface GetAllMarketsRequest {
-    "RegionId"?: string;
+export interface GetAllMarketsRequest {
+    /**
+     * 版本号。
+     * @example `2017-04-11`
+     */
     "Version": string;
 }
-export { GetAllMarketsRequest };

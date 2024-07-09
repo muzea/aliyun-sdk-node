@@ -1,9 +1,17 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.RemoveRecycleBinTableResponse
 export interface RemoveRecycleBinTableResponse {
-	RequestId: string;
-	Success: boolean;
-	Data: boolean;
+    /**
+     * 回收站中的表是否被清除。
+     * @example `true`
+     */
+    Data: boolean;
+    /**
+     * 请求ID。
+     * @example `A3140FC7-B78B-4D8E-B0C8-926D28******`
+     */
+    RequestId: string;
+    /**
+     * 请求结果。
+     * @example `true`
+     */
+    Success: boolean;
 }
-

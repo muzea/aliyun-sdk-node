@@ -1,7 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cloudapi.SetVpcAccessResponse
 export interface SetVpcAccessResponse {
-	RequestId: string;
+    /**
+     * 请求ID
+     * @example `CEF72CEB-54B6-4AE8-B225-F876FF7BZ015`
+     */
+    RequestId: string;
+    /**
+     * Vpc授权ID
+     * @example `4c68e061860f441ab72af7404137440e`
+     */
+    VpcAccessId: string;
 }
-

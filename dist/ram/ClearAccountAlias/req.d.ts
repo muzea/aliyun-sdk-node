@@ -1,4 +1,2 @@
-interface ClearAccountAliasRequest {
-    "RegionId"?: string;
+export interface ClearAccountAliasRequest {
 }
-export { ClearAccountAliasRequest };

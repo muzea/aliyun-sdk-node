@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.ReActivateInstancesResponse
 export interface ReActivateInstancesResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `51AB7717-6E1A-4D1D-A44D-54CB123ABC`
+     */
+    RequestId: string;
 }
-

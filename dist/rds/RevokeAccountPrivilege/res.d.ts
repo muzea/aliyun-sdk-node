@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.RevokeAccountPrivilegeResponse
 export interface RevokeAccountPrivilegeResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `E22099CA-A61E-4992-A0B7-CE82DC175626`
+     */
+    RequestId: string;
 }
-

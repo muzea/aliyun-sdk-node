@@ -1,8 +1,7 @@
-interface ListPoliciesForRoleRequest {
-    "RegionId"?: string;
+export interface ListPoliciesForRoleRequest {
     /**
-    * 指定角色名。
-    * @example `AdminRole`
-    */ "RoleName"?: string;
+     * 指定角色名。
+     * @example `AdminRole`
+     */
+    "RoleName"?: string;
 }
-export { ListPoliciesForRoleRequest };

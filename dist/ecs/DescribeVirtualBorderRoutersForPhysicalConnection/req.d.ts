@@ -1,9 +1,10 @@
-interface DescribeVirtualBorderRoutersForPhysicalConnectionRequest {
+export interface DescribeVirtualBorderRoutersForPhysicalConnectionRequest {
     "RegionId": string;
     "PhysicalConnectionId": string;
-    "Filter"?: string[];
-    "OwnerId"?: number;
     "PageNumber"?: number;
     "PageSize"?: number;
+    "Filter"?: {
+        Key: string;
+        Value: string[];
+    }[];
 }
-export { DescribeVirtualBorderRoutersForPhysicalConnectionRequest };

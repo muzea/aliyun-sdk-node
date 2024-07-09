@@ -1,3 +1,0 @@
-interface UpdatePortRuleResponse {
-}
-export { UpdatePortRuleResponse };

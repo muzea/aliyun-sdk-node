@@ -1,3 +1,0 @@
-interface SubmitExternalNodesAddingTaskResponse {
-}
-export { SubmitExternalNodesAddingTaskResponse };

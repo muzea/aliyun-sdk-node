@@ -1,4 +1,2 @@
-interface ListPreChecksRequest {
-    "RegionId"?: string;
+export interface ListPreChecksRequest {
 }
-export { ListPreChecksRequest };

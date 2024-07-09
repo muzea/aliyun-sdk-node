@@ -1,78 +1,42 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/airec.Meta
-export interface Meta {
-	Path: string;
-	Partition: string;
-	Timestamp: number;
-	ProjectName: string;
-	BucketName: string;
-	TableName: string;
-	AccessKeyId: string;
-	Type: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/airec.SettingsItemInDeleteMix
-export interface SettingsItemInDeleteMix {
-	Name: string;
-	Value: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/airec.Parameter
-export interface Parameter {
-	CategoryIndex: number;
-	Window: number;
-	Settings: SettingsItemInDeleteMix[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/airec.SubProgressInfosItem
-export interface SubProgressInfosItem {
-	Type: string;
-	Progress: number;
-	Detail: string;
-	TotalNum: number;
-	FinishedNum: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/airec.ResultItem
-export interface ResultItem {
-	Name: string;
-	ChargeType: string;
-	ErrorLevel: string;
-	ItemType: string;
-	GmtCreate: string;
-	DataSetVersion: string;
-	RegionId: string;
-	TotalProgress: number;
-	InstanceId: string;
-	TraceId: string;
-	CommodityCode: string;
-	MatchInfo: string;
-	Type: string;
-	Message: string;
-	ExpiredTime: string;
-	Timestamp: string;
-	ErrorType: string;
-	GmtModified: string;
-	Industry: string;
-	TableName: string;
-	ItemId: string;
-	Scene: string;
-	TraceInfo: string;
-	Position: number;
-	Status: string;
-	LockMode: string;
-	Weight: number;
-	Meta: Meta;
-	Parameter: Parameter;
-	SubProgressInfos: SubProgressInfosItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/airec.DescribeDataSetMessageResponse
 export interface DescribeDataSetMessageResponse {
-	RequestId: string;
-	Code: string;
-	Message: string;
-	Result: ResultItem[];
+    /**
+     * 返回参数。
+     */
+    result: {
+        /**
+         * 数据诊断错误详情。
+         * @example `item商品表合法率0.36，可被采纳数据（符合规范）较少。会影响预热期推荐效果。请检查数据，补充相关字段信息，重新导入。建议优化。`
+         */
+        message: string;
+        /**
+         * 数据诊断错误时间。
+         * @example `20181211 17:27:44`
+         */
+        timestamp: string;
+        /**
+         * 数据诊断错误级别。
+         * @example `warn`
+         */
+        errorLevel: string;
+        /**
+         * 数据诊断错误类型。
+         * @example `合法率`
+         */
+        errorType: string;
+    }[];
+    /**
+     * 错误码。
+     * @example `InternalServerError`
+     */
+    code: string;
+    /**
+     * 请求ID。
+     * @example `8F81A922-6C81-46D6-B78C-CC35E16B1691`
+     */
+    requestId: string;
+    /**
+     * 错误信息。
+     * @example `An internal server error occurred`
+     */
+    message: string;
 }
-

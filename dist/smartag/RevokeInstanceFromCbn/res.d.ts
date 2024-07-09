@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/smartag.RevokeInstanceFromCbnResponse
 export interface RevokeInstanceFromCbnResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `07D73949-2508-4169-8C64-7CCDB33871C4`
+     */
+    RequestId: string;
 }
-

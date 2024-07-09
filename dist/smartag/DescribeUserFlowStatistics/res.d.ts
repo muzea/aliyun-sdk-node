@@ -1,21 +1,29 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/smartag.Statistics
-export interface Statistics {
-	UserName: string;
-	TotalBytes: string;
-	OnlineCount: string;
-	SmartAGId: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/smartag.SagStatisticsInDescribeUserFlowStatistics
-export interface SagStatisticsInDescribeUserFlowStatistics {
-	Statistics: Statistics[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/smartag.DescribeUserFlowStatisticsResponse
 export interface DescribeUserFlowStatisticsResponse {
-	RequestId: string;
-	SagStatistics: SagStatisticsInDescribeUserFlowStatistics;
+    SagStatistics: {
+        /**
+         * 流量统计。
+         */
+        Statistics: {
+            /**
+             * 已使用的流量值。单位：Byte。
+             * @example `100`
+             */
+            TotalBytes: string;
+            /**
+             * 用户名。
+             * @example `doctest`
+             */
+            UserName: string;
+            /**
+             * 智能接入网关App用户剩余免费流量值。单位：Byte。
+             * @example `1000`
+             */
+            TotalLeaveBytes: string;
+        }[];
+    };
+    /**
+     * 请求ID。
+     * @example `9552AD68-18EA-4074-B27D-40040FBA9683`
+     */
+    RequestId: string;
 }
-

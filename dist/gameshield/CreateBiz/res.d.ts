@@ -1,3 +1,0 @@
-interface CreateBizResponse {
-}
-export { CreateBizResponse };

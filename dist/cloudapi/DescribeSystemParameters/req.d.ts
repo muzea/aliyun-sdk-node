@@ -1,4 +1,2 @@
-interface DescribeSystemParametersRequest {
-    "RegionId": string;
+export interface DescribeSystemParametersRequest {
 }
-export { DescribeSystemParametersRequest };

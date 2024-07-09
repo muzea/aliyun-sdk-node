@@ -1,3 +1,0 @@
-interface CreateCoreWordResponse {
-}
-export { CreateCoreWordResponse };

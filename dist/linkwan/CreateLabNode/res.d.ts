@@ -1,3 +1,0 @@
-interface CreateLabNodeResponse {
-}
-export { CreateLabNodeResponse };

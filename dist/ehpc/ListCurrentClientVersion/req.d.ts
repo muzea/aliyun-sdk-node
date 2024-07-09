@@ -1,4 +1,2 @@
-interface ListCurrentClientVersionRequest {
-    "RegionId"?: string;
+export interface ListCurrentClientVersionRequest {
 }
-export { ListCurrentClientVersionRequest };

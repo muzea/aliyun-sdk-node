@@ -1,3 +1,0 @@
-interface DescribeGfResSummaryResponse {
-}
-export { DescribeGfResSummaryResponse };

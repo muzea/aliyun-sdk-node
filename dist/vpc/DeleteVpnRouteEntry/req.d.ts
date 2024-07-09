@@ -1,32 +1,41 @@
-interface DeleteVpnRouteEntryRequest {
+export interface DeleteVpnRouteEntryRequest {
     /**
-    * VPN目的路由所在的地域。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。
-    * @example `cn-hangzhou	`
-    */ "RegionId": string;
+     * VPN网关实例所属地域ID。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。
+     * @example `cn-hangzhou	`
+     */
+    "RegionId": string;
     /**
-    * VPN网关的ID。
-    * @example `vpn-bp1a3kqjiiq9legfx****`
-    */ "VpnGatewayId": string;
+     * 客户端Token，用于保证请求的幂等性。
+     * 从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。
+     * > 若您未指定，则系统自动使用API请求的**RequestId**作为**ClientToken**标识。每次API请求的**RequestId**不一样。
+     * @example `d7d24a21-f4ba-4454-9173-b3828dae492b	`
+     */
+    "ClientToken"?: string;
     /**
-    * 目的路由的目标网段。
-    * @example `10.0.0.0/24	`
-    */ "RouteDest": string;
+     * VPN网关的ID。
+     * @example `vpn-bp1a3kqjiiq9legfx****`
+     */
+    "VpnGatewayId": string;
     /**
-    * 目的路由的下一跳。
-    * @example `vco-bp15oes1py4i66rmd****`
-    */ "NextHop": string;
+     * 目的路由的目标网段。
+     * @example `10.0.0.0/24	`
+     */
+    "RouteDest": string;
     /**
-    * 目的路由的权重值，取值：**0**|**100**。
-    * @example `0`
-    */ "Weight": number;
-    "OwnerId"?: number;
+     * 目的路由的下一跳。
+     * @example `vco-bp15oes1py4i66rmd****`
+     */
+    "NextHop": string;
     /**
-    * 客户端token，用于保证请求的幂等性。
-    * 由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符。
-    * @example `d7d24a21-f4ba-4454-9173-b3828dae492b	`
-    */ "ClientToken"?: string;
+     * 目的路由的权重值，取值：
+     * - **0**：低优先级。
+     * - **100**：高优先级。
+     * @example `0`
+     */
+    "Weight": number;
     /**
-    * @example `111`
-    */ "OverlayMode"?: string;
+     * 隧道协议，取值：**Ipsec**（IPsec隧道协议）。
+     * @example `Ipsec`
+     */
+    "OverlayMode"?: string;
 }
-export { DeleteVpnRouteEntryRequest };

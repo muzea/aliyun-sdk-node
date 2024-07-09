@@ -1,32 +1,55 @@
-interface SaveSingleTaskForCreatingOrderTransferRequest {
-    "RegionId"?: string;
+export interface SaveSingleTaskForCreatingOrderTransferRequest {
     /**
-    * 域名
-    * @example `test.com`
-    */ "DomainName": string;
+     * 用户IP。
+     * @example `127.0.0.1`
+     */
+    "UserClientIp"?: string;
     /**
-    * 域名转入密码
-    * @example `testCode`
-    */ "AuthorizationCode": string;
+     * 接口返回错误信息语言。取值：
+     * - **zh**：中文；
+     * - **en**：英文。
+     * 默认为**en**。
+     * @example `en`
+     */
+    "Lang"?: string;
     /**
-    * 已经实名认证域名信息模板id
-    * @example `123456`
-    */ "RegistrantProfileId": number;
+     * 域名。
+     * @example `example.com`
+     */
+    "DomainName": string;
     /**
-    * 用户ip
-    * @example `127.0.0.1`
-    */ "UserClientIp"?: string;
+     * 域名转入密码。
+     * @example `testCode`
+     */
+    "AuthorizationCode": string;
     /**
-    * 接口返回错误信息语言，枚举值范围：zh 中文；en 英文。默认为en。
-    * @example `en`
-    */ "Lang"?: string;
+     * 已经实名认证域名信息模板ID。
+     * @example `123456`
+     */
+    "RegistrantProfileId": number;
     /**
-    * 是否允许溢价词域名转入，默认为false
-    * @example `false`
-    */ "PermitPremiumTransfer"?: boolean;
+     * 是否允许溢价词域名转入，默认为**false**。
+     * @example `false`
+     */
+    "PermitPremiumTransfer"?: boolean;
+    /**
+     * 代金券编号。
+     * @example `123456`
+     */
     "CouponNo"?: string;
+    /**
+     * 是否使用代金券。
+     * @example `false`
+     */
     "UseCoupon"?: boolean;
+    /**
+     * 优惠券编号。
+     * @example `123456`
+     */
     "PromotionNo"?: string;
+    /**
+     * 是否使用优惠券。
+     * @example `false`
+     */
     "UsePromotion"?: boolean;
 }
-export { SaveSingleTaskForCreatingOrderTransferRequest };

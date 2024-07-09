@@ -1,3 +1,3 @@
-interface DescribeClusterV2UserKubeconfigResponse {
+export interface DescribeClusterV2UserKubeconfigResponse {
+    config: string;
 }
-export { DescribeClusterV2UserKubeconfigResponse };

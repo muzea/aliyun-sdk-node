@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.CancelCommonBandwidthPackageIpBandwidthResponse
 export interface CancelCommonBandwidthPackageIpBandwidthResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `63D187BF-A30A-4DD6-B68D-FF182C96D8A2`
+     */
+    RequestId: string;
 }
-

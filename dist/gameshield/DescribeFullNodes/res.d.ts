@@ -1,3 +1,0 @@
-interface DescribeFullNodesResponse {
-}
-export { DescribeFullNodesResponse };

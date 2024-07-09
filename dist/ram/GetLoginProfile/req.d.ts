@@ -1,8 +1,7 @@
-interface GetLoginProfileRequest {
-    "RegionId"?: string;
+export interface GetLoginProfileRequest {
     /**
-    * 指定用户名。
-    * @example `zhangq****`
-    */ "UserName"?: string;
+     * 指定用户名。
+     * @example `zhangq****`
+     */
+    "UserName"?: string;
 }
-export { GetLoginProfileRequest };

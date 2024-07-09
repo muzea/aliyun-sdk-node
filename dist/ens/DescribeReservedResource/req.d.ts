@@ -1,5 +1,2 @@
-interface DescribeReservedResourceRequest {
-    "RegionId"?: string;
-    "Version": string;
+export interface DescribeReservedResourceRequest {
 }
-export { DescribeReservedResourceRequest };

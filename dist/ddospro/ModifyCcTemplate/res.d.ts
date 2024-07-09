@@ -1,3 +1,0 @@
-interface ModifyCcTemplateResponse {
-}
-export { ModifyCcTemplateResponse };

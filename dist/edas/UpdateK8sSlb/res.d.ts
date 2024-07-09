@@ -1,10 +1,22 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/edas.UpdateK8SSlbResponse
-export interface UpdateK8SSlbResponse {
-	Code: number;
-	Message: string;
-	ChangeOrderId: string;
-	RequestId: string;
+export interface UpdateK8sSlbResponse {
+    /**
+     * 变更流程ID。
+     * @example `9a1dcdee-****-****-ad37-cbf9dc91fba9`
+     */
+    ChangeOrderId: string;
+    /**
+     * HTTP状态码。
+     * @example `200`
+     */
+    Code: number;
+    /**
+     * 返回信息。
+     * @example `success`
+     */
+    Message: string;
+    /**
+     * 请求ID。
+     * @example `4823-bhjf-23u4-eiufh`
+     */
+    RequestId: string;
 }
-

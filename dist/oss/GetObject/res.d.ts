@@ -1,3 +1,1 @@
-interface GetObjectResponse {
-}
-export { GetObjectResponse };
+export type GetObjectResponse = string;

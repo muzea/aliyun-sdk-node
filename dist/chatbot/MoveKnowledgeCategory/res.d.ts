@@ -1,3 +1,0 @@
-interface MoveKnowledgeCategoryResponse {
-}
-export { MoveKnowledgeCategoryResponse };

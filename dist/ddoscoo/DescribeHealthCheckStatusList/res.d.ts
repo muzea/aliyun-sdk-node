@@ -1,3 +1,0 @@
-interface DescribeHealthCheckStatusListResponse {
-}
-export { DescribeHealthCheckStatusListResponse };

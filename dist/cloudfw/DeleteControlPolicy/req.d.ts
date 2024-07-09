@@ -1,24 +1,29 @@
-interface DeleteControlPolicyRequest {
-    "RegionId"?: string;
+export interface DeleteControlPolicyRequest {
     /**
-    * 访问控制策略唯一ID。
-    * @example `00281255-d220-4db1-8f4f-c4df221ad84c`
-    */ "AclUuid": string;
+     * 流量的源IP地址。
+     * @example `192.0.XX.XX`
+     */
+    "SourceIp"?: string;
     /**
-    * 访问控制策略的流量方向。
-    * - **in**：外对内流量访问控制
-    * - **out**：内对外流量访问控制
-    * @example `in`
-    */ "Direction": string;
+     * 请求和接收消息的语言类型。
+     * 取值：
+     * - **zh**（默认）：中文
+     * - **en**：英文
+     * @example `zh`
+     */
+    "Lang"?: string;
     /**
-    * 访问者源IP地址。
-    * @example `1.2.3.4`
-    */ "SourceIp"?: string;
+     * 访问控制策略的唯一标识ID。
+     * 删除安全访问控制策略，需要提供该策略的唯一标识ID。您可调用[DescribeControlPolicy](~~138866~~)接口获取该ID。
+     * @example `00281255-d220-4db1-8f4f-c4df221ad84c`
+     */
+    "AclUuid": string;
     /**
-    * 指定请求和接收消息的语言类型。
-    * - **zh**：中文
-    * - **en**：英文
-    * @example `zh`
-    */ "Lang"?: string;
+     * 安全访问控制策略管控的流量方向。
+     * 取值：
+     * - **in**：流量从外到内。
+     * - **out**：流量从内到外。
+     * @example `in`
+     */
+    "Direction": string;
 }
-export { DeleteControlPolicyRequest };

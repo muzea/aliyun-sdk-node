@@ -1,11 +1,22 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/live.DescribeLiveCertificateDetailResponse
 export interface DescribeLiveCertificateDetailResponse {
-	RequestId: string;
-	Cert: string;
-	Key: string;
-	CertId: number;
-	CertName: string;
+    /**
+     * 证书名称。
+     * @example `Cert-****`
+     */
+    CertName: string;
+    /**
+     * 证书内容。
+     * @example `-----BEGIN CERTIFICATE-----****-----END CERTIFICATE-----`
+     */
+    Cert: string;
+    /**
+     * 请求ID。
+     * @example `C7C69682-7F88-40DD-A198-10D0309E439B`
+     */
+    RequestId: string;
+    /**
+     * 证书ID。
+     * @example `23451111`
+     */
+    CertId: number;
 }
-

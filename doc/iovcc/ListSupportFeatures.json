@@ -1,18 +1,1 @@
-{
-  "name": "ListSupportFeatures",
-  "protocol": "HTTPS|HTTP",
-  "method": "POST|GET",
-  "path": "/",
-  "timeout": 10000,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Host",
-      "checkBlank": "false",
-      "required": false,
-      "docRequired": false
-    }
-  },
-  "res": {}
-}
+{"methods":["post","get"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"read","systemTags":{"operationType":"list"},"parameters":[],"responses":{"200":{"schema":{"type":"object","properties":{"RequestId":{"description":"请求ID","type":"string","example":"1B0DA203-B3BA-43CD-9506-5DF33ACEFF26"},"SupportFeatures":{"description":"已开通的服务模块","type":"array","items":{"type":"object","properties":{"Name":{"description":"服务名称","type":"string","example":"OTA"}}}}}}}},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"RequestId\\\": \\\"1B0DA203-B3BA-43CD-9506-5DF33ACEFF26\\\",\\n  \\\"SupportFeatures\\\": [\\n    {\\n      \\\"Name\\\": \\\"OTA\\\"\\n    }\\n  ]\\n}\",\"errorExample\":\"{\\n  \\\"RequestId\\\": \\\"6F25F67C-F411-499F-BCE2-67CA563CB064\\\",\\n  \\\"HostId\\\": \\\"iovcc.cn-shanghai.aliyuncs.com\\\",\\n  \\\"Code\\\": \\\"InvalidTenant\\\",\\n  \\\"Message\\\": \\\"User is not a valid tenant\\\"\\n}\"},{\"type\":\"xml\",\"example\":\"<ListSupportFeaturesResponse>\\r\\n\\t<SupportFeatures>\\r\\n\\t\\t<Name>OTA</Name>\\r\\n\\t</SupportFeatures>\\r\\n\\t<SupportFeatures>\\r\\n\\t\\t<Name>DIS</Name>\\r\\n\\t</SupportFeatures>\\r\\n\\t<SupportFeatures>\\r\\n\\t\\t<Name>IAS</Name>\\r\\n\\t</SupportFeatures>\\r\\n\\t<SupportFeatures>\\r\\n\\t\\t<Name>RA</Name>\\r\\n\\t</SupportFeatures>\\r\\n\\t<SupportFeatures>\\r\\n\\t\\t<Name>CMNS</Name>\\r\\n\\t</SupportFeatures>\\r\\n\\t<RequestId>1B0DA203-B3BA-43CD-9506-5DF33ACEFF26</RequestId>\\r\\n</ListSupportFeaturesResponse>\",\"errorExample\":\"\"}]","title":"查询已开通的服务列表","summary":"调用ListSupportFeatures查询已开通的服务列表。","description":"> 查询用户已开通哪些IoVCC的服务模块。","requestParamsDescription":" ","responseParamsDescription":" ","extraInfo":" "}

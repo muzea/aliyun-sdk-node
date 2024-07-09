@@ -1,7 +1,3 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.DeactivateRouterInterfaceResponse
 export interface DeactivateRouterInterfaceResponse {
-	RequestId: string;
+    RequestId: string;
 }
-

@@ -1,3 +1,0 @@
-interface DescribeDdosAttackEventSourceIpsResponse {
-}
-export { DescribeDdosAttackEventSourceIpsResponse };

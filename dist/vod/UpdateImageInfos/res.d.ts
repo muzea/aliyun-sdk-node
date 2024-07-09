@@ -1,13 +1,13 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vod.NonExistImageIds
-export interface NonExistImageIds {
-	ImageId: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vod.UpdateImageInfosResponse
 export interface UpdateImageInfosResponse {
-	RequestId: string;
-	NonExistImageIds: NonExistImageIds;
+    /**
+     * 请求ID。
+     * @example `25818875-5F78-4AF6-D7393642CA58****`
+     */
+    RequestId: string;
+    NonExistImageIds: {
+        /**
+         * 不存在的图片ID列表。
+         */
+        ImageId: string[];
+    };
 }
-

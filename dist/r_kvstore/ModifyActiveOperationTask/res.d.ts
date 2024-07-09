@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.ModifyActiveOperationTaskResponse
 export interface ModifyActiveOperationTaskResponse {
-	RequestId: string;
-	Ids: string;
+    /**
+     * 运维任务ID，多个ID间使用英文逗号（,）分隔。
+     * @example `11111,22222`
+     */
+    Ids: string;
+    /**
+     * 请求ID。
+     * @example `5D622714-AEDD-4609-9167-F5DDD3D1****`
+     */
+    RequestId: string;
 }
-

@@ -1,5 +1,2 @@
-interface DescribeMonitorItemsRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeMonitorItemsRequest {
 }
-export { DescribeMonitorItemsRequest };

@@ -1,3 +1,1 @@
-interface HeadObjectResponse {
-}
-export { HeadObjectResponse };
+export type HeadObjectResponse = any;

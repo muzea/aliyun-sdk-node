@@ -1,3 +1,0 @@
-interface DescribeCcSocketDetailResponse {
-}
-export { DescribeCcSocketDetailResponse };

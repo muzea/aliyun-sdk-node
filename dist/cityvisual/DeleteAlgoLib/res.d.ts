@@ -1,3 +1,0 @@
-interface DeleteAlgoLibResponse {
-}
-export { DeleteAlgoLibResponse };

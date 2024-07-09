@@ -1,8 +1,6 @@
-interface RemoveBandwidthPackageIpsRequest {
+export interface RemoveBandwidthPackageIpsRequest {
     "RegionId": string;
     "BandwidthPackageId": string;
-    "RemovedIpAddresses": string[];
-    "OwnerId"?: number;
     "ClientToken"?: string;
+    "RemovedIpAddresses": string[];
 }
-export { RemoveBandwidthPackageIpsRequest };

@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.CreateCacheAnalysisTaskResponse
 export interface CreateCacheAnalysisTaskResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `BBC1E3D6-7C88-4DF5-9A3D-0DB1E6D9****`
+     */
+    RequestId: string;
 }
-

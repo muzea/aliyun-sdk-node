@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.CheckAccountNameAvailableResponse
 export interface CheckAccountNameAvailableResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `5E4AA101-1EE5-41C0-AE6D-0F066331AC1C`
+     */
+    RequestId: string;
 }
-

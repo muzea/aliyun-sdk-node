@@ -1,3 +1,0 @@
-interface GetEndPointByDomainResponse {
-}
-export { GetEndPointByDomainResponse };

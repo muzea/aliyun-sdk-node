@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ess.AttachInstancesResponse
 export interface AttachInstancesResponse {
-	ScalingActivityId: string;
-	RequestId: string;
+    /**
+     * 伸缩活动的ID。
+     * @example `asa-bp1crxor24s28xf1****`
+     */
+    ScalingActivityId: string;
+    /**
+     * 请求ID。
+     * @example `473469C7-AA6F-4DC5-B3DB-A3DC0DE****`
+     */
+    RequestId: string;
 }
-

@@ -1,5 +1,2 @@
-interface DescribeAutoDelConfigRequest {
-    "RegionId"?: string;
-    "SourceIp"?: string;
+export interface DescribeAutoDelConfigRequest {
 }
-export { DescribeAutoDelConfigRequest };

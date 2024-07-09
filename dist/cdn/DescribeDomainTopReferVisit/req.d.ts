@@ -1,25 +1,27 @@
-interface DescribeDomainTopReferVisitRequest {
-    "RegionId"?: string;
+export interface DescribeDomainTopReferVisitRequest {
     /**
-    * 如果不填该参数，默认返回所有加速域名合并后数据。
-    * 可以输入需要查询的加速域名 ，多个域名用逗号(,)分隔。
-    * @example `example.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 加速域名，多个域名用英文逗号（,）分隔。
+     * @example `example.com`
+     */
+    "DomainName": string;
     /**
-    * 获取数据起始时间，不写默认读取过去24小时数据。
-    * - 日期格式按照ISO8601表示法，并使用UTC时间。
-    * - 格式为：YYYY-MM-DDThh:mm:ssZ。
-    * - 最小数据粒度为5分钟。
-    * @example `2017-12-21T08:00:00:00Z`
-    */ "StartTime"?: string;
+     * 获取数据起始时间。
+     * 日期格式按照ISO8601表示法，并使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。
+     * @example `2019-12-21T12:00:00Z`
+     */
+    "StartTime"?: string;
     /**
-    * 排序方式。支持**traf**和**pv**，默认值：**pv**。
-    * @example `pv`
-    */ "SortBy"?: string;
+     * 获取数据结束时间点。
+     * 日期格式按照ISO8601表示法，并使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。
+     * 结束时间大于起始时间。
+     * @example `2019-12-22T12:00:00Z`
+     */
+    "EndTime"?: string;
     /**
-    * 百分比。
-    * @example `0.5`
-    */ "Percent"?: string;
+     * 排序方式。取值：
+     * - **traf**：流量。
+     * - **pv**（默认值）：访问次数。
+     * @example `pv`
+     */
+    "SortBy"?: string;
 }
-export { DescribeDomainTopReferVisitRequest };

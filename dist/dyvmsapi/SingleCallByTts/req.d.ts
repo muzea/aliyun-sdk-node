@@ -1,43 +1,57 @@
-interface SingleCallByTtsRequest {
-    "RegionId"?: string;
+export interface SingleCallByTtsRequest {
     /**
-    * 被叫显号，必须是已购买的号码。
-    * 您可以在[语音服务控制台](https://dyvms.console.aliyun.com/dyvms.htm#/number/normal)上查看已购买的号码。
-    * @example `4001112222`
-    */ "CalledShowNumber": string;
+     * 发送语音通知或语音验证码的外呼号码（被叫显号）。
+     * - 如果您使用的外呼号码是公共模式，该参数不填。公共模式详情请参见[公共模式](~~172104~~)。
+     * - 如果您使用的外呼号码是专属模式，请传入您的**真实号码**或**虚拟号码**。
+     * 您可以登录[语音服务控制台](https://dyvms.console.aliyun.com/number/list/normal)，在**真实号管理**页面查看已购买的**真实号**，在**虚拟号管理**页面查看已创建并绑定真实号的**虚拟号**。
+     * @example `0571****5678`
+     */
+    "CalledShowNumber"?: string;
     /**
-    * 被叫号码。仅支持中国大陆号码。
-    * @example `13700000000`
-    */ "CalledNumber": string;
+     * 接收语音通知或语音验证码的被叫号码。
+     * 号码格式：
+     * - 手机号码。示例：159****0000。
+     * - 固话号码。示例：0571****5678。
+     * - 国际区号+号码。示例：85200****00。
+     * > - 调用一次接口仅支持添加一个被叫号码。如果有多个被叫号码，可以多次调用。
+     * > - 针对同一个**资质信息+号码用途**，主叫号码拨打每一个被叫号码的频次进行限制：1次/分钟、5次/小时、20次/24小时。 流控规则计时从第一次正常外呼开始，超过这个频率就会触发流控。呼叫成功或失败都会消耗一次流控频率。
+     * @example `1590****000`
+     */
+    "CalledNumber": string;
     /**
-    * 文本转语音（TTS）模板ID。可以在[文本转语音模板页面](https://dyvms.console.aliyun.com/dyvms.htm#/template)查看模板ID。
-    * > 必须是已审核通过的文本转语音模板。
-    * @example `TTS_10001`
-    */ "TtsCode": string;
+     * 文本转语音模板或语音验证码模板的模板ID。
+     * 您登录[语音服务控制台](https://dyvms.console.aliyun.com/overview/home)，在以下页面获取模板ID，语音模板必须已通过审核。
+     * - 在**语音消息**>**语音验证码**获取**模板ID**。
+     * - 在**语音消息**>**语音通知**页面获取**模板ID**。
+     * > 语音模板归属账号和调用该接口的账号需保持一致。
+     * @example `TTS_28726****`
+     */
+    "TtsCode": string;
     /**
-    * RAM用户的虚拟账号ID。
-    * @example `155780923770`
-    */ "OwnerId"?: number;
+     * 语音模板中的变量参数，JSON格式。
+     * 变量规范详情，请参见[模板规范](https://help.aliyun.com/zh/vms/user-guide/voice-template-specification?spm=a2c4g.11186623.0.0.6ebf68529bX2fG)。
+     * @example `{"AckNum":"123456"}`
+     */
+    "TtsParam"?: string;
     /**
-    * 文本转语音（TTS）模板变量转换关系，格式为JSON。
-    * @example `{“AckNum”:”123456”}`
-    */ "TtsParam"?: string;
+     * 语音文件或语音验证的播放次数。取值范围：**1~3**，默认取值**3**。
+     * @example `3`
+     */
+    "PlayTimes"?: number;
     /**
-    * 语音通知的播放次数，取值范围为1~3。
-    * @example `3`
-    */ "PlayTimes"?: number;
+     * 语音通话的音量。取值范围：**0~100**，默认取值**100**。
+     * @example `100`
+     */
+    "Volume"?: number;
     /**
-    * 语音通知的播放音量。取值范围为0~100，默认为100。
-    * @example `100`
-    */ "Volume"?: number;
+     * 语音通话的语速。取值范围为：**-500~500**。
+     * @example `5`
+     */
+    "Speed"?: number;
     /**
-    * > 该参数为废弃参数，暂不支持使用。
-    * @example `5`
-    */ "Speed"?: number;
-    /**
-    * 预留给调用方使用的ID, 最终会通过在回执消息中将此ID带回给调用方。
-    * 字符串类型，长度为1~15个字节。
-    * @example `abcdefgh`
-    */ "OutId"?: string;
+     * 发起请求时预留给调用方的自定义ID，最终会通过回执消息将此ID带回给调用方。
+     * 字符串类型，长度限制为1~15个字符。
+     * @example `225869*****`
+     */
+    "OutId"?: string;
 }
-export { SingleCallByTtsRequest };

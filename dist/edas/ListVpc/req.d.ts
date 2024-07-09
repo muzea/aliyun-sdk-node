@@ -1,4 +1,2 @@
-interface ListVpcRequest {
-    "RegionId"?: string;
+export interface ListVpcRequest {
 }
-export { ListVpcRequest };

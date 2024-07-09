@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ram.AttachPolicyToUserResponse
 export interface AttachPolicyToUserResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `697852FB-50D7-44D9-9774-530C31EAC572`
+     */
+    RequestId: string;
 }
-

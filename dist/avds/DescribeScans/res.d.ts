@@ -1,3 +1,0 @@
-interface DescribeScansResponse {
-}
-export { DescribeScansResponse };

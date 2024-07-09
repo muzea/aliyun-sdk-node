@@ -1,38 +1,46 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/live.Info
-export interface Info {
-	Online: number;
-	DownFlow: number;
-	TranscodeTemplate: string;
-	Rate: string;
-	UserNumber: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/live.InfosInDescribeLiveDomainOnlineUserNum
-export interface InfosInDescribeLiveDomainOnlineUserNum {
-	Info: Info[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/live.LiveStreamOnlineUserNumInfo
-export interface LiveStreamOnlineUserNumInfo {
-	Time: string;
-	StreamUrl: string;
-	StreamName: string;
-	UserNumber: number;
-	Infos: InfosInDescribeLiveDomainOnlineUserNum;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/live.OnlineUserInfoInDescribeLiveDomainOnlineUserNum
-export interface OnlineUserInfoInDescribeLiveDomainOnlineUserNum {
-	LiveStreamOnlineUserNumInfo: LiveStreamOnlineUserNumInfo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/live.DescribeLiveDomainOnlineUserNumResponse
 export interface DescribeLiveDomainOnlineUserNumResponse {
-	RequestId: string;
-	StreamCount: number;
-	UserCount: number;
-	OnlineUserInfo: OnlineUserInfoInDescribeLiveDomainOnlineUserNum;
+    /**
+     * 请求ID。
+     * @example `3A3A8C3D-F8B2-4FBF-9319-771A11B855FA`
+     */
+    RequestId: string;
+    /**
+     * 查询时间下域名的所有在线人数。
+     * @example `1`
+     */
+    UserCount: number;
+    /**
+     * 流数。
+     * @example `1`
+     */
+    StreamCount: number;
+    OnlineUserInfo: {
+        /**
+         * 流的信息。
+         */
+        LiveStreamOnlineUserNumInfo: {
+            /**
+             * 流名称。
+             * @example `rtmp://example.com/test/liveStream****_3_1`
+             */
+            StreamName: string;
+            Infos: {
+                /**
+                 * 流统计信息。
+                 */
+                Info: {
+                    /**
+                     * 转码流或原始流的人数
+                     * @example `1`
+                     */
+                    UserNumber: number;
+                    /**
+                     * 转码模板。origin为原始流。
+                     * @example `origin`
+                     */
+                    TranscodeTemplate: string;
+                }[];
+            };
+        }[];
+    };
 }
-

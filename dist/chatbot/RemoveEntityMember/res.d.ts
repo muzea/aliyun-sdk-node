@@ -1,3 +1,0 @@
-interface RemoveEntityMemberResponse {
-}
-export { RemoveEntityMemberResponse };

@@ -1,56 +1,27 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.DrdsInstanceIdList
-export interface DrdsInstanceIdList {
-	DrdsInstanceId: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.IpWhiteList
-export interface IpWhiteList {
-	Ip: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.Vip
-export interface Vip {
-	Port: string;
-	IP: string;
-	VswitchId: string;
-	VpcId: string;
-	Type: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.VipsInQueryInstanceInfoByConn
-export interface VipsInQueryInstanceInfoByConn {
-	Vip: Vip[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.Data
-export interface Data {
-	Version: number;
-	SpecTypeName: string;
-	OrderId: number;
-	CreateTime: number;
-	DrdsInstanceId: string;
-	DbName: string;
-	VpcCloudInstanceId: string;
-	RegionId: string;
-	ZoneId: string;
-	AccountName: string;
-	SpecTypeId: string;
-	NetworkType: string;
-	Status: string;
-	Description: string;
-	Specification: string;
-	Type: string;
-	DrdsInstanceIdList: DrdsInstanceIdList;
-	IpWhiteList: IpWhiteList;
-	Vips: VipsInQueryInstanceInfoByConn;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.DescribeDrdsInstanceVersionResponse
 export interface DescribeDrdsInstanceVersionResponse {
-	RequestId: string;
-	Success: boolean;
-	Data: Data;
+    /**
+     * 请求是否成功。
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 请求ID。
+     * @example `2F7F8080-9132-4279-85D0-B7E5C4305162`
+     */
+    RequestId: string;
+    /**
+     * 实例版本详情。
+     */
+    Data: {
+        /**
+         * 最新实例版本。
+         * @example `5.4.12-16315258`
+         */
+        NewestVersion: string;
+        /**
+         * 当前实例版本。
+         * @example `5.3.12-15682777`
+         */
+        InstanceVersion: string;
+    };
 }
-

@@ -1,3 +1,0 @@
-interface DescribeAsyncOperationResponse {
-}
-export { DescribeAsyncOperationResponse };

@@ -1,3 +1,0 @@
-interface DownloadCcRouteRulesResponse {
-}
-export { DownloadCcRouteRulesResponse };

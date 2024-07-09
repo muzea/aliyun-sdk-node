@@ -1,13 +1,13 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/push.DeviceIdsInQueryDevicesByAccount
-export interface DeviceIdsInQueryDevicesByAccount {
-	DeviceId: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/push.QueryDevicesByAccountResponse
 export interface QueryDevicesByAccountResponse {
-	RequestId: string;
-	DeviceIds: DeviceIdsInQueryDevicesByAccount;
+    /**
+     * 请求ID。
+     * @example `A8A24108-2AD0-4F6E-81C7-A8A24C2C2AD0`
+     */
+    RequestId: string;
+    DeviceIds: {
+        /**
+         * 设备ID列表。
+         */
+        DeviceId: string[];
+    };
 }
-

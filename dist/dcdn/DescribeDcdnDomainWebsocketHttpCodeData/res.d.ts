@@ -1,76 +1,61 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.HttpCodeDataModule
-export interface HttpCodeDataModule {
-	Code: number;
-	Proportion: number;
-	Count: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.HttpCodeDataPerInterval
-export interface HttpCodeDataPerInterval {
-	HttpCodeDataModule: HttpCodeDataModule[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.WebsocketHttpCodeDataPerInterval
-export interface WebsocketHttpCodeDataPerInterval {
-	HttpCodeDataModule: HttpCodeDataModule[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.DataModule
-export interface DataModule {
-	StaticHttpTraffic: number;
-	StaticHttpBps: number;
-	DynamicHttpsAcc: number;
-	DynamicHttpOriginBps: number;
-	DynamicHttpsOriginBps: number;
-	StaticHttpsOriginTraffic: number;
-	StaticHttpAcc: number;
-	DynamicHttpsBps: number;
-	StaticHttpsBps: number;
-	OriginTraffic: number;
-	DynamicHttpAcc: number;
-	StaticHttpsTraffic: number;
-	TimeStamp: string;
-	Acc: number;
-	StaticHttpsAcc: number;
-	DynamicHttpOriginTraffic: number;
-	ReqHitRate: number;
-	StaticHttpQps: number;
-	WebsocketBps: number;
-	WebsocketTraffic: number;
-	DynamicHttpTraffic: number;
-	OriginBps: number;
-	Bps: number;
-	DynamicHttpBps: number;
-	StaticHttpOriginTraffic: number;
-	StaticHttpOriginBps: number;
-	Value: string;
-	Qps: number;
-	DynamicHttpsTraffic: number;
-	StaticHttpsQps: number;
-	DynamicHttpsOriginTraffic: number;
-	StaticHttpsOriginBps: number;
-	ByteHitRate: number;
-	DynamicHttpsQps: number;
-	DynamicHttpQps: number;
-	Traffic: number;
-	HttpCodeDataPerInterval: HttpCodeDataPerInterval;
-	WebsocketHttpCodeDataPerInterval: WebsocketHttpCodeDataPerInterval;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.DataPerIntervalInDescribeDcdnDomainWebsocketHttpCodeData
-export interface DataPerIntervalInDescribeDcdnDomainWebsocketHttpCodeData {
-	DataModule: DataModule[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.DescribeDcdnDomainWebsocketHttpCodeDataResponse
 export interface DescribeDcdnDomainWebsocketHttpCodeDataResponse {
-	RequestId: string;
-	DomainName: string;
-	StartTime: string;
-	EndTime: string;
-	DataInterval: string;
-	DataPerInterval: DataPerIntervalInDescribeDcdnDomainWebsocketHttpCodeData;
+    /**
+     * 结束时间。
+     * @example `2018-03-01T13:00:00Z`
+     */
+    EndTime: string;
+    /**
+     * 开始时间。
+     * @example `2018-03-01T05:00:00Z`
+     */
+    StartTime: string;
+    /**
+     * 请求ID。
+     * @example `91FC2D9D-B042-4634-8A5C-7B8E7482C22D`
+     */
+    RequestId: string;
+    /**
+     * 加速域名信息。
+     * @example `example.com`
+     */
+    DomainName: string;
+    /**
+     * 每条记录的时间间隔，以秒为单位。
+     * @example `3600`
+     */
+    DataInterval: string;
+    HttpCodeDataPerInterval: {
+        /**
+         * 返回码。
+         */
+        DataModule: {
+            /**
+             * 时间片起始时刻。
+             * @example `2018-03-01T13:00:00Z`
+             */
+            TimeStamp: string;
+            WebsocketHttpCode: {
+                /**
+                 * 各返回码占比使用数据列表。
+                 */
+                HttpCodeDataModule: {
+                    /**
+                     * HTTP返回码。
+                     * @example `404`
+                     */
+                    Code: number;
+                    /**
+                     * 占比使用数据。
+                     * @example `100`
+                     */
+                    Proportion: number;
+                    /**
+                     * 总数。
+                     * @example `16`
+                     */
+                    Count: number;
+                }[];
+            };
+        }[];
+    };
 }
-

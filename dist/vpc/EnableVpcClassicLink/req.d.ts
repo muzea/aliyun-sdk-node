@@ -1,17 +1,20 @@
-interface EnableVpcClassicLinkRequest {
+export interface EnableVpcClassicLinkRequest {
     /**
-    * 要开启ClassicLink的VPC所在的地域。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。
-    * @example `cn-hangzhou	`
-    */ "RegionId": string;
+     * 要开启ClassicLink功能的VPC所在的地域。
+     * 您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。
+     * @example `cn-hangzhou`
+     */
+    "RegionId": string;
     /**
-    * VPC的ID。
-    * @example `vpc-bp1m7v25emi1h5mtc****	`
-    */ "VpcId": string;
-    "OwnerId"?: number;
+     * 要开启ClassicLink功能的VPC的ID。
+     * @example `vpc-bp1m7v25emi1h5mtc****`
+     */
+    "VpcId": string;
     /**
-    * 客户端token，用于保证请求的幂等性。
-    * 由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符。
-    * @example `d7d24a21-f4ba-4454-9173-b3828dae492b	`
-    */ "ClientToken"?: string;
+     * 客户端Token，用于保证请求的幂等性。
+     * 从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。
+     * > 若您未指定，则系统自动使用API请求的**RequestId**作为**ClientToken**标识。每次API请求的**RequestId**可能不一样。
+     * @example `123e4567-e89b-12d3-a456-426655440000`
+     */
+    "ClientToken"?: string;
 }
-export { EnableVpcClassicLinkRequest };

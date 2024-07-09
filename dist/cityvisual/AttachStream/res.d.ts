@@ -1,3 +1,0 @@
-interface AttachStreamResponse {
-}
-export { AttachStreamResponse };

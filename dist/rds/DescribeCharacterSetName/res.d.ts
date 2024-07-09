@@ -1,14 +1,18 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.CharacterSetNameItems
-export interface CharacterSetNameItems {
-	CharacterSetName: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.DescribeCharacterSetNameResponse
 export interface DescribeCharacterSetNameResponse {
-	RequestId: string;
-	Engine: string;
-	CharacterSetNameItems: CharacterSetNameItems;
+    /**
+     * 数据库引擎类型。
+     * @example `mysql`
+     */
+    Engine: string;
+    /**
+     * 请求ID。
+     * @example `1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC`
+     */
+    RequestId: string;
+    CharacterSetNameItems: {
+        /**
+         * 支持的字符集列表。
+         */
+        CharacterSetName: string[];
+    };
 }
-

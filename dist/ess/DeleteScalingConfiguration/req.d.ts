@@ -1,11 +1,7 @@
-interface DeleteScalingConfigurationRequest {
-    "RegionId"?: string;
+export interface DeleteScalingConfigurationRequest {
     /**
-    * 待删除伸缩配置的ID。
-    * @example `eOs27Kb0oXvQcUYjEGel****`
-    */ "ScalingConfigurationId": string;
-    /**
-    * @example `123456123456`
-    */ "OwnerId"?: number;
+     * 待删除伸缩配置的ID。
+     * @example `asc-bp1bx8mzur534edp****`
+     */
+    "ScalingConfigurationId": string;
 }
-export { DeleteScalingConfigurationRequest };

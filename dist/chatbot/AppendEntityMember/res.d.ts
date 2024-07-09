@@ -1,3 +1,0 @@
-interface AppendEntityMemberResponse {
-}
-export { AppendEntityMemberResponse };

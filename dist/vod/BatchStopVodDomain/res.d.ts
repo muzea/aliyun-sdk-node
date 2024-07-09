@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vod.BatchStopVodDomainResponse
 export interface BatchStopVodDomainResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `15C66C7B-671A-4297-****-2C4477247A74`
+     */
+    RequestId: string;
 }
-

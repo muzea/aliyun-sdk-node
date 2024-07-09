@@ -1,3 +1,0 @@
-interface DoClearAuthResponse {
-}
-export { DoClearAuthResponse };

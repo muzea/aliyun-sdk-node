@@ -1,3 +1,0 @@
-interface GenerateAssistFileUploadUrlResponse {
-}
-export { GenerateAssistFileUploadUrlResponse };

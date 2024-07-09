@@ -1,588 +1,279 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.UidList
-export interface UidList {
-	Item: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.OmsData
-export interface OmsData {
-	Item: map[string]interface {}[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.FinanceUnitStatisInfo
-export interface FinanceUnitStatisInfo {
-	ResourceCount: number;
-	ResourceGroupCount: number;
-	SubUnitCount: number;
-	UserCount: number;
-	TotalResourceCount: number;
-	TotalUserCount: number;
-	TotalResourceGroupCount: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.FinanceUnit
-export interface FinanceUnit {
-	OwnerUid: number;
-	ParentUnitId: number;
-	UnitId: number;
-	UnitName: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.ResourceInstanceList
-export interface ResourceInstanceList {
-	ResourceUserId: number;
-	ResourceId: number;
-	CommodityCode: string;
-	ResourceUserName: string;
-	CommodityName: string;
-	ResourceGroup: string;
-	ResourceTag: string;
-	ResourceNick: string;
-	ResourceType: string;
-	ResourceStatus: string;
-	RelatedResources: string;
-	ApportionCode: string;
-	ApportionName: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.ConfigList
-export interface ConfigList {
-	ConfigList: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.Module
-export interface Module {
-	MonthGaapDeductedByPrepaidCard: string;
-	DeductedByCashCoupons: string;
-	PayerAccount: string;
-	GaapPretaxAmountLocal: string;
-	UsageStartDate: string;
-	MonthGaapPaymentAmount: string;
-	OrderId: string;
-	UnallocatedDeductedByCoupons: string;
-	ModuleName: string;
-	PretaxGrossAmount: string;
-	PaymentAmount: string;
-	UnallocatedDeductedByCashCoupons: string;
-	PretaxAmount: string;
-	BillingCycle: string;
-	UnallocatedPricingDiscount: string;
-	GaapPretaxGrossAmount: string;
-	ProductCode: string;
-	InstanceID: string;
-	UnallocatedPretaxAmount: string;
-	PriceType: string;
-	GaapPricingDiscount: string;
-	AccountingUnit: string;
-	MonthGaapPretaxAmount: string;
-	Region: string;
-	PricingDiscount: string;
-	GaapPretaxAmount: string;
-	ResourceGroup: string;
-	SubOrderId: string;
-	UnallocatedDeductedByPrepaidCard: string;
-	MonthGaapPretaxGrossAmount: string;
-	UnallocatedPretaxGrossAmount: string;
-	DeductedByCoupons: string;
-	Tag: string;
-	OwnerID: string;
-	SubscriptionType: string;
-	PayTime: string;
-	GaapDeductedByPrepaidCard: string;
-	ModuleCode: string;
-	MonthGaapPretaxAmountLocal: string;
-	GaapDeductedByCashCoupons: string;
-	DeductedByPrepaidCard: string;
-	GaapDeductedByCoupons: string;
-	PaymentCurrency: string;
-	UnallocatedPretaxAmountLocal: string;
-	ProductType: string;
-	Currency: string;
-	MonthGaapPricingDiscount: string;
-	UsageEndDate: string;
-	OrderType: string;
-	GaapPaymentAmount: string;
-	MonthGaapDeductedByCoupons: string;
-	PretaxAmountLocal: string;
-	BillType: string;
-	UnallocatedPaymentAmount: string;
-	MonthGaapDeductedByCashCoupons: string;
-	ConfigList: ConfigList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.ModuleList
-export interface ModuleList {
-	Module: Module[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.Item
-export interface Item {
-	Tax: number;
-	PreviousBillingCycleBalance: number;
-	PayerAccount: string;
-	UsageStartTime: string;
-	SuborderID: string;
-	SolutionCode: string;
-	ProductDetail: string;
-	Promotion: string;
-	Usage: string;
-	Seller: string;
-	PretaxAmountLocal: number;
-	OutstandingAmount: number;
-	DeductedByResourcePackage: string;
-	ProductCode: string;
-	ListPrice: string;
-	Quantity: string;
-	InvoiceDiscount: number;
-	MybankPaymentAmount: number;
-	PretaxGrossAmount: number;
-	InstanceID: string;
-	RecordID: string;
-	Config: string;
-	Status: string;
-	Item: string;
-	ProductName: string;
-	Region: string;
-	PaymentAmount: number;
-	UsageEndTime: string;
-	RoundDownDiscount: string;
-	SolutionID: string;
-	ClearedTime: string;
-	InternetIP: string;
-	PaymentTime: string;
-	CreateTime: string;
-	LinkedCustomerOrderID: string;
-	CostUnit: string;
-	AfterTaxAmount: number;
-	ResourceGroup: string;
-	BillingType: string;
-	InstanceSpec: string;
-	Tag: string;
-	OwnerID: string;
-	SolutionName: string;
-	NickName: string;
-	SubscriptionType: string;
-	InstanceConfig: string;
-	DeductedByCashCoupons: number;
-	ServicePeriod: string;
-	InvoiceNo: string;
-	DiscountAmount: number;
-	BillID: string;
-	ListPriceUnit: string;
-	PaymentCurrency: string;
-	UsageUnit: string;
-	ProductType: string;
-	AccountDiscount: number;
-	Currency: string;
-	DeductedByPrepaidCard: number;
-	OriginalOrderID: string;
-	PaymentTransactionID: string;
-	OrderID: string;
-	OrderType: string;
-	DeductedByCoupons: number;
-	BillingItem: string;
-	Zone: string;
-	ChargeDiscount: number;
-	PretaxAmount: number;
-	IntranetIP: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.ItemsInQueryInstanceBill
-export interface ItemsInQueryInstanceBill {
-	Item: Item[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.Instance
-export interface Instance {
-	Region: string;
-	ExpectedReleaseTime: string;
-	PackageType: string;
-	DeductType: string;
-	CreateTime: string;
-	OwnerId: number;
-	TotalAmount: string;
-	RenewStatus: string;
-	SubStatus: string;
-	InstanceId: string;
-	TotalAmountUnit: string;
-	SubscriptionType: string;
-	RemainingAmountUnit: string;
-	StopTime: string;
-	Seller: string;
-	Remark: string;
-	ProductType: string;
-	ProductCode: string;
-	RenewalDuration: number;
-	RenewalDurationUnit: string;
-	RemainingAmount: string;
-	EffectiveTime: string;
-	ExpiryTime: string;
-	EndTime: string;
-	SellerId: number;
-	InstanceID: string;
-	ReleaseTime: string;
-	Status: string;
-	ApplicableProducts: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.Order
-export interface Order {
-	Region: string;
-	UsageEndTime: string;
-	PaymentTime: string;
-	CreateTime: string;
-	PaymentStatus: string;
-	Operator: string;
-	SubOrderId: string;
-	AfterTaxAmount: string;
-	OrderId: string;
-	OriginalConfig: string;
-	PretaxGrossAmount: string;
-	SubscriptionType: string;
-	Tax: string;
-	UsageStartTime: string;
-	PretaxAmount: string;
-	PaymentCurrency: string;
-	OrderSubType: string;
-	ProductType: string;
-	Currency: string;
-	ProductCode: string;
-	InstanceIDs: string;
-	OrderType: string;
-	Quantity: string;
-	PretaxAmountLocal: string;
-	Config: string;
-	RelatedOrderId: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.OrderListInQueryOrders
-export interface OrderListInQueryOrders {
-	Order: Order[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.Modules
-export interface Modules {
-	Module: Module[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.Property
-export interface Property {
-	Name: string;
-	Value: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.Properties
-export interface Properties {
-	Property: Property[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.AvailableDuration
-export interface AvailableDuration {
-	Name: string;
-	Value: number;
-	Unit: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.AvailableDurations
-export interface AvailableDurations {
-	AvailableDuration: AvailableDuration[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.Specification
-export interface Specification {
-	Name: string;
-	Value: string;
-	AvailableDurations: AvailableDurations;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.Specifications
-export interface Specifications {
-	Specification: Specification[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.PackageType
-export interface PackageType {
-	Name: string;
-	Code: string;
-	Properties: Properties;
-	Specifications: Specifications;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.PackageTypes
-export interface PackageTypes {
-	PackageType: PackageType[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.ResourcePackage
-export interface ResourcePackage {
-	ProductCode: string;
-	ProductType: string;
-	Name: string;
-	PackageTypes: PackageTypes;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.ResourcePackages
-export interface ResourcePackages {
-	ResourcePackage: ResourcePackage[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.Product
-export interface Product {
-	ProductCode: string;
-	ProductName: string;
-	ProductType: string;
-	SubscriptionType: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.ProductList
-export interface ProductList {
-	Product: Product[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.ModuleDetail
-export interface ModuleDetail {
-	InvoiceDiscount: number;
-	UnitPrice: number;
-	OriginalCost: number;
-	CostAfterDiscount: number;
-	ModuleCode: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.ModuleDetailsInGetPayAsYouGoPrice
-export interface ModuleDetailsInGetPayAsYouGoPrice {
-	ModuleDetail: ModuleDetail[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.PromotionDetail
-export interface PromotionDetail {
-	PromotionId: number;
-	PromotionName: string;
-	PromotionDesc: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.PromotionDetailsInGetPayAsYouGoPrice
-export interface PromotionDetailsInGetPayAsYouGoPrice {
-	PromotionDetail: PromotionDetail[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.AccountTransactionsListItem
-export interface AccountTransactionsListItem {
-	TransactionNumber: string;
-	TransactionTime: string;
-	TransactionFlow: string;
-	TransactionType: string;
-	TransactionChannel: string;
-	TransactionChannelSN: string;
-	FundType: string;
-	RecordID: string;
-	Remarks: string;
-	BillingCycle: string;
-	Amount: string;
-	Balance: string;
-	TransactionAccount: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.AccountTransactionsList
-export interface AccountTransactionsList {
-	AccountTransactionsList: AccountTransactionsListItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.Evaluate
-export interface Evaluate {
-	Id: number;
-	GmtCreate: string;
-	GmtModified: string;
-	UserId: number;
-	UserNick: string;
-	OutBizId: string;
-	BillId: number;
-	ItemId: number;
-	BillCycle: string;
-	BizType: string;
-	OriginalAmount: number;
-	PresentAmount: number;
-	CanInvoiceAmount: number;
-	InvoicedAmount: number;
-	OffsetCostAmount: number;
-	OffsetAcceptAmount: number;
-	Status: number;
-	OpId: string;
-	Name: string;
-	BizTime: string;
-	Type: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.EvaluateList
-export interface EvaluateList {
-	Evaluate: Evaluate[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.FinanceUnitDtoListItem
-export interface FinanceUnitDtoListItem {
-	ParentUnitId: number;
-	UnitName: string;
-	OwnerUid: number;
-	UnitId: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.Promotion
-export interface Promotion {
-	Id: number;
-	Name: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.Promotions
-export interface Promotions {
-	Promotion: Promotion[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.CustomerInvoiceAddress
-export interface CustomerInvoiceAddress {
-	Id: number;
-	UserId: number;
-	UserNick: string;
-	Addressee: string;
-	Province: string;
-	City: string;
-	County: string;
-	Street: string;
-	PostalCode: string;
-	Phone: string;
-	BizType: string;
-	DeliveryAddress: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.CustomerInvoiceAddressList
-export interface CustomerInvoiceAddressList {
-	CustomerInvoiceAddress: CustomerInvoiceAddress[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.CustomerInvoice
-export interface CustomerInvoice {
-	Id: number;
-	UserId: number;
-	UserNick: string;
-	InvoiceTitle: string;
-	CustomerType: number;
-	TaxpayerType: number;
-	Bank: string;
-	BankNo: string;
-	OperatingLicenseAddress: string;
-	OperatingLicensePhone: string;
-	RegisterNo: string;
-	StartCycle: number;
-	Status: number;
-	GmtCreate: string;
-	TaxationLicense: string;
-	AdjustType: number;
-	EndCycle: number;
-	TitleChangeInstructions: string;
-	IssueType: number;
-	Type: number;
-	DefaultRemark: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.CustomerInvoiceList
-export interface CustomerInvoiceList {
-	CustomerInvoice: CustomerInvoice[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.AttributeValue
-export interface AttributeValue {
-	Type: string;
-	Name: string;
-	Value: string;
-	Remark: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.Values
-export interface Values {
-	AttributeValue: AttributeValue[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.Attribute
-export interface Attribute {
-	Code: string;
-	Name: string;
-	Unit: string;
-	Values: Values;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.AttributeList
-export interface AttributeList {
-	Attribute: Attribute[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.Data
-export interface Data {
-	ToUnitUserId: number;
-	TradePrice: number;
-	HostId: string;
-	TotalUnAppliedInvoiceAmount: number;
-	OriginalPrice: number;
-	ToUnitId: number;
-	OrderId: string;
-	HostingStatus: string;
-	TotalCount: number;
-	CreditLimitStatus: string;
-	BillingCycle: string;
-	OutstandingAmount: number;
-	Quantity: number;
-	AvailableCashAmount: string;
-	HostName: string;
-	TotalOutstandingAmount: number;
-	NewInvoiceAmount: number;
-	Marker: string;
-	AccountType: string;
-	AvailableAmount: string;
-	PageSize: number;
-	MybankCreditAmount: string;
-	UnitId: number;
-	CreditAmount: string;
-	AccountID: string;
-	InstanceId: string;
-	OwnerUid: number;
-	InvoiceApplyId: number;
-	Boolean: boolean;
-	IsCertified: boolean;
-	TotalInvoiceAmount: number;
-	PageNum: number;
-	IsSuccess: boolean;
-	Currency: string;
-	LoginEmail: string;
-	DiscountPrice: number;
-	AccountName: string;
-	Mpk: number;
-	UidList: UidList;
-	OmsData: OmsData;
-	FinanceUnitStatisInfo: FinanceUnitStatisInfo;
-	FinanceUnit: FinanceUnit;
-	ResourceInstanceDtoList: ResourceInstanceList[];
-	ModuleList: ModuleList;
-	Items: ItemsInQueryInstanceBill;
-	InstanceList: Instance[];
-	OrderList: OrderListInQueryOrders;
-	Modules: Modules;
-	ResourcePackages: ResourcePackages;
-	ProductList: ProductList;
-	ModuleDetails: ModuleDetailsInGetPayAsYouGoPrice;
-	PromotionDetails: PromotionDetailsInGetPayAsYouGoPrice;
-	AccountTransactionsList: AccountTransactionsList;
-	EvaluateList: EvaluateList;
-	FinanceUnitDtoList: FinanceUnitDtoListItem[];
-	Promotions: Promotions;
-	CustomerInvoiceAddressList: CustomerInvoiceAddressList;
-	CustomerInvoiceList: CustomerInvoiceList;
-	AttributeList: AttributeList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/bssopenapi.QueryInstanceBillResponse
 export interface QueryInstanceBillResponse {
-	RequestId: string;
-	Success: boolean;
-	Code: string;
-	Message: string;
-	Data: Data;
+    /**
+     * 状态码。
+     * @example `Success`
+     */
+    Code: string;
+    /**
+     * 错误信息。
+     * @example `Successful!`
+     */
+    Message: string;
+    /**
+     * 请求ID。
+     * @example `79EE7556-0CFD-44EB-9CD6-B3B526E3A85F`
+     */
+    RequestId: string;
+    /**
+     * 是否成功。
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 返回数据。
+     */
+    Data: {
+        /**
+         * 页码。
+         * @example `1`
+         */
+        PageNum: number;
+        /**
+         * 账单日期，格式：YYYY－MM。
+         * @example `2020-03`
+         */
+        BillingCycle: string;
+        /**
+         * 账号ID。
+         * @example `185xxxx3489`
+         */
+        AccountID: string;
+        /**
+         * 每页数量。
+         * @example `20`
+         */
+        PageSize: number;
+        /**
+         * 总记录数。
+         * @example `2`
+         */
+        TotalCount: number;
+        /**
+         * 用户账号。
+         * @example `test@test.aliyunid.com`
+         */
+        AccountName: string;
+        Items: {
+            /**
+             * 账单详情。
+             */
+            Item: {
+                /**
+                 * 账单日期，仅当Granularity为DAILY时有值，格式为YYYY-MM-DD。
+                 * @example `2020-03`
+                 */
+                BillingDate: string;
+                /**
+                 * 实例详细配置。
+                 * @example `CPU:12`
+                 */
+                InstanceConfig: string;
+                /**
+                 * 公网IP。
+                 * @example `34.xx.x.x`
+                 */
+                InternetIP: string;
+                /**
+                 * 账单类型：
+                 * - SubscriptionOrder （预付订单）。
+                 * - PayAsYouGoBill （后付账单）。
+                 * - Refund （退款）。
+                 * - Adjustment （调账）。
+                 * @example `PayAsYouGoBill`
+                 */
+                Item: string;
+                /**
+                 * 标签。
+                 * @example `tag`
+                 */
+                Tag: string;
+                /**
+                 * 实例ID。
+                 * @example `i-kjhdskjgshfdlkjfdh`
+                 */
+                InstanceID: string;
+                /**
+                 * 币种，取值：
+                 * - CNY。
+                 * - USD。
+                 * - JPY。
+                 * @example `CNY`
+                 */
+                Currency: string;
+                /**
+                 * <props="china">代金券抵扣。</props>
+                 * @example `0`
+                 */
+                DeductedByCashCoupons: number;
+                /**
+                 * 订阅类型，取值：
+                 * - Subscription：预付费。
+                 * - PayAsYouGo：后付费。
+                 * > 必须和ProductCode参数一起使用。
+                 * @example `PayAsYouGo`
+                 */
+                SubscriptionType: string;
+                /**
+                 * 实例规格。
+                 * @example `ecs.sn1ne.3xlarge`
+                 */
+                InstanceSpec: string;
+                /**
+                 * 优惠券优惠金额。
+                 * @example `0`
+                 */
+                DeductedByCoupons: number;
+                /**
+                 * 计费项。仅当IsBillingItem=true有值。
+                 * @example `其他`
+                 */
+                BillingItem: string;
+                /**
+                 * 地域。
+                 * @example `杭州`
+                 */
+                Region: string;
+                /**
+                 * <props="china">未结清金额</props>
+                 * @example `0`
+                 */
+                OutstandingAmount: number;
+                /**
+                 * 财务单元。
+                 * @example `未分配`
+                 */
+                CostUnit: string;
+                /**
+                 * 单价单位, 仅当isBillingItem为true时有效。
+                 * @example `元`
+                 */
+                ListPriceUnit: string;
+                /**
+                 * 资源组。
+                 * @example `默认资源组`
+                 */
+                ResourceGroup: string;
+                /**
+                 * 产品Code，与费用中心账单产品Code一致
+                 * @example `rds`
+                 */
+                PipCode: string;
+                /**
+                 * 服务周期单位
+                 * @example `秒`
+                 */
+                ServicePeriodUnit: string;
+                /**
+                 * 应付金额。
+                 * @example `0`
+                 */
+                PretaxAmount: number;
+                /**
+                 * 商品Code，与费用中心产品明细Code一致
+                 * @example `rds`
+                 */
+                CommodityCode: string;
+                /**
+                 * 产品名称。
+                 * @example `云数据库RDS`
+                 */
+                ProductName: string;
+                /**
+                 * 信用额度退款抵扣。
+                 * @example `0`
+                 */
+                AdjustAmount: number;
+                /**
+                 * 实例昵称。
+                 * @example `test`
+                 */
+                NickName: string;
+                /**
+                 * 产品明细。
+                 * @example `云数据库RDS`
+                 */
+                ProductDetail: string;
+                /**
+                 * 用量, 仅当isBillingItem为true时有效。
+                 * @example `100`
+                 */
+                Usage: string;
+                /**
+                 * 内网IP。
+                 * @example `192.xx.xx.xx`
+                 */
+                IntranetIP: string;
+                /**
+                 * 子账号AccountID（多账号代付场景）。
+                 * @example `169***013`
+                 */
+                OwnerID: string;
+                /**
+                 * <props="china">储值卡抵扣。</props>
+                 * @example `0`
+                 */
+                DeductedByPrepaidCard: number;
+                /**
+                 * 用量单位, 仅当isBillingItem为true时有效。
+                 * @example `GB`
+                 */
+                UsageUnit: string;
+                /**
+                 * <props="china">现金支付。</props>
+                 * @example `0`
+                 */
+                PaymentAmount: number;
+                /**
+                 * 优惠金额。
+                 * @example `0`
+                 */
+                InvoiceDiscount: number;
+                /**
+                 * 资源包抵扣。
+                 * @example `NULL`
+                 */
+                DeductedByResourcePackage: string;
+                /**
+                 * 产品类型。
+                 * @example `rds`
+                 */
+                ProductType: string;
+                /**
+                 * 服务周期。
+                 * @example `10`
+                 */
+                ServicePeriod: string;
+                /**
+                 * 可用区。
+                 * @example `cn-hangzhou-h`
+                 */
+                Zone: string;
+                /**
+                 * 单价, 仅当isBillingItem为true时有效。
+                 * @example `100`
+                 */
+                ListPrice: string;
+                /**
+                 * 原始金额。
+                 * @example `0`
+                 */
+                PretaxGrossAmount: number;
+                /**
+                 * 现金支付（不包含信用额度退款抵扣）。
+                 * @example `0`
+                 */
+                CashAmount: number;
+                /**
+                 * 产品代码。
+                 * @example `rds`
+                 */
+                ProductCode: string;
+                /**
+                 * 计费方式。
+                 * @example `其它`
+                 */
+                BillingType: string;
+            }[];
+        };
+    };
 }
-

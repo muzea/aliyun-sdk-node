@@ -1,6 +1,7 @@
-interface DescribeDBClusterAccessWhitelistRequest {
-    "RegionId"?: string;
+export interface DescribeDBClusterAccessWhitelistRequest {
+    /**
+     * 集群ID。
+     * @example `pc-***************`
+     */
     "DBClusterId": string;
-    "OwnerId"?: number;
 }
-export { DescribeDBClusterAccessWhitelistRequest };

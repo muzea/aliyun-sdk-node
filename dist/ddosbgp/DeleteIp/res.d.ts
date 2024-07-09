@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ddosbgp.DeleteIpResponse
 export interface DeleteIpResponse {
-	RequestId: string;
+    /**
+     * 本次请求的ID。
+     * @example `C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E`
+     */
+    RequestId: string;
 }
-

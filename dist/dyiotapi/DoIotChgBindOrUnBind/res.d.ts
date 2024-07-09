@@ -1,3 +1,0 @@
-interface DoIotChgBindOrUnBindResponse {
-}
-export { DoIotChgBindOrUnBindResponse };

@@ -1,5 +1,2 @@
-interface DescAccountSummaryRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescAccountSummaryRequest {
 }
-export { DescAccountSummaryRequest };

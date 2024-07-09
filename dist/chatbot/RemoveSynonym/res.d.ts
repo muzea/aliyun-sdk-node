@@ -1,3 +1,0 @@
-interface RemoveSynonymResponse {
-}
-export { RemoveSynonymResponse };

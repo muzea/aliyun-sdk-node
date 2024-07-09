@@ -1,3 +1,0 @@
-interface CountLabGatewaysResponse {
-}
-export { CountLabGatewaysResponse };

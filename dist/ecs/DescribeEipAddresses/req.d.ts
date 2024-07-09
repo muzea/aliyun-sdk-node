@@ -1,6 +1,5 @@
-interface DescribeEipAddressesRequest {
+export interface DescribeEipAddressesRequest {
     "RegionId": string;
-    "OwnerId"?: number;
     "Status"?: string;
     "EipAddress"?: string;
     "AllocationId"?: string;
@@ -16,4 +15,3 @@ interface DescribeEipAddressesRequest {
     "AssociatedInstanceId"?: string;
     "ChargeType"?: string;
 }
-export { DescribeEipAddressesRequest };

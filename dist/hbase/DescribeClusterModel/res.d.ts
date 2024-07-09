@@ -1,3 +1,0 @@
-interface DescribeClusterModelResponse {
-}
-export { DescribeClusterModelResponse };

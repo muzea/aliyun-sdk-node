@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/smartag.AssociateACLResponse
 export interface AssociateACLResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `C9A75915-0260-4335-851A-D866A7ED396C`
+     */
+    RequestId: string;
 }
-

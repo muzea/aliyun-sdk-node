@@ -1,3 +1,0 @@
-interface DescribeDomainConfigResponse {
-}
-export { DescribeDomainConfigResponse };

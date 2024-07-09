@@ -1,3 +1,0 @@
-interface GetEndPointResponse {
-}
-export { GetEndPointResponse };

@@ -1,18 +1,1 @@
-{
-  "name": "DescribeInstanceSpecifications",
-  "protocol": "HTTPS|HTTP",
-  "method": "GET",
-  "path": "/pop/v1/paas/quota/instanceSpecifications",
-  "summary_cn": "获取应用实例规格信息",
-  "abc_id": 126618,
-  "timeout": 5000,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Query",
-      "required": false
-    }
-  },
-  "res": {}
-}
+{"path":"/pop/v1/paas/quota/instanceSpecifications","methods":["get"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"read","deprecated":false,"systemTags":{"operationType":"get","abilityTreeCode":"6337","abilityTreeNodes":["FEATUREsaeD9PL61"]},"parameters":[],"responses":{"200":{"schema":{"description":"返回数据。","type":"object","properties":{"RequestId":{"description":"请求ID。","type":"string","example":"91F93257-7A4A-4BD3-9A7E-2F6EAE6D****"},"Message":{"description":"附加信息。取值说明如下：\n\n- 请求正常，返回**success**。\n- 请求异常，返回具体异常错误码。","type":"string","example":"success"},"TraceId":{"description":"调用链ID，用于精确查询调用信息。","type":"string","example":"0a98a02315955564772843261e****"},"Data":{"description":"实例规格信息。","type":"array","items":{"description":"实例规格信息。","type":"object","properties":{"Cpu":{"description":"CPU大小，规格为微核。","type":"integer","format":"int32","example":"2000"},"Version":{"description":"规格配置版本号。","type":"integer","format":"int32","example":"0"},"Memory":{"description":"内存规格，单位为MB。","type":"integer","format":"int32","example":"4096"},"SpecInfo":{"description":"规格配置名称。","type":"string","example":"通用型4"},"Id":{"description":"规格配置ID。","type":"integer","format":"int32","example":"4"},"Enable":{"description":"实例是否可用。取值说明如下：\n\n- **true**：可用。\n- **false**：不可用。","type":"boolean","example":"true"}}}},"ErrorCode":{"description":"错误码。取值说明如下：\n\n- 请求成功：不返回**ErrorCode**字段。\n- 请求失败：返回**ErrorCode**字段。具体信息，请参见本文的**错误码**目录。","type":"string","example":"空"},"Code":{"description":"接口状态或POP错误码。取值说明如下：\n\n- **2xx**：成功。\n- **3xx**：重定向。\n- **4xx**：请求错误。\n- **5xx**：服务器错误。","type":"string","example":"200"},"Success":{"description":"获取实例规格是否成功。取值说明如下：\n\n- **true**：获取成功。\n- **false**：获取失败。","type":"boolean","example":"true"}}}}},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"RequestId\\\": \\\"91F93257-7A4A-4BD3-9A7E-2F6EAE6D****\\\",\\n  \\\"Message\\\": \\\"success\\\",\\n  \\\"TraceId\\\": \\\"0a98a02315955564772843261e****\\\",\\n  \\\"Data\\\": [\\n    {\\n      \\\"Cpu\\\": 2000,\\n      \\\"Version\\\": 0,\\n      \\\"Memory\\\": 4096,\\n      \\\"SpecInfo\\\": \\\"通用型4\\\",\\n      \\\"Id\\\": 4,\\n      \\\"Enable\\\": true\\n    }\\n  ],\\n  \\\"ErrorCode\\\": \\\"空\\\",\\n  \\\"Code\\\": \\\"200\\\",\\n  \\\"Success\\\": true\\n}\",\"errorExample\":\"\"},{\"type\":\"xml\",\"example\":\"<DescribeInstanceSpecificationsResponse>\\n    <RequestId>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</RequestId>\\n    <Message>success</Message>\\n    <TraceId>0a98a02315955564772843261e****</TraceId>\\n    <Data>\\n        <Cpu>2000</Cpu>\\n        <Version>0</Version>\\n        <Memory>4096</Memory>\\n        <SpecInfo>通用型4</SpecInfo>\\n        <Id>4</Id>\\n        <Enable>true</Enable>\\n    </Data>\\n    <Code>200</Code>\\n    <Success>true</Success>\\n</DescribeInstanceSpecificationsResponse>\",\"errorExample\":\"\"}]","title":"获取应用实例规格信息","summary":"调用DescribeInstanceSpecifications接口获取应用实例规格信息。"}

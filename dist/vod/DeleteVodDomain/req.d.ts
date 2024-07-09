@@ -1,9 +1,7 @@
-interface DeleteVodDomainRequest {
-    "RegionId"?: string;
+export interface DeleteVodDomainRequest {
     /**
-    * 点播加速域名，多个用英文逗号分隔。
-    * @example `example.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 要删除的点播加速域名。
+     * @example `example.com`
+     */
+    "DomainName": string;
 }
-export { DeleteVodDomainRequest };

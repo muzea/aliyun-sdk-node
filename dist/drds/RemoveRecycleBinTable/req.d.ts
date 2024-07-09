@@ -1,7 +1,22 @@
-interface RemoveRecycleBinTableRequest {
+export interface RemoveRecycleBinTableRequest {
+    /**
+     * 地域ID。
+     * @example `cn-hangzhou`
+     */
     "RegionId"?: string;
-    "DbName": string;
-    "TableName"?: string;
+    /**
+     * DRDS实例ID。
+     * @example `drds************`
+     */
     "DrdsInstanceId": string;
+    /**
+     * DRDS数据库名称。
+     * @example `test`
+     */
+    "DbName": string;
+    /**
+     * DRDS逻辑表名称。
+     * @example `test`
+     */
+    "TableName"?: string;
 }
-export { RemoveRecycleBinTableRequest };

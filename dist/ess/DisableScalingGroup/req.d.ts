@@ -1,11 +1,7 @@
-interface DisableScalingGroupRequest {
-    "RegionId"?: string;
+export interface DisableScalingGroupRequest {
     /**
-    * 伸缩组的ID。
-    * @example `dmIDKNcyWfzncX9MWX1****`
-    */ "ScalingGroupId": string;
-    /**
-    * @example `123456123456`
-    */ "OwnerId"?: number;
+     * 伸缩组的ID。
+     * @example `asg-bp18p2yfxow2dloq****`
+     */
+    "ScalingGroupId": string;
 }
-export { DisableScalingGroupRequest };

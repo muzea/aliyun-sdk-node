@@ -1,8 +1,7 @@
-interface DescribeEventRuleTargetListRequest {
-    "RegionId"?: string;
+export interface DescribeEventRuleTargetListRequest {
     /**
-    * 报警规则名称。
-    * @example `testRule`
-    */ "RuleName": string;
+     * 事件报警规则名称。
+     * @example `testRule`
+     */
+    "RuleName": string;
 }
-export { DescribeEventRuleTargetListRequest };

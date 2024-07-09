@@ -1,31 +1,34 @@
-interface DescribeLiveRecordConfigRequest {
-    "RegionId"?: string;
+export interface DescribeLiveRecordConfigRequest {
     /**
-    * 您的加速域名。
-    * @example `www.yourdomain.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 主播流域名。
+     * @example `example.com`
+     */
+    "DomainName": string;
     /**
-    * 直播流所属应用名称。
-    * @example `testApp`
-    */ "AppName"?: string;
+     * 播流所属应用名称。
+     * @example `liveApp****`
+     */
+    "AppName"?: string;
     /**
-    * 直播流名称。
-    * @example `myStreamName`
-    */ "StreamName"?: string;
+     * 播流名称。
+     * @example `liveStream****`
+     */
+    "StreamName"?: string;
     /**
-    * 当前页码。默认值：**1**。
-    * @example `1`
-    */ "PageNum"?: number;
+     * 当前页码。默认值：**1**。
+     * @example `1`
+     */
+    "PageNum"?: number;
     /**
-    * 每页大小。默认值：**10**，取值范围：**5~30**。
-    * @example `5`
-    */ "PageSize"?: number;
+     * 每页大小。默认值：**10**，取值范围：**5~30**。
+     * @example `5`
+     */
+    "PageSize"?: number;
     /**
-    * 排序。取值：
-    * - asc（默认值）：升序
-    * - desc：降序
-    * @example `asc`
-    */ "Order"?: string;
+     * 按创建时间排序。取值：
+     * - **asc**（默认值）：升序。
+     * - **desc**：降序。
+     * @example `asc`
+     */
+    "Order"?: string;
 }
-export { DescribeLiveRecordConfigRequest };

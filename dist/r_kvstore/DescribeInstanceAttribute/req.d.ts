@@ -1,9 +1,7 @@
-interface DescribeInstanceAttributeRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeInstanceAttributeRequest {
     /**
-    * 实例ID。
-    * @example `r-bp1xxxxxxxxxxxxx`
-    */ "InstanceId": string;
+     * 实例ID。
+     * @example `r-bp1zxszhcgatnx****`
+     */
+    "InstanceId": string;
 }
-export { DescribeInstanceAttributeRequest };

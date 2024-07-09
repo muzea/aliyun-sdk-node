@@ -1,16 +1,1 @@
-{
-  "name": "QueryPerspectives",
-  "protocol": "HTTPS|HTTP",
-  "method": "POST|GET",
-  "path": "/",
-  "timeout": 10000,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Query",
-      "required": false
-    }
-  },
-  "res": {}
-}
+{"summary":"查询视角列表。","methods":["post","get"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"readAndWrite","deprecated":false,"parameters":[{"name":"AgentKey","in":"query","schema":{"title":"业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取","description":"业务空间key，不设置则访问默认业务空间，key值在主账号业务管理页面获取","type":"string","required":false,"example":"ac627989eb4f8a98ed05fd098bbae5_p_beebot_public"}}],"responses":{"200":{"schema":{"type":"object","properties":{"RequestId":{"title":"请求Id","description":"请求ID","type":"string","example":"F285D735-D580-18A8-B97F-B2E72B00F101"},"Perspectives":{"title":"视角列表","description":"视角列表","type":"array","items":{"type":"object","properties":{"Status":{"title":"数据状态：3：选中；1：未选中","description":"数据状态：3：启用；1：未启用","type":"integer","format":"int32","example":"1"},"CreateTime":{"title":"创建时间 UTC时间","description":"创建时间 UTC时间","type":"string","example":"2022-04-12T06:30:17Z"},"PerspectiveId":{"title":"视角主键（code_id）","description":"视角ID","type":"string","example":"3001"},"SelfDefine":{"title":"是否自定义","description":"是否自定义","type":"boolean","example":"true"},"Name":{"title":"视角名称","description":"视角名称","type":"string","example":"移动端视角"},"PerspectiveCode":{"title":"视角编码（用于问答api）","description":"视角编码（用于问答API）","type":"string","example":"FZJBY3raWr"},"ModifyTime":{"title":"修改时间 UTC时间","description":"修改时间 UTC时间","type":"string","example":"2022-04-29T03:38:54Z"}}}}}}}},"responseDemo":"[{\"errorExample\":\"\",\"example\":\"{\\n  \\\"RequestId\\\": \\\"F285D735-D580-18A8-B97F-B2E72B00F101\\\",\\n  \\\"Perspectives\\\": [\\n    {\\n      \\\"Status\\\": 1,\\n      \\\"CreateTime\\\": \\\"2022-04-12T06:30:17Z\\\",\\n      \\\"PerspectiveId\\\": \\\"3001\\\",\\n      \\\"SelfDefine\\\": true,\\n      \\\"Name\\\": \\\"移动端视角\\\",\\n      \\\"PerspectiveCode\\\": \\\"FZJBY3raWr\\\",\\n      \\\"ModifyTime\\\": \\\"2022-04-29T03:38:54Z\\\"\\n    }\\n  ]\\n}\",\"type\":\"json\"}]","title":"视角-列表"}

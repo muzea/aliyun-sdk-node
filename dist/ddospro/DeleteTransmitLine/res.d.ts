@@ -1,3 +1,0 @@
-interface DeleteTransmitLineResponse {
-}
-export { DeleteTransmitLineResponse };

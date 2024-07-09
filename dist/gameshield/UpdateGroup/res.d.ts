@@ -1,3 +1,0 @@
-interface UpdateGroupResponse {
-}
-export { UpdateGroupResponse };

@@ -1,20 +1,22 @@
-interface ModifyInstanceAutoRenewalAttributeRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface ModifyInstanceAutoRenewalAttributeRequest {
     /**
-    * 目标实例的ID。多个实例ID用半角逗号（‘,’）拼接，最多允许传入30个实例ID。
-    * @example `r-bp1xxxxxxxxxxxxx`
-    */ "DBInstanceId": string;
+     * 实例ID。多个实例ID用英文逗号（,）分隔。
+     * > 最多允许传入30个实例ID。
+     * @example `r-bp1zxszhcgatnx****`
+     */
+    "DBInstanceId": string;
     /**
-    * 自动续费周期，当AutoRenew=True时，该值有效且必传，取值范围为1-12。实例到期时，将以月为单位进行自动续费，月数等于该值。
-    * @example `3`
-    */ "Duration"?: string;
+     * 自动续费周期，取值范围为**1**~**12**，单位为月。实例即将到期时，系统将自动地以选择的续费时长进行续费。
+     * > 当**AutoRenew**参数取值为**true**时，本参数才可用且必须传入。
+     * @example `3`
+     */
+    "Duration"?: string;
     /**
-    * 开启或关闭自动续费，可选值：
-    * * True（开启）
-    * * False（关闭）
-    * > 默认值：False。
-    * @example `True`
-    */ "AutoRenew"?: string;
+     * 开启或关闭自动续费，取值：
+     * * **true**：开启。
+     * * **false**。关闭。
+     * > 默认值：**false**。
+     * @example `true`
+     */
+    "AutoRenew"?: string;
 }
-export { ModifyInstanceAutoRenewalAttributeRequest };

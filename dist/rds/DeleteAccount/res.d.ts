@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.DeleteAccountResponse
 export interface DeleteAccountResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `91E855E5-7E80-4955-929B-C74EE1D38C66`
+     */
+    RequestId: string;
 }
-

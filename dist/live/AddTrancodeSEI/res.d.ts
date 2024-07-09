@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/live.AddTrancodeSEIResponse
 export interface AddTrancodeSEIResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `16A96B9A-F203-4E*****43-CB92E68F4CD8`
+     */
+    RequestId: string;
 }
-

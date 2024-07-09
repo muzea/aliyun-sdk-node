@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.DeleteInstancesResponse
 export interface DeleteInstancesResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `7B7813C6-57BF-41XX-B12B-F172F65A6046`
+     */
+    RequestId: string;
 }
-

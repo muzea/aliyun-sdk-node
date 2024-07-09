@@ -1,3 +1,0 @@
-interface ListAppsResponse {
-}
-export { ListAppsResponse };

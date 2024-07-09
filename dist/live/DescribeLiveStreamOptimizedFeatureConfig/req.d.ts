@@ -1,7 +1,4 @@
-interface DescribeLiveStreamOptimizedFeatureConfigRequest {
-    "RegionId"?: string;
-    "ConfigName": string;
-    "OwnerId"?: number;
+export interface DescribeLiveStreamOptimizedFeatureConfigRequest {
     "DomainName": string;
+    "ConfigName": string;
 }
-export { DescribeLiveStreamOptimizedFeatureConfigRequest };

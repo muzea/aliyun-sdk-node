@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/polardb.ModifyDBClusterParametersResponse
 export interface ModifyDBClusterParametersResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `C5D526E5-91B5-48B8-B980-FE07FF******`
+     */
+    RequestId: string;
 }
-

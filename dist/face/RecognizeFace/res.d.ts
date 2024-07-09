@@ -1,3 +1,0 @@
-interface RecognizeFaceResponse {
-}
-export { RecognizeFaceResponse };

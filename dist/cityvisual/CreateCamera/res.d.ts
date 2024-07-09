@@ -1,3 +1,0 @@
-interface CreateCameraResponse {
-}
-export { CreateCameraResponse };

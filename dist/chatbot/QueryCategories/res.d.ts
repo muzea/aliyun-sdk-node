@@ -1,3 +1,0 @@
-interface QueryCategoriesResponse {
-}
-export { QueryCategoriesResponse };

@@ -1,9 +1,22 @@
-interface AddGtmRecoveryPlanRequest {
-    "RegionId"?: string;
-    "Name": string;
-    "FaultAddrPool": string;
-    "Remark"?: string;
+export interface AddGtmRecoveryPlanRequest {
+    /**
+     * 用户语言
+     * @example `en`
+     */
     "Lang"?: string;
-    "UserClientIp"?: string;
+    /**
+     * 容灾预案名称
+     * @example `name-example`
+     */
+    "Name": string;
+    /**
+     * 备注
+     * @example `remark`
+     */
+    "Remark"?: string;
+    /**
+     * 故障地址池ID列表
+     * @example `["hra0or"]`
+     */
+    "FaultAddrPool": string;
 }
-export { AddGtmRecoveryPlanRequest };

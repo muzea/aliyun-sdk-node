@@ -1,12 +1,7 @@
-interface QueryRobotTaskDetailRequest {
-    "RegionId"?: string;
+export interface QueryRobotTaskDetailRequest {
     /**
-    * 主账号的ID，即UID。
-    * @example `155780923770`
-    */ "OwnerId"?: number;
-    /**
-    * 机器人呼叫任务的唯一任务ID。
-    * @example `1045001`
-    */ "Id"?: number;
+     * 机器人呼叫任务的唯一任务ID。调用[CreateRobotTask](~~CreateRobotTask~~)接口获取。
+     * @example `1045001`
+     */
+    "Id": number;
 }
-export { QueryRobotTaskDetailRequest };

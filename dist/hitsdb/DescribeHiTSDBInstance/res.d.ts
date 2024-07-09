@@ -1,3 +1,0 @@
-interface DescribeHiTSDBInstanceResponse {
-}
-export { DescribeHiTSDBInstanceResponse };

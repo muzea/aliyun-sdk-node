@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dm.BatchSendMailResponse
 export interface BatchSendMailResponse {
-	RequestId: string;
-	EnvId: string;
+    /**
+     * 事件ID
+     * @example `xxx`
+     */
+    EnvId: string;
+    /**
+     * 请求ID
+     * @example `12D086F6-8F31-4658-84C1-006DED011A85`
+     */
+    RequestId: string;
 }
-

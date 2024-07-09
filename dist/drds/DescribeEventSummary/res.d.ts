@@ -1,3 +1,0 @@
-interface DescribeEventSummaryResponse {
-}
-export { DescribeEventSummaryResponse };

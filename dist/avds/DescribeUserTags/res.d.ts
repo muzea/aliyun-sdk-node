@@ -1,3 +1,0 @@
-interface DescribeUserTagsResponse {
-}
-export { DescribeUserTagsResponse };

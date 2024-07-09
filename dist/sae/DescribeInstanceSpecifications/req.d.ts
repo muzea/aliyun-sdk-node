@@ -1,4 +1,2 @@
-interface DescribeInstanceSpecificationsRequest {
-    "RegionId"?: string;
+export interface DescribeInstanceSpecificationsRequest {
 }
-export { DescribeInstanceSpecificationsRequest };

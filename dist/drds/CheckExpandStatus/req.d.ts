@@ -1,6 +1,12 @@
-interface CheckExpandStatusRequest {
-    "RegionId"?: string;
-    "DbName": string;
+export interface CheckExpandStatusRequest {
+    /**
+     * DRDS实例ID。
+     * @example `drds***********`
+     */
     "DrdsInstanceId": string;
+    /**
+     * 数据库名称。
+     * @example `test`
+     */
+    "DbName": string;
 }
-export { CheckExpandStatusRequest };

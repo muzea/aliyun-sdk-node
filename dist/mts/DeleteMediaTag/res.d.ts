@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.DeleteMediaTagResponse
 export interface DeleteMediaTagResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `283DC68C-146F-4489-A2A1-2F88F1472A56`
+     */
+    RequestId: string;
 }
-

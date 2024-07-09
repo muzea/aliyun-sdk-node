@@ -1,3 +1,0 @@
-interface QueryCardInfoResponse {
-}
-export { QueryCardInfoResponse };

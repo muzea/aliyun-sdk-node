@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dds.ModifyDBInstanceMaintainTimeResponse
 export interface ModifyDBInstanceMaintainTimeResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `A9310426-C763-42A2-A3AD-70A8DA204531`
+     */
+    RequestId: string;
 }
-

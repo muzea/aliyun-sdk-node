@@ -1,3 +1,0 @@
-interface SearchTestCaseResponse {
-}
-export { SearchTestCaseResponse };

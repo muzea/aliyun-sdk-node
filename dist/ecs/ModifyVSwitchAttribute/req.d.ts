@@ -1,8 +1,6 @@
-interface ModifyVSwitchAttributeRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
-    "VSwitchName"?: string;
+export interface ModifyVSwitchAttributeRequest {
     "VSwitchId": string;
+    "VSwitchName"?: string;
+    "RegionId"?: string;
     "Description"?: string;
 }
-export { ModifyVSwitchAttributeRequest };

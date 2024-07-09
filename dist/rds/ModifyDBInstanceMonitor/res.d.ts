@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.ModifyDBInstanceMonitorResponse
 export interface ModifyDBInstanceMonitorResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `52B9805C-432C-4ED1-83FD-2F916B6D2733`
+     */
+    RequestId: string;
 }
-

@@ -1,3 +1,0 @@
-interface UpdateFlexAccStatusResponse {
-}
-export { UpdateFlexAccStatusResponse };

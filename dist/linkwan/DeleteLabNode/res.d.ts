@@ -1,3 +1,0 @@
-interface DeleteLabNodeResponse {
-}
-export { DeleteLabNodeResponse };

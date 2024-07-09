@@ -1,3 +1,0 @@
-interface DescribeHistoryEventTasksResponse {
-}
-export { DescribeHistoryEventTasksResponse };

@@ -1,3 +1,0 @@
-interface StartJobGroupResponse {
-}
-export { StartJobGroupResponse };

@@ -1,3 +1,0 @@
-interface GetJoinCodeResponse {
-}
-export { GetJoinCodeResponse };

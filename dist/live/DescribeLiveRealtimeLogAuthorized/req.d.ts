@@ -1,6 +1,3 @@
-interface DescribeLiveRealtimeLogAuthorizedRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeLiveRealtimeLogAuthorizedRequest {
     "LiveOpenapiReserve"?: string;
 }
-export { DescribeLiveRealtimeLogAuthorizedRequest };

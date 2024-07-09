@@ -1,25 +1,19 @@
-interface TransformToPrePaidRequest {
+export interface TransformToPrePaidRequest {
     /**
-    * 地域ID。
-    * @example `cn-hangzhou`
-    */ "RegionId"?: string;
+     * 实例ID，可调用[DescribeInstances](~~60933~~)获取。
+     * @example `r-bp1zxszhcgatnx****`
+     */
+    "InstanceId": string;
     /**
-    * 预付费时长，单位是月。取值范围：1-9、12、24、36。
-    * @example `12`
-    */ "Period": number;
-    "OwnerId"?: number;
+     * 预付费时长，单位为月。取值：**1**~**9**、**12**、**24**、**36**。
+     * @example `12`
+     */
+    "Period": number;
     /**
-    * 需要转换付费类型的实例的ID。
-    * @example `r-bp1xxxxxxxxxxxxx`
-    */ "InstanceId": string;
-    /**
-    * 是否自动付款，可选值：
-    * * true（是）
-    * * false（否）
-    * 默认值：false。
-    * > 当值为`false`时，请在实例即将到期时到控制台[手动续费](~~26352~~)。
-    * @example `true`
-    */ "AutoPay"?: boolean;
-    "FromApp"?: string;
+     * 是否自动付款，取值：
+     * * **true**：自动付款。
+     * * **false**：手动付款（默认），您通过控制台对实例进行手动续费，详情请参见[手动续费](~~26352~~)。
+     * @example `true`
+     */
+    "AutoPay"?: boolean;
 }
-export { TransformToPrePaidRequest };

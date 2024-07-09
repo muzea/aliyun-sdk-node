@@ -1,3 +1,0 @@
-interface CreateUpstreamAppKeyRelationsResponse {
-}
-export { CreateUpstreamAppKeyRelationsResponse };

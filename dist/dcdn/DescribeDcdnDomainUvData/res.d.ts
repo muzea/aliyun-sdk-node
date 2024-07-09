@@ -1,23 +1,44 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.UsageDataInDescribeDcdnDomainUvData
-export interface UsageDataInDescribeDcdnDomainUvData {
-	TimeStamp: string;
-	Value: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.UvDataInterval
-export interface UvDataInterval {
-	UsageData: UsageDataInDescribeDcdnDomainUvData[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.DescribeDcdnDomainUvDataResponse
 export interface DescribeDcdnDomainUvDataResponse {
-	RequestId: string;
-	DomainName: string;
-	DataInterval: string;
-	StartTime: string;
-	EndTime: string;
-	UvDataInterval: UvDataInterval;
+    /**
+     * 结束时间。
+     * @example `2015-11-30T00:00:00Z`
+     */
+    EndTime: string;
+    /**
+     * 开始时间。
+     * @example `2015-11-29T00:00:00Z`
+     */
+    StartTime: string;
+    /**
+     * 请求ID。
+     * @example `E9D3257A-1B7C-414C-90C1-8D07AC47BCAC`
+     */
+    RequestId: string;
+    /**
+     * 加速域名信息。
+     * @example `example.com`
+     */
+    DomainName: string;
+    /**
+     * 每条记录的时间间隔，以秒为单位。
+     * @example `3600`
+     */
+    DataInterval: string;
+    UvDataInterval: {
+        /**
+         * 每个时间间隔的页面独立访问次数。
+         */
+        UsageData: {
+            /**
+             * 详细使用数据。
+             * @example `326`
+             */
+            Value: string;
+            /**
+             * 时间片起始时刻。
+             * @example `2015-11-29T00:00:00Z`
+             */
+            TimeStamp: string;
+        }[];
+    };
 }
-

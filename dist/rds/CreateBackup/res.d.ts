@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.CreateBackupResponse
 export interface CreateBackupResponse {
-	RequestId: string;
-	BackupJobId: string;
+    /**
+     * 备份任务ID。
+     * @example `507****`
+     */
+    BackupJobId: string;
+    /**
+     * 请求ID。
+     * @example `2C125605-266F-41CA-8AC5-3A643D4F42C5`
+     */
+    RequestId: string;
 }
-

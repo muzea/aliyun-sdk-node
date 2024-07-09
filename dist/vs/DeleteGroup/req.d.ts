@@ -1,7 +1,7 @@
-interface DeleteGroupRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
-    "ShowLog"?: string;
+export interface DeleteGroupRequest {
+    /**
+     * 空间Id
+     * @example `33763950751395843`
+     */
     "Id": string;
 }
-export { DeleteGroupRequest };

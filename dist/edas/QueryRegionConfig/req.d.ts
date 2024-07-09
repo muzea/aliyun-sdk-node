@@ -1,4 +1,2 @@
-interface QueryRegionConfigRequest {
-    "RegionId"?: string;
+export interface QueryRegionConfigRequest {
 }
-export { QueryRegionConfigRequest };

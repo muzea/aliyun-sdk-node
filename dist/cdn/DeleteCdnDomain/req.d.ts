@@ -1,13 +1,7 @@
-interface DeleteCdnDomainRequest {
-    "RegionId"?: string;
+export interface DeleteCdnDomainRequest {
     /**
-    * 要删除的CDN的域名。
-    * @example `www.yourdomain.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
-    /**
-    * 资源组ID。
-    * @example `your resourceGroupId`
-    */ "ResourceGroupId"?: string;
+     * 要删除的CDN的域名，仅支持删除单个域名。
+     * @example `example.com`
+     */
+    "DomainName": string;
 }
-export { DeleteCdnDomainRequest };

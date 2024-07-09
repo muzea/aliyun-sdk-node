@@ -1,3 +1,0 @@
-interface ImportDevicesResponse {
-}
-export { ImportDevicesResponse };

@@ -1,8 +1,6 @@
-interface ExportSnapshotRequest {
-    "RegionId": string;
+export interface ExportSnapshotRequest {
     "SnapshotId": string;
+    "RegionId": string;
     "OssBucket": string;
-    "OwnerId"?: number;
     "RoleName"?: string;
 }
-export { ExportSnapshotRequest };

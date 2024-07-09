@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.ActivateRouterInterfaceResponse
 export interface ActivateRouterInterfaceResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `079874CD-AEC1-43E6-AC03-ADD96B6E4907`
+     */
+    RequestId: string;
 }
-

@@ -1,6 +1,7 @@
-interface DescribeGtmMonitorAvailableConfigRequest {
-    "RegionId"?: string;
-    "UserClientIp"?: string;
+export interface DescribeGtmMonitorAvailableConfigRequest {
+    /**
+     * 语言。
+     * @example `en`
+     */
     "Lang"?: string;
 }
-export { DescribeGtmMonitorAvailableConfigRequest };

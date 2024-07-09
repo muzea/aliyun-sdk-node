@@ -1,6 +1,7 @@
-interface DescribeDBClusterMigrationRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeDBClusterMigrationRequest {
+    /**
+     * 集群ID。
+     * @example `pc-**************`
+     */
     "DBClusterId": string;
 }
-export { DescribeDBClusterMigrationRequest };

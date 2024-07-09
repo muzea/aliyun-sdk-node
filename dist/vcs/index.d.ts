@@ -1,25 +1,22 @@
-import { CreateComputeTaskRequest } from "./CreateComputeTask/req";
-import { CreateComputeTaskResponse } from "./CreateComputeTask/res";
-import { CreateProjectRequest } from "./CreateProject/req";
-import { CreateProjectResponse } from "./CreateProject/res";
-import { DescribeComputeTasksRequest } from "./DescribeComputeTasks/req";
-import { DescribeComputeTasksResponse } from "./DescribeComputeTasks/res";
-import { DescribeDevicesRequest } from "./DescribeDevices/req";
-import { DescribeDevicesResponse } from "./DescribeDevices/res";
-import { DescribeProjectsRequest } from "./DescribeProjects/req";
-import { DescribeProjectsResponse } from "./DescribeProjects/res";
-import { GetPictureSearchResultsRequest } from "./GetPictureSearchResults/req";
-import { GetPictureSearchResultsResponse } from "./GetPictureSearchResults/res";
-import { ImportDevicesRequest } from "./ImportDevices/req";
-import { ImportDevicesResponse } from "./ImportDevices/res";
+import { DeleteProfileCatalogRequest } from "./DeleteProfileCatalog/req";
+import { DeleteProfileCatalogResponse } from "./DeleteProfileCatalog/res";
+import { ListAlgorithmNamesByDeviceIdsRequest } from "./ListAlgorithmNamesByDeviceIds/req";
+import { ListAlgorithmNamesByDeviceIdsResponse } from "./ListAlgorithmNamesByDeviceIds/res";
+import { AddAiotPersonTableItemRequest } from "./AddAiotPersonTableItem/req";
+import { AddAiotPersonTableItemResponse } from "./AddAiotPersonTableItem/res";
 
 interface VCS {
-    CreateComputeTask(query: CreateComputeTaskRequest): Promise<CreateComputeTaskResponse>;
-    CreateProject(query: CreateProjectRequest): Promise<CreateProjectResponse>;
-    DescribeComputeTasks(query: DescribeComputeTasksRequest): Promise<DescribeComputeTasksResponse>;
-    DescribeDevices(query: DescribeDevicesRequest): Promise<DescribeDevicesResponse>;
-    DescribeProjects(query: DescribeProjectsRequest): Promise<DescribeProjectsResponse>;
-    GetPictureSearchResults(query: GetPictureSearchResultsRequest): Promise<GetPictureSearchResultsResponse>;
-    ImportDevices(query: ImportDevicesRequest): Promise<ImportDevicesResponse>;
+    /**
+     * 创建一个删除人员分组实例。
+     */
+    DeleteProfileCatalog(query: DeleteProfileCatalogRequest): Promise<DeleteProfileCatalogResponse>;
+    /**
+     * 查询设备被哪些算法计算，可支持单个设备或者批量设备。
+     */
+    ListAlgorithmNamesByDeviceIds(query: ListAlgorithmNamesByDeviceIdsRequest): Promise<ListAlgorithmNamesByDeviceIdsResponse>;
+    /**
+     * AddAiotPersonTableItem
+     */
+    AddAiotPersonTableItem(query: AddAiotPersonTableItemRequest): Promise<AddAiotPersonTableItemResponse>;
 }
 export default VCS;

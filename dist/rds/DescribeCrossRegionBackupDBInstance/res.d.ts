@@ -1,98 +1,120 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.RestoreRegions
-export interface RestoreRegions {
-	RestoreRegion: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.LatencyTopNItem
-export interface LatencyTopNItem {
-	SQLExecuteTimes: number;
-	AvgLatency: number;
-	SQLText: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.LatencyTopNItemsInDescribeSQLReports
-export interface LatencyTopNItemsInDescribeSQLReports {
-	LatencyTopNItem: LatencyTopNItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.QPSTopNItem
-export interface QPSTopNItem {
-	SQLExecuteTimes: number;
-	SQLText: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.QPSTopNItemsInDescribeSQLReports
-export interface QPSTopNItemsInDescribeSQLReports {
-	QPSTopNItem: QPSTopNItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.Item
-export interface Item {
-	CrossBackupSetSize: number;
-	Category: string;
-	DBInstanceDescription: string;
-	Engine: string;
-	CrossLogBackupId: number;
-	CrossDownloadLink: string;
-	LogFileName: string;
-	ReportTime: string;
-	BackupSetStatus: number;
-	DBInstanceStatusDesc: string;
-	BackupEnabled: string;
-	RegionId: string;
-	CrossBackupRegion: string;
-	Duration: number;
-	CrossBackupId: number;
-	BackupStartTime: string;
-	LinkExpiredTime: string;
-	DBInstanceId: string;
-	BackupSetScale: number;
-	DBInstanceStorageType: string;
-	AutoRenew: string;
-	CrossLogBackupSize: number;
-	LogEndTime: string;
-	BackupEnabledTime: string;
-	CrossBackupSetFile: string;
-	CrossBackupDownloadLink: string;
-	EngineVersion: string;
-	CrossBackupSetLocation: string;
-	LogBackupEnabled: string;
-	LogBackupEnabledTime: string;
-	BackupEndTime: string;
-	BackupMethod: string;
-	LogBeginTime: string;
-	RelService: string;
-	BackupType: string;
-	Retention: number;
-	DBInstanceStatus: string;
-	RetentType: number;
-	CrossIntranetDownloadLink: string;
-	InstanceId: number;
-	ConsistentTime: string;
-	CrossBackupType: string;
-	Status: string;
-	RelServiceId: string;
-	LockMode: string;
-	RestoreRegions: RestoreRegions;
-	LatencyTopNItems: LatencyTopNItemsInDescribeSQLReports;
-	QPSTopNItems: QPSTopNItemsInDescribeSQLReports;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.ItemsInDescribeCrossRegionBackupDBInstance
-export interface ItemsInDescribeCrossRegionBackupDBInstance {
-	Item: Item[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.DescribeCrossRegionBackupDBInstanceResponse
 export interface DescribeCrossRegionBackupDBInstanceResponse {
-	RequestId: string;
-	RegionId: string;
-	TotalRecords: number;
-	PageSize: number;
-	PageNumber: number;
-	ItemsNumbers: number;
-	Items: ItemsInDescribeCrossRegionBackupDBInstance;
+    /**
+     * 请求ID。
+     * @example `33517002-182D-40BE-93EC-610BD3381045`
+     */
+    RequestId: string;
+    /**
+     * 总记录数。
+     * @example `100`
+     */
+    TotalRecords: number;
+    /**
+     * 跨地域备份设置列表内的Item数量。
+     * @example `1`
+     */
+    ItemsNumbers: number;
+    /**
+     * 每页记录数。默认值：30。
+     * @example `30`
+     */
+    PageSize: number;
+    /**
+     * 页码，取值：大于0且不超过Integer的最大值。
+     * 默认值：**1**。
+     * @example `1`
+     */
+    PageNumber: number;
+    /**
+     * 地域ID。
+     * @example `cn-hangzhou`
+     */
+    RegionId: string;
+    Items: {
+        /**
+         * 跨地域备份设置列表。
+         */
+        Item: {
+            /**
+             * 跨地域日志备份开启时间。格式：<i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z（UTC时间）。
+             * @example `2019-06-12T05:44:21Z`
+             */
+            LogBackupEnabledTime: string;
+            /**
+             * 跨地域备份总开关，取值：
+             * * **Disable**：关闭
+             * * **Enable**：开启
+             * @example `Enable`
+             */
+            BackupEnabled: string;
+            /**
+             * 实例状态，详情请参见[实例状态表](~~26315~~)。
+             * @example `Running`
+             */
+            DBInstanceStatus: string;
+            /**
+             * 实例锁定状态，取值：
+             * * **Unlock**：正常
+             * * **ManualLock**：手动触发锁定
+             * * **LockByExpiration**：实例过期自动锁定
+             * * **LockByRestoration**：实例回滚前的自动锁定
+             * * **LockByDiskQuota**：实例空间满自动锁定（不可访问实例）
+             * @example `Unlock`
+             */
+            LockMode: string;
+            /**
+             * 数据库版本。
+             * @example `5.6`
+             */
+            EngineVersion: string;
+            /**
+             * 跨地域日志备份开关，取值：
+             * * **Disable**：关闭
+             * * **Enable**：开启
+             * @example `Enable`
+             */
+            LogBackupEnabled: string;
+            /**
+             * 跨地域备份保留方式。当前仅支持按配置时长保留，默认值：**1**。
+             * @example `1`
+             */
+            RetentType: number;
+            /**
+             * 跨地域备份保留天数，取值：**7~1825**。
+             * @example `15`
+             */
+            Retention: number;
+            /**
+             * 跨地域备份保存类型。默认值：**1**，表示每个备份都保存。
+             * @example `1`
+             */
+            CrossBackupType: string;
+            /**
+             * 跨地域备份目的地域ID。
+             * @example `cn-shanghai`
+             */
+            CrossBackupRegion: string;
+            /**
+             * 实例ID。
+             * @example `rm-uf6wjk5****`
+             */
+            DBInstanceId: string;
+            /**
+             * 数据库类型。
+             * @example `MySQL`
+             */
+            Engine: string;
+            /**
+             * 跨地域数据备份开启时间。格式：<i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z（UTC时间）。
+             * @example `2019-06-12T05:44:21Z`
+             */
+            BackupEnabledTime: string;
+            /**
+             * 实例名称，长度为2~256个字符。以中文、英文字母开头，可以包含数字、中文、英文、下划线（_）、短横线（-）。
+             * >不能以 http:// 和 https:// 开头。
+             * @example `testdb`
+             */
+            DBInstanceDescription: string;
+        }[];
+    };
 }
-

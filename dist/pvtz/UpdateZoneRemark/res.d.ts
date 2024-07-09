@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/pvtz.UpdateZoneRemarkResponse
 export interface UpdateZoneRemarkResponse {
-	RequestId: string;
-	ZoneId: string;
+    /**
+     * Zone ID。
+     * @example `AgIDE1MA_1**`
+     */
+    ZoneId: string;
+    /**
+     * 阿里云为该请求生成的唯一标识符。
+     * @example `C6F1D541-E7A6-447A-A2B5-9F7A20B2A8FB`
+     */
+    RequestId: string;
 }
-

@@ -1,3 +1,0 @@
-interface VerifyFaceResponse {
-}
-export { VerifyFaceResponse };

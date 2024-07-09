@@ -1,7 +1,7 @@
-interface CloseBackupRequest {
-    "RegionId"?: string;
+export interface CloseBackupRequest {
+    /**
+     * 集群ID。
+     * @example `hb-t4naqsay5gn****`
+     */
     "ClusterId": string;
-    "OwnerId"?: number;
-    "ZoneId"?: string;
 }
-export { CloseBackupRequest };

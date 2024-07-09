@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/smartag.DeleteACLResponse
 export interface DeleteACLResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `00546174-2CE6-4587-9550-04B6A3313938`
+     */
+    RequestId: string;
 }
-

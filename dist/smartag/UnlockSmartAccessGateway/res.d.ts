@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/smartag.UnlockSmartAccessGatewayResponse
 export interface UnlockSmartAccessGatewayResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `05DC546B-DBF9-4028-88CD-1742AB4E014C`
+     */
+    RequestId: string;
 }
-

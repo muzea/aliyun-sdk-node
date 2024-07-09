@@ -1,3 +1,0 @@
-interface DescribeDdosAttackTypeChartResponse {
-}
-export { DescribeDdosAttackTypeChartResponse };

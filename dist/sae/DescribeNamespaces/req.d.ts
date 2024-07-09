@@ -1,12 +1,12 @@
-interface DescribeNamespacesRequest {
-    "RegionId"?: string;
+export interface DescribeNamespacesRequest {
     /**
-    * 页码
-    * @example `1`
-    */ "CurrentPage": number;
+     * 当前页码。
+     * @example `1`
+     */
+    "CurrentPage": number;
     /**
-    * 翻页大小
-    * @example `10`
-    */ "PageSize": number;
+     * 分页查询时设置的每页数量。取值范围\[0,10000\]。
+     * @example `10`
+     */
+    "PageSize": number;
 }
-export { DescribeNamespacesRequest };

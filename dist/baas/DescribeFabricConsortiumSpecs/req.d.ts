@@ -1,7 +1,2 @@
-interface DescribeFabricConsortiumSpecsRequest {
-    /**
-    * 地域
-    * @example `cn-hangzhou`
-    */ "RegionId"?: string;
+export interface DescribeFabricConsortiumSpecsRequest {
 }
-export { DescribeFabricConsortiumSpecsRequest };

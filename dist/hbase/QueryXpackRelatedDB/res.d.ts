@@ -1,3 +1,0 @@
-interface QueryXpackRelatedDBResponse {
-}
-export { QueryXpackRelatedDBResponse };

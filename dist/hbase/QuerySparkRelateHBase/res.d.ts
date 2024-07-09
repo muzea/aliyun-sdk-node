@@ -1,3 +1,0 @@
-interface QuerySparkRelateHBaseResponse {
-}
-export { QuerySparkRelateHBaseResponse };

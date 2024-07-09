@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.UnassociateNetworkAclResponse
 export interface UnassociateNetworkAclResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `AD024BAA-2D91-48FD-810B-8FB7489B6EE6`
+     */
+    RequestId: string;
 }
-

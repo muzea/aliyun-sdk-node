@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.UpgradeDBInstanceEngineVersionResponse
 export interface UpgradeDBInstanceEngineVersionResponse {
-	RequestId: string;
-	TaskId: string;
+    /**
+     * 任务ID。
+     * @example `10254125`
+     */
+    TaskId: string;
+    /**
+     * 请求ID。
+     * @example `65BDA532-28AF-4122-AA39-B382721EEE64`
+     */
+    RequestId: string;
 }
-

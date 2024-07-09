@@ -1,6 +1,4 @@
-interface ExecuteRequestRequest {
-    "RegionId"?: string;
+export interface ExecuteRequestRequest {
+    "ServiceParameters": string;
     "Service": string;
-    "ServiceParameters"?: string;
 }
-export { ExecuteRequestRequest };

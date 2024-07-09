@@ -1,3 +1,0 @@
-interface DescribeCreditInfoResponse {
-}
-export { DescribeCreditInfoResponse };

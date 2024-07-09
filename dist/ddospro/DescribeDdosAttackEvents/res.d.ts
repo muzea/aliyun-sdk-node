@@ -1,3 +1,0 @@
-interface DescribeDdosAttackEventsResponse {
-}
-export { DescribeDdosAttackEventsResponse };

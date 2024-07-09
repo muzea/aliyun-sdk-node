@@ -1,0 +1,1 @@
+export type GetCustomDomainResponse = any;

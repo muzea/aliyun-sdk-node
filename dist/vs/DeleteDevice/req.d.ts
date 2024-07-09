@@ -1,7 +1,7 @@
-interface DeleteDeviceRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
-    "ShowLog"?: string;
+export interface DeleteDeviceRequest {
+    /**
+     * 设备ID。
+     * @example `3238848****092996`
+     */
     "Id": string;
 }
-export { DeleteDeviceRequest };

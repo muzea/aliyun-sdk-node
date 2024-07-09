@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ehpc.PullImageResponse
 export interface PullImageResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `29d3d9Ee-8eCB-5013-A1c2-1CeD19C6CfFe`
+     */
+    RequestId: string;
 }
-

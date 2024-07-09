@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dds.DestroyInstanceResponse
 export interface DestroyInstanceResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `65BDA532-28AF-4122-AA39-B382721E****`
+     */
+    RequestId: string;
 }
-

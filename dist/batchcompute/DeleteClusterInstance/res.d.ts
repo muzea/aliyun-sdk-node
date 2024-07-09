@@ -1,3 +1,0 @@
-interface DeleteClusterInstanceResponse {
-}
-export { DeleteClusterInstanceResponse };

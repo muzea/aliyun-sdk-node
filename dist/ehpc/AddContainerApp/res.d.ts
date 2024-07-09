@@ -1,13 +1,13 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ehpc.ContainerId
-export interface ContainerId {
-	ContainerId: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ehpc.AddContainerAppResponse
 export interface AddContainerAppResponse {
-	RequestId: string;
-	ContainerId: ContainerId;
+    /**
+     * 请求ID。
+     * @example `04F0F334-1335-436C-A1D7-6C044FE7****`
+     */
+    RequestId: string;
+    ContainerId: {
+        /**
+         * 容器ID。
+         */
+        ContainerId: string[];
+    };
 }
-

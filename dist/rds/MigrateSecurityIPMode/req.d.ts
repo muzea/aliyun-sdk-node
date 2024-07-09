@@ -1,9 +1,7 @@
-interface MigrateSecurityIPModeRequest {
-    "RegionId"?: string;
+export interface MigrateSecurityIPModeRequest {
     /**
-    * 实例ID。
-    * @example `rm-uf6wjk5xxxxxxx`
-    */ "DBInstanceId": string;
-    "OwnerId"?: number;
+     * 实例ID。可调用DescribeDBInstances获取。
+     * @example `rm-uf6wjk5****`
+     */
+    "DBInstanceId": string;
 }
-export { MigrateSecurityIPModeRequest };

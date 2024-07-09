@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cloudapi.RemoveAppsAuthoritiesResponse
 export interface RemoveAppsAuthoritiesResponse {
-	RequestId: string;
+    /**
+     * 请求ID
+     * @example `D6E46F10-F26C-4AA0-BB69-FE2743D9AE62`
+     */
+    RequestId: string;
 }
-

@@ -1,0 +1,1 @@
+export type OpenMetaQueryResponse = any;

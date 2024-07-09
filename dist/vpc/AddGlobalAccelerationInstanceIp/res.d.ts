@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.AddGlobalAccelerationInstanceIpResponse
 export interface AddGlobalAccelerationInstanceIpResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `01FDDD49-C4B7-4D2A-A8E5-A93915C450A6`
+     */
+    RequestId: string;
 }
-

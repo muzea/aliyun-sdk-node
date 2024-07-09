@@ -1,13 +1,12 @@
-interface DeleteLiveSnapshotDetectPornConfigRequest {
-    "RegionId"?: string;
+export interface DeleteLiveSnapshotDetectPornConfigRequest {
     /**
-    * App名，支持`*`表示全部。
-    * @example `testApp`
-    */ "AppName": string;
+     * 主播流域名。
+     * @example `example.com`
+     */
+    "DomainName": string;
     /**
-    * 用户域名。
-    * @example `www.yourdomain.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 播流所属的应用名称。
+     * @example `liveApp****`
+     */
+    "AppName": string;
 }
-export { DeleteLiveSnapshotDetectPornConfigRequest };

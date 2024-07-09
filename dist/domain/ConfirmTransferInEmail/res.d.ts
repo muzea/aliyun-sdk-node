@@ -1,19 +1,19 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/domain.SuccessListInConfirmTransferInEmail
-export interface SuccessListInConfirmTransferInEmail {
-	SuccessDomain: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/domain.FailListInConfirmTransferInEmail
-export interface FailListInConfirmTransferInEmail {
-	FailDomain: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/domain.ConfirmTransferInEmailResponse
 export interface ConfirmTransferInEmailResponse {
-	RequestId: string;
-	SuccessList: SuccessListInConfirmTransferInEmail;
-	FailList: FailListInConfirmTransferInEmail;
+    /**
+     * 唯一请求识别码
+     * @example `40F46D3D-F4F3-4CCB-AC30-2DD20E32E528`
+     */
+    RequestId: string;
+    SuccessList: {
+        /**
+         * 成功的域名列表。
+         */
+        SuccessDomain: string[];
+    };
+    FailList: {
+        /**
+         * 失败的域名列表。
+         */
+        FailDomain: string[];
+    };
 }
-

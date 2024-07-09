@@ -1,3 +1,0 @@
-interface SubmitCleanTableShardingKeyModifyResponse {
-}
-export { SubmitCleanTableShardingKeyModifyResponse };

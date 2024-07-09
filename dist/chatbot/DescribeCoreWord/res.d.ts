@@ -1,3 +1,0 @@
-interface DescribeCoreWordResponse {
-}
-export { DescribeCoreWordResponse };

@@ -1,3 +1,0 @@
-interface DeleteCapabilityResponse {
-}
-export { DeleteCapabilityResponse };

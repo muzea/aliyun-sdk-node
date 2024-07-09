@@ -1,8 +1,9 @@
-interface DescribeVirtualBorderRoutersRequest {
+export interface DescribeVirtualBorderRoutersRequest {
     "RegionId": string;
-    "OwnerId"?: number;
     "PageNumber"?: number;
     "PageSize"?: number;
-    "Filter"?: string[];
+    "Filter"?: {
+        Key: string;
+        Value: string[];
+    }[];
 }
-export { DescribeVirtualBorderRoutersRequest };

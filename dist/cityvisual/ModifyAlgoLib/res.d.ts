@@ -1,3 +1,0 @@
-interface ModifyAlgoLibResponse {
-}
-export { ModifyAlgoLibResponse };

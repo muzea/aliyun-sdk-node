@@ -1,9 +1,7 @@
-interface BatchStartVodDomainRequest {
-    "RegionId"?: string;
+export interface BatchStartVodDomainRequest {
     /**
-    * 点播加速域名，多个用英文逗号分隔。
-    * @example `example.com`
-    */ "DomainNames": string;
-    "OwnerId"?: number;
+     * 点播加速域名。多个域名使用英文逗号（,）分隔。
+     * @example `example.com`
+     */
+    "DomainNames": string;
 }
-export { BatchStartVodDomainRequest };

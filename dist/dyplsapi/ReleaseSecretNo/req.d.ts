@@ -1,17 +1,14 @@
-interface ReleaseSecretNoRequest {
-    "RegionId"?: string;
+export interface ReleaseSecretNoRequest {
     /**
-    * 号码池Key。请登录[号码隐私保护控制台](https://dypls.console.aliyun.com/dypls.htm#/account)，在**号码池管理**中查看号码池Key。
-    * @example `FC123456`
-    */ "PoolKey": string;
+     * 号码池Key。
+     * 在号码隐私保护控制台，[号码池管理](https://dyplsnext.console.aliyun.com/number-pool)页面获取**号码池Key**。
+     * @example `FC10000012345****`
+     */
+    "PoolKey": string;
     /**
-    * 指定号码前缀。购买号码时，如果指定**SecretNo**，会根据指定的号码前缀模糊匹配手机号。
-    * 最长可设置18位号码前缀。
-    * @example `130`
-    */ "SecretNo": string;
-    /**
-    * RAM用户的虚拟账号ID。
-    * @example `155780923770`
-    */ "OwnerId"?: number;
+     * 需要释放的隐私号码。
+     * 请登录号码隐私保护控制台，在[号码管理](https://dyplsnext.console.aliyun.com/number/list)页面获取隐私号码，或者在调用[BindAxb](https://help.aliyun.com/zh/pnp/developer-reference/api-dyplsapi-2017-05-25-bindaxb?spm=a2c4g.11186623.0.0.6a807e38uud6C5)等号码绑定接口时查看返回参数中的**SecretNo**。
+     * @example `139****0000`
+     */
+    "SecretNo": string;
 }
-export { ReleaseSecretNoRequest };

@@ -1,12 +1,13 @@
-interface DescribeDomainDetailRequest {
-    "RegionId"?: string;
+export interface DescribeDomainDetailRequest {
     /**
-    * 指定待查询的域名名称或网站名称。
-    * @example `0.0.0.0`
-    */ "DomainName": string;
+     * 访问源的IP地址。
+     * @example `1.2.XX.XX`
+     */
+    "SourceIp"?: string;
     /**
-    * 指定访问源IP地址。
-    * @example `127.1.1.1`
-    */ "SourceIp"?: string;
+     * 要查询的域名或网站的名称。
+     * > 不支持模糊查询，您需要输入完整的域名或网站名称。
+     * @example `example.com`
+     */
+    "DomainName": string;
 }
-export { DescribeDomainDetailRequest };

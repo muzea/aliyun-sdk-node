@@ -1,3 +1,0 @@
-interface SentimentResponse {
-}
-export { SentimentResponse };

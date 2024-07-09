@@ -1,3 +1,0 @@
-interface SyncUserToRdcResponse {
-}
-export { SyncUserToRdcResponse };

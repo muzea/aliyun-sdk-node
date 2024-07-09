@@ -1,3 +1,0 @@
-interface DoIotRechargeResponse {
-}
-export { DoIotRechargeResponse };

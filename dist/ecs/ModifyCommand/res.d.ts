@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.ModifyCommandResponse
 export interface ModifyCommandResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `0DE9B41E-EF0D-40A0-BB43-37749C5BDA9C`
+     */
+    RequestId: string;
 }
-

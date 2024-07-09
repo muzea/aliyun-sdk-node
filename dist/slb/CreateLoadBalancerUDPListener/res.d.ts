@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.CreateLoadBalancerUDPListenerResponse
 export interface CreateLoadBalancerUDPListenerResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `06F00FBB-3D9E-4CCE-9D43-1A6946A75556`
+     */
+    RequestId: string;
 }
-

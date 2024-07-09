@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.DeleteNetworkInterfaceResponse
 export interface DeleteNetworkInterfaceResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `F3CD6886-D8D0-4FEE-B93E-1B73239673DE`
+     */
+    RequestId: string;
 }
-

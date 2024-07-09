@@ -1,30 +1,37 @@
-interface ModifyFlowLogAttributeRequest {
+export interface ModifyFlowLogAttributeRequest {
     /**
-    * 流日志的所属地域ID。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。
-    * @example `cn-hangzhou`
-    */ "RegionId": string;
+     * 客户端Token，用于保证请求的幂等性。
+     * 从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。
+     * > 若您未指定，则系统自动使用API请求的RequestId作为ClientToken标识。每次API请求的RequestId可能不一样。
+     * @example `123e4567-e89b-12d3-a456-42665544****`
+     */
+    "ClientToken"?: string;
     /**
-    * 流日志ID。
-    * @example `flowlog-m5evbtbpt****`
-    */ "FlowLogId": string;
+     * 流日志的新名称。
+     * 名称可以为空或长度为1～128个字符，不能以http://或https://开头。
+     * @example `myFlowlog`
+     */
+    "FlowLogName"?: string;
     /**
-    * 云企业网实例ID。
-    * @example `cen-7qthudw0ll6jmc****`
-    */ "CenId": string;
+     * 流日志新的描述信息。
+     * 描述可以为空或长度为1～256个字符，不能以http://或https://开头。
+     * @example `myFlowlog`
+     */
+    "Description"?: string;
     /**
-    * @example `111`
-    */ "OwnerId"?: number;
+     * 流日志所属的地域ID。
+     * 您可以通过调用[DescribeChildInstanceRegions](~~132080~~)接口获取地域ID。
+     * @example `cn-hangzhou`
+     */
+    "RegionId": string;
     /**
-    * 客户端token，用于保证请求的幂等性。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符。
-    * @example `02fb3da4-130e-11e9-8e44-0016e04115b	`
-    */ "ClientToken"?: string;
+     * 流日志ID。
+     * @example `flowlog-m5evbtbpt****`
+     */
+    "FlowLogId": string;
     /**
-    * 流日志名称。长度为2~128个字符，必须以字母或中文开头，可包含数字、点号（.）、下划线（_）和短横线（-），但不能以`http://`或`https://`开头。
-    * @example `myFlowlog`
-    */ "FlowLogName"?: string;
-    /**
-    * 流日志描述。长度为2~256个字符，必须以字母或中文开头，但不能以`http://`或`https://`开头。
-    * @example `This is my Flowlog.`
-    */ "Description"?: string;
+     * 云企业网实例ID。
+     * @example `cen-7qthudw0ll6jmc****`
+     */
+    "CenId": string;
 }
-export { ModifyFlowLogAttributeRequest };

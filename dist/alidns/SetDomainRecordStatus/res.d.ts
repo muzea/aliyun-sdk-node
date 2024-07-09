@@ -1,9 +1,17 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/alidns.SetDomainRecordStatusResponse
 export interface SetDomainRecordStatusResponse {
-	RequestId: string;
-	RecordId: string;
-	Status: string;
+    /**
+     * 当前解析记录状态。
+     * @example `Disable`
+     */
+    Status: string;
+    /**
+     * 请求ID。
+     * @example `536E9CAD-DB30-4647-AC87-AA5CC38C5382`
+     */
+    RequestId: string;
+    /**
+     * 解析记录的ID。
+     * @example `9999985`
+     */
+    RecordId: string;
 }
-

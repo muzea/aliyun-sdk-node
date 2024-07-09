@@ -1,4 +1,2 @@
-interface DescribeRegionsRequest {
-    "RegionId"?: string;
+export interface DescribeRegionsRequest {
 }
-export { DescribeRegionsRequest };

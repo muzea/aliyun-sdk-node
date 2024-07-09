@@ -1,4 +1,2 @@
-interface ListComponentsRequest {
-    "RegionId"?: string;
+export interface ListComponentsRequest {
 }
-export { ListComponentsRequest };

@@ -1,3 +1,0 @@
-interface ListClusterServiceConfigHistoryResponse {
-}
-export { ListClusterServiceConfigHistoryResponse };

@@ -1,10 +1,7 @@
-interface DescribeZonesRequest {
+export interface DescribeZonesRequest {
     /**
-    * 所属地域ID。
-    * @example `cn-hangzhou`
-    */ "RegionId": string;
-    "OwnerId"?: number;
-    "access_key_id"?: string;
-    "Tags"?: string;
+     * 地域ID。
+     * @example `cn-hangzhou`
+     */
+    "RegionId": string;
 }
-export { DescribeZonesRequest };

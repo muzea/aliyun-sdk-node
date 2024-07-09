@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.UnbindOutputBucketResponse
 export interface UnbindOutputBucketResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `4AEA0480-32F4-1656-92B3-F4D4CDE6BBB3`
+     */
+    RequestId: string;
 }
-

@@ -1,3 +1,0 @@
-interface BatchModifyCameraStatusResponse {
-}
-export { BatchModifyCameraStatusResponse };

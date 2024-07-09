@@ -1,20 +1,31 @@
-interface DescribeEventRuleListRequest {
-    "RegionId"?: string;
+export interface DescribeEventRuleListRequest {
     /**
-    * 报警规则名前缀，支持模糊搜索。
-    * @example `test`
-    */ "NamePrefix"?: string;
+     * 事件报警规则前缀。
+     * @example `test`
+     */
+    "NamePrefix"?: string;
     /**
-    * 当前页码，默认1。
-    * @example `1`
-    */ "PageNumber"?: string;
+     * 页码。
+     * 起始值：1。默认值：1。
+     * @example `1`
+     */
+    "PageNumber"?: string;
     /**
-    * 每页显示记录条数。
-    * @example `10`
-    */ "PageSize"?: string;
+     * 分页时每页显示的数据行数。
+     * 起始值：1。默认值：10。
+     * @example `10`
+     */
+    "PageSize"?: string;
     /**
-    * 应用分组ID。
-    * @example `12345`
-    */ "GroupId"?: string;
+     * 应用分组ID。
+     * @example `7378****`
+     */
+    "GroupId"?: string;
+    /**
+     * 启用或禁用事件报警规则。取值：
+     * true（默认值）：启用。
+     * false：禁用。
+     * @example `true`
+     */
+    "IsEnable"?: boolean;
 }
-export { DescribeEventRuleListRequest };

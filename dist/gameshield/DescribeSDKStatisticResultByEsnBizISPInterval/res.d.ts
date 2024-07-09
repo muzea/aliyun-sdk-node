@@ -1,3 +1,0 @@
-interface DescribeSDKStatisticResultByEsnBizISPIntervalResponse {
-}
-export { DescribeSDKStatisticResultByEsnBizISPIntervalResponse };

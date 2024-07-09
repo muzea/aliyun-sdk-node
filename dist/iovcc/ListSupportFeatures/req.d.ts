@@ -1,4 +1,2 @@
-interface ListSupportFeaturesRequest {
-    "RegionId"?: string;
+export interface ListSupportFeaturesRequest {
 }
-export { ListSupportFeaturesRequest };

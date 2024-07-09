@@ -1,7 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ehpc.StopNodesResponse
 export interface StopNodesResponse {
-	RequestId: string;
+    /**
+     * 任务ID。
+     * @example `04F0F334-1335-436C-A1D7-6C044FE7****`
+     */
+    TaskId: string;
+    /**
+     * 请求ID。
+     * @example `04F0F334-1335-436C-A1D7-6C044FE7****`
+     */
+    RequestId: string;
 }
-

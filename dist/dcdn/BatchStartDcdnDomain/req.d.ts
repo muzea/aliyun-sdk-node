@@ -1,9 +1,7 @@
-interface BatchStartDcdnDomainRequest {
-    "RegionId"?: string;
+export interface BatchStartDcdnDomainRequest {
     /**
-    * 需要接入全站加速的域名，用逗号（,）分隔。
-    * @example `test.com`
-    */ "DomainNames": string;
-    "OwnerId"?: number;
+     * 加速域名，多个域名用半角逗号（,）分隔。
+     * @example `example.com`
+     */
+    "DomainNames": string;
 }
-export { BatchStartDcdnDomainRequest };

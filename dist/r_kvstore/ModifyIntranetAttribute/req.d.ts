@@ -1,9 +1,21 @@
-interface ModifyIntranetAttributeRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface ModifyIntranetAttributeRequest {
     /**
-    * 实例ID。
-    * @example `r-bp1xxxxxxxxxxxxx`
-    */ "InstanceId": string;
+     * 实例ID。
+     * @example `r-bp1zxszhcgatnx****`
+     */
+    "InstanceId": string;
+    /**
+     * 要增加的带宽，单位为MB/s。取值为大于等于0的整数。通常最大可传入当前实例规格默认最大带宽的2倍（规格对应带宽信息，请参见[实例规格查询导航](~~26350~~)），但是也存在下述限制：
+     * * 单实例的带宽不能超过所在主机的75%，主机规格及其带宽信息，请参见[主机规格详情](~~206343~~)。
+     * * 所在主机上所有实例的带宽总和不能超过所在主机的150%，您可以设置超配满足错峰部署的带宽使用。具体操作，请参见[设置集群超配降低成本](~~183798~~)。
+     * > 标准架构的实例如果不传入本参数，该实例的带宽会在当前带宽的基础上增加一倍。
+     * @example `10`
+     */
+    "BandWidth"?: number;
+    /**
+     * 数据节点ID，您可以调用[DescribeClusterMemberInfo](~~193462~~)获取，传入多个时使用英文逗号（,）分隔。
+     * > 当Redis实例为[集群架构](~~52228~~)时，本参数才可用且必须传入。
+     * @example `r-bp1zxszhcgatnx****-db-0`
+     */
+    "NodeId"?: string;
 }
-export { ModifyIntranetAttributeRequest };

@@ -1,0 +1,1 @@
+export type UpdateMetricStoreMeteringModeResponse = any;

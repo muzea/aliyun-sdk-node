@@ -1,8 +1,5 @@
-interface EipFillProductRequest {
-    "RegionId"?: string;
+export interface EipFillProductRequest {
     "data": string;
-    "OwnerId"?: number;
     "ClientToken"?: string;
     "UserCidr"?: string;
 }
-export { EipFillProductRequest };

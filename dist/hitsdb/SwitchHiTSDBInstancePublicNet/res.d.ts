@@ -1,3 +1,0 @@
-interface SwitchHiTSDBInstancePublicNetResponse {
-}
-export { SwitchHiTSDBInstancePublicNetResponse };

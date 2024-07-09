@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.DeleteBgpPeerResponse
 export interface DeleteBgpPeerResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `611CB80C-B6A9-43DB-9E38-0B0AC3D9B58F`
+     */
+    RequestId: string;
 }
-

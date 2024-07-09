@@ -1,3 +1,0 @@
-interface DescribeMianLiuResSummaryResponse {
-}
-export { DescribeMianLiuResSummaryResponse };

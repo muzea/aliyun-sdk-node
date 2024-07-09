@@ -1,28 +1,36 @@
-interface DescribeCustomMetricListRequest {
-    "RegionId"?: string;
+export interface DescribeCustomMetricListRequest {
     /**
-    * 应用分组ID。
-    * @example `12345`
-    */ "GroupId": string;
+     * 应用分组ID。
+     * 关于如何获取应用分组ID，请参见[DescribeMonitorGroups](~~115032~~)。
+     * @example `7378****`
+     */
+    "GroupId"?: string;
     /**
-    * 监控项名称。
-    * @example `cpu`
-    */ "MetricName"?: string;
+     * 自定义监控项名称。
+     * @example `cpu_total`
+     */
+    "MetricName"?: string;
     /**
-    * 维度map，key-value都为字符串, 支持字母、数字、连接符“_-./\”，键值对数量最大为10，key长度最大64字节，value长度最大64字节，超过64字节时截取前64字节。
-    * @example `xx`
-    */ "Dimension"?: string;
+     * 维度Map，用于查询指定资源的监控数据。
+     *
+     * @example `{sampleName1=value1&amp;sampleName2=value2}`
+     */
+    "Dimension"?: string;
     /**
-    * Md5校验码。
-    * @example `97c25982d9745a231276bff27469fbc8`
-    */ "Md5"?: string;
+     * 消息摘要算法，可以产生一个128位（16字节）的散列值，用来校验上报的自定义监控数据的唯一性。
+     * @example `97c25982d9745a231276bff27469****`
+     */
+    "Md5"?: string;
     /**
-    * 当前页码。
-    * @example `1`
-    */ "PageNumber"?: string;
+     * 页码。
+     * 起始值：1。默认值：1。
+     * @example `1`
+     */
+    "PageNumber"?: string;
     /**
-    * 每页显示记录条数。
-    * @example `10`
-    */ "PageSize"?: string;
+     * 分页时每页显示的数据行数。
+     * 起始值：1。默认值：10。
+     * @example `10`
+     */
+    "PageSize"?: string;
 }
-export { DescribeCustomMetricListRequest };

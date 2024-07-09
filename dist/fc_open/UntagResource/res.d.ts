@@ -1,0 +1,1 @@
+export type UntagResourceResponse = any;

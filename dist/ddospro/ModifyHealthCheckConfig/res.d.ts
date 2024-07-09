@@ -1,3 +1,0 @@
-interface ModifyHealthCheckConfigResponse {
-}
-export { ModifyHealthCheckConfigResponse };

@@ -1,3 +1,0 @@
-interface DeleteEntityResponse {
-}
-export { DeleteEntityResponse };

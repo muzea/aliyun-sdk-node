@@ -1,4 +1,2 @@
-interface OnsRegionListRequest {
-    "RegionId"?: string;
+export interface OnsRegionListRequest {
 }
-export { OnsRegionListRequest };

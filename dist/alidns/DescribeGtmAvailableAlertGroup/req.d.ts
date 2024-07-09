@@ -1,6 +1,7 @@
-interface DescribeGtmAvailableAlertGroupRequest {
-    "RegionId"?: string;
+export interface DescribeGtmAvailableAlertGroupRequest {
+    /**
+     * 语言。
+     * @example `en`
+     */
     "Lang"?: string;
-    "UserClientIp"?: string;
 }
-export { DescribeGtmAvailableAlertGroupRequest };

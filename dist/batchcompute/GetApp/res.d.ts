@@ -1,3 +1,0 @@
-interface GetAppResponse {
-}
-export { GetAppResponse };

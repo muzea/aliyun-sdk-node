@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vod.DeleteStreamResponse
 export interface DeleteStreamResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `25818875-5F78-4A7U43F6-D7393642****`
+     */
+    RequestId: string;
 }
-

@@ -1,9 +1,17 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/edas.AuthorizeRoleResponse
 export interface AuthorizeRoleResponse {
-	Code: number;
-	Message: string;
-	RequestId: string;
+    /**
+     * 状态码
+     * @example `200`
+     */
+    Code: number;
+    /**
+     * 附加信息
+     * @example `success`
+     */
+    Message: string;
+    /**
+     * 请求ID
+     * @example `57609587-DFA2-*******`
+     */
+    RequestId: string;
 }
-

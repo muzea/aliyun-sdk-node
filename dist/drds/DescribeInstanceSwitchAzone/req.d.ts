@@ -1,5 +1,7 @@
-interface DescribeInstanceSwitchAzoneRequest {
-    "RegionId"?: string;
+export interface DescribeInstanceSwitchAzoneRequest {
+    /**
+     * 实例ID。
+     * @example `drdsxxxxxxxxxxxx`
+     */
     "DrdsInstanceId": string;
 }
-export { DescribeInstanceSwitchAzoneRequest };

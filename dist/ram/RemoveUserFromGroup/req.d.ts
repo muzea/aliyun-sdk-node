@@ -1,12 +1,12 @@
-interface RemoveUserFromGroupRequest {
-    "RegionId"?: string;
+export interface RemoveUserFromGroupRequest {
     /**
-    * RAM用户名称。
-    * @example `zhangq****`
-    */ "UserName"?: string;
+     * RAM用户名称。
+     * @example `zhangq****`
+     */
+    "UserName"?: string;
     /**
-    * 用户组名称。
-    * @example `Dev-Team`
-    */ "GroupName"?: string;
+     * 用户组名称。
+     * @example `Dev-Team`
+     */
+    "GroupName"?: string;
 }
-export { RemoveUserFromGroupRequest };

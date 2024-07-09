@@ -1,3 +1,0 @@
-interface UpdateEntityResponse {
-}
-export { UpdateEntityResponse };

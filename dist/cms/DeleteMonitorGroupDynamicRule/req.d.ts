@@ -1,12 +1,12 @@
-interface DeleteMonitorGroupDynamicRuleRequest {
-    "RegionId"?: string;
+export interface DeleteMonitorGroupDynamicRuleRequest {
     /**
-    * 动态规则对应的云产品类型，目前动态组支持的产品有ECS、RDS、SLB。
-    * @example `ecs`
-    */ "Category": string;
+     * 应用分组ID。
+     * @example `123456`
+     */
+    "GroupId": number;
     /**
-    * 应用分组ID。
-    * @example `12345`
-    */ "GroupId": number;
+     * 动态规则对应的云产品类型，取值：ecs、rds、slb。
+     * @example `ecs`
+     */
+    "Category": string;
 }
-export { DeleteMonitorGroupDynamicRuleRequest };

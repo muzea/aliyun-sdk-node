@@ -1,8 +1,7 @@
-interface ListGroupsForUserRequest {
-    "RegionId"?: string;
+export interface ListGroupsForUserRequest {
     /**
-    * 用户名称。
-    * @example `zhangq****`
-    */ "UserName"?: string;
+     * RAM用户名称。
+     * @example `Alice`
+     */
+    "UserName"?: string;
 }
-export { ListGroupsForUserRequest };

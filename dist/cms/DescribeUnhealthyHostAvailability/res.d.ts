@@ -1,27 +1,40 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.InstanceList
-export interface InstanceList {
-	String: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.NodeTaskInstance
-export interface NodeTaskInstance {
-	Id: number;
-	InstanceList: InstanceList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.UnhealthyList
-export interface UnhealthyList {
-	NodeTaskInstance: NodeTaskInstance[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.DescribeUnhealthyHostAvailabilityResponse
 export interface DescribeUnhealthyHostAvailabilityResponse {
-	Code: string;
-	Message: string;
-	Success: boolean;
-	RequestId: string;
-	UnhealthyList: UnhealthyList;
+    /**
+     * 状态码。
+     * > 200表示成功。
+     * @example `200`
+     */
+    Code: string;
+    /**
+     * 错误信息。
+     * @example `User not authorized to operate on the specified resource.`
+     */
+    Message: string;
+    /**
+     * 请求ID。
+     * @example `ACBDBB40-DFB6-4F4C-8957-51FFB233969C`
+     */
+    RequestId: string;
+    /**
+     * 操作是否成功。取值：
+     * - true：成功。
+     * - false：失败。
+     * @example `true`
+     */
+    Success: boolean;
+    UnhealthyList: {
+        /**
+         * 探测异常的服务器列表。
+         */
+        NodeTaskInstance: {
+            /**
+             * 任务ID。
+             * @example `123456`
+             */
+            Id: number;
+            InstanceList: {
+                String: string[];
+            };
+        }[];
+    };
 }
-

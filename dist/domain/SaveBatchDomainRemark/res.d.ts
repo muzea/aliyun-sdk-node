@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/domain.SaveBatchDomainRemarkResponse
 export interface SaveBatchDomainRemarkResponse {
-	RequestId: string;
+    /**
+     * 唯一请求识别码。
+     * @example `4189E320-961E-4786-8E15-0000`
+     */
+    RequestId: string;
 }
-

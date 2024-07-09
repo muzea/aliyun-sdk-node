@@ -1,19 +1,24 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.InstanceTypeFamily
-export interface InstanceTypeFamily {
-	InstanceTypeFamilyId: string;
-	Generation: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.InstanceTypeFamiliesInDescribeInstanceTypeFamilies
-export interface InstanceTypeFamiliesInDescribeInstanceTypeFamilies {
-	InstanceTypeFamily: InstanceTypeFamily[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.DescribeInstanceTypeFamiliesResponse
 export interface DescribeInstanceTypeFamiliesResponse {
-	RequestId: string;
-	InstanceTypeFamilies: InstanceTypeFamiliesInDescribeInstanceTypeFamilies;
+    /**
+     * 请求ID。
+     * @example `473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E`
+     */
+    RequestId: string;
+    InstanceTypeFamilies: {
+        /**
+         * 由实例规格族InstanceTypeFamily组成的集合。
+         */
+        InstanceTypeFamily: {
+            /**
+             * 实例规格族所属代数。
+             * @example `ecs-5`
+             */
+            Generation: string;
+            /**
+             * 实例规格族ID。
+             * @example `ecs.g6`
+             */
+            InstanceTypeFamilyId: string;
+        }[];
+    };
 }
-

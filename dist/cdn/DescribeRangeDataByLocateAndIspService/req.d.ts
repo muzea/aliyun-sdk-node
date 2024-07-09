@@ -1,31 +1,32 @@
-interface DescribeRangeDataByLocateAndIspServiceRequest {
-    "RegionId"?: string;
+export interface DescribeRangeDataByLocateAndIspServiceRequest {
     /**
-    * 要查询的域名，仅支持单个。
-    * @example `abc.com`
-    */ "DomainNames": string;
+     * 加速域名。
+     * @example `example.com`
+     */
+    "DomainNames": string;
     /**
-    * 获取数据开始时间点。
-    * - 日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
-    * - 最小数据粒度为5分钟。
-    * @example `2017-12-22T07:00:00:00Z`
-    */ "StartTime": string;
+     * 获取数据开始时间点。
+     * 日期格式按照ISO8601表示法，并使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。
+     * @example `2019-11-30T05:33:00Z`
+     */
+    "StartTime": string;
     /**
-    * 获取数据结束时间点。
-    * - 结束时间大于开始时间。
-    * - 日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mmZ。
-    * @example `2017-12-22T08:00:00:00Z`
-    */ "EndTime": string;
-    "OwnerId"?: number;
+     * 获取数据结束时间点。
+     * 日期格式按照ISO8601表示法，并使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。
+     * > 结束时间大于开始时间，并且结束时间和开始时间相差不超过1小时。
+     * @example `2019-11-30T05:40:00Z`
+     */
+    "EndTime": string;
     /**
-    * 需要查询目标Isp（运营商）列表，用逗号（,）隔开，不能为空。
-    * ISP名通过[DescribeCdnRegionAndIsp](~~91077~~)接口获得。
-    * @example `unicom,telecom`
-    */ "IspNames"?: string;
+     * 运营商名，每次只能传入一个参数。
+     * 运营商名通过[DescribeCdnRegionAndIsp](~~91077~~)接口查询。
+     * @example `unicom`
+     */
+    "IspNames"?: string;
     /**
-    * 需要查询目标区域列表，用逗号（,）隔开，不能为空。
-    * Location（区域）名通过[DescribeCdnRegionAndIsp](~~91077~~)接口获得。
-    * @example `liaoning,guangxi`
-    */ "LocationNames"?: string;
+     * 地域名，多个地域名用英文逗号（,）分隔。
+     * 地域名通过[DescribeCdnRegionAndIsp](~~91077~~)接口查询。
+     * @example `liaoning,guangxi`
+     */
+    "LocationNames"?: string;
 }
-export { DescribeRangeDataByLocateAndIspServiceRequest };

@@ -1,18 +1,1 @@
-{
-  "name": "DescribeStorage",
-  "protocol": "HTTPS|HTTP",
-  "method": "GET",
-  "path": "/pop/v1/wam/storage",
-  "summary_cn": "调用DescribeStorage查询存储。",
-  "abc_id": 127781,
-  "timeout": 10000,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Query",
-      "required": false
-    }
-  },
-  "res": {}
-}
+{"path":"/pop/v1/wam/storage","methods":["get"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"readAndWrite","deprecated":true,"parameters":[{"name":"UsingSharedStorage","in":"query","schema":{"description":"是否使用共享OSS存储","type":"boolean","required":false,"example":"true"}},{"name":"RegionId","in":"query","schema":{"type":"string"}}],"responses":{"200":{"schema":{"type":"object","properties":{"Storage":{"description":"存储描述信息\n","type":"object","properties":{"UpdateTime":{"description":"存储最后更新时间","type":"integer","format":"int64","example":"1560410804957"},"KeyPrefix":{"description":"存储路径前缀","type":"string","example":"pkgTemp"},"PkgKeyPrefix":{"description":"存储路径用户uid前缀md5","type":"string","example":"f29a318c780**********3ec19ece615"},"CreateTime":{"description":"存储创建时间","type":"integer","format":"int64","example":"1560410804957"},"BucketName":{"description":"存储的bucket名称","type":"string","example":"webplus-cn-shenzhen-s-5d01fab421e*****121*****"}}},"Message":{"description":"响应消息，若成功请求为success","type":"string","example":"success"},"RequestId":{"description":"请求ID","type":"string","example":"49C3DE38-ABA2-4369-BED2-CBD1D**********"},"Code":{"description":"响应代码，若成功请求为OK","type":"string","example":"OK"}}}}},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"Code\\\": \\\"OK\\\",\\n  \\\"Message\\\": \\\"success\\\",\\n  \\\"RequestId\\\": \\\"49C3DE38-ABA2-4369-BED2-CBD1D**********\\\",\\n  \\\"Storage\\\": {\\n    \\\"UpdateTime\\\": 1560410804957,\\n    \\\"KeyPrefix\\\": \\\"pkgTemp\\\",\\n    \\\"PkgKeyPrefix\\\": \\\"f29a318c780**********3ec19ece615\\\",\\n    \\\"CreateTime\\\": 1560410804957,\\n    \\\"BucketName\\\": \\\"webplus-cn-shenzhen-s-5d01fab421e*****121*****\\\"\\n  }\\n}\",\"errorExample\":\"\"},{\"type\":\"xml\",\"example\":\"<Storage>\\n    <BucketName>webplus-cn-shenzhen-s-5d01fab**********2105691</BucketName>\\n    <CreateTime>1560410804957</CreateTime>\\n    <UpdateTime>1560410804957</UpdateTime>\\n    <KeyPrefix>pkgTemp</KeyPrefix>\\n    <PkgKeyPrefix>f29a318c780**********3ec19ece615</PkgKeyPrefix>\\n</Storage>\\n<Message>success</Message>\\n<RequestId>76818DD9-BBD6-4E66-9D23-2ED8**********914</RequestId>\\n<Code>OK</Code>\",\"errorExample\":\"\"}]","title":"查询存储","summary":"调用DescribeStorage查询存储。","requestParamsDescription":" ","responseParamsDescription":" ","extraInfo":" "}

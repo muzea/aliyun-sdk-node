@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.ReleaseEipAddressResponse
 export interface ReleaseEipAddressResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `748C38F6-9A3D-482E-83FB-DB6C39C68AEA`
+     */
+    RequestId: string;
 }
-

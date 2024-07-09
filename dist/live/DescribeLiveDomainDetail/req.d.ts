@@ -1,9 +1,7 @@
-interface DescribeLiveDomainDetailRequest {
-    "RegionId"?: string;
+export interface DescribeLiveDomainDetailRequest {
     /**
-    * 直播域名名称。
-    * @example `live.yourdomain.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 直播推流域名或播流域名。
+     * @example `demo.aliyundoc.com`
+     */
+    "DomainName": string;
 }
-export { DescribeLiveDomainDetailRequest };

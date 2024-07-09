@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/nas.DeleteAccessGroupResponse
 export interface DeleteAccessGroupResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `9E15E394-38A6-457A-A62A-D9797C9A****`
+     */
+    RequestId: string;
 }
-

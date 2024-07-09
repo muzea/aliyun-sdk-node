@@ -1,3 +1,0 @@
-interface CreateInstanceResponse {
-}
-export { CreateInstanceResponse };

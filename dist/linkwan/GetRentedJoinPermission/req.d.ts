@@ -1,8 +1,7 @@
-interface GetRentedJoinPermissionRequest {
-    "RegionId"?: string;
+export interface GetRentedJoinPermissionRequest {
     /**
-    * 入网凭证ID。
-    * @example `123`
-    */ "JoinPermissionId": string;
+     * 入网凭证ID。
+     * @example `123`
+     */
+    "JoinPermissionId": string;
 }
-export { GetRentedJoinPermissionRequest };

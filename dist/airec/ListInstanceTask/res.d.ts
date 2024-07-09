@@ -1,78 +1,64 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/airec.Meta
-export interface Meta {
-	Path: string;
-	Partition: string;
-	Timestamp: number;
-	ProjectName: string;
-	BucketName: string;
-	TableName: string;
-	AccessKeyId: string;
-	Type: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/airec.SettingsItemInDeleteMix
-export interface SettingsItemInDeleteMix {
-	Name: string;
-	Value: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/airec.Parameter
-export interface Parameter {
-	CategoryIndex: number;
-	Window: number;
-	Settings: SettingsItemInDeleteMix[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/airec.SubProgressInfosItem
-export interface SubProgressInfosItem {
-	Type: string;
-	Progress: number;
-	Detail: string;
-	TotalNum: number;
-	FinishedNum: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/airec.ResultItem
-export interface ResultItem {
-	Name: string;
-	ChargeType: string;
-	ErrorLevel: string;
-	ItemType: string;
-	GmtCreate: string;
-	DataSetVersion: string;
-	RegionId: string;
-	TotalProgress: number;
-	InstanceId: string;
-	TraceId: string;
-	CommodityCode: string;
-	MatchInfo: string;
-	Type: string;
-	Message: string;
-	ExpiredTime: string;
-	Timestamp: string;
-	ErrorType: string;
-	GmtModified: string;
-	Industry: string;
-	TableName: string;
-	ItemId: string;
-	Scene: string;
-	TraceInfo: string;
-	Position: number;
-	Status: string;
-	LockMode: string;
-	Weight: number;
-	Meta: Meta;
-	Parameter: Parameter;
-	SubProgressInfos: SubProgressInfosItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/airec.ListInstanceTaskResponse
 export interface ListInstanceTaskResponse {
-	RequestId: string;
-	Code: string;
-	Message: string;
-	Result: ResultItem[];
+    /**
+     * 返回结果。
+     */
+    result: {
+        /**
+         * 子任务具体进度信息列表
+         */
+        subProgressInfos: {
+            /**
+             * 子任务类型
+             * @example `DATA_PROCESS`
+             */
+            type: string;
+            /**
+             * 子任务具体描述
+             * @example `data import progress info`
+             */
+            detail: string;
+            /**
+             * 子任务一共的任务数量
+             * @example `11`
+             */
+            totalNum: number;
+            /**
+             * 已完成子任务数
+             * @example `2`
+             */
+            finishedNum: number;
+            /**
+             * 执行进度
+             * 范围为0-100
+             * 100为执行结束
+             * @example `20`
+             */
+            progress: number;
+        }[];
+        /**
+         * 当前任务整体进度
+         * @example `50`
+         */
+        totalProgress: number;
+        /**
+         * 任务名称
+         * @example `启动任务`
+         */
+        name: string;
+    }[];
+    /**
+     * 错误码
+     * @example `200`
+     */
+    code: string;
+    /**
+     * 请求的RequestID
+     * @example `8F81A922-6C81-46D6-B78C-CC35E16B1691`
+     */
+    requestId: string;
+    /**
+     * 错误详情
+     * @example `successful`
+     */
+    message: string;
 }
-

@@ -1,11 +1,30 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.CreateMonitorGroupResponse
 export interface CreateMonitorGroupResponse {
-	RequestId: string;
-	Success: boolean;
-	Code: number;
-	Message: string;
-	GroupId: number;
+    /**
+     * 状态码。
+     * > 200表示成功。
+     * @example `200`
+     */
+    Code: number;
+    /**
+     * 错误信息。
+     * @example `The specified resource is not found.`
+     */
+    Message: string;
+    /**
+     * 请求ID。
+     * @example `83C89BA6-ABD4-4398-A175-83E86C47A001`
+     */
+    RequestId: string;
+    /**
+     * 应用分组ID。
+     * @example `1234567`
+     */
+    GroupId: number;
+    /**
+     * 操作是否成功。取值：
+     * - true：成功。
+     * - false：失败。
+     * @example `true`
+     */
+    Success: boolean;
 }
-

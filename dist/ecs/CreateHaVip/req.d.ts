@@ -1,9 +1,7 @@
-interface CreateHaVipRequest {
+export interface CreateHaVipRequest {
+    "ClientToken"?: string;
     "RegionId": string;
     "VSwitchId": string;
-    "OwnerId"?: number;
-    "ClientToken"?: string;
     "IpAddress"?: string;
     "Description"?: string;
 }
-export { CreateHaVipRequest };

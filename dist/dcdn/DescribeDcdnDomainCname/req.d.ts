@@ -1,9 +1,7 @@
-interface DescribeDcdnDomainCnameRequest {
-    "RegionId"?: string;
+export interface DescribeDcdnDomainCnameRequest {
     /**
-    * 需要接入CDN的域名，多个域名以逗号（,）分隔。
-    * @example `example.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 加速域名，多个以逗号（,）分隔。
+     * @example `example.com,example.org`
+     */
+    "DomainName": string;
 }
-export { DescribeDcdnDomainCnameRequest };

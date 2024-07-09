@@ -1,4 +1,2 @@
-interface ListVirtualMFADevicesRequest {
-    "RegionId"?: string;
+export interface ListVirtualMFADevicesRequest {
 }
-export { ListVirtualMFADevicesRequest };

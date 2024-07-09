@@ -1,12 +1,19 @@
-interface DescribeRiskCheckSummaryRequest {
-    "RegionId"?: string;
+export interface DescribeRiskCheckSummaryRequest {
     /**
-    * 请求源IP。
-    * @example `1.1.1.1`
-    */ "SourceIp"?: string;
+     * 要查询的访问源的IP地址。
+     * @example `1.2.XX.XX`
+     */
+    "SourceIp"?: string;
     /**
-    * 调用接口返回的内容的语种类型，支持中文和英文。
-    * @example `cn`
-    */ "Lang"?: string;
+     * 请求和接收消息的语言类型。默认值为**zh**。取值：
+     * - **zh**：中文
+     * - **en**：英文
+     * @example `zh`
+     */
+    "Lang"?: string;
+    /**
+     * 多账号安全管控的成员账户的AliUid。
+     * @example `1232428423234****`
+     */
+    "ResourceDirectoryAccountId"?: string;
 }
-export { DescribeRiskCheckSummaryRequest };

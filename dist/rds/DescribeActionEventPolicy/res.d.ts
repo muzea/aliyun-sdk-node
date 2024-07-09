@@ -1,9 +1,17 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.DescribeActionEventPolicyResponse
 export interface DescribeActionEventPolicyResponse {
-	RequestId: string;
-	RegionId: string;
-	EnableEventLog: string;
+    /**
+     * 历史事件功能开启情况。
+     * @example `True`
+     */
+    EnableEventLog: string;
+    /**
+     * 请求ID。
+     * @example `CCECD3CD-AB2D-4F6D-BEDE-47BC90A398D2`
+     */
+    RequestId: string;
+    /**
+     * 地域ID。
+     * @example `cn-hangzhou`
+     */
+    RegionId: string;
 }
-

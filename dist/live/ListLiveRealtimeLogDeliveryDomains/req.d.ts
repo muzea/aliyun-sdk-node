@@ -1,8 +1,17 @@
-interface ListLiveRealtimeLogDeliveryDomainsRequest {
-    "RegionId"?: string;
-    "Logstore": string;
-    "Region": string;
-    "OwnerId"?: number;
+export interface ListLiveRealtimeLogDeliveryDomainsRequest {
+    /**
+     * 实时投递SLS的ProjectName。
+     * @example `project_example`
+     */
     "Project": string;
+    /**
+     * 实时投递SLS的LogStoreName。
+     * @example `logstore_example`
+     */
+    "Logstore": string;
+    /**
+     * 实时投递SLS的Region。
+     * @example `cn-hangzhou`
+     */
+    "Region": string;
 }
-export { ListLiveRealtimeLogDeliveryDomainsRequest };

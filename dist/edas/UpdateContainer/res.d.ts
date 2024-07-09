@@ -1,10 +1,22 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/edas.UpdateContainerResponse
 export interface UpdateContainerResponse {
-	Code: number;
-	Message: string;
-	ChangeOrderId: string;
-	RequestId: string;
+    /**
+     * HTTP状态码。
+     * @example `200`
+     */
+    Code: number;
+    /**
+     * 变更流程ID。
+     * @example `eb1b9862-****-476f-9e78-d6aa0842835a`
+     */
+    ChangeOrderId: string;
+    /**
+     * 返回信息。
+     * @example `success`
+     */
+    Message: string;
+    /**
+     * 请求ID。
+     * @example `a5281053-08e4-47a5-b2ab-5c0323******`
+     */
+    RequestId: string;
 }
-

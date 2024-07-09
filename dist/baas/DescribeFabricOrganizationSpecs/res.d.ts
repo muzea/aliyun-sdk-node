@@ -1,11 +1,34 @@
-interface DescribeFabricOrganizationSpecsResponse {
-    "Result": {
-        "OrganizationSpecsName": string;
-        "Enable": boolean;
-        "Title": string;
+export interface DescribeFabricOrganizationSpecsResponse {
+    /**
+     * 请求ID
+     * @example `1890FA4F-067A-4CE9-AC9B-2BD2E58FB5D3`
+     */
+    RequestId: string;
+    /**
+     * 是否成功
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 错误码
+     * @example `200`
+     */
+    ErrorCode: number;
+    Result: {
+        /**
+         * 标题
+         * @example `基础版`
+         */
+        Title: string;
+        /**
+         * 规格名
+         * @example `basic`
+         */
+        OrganizationSpecsName: string;
+        /**
+         * 是否启用
+         * @example `true`
+         */
+        Enable: boolean;
     }[];
-    "RequestId": string;
-    "Success": boolean;
-    "ErrorCode": number;
 }
-export { DescribeFabricOrganizationSpecsResponse };

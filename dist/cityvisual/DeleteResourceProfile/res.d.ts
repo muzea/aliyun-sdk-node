@@ -1,3 +1,0 @@
-interface DeleteResourceProfileResponse {
-}
-export { DeleteResourceProfileResponse };

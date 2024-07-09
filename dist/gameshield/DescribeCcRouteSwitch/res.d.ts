@@ -1,3 +1,0 @@
-interface DescribeCcRouteSwitchResponse {
-}
-export { DescribeCcRouteSwitchResponse };

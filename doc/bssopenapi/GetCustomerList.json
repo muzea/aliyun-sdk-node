@@ -1,16 +1,1 @@
-{
-  "name": "GetCustomerList",
-  "protocol": "HTTPS|HTTP",
-  "method": "POST|GET",
-  "path": "/",
-  "timeout": 5000,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Query",
-      "required": false
-    }
-  },
-  "res": {}
-}
+{"summary":"查询虚商下的终端客户uid列表。","methods":["post","get"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"readAndWrite","deprecated":false,"systemTags":{"operationType":"get"},"parameters":[],"responses":{"200":{"schema":{"description":"返回对象","type":"object","properties":{"Code":{"description":"状态码。","type":"string","example":"200"},"Message":{"description":"错误信息。","type":"string","example":"Successful!"},"RequestId":{"description":"请求的ID。用于定位日志，排查问题。","type":"string","example":"79EE7556-0CFD-44EB-9CD6-B3B526E3A85F"},"Success":{"description":"是否调用成功。\n- **true**：调用成功。\n- **false**：调用失败。","type":"boolean","example":"true"},"Data":{"description":"返回数据。","type":"object","properties":{"UidList":{"description":"用户uid列表。","type":"array","items":{"description":"用户uid列表。","type":"string","example":"6210322125051645960"}}}}}}}},"errorCodes":{"400":[{"errorCode":"NotAuthorized","errorMessage":"This API is not authorized for caller."}],"401":[{"errorCode":"VnoNoDataError","errorMessage":"There is no data by this request."}],"402":[{"errorCode":"NotFoundRamAction","errorMessage":"Not found ramAction for apiActon: GetCustomerList"}],"500":[{"errorCode":"InternalError","errorMessage":"The request processing has failed due to some unknown error."}]},"responseDemo":"[{\"errorExample\":\"\",\"example\":\"{\\n  \\\"Code\\\": \\\"200\\\",\\n  \\\"Message\\\": \\\"Successful!\\\",\\n  \\\"RequestId\\\": \\\"79EE7556-0CFD-44EB-9CD6-B3B526E3A85F\\\",\\n  \\\"Success\\\": true,\\n  \\\"Data\\\": {\\n    \\\"UidList\\\": [\\n      \\\"6210322125051645960\\\"\\n    ]\\n  }\\n}\",\"type\":\"json\"}]","title":"查询子账号列表","description":"系统会根据请求的aksk查询其下的关联的终端客户uid列表"}

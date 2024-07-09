@@ -1,3 +1,0 @@
-interface UnbindNumberAndVoipIdResponse {
-}
-export { UnbindNumberAndVoipIdResponse };

@@ -1,66 +1,68 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.Rule
-export interface Rule {
-	Domain: string;
-	HealthCheckTimeout: number;
-	RuleName: string;
-	HealthCheckURI: string;
-	StickySession: string;
-	HealthCheckInterval: number;
-	ListenerSync: string;
-	RuleId: string;
-	HealthCheckDomain: string;
-	Scheduler: string;
-	Url: string;
-	VServerGroupId: string;
-	HealthyThreshold: number;
-	CookieTimeout: number;
-	HealthCheckHttpCode: string;
-	UnhealthyThreshold: number;
-	StickySessionType: string;
-	HealthCheckConnectPort: number;
-	Cookie: string;
-	HealthCheck: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.RulesInDescribeVServerGroups
-export interface RulesInDescribeVServerGroups {
-	Rule: Rule[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.Listener
-export interface Listener {
-	Port: number;
-	Protocol: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.ListenersInDescribeMasterSlaveServerGroups
-export interface ListenersInDescribeMasterSlaveServerGroups {
-	Listener: Listener[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.AssociatedObjects
-export interface AssociatedObjects {
-	Rules: RulesInDescribeVServerGroups;
-	Listeners: ListenersInDescribeMasterSlaveServerGroups;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.MasterSlaveServerGroup
-export interface MasterSlaveServerGroup {
-	MasterSlaveServerGroupId: string;
-	MasterSlaveServerGroupName: string;
-	AssociatedObjects: AssociatedObjects;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.MasterSlaveServerGroups
-export interface MasterSlaveServerGroups {
-	MasterSlaveServerGroup: MasterSlaveServerGroup[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.DescribeMasterSlaveServerGroupsResponse
 export interface DescribeMasterSlaveServerGroupsResponse {
-	RequestId: string;
-	MasterSlaveServerGroups: MasterSlaveServerGroups;
+    /**
+     * 请求ID。
+     * @example `9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C`
+     */
+    RequestId: string;
+    MasterSlaveServerGroups: {
+        /**
+         * 主备服务器组列表。
+         */
+        MasterSlaveServerGroup: {
+            /**
+             * 主备服务器组ID。
+             * @example `rsp-0bfuc******`
+             */
+            MasterSlaveServerGroupId: string;
+            /**
+             * 主备服务器组的名称。
+             * @example `Group3`
+             */
+            MasterSlaveServerGroupName: string;
+            /**
+             * 关联信息。
+             */
+            AssociatedObjects: {
+                Listeners: {
+                    /**
+                     * 监听列表。
+                     */
+                    Listener: {
+                        /**
+                         * 监听端口。
+                         * @example `80`
+                         */
+                        Port: number;
+                        /**
+                         * 监听协议。
+                         * @example `tcp`
+                         */
+                        Protocol: string;
+                    }[];
+                };
+            };
+            /**
+             * 传统型负载均衡实例创建时间，格式为：`YYYY-MM-DDThh:mm:ssZ`。
+             * @example `2022-12-02T02:49:05Z`
+             */
+            CreateTime: string;
+            Tags: {
+                /**
+                 * 标签列表。
+                 */
+                Tag: {
+                    /**
+                     * 资源的标签键。
+                     * @example `TestKey`
+                     */
+                    TagKey: string;
+                    /**
+                     * 资源的标签值。
+                     * @example `TestValue`
+                     */
+                    TagValue: string;
+                }[];
+            };
+        }[];
+    };
 }
-

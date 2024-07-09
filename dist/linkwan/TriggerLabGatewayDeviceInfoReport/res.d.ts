@@ -1,3 +1,0 @@
-interface TriggerLabGatewayDeviceInfoReportResponse {
-}
-export { TriggerLabGatewayDeviceInfoReportResponse };

@@ -1,8 +1,7 @@
-interface DeleteLoginProfileRequest {
-    "RegionId"?: string;
+export interface DeleteLoginProfileRequest {
     /**
-    * 指定用户名。
-    * @example `zhangq****`
-    */ "UserName"?: string;
+     * 指定用户名。
+     * @example `zhangq****`
+     */
+    "UserName"?: string;
 }
-export { DeleteLoginProfileRequest };

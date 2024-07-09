@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ehpc.ListCurrentClientVersionResponse
 export interface ListCurrentClientVersionResponse {
-	RequestId: string;
-	ClientVersion: string;
+    /**
+     * ehpcutil最新版本号。
+     * @example `1.1.1`
+     */
+    ClientVersion: string;
+    /**
+     * 请求ID。
+     * @example `04F0F334-1335-436C-A1D7-6C044FE73368`
+     */
+    RequestId: string;
 }
-

@@ -1,3 +1,0 @@
-interface CleanFlexFwdRulesResponse {
-}
-export { CleanFlexFwdRulesResponse };

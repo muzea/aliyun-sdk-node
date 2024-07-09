@@ -1,18 +1,1 @@
-{
-  "name": "ListCurrentClientVersion",
-  "protocol": "HTTP|HTTPS",
-  "method": "GET",
-  "path": "/",
-  "timeout": 10000,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "System",
-      "checkBlank": "false",
-      "required": false,
-      "docRequired": false
-    }
-  },
-  "res": {}
-}
+{"methods":["get"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"read","deprecated":false,"systemTags":{"operationType":"get"},"parameters":[],"responses":{"200":{"schema":{"type":"object","properties":{"ClientVersion":{"description":"ehpcutil最新版本号。","type":"string","example":"1.1.1"},"RequestId":{"description":"请求ID。","type":"string","example":"04F0F334-1335-436C-A1D7-6C044FE73368"}}}}},"errorCodes":{"406":[{"errorCode":"DbError","errorMessage":"A database service error occurred."}],"407":[{"errorCode":"NotAuthorized","errorMessage":"You are not authorized by RAM for this request."}],"500":[{"errorCode":"UnknownError","errorMessage":"An unknown error occurred."}],"503":[{"errorCode":"ServiceUnavailable","errorMessage":"The request has failed due to a temporary failure of the server"}]},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"ClientVersion\\\": \\\"1.1.1\\\",\\n  \\\"RequestId\\\": \\\"04F0F334-1335-436C-A1D7-6C044FE73368\\\"\\n}\",\"errorExample\":\"\"},{\"type\":\"xml\",\"example\":\"<ListCurrentClientVersionResponse>\\r\\n    <RequestId>04F0F334-1335-436C-A1D7-6C044FE73368</RequestId>\\r\\n    <ClientVersion>1.0.24</ClientVersion>\\r\\n</ListCurrentClientVersionResponse>\",\"errorExample\":\"\"}]","title":"查询ehpcutil最新版本号","summary":"调用ListCurrentClientVersion查询集群客户端（ehpcutil）的最新版本号。"}

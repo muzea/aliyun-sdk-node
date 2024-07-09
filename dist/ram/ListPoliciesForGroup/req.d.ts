@@ -1,8 +1,7 @@
-interface ListPoliciesForGroupRequest {
-    "RegionId"?: string;
+export interface ListPoliciesForGroupRequest {
     /**
-    * 指定用户组名称。
-    * @example `dev`
-    */ "GroupName"?: string;
+     * 指定用户组名称。
+     * @example `dev`
+     */
+    "GroupName"?: string;
 }
-export { ListPoliciesForGroupRequest };

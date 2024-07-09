@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.ResetAccountPasswordResponse
 export interface ResetAccountPasswordResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `8BE02313-5395-4EBE-BAE7-E90A053F****`
+     */
+    RequestId: string;
 }
-

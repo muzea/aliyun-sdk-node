@@ -1,3 +1,0 @@
-interface DownloadSdkFileResponse {
-}
-export { DownloadSdkFileResponse };

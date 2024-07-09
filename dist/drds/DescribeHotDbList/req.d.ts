@@ -1,6 +1,12 @@
-interface DescribeHotDbListRequest {
-    "RegionId"?: string;
-    "DbName": string;
+export interface DescribeHotDbListRequest {
+    /**
+     * 实例ID。
+     * @example `drds**********`
+     */
     "DrdsInstanceId": string;
+    /**
+     * 数据库名称。
+     * @example `test`
+     */
+    "DbName": string;
 }
-export { DescribeHotDbListRequest };

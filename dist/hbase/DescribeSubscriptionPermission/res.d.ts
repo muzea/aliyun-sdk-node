@@ -1,3 +1,0 @@
-interface DescribeSubscriptionPermissionResponse {
-}
-export { DescribeSubscriptionPermissionResponse };

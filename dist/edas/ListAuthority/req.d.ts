@@ -1,4 +1,2 @@
-interface ListAuthorityRequest {
-    "RegionId"?: string;
+export interface ListAuthorityRequest {
 }
-export { ListAuthorityRequest };

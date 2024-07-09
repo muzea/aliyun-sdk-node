@@ -1,9 +1,7 @@
-interface SetDefaultTranscodeTemplateGroupRequest {
-    "RegionId"?: string;
+export interface SetDefaultTranscodeTemplateGroupRequest {
     /**
-    * 转码模板组ID。
-    * @example `ffffffffff`
-    */ "TranscodeTemplateGroupId": string;
-    "OwnerId"?: number;
+     * 转码模板组ID。
+     * @example `d58079958be8d*****b699ab7ab6e1bf`
+     */
+    "TranscodeTemplateGroupId": string;
 }
-export { SetDefaultTranscodeTemplateGroupRequest };

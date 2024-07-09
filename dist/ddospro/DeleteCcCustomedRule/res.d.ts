@@ -1,3 +1,0 @@
-interface DeleteCcCustomedRuleResponse {
-}
-export { DeleteCcCustomedRuleResponse };

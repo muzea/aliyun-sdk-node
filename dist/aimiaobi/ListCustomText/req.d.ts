@@ -1,0 +1,12 @@
+export interface ListCustomTextRequest {
+    /**
+     * 业务空间唯一标识：AgentKey
+     * @example `xxxxx_p_efm`
+     */
+    "AgentKey": string;
+    /**
+     * 商品code
+     * @example `商品code`
+     */
+    "CommodityCode"?: string;
+}

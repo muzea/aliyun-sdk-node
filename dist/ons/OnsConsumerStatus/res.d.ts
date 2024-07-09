@@ -1,189 +1,260 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.ConnectionDo
-export interface ConnectionDo {
-	ClientAddr: string;
-	ClientId: string;
-	Version: string;
-	Language: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.ConnectionSet
-export interface ConnectionSet {
-	ConnectionDo: ConnectionDo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.MessageProperty
-export interface MessageProperty {
-	Name: string;
-	Value: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.PropertyListInOnsDLQMessageGetById
-export interface PropertyListInOnsDLQMessageGetById {
-	MessageProperty: MessageProperty[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.StatsDataDo
-export interface StatsDataDo {
-	X: number;
-	Y: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.RecordsInOnsMqttQueryHistoryOnline
-export interface RecordsInOnsMqttQueryHistoryOnline {
-	StatsDataDo: StatsDataDo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.TagsSet
-export interface TagsSet {
-	Tag: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.SubscriptionData
-export interface SubscriptionData {
-	Topic: string;
-	SubString: string;
-	SubVersion: number;
-	TagsSet: TagsSet;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.SubscriptionSet
-export interface SubscriptionSet {
-	SubscriptionData: SubscriptionData[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.ConsumerRunningDataDo
-export interface ConsumerRunningDataDo {
-	GroupId: string;
-	Topic: string;
-	Rt: number;
-	OkTps: number;
-	FailedTps: number;
-	FailedCountPerHour: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.RunningDataList
-export interface RunningDataList {
-	ConsumerRunningDataDo: ConsumerRunningDataDo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.TrackList
-export interface TrackList {
-	Track: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.ThreadTrackDo
-export interface ThreadTrackDo {
-	Thread: string;
-	TrackList: TrackList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.Jstack
-export interface Jstack {
-	ThreadTrackDo: ThreadTrackDo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.ConsumerConnectionInfoDo
-export interface ConsumerConnectionInfoDo {
-	ClientId: string;
-	Connection: string;
-	Language: string;
-	Version: string;
-	ConsumeModel: string;
-	ConsumeType: string;
-	ThreadCount: number;
-	StartTimeStamp: number;
-	LastTimeStamp: number;
-	SubscriptionSet: SubscriptionSet;
-	RunningDataList: RunningDataList;
-	Jstack: Jstack;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.ConsumerConnectionInfoList
-export interface ConsumerConnectionInfoList {
-	ConsumerConnectionInfoDo: ConsumerConnectionInfoDo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.DetailInTopicDo
-export interface DetailInTopicDo {
-	DelayTime: number;
-	TotalDiff: number;
-	Topic: string;
-	LastTimestamp: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.DetailInTopicListInOnsConsumerAccumulate
-export interface DetailInTopicListInOnsConsumerAccumulate {
-	DetailInTopicDo: DetailInTopicDo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.SubscriptionDataListItem
-export interface SubscriptionDataListItem {
-	MessageModel: string;
-	SubString: string;
-	GroupId: string;
-	Topic: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.SubscriptionDataListInOnsGroupSubDetail
-export interface SubscriptionDataListInOnsGroupSubDetail {
-	SubscriptionDataListItem: SubscriptionDataListItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.ConnectionList
-export interface ConnectionList {
-	ConnectionDo: ConnectionDo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.Data
-export interface Data {
-	DelayTime: number;
-	ConsumeModel: string;
-	Title: string;
-	Online: boolean;
-	Flag: number;
-	BornTimestamp: number;
-	RebalanceOK: boolean;
-	XUnit: string;
-	OffsetId: string;
-	SubscriptionSame: boolean;
-	MaxTimeStamp: number;
-	InstanceId: string;
-	ConsumeTps: number;
-	GroupId: string;
-	Topic: string;
-	ConsumeTimeStamp: number;
-	TotalCount: number;
-	ReconsumeTimes: number;
-	TotalDiff: number;
-	Body: string;
-	BornHost: string;
-	MinTimeStamp: number;
-	LastTimeStamp: number;
-	MessageModel: string;
-	InstanceType: number;
-	BodyCRC: number;
-	MsgId: string;
-	StoreTimestamp: number;
-	StoreSize: number;
-	StoreHost: string;
-	YUnit: string;
-	LastTimestamp: number;
-	Perm: number;
-	ConnectionSet: ConnectionSet;
-	PropertyList: PropertyListInOnsDLQMessageGetById;
-	Records: RecordsInOnsMqttQueryHistoryOnline;
-	ConsumerConnectionInfoList: ConsumerConnectionInfoList;
-	DetailInTopicList: DetailInTopicListInOnsConsumerAccumulate;
-	SubscriptionDataList: SubscriptionDataListInOnsGroupSubDetail;
-	ConnectionList: ConnectionList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.OnsConsumerStatusResponse
 export interface OnsConsumerStatusResponse {
-	RequestId: string;
-	HelpUrl: string;
-	Data: Data;
+    /**
+     * 公共参数，每个请求的ID都是唯一的，可用于排查和定位问题。
+     * @example `10EDC518-10E7-4B34-92FB-171235FA****`
+     */
+    RequestId: string;
+    /**
+     * 查询结果。
+     */
+    Data: {
+        /**
+         * 总消费TPS。
+         * @example `0`
+         */
+        ConsumeTps: number;
+        /**
+         * 消费模型。取值说明如下：
+         * -  **CLUSTERING**：集群消费模式
+         * - **BROADCASTING**：广播消费模式
+         * 两种订阅模式的详细信息，请参见[集群消费和广播消费](~~43163~~)。
+         * @example `CLUSTERING`
+         */
+        ConsumeModel: string;
+        ConnectionSet: {
+            /**
+             * 该集群当前在线客户端信息。
+             */
+            ConnectionDo: {
+                /**
+                 * 宿主机IP地址或公网IP地址。
+                 * @example `42.120.74.**`
+                 */
+                RemoteIP: string;
+                /**
+                 * 消费端版本。
+                 * @example `V4_3_6_SNAPSHOT`
+                 */
+                Version: string;
+                /**
+                 * 该消费实例的地址和端口。
+                 * @example `30.5.121.**`
+                 */
+                ClientAddr: string;
+                /**
+                 * 消费端语言。
+                 * @example `JAVA`
+                 */
+                Language: string;
+                /**
+                 * 消费实例的ID。
+                 * @example `30.5.121.**@25560#-1999745829#-1737591554#458773089270275`
+                 */
+                ClientId: string;
+            }[];
+        };
+        /**
+         * 集群总的消费堆积。
+         * @example `197`
+         */
+        TotalDiff: number;
+        ConsumerConnectionInfoList: {
+            /**
+             * 该集群在线客户端详细信息，包含Jstack、消费RT时间等信息。如需获取详细信息，请确保将**Detail**请求参数设置为**true**。否则返回值为空。
+             */
+            ConsumerConnectionInfoDo: {
+                /**
+                 * 消费模型。取值说明如下：
+                 * -  **CLUSTERING**：集群消费模式
+                 * - **BROADCASTING**：广播消费模式
+                 * 两种订阅模式的详细信息，请参见[集群消费和广播消费](~~43163~~)。
+                 * @example `CLUSTERING`
+                 */
+                ConsumeModel: string;
+                RunningDataList: {
+                    /**
+                     * 实时状态统计。
+                     */
+                    ConsumerRunningDataDo: {
+                        /**
+                         * 消费RT时间，单位：毫秒。
+                         * @example `0`
+                         */
+                        Rt: number;
+                        /**
+                         * 订阅的Topic名称。
+                         * @example `test-mq_topic`
+                         */
+                        Topic: string;
+                        /**
+                         * 每小时内消费失败的消息数统计。
+                         * @example `0`
+                         */
+                        FailedCountPerHour: number;
+                        /**
+                         * 消费消息成功的TPS统计。
+                         * @example `0`
+                         */
+                        OkTps: number;
+                        /**
+                         * 消费消息失败的TPS统计。
+                         * @example `0`
+                         */
+                        FailedTps: number;
+                    }[];
+                };
+                SubscriptionSet: {
+                    /**
+                     * 订阅关系集合。
+                     */
+                    SubscriptionData: {
+                        /**
+                         * 订阅该Topic的子类别Tag表达式。
+                         * @example `*`
+                         */
+                        SubString: string;
+                        /**
+                         * 订阅关系版本号，为自增Long型。
+                         * @example `1570701364301`
+                         */
+                        SubVersion: number;
+                        /**
+                         * 订阅的Topic名称。
+                         * @example `test-mq_topic`
+                         */
+                        Topic: string;
+                        TagsSet: {
+                            /**
+                             * 订阅的Tag集合。
+                             */
+                            Tag: string[];
+                        };
+                    }[];
+                };
+                Jstack: {
+                    /**
+                     * Jstack堆栈信息。如需获取Jstack信息，请确保将**NeedJstack**入参设置为**true**。否则返回值为空。
+                     */
+                    ThreadTrackDo: {
+                        TrackList: {
+                            /**
+                             * Jstack堆栈信息字符串。
+                             */
+                            Track: string[];
+                        };
+                        /**
+                         * 线程名称。
+                         * @example `ConsumeMessageThread_0`
+                         */
+                        Thread: string;
+                    }[];
+                };
+                /**
+                 * 最后消费时间。
+                 * 该参数值的格式为毫秒级Unix时间戳。
+                 * @example `1570701368114`
+                 */
+                LastTimeStamp: number;
+                /**
+                 * 消费开始时间。
+                 * 该参数值的格式为毫秒级Unix时间戳。
+                 * @example `1570701361528`
+                 */
+                StartTimeStamp: number;
+                /**
+                 * 客户端语言。
+                 * @example `JAVA`
+                 */
+                Language: string;
+                /**
+                 * 消费实例的ID。
+                 * @example `30.5.**.**@25560#-1999745829#-1737591554#458773089270275`
+                 */
+                ClientId: string;
+                /**
+                 * 连接信息。
+                 * @example `**`
+                 */
+                Connection: string;
+                /**
+                 * 客户端版本号。
+                 * @example `V4_3_6`
+                 */
+                Version: string;
+                /**
+                 * 消费者消费消息的模式。取值说明如下：
+                 * - **PUSH**：云消息队列 RocketMQ 版服务端主动向消费者推送消息。
+                 * - **PULL**：消费者主动向云消息队列 RocketMQ 版服务端拉取消息。
+                 * @example `PUSH`
+                 */
+                ConsumeType: string;
+                /**
+                 * 消费线程数。
+                 * @example `20`
+                 */
+                ThreadCount: number;
+            }[];
+        };
+        /**
+         * 实例ID。
+         * @example `MQ_INST_111111111111_DOxxxxxx`
+         */
+        InstanceId: string;
+        DetailInTopicList: {
+            /**
+             * 各个Topic的消费情况。如需获取详细信息，请确保将**Detail**请求参数设置为**true**。否则返回值为空。
+             */
+            DetailInTopicDo: {
+                /**
+                 * 指定Topic的消费延迟时间。单位：毫秒。
+                 * @example `0`
+                 */
+                DelayTime: number;
+                /**
+                 * 该Topic消费总堆积数。
+                 * @example `0`
+                 */
+                TotalDiff: number;
+                /**
+                 * 最后消费时间。
+                 * 该参数值的格式为毫秒级Unix时间戳。
+                 * @example `1570701259403`
+                 */
+                LastTimestamp: number;
+                /**
+                 * Topic名称。
+                 * @example `test-mq_topic`
+                 */
+                Topic: string;
+            }[];
+        };
+        /**
+         * 订阅关系是否一致。
+         * @example `true`
+         */
+        SubscriptionSame: boolean;
+        /**
+         * 指定Group ID所订阅的所有Topic中的最大消费延时时间。单位：毫秒。
+         * @example `100857`
+         */
+        DelayTime: number;
+        /**
+         * 最后消费时间。
+         * 该参数值的格式为毫秒级Unix时间戳。
+         * @example `1566883844954`
+         */
+        LastTimestamp: number;
+        /**
+         * 是否在线。
+         * @example `true`
+         */
+        Online: boolean;
+        /**
+         * 客户端Rebalance是否正常。取值说明如下：
+         * - **true**：正常
+         * - **false**：不正常
+         * @example `true`
+         */
+        RebalanceOK: boolean;
+    };
 }
-

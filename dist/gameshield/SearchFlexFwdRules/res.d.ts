@@ -1,3 +1,0 @@
-interface SearchFlexFwdRulesResponse {
-}
-export { SearchFlexFwdRulesResponse };

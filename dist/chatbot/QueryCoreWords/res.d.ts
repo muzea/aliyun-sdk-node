@@ -1,3 +1,0 @@
-interface QueryCoreWordsResponse {
-}
-export { QueryCoreWordsResponse };

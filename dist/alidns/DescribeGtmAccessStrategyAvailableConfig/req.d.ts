@@ -1,7 +1,12 @@
-interface DescribeGtmAccessStrategyAvailableConfigRequest {
-    "RegionId"?: string;
-    "InstanceId": string;
+export interface DescribeGtmAccessStrategyAvailableConfigRequest {
+    /**
+     * 语言。
+     * @example `en`
+     */
     "Lang"?: string;
-    "UserClientIp"?: string;
+    /**
+     * GTM实例ID。
+     * @example `gtm-cn-wwo3a3hbz**`
+     */
+    "InstanceId": string;
 }
-export { DescribeGtmAccessStrategyAvailableConfigRequest };

@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ess.EnableAlarmResponse
 export interface EnableAlarmResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `688B18B8-FB1E-42EB-A1ED-7F55B090****`
+     */
+    RequestId: string;
 }
-

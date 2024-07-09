@@ -1,9 +1,17 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.SwitchGlobalBroadcastTypeResponse
 export interface SwitchGlobalBroadcastTypeResponse {
-	RequestId: string;
-	Success: boolean;
-	Data: boolean;
+    /**
+     * 广播表从多写切换成异步链路模式是否成功。
+     * @example `true`
+     */
+    Data: boolean;
+    /**
+     * 请求ID。
+     * @example `DSSDF-SEWE-*****`
+     */
+    RequestId: string;
+    /**
+     * 请求是否成功。
+     * @example `true`
+     */
+    Success: boolean;
 }
-

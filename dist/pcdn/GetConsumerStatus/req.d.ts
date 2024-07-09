@@ -1,5 +1,7 @@
-interface GetConsumerStatusRequest {
-    "RegionId"?: string;
+export interface GetConsumerStatusRequest {
+    /**
+     * 版本号。
+     * @example `2017-04-11`
+     */
     "Version": string;
 }
-export { GetConsumerStatusRequest };

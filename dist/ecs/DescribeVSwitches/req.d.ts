@@ -1,11 +1,9 @@
-interface DescribeVSwitchesRequest {
-    "RegionId"?: string;
+export interface DescribeVSwitchesRequest {
     "VpcId"?: string;
     "VSwitchId"?: string;
     "ZoneId"?: string;
-    "OwnerId"?: number;
+    "RegionId"?: string;
     "IsDefault"?: boolean;
     "PageNumber"?: number;
     "PageSize"?: number;
 }
-export { DescribeVSwitchesRequest };

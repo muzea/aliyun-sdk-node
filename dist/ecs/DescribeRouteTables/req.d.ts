@@ -1,6 +1,5 @@
-interface DescribeRouteTablesRequest {
+export interface DescribeRouteTablesRequest {
     "RegionId"?: string;
-    "OwnerId"?: number;
     "VRouterId"?: string;
     "RouteTableId"?: string;
     "RouterType"?: string;
@@ -9,4 +8,3 @@ interface DescribeRouteTablesRequest {
     "PageNumber"?: number;
     "PageSize"?: number;
 }
-export { DescribeRouteTablesRequest };

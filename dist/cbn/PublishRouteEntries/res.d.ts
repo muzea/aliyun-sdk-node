@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cbn.PublishRouteEntriesResponse
 export interface PublishRouteEntriesResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `FBDB18D8-E91E-4978-8D6C-6E2E3EE10133`
+     */
+    RequestId: string;
 }
-

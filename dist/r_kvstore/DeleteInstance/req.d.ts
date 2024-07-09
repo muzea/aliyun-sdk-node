@@ -1,11 +1,12 @@
-interface DeleteInstanceRequest {
-    "RegionId"?: string;
+export interface DeleteInstanceRequest {
     /**
-    * 要删除的实例的ID。
-    * @example `r-j6cxxxxxxxxxx3d4`
-    */ "InstanceId": string;
+     * 待释放的实例ID。
+     * @example `r-bp1zxszhcgatnx****`
+     */
+    "InstanceId": string;
     /**
-    * @example `5464564564564564`
-    */ "OwnerId"?: number;
+     * 待释放的实例所属的分布式实例ID，本参数仅适用于中国站。
+     * @example `gr-bp14rkqrhac****`
+     */
+    "GlobalInstanceId"?: string;
 }
-export { DeleteInstanceRequest };

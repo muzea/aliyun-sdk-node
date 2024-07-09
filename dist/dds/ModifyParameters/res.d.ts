@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dds.ModifyParametersResponse
 export interface ModifyParametersResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `36923CC2-DDAB-4B48-A144-DA92C1E19537`
+     */
+    RequestId: string;
 }
-

@@ -1,0 +1,1 @@
+{"path":"/api/metastore/catalogs/databases/tables/partitions/listbyexpr","methods":["post"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"read","deprecated":false,"systemTags":{"operationType":"list"},"parameters":[],"responses":{"5XX":{"schema":{"type":"object","properties":{"Code":{"type":"string"}}}}},"errorCodes":{},"responseDemo":""}

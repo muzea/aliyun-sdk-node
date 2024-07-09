@@ -1,3 +1,0 @@
-interface UpdateMailAddressMsgCallBackUrlResponse {
-}
-export { UpdateMailAddressMsgCallBackUrlResponse };

@@ -1,3 +1,0 @@
-interface ListDeviceModelResponse {
-}
-export { ListDeviceModelResponse };

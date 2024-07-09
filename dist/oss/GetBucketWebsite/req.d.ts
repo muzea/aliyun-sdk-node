@@ -1,5 +1,7 @@
-interface GetBucketWebsiteRequest {
-    "BucketName": any;
-    "website": any;
+export interface GetBucketWebsiteRequest {
+    /**
+     * Bucket名称。
+     * @example `examplebucket`
+     */
+    "bucket": string;
 }
-export { GetBucketWebsiteRequest };

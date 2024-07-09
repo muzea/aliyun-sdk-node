@@ -1,30 +1,97 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/webplus.Change
-export interface Change {
-	ChangeMessage: string;
-	FinishTime: number;
-	UpdateTime: number;
-	CreateUsername: string;
-	ChangeSucceed: boolean;
-	ChangePaused: boolean;
-	CreateTime: number;
-	ActionName: string;
-	ChangeAborted: boolean;
-	ChangeDescription: string;
-	ChangeTimedout: boolean;
-	ChangeFinished: boolean;
-	ChangeName: string;
-	ChangeId: string;
-	EnvId: string;
-	ChangeSucceeded: boolean;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/webplus.DescribeChangeResponse
 export interface DescribeChangeResponse {
-	RequestId: string;
-	Code: string;
-	Message: string;
-	Change: Change;
+    /**
+     * 响应消息，若成功请求为success
+     * @example `success`
+     */
+    Message: string;
+    /**
+     * 请求ID
+     * @example `91AF2647-8A0B-47FE-8AD4-AE49AA79****`
+     */
+    RequestId: string;
+    /**
+     * 变更信息
+     */
+    Change: {
+        /**
+         * 变更是否被暂停
+         * @example `false`
+         */
+        ChangePaused: boolean;
+        /**
+         * 变更描述
+         * @example `apply env we-5d39b8ba6786bd4b149*****`
+         */
+        ChangeDescription: string;
+        /**
+         * 变更完成时间
+         * @example `1562664854330`
+         */
+        FinishTime: number;
+        /**
+         * 变更最后更新时间
+         * @example `1562664854381`
+         */
+        UpdateTime: number;
+        /**
+         * 变更是否超时
+         * @example `false`
+         */
+        ChangeTimedout: boolean;
+        /**
+         * 变更创建时间
+         * @example `1562664852417`
+         */
+        CreateTime: number;
+        /**
+         * 变更消息
+         * @example `changeMessage`
+         */
+        ChangeMessage: string;
+        /**
+         * 变更操作名称
+         * @example `Apply`
+         */
+        ActionName: string;
+        /**
+         * 变更是否完成
+         * @example `true`
+         */
+        ChangeFinished: boolean;
+        /**
+         * 变更创建者
+         * @example `user1`
+         */
+        CreateUsername: string;
+        /**
+         * 变更ID
+         * @example `wc-5d3a963d5802611c4dd*****`
+         */
+        ChangeId: string;
+        /**
+         * 变更是否被中止
+         * @example `false`
+         */
+        ChangeAborted: boolean;
+        /**
+         * 变更是否成功
+         * @example `true`
+         */
+        ChangeSucceed: boolean;
+        /**
+         * 变更所属环境ID
+         * @example `we-5d245f7f1f773f090a0*****`
+         */
+        EnvId: string;
+        /**
+         * 变更名称
+         * @example `apply.env`
+         */
+        ChangeName: string;
+    };
+    /**
+     * 响应代码，若成功请求为OK
+     * @example `OK`
+     */
+    Code: string;
 }
-

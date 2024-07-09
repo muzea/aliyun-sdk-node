@@ -1,23 +1,34 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/edas.RegionEntity
-export interface RegionEntity {
-	Name: string;
-	RegionNo: string;
-	Id: string;
-	RegionName: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/edas.RegionEntityListInListAliyunRegion
-export interface RegionEntityListInListAliyunRegion {
-	RegionEntity: RegionEntity[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/edas.ListAliyunRegionResponse
 export interface ListAliyunRegionResponse {
-	Code: number;
-	Message: string;
-	RequestId: string;
-	RegionEntityList: RegionEntityListInListAliyunRegion;
+    /**
+     * HTTP状态码
+     * @example `200`
+     */
+    Code: number;
+    /**
+     * 请求返回信息
+     * @example `success`
+     */
+    Message: string;
+    /**
+     * 请求ID
+     * @example `b197-40ab-9155-7ca7`
+     */
+    RequestId: string;
+    RegionEntityList: {
+        /**
+         * 地域列表
+         */
+        RegionEntity: {
+            /**
+             * 地域名称
+             * @example `China East 1 (Hangzhou)`
+             */
+            Name: string;
+            /**
+             * 地域ID
+             * @example `cn-hangzhou`
+             */
+            Id: string;
+        }[];
+    };
 }
-

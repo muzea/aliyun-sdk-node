@@ -1,3 +1,0 @@
-interface QueryKnowledgesResponse {
-}
-export { QueryKnowledgesResponse };

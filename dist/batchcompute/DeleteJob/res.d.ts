@@ -1,3 +1,0 @@
-interface DeleteJobResponse {
-}
-export { DeleteJobResponse };

@@ -1,6 +1,4 @@
-interface DescribeClusterV2UserKubeconfigRequest {
-    "RegionId"?: string;
+export interface DescribeClusterV2UserKubeconfigRequest {
     "ClusterId": string;
     "PrivateIpAddress"?: boolean;
 }
-export { DescribeClusterV2UserKubeconfigRequest };

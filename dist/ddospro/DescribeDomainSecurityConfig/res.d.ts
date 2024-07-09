@@ -1,3 +1,0 @@
-interface DescribeDomainSecurityConfigResponse {
-}
-export { DescribeDomainSecurityConfigResponse };

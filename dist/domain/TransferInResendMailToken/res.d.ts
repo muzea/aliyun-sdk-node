@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/domain.TransferInResendMailTokenResponse
 export interface TransferInResendMailTokenResponse {
-	RequestId: string;
+    /**
+     * 唯一请求识别码。
+     * @example `AF7D4DCE-0776-47F2-A9B2-6FB85A87AA60`
+     */
+    RequestId: string;
 }
-

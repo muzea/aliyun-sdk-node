@@ -1,8 +1,7 @@
-interface UnbindMFADeviceRequest {
-    "RegionId"?: string;
+export interface UnbindMFADeviceRequest {
     /**
-    * 指定用户名。
-    * @example `zhangq****`
-    */ "UserName"?: string;
+     * 指定用户名。
+     * @example `zhangq****`
+     */
+    "UserName"?: string;
 }
-export { UnbindMFADeviceRequest };

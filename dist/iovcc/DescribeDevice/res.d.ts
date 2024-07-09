@@ -1,3 +1,0 @@
-interface DescribeDeviceResponse {
-}
-export { DescribeDeviceResponse };

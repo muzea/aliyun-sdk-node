@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vod.UpdateVodTemplateResponse
 export interface UpdateVodTemplateResponse {
-	RequestId: string;
-	VodTemplateId: string;
+    /**
+     * 截图模板ID。
+     * @example `8c75a02e339b*****0b0d2c48171a22`
+     */
+    VodTemplateId: string;
+    /**
+     * 请求ID。
+     * @example `25818875-5F78-4A*****F6-D7393642CA58`
+     */
+    RequestId: string;
 }
-

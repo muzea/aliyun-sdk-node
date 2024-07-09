@@ -1,3 +1,0 @@
-interface DescribeRdsVpcsResponse {
-}
-export { DescribeRdsVpcsResponse };

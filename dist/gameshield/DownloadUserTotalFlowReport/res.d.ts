@@ -1,3 +1,0 @@
-interface DownloadUserTotalFlowReportResponse {
-}
-export { DownloadUserTotalFlowReportResponse };

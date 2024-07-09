@@ -1,3 +1,0 @@
-interface ModifyDBNodeConfigResponse {
-}
-export { ModifyDBNodeConfigResponse };

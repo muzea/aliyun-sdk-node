@@ -1,76 +1,64 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.HttpCodeDataModule
-export interface HttpCodeDataModule {
-	Code: number;
-	Proportion: number;
-	Count: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.HttpCodeDataPerInterval
-export interface HttpCodeDataPerInterval {
-	HttpCodeDataModule: HttpCodeDataModule[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.WebsocketHttpCodeDataPerInterval
-export interface WebsocketHttpCodeDataPerInterval {
-	HttpCodeDataModule: HttpCodeDataModule[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.DataModule
-export interface DataModule {
-	StaticHttpTraffic: number;
-	StaticHttpBps: number;
-	DynamicHttpsAcc: number;
-	DynamicHttpOriginBps: number;
-	DynamicHttpsOriginBps: number;
-	StaticHttpsOriginTraffic: number;
-	StaticHttpAcc: number;
-	DynamicHttpsBps: number;
-	StaticHttpsBps: number;
-	OriginTraffic: number;
-	DynamicHttpAcc: number;
-	StaticHttpsTraffic: number;
-	TimeStamp: string;
-	Acc: number;
-	StaticHttpsAcc: number;
-	DynamicHttpOriginTraffic: number;
-	ReqHitRate: number;
-	StaticHttpQps: number;
-	WebsocketBps: number;
-	WebsocketTraffic: number;
-	DynamicHttpTraffic: number;
-	OriginBps: number;
-	Bps: number;
-	DynamicHttpBps: number;
-	StaticHttpOriginTraffic: number;
-	StaticHttpOriginBps: number;
-	Value: string;
-	Qps: number;
-	DynamicHttpsTraffic: number;
-	StaticHttpsQps: number;
-	DynamicHttpsOriginTraffic: number;
-	StaticHttpsOriginBps: number;
-	ByteHitRate: number;
-	DynamicHttpsQps: number;
-	DynamicHttpQps: number;
-	Traffic: number;
-	HttpCodeDataPerInterval: HttpCodeDataPerInterval;
-	WebsocketHttpCodeDataPerInterval: WebsocketHttpCodeDataPerInterval;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.OriginBpsDataPerInterval
-export interface OriginBpsDataPerInterval {
-	DataModule: DataModule[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.DescribeDcdnDomainOriginBpsDataResponse
 export interface DescribeDcdnDomainOriginBpsDataResponse {
-	RequestId: string;
-	DomainName: string;
-	StartTime: string;
-	EndTime: string;
-	DataInterval: string;
-	OriginBpsDataPerInterval: OriginBpsDataPerInterval;
+    /**
+     * 结束时间。
+     * @example `2019-12-11T00:00:00Z`
+     */
+    EndTime: string;
+    /**
+     * 开始时间。
+     * @example `2019-12-10T00:00:00Z`
+     */
+    StartTime: string;
+    /**
+     * 请求ID。
+     * @example `7CBCD6AD-B016-42E5-AE0B-B3731DE8F755`
+     */
+    RequestId: string;
+    /**
+     * 加速域名信息。
+     * @example `example.com`
+     */
+    DomainName: string;
+    /**
+     * 每条记录的时间间隔，以秒为单位。
+     * @example `300`
+     */
+    DataInterval: string;
+    OriginBpsDataPerInterval: {
+        /**
+         * 每个时间间隔的回源带宽数据，单位：bit/s。
+         */
+        DataModule: {
+            /**
+             * 动态HTTP回源带宽数据。
+             * @example `100`
+             */
+            DynamicHttpOriginBps: number;
+            /**
+             * 静态HTTP回源带宽数据。
+             * @example `100`
+             */
+            StaticHttpOriginBps: number;
+            /**
+             * 时间片起始时刻。
+             * @example `2019-12-10T00:00:00Z`
+             */
+            TimeStamp: string;
+            /**
+             * 静态HTTPS回源带宽数据。
+             * @example `100`
+             */
+            StaticHttpsOriginBps: number;
+            /**
+             * 回源带宽数据。
+             * @example `100`
+             */
+            OriginBps: number;
+            /**
+             * 动态HTTPS回源带宽数据。
+             * @example `100`
+             */
+            DynamicHttpsOriginBps: number;
+        }[];
+    };
 }
-

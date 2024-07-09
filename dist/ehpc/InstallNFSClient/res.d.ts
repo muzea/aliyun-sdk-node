@@ -1,3 +1,0 @@
-interface InstallNFSClientResponse {
-}
-export { InstallNFSClientResponse };

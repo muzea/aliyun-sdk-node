@@ -1,3 +1,0 @@
-interface ModifySubscriptionMappingResponse {
-}
-export { ModifySubscriptionMappingResponse };

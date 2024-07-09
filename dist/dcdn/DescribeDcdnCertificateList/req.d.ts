@@ -1,9 +1,7 @@
-interface DescribeDcdnCertificateListRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeDcdnCertificateListRequest {
     /**
-    * 加速域名。
-    * @example `example.com`
-    */ "DomainName"?: string;
+     * 加速域名名称。
+     * @example `example.com`
+     */
+    "DomainName"?: string;
 }
-export { DescribeDcdnCertificateListRequest };

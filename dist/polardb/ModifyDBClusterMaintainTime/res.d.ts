@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/polardb.ModifyDBClusterMaintainTimeResponse
 export interface ModifyDBClusterMaintainTimeResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `70656639-1416-479F-AF13-D08197******`
+     */
+    RequestId: string;
 }
-

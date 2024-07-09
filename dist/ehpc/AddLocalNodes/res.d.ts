@@ -1,13 +1,13 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ehpc.InstanceIdsInAddLocalNodes
-export interface InstanceIdsInAddLocalNodes {
-	InstanceId: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ehpc.AddLocalNodesResponse
 export interface AddLocalNodesResponse {
-	RequestId: string;
-	InstanceIds: InstanceIdsInAddLocalNodes;
+    /**
+     * 请求ID。
+     * @example `04F0F334-1335-436C-A1D7-6C044FE73368`
+     */
+    RequestId: string;
+    InstanceIds: {
+        /**
+         * 集群中本地计算节点的信息列表。
+         */
+        InstanceId: string[];
+    };
 }
-

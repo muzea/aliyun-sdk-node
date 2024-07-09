@@ -1,4 +1,2 @@
-interface ListServiceGroupsRequest {
-    "RegionId"?: string;
+export interface ListServiceGroupsRequest {
 }
-export { ListServiceGroupsRequest };

@@ -1,5 +1,11 @@
-interface UpdateScoreForApiRequest {
-    "RegionId"?: string;
+export interface UpdateScoreForApiRequest {
+    /**
+     * 完整JSON字符串信息，具体内容参见以下详细信息。
+     * @example `{"scoreId":3311,” scoreName“:"测试"}`
+     */
     "JsonStr": string;
+    /**
+     * 业务空间Id
+     */
+    "BaseMeAgentId"?: number;
 }
-export { UpdateScoreForApiRequest };

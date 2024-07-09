@@ -1,3 +1,0 @@
-interface ListStreamsForCamerasResponse {
-}
-export { ListStreamsForCamerasResponse };

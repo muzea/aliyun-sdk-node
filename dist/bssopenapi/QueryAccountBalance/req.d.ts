@@ -1,4 +1,2 @@
-interface QueryAccountBalanceRequest {
-    "RegionId"?: string;
+export interface QueryAccountBalanceRequest {
 }
-export { QueryAccountBalanceRequest };

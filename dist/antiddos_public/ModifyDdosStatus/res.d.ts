@@ -1,3 +1,0 @@
-interface ModifyDdosStatusResponse {
-}
-export { ModifyDdosStatusResponse };

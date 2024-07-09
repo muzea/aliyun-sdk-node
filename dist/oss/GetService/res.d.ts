@@ -1,3 +1,0 @@
-interface GetServiceResponse {
-}
-export { GetServiceResponse };

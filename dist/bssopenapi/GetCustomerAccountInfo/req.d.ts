@@ -1,5 +1,2 @@
-interface GetCustomerAccountInfoRequest {
-    "RegionId"?: string;
-    "OwnerId": number;
+export interface GetCustomerAccountInfoRequest {
 }
-export { GetCustomerAccountInfoRequest };

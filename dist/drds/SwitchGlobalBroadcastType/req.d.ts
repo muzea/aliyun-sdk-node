@@ -1,6 +1,17 @@
-interface SwitchGlobalBroadcastTypeRequest {
+export interface SwitchGlobalBroadcastTypeRequest {
+    /**
+     * 地域ID。
+     * @example `cn-hangzhou`
+     */
     "RegionId"?: string;
-    "DbName": string;
+    /**
+     * DRDS实例ID。
+     * @example `drds********`
+     */
     "DrdsInstanceId": string;
+    /**
+     * DRDS数据库名称。
+     * @example `test`
+     */
+    "DbName": string;
 }
-export { SwitchGlobalBroadcastTypeRequest };

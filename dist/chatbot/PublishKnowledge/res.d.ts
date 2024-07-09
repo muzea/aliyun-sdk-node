@@ -1,3 +1,0 @@
-interface PublishKnowledgeResponse {
-}
-export { PublishKnowledgeResponse };

@@ -1,6 +1,12 @@
-interface DescribeVersionDeviceGroupRequest {
-    "RegionId"?: string;
-    "Id": string;
+export interface DescribeVersionDeviceGroupRequest {
+    /**
+     * 所属项目ID
+     * @example `P0VFCREU`
+     */
     "ProjectId": string;
+    /**
+     * 分组ID
+     * @example `1`
+     */
+    "Id": string;
 }
-export { DescribeVersionDeviceGroupRequest };

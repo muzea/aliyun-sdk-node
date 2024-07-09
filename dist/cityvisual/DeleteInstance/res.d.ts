@@ -1,3 +1,0 @@
-interface DeleteInstanceResponse {
-}
-export { DeleteInstanceResponse };

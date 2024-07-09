@@ -1,5 +1,7 @@
-interface RemoveDrdsInstanceRequest {
-    "RegionId"?: string;
+export interface RemoveDrdsInstanceRequest {
+    /**
+     * 实例ID。
+     * @example `drds************`
+     */
     "DrdsInstanceId": string;
 }
-export { RemoveDrdsInstanceRequest };

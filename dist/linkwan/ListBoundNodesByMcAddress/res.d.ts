@@ -1,3 +1,0 @@
-interface ListBoundNodesByMcAddressResponse {
-}
-export { ListBoundNodesByMcAddressResponse };

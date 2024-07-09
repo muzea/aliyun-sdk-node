@@ -1,15 +1,17 @@
-interface GetConsumerProgressRequest {
+export interface GetConsumerProgressRequest {
     /**
-    * 地域 ID。
-    * @example `cn-hangzhou`
-    */ "RegionId": string;
+     * 实例ID。
+     * @example `alikafka_pre-cn-mp919o4v****`
+     */
+    "InstanceId": string;
     /**
-    * Consumer Group ID。
-    * @example `kafka-test`
-    */ "ConsumerId": string;
+     * Group的名称。
+     * @example `kafka-test`
+     */
+    "ConsumerId": string;
     /**
-    * 实例 ID。
-    * @example `alikafka_pre-cn-mp919o4v****`
-    */ "InstanceId": string;
+     * 实例的地域ID。
+     * @example `cn-hangzhou`
+     */
+    "RegionId": string;
 }
-export { GetConsumerProgressRequest };

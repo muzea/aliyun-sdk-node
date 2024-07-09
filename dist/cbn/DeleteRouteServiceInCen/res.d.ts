@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cbn.DeleteRouteServiceInCenResponse
 export interface DeleteRouteServiceInCenResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `2315DEB7-5E92-423A-91F7-4C1EC9AD97C3`
+     */
+    RequestId: string;
 }
-

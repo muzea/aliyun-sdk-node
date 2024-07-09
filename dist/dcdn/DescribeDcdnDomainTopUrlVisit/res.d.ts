@@ -1,48 +1,177 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.UrlList
-export interface UrlList {
-	Flow: string;
-	VisitData: string;
-	UrlDetail: string;
-	FlowProportion: number;
-	VisitProportion: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.AllUrlList
-export interface AllUrlList {
-	UrlList: UrlList[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.Url200List
-export interface Url200List {
-	UrlList: UrlList[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.Url300List
-export interface Url300List {
-	UrlList: UrlList[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.Url400List
-export interface Url400List {
-	UrlList: UrlList[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.Url500List
-export interface Url500List {
-	UrlList: UrlList[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.DescribeDcdnDomainTopUrlVisitResponse
 export interface DescribeDcdnDomainTopUrlVisitResponse {
-	RequestId: string;
-	DomainName: string;
-	StartTime: string;
-	AllUrlList: AllUrlList;
-	Url200List: Url200List;
-	Url300List: Url300List;
-	Url400List: Url400List;
-	Url500List: Url500List;
+    /**
+     * 查询指定日期。
+     * @example `2018-10-03T16:00:00Z`
+     */
+    StartTime: string;
+    /**
+     * 请求ID。
+     * @example `64D28B53-5902-409B-94F6-FD46680144FE`
+     */
+    RequestId: string;
+    /**
+     * 加速域名。
+     * @example `example.com`
+     */
+    DomainName: string;
+    AllUrlList: {
+        /**
+         * 全部热门URL列表。
+         */
+        UrlList: {
+            /**
+             * 流量。单位：byte。
+             * @example `460486880`
+             */
+            Flow: string;
+            /**
+             * 完整的URL地址。
+             * @example `http://example.com/nn_live/nn_x64/a0.m3u8`
+             */
+            UrlDetail: string;
+            /**
+             * 流量占比。
+             * @example `0.35`
+             */
+            FlowProportion: number;
+            /**
+             * 访问次数。
+             * @example `161673`
+             */
+            VisitData: string;
+            /**
+             * 访问占比。
+             * @example `0.35`
+             */
+            VisitProportion: number;
+        }[];
+    };
+    Url200List: {
+        /**
+         * 返回为2xx的URL列表。
+         */
+        UrlList: {
+            /**
+             * 流量。单位：byte。
+             * @example `460486880`
+             */
+            Flow: string;
+            /**
+             * 完整的URL地址。
+             * @example `http://example.com/nn_live/nn_x64/a0.m3u8`
+             */
+            UrlDetail: string;
+            /**
+             * 流量占比。
+             * @example `0.35`
+             */
+            FlowProportion: number;
+            /**
+             * 访问次数。
+             * @example `161673`
+             */
+            VisitData: string;
+            /**
+             * 访问占比。
+             * @example `0.35`
+             */
+            VisitProportion: number;
+        }[];
+    };
+    Url300List: {
+        /**
+         * 返回为3xx的URL列表。
+         */
+        UrlList: {
+            /**
+             * 流量。单位：byte。
+             * @example `460486880`
+             */
+            Flow: string;
+            /**
+             * 完整的URL地址。
+             * @example `http://example.com/nn_live/nn_x64/a0.m3u8`
+             */
+            UrlDetail: string;
+            /**
+             * 流量占比。
+             * @example `0.35`
+             */
+            FlowProportion: number;
+            /**
+             * 访问次数。
+             * @example `161673`
+             */
+            VisitData: string;
+            /**
+             * 访问占比。
+             * @example `0.35`
+             */
+            VisitProportion: number;
+        }[];
+    };
+    Url400List: {
+        /**
+         * 返回为4xx的URL列表。
+         */
+        UrlList: {
+            /**
+             * 流量。单位：byte。
+             * @example `460486880`
+             */
+            Flow: string;
+            /**
+             * 完整的URL地址。
+             * @example `http://example.com/nn_live/nn_x64/a0.m3u8`
+             */
+            UrlDetail: string;
+            /**
+             * 流量占比。
+             * @example `0.35`
+             */
+            FlowProportion: number;
+            /**
+             * 访问次数。
+             * @example `161673`
+             */
+            VisitData: string;
+            /**
+             * 访问占比。
+             * @example `0.35`
+             */
+            VisitProportion: number;
+        }[];
+    };
+    Url500List: {
+        /**
+         * 返回为5xx的URL列表。
+         */
+        UrlList: {
+            /**
+             * 流量。单位：byte。
+             * @example `460486880`
+             */
+            Flow: string;
+            /**
+             * 完整的URL地址。
+             * @example `http://example.com/nn_live/nn_x64/a0.m3u8`
+             */
+            UrlDetail: string;
+            /**
+             * 流量占比。
+             * @example `0.35`
+             */
+            FlowProportion: number;
+            /**
+             * 访问次数。
+             * @example `161673`
+             */
+            VisitData: string;
+            /**
+             * 访问占比。
+             * @example `0.35`
+             */
+            VisitProportion: number;
+        }[];
+    };
 }
-

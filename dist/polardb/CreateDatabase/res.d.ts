@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/polardb.CreateDatabaseResponse
 export interface CreateDatabaseResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `93E98F25-BE02-40DA-83E3-F77F8D******`
+     */
+    RequestId: string;
 }
-

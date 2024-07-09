@@ -1,3 +1,0 @@
-interface DescribleCertListResponse {
-}
-export { DescribleCertListResponse };

@@ -1,3 +1,0 @@
-interface RebootLabGatewayResponse {
-}
-export { RebootLabGatewayResponse };

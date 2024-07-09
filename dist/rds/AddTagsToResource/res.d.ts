@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.AddTagsToResourceResponse
 export interface AddTagsToResourceResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `224DB9F7-3100-4899-AB9C-C938BCCB43E7`
+     */
+    RequestId: string;
 }
-

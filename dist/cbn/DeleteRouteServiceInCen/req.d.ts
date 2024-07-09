@@ -1,25 +1,28 @@
-interface DeleteRouteServiceInCenRequest {
-    "RegionId"?: string;
+export interface DeleteRouteServiceInCenRequest {
     /**
-    * 云企业网实例ID。
-    * @example `cen-7qthudw0ll6jmc****`
-    */ "CenId": string;
+     * 云企业网实例ID。
+     * @example `cen-7qthudw0ll6jmc****`
+     */
+    "CenId": string;
     /**
-    * 云服务的IP地址或域名。
-    * @example `100.64.0.0/8`
-    */ "Host": string;
+     * 云服务IP地址或地址段。
+     * @example `100.118.28.0/24`
+     */
+    "Host": string;
     /**
-    * 云服务的服务所在地。
-    * @example `cn-shanghai`
-    */ "HostRegionId": string;
+     * 云服务所在的地域ID。
+     * 您可以通过调用[DescribeRegions](~~36063~~)接口查询地域ID。
+     * @example `cn-hangzhou`
+     */
+    "HostRegionId": string;
     /**
-    * 云服务的访问所在地。
-    * @example `cn-hangzhou`
-    */ "AccessRegionId": string;
-    "OwnerId"?: number;
+     * 访问云服务的地域ID。
+     * @example `cn-hangzhou`
+     */
+    "AccessRegionId": string;
     /**
-    * 服务关联的VPC。
-    * @example `vpc-bp1t36rn9l53iwbsf****`
-    */ "HostVpcId"?: string;
+     * 云服务关联的VPC实例ID。
+     * @example `vpc-bp1t36rn9l53iwbsf****`
+     */
+    "HostVpcId"?: string;
 }
-export { DeleteRouteServiceInCenRequest };

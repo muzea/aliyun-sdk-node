@@ -1,9 +1,7 @@
-interface DescribeDBInstanceNetInfoRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeDBInstanceNetInfoRequest {
     /**
-    * 目标实例的ID。
-    * @example `r-bp1xxxxxxxxxxxxx`
-    */ "InstanceId": string;
+     * 实例ID。
+     * @example `r-bp1zxszhcgatnx****`
+     */
+    "InstanceId": string;
 }
-export { DescribeDBInstanceNetInfoRequest };

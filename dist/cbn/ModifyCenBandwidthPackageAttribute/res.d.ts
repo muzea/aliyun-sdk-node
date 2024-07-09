@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cbn.ModifyCenBandwidthPackageAttributeResponse
 export interface ModifyCenBandwidthPackageAttributeResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `13526224-5780-4426-8ADF-BC8B08700F23`
+     */
+    RequestId: string;
 }
-

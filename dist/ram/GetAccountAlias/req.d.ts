@@ -1,4 +1,2 @@
-interface GetAccountAliasRequest {
-    "RegionId"?: string;
+export interface GetAccountAliasRequest {
 }
-export { GetAccountAliasRequest };

@@ -1,5 +1,10 @@
-interface DescribeRegionsRequest {
-    "RegionId": string;
+export interface DescribeRegionsRequest {
+    /**
+     * 指定返回结果中管控策略描述的语言。取值：
+     * - zh-CN（默认值）：中文。
+     * - en：英文。
+     * - ja：日文。
+     * @example `zh`
+     */
     "Language"?: string;
 }
-export { DescribeRegionsRequest };

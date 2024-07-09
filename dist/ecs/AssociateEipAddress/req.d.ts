@@ -1,8 +1,6 @@
-interface AssociateEipAddressRequest {
+export interface AssociateEipAddressRequest {
     "RegionId"?: string;
-    "InstanceId": string;
-    "OwnerId"?: number;
     "AllocationId": string;
+    "InstanceId": string;
     "InstanceType"?: string;
 }
-export { AssociateEipAddressRequest };

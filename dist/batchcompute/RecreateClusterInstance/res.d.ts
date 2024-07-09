@@ -1,3 +1,0 @@
-interface RecreateClusterInstanceResponse {
-}
-export { RecreateClusterInstanceResponse };

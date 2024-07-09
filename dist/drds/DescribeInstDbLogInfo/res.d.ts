@@ -1,15 +1,27 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.LogTimeRange
-export interface LogTimeRange {
-	SupportOldestTime: number;
-	SupportLatestTime: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.DescribeInstDbLogInfoResponse
 export interface DescribeInstDbLogInfoResponse {
-	RequestId: string;
-	Success: boolean;
-	LogTimeRange: LogTimeRange;
+    /**
+     * 是否成功。
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 请求ID。
+     * @example `A5438952-70EE-4FA5-87A9-080DB0ASD45F`
+     */
+    RequestId: string;
+    /**
+     * 可查询时间。
+     */
+    LogTimeRange: {
+        /**
+         * 结束时间。
+         * @example `1568367711`
+         */
+        SupportOldestTime: number;
+        /**
+         * 开始时间。
+         * @example `1568267711`
+         */
+        SupportLatestTime: number;
+    };
 }
-

@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/domain.VerifyEmailResponse
 export interface VerifyEmailResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `FD3AD289-83EE-4E32-803A-CF1B3A8EEE64`
+     */
+    RequestId: string;
 }
-

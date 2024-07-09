@@ -1,3 +1,0 @@
-interface DoSendIotSmsResponse {
-}
-export { DoSendIotSmsResponse };

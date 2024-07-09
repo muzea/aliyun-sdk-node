@@ -10,15 +10,16 @@
     "test": "echo 'fake done'"
   },
   "dependencies": {
-    "got": "^9.6.0",
-    "json-bigint": "^0.3.0",
-    "kitx": "^2.0.0"
+    "@alicloud/openapi-client": "^0.4.10",
+    "@alicloud/openapi-util": "^0.3.2",
+    "@alicloud/tea-util": "^1.4.8",
+    "got": "11"
   },
   "devDependencies": {
-    "@types/cheerio": "^0.22.13",
     "@types/got": "^9.6.7",
-    "cheerio": "^1.0.0-rc.3",
-    "glob": "^7.1.4",
-    "typescript": "^3.6.3"
+    "@types/json-schema": "^7.0.15",
+    "glob": "^10.4.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
   }
 }

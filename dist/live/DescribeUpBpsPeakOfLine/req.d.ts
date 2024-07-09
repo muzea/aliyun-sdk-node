@@ -1,10 +1,7 @@
-interface DescribeUpBpsPeakOfLineRequest {
-    "RegionId"?: string;
+export interface DescribeUpBpsPeakOfLineRequest {
+    "StartTime": string;
     "EndTime": string;
     "Line": string;
-    "OwnerId"?: number;
-    "StartTime": string;
     "DomainSwitch"?: string;
     "DomainName"?: string;
 }
-export { DescribeUpBpsPeakOfLineRequest };

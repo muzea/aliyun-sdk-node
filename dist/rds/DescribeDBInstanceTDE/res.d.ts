@@ -1,38 +1,42 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.AccountPrivilegeInfo
-export interface AccountPrivilegeInfo {
-	Account: string;
-	AccountPrivilege: string;
-	AccountPrivilegeDetail: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.AccountsInDescribeDatabases
-export interface AccountsInDescribeDatabases {
-	AccountPrivilegeInfo: AccountPrivilegeInfo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.Database
-export interface Database {
-	CharacterSetName: string;
-	Engine: string;
-	DBStatus: string;
-	TDEStatus: string;
-	DBName: string;
-	DBInstanceId: string;
-	DBDescription: string;
-	Accounts: AccountsInDescribeDatabases;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.DatabasesInDescribeDBInstanceTDE
-export interface DatabasesInDescribeDBInstanceTDE {
-	Database: Database[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.DescribeDBInstanceTDEResponse
 export interface DescribeDBInstanceTDEResponse {
-	RequestId: string;
-	TDEStatus: string;
-	Databases: DatabasesInDescribeDBInstanceTDE;
+    /**
+     * 实例级别的TDE状态，取值：
+     * - **Enabled**
+     * - **Disabled**
+     * @example `Enabled`
+     */
+    TDEStatus: string;
+    /**
+     * 请求ID。
+     * @example `C816A4BF-A6EC-4722-95F9-2055859CCFD2`
+     */
+    RequestId: string;
+    Databases: {
+        /**
+         * 数据库级别的TDE状态列表。
+         * >对于SQL Server 2019标准版和SQL Server企业版实例，可以在实例级别的TDE开启时，控制数据库级别的TDE开启或关闭。
+         */
+        Database: {
+            /**
+             * 数据库名称。
+             * @example `test02`
+             */
+            DBName: string;
+            /**
+             * 数据库级别的TDE状态，取值：
+             * - **Enabled**
+             * - **Disabled**
+             * @example `Enabled`
+             */
+            TDEStatus: string;
+        }[];
+    };
+    /**
+     * 实例级别的TDE加密的密钥方式，取值：
+     * - **Aliyun_Generate_Key**
+     * - **Customer_Provided_Key**
+     * - **Unknown**
+     * @example `Aliyun_Generate_Key`
+     */
+    TDEMode: string;
 }
-

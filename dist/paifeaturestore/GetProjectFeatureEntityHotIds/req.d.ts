@@ -1,0 +1,22 @@
+export interface GetProjectFeatureEntityHotIdsRequest {
+    /**
+     * 实例ID，可从接口ListInstances获取。
+     * @example `fs-cn-********`
+     */
+    "InstanceId": string;
+    /**
+     * 项目ID，可从接口ListProjects获取。
+     * @example `4`
+     */
+    "ProjectId": string;
+    /**
+     * 下次获取数据的序列号。
+     * @example `3`
+     */
+    "NextSeqNumber": string;
+    /**
+     * 特征实体名称。
+     * @example `feature_entity_1`
+     */
+    "FeatureEntityName": string;
+}

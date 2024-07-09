@@ -1,7 +1,5 @@
-interface ModifyEipAddressAttributeRequest {
+export interface ModifyEipAddressAttributeRequest {
     "RegionId"?: string;
-    "Bandwidth": string;
-    "OwnerId"?: number;
     "AllocationId": string;
+    "Bandwidth": string;
 }
-export { ModifyEipAddressAttributeRequest };

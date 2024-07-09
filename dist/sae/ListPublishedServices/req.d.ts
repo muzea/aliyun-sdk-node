@@ -1,8 +1,7 @@
-interface ListPublishedServicesRequest {
-    "RegionId"?: string;
+export interface ListPublishedServicesRequest {
     /**
-    * 应用ID
-    * @example `00000000-0000-0000-0000-000000000000`
-    */ "AppId": string;
+     * 应用ID。
+     * @example `b2a8a925-477a-4ed7-b825-d5e22500****`
+     */
+    "AppId": string;
 }
-export { ListPublishedServicesRequest };

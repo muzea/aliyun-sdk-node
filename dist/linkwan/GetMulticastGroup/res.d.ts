@@ -1,3 +1,0 @@
-interface GetMulticastGroupResponse {
-}
-export { GetMulticastGroupResponse };

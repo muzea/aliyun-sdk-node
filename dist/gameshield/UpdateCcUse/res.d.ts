@@ -1,3 +1,0 @@
-interface UpdateCcUseResponse {
-}
-export { UpdateCcUseResponse };

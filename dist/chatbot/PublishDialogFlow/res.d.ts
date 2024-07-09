@@ -1,3 +1,0 @@
-interface PublishDialogFlowResponse {
-}
-export { PublishDialogFlowResponse };

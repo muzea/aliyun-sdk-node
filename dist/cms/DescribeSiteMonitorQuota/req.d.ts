@@ -1,4 +1,2 @@
-interface DescribeSiteMonitorQuotaRequest {
-    "RegionId"?: string;
+export interface DescribeSiteMonitorQuotaRequest {
 }
-export { DescribeSiteMonitorQuotaRequest };

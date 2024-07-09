@@ -1,153 +1,107 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.InstanceType
-export interface InstanceType {
-	MemorySize: number;
-	EniPrivateIpAddressQuantity: number;
-	InstancePpsRx: number;
-	CpuCoreCount: number;
-	Cores: number;
-	Memory: number;
-	InstanceTypeId: string;
-	InstanceBandwidthRx: number;
-	BaselineCredit: number;
-	InstanceType: string;
-	EniQuantity: number;
-	GPUAmount: number;
-	Generation: string;
-	SupportIoOptimized: string;
-	InstanceTypeFamily: string;
-	InitialCredit: number;
-	InstancePpsTx: number;
-	LocalStorageAmount: number;
-	InstanceFamilyLevel: string;
-	LocalStorageCapacity: number;
-	GPUSpec: string;
-	LocalStorageCategory: string;
-	InstanceBandwidthTx: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.AvailableResourceCreation
-export interface AvailableResourceCreation {
-	ResourceTypes: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.AvailableVolumeCategories
-export interface AvailableVolumeCategories {
-	VolumeCategories: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.AvailableInstanceTypes
-export interface AvailableInstanceTypes {
-	InstanceTypes: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.AvailableDedicatedHostTypes
-export interface AvailableDedicatedHostTypes {
-	DedicatedHostType: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.NetworkTypesInDescribeRecommendInstanceType
-export interface NetworkTypesInDescribeRecommendInstanceType {
-	NetworkType: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.AvailableDiskCategories
-export interface AvailableDiskCategories {
-	DiskCategories: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.DedicatedHostGenerations
-export interface DedicatedHostGenerations {
-	DedicatedHostGeneration: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.SystemDiskCategories
-export interface SystemDiskCategories {
-	supportedSystemDiskCategory: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.DataDiskCategories
-export interface DataDiskCategories {
-	supportedDataDiskCategory: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.NetworkTypesInDescribeZones
-export interface NetworkTypesInDescribeZones {
-	supportedNetworkCategory: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.InstanceTypesInDescribeZones
-export interface InstanceTypesInDescribeZones {
-	supportedInstanceType: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.InstanceTypeFamiliesInDescribeZones
-export interface InstanceTypeFamiliesInDescribeZones {
-	supportedInstanceTypeFamily: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.InstanceGenerations
-export interface InstanceGenerations {
-	supportedInstanceGeneration: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.ResourcesInfo
-export interface ResourcesInfo {
-	IoOptimized: boolean;
-	SystemDiskCategories: SystemDiskCategories;
-	DataDiskCategories: DataDiskCategories;
-	NetworkTypes: NetworkTypesInDescribeZones;
-	InstanceTypes: InstanceTypesInDescribeZones;
-	InstanceTypeFamilies: InstanceTypeFamiliesInDescribeZones;
-	InstanceGenerations: InstanceGenerations;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.AvailableResourcesInDescribeZones
-export interface AvailableResourcesInDescribeZones {
-	ResourcesInfo: ResourcesInfo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.Zone
-export interface Zone {
-	ZoneNo: string;
-	ZoneId: string;
-	LocalName: string;
-	AvailableResourceCreation: AvailableResourceCreation;
-	AvailableVolumeCategories: AvailableVolumeCategories;
-	AvailableInstanceTypes: AvailableInstanceTypes;
-	AvailableDedicatedHostTypes: AvailableDedicatedHostTypes;
-	NetworkTypes: NetworkTypesInDescribeRecommendInstanceType;
-	AvailableDiskCategories: AvailableDiskCategories;
-	DedicatedHostGenerations: DedicatedHostGenerations;
-	AvailableResources: AvailableResourcesInDescribeZones;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.ZonesInDescribeRecommendInstanceType
-export interface ZonesInDescribeRecommendInstanceType {
-	zone: Zone[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.RecommendInstanceType
-export interface RecommendInstanceType {
-	RegionId: string;
-	CommodityCode: string;
-	Scene: string;
-	InstanceChargeType: string;
-	SpotStrategy: string;
-	Priority: number;
-	InstanceType: InstanceType;
-	Zones: ZonesInDescribeRecommendInstanceType;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.Data
-export interface Data {
-	RecommendInstanceType: RecommendInstanceType[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.DescribeRecommendInstanceTypeResponse
 export interface DescribeRecommendInstanceTypeResponse {
-	RequestId: string;
-	Data: Data;
+    /**
+     * 请求ID。
+     * @example `473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E`
+     */
+    RequestId: string;
+    Data: {
+        /**
+         * 推荐的实例规格集合。
+         */
+        RecommendInstanceType: {
+            /**
+             * 实例规格的商品编码。
+             * @example `ecs`
+             */
+            CommodityCode: string;
+            /**
+             * 实例规格所在的可用区ID。
+             * @example `cn-hangzhou-h`
+             */
+            ZoneId: string;
+            /**
+             * 排序优先级。
+             * @example `2`
+             */
+            Priority: number;
+            /**
+             * ECS实例的网络类型。
+             * @example `vpc`
+             */
+            NetworkType: string;
+            /**
+             * 在哪种场景下推荐实例规格。
+             * @example `CREATE`
+             */
+            Scene: string;
+            /**
+             * 抢占式实例的抢占策略。
+             * @example `NoSpot`
+             */
+            SpotStrategy: string;
+            /**
+             * 实例规格所在的地域ID。
+             * @example `cn-hangzhou`
+             */
+            RegionId: string;
+            /**
+             * 实例的计费方式。
+             * @example `PostPaid`
+             */
+            InstanceChargeType: string;
+            Zones: {
+                /**
+                 * 实例规格所在的可用区集合。
+                 */
+                zone: {
+                    /**
+                     * 实例规格所在的可用区ID。
+                     * @example `cn-hangzhou-h`
+                     */
+                    ZoneNo: string;
+                    NetworkTypes: {
+                        /**
+                         * 实例规格的网络类型集合。
+                         */
+                        NetworkType: string[];
+                    };
+                }[];
+            };
+            /**
+             * 实例规格名称。
+             */
+            InstanceType: {
+                /**
+                 * 实例规格是否支持I/O优化。
+                 * @example `optimized`
+                 */
+                SupportIoOptimized: string;
+                /**
+                 * 实例规格的vCPU核数。
+                 * @example `1`
+                 */
+                Cores: number;
+                /**
+                 * 实例规格的内存大小，单位为MB。
+                 * @example `8192`
+                 */
+                Memory: number;
+                /**
+                 * 实例规格名称。
+                 * @example `ecs.hfg6.large`
+                 */
+                InstanceType: string;
+                /**
+                 * 实例规格族。
+                 * @example `ecs.hfg6`
+                 */
+                InstanceTypeFamily: string;
+                /**
+                 * 实例规格族系列。
+                 * @example `ecs-4`
+                 */
+                Generation: string;
+            };
+        }[];
+    };
 }
-

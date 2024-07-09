@@ -1,0 +1,12 @@
+export interface DescribeCertMatchStatusResponse {
+    /**
+     * 证书与私钥内容是否匹配。
+     * @example `false`
+     */
+    MatchStatus: boolean;
+    /**
+     * 请求ID。
+     * @example `D7861F61-5B61-46CE-A47C-6B19****5EB0`
+     */
+    RequestId: string;
+}

@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.CreateDatabaseResponse
 export interface CreateDatabaseResponse {
-	RequestId: string;
+    /**
+     * 请求 ID。
+     * @example `5A77D650-27A1-4E08-AD9E-59008EDB6927`
+     */
+    RequestId: string;
 }
-

@@ -1,16 +1,1 @@
-{
-  "name": "DescribeScdnRefreshQuota",
-  "protocol": "HTTP|HTTPS",
-  "method": "POST|GET",
-  "path": "/",
-  "timeout": null,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Query",
-      "required": false
-    }
-  },
-  "res": {}
-}
+{"methods":["get","post"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"read","systemTags":{"operationType":"get"},"parameters":[],"responses":{"200":{"schema":{"type":"object","properties":{"BlockQuota":{"description":"封禁上限","type":"string","example":"100"},"PreloadRemain":{"description":"当天剩余预热数量","type":"string","example":"400"},"RequestId":{"description":"请求ID","type":"string","example":"42E0554B-80F4-4921-AED6-ACFB22CAAAD0"},"blockRemain":{"description":"封禁余量","type":"string","example":"100"},"DirRemain":{"description":"当天剩余目录刷新数量","type":"string","example":"99"},"UrlRemain":{"description":"当天剩余URL刷新数量","type":"string","example":"1996"},"DirQuota":{"description":"当天路径刷新数量上限","type":"string","example":"100"},"UrlQuota":{"description":"当天URL刷新数量上限","type":"string","example":"2000"},"PreloadQuota":{"description":"当天预热数量上限","type":"string","example":"500"}}}}},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"BlockQuota\\\": \\\"100\\\",\\n  \\\"PreloadRemain\\\": \\\"400\\\",\\n  \\\"RequestId\\\": \\\"42E0554B-80F4-4921-AED6-ACFB22CAAAD0\\\",\\n  \\\"blockRemain\\\": \\\"100\\\",\\n  \\\"DirRemain\\\": \\\"99\\\",\\n  \\\"UrlRemain\\\": \\\"1996\\\",\\n  \\\"DirQuota\\\": \\\"100\\\",\\n  \\\"UrlQuota\\\": \\\"2000\\\",\\n  \\\"PreloadQuota\\\": \\\"500\\\"\\n}\",\"errorExample\":\"\"},{\"type\":\"xml\",\"example\":\"<DescribeScdnRefreshQuotaResponse>\\r\\n    <DirQuota>100</DirQuota>\\r\\n    <DirRemain>99</DirRemain>\\r\\n    <RequestId>42E0554B-80F4-4921-AED6-ACFB22CAAAD0</RequestId>\\r\\n    <UrlQuota>2000</UrlQuota>\\r\\n    <UrlRemain>1996</UrlRemain>\\r\\n    <PreloadQuota>500</PreloadQuota>\\r\\n    <PreloadRemain>400</PreloadRemain>\\r\\n</DescribeScdnRefreshQuotaResponse>\",\"errorExample\":\"\"}]","title":"查询刷新预热次数限制和余量","summary":"调用DescribeScdnRefreshQuota查询刷新预热次数限制和余量。","description":"- 刷新、预热URL及目录的最大限制数量\n- 当日剩余刷新、预热URL及目录的次数","requestParamsDescription":" ","responseParamsDescription":" ","extraInfo":" "}

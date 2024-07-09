@@ -1,0 +1,28 @@
+export interface StartHotlineServiceResponse {
+    /**
+     * 错误描述
+     * @example `xxxx`
+     */
+    Message: string;
+    /**
+     * 请求ID，用于跟踪错误原因
+     * @example `EE338D98-9BD3-4413-B165`
+     */
+    RequestId: string;
+    /**
+     * 请求调用成功后返回，发起心跳所需的Token
+     * @example `0079e7a845e37334ff`
+     */
+    Data: string;
+    /**
+     * 错误编码
+     * @example `Success`
+     */
+    Code: string;
+    /**
+     * 接口调用是否成功
+     * @example `true`
+     */
+    Success: boolean;
+    HttpStatusCode: number;
+}

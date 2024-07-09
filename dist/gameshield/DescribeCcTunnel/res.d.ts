@@ -1,3 +1,0 @@
-interface DescribeCcTunnelResponse {
-}
-export { DescribeCcTunnelResponse };

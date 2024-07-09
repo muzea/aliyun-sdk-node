@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.RestoreTableResponse
 export interface RestoreTableResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `EA2D4F34-01A7-46EB-A339-D80882135206`
+     */
+    RequestId: string;
 }
-

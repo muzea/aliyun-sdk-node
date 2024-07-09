@@ -1,95 +1,76 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.ListItem
-export interface ListItem {
-	Engine: string;
-	UserVisible: boolean;
-	NeedRestart: boolean;
-	AccountType: number;
-	CheckItemContent: string;
-	SecurityIpList: string;
-	IsAccountTypeNotSupport: boolean;
-	ParamLevel: string;
-	IsNetTypeNotSupport: boolean;
-	MaxAccountCount: number;
-	Property: string;
-	IsInvalid: boolean;
-	SecurityIpListNotBlank: boolean;
-	MaxConnections: number;
-	ShardKey: string;
-	Progress: number;
-	IsAccountFull: boolean;
-	DbInstType: number;
-	Delay: number;
-	NetworkType: string;
-	VpcId: string;
-	CheckFailReason: string;
-	DBInstanceStorageType: string;
-	Type: string;
-	AdminPwd: string;
-	Port: number;
-	ParamEnglishName: string;
-	EngineVersion: string;
-	IsDbFull: boolean;
-	Table: string;
-	ParamDesc: string;
-	InstanceName: string;
-	DbInstanceStorage: number;
-	ParamDefaultValue: string;
-	Result: boolean;
-	TableName: string;
-	DbName: string;
-	AccountCount: number;
-	IsNetworkTypeNotSupport: boolean;
-	ParamType: string;
-	AzoneIdNotMatch: boolean;
-	DbInstanceMemory: number;
-	TargetTableName: string;
-	BroadcastType: string;
-	SupportUpgradeAccountType: number;
-	Region: string;
-	Category: string;
-	ReadWeight: number;
-	Expired: number;
-	InstanceDescription: string;
-	DbCount: number;
-	CheckItemName: string;
-	InstanceStorage: string;
-	VpcCloudDbInstanceId: string;
-	IsShard: boolean;
-	Stage: number;
-	InstanceId: string;
-	VswitchId: string;
-	UsingNatIp: boolean;
-	AdminUser: string;
-	ParamRanges: string;
-	ParamValue: string;
-	ParamVariableName: string;
-	LockMode: number;
-	Status: number;
-	AllowFullTableScan: boolean;
-	SourceTableName: string;
-	RegionName: string;
-	IsLocked: boolean;
-	ParamName: string;
-	SubDomain: string;
-	Broadcast: boolean;
-	InvalidReason: string;
-	CheckResult: string;
-	Avz: string;
-	ConnectUrl: string;
-	MaxDbCount: number;
-	ItemId: number;
-	InstanceNetType: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.DescribeTablesResponse
 export interface DescribeTablesResponse {
-	RequestId: string;
-	Success: boolean;
-	PageNumber: number;
-	PageSize: number;
-	Total: number;
-	List: ListItem[];
+    /**
+     * 每页大小。
+     * @example `10`
+     */
+    PageSize: number;
+    /**
+     * 页数。
+     * @example `1`
+     */
+    PageNumber: number;
+    /**
+     * 请求ID。
+     * @example `83AC3D7E-461C-4D87-8ACD-6CC295******`
+     */
+    RequestId: string;
+    /**
+     * 总数量。
+     * @example `1`
+     */
+    Total: number;
+    /**
+     * 请求是否成功。
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 返回的表信息列表。
+     */
+    List: {
+        /**
+         * 拆分任务状态，取值范围如下：
+         * - 0：正常、无任务；
+         * - 1：变更中、有拆分任务。
+         * @example `0`
+         */
+        Status: number;
+        /**
+         * 是否锁定。
+         * @example `false`
+         */
+        IsLocked: boolean;
+        /**
+         * 拆分键。
+         * @example `null`
+         */
+        ShardKey: string;
+        /**
+         * 是否拆分。
+         * @example `false`
+         */
+        IsShard: boolean;
+        /**
+         * 是否为广播表。
+         * @example `false`
+         */
+        Broadcast: boolean;
+        /**
+         * 是否允许全表扫描。
+         * @example `false`
+         */
+        AllowFullTableScan: boolean;
+        /**
+         * 表名称。
+         * @example `test`
+         */
+        Table: string;
+        /**
+         * 实例类型，取值范围如下：
+         * - 0：独享型；
+         * - 1：共享型。
+         * @example `0`
+         */
+        DbInstType: number;
+    }[];
 }
-

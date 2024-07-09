@@ -1,13 +1,13 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/xtrace.SpanNames
-export interface SpanNames {
-	SpanName: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/xtrace.ListSpanNamesResponse
 export interface ListSpanNamesResponse {
-	RequestId: string;
-	SpanNames: SpanNames;
+    /**
+     * 请求ID。
+     * @example `1E2B6A4C-6B83-4062-8B6F-AEEC1F******`
+     */
+    RequestId: string;
+    SpanNames: {
+        /**
+         * Span名称列表。
+         */
+        SpanName: string[];
+    };
 }
-

@@ -1,3 +1,0 @@
-interface ListClusterServiceConfigResponse {
-}
-export { ListClusterServiceConfigResponse };

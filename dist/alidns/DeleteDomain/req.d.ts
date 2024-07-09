@@ -1,13 +1,12 @@
-interface DeleteDomainRequest {
-    "RegionId"?: string;
+export interface DeleteDomainRequest {
     /**
-    * 域名名称。
-    * @example `example.com`
-    */ "DomainName": string;
+     * 语言。
+     * @example `en`
+     */
+    "Lang"?: string;
     /**
-    * 用户语言。
-    * @example `en`
-    */ "Lang"?: string;
-    "UserClientIp"?: string;
+     * 域名名称。
+     * @example `dns-example.top`
+     */
+    "DomainName": string;
 }
-export { DeleteDomainRequest };

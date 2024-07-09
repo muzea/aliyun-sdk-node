@@ -1,7 +1,23 @@
-interface BatchRegisterDeviceRequest {
-    "RegionId"?: string;
-    "Count": number;
+export interface BatchRegisterDeviceRequest {
+    /**
+     * 实例ID。您可在物联网平台控制台的**实例概览**页面，查看当前实例的**ID**。
+     * ><notice>
+     * - 若有ID值，必须传入该ID值，否则调用会失败。
+     * - 若无<props="intl"><ph>**实例概览**页面或</ph></props>ID值，则无需传入。
+     * ></notice>
+     * 实例的更多信息，请参见[实例概述](~~356505~~)。
+     * @example `iot_instc_pu****_c*-v64********`
+     */
     "IotInstanceId"?: string;
+    /**
+     * 要批量注册的设备所隶属的产品ProductKey。
+     * @example `a1BwAGV****`
+     */
     "ProductKey": string;
+    /**
+     * 要注册的设备数量。
+     * > 单次调用，最多可创建10,000个设备。
+     * @example `100`
+     */
+    "Count": number;
 }
-export { BatchRegisterDeviceRequest };

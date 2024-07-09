@@ -1,11 +1,8 @@
-interface DescribeElasticBandwidthSpecRequest {
-    "RegionId"?: string;
+export interface DescribeElasticBandwidthSpecRequest {
     /**
-    * @example `1.1.1.1`
-    */ "SourceIp"?: string;
-    /**
-    * 要查询的实例ID。单次请求只支持查询1个实例。
-    * @example `ddoscoo-cn-XXXXX`
-    */ "InstanceId": string;
+     * DDoS高防实例的ID。
+     * > 您可以调用[DescribeInstanceIds](~~157459~~)查询所有DDoS高防实例的ID信息。
+     * @example `ddoscoo-cn-mp91j1ao****`
+     */
+    "InstanceId": string;
 }
-export { DescribeElasticBandwidthSpecRequest };

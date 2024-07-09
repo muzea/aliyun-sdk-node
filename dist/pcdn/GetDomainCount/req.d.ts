@@ -1,5 +1,7 @@
-interface GetDomainCountRequest {
-    "RegionId"?: string;
+export interface GetDomainCountRequest {
+    /**
+     * 版本号。
+     * @example `2017-04-11`
+     */
     "Version": string;
 }
-export { GetDomainCountRequest };

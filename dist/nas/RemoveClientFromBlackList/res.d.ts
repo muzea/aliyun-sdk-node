@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/nas.RemoveClientFromBlackListResponse
 export interface RemoveClientFromBlackListResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `A70BEE5D-76D3-49FB-B58F-1F398211****`
+     */
+    RequestId: string;
 }
-

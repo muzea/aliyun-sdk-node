@@ -1,8 +1,5 @@
-interface ModifyUserBusinessBehaviorRequest {
+export interface ModifyUserBusinessBehaviorRequest {
     "RegionId"?: string;
-    "statusValue": string;
-    "SourceRegionId"?: string;
-    "OwnerId"?: number;
     "statusKey": string;
+    "statusValue": string;
 }
-export { ModifyUserBusinessBehaviorRequest };

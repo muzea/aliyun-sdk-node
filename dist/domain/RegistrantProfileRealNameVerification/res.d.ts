@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/domain.RegistrantProfileRealNameVerificationResponse
 export interface RegistrantProfileRealNameVerificationResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `51D584A2-0CCD-4336-AD7D-1AD4C67B5545`
+     */
+    RequestId: string;
 }
-

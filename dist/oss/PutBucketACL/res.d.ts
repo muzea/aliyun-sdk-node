@@ -1,3 +1,1 @@
-interface PutBucketACLResponse {
-}
-export { PutBucketACLResponse };
+export type PutBucketAclResponse = any;

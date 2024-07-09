@@ -1,5 +1,7 @@
-interface DescribeBackMenuRequest {
-    "RegionId"?: string;
+export interface DescribeBackMenuRequest {
+    /**
+     * 实例ID。
+     * @example `drds***********`
+     */
     "DrdsInstanceId": string;
 }
-export { DescribeBackMenuRequest };

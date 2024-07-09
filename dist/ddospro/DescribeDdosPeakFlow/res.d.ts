@@ -1,3 +1,0 @@
-interface DescribeDdosPeakFlowResponse {
-}
-export { DescribeDdosPeakFlowResponse };

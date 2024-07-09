@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cbn.ResolveAndRouteServiceInCenResponse
 export interface ResolveAndRouteServiceInCenResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `C0245BEF-52AC-44A8-A776-EF96FD26A5CA`
+     */
+    RequestId: string;
 }
-

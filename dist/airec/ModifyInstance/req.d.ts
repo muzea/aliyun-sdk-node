@@ -1,5 +1,7 @@
-interface ModifyInstanceRequest {
-    "RegionId"?: string;
-    "InstanceId": string;
+export interface ModifyInstanceRequest {
+    /**
+     * 实例ID。
+     * @example `airec-cn-****`
+     */
+    "instanceId": string;
 }
-export { ModifyInstanceRequest };

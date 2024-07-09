@@ -1,10 +1,22 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/edas.DeleteApplicationResponse
 export interface DeleteApplicationResponse {
-	Code: number;
-	Message: string;
-	ChangeOrderId: string;
-	RequestId: string;
+    /**
+     * 接口状态或POP错误码。
+     * @example `200`
+     */
+    Code: number;
+    /**
+     * 变更流程ID。
+     * @example `0b8e3c0b-5818-430*************`
+     */
+    ChangeOrderId: string;
+    /**
+     * 附加信息。
+     * @example `success`
+     */
+    Message: string;
+    /**
+     * 请求ID。
+     * @example `34DFE9FDV****************`
+     */
+    RequestId: string;
 }
-

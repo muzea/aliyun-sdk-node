@@ -1,3 +1,0 @@
-interface ListLabNodeLogsResponse {
-}
-export { ListLabNodeLogsResponse };

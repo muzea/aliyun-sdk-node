@@ -1,3 +1,0 @@
-interface DescribeDialogFlowResponse {
-}
-export { DescribeDialogFlowResponse };

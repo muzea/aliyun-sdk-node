@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/oos.DeleteTemplateResponse
 export interface DeleteTemplateResponse {
-	RequestId: string;
+    /**
+     * 请求ID
+     * @example `2075899A-585D-4A41-A9B2-28DA8534F`
+     */
+    RequestId: string;
 }
-

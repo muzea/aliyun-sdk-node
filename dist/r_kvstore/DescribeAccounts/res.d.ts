@@ -1,35 +1,57 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.DatabasePrivilege
-export interface DatabasePrivilege {
-	AccountPrivilege: string;
-	AccountPrivilegeDetail: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.DatabasePrivileges
-export interface DatabasePrivileges {
-	DatabasePrivilege: DatabasePrivilege[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.Account
-export interface Account {
-	InstanceId: string;
-	AccountName: string;
-	AccountStatus: string;
-	AccountType: string;
-	AccountDescription: string;
-	PrivExceeded: string;
-	DatabasePrivileges: DatabasePrivileges;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.AccountsInDescribeAccounts
-export interface AccountsInDescribeAccounts {
-	Account: Account[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.DescribeAccountsResponse
 export interface DescribeAccountsResponse {
-	RequestId: string;
-	Accounts: AccountsInDescribeAccounts;
+    /**
+     * 请求ID。
+     * @example `6C9E114C-217C-4118-83C0-B4070222****`
+     */
+    RequestId: string;
+    Accounts: {
+        /**
+         * Redis实例的账号信息列表。
+         */
+        Account: {
+            /**
+             * 账号备注信息。
+             * @example `testdec`
+             */
+            AccountDescription: string;
+            /**
+             * 实例ID。
+             * @example `r-bp10noxlhcoim2****`
+             */
+            InstanceId: string;
+            /**
+             * 账号类型，返回值：
+             * * **Normal**：普通账号。
+             * * **Super**：超级账号。
+             * @example `Normal`
+             */
+            AccountType: string;
+            /**
+             * 账号状态，返回值：
+             * * **Unavailable**：不可用。
+             * * **Available**：可用。
+             * @example `Available`
+             */
+            AccountStatus: string;
+            /**
+             * 账号名称。
+             * @example `demoaccount`
+             */
+            AccountName: string;
+            DatabasePrivileges: {
+                /**
+                 * 账号权限列表。
+                 */
+                DatabasePrivilege: {
+                    /**
+                     * 账号权限，返回值：
+                     * * **RoleReadOnly**：只读权限。
+                     * * **RoleReadWrite**：读写权限，默认值。
+                     * @example `RoleReadWrite`
+                     */
+                    AccountPrivilege: string;
+                }[];
+            };
+        }[];
+    };
 }
-

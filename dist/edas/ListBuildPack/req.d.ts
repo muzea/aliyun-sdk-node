@@ -1,4 +1,2 @@
-interface ListBuildPackRequest {
-    "RegionId"?: string;
+export interface ListBuildPackRequest {
 }
-export { ListBuildPackRequest };

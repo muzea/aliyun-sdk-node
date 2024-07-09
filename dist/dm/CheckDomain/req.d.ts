@@ -1,6 +1,7 @@
-interface CheckDomainRequest {
-    "RegionId"?: string;
+export interface CheckDomainRequest {
+    /**
+     * 域名ID。
+     * @example `153345`
+     */
     "DomainId": number;
-    "OwnerId"?: number;
 }
-export { CheckDomainRequest };

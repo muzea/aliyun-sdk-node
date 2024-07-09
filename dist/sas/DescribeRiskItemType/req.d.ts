@@ -1,12 +1,14 @@
-interface DescribeRiskItemTypeRequest {
-    "RegionId"?: string;
+export interface DescribeRiskItemTypeRequest {
     /**
-    * 请求源IP。
-    * @example `1.1.1.1`
-    */ "SourceIp"?: string;
+     * 请求源IP。
+     * @example `183.237.XX.XX`
+     */
+    "SourceIp"?: string;
     /**
-    * 调用该接口返回的内容的语言种类。支持中文（CN）和英文（EN）。
-    * @example `cn`
-    */ "Lang"?: string;
+     * 请求和接收消息的语言类型。默认值为**zh**。取值：
+     * - **zh**：中文
+     * - **en**：英文
+     * @example `zh`
+     */
+    "Lang"?: string;
 }
-export { DescribeRiskItemTypeRequest };

@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.AllocateReadWriteSplittingConnectionResponse
 export interface AllocateReadWriteSplittingConnectionResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `4C467B38-3910-447D-87BC-AC049166F216`
+     */
+    RequestId: string;
 }
-

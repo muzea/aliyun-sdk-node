@@ -1,13 +1,26 @@
-interface RefreshObjectCachesRequest {
-    "RegionId"?: string;
+export interface RefreshObjectCachesRequest {
     /**
-    * 多个URL之间需要用换行符（\n）或（\r\n）分隔。
-    * @example `abc.com/image/1.png`
-    */ "ObjectPath": string;
-    "OwnerId"?: number;
+     * 刷新URL，格式为**加速域名**或**刷新的文件或目录**。
+     * 多个URL之间使用换行符（\n）或（\r\n）分隔。
+     * @example `http://example.com/image/1.png\nhttp://aliyundoc.com/image/2.png`
+     */
+    "ObjectPath": string;
     /**
-    * 刷新的类型， 其值可以为**File**或**Directory**。默认值：**File**。
-    * @example `File`
-    */ "ObjectType"?: string;
+     * 刷新任务类型，取值：
+     * - **File**（默认值）：文件刷新。
+     * - **Directory**：目录刷新。
+     * - **Regex**：正则刷新。
+     * - **IgnoreParams**：去参数刷新。去参数指的是去除请求URL中?及?之后的参数，去参数刷新指的是用户先通过接口提交去参数后的URL，然后用户提交的待刷新URL将会与已缓存资源的URL进行去参数匹配，如果已缓存资源的URL去参数以后与待刷新URL匹配，那么CDN节点将对缓存资源执行刷新处理。
+     * 文件刷新和目录刷新的功能说明请参考[刷新和预热资源](~~27140~~)，正则刷新的功能说明和操作示例请参考[正则刷新说明](~~146195~~)。
+     * 目录刷新默认采用标记资源过期的处理方式，不支持删除目录。目录刷新会将节点上对应目录置为过期，后续有用户访问时，CDN节点将会回源站校验目录是否更新，有更新时从源站重新拉取新版本返回给用户，未有更新时源站响应304状态码。
+     * @example `File`
+     */
+    "ObjectType"?: string;
+    /**
+     * 当回源内容和源站资源对比后不一致时，是否刷新对应目录下的资源。默认为false。
+     * - **true**：刷新对应目录下的全部资源。选择 “刷新全部资源” 时，如果用户请求的内容匹配到了目录下的资源，CDN节点将会直接回源拉取新资源返回给用户，并重新缓存该资源。
+     * - **false**：刷新对应目录下发生变更的资源。选择 “刷新变更资源” 时，如果用户请求的内容匹配到了目录下的资源，CDN节点将会回源获取资源的 Last-Modified 信息，若与当前缓存资源一致，则直接返回已缓存资源，若不一致，则回源拉取新资源返回给用户，并重新缓存该资源。
+     * @example `false`
+     */
+    "Force"?: boolean;
 }
-export { RefreshObjectCachesRequest };

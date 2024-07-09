@@ -1,3 +1,0 @@
-interface SendBusinessCommandToLabNodeResponse {
-}
-export { SendBusinessCommandToLabNodeResponse };

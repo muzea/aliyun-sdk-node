@@ -1,11 +1,9 @@
-interface CreateVSwitchRequest {
-    "RegionId"?: string;
+export interface CreateVSwitchRequest {
+    "ZoneId": string;
     "CidrBlock": string;
     "VpcId": string;
-    "OwnerId"?: number;
-    "ZoneId": string;
+    "RegionId"?: string;
     "VSwitchName"?: string;
     "Description"?: string;
     "ClientToken"?: string;
 }
-export { CreateVSwitchRequest };

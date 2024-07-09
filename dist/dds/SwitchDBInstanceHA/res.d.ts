@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dds.SwitchDBInstanceHAResponse
 export interface SwitchDBInstanceHAResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `26BD4E5F-BDB4-47BA-B232-413AA78CFA8F`
+     */
+    RequestId: string;
 }
-

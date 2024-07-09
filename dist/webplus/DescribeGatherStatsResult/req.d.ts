@@ -1,8 +1,8 @@
-interface DescribeGatherStatsResultRequest {
-    "RegionId"?: string;
+export interface DescribeGatherStatsResultRequest {
     /**
-    * 变更ID，将查询此变更ID对应的诊断结果信息
-    * @example `wc-5d4134b956fd7c14ac91*****`
-    */ "ChangeId"?: string;
+     * 变更ID，将查询此变更ID对应的诊断结果信息
+     * @example `wc-5d4134b956fd7c14ac91*****`
+     */
+    "ChangeId"?: string;
+    "RegionId"?: string;
 }
-export { DescribeGatherStatsResultRequest };

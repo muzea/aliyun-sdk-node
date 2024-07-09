@@ -1,6 +1,12 @@
-interface EnableInstanceIpv6AddressRequest {
-    "RegionId"?: string;
+export interface EnableInstanceIpv6AddressRequest {
+    /**
+     * DRDS实例ID。
+     * @example `drds************`
+     */
     "DrdsInstanceId": string;
-    "DrdsPassword"?: string;
+    /**
+     * 实例所在地域ID。
+     * @example `cn-hangzhou`
+     */
+    "RegionId"?: string;
 }
-export { EnableInstanceIpv6AddressRequest };

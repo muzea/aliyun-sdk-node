@@ -1,9 +1,17 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/webplus.DeletePkgVersionResponse
 export interface DeletePkgVersionResponse {
-	RequestId: string;
-	Code: string;
-	Message: string;
+    /**
+     * 响应消息，若成功请求为success
+     * @example `success`
+     */
+    Message: string;
+    /**
+     * 请求ID
+     * @example `D8F166F0-632E-4DBA-96ED-EA520AE3****`
+     */
+    RequestId: string;
+    /**
+     * 响应代码，若成功请求为OK
+     * @example `OK`
+     */
+    Code: string;
 }
-

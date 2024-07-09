@@ -1,27 +1,29 @@
-interface DescribeChannelParticipantsRequest {
-    "RegionId"?: string;
+export interface DescribeChannelParticipantsRequest {
     /**
-    * 应用ID。
-    * @example `sad123`
-    */ "AppId": string;
+     * 应用ID，可通过控制台创建和查询，仅支持传单个ID。
+     * @example `aec****`
+     */
+    "AppId": string;
     /**
-    * 用户加入的频道。
-    * @example `123`
-    */ "ChannelId": string;
-    "OwnerId"?: number;
+     * 加入的频道，仅支持传单个ID。
+     * @example `testId`
+     */
+    "ChannelId": string;
     /**
-    * 不输入该参数默认为**desc**取最近记录。
-    * - 递增：**asc**。
-    * - 递减：**desc**。
-    * @example `asc`
-    */ "Order"?: string;
+     * 排序方式，取值：
+     * - **asc**：递增。
+     * - **desc**（默认值）：递减。
+     * @example `asc`
+     */
+    "Order"?: string;
     /**
-    * 不输入默认**1**页，必须大于**0**。
-    * @example `1`
-    */ "PageNum"?: number;
+     * 第几页，默认查询第1页。
+     * @example `1`
+     */
+    "PageNum"?: number;
     /**
-    * 不输入如默认为**10**， 必须大于**0**。
-    * @example `10`
-    */ "PageSize"?: number;
+     * 每页显示用户数量，默认每页显示10条用户数据。
+     * @example `10`
+     */
+    "PageSize"?: number;
 }
-export { DescribeChannelParticipantsRequest };

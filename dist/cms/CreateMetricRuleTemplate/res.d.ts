@@ -1,11 +1,30 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.CreateMetricRuleTemplateResponse
 export interface CreateMetricRuleTemplateResponse {
-	RequestId: string;
-	Success: boolean;
-	Code: number;
-	Message: string;
-	Id: number;
+    /**
+     * 状态码。
+     * >200表示成功。
+     * @example `200`
+     */
+    Code: number;
+    /**
+     * 错误信息。
+     * @example `The Request is not authorization.`
+     */
+    Message: string;
+    /**
+     * 请求ID。
+     * @example `9763ED1A-4D09-41BF-851E-310421750204`
+     */
+    RequestId: string;
+    /**
+     * 操作是否成功。取值：
+     * - true：成功。
+     * - false：失败。
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 报警模板ID。
+     * @example `12345`
+     */
+    Id: number;
 }
-

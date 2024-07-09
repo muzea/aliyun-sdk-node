@@ -1,18 +1,1 @@
-{
-  "name": "DescribeRegions",
-  "protocol": "HTTPS|HTTP",
-  "method": "GET",
-  "path": "/pop/v1/paas/regionConfig",
-  "summary_cn": "使用 DescribeRegions 查询可用地域。",
-  "abc_id": 126213,
-  "timeout": 3000,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Query",
-      "required": false
-    }
-  },
-  "res": {}
-}
+{"path":"/pop/v1/paas/regionConfig","methods":["get"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"read","deprecated":false,"systemTags":{"operationType":"get","abilityTreeCode":"6344","abilityTreeNodes":["FEATUREsaeD9PL61"]},"parameters":[],"responses":{"200":{"schema":{"description":"返回数据。","type":"object","properties":{"Message":{"description":"调用结果的附加信息。","type":"string","example":"success"},"RequestId":{"description":"请求ID。","type":"string","example":"DDE85827-B0B3-4E56-86E8-17C42009****"},"Regions":{"type":"object","properties":{"Region":{"description":"地域列表。","type":"array","items":{"description":"地域数据。","type":"object","properties":{"LocalName":{"description":"地域名称。取值说明如下：\n\n- **华东1（杭州）**\n- **华东2（上海）**\n- **华北2（北京）**\n- **华北3（张家口）**\n- **华南1（深圳）**\n- **华南3（广州）**\n- **中国（香港）**\n- **新加坡**\n- **美国（硅谷）**","type":"string","example":"华东2（上海）"},"RegionEndpoint":{"description":"地域对应的接入地址。取值说明如下：\n\n- **sae.cn-hangzhou.aliyuncs.com**\n- **sae.cn-shanghai.aliyuncs.com**\n- **sae.cn-beijing.aliyuncs.com**\n- **sae.cn-zhangjiakou.aliyuncs.com**\n- **sae.cn-shenzhen.aliyuncs.com**\n- **sae.cn-guangzhou.aliyuncs.com**\n- **sae.cn-hongkong.aliyuncs.com**\n- **sae.ap-southeast-1.aliyuncs.com**\n- **sae.us-west-1.aliyuncs.com**","type":"string","example":"sae.cn-shanghai.aliyuncs.com"},"RegionId":{"description":"地域ID。取值说明如下：\n\n- **cn-hangzhou**：华东1（杭州）地域的ID。\n- **cn-shanghai**：华东2（上海）地域的ID。\n- **cn-beijing**：华北2（北京）地域的ID。\n- **cn-zhangjiakou**：华北3（张家口）地域的ID。\n- **cn-shenzhen**：华南1（深圳）地域的ID。\n- **cn-guangzhou**：华南3（广州）地域的ID。\n- **cn-hongkong**：中国香港地域的ID。\n- **ap-southeast-1**：新加坡地域的ID。\n- **us-west-1**：美国（硅谷）地域的ID。","type":"string","example":"cn-shanghai"},"RecommendZones":{"type":"object","properties":{"RecommendZone":{"description":"推荐可用区。","type":"array","items":{"description":"推荐可用区。所有地域下，整体库存量相对充足的可用区。格式如下：\n\n- 如果地域内有推荐可用区：`\"RecommendZone\": [\"cn-hongkong-b\", \"cn-hongkong-d\", \"cn-hongkong-c\"]`\n\n- 如果地域内无推荐可用区：`\"RecommendZone\": []`","type":"string","example":"cn-hongkong-b"}}}}}}}}},"Code":{"description":"接口状态或POP错误码。取值说明如下：\n\n- **2xx**：成功。\n- **3xx**：重定向。\n- **4xx**：请求错误。\n- **5xx**：服务器错误。","type":"integer","format":"int32","example":"200"}}}}},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"Message\\\": \\\"success\\\",\\n  \\\"RequestId\\\": \\\"DDE85827-B0B3-4E56-86E8-17C42009****\\\",\\n  \\\"Regions\\\": {\\n    \\\"Region\\\": [\\n      {\\n        \\\"LocalName\\\": \\\"华东2（上海）\\\",\\n        \\\"RegionEndpoint\\\": \\\"sae.cn-shanghai.aliyuncs.com\\\",\\n        \\\"RegionId\\\": \\\"cn-shanghai\\\",\\n        \\\"RecommendZones\\\": {\\n          \\\"RecommendZone\\\": [\\n            \\\"cn-hongkong-b\\\"\\n          ]\\n        }\\n      }\\n    ]\\n  },\\n  \\\"Code\\\": 200\\n}\",\"errorExample\":\"\"},{\"type\":\"xml\",\"example\":\"<DescribeRegionsResponse>\\n    <Message>success</Message>\\n    <RequestId>DDE85827-B0B3-4E56-86E8-17C42009****</RequestId>\\n    <Regions>\\n        <LocalName>华东2（上海）</LocalName>\\n        <RegionEndpoint>sae.cn-shanghai.aliyuncs.com</RegionEndpoint>\\n        <RegionId>cn-shanghai</RegionId>\\n        <RecommendZones>cn-hongkong-b</RecommendZones>\\n    </Regions>\\n    <Code>200</Code>\\n</DescribeRegionsResponse>\",\"errorExample\":\"\"}]","title":"查询可用地域","summary":"调用DescribeRegions接口查询可用地域。"}

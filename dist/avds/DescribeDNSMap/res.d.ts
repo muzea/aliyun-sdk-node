@@ -1,3 +1,0 @@
-interface DescribeDNSMapResponse {
-}
-export { DescribeDNSMapResponse };

@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.DeleteIpv6GatewayResponse
 export interface DeleteIpv6GatewayResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `E9A8AABE-A84B-4AF2-A68A-8E2EA190E7AE`
+     */
+    RequestId: string;
 }
-

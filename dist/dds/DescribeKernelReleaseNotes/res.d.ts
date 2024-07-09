@@ -1,19 +1,24 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dds.ReleaseNote
-export interface ReleaseNote {
-	KernelVersion: string;
-	ReleaseNote: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dds.ReleaseNotes
-export interface ReleaseNotes {
-	ReleaseNote: ReleaseNote[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dds.DescribeKernelReleaseNotesResponse
 export interface DescribeKernelReleaseNotesResponse {
-	RequestId: string;
-	ReleaseNotes: ReleaseNotes;
+    /**
+     * 请求ID。
+     * @example `F01D4DDA-CB72-4083-B399-AF4642294FE6`
+     */
+    RequestId: string;
+    ReleaseNotes: {
+        /**
+         * 版本发布日志信息列表。
+         */
+        ReleaseNote: {
+            /**
+             * 发布日志。
+             * @example `放开sharding某集合开关balancer的限制`
+             */
+            ReleaseNote: string;
+            /**
+             * 版本号。
+             * @example `mongodb_20180619_0.4.9`
+             */
+            KernelVersion: string;
+        }[];
+    };
 }
-

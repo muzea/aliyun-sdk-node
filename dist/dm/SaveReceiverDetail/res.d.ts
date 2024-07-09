@@ -1,23 +1,29 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dm.Detail
-export interface Detail {
-	Email: string;
-	CreateTime: string;
-	Data: string;
-	UtcCreateTime: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dm.DataInSaveReceiverDetail
-export interface DataInSaveReceiverDetail {
-	Detail: Detail[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dm.SaveReceiverDetailResponse
 export interface SaveReceiverDetailResponse {
-	RequestId: string;
-	SuccessCount: number;
-	ErrorCount: number;
-	Data: DataInSaveReceiverDetail;
+    /**
+     * 错误次数。
+     * @example `638`
+     */
+    ErrorCount: number;
+    /**
+     * 请求ID
+     * @example `10A1AD70-E48E-476D-98D9-39BD92193837`
+     */
+    RequestId: string;
+    /**
+     * 成功数量。
+     * @example `274`
+     */
+    SuccessCount: number;
+    Data: {
+        /**
+         * 邮件列表。
+         */
+        Detail: {
+            /**
+             * 邮件地址。
+             * @example `test@mail.com`
+             */
+            Email: string;
+        }[];
+    };
 }
-

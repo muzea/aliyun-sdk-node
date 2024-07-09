@@ -1,5 +1,7 @@
-interface PushInterventionRequest {
-    "RegionId"?: string;
-    "InstanceId": string;
+export interface PushInterventionRequest {
+    /**
+     * 实例ID
+     * @example `airec-test`
+     */
+    "instanceId": string;
 }
-export { PushInterventionRequest };

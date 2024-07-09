@@ -1,3 +1,0 @@
-interface CheckVersionsOfComponentsResponse {
-}
-export { CheckVersionsOfComponentsResponse };

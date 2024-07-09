@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.AssociatePhysicalConnectionToVirtualBorderRouterResponse
 export interface AssociatePhysicalConnectionToVirtualBorderRouterResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `980960B0-2969-40BF-8542-EBB34FD358AB`
+     */
+    RequestId: string;
 }
-

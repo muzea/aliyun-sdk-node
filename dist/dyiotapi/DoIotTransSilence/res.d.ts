@@ -1,3 +1,0 @@
-interface DoIotTransSilenceResponse {
-}
-export { DoIotTransSilenceResponse };

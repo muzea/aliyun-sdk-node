@@ -1,17 +1,18 @@
-interface DescribeRtcChannelMetricRequest {
-    "RegionId"?: string;
+export interface DescribeRtcChannelMetricRequest {
     /**
-    * 时间点，天粒度，UTC格式。
-    * @example `2018-01-29T00:00:00Z`
-    */ "TimePoint": string;
+     * 查询记录时间，UTC格式，格式为yyyy-MM-ddTHH:mm:ssZ。
+     * 时间粒度为天。
+     * @example `2018-01-29T00:00:00Z`
+     */
+    "TimePoint": string;
     /**
-    * 应用ID。
-    * @example `xxx`
-    */ "AppId": string;
+     * 应用ID，可通过控制台创建和查询，仅支持传单个ID。
+     * @example `aoe****`
+     */
+    "AppId": string;
     /**
-    * 频道ID。
-    * @example `0101`
-    */ "ChannelId": string;
-    "OwnerId"?: number;
+     * 频道ID，仅支持传单个ID。
+     * @example `testId`
+     */
+    "ChannelId": string;
 }
-export { DescribeRtcChannelMetricRequest };

@@ -1,12 +1,12 @@
-interface DeleteACLRequest {
+export interface DeleteACLRequest {
     /**
-    * 地域ID。
-    * @example `cn-hangzhou`
-    */ "RegionId": string;
+     * 地域ID。
+     * @example `cn-hangzhou`
+     */
+    "RegionId": string;
     /**
-    * 访问控制ID。
-    * @example `acl-ohlexqptfhy*******`
-    */ "AclId": string;
-    "OwnerId"?: number;
+     * 访问控制ID。
+     * @example `acl-ohlexqptfhy*******`
+     */
+    "AclId": string;
 }
-export { DeleteACLRequest };

@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cbn.DeleteCenResponse
 export interface DeleteCenResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `5903EE99-D542-4E14-BC65-AAC1CB2D3D03`
+     */
+    RequestId: string;
 }
-

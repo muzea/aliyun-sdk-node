@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/domain.ResetQualificationVerificationResponse
 export interface ResetQualificationVerificationResponse {
-	RequestId: string;
+    /**
+     * 唯一请求识别码。
+     * @example `D6CB3623-4726-4947-AC2B-2C6E673B447C`
+     */
+    RequestId: string;
 }
-

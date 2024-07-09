@@ -1,3 +1,1 @@
-interface DeleteBucketWebsiteResponse {
-}
-export { DeleteBucketWebsiteResponse };
+export type DeleteBucketWebsiteResponse = any;

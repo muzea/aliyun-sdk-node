@@ -1,9 +1,17 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.CheckDrdsDbNameResponse
 export interface CheckDrdsDbNameResponse {
-	RequestId: string;
-	Success: boolean;
-	Result: boolean;
+    /**
+     * 请求 ID
+     * @example `CF38538C-68BD-4278-B58F-EDE96F******`
+     */
+    RequestId: string;
+    /**
+     * 检查结果。true：数据库名合法， false：数据库名不合法
+     * @example `true`
+     */
+    Result: boolean;
+    /**
+     * 是否成功
+     * @example `true`
+     */
+    Success: boolean;
 }
-

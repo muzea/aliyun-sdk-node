@@ -1,13 +1,12 @@
-interface AddDomainGroupRequest {
-    "RegionId"?: string;
+export interface AddDomainGroupRequest {
     /**
-    * 域名分组名称。
-    * @example `MyGroup`
-    */ "GroupName": string;
+     * 语言。
+     * @example `en`
+     */
+    "Lang"?: string;
     /**
-    * 语言。
-    * @example `en`
-    */ "Lang"?: string;
-    "UserClientIp"?: string;
+     * 域名分组名称。
+     * @example `MyGroup`
+     */
+    "GroupName": string;
 }
-export { AddDomainGroupRequest };

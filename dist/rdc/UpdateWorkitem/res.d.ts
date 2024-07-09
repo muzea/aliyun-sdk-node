@@ -1,3 +1,0 @@
-interface UpdateWorkitemResponse {
-}
-export { UpdateWorkitemResponse };

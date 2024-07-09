@@ -1,17 +1,25 @@
-interface DeleteForwardEntryRequest {
+export interface DeleteForwardEntryRequest {
     /**
-    * NAT网关所在的地域。
-    * 您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。
-    * @example `cn-hangzhou`
-    */ "RegionId": string;
+     * NAT网关所在的地域ID。
+     * 您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。
+     * @example `cn-hangzhou`
+     */
+    "RegionId": string;
     /**
-    *  DNAT列表ID。
-    * @example `ftb-8vbx8xu2lqj9qb334h0ow`
-    */ "ForwardTableId": string;
+     * DNAT条目所属的DNAT列表ID。
+     * @example `ftb-8vbx8xu2lqj9qb334****`
+     */
+    "ForwardTableId": string;
     /**
-    *  DNAT条目ID。
-    * @example `fwd-8vbn3bc8roygjp0gy3xk7`
-    */ "ForwardEntryId": string;
-    "OwnerId"?: number;
+     * 要删除的DNAT条目ID。
+     * @example `fwd-8vbn3bc8roygjp0gy****`
+     */
+    "ForwardEntryId": string;
+    /**
+     * 客户端Token，用于保证请求的幂等性。
+     * 从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。
+     * > 若您未指定，则系统自动使用API请求的**RequestId**作为**ClientToken**标识。每次API请求的**RequestId**可能不一样。
+     * @example `123e4567-e89b-12d3-a456-426655440000`
+     */
+    "ClientToken"?: string;
 }
-export { DeleteForwardEntryRequest };

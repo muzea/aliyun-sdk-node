@@ -1,3 +1,0 @@
-interface CreateCertAndKeyResponse {
-}
-export { CreateCertAndKeyResponse };

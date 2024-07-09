@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/nas.CreateLDAPConfigResponse
 export interface CreateLDAPConfigResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `5B4511A7-C99E-4071-AA8C-32E2529D****`
+     */
+    RequestId: string;
 }
-

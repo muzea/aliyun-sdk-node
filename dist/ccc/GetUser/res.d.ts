@@ -1,185 +1,111 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.Detail
-export interface Detail {
-	Email: string;
-	LoginName: string;
-	Department: string;
-	Phone: string;
-	DisplayName: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.ContactFlowVersion
-export interface ContactFlowVersion {
-	Canvas: string;
-	Content: string;
-	LockedBy: string;
-	ContactFlowVersionDescription: string;
-	Version: string;
-	LastModified: string;
-	LastModifiedBy: string;
-	Status: string;
-	ContactFlowVersionId: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.VersionsInListContactFlows
-export interface VersionsInListContactFlows {
-	ContactFlowVersion: ContactFlowVersion[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.PhoneNumbersInListVoiceAppraise
-export interface PhoneNumbersInListVoiceAppraise {
-	PhoneNumber: PhoneNumber[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.ContactFlow
-export interface ContactFlow {
-	ContactFlowDescription: string;
-	InstanceId: string;
-	ContactFlowName: string;
-	ContactFlowId: string;
-	AppliedVersion: string;
-	Type: string;
-	Versions: VersionsInListContactFlows;
-	PhoneNumbers: PhoneNumbersInListVoiceAppraise;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.PrivacyNumber
-export interface PrivacyNumber {
-	PoolId: string;
-	BizId: string;
-	RegionNameCity: string;
-	TelX: string;
-	PhoneNumber: string;
-	PoolName: string;
-	Extra: string;
-	SubId: string;
-	Type: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.OutboundPhoneNumbersInListSkillGroups
-export interface OutboundPhoneNumbersInListSkillGroups {
-	PhoneNumber: PhoneNumber[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.SkillGroup
-export interface SkillGroup {
-	SkillGroupName: string;
-	AccQueueName: string;
-	SkillGroupId: string;
-	SkillGroupDescription: string;
-	RoutingStrategy: string;
-	InstanceId: string;
-	AccSkillGroupName: string;
-	UserCount: number;
-	OutboundPhoneNumbers: OutboundPhoneNumbersInListSkillGroups;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.SkillGroupsInAddBulkPhoneNumbers
-export interface SkillGroupsInAddBulkPhoneNumbers {
-	SkillGroup: SkillGroup[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.PhoneNumber
-export interface PhoneNumber {
-	Usage: string;
-	Trunks: number;
-	PrivateFlag: boolean;
-	City: string;
-	Number: string;
-	Province: string;
-	Assignee: string;
-	InstanceId: string;
-	RemainingTime: number;
-	NumberCommodityStatus: number;
-	TestOnly: boolean;
-	PhoneNumberDescription: string;
-	AllowOutbound: boolean;
-	SipTelX: string;
-	PhoneNumberId: string;
-	ContactFlow: ContactFlow;
-	PrivacyNumber: PrivacyNumber;
-	SkillGroups: SkillGroupsInAddBulkPhoneNumbers;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.OutboundPhoneNumbersInListSkillGroupsOfUser
-export interface OutboundPhoneNumbersInListSkillGroupsOfUser {
-	PhoneNumber: PhoneNumber[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.Skill
-export interface Skill {
-	SkillGroupName: string;
-	SkillGroupId: string;
-	SkillGroupDescription: string;
-	RoutingStrategy: string;
-	InstanceId: string;
-	OutboundPhoneNumbers: OutboundPhoneNumbersInListSkillGroupsOfUser;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.SkillLevel
-export interface SkillLevel {
-	Level: number;
-	SkillLevelId: string;
-	Skill: Skill;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.SkillLevelsInFindUsers
-export interface SkillLevelsInFindUsers {
-	SkillLevel: SkillLevel[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.Privilege
-export interface Privilege {
-	PrivilegeName: string;
-	PrivilegeDescription: string;
-	PrivilegeId: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.PrivilegesInListUsersOfSkillGroup
-export interface PrivilegesInListUsersOfSkillGroup {
-	Privilege: Privilege[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.Role
-export interface Role {
-	RoleId: string;
-	InstanceId: string;
-	UserCount: number;
-	RoleName: string;
-	RoleDescription: string;
-	Privileges: PrivilegesInListUsersOfSkillGroup;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.RolesInFindUsers
-export interface RolesInFindUsers {
-	Role: Role[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.User
-export interface User {
-	StateDesc: string;
-	RamId: string;
-	DisplayName: string;
-	Primary: boolean;
-	State: string;
-	PrivateOutboundNumberId: string;
-	UserId: string;
-	InstanceId: string;
-	Dn: string;
-	Phone: string;
-	Detail: Detail;
-	SkillLevels: SkillLevelsInFindUsers;
-	Roles: RolesInFindUsers;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ccc.GetUserResponse
 export interface GetUserResponse {
-	RequestId: string;
-	Success: boolean;
-	Code: string;
-	Message: string;
-	HttpStatusCode: number;
-	User: User;
+    /**
+     * 响应码。
+     * @example `OK`
+     */
+    Code: string;
+    /**
+     * HTTP状态码。
+     * @example `200`
+     */
+    HttpStatusCode: number;
+    /**
+     * 响应信息。
+     * @example `无`
+     */
+    Message: string;
+    /**
+     * 请求ID。
+     * @example `EEEE671A-3E24-4A04-81E6-6C4F5B39DF75`
+     */
+    RequestId: string;
+    /**
+     * 数据。
+     */
+    Data: {
+        /**
+         * 坐席展示名。
+         * @example `坐席小王`
+         */
+        DisplayName: string;
+        /**
+         * 坐席的工号。
+         * @example `1001`
+         */
+        DisplayId: string;
+        /**
+         * 坐席分机号。
+         * @example `8003****`
+         */
+        Extension: string;
+        /**
+         * 坐席登录名。
+         * @example `agent`
+         */
+        LoginName: string;
+        /**
+         * 邮箱。
+         * @example `username@example.com`
+         */
+        Email: string;
+        /**
+         * 工作模式。
+         * @example `ON_SITE`
+         */
+        WorkMode: string;
+        /**
+         * 坐席的个人电话号码。
+         * @example `1391234****`
+         */
+        Mobile: string;
+        /**
+         * 坐席ID。
+         * @example `agent@ccc-test`
+         */
+        UserId: string;
+        /**
+         * 角色名称。
+         * @example `Admin`
+         */
+        RoleName: string;
+        /**
+         * 实例ID。
+         * @example `ccc-test`
+         */
+        InstanceId: string;
+        /**
+         * 角色ID，格式为：角色@实例ID。
+         * @example `Admin@ccc-test`
+         */
+        RoleId: string;
+        /**
+         * 设备ID，浏览器WebRTC软电话或实体话机设备的标识ID，同一时间只允许一种设备注册。
+         * @example `ACC-YUNBS-1.0.10-****`
+         */
+        DeviceId: string;
+        /**
+         * SIP话机分机号，如果座席注册了SIP话机，则此参数为SIP话机设备的分机号。
+         * @example `8033****`
+         */
+        DeviceExt: string;
+        /**
+         * SIP话机设备的状态，如果未注册SIP话机，则状态为UNREGISTERED（未注册），如果SIP话机注册过但是不在线，则状态为OFFLINE（离线），如果SIP话机注册过并且在线则为ONLINE（在线）。
+         * @example `OFFLINE`
+         */
+        DeviceState: string;
+        /**
+         * 坐席昵称
+         * @example `阿云`
+         */
+        Nickname: string;
+        /**
+         * 坐席头像地址。
+         * @example `http://xxx.com/xxx.jpg`
+         */
+        AvatarUrl: string;
+    };
+    /**
+     * 扩展参数
+     */
+    Params: string[];
 }
-

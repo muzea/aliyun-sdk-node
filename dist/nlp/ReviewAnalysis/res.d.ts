@@ -1,3 +1,0 @@
-interface ReviewAnalysisResponse {
-}
-export { ReviewAnalysisResponse };

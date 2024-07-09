@@ -1,30 +1,36 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/polardb.Zone
-export interface Zone {
-	ZoneId: string;
-	VpcEnabled: boolean;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/polardb.Zones
-export interface Zones {
-	Zone: Zone[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/polardb.Region
-export interface Region {
-	RegionId: string;
-	Zones: Zones;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/polardb.Regions
-export interface Regions {
-	Region: Region[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/polardb.DescribeRegionsResponse
 export interface DescribeRegionsResponse {
-	RequestId: string;
-	Regions: Regions;
+    /**
+     * 请求ID。
+     * @example `3F9E6A3B-C13E-4064-A010-18582A******`
+     */
+    RequestId: string;
+    Regions: {
+        /**
+         * 地域信息列表。
+         */
+        Region: {
+            Zones: {
+                /**
+                 * 可用区列表。
+                 */
+                Zone: {
+                    /**
+                     * 可用区ID。
+                     * @example `cn-hangzhou-g`
+                     */
+                    ZoneId: string;
+                    /**
+                     * 是否支持VPC。
+                     * @example `true`
+                     */
+                    VpcEnabled: boolean;
+                }[];
+            };
+            /**
+             * 地域ID。
+             * @example `cn-hangzhou`
+             */
+            RegionId: string;
+        }[];
+    };
 }
-

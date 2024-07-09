@@ -1,3 +1,0 @@
-interface CreateScanResponse {
-}
-export { CreateScanResponse };

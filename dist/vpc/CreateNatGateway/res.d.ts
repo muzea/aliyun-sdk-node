@@ -1,26 +1,30 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.ForwardTableIdsInCreateNatGateway
-export interface ForwardTableIdsInCreateNatGateway {
-	ForwardTableId: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.SnatTableIdsInCreateNatGateway
-export interface SnatTableIdsInCreateNatGateway {
-	SnatTableId: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.BandwidthPackageIdsInCreateNatGateway
-export interface BandwidthPackageIdsInCreateNatGateway {
-	BandwidthPackageId: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.CreateNatGatewayResponse
 export interface CreateNatGatewayResponse {
-	RequestId: string;
-	NatGatewayId: string;
-	ForwardTableIds: ForwardTableIdsInCreateNatGateway;
-	SnatTableIds: SnatTableIdsInCreateNatGateway;
-	BandwidthPackageIds: BandwidthPackageIdsInCreateNatGateway;
+    /**
+     * 创建的NAT网关的实例ID。
+     * @example `ngw-112za33e4****`
+     */
+    NatGatewayId: string;
+    /**
+     * 请求ID。
+     * @example `2315DEB7-5E92-423A-91F7-4C1EC9AD97C3`
+     */
+    RequestId: string;
+    ForwardTableIds: {
+        /**
+         * DNAT列表。
+         */
+        ForwardTableId: string[];
+    };
+    SnatTableIds: {
+        /**
+         * SNAT列表。
+         */
+        SnatTableId: string[];
+    };
+    FullNatTableIds: {
+        /**
+         * FULLNAT列表。
+         */
+        FullNatTableId: string[];
+    };
 }
-

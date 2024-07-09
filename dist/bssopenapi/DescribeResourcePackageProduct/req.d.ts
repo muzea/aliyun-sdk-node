@@ -1,5 +1,7 @@
-interface DescribeResourcePackageProductRequest {
-    "RegionId"?: string;
-    "ProductCode"?: string;
+export interface DescribeResourcePackageProductRequest {
+    /**
+     * 产品类型。
+     * @example `ossbag`
+     */
+    "ProductCode": string;
 }
-export { DescribeResourcePackageProductRequest };

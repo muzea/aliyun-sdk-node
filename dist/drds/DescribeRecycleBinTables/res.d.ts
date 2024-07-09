@@ -1,34 +1,32 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.ReadOnlyInstanceInfo
-export interface ReadOnlyInstanceInfo {
-	ReadOnlyInstanceIds: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.ReadOnlyInstanceIds
-export interface ReadOnlyInstanceIds {
-	ReadOnlyInstanceId: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.DataItem
-export interface DataItem {
-	UsedInstanceType: string;
-	RdsInstanceId: string;
-	Enabled: string;
-	CreateTime: string;
-	Detailed: string;
-	OriginalTableName: string;
-	TableName: string;
-	DbName: string;
-	UsedInstanceId: string;
-	ReadOnlyInstanceInfo: ReadOnlyInstanceInfo;
-	ReadOnlyInstanceIds: ReadOnlyInstanceIds;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.DescribeRecycleBinTablesResponse
 export interface DescribeRecycleBinTablesResponse {
-	RequestId: string;
-	Success: boolean;
-	Data: DataItem[];
+    /**
+     * 请求结果。
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 请求ID。
+     * @example `5D64DE5944A1E541E0CB908A`
+     */
+    RequestId: string;
+    /**
+     * 返回数据对象。
+     */
+    Data: {
+        /**
+         * 原始表名。
+         * @example `BIN_T4AG3CY5WWXPKHITCHJY`
+         */
+        OriginalTableName: string;
+        /**
+         * 表名。
+         * @example `test`
+         */
+        TableName: string;
+        /**
+         * 创建时间。
+         * @example `2019-09-16 14:42:06`
+         */
+        CreateTime: string;
+    }[];
 }
-

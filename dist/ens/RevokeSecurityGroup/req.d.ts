@@ -1,0 +1,52 @@
+export interface RevokeSecurityGroupRequest {
+    /**
+     * 传输层协议。取值大小写敏感。取值范围：
+     * - tcp：TCP协议。
+     * - udp：UDP协议。
+     * - icmp：ICMP协议。
+     * - gre：GRE协议。
+     * - all：支持所有协议。
+     * @example `all`
+     */
+    "IpProtocol": string;
+    /**
+     * 目的端安全组开放的传输层协议相关的端口范围。取值范围：
+     * - TCP/UDP协议：取值范围为**1**~**65535**。使用斜线（/）隔开起始端口和终止端口。正确示范：**1/200**；错误示范：**200/1**。
+     * - ICMP协议：**-1/-1**。
+     * - GRE协议：**-1/-1**。
+     * - IpProtocol取值为all：**-1/-1**。
+     * @example `22/22`
+     */
+    "PortRange": string;
+    /**
+     * 安全组ID。
+     * @example `sg-bp67acfmxazb4p****	`
+     */
+    "SecurityGroupId": string;
+    /**
+     * 设置访问权限。取值范围：
+     * - accept（默认值）：接受访问。
+     * - drop：拒绝访问，不返回拒绝信息。
+     * @example `accept`
+     */
+    "Policy"?: string;
+    /**
+     * 安全组规则优先级。取值范围：**1**~**100**，默认值为**1**。
+     * @example `1`
+     */
+    "Priority"?: number;
+    /**
+     * 源端IP地址范围。支持CIDR格式和IPv4格式的IP地址范围。默认值：0.0.XX.XX/0。
+     * @example `10.0.XX.XX/8`
+     */
+    "SourceCidrIp": string;
+    /**
+     * 源端安全组开放的传输层协议相关的端口范围。取值范围：
+     * - TCP/UDP协议：取值范围为**1**~**65535**。使用斜线（/）隔开起始端口和终止端口。正确示范：**1/200**；错误示范：**200/1**。
+     * - ICMP协议：**-1/-1**。
+     * - GRE协议：**-1/-1**。
+     * - IpProtocol取值为all：**-1/-1**。
+     * @example `22/22`
+     */
+    "SourcePortRange"?: string;
+}

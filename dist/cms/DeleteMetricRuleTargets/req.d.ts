@@ -1,9 +1,12 @@
-interface DeleteMetricRuleTargetsRequest {
-    "RegionId"?: string;
+export interface DeleteMetricRuleTargetsRequest {
     /**
-    * 关联的报警规则ID。
-    * @example `ruleId-xxxxxx`
-    */ "RuleId": string;
-    "TargetIds"?: string[];
+     * 报警规则ID。
+     * @example `ruleId-xxxxxx`
+     */
+    "RuleId": string;
+    /**
+     * 目标ID。
+     * @example `12345`
+     */
+    "TargetIds": string[];
 }
-export { DeleteMetricRuleTargetsRequest };

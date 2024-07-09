@@ -1,9 +1,10 @@
-interface DescribeAccessPointsRequest {
+export interface DescribeAccessPointsRequest {
     "RegionId": string;
-    "Filter"?: string[];
-    "OwnerId"?: number;
     "Type"?: string;
     "PageNumber"?: number;
     "PageSize"?: number;
+    "Filter"?: {
+        Key: string;
+        Value: string[];
+    }[];
 }
-export { DescribeAccessPointsRequest };

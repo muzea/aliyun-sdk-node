@@ -1,9 +1,7 @@
-interface BatchStartCdnDomainRequest {
-    "RegionId"?: string;
+export interface BatchStartCdnDomainRequest {
     /**
-    * 需要接入CDN的域名，用逗号（,）分隔。
-    * @example `example.com`
-    */ "DomainNames": string;
-    "OwnerId"?: number;
+     * 加速域名，多个用半角逗号（,）分隔。
+     * @example `example.com`
+     */
+    "DomainNames": string;
 }
-export { BatchStartCdnDomainRequest };

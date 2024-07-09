@@ -1,3 +1,0 @@
-interface CreateAclRuleResponse {
-}
-export { CreateAclRuleResponse };

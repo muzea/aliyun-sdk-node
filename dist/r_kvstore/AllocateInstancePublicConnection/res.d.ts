@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.AllocateInstancePublicConnectionResponse
 export interface AllocateInstancePublicConnectionResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `20C8341E-B5AD-4B24-BD82-D73241522ABF`
+     */
+    RequestId: string;
 }
-

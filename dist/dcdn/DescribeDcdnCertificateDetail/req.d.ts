@@ -1,9 +1,7 @@
-interface DescribeDcdnCertificateDetailRequest {
-    "RegionId"?: string;
+export interface DescribeDcdnCertificateDetailRequest {
     /**
-    * 证书名称。
-    * @example `yourCertName`
-    */ "CertName": string;
-    "OwnerId"?: number;
+     * 证书名称。
+     * @example `123`
+     */
+    "CertName": string;
 }
-export { DescribeDcdnCertificateDetailRequest };

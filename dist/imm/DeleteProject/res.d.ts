@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/imm.DeleteProjectResponse
 export interface DeleteProjectResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `FEDC9B1F-30F2-4C1F-8ED2-B7860187****`
+     */
+    RequestId: string;
 }
-

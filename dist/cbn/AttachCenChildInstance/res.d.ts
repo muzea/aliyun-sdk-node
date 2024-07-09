@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cbn.AttachCenChildInstanceResponse
 export interface AttachCenChildInstanceResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `A278B8A6-A5B8-4FDE-9F70-95F0F6A1D68A`
+     */
+    RequestId: string;
 }
-

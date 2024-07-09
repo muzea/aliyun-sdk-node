@@ -1,6 +1,4 @@
-interface DeactivateRouterInterfaceRequest {
+export interface DeactivateRouterInterfaceRequest {
     "RegionId": string;
     "RouterInterfaceId": string;
-    "OwnerId"?: number;
 }
-export { DeactivateRouterInterfaceRequest };

@@ -1,3 +1,0 @@
-interface DescribeNgSourceDiagnosisLogResponse {
-}
-export { DescribeNgSourceDiagnosisLogResponse };

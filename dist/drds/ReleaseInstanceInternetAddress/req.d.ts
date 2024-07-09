@@ -1,6 +1,12 @@
-interface ReleaseInstanceInternetAddressRequest {
-    "RegionId"?: string;
+export interface ReleaseInstanceInternetAddressRequest {
+    /**
+     * DRDS实例ID。
+     * @example `drds************`
+     */
     "DrdsInstanceId": string;
-    "DrdsPassword"?: string;
+    /**
+     * 实例所在地域。
+     * @example `cn-beijing`
+     */
+    "RegionId"?: string;
 }
-export { ReleaseInstanceInternetAddressRequest };

@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dds.UpgradeDBInstanceKernelVersionResponse
 export interface UpgradeDBInstanceKernelVersionResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `27B9A130-7C4B-40D9-84E8-2FC081097AAC`
+     */
+    RequestId: string;
 }
-

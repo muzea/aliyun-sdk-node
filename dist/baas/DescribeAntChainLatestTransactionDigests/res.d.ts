@@ -1,16 +1,8 @@
-interface DescribeAntChainLatestTransactionDigestsResponse {
-    "code": string;
-    "data": {
-        "RequestId": string;
-        "Result": {
-            "transactionV10Type": string;
-            "createTime": number;
-            "from": string;
-            "to": string;
-            "hash": string;
-        }[];
-    };
-    "requestId": string;
-    "successResponse": boolean;
+export interface DescribeAntChainLatestTransactionDigestsResponse {
+    /**
+     * 请求ID
+     * @example `3348160E-187B-47BD-B1B9-76AD4AFA4558`
+     */
+    RequestId: string;
+    Result: any[];
 }
-export { DescribeAntChainLatestTransactionDigestsResponse };

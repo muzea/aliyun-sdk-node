@@ -1,9 +1,7 @@
-interface DescribeInstanceSSLRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeInstanceSSLRequest {
     /**
-    * 实例ID。
-    * @example `r-bp1xxxxxxxxxxxxx`
-    */ "InstanceId": string;
+     * 实例ID。
+     * @example `r-bp1zxszhcgatnx****`
+     */
+    "InstanceId": string;
 }
-export { DescribeInstanceSSLRequest };

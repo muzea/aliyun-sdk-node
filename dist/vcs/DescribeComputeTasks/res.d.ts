@@ -1,3 +1,0 @@
-interface DescribeComputeTasksResponse {
-}
-export { DescribeComputeTasksResponse };

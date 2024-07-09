@@ -1,53 +1,54 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/scdn.HttpCodeDataModule
-export interface HttpCodeDataModule {
-	Code: string;
-	Proportion: string;
-	Count: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/scdn.HttpCodeDataPerInterval
-export interface HttpCodeDataPerInterval {
-	HttpCodeDataModule: HttpCodeDataModule[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/scdn.DataModule
-export interface DataModule {
-	HttpAccValue: string;
-	BpsValue: string;
-	HttpQpsValue: string;
-	ByteHitRate: string;
-	HttpsTrafficValue: string;
-	AccValue: string;
-	Value: string;
-	TrafficValue: string;
-	TimeStamp: string;
-	QpsValue: string;
-	ReqHitRate: string;
-	HttpBpsValue: string;
-	HttpsQpsValue: string;
-	HttpsBpsValue: string;
-	HttpTrafficValue: string;
-	HttpsAccValue: string;
-	OriginBpsValue: string;
-	HttpsOriginBpsValue: string;
-	HttpOriginBpsValue: string;
-	HttpCodeDataPerInterval: HttpCodeDataPerInterval;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/scdn.TrafficDataPerInterval
-export interface TrafficDataPerInterval {
-	DataModule: DataModule[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/scdn.DescribeScdnDomainTrafficDataResponse
 export interface DescribeScdnDomainTrafficDataResponse {
-	RequestId: string;
-	DomainName: string;
-	StartTime: string;
-	EndTime: string;
-	DataInterval: string;
-	TrafficDataPerInterval: TrafficDataPerInterval;
+    /**
+     * 结束时间。
+     * @example `2017-12-10T21:00:00Z`
+     */
+    EndTime: string;
+    /**
+     * 开始时间。
+     * @example `2017-12-10T20:00:00Z`
+     */
+    StartTime: string;
+    /**
+     * 请求ID。
+     * @example `B955107D-E658-4E77-B913-E0AC3D31693E`
+     */
+    RequestId: string;
+    /**
+     * 安全加速域名。
+     * @example `example.com`
+     */
+    DomainName: string;
+    /**
+     * 每条记录的时间间隔，以秒为单位。
+     * @example `300`
+     */
+    DataInterval: string;
+    TrafficDataPerInterval: {
+        /**
+         * 每个时间间隔的流量数据。
+         */
+        DataModule: {
+            /**
+             * 总流量。
+             * @example `423304182`
+             */
+            TrafficValue: string;
+            /**
+             * HTTP流量。
+             * @example `0`
+             */
+            HttpTrafficValue: string;
+            /**
+             * 时间片起始时刻。
+             * @example `2017-12-10T20:00:00Z`
+             */
+            TimeStamp: string;
+            /**
+             * HTTPS流量。
+             * @example `423304182`
+             */
+            HttpsTrafficValue: string;
+        }[];
+    };
 }
-

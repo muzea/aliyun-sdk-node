@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/polardb.UntagResourcesResponse
 export interface UntagResourcesResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `2D69A58F-345C-4FDE-88E4-BF5189******`
+     */
+    RequestId: string;
 }
-

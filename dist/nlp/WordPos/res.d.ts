@@ -1,3 +1,0 @@
-interface WordPosResponse {
-}
-export { WordPosResponse };

@@ -1,13 +1,7 @@
-interface DeleteDcdnDomainRequest {
-    "RegionId"?: string;
+export interface DeleteDcdnDomainRequest {
     /**
-    * 要删除的域名。
-    * @example `example.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
-    /**
-    * 资源组ID。
-    * @example `123`
-    */ "ResourceGroupId"?: string;
+     * 待删除的加速域名，仅支持删除单个域名。
+     * @example `example.com`
+     */
+    "DomainName": string;
 }
-export { DeleteDcdnDomainRequest };

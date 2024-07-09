@@ -1,8 +1,7 @@
-interface DescribeMonitorGroupDynamicRulesRequest {
-    "RegionId"?: string;
+export interface DescribeMonitorGroupDynamicRulesRequest {
     /**
-    * 应用分组ID。
-    * @example `123456`
-    */ "GroupId": number;
+     * 应用分组ID。
+     * @example `123456`
+     */
+    "GroupId": number;
 }
-export { DescribeMonitorGroupDynamicRulesRequest };

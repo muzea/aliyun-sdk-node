@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/nas.CreateAccessRuleResponse
 export interface CreateAccessRuleResponse {
-	RequestId: string;
-	AccessRuleId: string;
+    /**
+     * 请求ID。
+     * @example `A323836B-5BC6-45A6-8048-60675C23****`
+     */
+    RequestId: string;
+    /**
+     * 权限组规则ID。
+     * @example `1`
+     */
+    AccessRuleId: string;
 }
-

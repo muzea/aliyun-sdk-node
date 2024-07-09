@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.ResetAccountPasswordResponse
 export interface ResetAccountPasswordResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `D4D4BE8A-DD46-440A-BFCD-EE31DA81C9DD`
+     */
+    RequestId: string;
 }
-

@@ -1,5 +1,2 @@
-interface QueryCustomerAddressListRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface QueryCustomerAddressListRequest {
 }
-export { QueryCustomerAddressListRequest };

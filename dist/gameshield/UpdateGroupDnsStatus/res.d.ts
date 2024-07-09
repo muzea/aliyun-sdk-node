@@ -1,3 +1,0 @@
-interface UpdateGroupDnsStatusResponse {
-}
-export { UpdateGroupDnsStatusResponse };

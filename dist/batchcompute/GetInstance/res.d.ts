@@ -1,3 +1,0 @@
-interface GetInstanceResponse {
-}
-export { GetInstanceResponse };

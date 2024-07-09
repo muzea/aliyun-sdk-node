@@ -1,3 +1,0 @@
-interface DescribeDomainAccessModeResponse {
-}
-export { DescribeDomainAccessModeResponse };

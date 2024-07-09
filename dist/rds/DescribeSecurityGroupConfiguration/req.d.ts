@@ -1,6 +1,7 @@
-interface DescribeSecurityGroupConfigurationRequest {
-    "RegionId"?: string;
+export interface DescribeSecurityGroupConfigurationRequest {
+    /**
+     * 实例ID。可调用DescribeDBInstances获取。
+     * @example `rm-uf6wjk****`
+     */
     "DBInstanceId": string;
-    "OwnerId"?: number;
 }
-export { DescribeSecurityGroupConfigurationRequest };

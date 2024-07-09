@@ -1,3 +1,0 @@
-interface DescribeFlexAccFlowResponse {
-}
-export { DescribeFlexAccFlowResponse };

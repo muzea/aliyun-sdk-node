@@ -1,3 +1,0 @@
-interface ReportWorkerStatusResponse {
-}
-export { ReportWorkerStatusResponse };

@@ -1,3 +1,0 @@
-interface ListLabGatewaysResponse {
-}
-export { ListLabGatewaysResponse };

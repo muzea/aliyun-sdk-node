@@ -1,32 +1,55 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.FunctionArg
-export interface FunctionArg {
-	ArgName: string;
-	ArgValue: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.FunctionArgs
-export interface FunctionArgs {
-	FunctionArg: FunctionArg[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.DomainConfig
-export interface DomainConfig {
-	FunctionName: string;
-	ConfigId: string;
-	Status: string;
-	FunctionArgs: FunctionArgs;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.DomainConfigs
-export interface DomainConfigs {
-	DomainConfig: DomainConfig[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dcdn.DescribeDcdnDomainConfigsResponse
 export interface DescribeDcdnDomainConfigsResponse {
-	RequestId: string;
-	DomainConfigs: DomainConfigs;
+    /**
+     * 请求ID。
+     * @example `F8AA0364-0FDB-4AD5-AC74-D69FAB8924ED`
+     */
+    RequestId: string;
+    DomainConfigs: {
+        /**
+         * 域名配置。
+         */
+        DomainConfig: {
+            /**
+             * 状态。取值：
+             * - **success**：成功。
+             * - **testing**：测试中。
+             * - **failed**：失败。
+             * - **configuring**：配置中。
+             * @example `success`
+             */
+            Status: string;
+            /**
+             * 高级条件配置ID。
+             * @example `1234567`
+             */
+            ParentId: string;
+            /**
+             * 配置ID。
+             * @example `5068995`
+             */
+            ConfigId: string;
+            /**
+             * 功能名称。
+             * @example `set_req_host_header`
+             */
+            FunctionName: string;
+            FunctionArgs: {
+                /**
+                 * 功能配置。
+                 */
+                FunctionArg: {
+                    /**
+                     * 配置名称。
+                     * @example `ttl`
+                     */
+                    ArgName: string;
+                    /**
+                     * 配置值。
+                     * @example `13`
+                     */
+                    ArgValue: string;
+                }[];
+            };
+        }[];
+    };
 }
-

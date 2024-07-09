@@ -1,3 +1,0 @@
-interface InitializeRegionResponse {
-}
-export { InitializeRegionResponse };

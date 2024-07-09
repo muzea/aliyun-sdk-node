@@ -1,3 +1,0 @@
-interface QosGetParamResponse {
-}
-export { QosGetParamResponse };

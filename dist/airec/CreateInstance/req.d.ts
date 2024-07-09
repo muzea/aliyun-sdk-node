@@ -1,4 +1,2 @@
-interface CreateInstanceRequest {
-    "RegionId"?: string;
+export interface CreateInstanceRequest {
 }
-export { CreateInstanceRequest };

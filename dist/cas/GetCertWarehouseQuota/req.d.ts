@@ -1,0 +1,2 @@
+export interface GetCertWarehouseQuotaRequest {
+}

@@ -1,0 +1,1 @@
+export type CreateDomainResponse = any;

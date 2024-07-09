@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vod.SetEditingProjectMaterialsResponse
 export interface SetEditingProjectMaterialsResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `746FFA07-8BBB-46*****B1-3E94E3B2915E`
+     */
+    RequestId: string;
 }
-

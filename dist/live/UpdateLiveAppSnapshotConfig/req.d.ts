@@ -1,44 +1,50 @@
-interface UpdateLiveAppSnapshotConfigRequest {
-    "RegionId"?: string;
+export interface UpdateLiveAppSnapshotConfigRequest {
     /**
-    *
-    * 直播流所属应用名称。
-    * 支持**＊**号，代表该域名下所有的AppName。
-    * @example `test123`
-    */ "AppName": string;
+     * 主播流域名。
+     * @example `example.com`
+     */
+    "DomainName": string;
     /**
-    * 加速域名。
-    * @example `test.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 播流所属应用名称。
+     * @example `liveApp****`
+     */
+    "AppName": string;
     /**
-    * 截图周期，单位：秒。
-    * 取值范围：**5~3600**。
-    * @example `5`
-    */ "TimeInterval"?: number;
+     * 截图周期。取值范围：**5~3600**。单位：秒。
+     * @example `5`
+     */
+    "TimeInterval"?: number;
     /**
-    * OSSEndpoint域名。
-    * @example `oss-cn-shanghai.aliyuncs.com`
-    */ "OssEndpoint"?: string;
+     * OSS存储的Endpoint名称。
+     * @example `cn-oss-****.aliyuncs.com`
+     */
+    "OssEndpoint"?: string;
     /**
-    * OSSBucket名称。
-    * @example `test123`
-    */ "OssBucket"?: string;
+     * OSS存储Bucket名称。
+     * @example `liveBucket****`
+     */
+    "OssBucket"?: string;
     /**
-    * OSS存储文件名，每次截图都覆盖此文件。
-    * - 小于256bytes。
-    * - 目前仅支持生成jpg图片。
-    * - 支持变量匹配，包含 {AppName}、{StreamName}。例如：`{AppName}/{StreamName}.jpg`。
-    * - 传入**-**，表示删除此字段。
-    * @example `{AppName}/{StreamName}.jpg`
-    */ "OverwriteOssObject"?: string;
+     * 覆盖截图存储文件名。每次截图都覆盖此文件。
+     * - 小于256 Byte。
+     * - 目前仅支持生成JPG图片。
+     * - 支持变量匹配，包含 {AppName}、{StreamName}。
+     * - 传入短划线（-），表示删除此字段。
+     * @example `{liveApp****}/{liveStream****}.jpg`
+     */
+    "OverwriteOssObject"?: string;
     /**
-    * OSS存储文件名。每次截图都递增存储，**DescribeLiveStreamSnapshotInfo**接口查询一段时间的文件。
-    * - 小于256bytes。
-    * - 目前仅支持生成jpg图片。
-    * - 支持变量匹配，包含 {AppName}、{StreamName}、{UnixTimestamp}、{Sequence}，其中 {UnixTimestamp}、{Sequence} 必填一个。例如：`snapshot/{AppName}/{StreamName}/{UnixTimestamp}.jpg`。
-    * - 传入**-**，表示删除此字段。
-    * @example `snapshot/{AppName}/{StreamName}/{UnixTimestamp}.jpg`
-    */ "SequenceOssObject"?: string;
+     * 实时截图存储文件名。每次截图都递增存储，调用[DescribeLiveStreamSnapshotInfo](~~44797~~)接口，可以查询某一段时间的文件。
+     * - 小于256 Byte。
+     * - 目前仅支持生成JPG图片。
+     * - 支持变量匹配，包含 {AppName}、{StreamName}、{UnixTimestamp}、{Sequence}，其中 {UnixTimestamp}、{Sequence} 必填一个。
+     * - 传入短划线（-），表示删除此字段。
+     * @example `snapshot/{liveApp****}/{liveStream****}/{UnixTimestamp****}.jpg`
+     */
+    "SequenceOssObject"?: string;
+    /**
+     * 截图回调地址。
+     * @example `https://learn.aliyundoc.com`
+     */
+    "Callback"?: string;
 }
-export { UpdateLiveAppSnapshotConfigRequest };

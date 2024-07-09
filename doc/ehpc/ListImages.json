@@ -1,18 +1,1 @@
-{
-  "name": "ListImages",
-  "protocol": "HTTP|HTTPS",
-  "method": "GET",
-  "path": "/",
-  "timeout": 10000,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "System",
-      "checkBlank": "false",
-      "required": true,
-      "docRequired": false
-    }
-  },
-  "res": {}
-}
+{"methods":["get"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"read","deprecated":false,"systemTags":{"operationType":"get"},"parameters":[{"name":"BaseOsTag","in":"query","schema":{"description":"基础镜像标签，仅管控节点使用。","type":"string","required":false,"example":"CentOS_7.2_64"}},{"name":"InstanceType","in":"query","schema":{"description":"实例规格。\n- 该参数传入值，查询指定实例规格支持安装的镜像信息。\n- 该参数不传值，默认查询所有实例规格支持安装的镜像信息。","type":"string","required":false,"example":"ecs.n1.medium"}}],"responses":{"200":{"headers":{},"schema":{"type":"object","properties":{"RequestId":{"description":"请求ID。","type":"string","example":"04F0F334-1335-436C-A1D7-6C044FE7****"},"OsTags":{"type":"object","properties":{"OsInfo":{"description":"E-HPC支持的镜像列表。","type":"array","items":{"type":"object","properties":{"Version":{"description":"操作系统版本。","type":"string","example":"7.2"},"BaseOsTag":{"description":"基础镜像标签，仅管控节点使用。","type":"string","example":"CentOS_7.2_64"},"Platform":{"description":"操作系统平台。可能值：\n- CentOS\n- windows","type":"string","example":"CentOS"},"OsTag":{"description":"镜像标签。","type":"string","example":"CentOS_7.2_64"},"ImageId":{"description":"镜像ID。","type":"string","example":"m-bp1h8aoe73p71iow****"},"Architecture":{"description":"操作系统架构。可能值：\n- i386\n- x86_64","type":"string","example":"i386"},"OSName":{"description":"镜像名称。","type":"string","example":"CentOS_7.2_64"},"OSNameEn":{"description":"镜像名称（英文）。","type":"string","example":"CentOS_7.2_64"}}}}}}}}}},"errorCodes":{"404":[{"errorCode":"ImageNotFound","errorMessage":"The specified image does not exist."}],"406":[{"errorCode":"EcsError","errorMessage":"An error occurred while calling the ECS API operation."},{"errorCode":"DbError","errorMessage":"A database service error occurred."}],"407":[{"errorCode":"NotAuthorized","errorMessage":"You are not authorized by RAM for this request."}],"500":[{"errorCode":"UnknownError","errorMessage":"An unknown error occurred."}],"503":[{"errorCode":"ServiceUnavailable","errorMessage":"The request has failed due to a temporary failure of the server"}]},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"RequestId\\\": \\\"04F0F334-1335-436C-A1D7-6C044FE7****\\\",\\n  \\\"OsTags\\\": {\\n    \\\"OsInfo\\\": [\\n      {\\n        \\\"Version\\\": \\\"7.2\\\",\\n        \\\"BaseOsTag\\\": \\\"CentOS_7.2_64\\\",\\n        \\\"Platform\\\": \\\"CentOS\\\",\\n        \\\"OsTag\\\": \\\"CentOS_7.2_64\\\",\\n        \\\"ImageId\\\": \\\"m-bp1h8aoe73p71iow****\\\",\\n        \\\"Architecture\\\": \\\"i386\\\",\\n        \\\"OSName\\\": \\\"CentOS_7.2_64\\\",\\n        \\\"OSNameEn\\\": \\\"CentOS_7.2_64\\\"\\n      }\\n    ]\\n  }\\n}\",\"errorExample\":\"\"},{\"type\":\"xml\",\"example\":\"<ListImagesResponse>\\n    <RequestId>04F0F334-1335-436C-A1D7-6C044FE7****</RequestId>\\n    <OsTags>\\n        <Version>7.2</Version>\\n        <BaseOsTag>CentOS_7.2_64</BaseOsTag>\\n        <Platform>CentOS</Platform>\\n        <OsTag>CentOS_7.2_64</OsTag>\\n        <ImageId>m-bp1h8aoe73p71iow****</ImageId>\\n        <Architecture>i386</Architecture>\\n        <OSName>CentOS_7.2_64</OSName>\\n        <OSNameEn>CentOS_7.2_64</OSNameEn>\\n    </OsTags>\\n</ListImagesResponse>\",\"errorExample\":\"\"}]","title":"查询E-HPC支持安装的镜像列表","summary":"调用ListImages查询E-HPC支持的镜像列表。","requestParamsDescription":" ","responseParamsDescription":" ","extraInfo":" "}

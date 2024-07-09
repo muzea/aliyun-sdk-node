@@ -1,3 +1,0 @@
-interface DescribeApiGatewayAppSecurityResponse {
-}
-export { DescribeApiGatewayAppSecurityResponse };

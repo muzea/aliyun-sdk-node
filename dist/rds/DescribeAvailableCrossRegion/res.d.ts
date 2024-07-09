@@ -1,13 +1,13 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.RegionsInDescribeAvailableCrossRegion
-export interface RegionsInDescribeAvailableCrossRegion {
-	Region: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.DescribeAvailableCrossRegionResponse
 export interface DescribeAvailableCrossRegionResponse {
-	RequestId: string;
-	Regions: RegionsInDescribeAvailableCrossRegion;
+    /**
+     * 请求ID。
+     * @example `39265F46-EC77-4036-8AC4-F035F32F6BE2`
+     */
+    RequestId: string;
+    Regions: {
+        /**
+         * 所查询地域当前可以进行跨地域备份的目的地域列表。
+         */
+        Region: string[];
+    };
 }
-

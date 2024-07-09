@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ehpc.AddQueueResponse
 export interface AddQueueResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `7ABFF29F-BD9C-4663-AD5D-E620FA48****`
+     */
+    RequestId: string;
 }
-

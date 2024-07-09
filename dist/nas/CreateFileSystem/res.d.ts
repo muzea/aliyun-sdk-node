@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/nas.CreateFileSystemResponse
 export interface CreateFileSystemResponse {
-	RequestId: string;
-	FileSystemId: string;
+    /**
+     * 请求ID。
+     * @example `98696EF0-1607-4E9D-B01D-F20930B6****`
+     */
+    RequestId: string;
+    /**
+     * 完成创建的文件系统ID。
+     * @example `1ca404****`
+     */
+    FileSystemId: string;
 }
-

@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cloudapi.ModifyLogConfigResponse
 export interface ModifyLogConfigResponse {
-	RequestId: string;
+    /**
+     * 本次请求的ID。
+     * @example `75A4ADCB-AA26-51FB-94D4-AB3240040974`
+     */
+    RequestId: string;
 }
-

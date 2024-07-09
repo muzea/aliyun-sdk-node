@@ -1,31 +1,51 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cloudapi.DomainItem
-export interface DomainItem {
-	DomainRemark: string;
-	DomainName: string;
-	DomainCNAMEStatus: string;
-	CertificateId: string;
-	DomainWebSocketStatus: string;
-	DomainLegalStatus: string;
-	CertificateName: string;
-	DomainBindingStatus: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cloudapi.Domains
-export interface Domains {
-	DomainItem: DomainItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cloudapi.DescribePurchasedApiGroupResponse
 export interface DescribePurchasedApiGroupResponse {
-	RequestId: string;
-	GroupId: string;
-	GroupName: string;
-	Description: string;
-	PurchasedTime: string;
-	RegionId: string;
-	Status: string;
-	Domains: Domains;
+    /**
+     * 分组状态
+     * - **NORMAL**：正常
+     * - **DELETE**：删除
+     * @example `NORMAL`
+     */
+    Status: string;
+    /**
+     * 购买时间
+     * @example `2021-12-19T00:00:00`
+     */
+    PurchasedTime: string;
+    /**
+     * 本次请求的ID。
+     * @example `61A16D46-EC04-5288-8A18-811B0F536CC2`
+     */
+    RequestId: string;
+    /**
+     * api分组id
+     * @example `48977d7b96074966a7c9c2a8872d7e06`
+     */
+    GroupId: string;
+    /**
+     * API分组名称
+     * @example `Weather`
+     */
+    GroupName: string;
+    /**
+     * api分组描述
+     * @example `api group description`
+     */
+    Description: string;
+    /**
+     * api分组所在区域
+     * @example `cn-qingdao`
+     */
+    RegionId: string;
+    Domains: {
+        /**
+         * 域名列表。
+         */
+        DomainItem: {
+            /**
+             * 域名
+             * @example `test_domain.com`
+             */
+            DomainName: string;
+        }[];
+    };
 }
-

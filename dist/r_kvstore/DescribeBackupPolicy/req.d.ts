@@ -1,12 +1,7 @@
-interface DescribeBackupPolicyRequest {
+export interface DescribeBackupPolicyRequest {
     /**
-    * 地域ID。
-    * @example `cn-hangzhou`
-    */ "RegionId"?: string;
-    "OwnerId"?: number;
-    /**
-    * 目标实例的ID。
-    * @example `r-bp1xxxxxxxxxxxxx`
-    */ "InstanceId": string;
+     * 实例ID。
+     * @example `r-bp1zxszhcgatnx****`
+     */
+    "InstanceId": string;
 }
-export { DescribeBackupPolicyRequest };

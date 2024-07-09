@@ -1,9 +1,7 @@
-interface DescribeLivePullStreamConfigRequest {
-    "RegionId"?: string;
+export interface DescribeLivePullStreamConfigRequest {
     /**
-    * 您的拉流域名。
-    * @example `play.yourdomain.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 您的主播流域名。
+     * @example `example.com`
+     */
+    "DomainName": string;
 }
-export { DescribeLivePullStreamConfigRequest };

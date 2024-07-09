@@ -1,3 +1,0 @@
-interface CreateWorkGroupResponse {
-}
-export { CreateWorkGroupResponse };

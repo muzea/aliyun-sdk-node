@@ -1,7 +1,12 @@
-interface DescribeGtmInstanceSystemCnameRequest {
-    "RegionId"?: string;
-    "InstanceId": string;
-    "UserClientIp"?: string;
+export interface DescribeGtmInstanceSystemCnameRequest {
+    /**
+     * 用户语言。
+     * @example `en`
+     */
     "Lang"?: string;
+    /**
+     * 实例ID。
+     * @example `gtm-cn-wwo3a3hbz**`
+     */
+    "InstanceId": string;
 }
-export { DescribeGtmInstanceSystemCnameRequest };

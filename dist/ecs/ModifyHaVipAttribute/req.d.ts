@@ -1,8 +1,6 @@
-interface ModifyHaVipAttributeRequest {
+export interface ModifyHaVipAttributeRequest {
+    "ClientToken"?: string;
     "RegionId": string;
     "HaVipId": string;
-    "OwnerId"?: number;
-    "ClientToken"?: string;
     "Description"?: string;
 }
-export { ModifyHaVipAttributeRequest };

@@ -1,4 +1,4 @@
-interface ModifyPhysicalConnectionAttributeRequest {
+export interface ModifyPhysicalConnectionAttributeRequest {
     "RegionId": string;
     "PhysicalConnectionId": string;
     "LineOperator"?: string;
@@ -9,8 +9,6 @@ interface ModifyPhysicalConnectionAttributeRequest {
     "Description"?: string;
     "Name"?: string;
     "ClientToken"?: string;
-    "OwnerId"?: number;
     "UserCidr"?: string;
     "CircuitCode"?: string;
 }
-export { ModifyPhysicalConnectionAttributeRequest };

@@ -1,150 +1,68 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.Vpc
-export interface Vpc {
-	VpcInstanceId: string;
-	VswitchInstanceId: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.Region
-export interface Region {
-	RegionId: string;
-	AvailabilityZone: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.Tag
-export interface Tag {
-	Key: string;
-	Value: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.Tags
-export interface Tags {
-	Tag: Tag[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.Warn
-export interface Warn {
-	ComparisonOperator: string;
-	Times: string;
-	Statistics: string;
-	Threshold: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.Info
-export interface Info {
-	ComparisonOperator: string;
-	Times: string;
-	Statistics: string;
-	Threshold: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.Critical
-export interface Critical {
-	ComparisonOperator: string;
-	Times: string;
-	Statistics: string;
-	Threshold: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.Escalations
-export interface Escalations {
-	Warn: Warn;
-	Info: Info;
-	Critical: Critical;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.AlertTemplate
-export interface AlertTemplate {
-	RuleName: string;
-	Category: string;
-	Namespace: string;
-	MetricName: string;
-	Selector: string;
-	Escalations: Escalations;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.AlertTemplates
-export interface AlertTemplates {
-	AlertTemplate: AlertTemplate[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.ContactGroup
-export interface ContactGroup {
-	Name: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.ContactGroupsInDescribeMonitorGroups
-export interface ContactGroupsInDescribeMonitorGroups {
-	ContactGroup: ContactGroup[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.Result
-export interface Result {
-	Message: string;
-	RuleName: string;
-	Code: string;
-	Success: boolean;
-	GroupId: number;
-	RuleId: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.Resource
-export interface Resource {
-	TemplateId: string;
-	Name: string;
-	Category: string;
-	Unit: string;
-	NameDesc: string;
-	Desc: string;
-	BindUrl: string;
-	Dimensions: string;
-	GroupName: string;
-	ServiceId: string;
-	RestVersion: string;
-	RegionId: string;
-	InstanceId: string;
-	NetworkType: string;
-	Description: string;
-	Periods: string;
-	Type: string;
-	Product: string;
-	InstanceName: string;
-	Level: string;
-	Dimension: string;
-	Id: number;
-	GmtCreate: number;
-	EventType: string;
-	Namespace: string;
-	GroupId: number;
-	GmtModified: number;
-	MetricName: string;
-	StatusDesc: string;
-	Labels: string;
-	Status: string;
-	Statistics: string;
-	Vpc: Vpc;
-	Region: Region;
-	Tags: Tags;
-	AlertTemplates: AlertTemplates;
-	ContactGroups: ContactGroupsInDescribeMonitorGroups;
-	AlertResults: Result[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.ResourcesInDescribeProjectMeta
-export interface ResourcesInDescribeProjectMeta {
-	Resource: Resource[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.DescribeProjectMetaResponse
 export interface DescribeProjectMetaResponse {
-	RequestId: string;
-	Success: boolean;
-	Code: string;
-	Message: string;
-	Total: string;
-	PageNumber: string;
-	PageSize: string;
-	Resources: ResourcesInDescribeProjectMeta;
+    /**
+     * 请求ID。
+     * @example `4C2061B2-3B1B-43BF-A4A4-C53426F479C0`
+     */
+    RequestId: string;
+    /**
+     * 操作是否成功。true表示成功，false表示失败。
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 状态码。
+     * >200表示成功。
+     * @example `200`
+     */
+    Code: string;
+    /**
+     * 错误信息。
+     * @example `The Request is not authorization.`
+     */
+    Message: string;
+    /**
+     * 分页大小。
+     * @example `5`
+     */
+    PageSize: string;
+    /**
+     * 页码。
+     * @example `1`
+     */
+    PageNumber: string;
+    /**
+     * 总记录条数。
+     * @example `12`
+     */
+    Total: string;
+    Resources: {
+        /**
+         * 云产品信息。
+         */
+        Resource: {
+            /**
+             * 命名空间，用于区分产品。格式：`acs_产品缩写`，详情请参见[云产品监控项](~~163515~~)。
+             * @example `acs_cdn`
+             */
+            Namespace: string;
+            /**
+             * 描述信息。
+             * @example `CDN`
+             */
+            Description: string;
+            /**
+             * 标签。根据标签过滤，标签为每个报警增加特殊标记。
+             * 例如：报警所属产品的规格，是否能设置告警，格式：`[{"name":"标签名","value":"标签值"}、{"name":"标签名","value":"标签值"}]​`。常用的标签如下：
+             * - alertUnit：报警的单位。
+             *   为了避免原始上报数据的单位过小，而导致告警规则输入的值过大而增加的`alertUnit`标签，目前主要应用于云监控控制台。
+             * - minAlertPeriod：最小上报周期。上报监控数据的时间间隔，通常为1分钟。
+             * - metricCategory：产品的规格。例如： kvstore_sharding。
+             *   部分阿里云产品分不同规格，定义在同一个namespace中，用该参数进行区分。
+             * - is_alarm：能否设置告警规则。
+             *   对于阿里云中云监控控制台的特殊标签，不建议您使用。
+             * @example `[{"metricCategory":ecs}]`
+             */
+            Labels: string;
+        }[];
+    };
 }
-

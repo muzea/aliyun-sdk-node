@@ -1,6 +1,7 @@
-interface ModifyTagWithUuidResponse {
-    "code": number;
-    "requestId": string;
-    "success": boolean;
+export interface ModifyTagWithUuidResponse {
+    /**
+     * 本次调用请求的ID，是由阿里云为该请求生成的唯一标识符，可用于排查和定位问题。
+     * @example `70C4B40D-D55E-4B7B-9992-8535E396B2F4`
+     */
+    RequestId: string;
 }
-export { ModifyTagWithUuidResponse };

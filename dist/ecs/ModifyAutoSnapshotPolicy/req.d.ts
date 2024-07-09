@@ -1,6 +1,4 @@
-interface ModifyAutoSnapshotPolicyRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface ModifyAutoSnapshotPolicyRequest {
     "SystemDiskPolicyEnabled"?: boolean;
     "SystemDiskPolicyTimePeriod"?: number;
     "SystemDiskPolicyRetentionDays"?: number;
@@ -10,4 +8,3 @@ interface ModifyAutoSnapshotPolicyRequest {
     "DataDiskPolicyRetentionDays"?: number;
     "DataDiskPolicyRetentionLastWeek"?: boolean;
 }
-export { ModifyAutoSnapshotPolicyRequest };

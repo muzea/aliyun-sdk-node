@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/smartag.GrantInstanceToCbnResponse
 export interface GrantInstanceToCbnResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `22840034-ADE9-41D8-A5DC-A7CF435CEE75`
+     */
+    RequestId: string;
 }
-

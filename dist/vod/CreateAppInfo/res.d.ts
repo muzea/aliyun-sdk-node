@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vod.CreateAppInfoResponse
 export interface CreateAppInfoResponse {
-	RequestId: string;
-	AppId: string;
+    /**
+     * 应用ID。
+     * @example `app-****`
+     */
+    AppId: string;
+    /**
+     * 请求ID。
+     * @example `25818875-5F78-4A13-34D5-D7393642****`
+     */
+    RequestId: string;
 }
-

@@ -1,4 +1,2 @@
-interface ListAliyunRegionRequest {
-    "RegionId"?: string;
+export interface ListAliyunRegionRequest {
 }
-export { ListAliyunRegionRequest };

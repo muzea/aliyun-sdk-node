@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/polardb.TagResourcesResponse
 export interface TagResourcesResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `1CB5286F-AF5A-4E09-BFE9-588D4C******`
+     */
+    RequestId: string;
 }
-

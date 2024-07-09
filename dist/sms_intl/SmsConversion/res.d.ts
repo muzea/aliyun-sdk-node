@@ -1,3 +1,0 @@
-interface SmsConversionResponse {
-}
-export { SmsConversionResponse };

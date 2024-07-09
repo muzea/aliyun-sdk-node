@@ -1,27 +1,59 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ram.Role
-export interface Role {
-	RoleId: string;
-	CreateDate: string;
-	AttachDate: string;
-	Arn: string;
-	UpdateDate: string;
-	Description: string;
-	RoleName: string;
-	AssumeRolePolicyDocument: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ram.RolesInListRoles
-export interface RolesInListRoles {
-	Role: Role[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ram.ListRolesResponse
 export interface ListRolesResponse {
-	RequestId: string;
-	IsTruncated: boolean;
-	Marker: string;
-	Roles: RolesInListRoles;
+    /**
+     * 请求ID。
+     * @example `7B8A4E7D-6CFF-471D-84DF-195A7A241ECB`
+     */
+    RequestId: string;
+    /**
+     * 请求返回结果是否被截断。
+     * @example `true`
+     */
+    IsTruncated: boolean;
+    Roles: {
+        /**
+         * 角色信息。
+         */
+        Role: {
+            /**
+             * 角色描述。
+             * @example `ECS管理角色`
+             */
+            Description: string;
+            /**
+             * 更新时间。
+             * @example `2015-01-23T12:33:18Z`
+             */
+            UpdateDate: string;
+            /**
+             * 角色最大会话时间。
+             * @example `3600`
+             */
+            MaxSessionDuration: number;
+            /**
+             * 角色名称。
+             * @example `ECSAdmin`
+             */
+            RoleName: string;
+            /**
+             * 创建时间。
+             * @example `2015-01-23T12:33:18Z`
+             */
+            CreateDate: string;
+            /**
+             * 角色ID。
+             * @example `901234567890****`
+             */
+            RoleId: string;
+            /**
+             * 角色的资源描述符。
+             * @example `acs:ram::123456789012****:role/ECSAdmin`
+             */
+            Arn: string;
+        }[];
+    };
+    /**
+     * 当`IsTruncated`为`true`时才有此字段。当返回`true`时，需要继续调用此接口，并且使用`Marker`获取截断后的内容。
+     * @example `EXAMPLE`
+     */
+    Marker: string;
 }
-

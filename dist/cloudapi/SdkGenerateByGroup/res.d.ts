@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cloudapi.SdkGenerateByGroupResponse
 export interface SdkGenerateByGroupResponse {
-	RequestId: string;
-	DownloadLink: string;
+    /**
+     * 下载地址
+     * @example `http://oss-bucket/object`
+     */
+    DownloadLink: string;
+    /**
+     * 本次请求的ID。
+     * @example `D0075BDA-8AED-5073-A70A-FE44E86AB20F`
+     */
+    RequestId: string;
 }
-

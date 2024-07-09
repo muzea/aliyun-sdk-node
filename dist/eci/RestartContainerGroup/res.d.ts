@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/eci.RestartContainerGroupResponse
 export interface RestartContainerGroupResponse {
-	RequestId: string;
+    /**
+     * 请求ID，唯一标识。
+     * @example `45D5B0AD-3B00-4A9B-9911-6D5303B06712`
+     */
+    RequestId: string;
 }
-

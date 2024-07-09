@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/pvtz.SetProxyPatternResponse
 export interface SetProxyPatternResponse {
-	RequestId: string;
-	ZoneId: string;
+    /**
+     * Zone的全局ID。
+     * @example `AgIDE0OQ_149`
+     */
+    ZoneId: string;
+    /**
+     * 请求ID。
+     * @example `C6F1D541-E7A6-447A-A2B5-9F7A20B2A8FB`
+     */
+    RequestId: string;
 }
-

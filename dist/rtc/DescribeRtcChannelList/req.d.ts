@@ -1,37 +1,47 @@
-interface DescribeRtcChannelListRequest {
-    "RegionId"?: string;
+export interface DescribeRtcChannelListRequest {
     /**
-    * 查询时间点，时间粒度为天，UTC格式。
-    * @example `2018-01-29T00:00:00Z`
-    */ "TimePoint": string;
+     * 应用ID，可通过控制台创建和查询，仅支持传单个ID。
+     * @example `aoe****`
+     */
+    "AppId"?: string;
     /**
-    * 页号。
-    * @example `1`
-    */ "PageNo": number;
+     * 查询时间点，UTC格式，格式为yyyy-MM-ddTHH:mm:ssZ。
+     * 时间粒度为天。
+     * @example `2018-01-29T00:00:00Z`
+     */
+    "TimePoint": string;
     /**
-    * 显示数量。
-    * @example `20`
-    */ "PageSize": number;
-    "OwnerId"?: number;
+     * 排序顺序，默认按StartTime逆序排序。
+     * @example `desc`
+     */
+    "SortType"?: string;
     /**
-    * 应用ID。
-    * @example `xxx`
-    */ "AppId"?: string;
+     * 服务区域，默认查询所有区域。
+     * - **cn**：中国。
+     * - **us**：美国。
+     * @example `cn`
+     */
+    "ServiceArea"?: string;
     /**
-    * 排序顺序，默认按**starttime**逆序。
-    * @example `desc`
-    */ "SortType"?: string;
+     * 用户ID，仅支持传单个ID。
+     * @example `testUser`
+     */
+    "UserId"?: string;
     /**
-    * 服务区域，不填表示所有区域。
-    * @example `cn`
-    */ "ServiceArea"?: string;
+     * 频道ID，仅支持传单个ID。
+     * @example `testChannel`
+     */
+    "ChannelId"?: string;
     /**
-    * 用户ID。
-    * @example `a123`
-    */ "UserId"?: string;
+     * 第几页，取值：大于**0**。
+     * 默认为1。
+     * @example `1`
+     */
+    "PageNo": number;
     /**
-    * 频道ID。
-    * @example `123`
-    */ "ChannelId"?: string;
+     * 显示数量，取值：大于**0**。
+     * 默认为10。
+     * @example `20`
+     */
+    "PageSize": number;
 }
-export { DescribeRtcChannelListRequest };

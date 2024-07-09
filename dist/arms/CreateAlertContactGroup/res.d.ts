@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/arms.CreateAlertContactGroupResponse
 export interface CreateAlertContactGroupResponse {
-	RequestId: string;
-	ContactGroupId: string;
+    /**
+     * 报警联系人分组ID。
+     * @example `446*`
+     */
+    ContactGroupId: string;
+    /**
+     * 请求ID。
+     * @example `70675725-8F11-4817-8106-CFE0AD71****`
+     */
+    RequestId: string;
 }
-

@@ -1,0 +1,37 @@
+export interface GetEnterpriseDingtalkGroupResponse {
+    /**
+     * 接口请求的唯一ID, 每次调用requestID唯一
+     * @example `123`
+     */
+    RequestId: string;
+    /**
+     * 调用接口返回是否成功, true代表调用正常
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 错误信息, 当success=false的时候, 可以取到message
+     * @example `Invalid data`
+     */
+    Message: string;
+    /**
+     * 企业服务群详情
+     */
+    Data: {
+        /**
+         * 企业服务群的ID
+         * @example `123`
+         */
+        OpenGroupId: string;
+        /**
+         * 企业服务群的群名
+         * @example `A企业服务群`
+         */
+        GroupName: string;
+    };
+    /**
+     * 接口请求结果返回码
+     * @example `200`
+     */
+    Code: string;
+}

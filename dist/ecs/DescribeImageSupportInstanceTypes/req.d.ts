@@ -1,25 +1,36 @@
-interface DescribeImageSupportInstanceTypesRequest {
+export interface DescribeImageSupportInstanceTypesRequest {
     /**
-    * 实例所属的地域 ID。您可以调用 [DescribeRegions](~~25609~~) 查看最新的阿里云地域列表。
-    * @example `cn-hangzhou`
-    */ "RegionId": string;
-    "SourceRegionId"?: string;
+     * 镜像所属的地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。
+     * @example `cn-hangzhou`
+     */
+    "RegionId": string;
     /**
-    * RAM用户的虚拟账号ID。
-    * @example `155780923770`
-    */ "OwnerId"?: number;
+     * 镜像ID。
+     * @example `m-o6w3gy99qf89rkga****`
+     */
+    "ImageId"?: string;
     /**
-    * 镜像 ID。
-    * @example `m-imageid1`
-    */ "ImageId"?: string;
+     * 使用镜像的场景。取值范围：
+     * - CreateEcs（默认）：创建实例。
+     * - ChangeOS：更换系统盘/更换操作系统。
+     * @example `CreateEcs`
+     */
+    "ActionType"?: string;
     /**
-    * 实例规格需要使用到的场景。取值范围：
-    * - CreateEcs（默认）：创建实例
-    * - Upgrade：升级实例规格
-    * - Downgrade：降级实例规格
-    * - RenewDowngrade：续费降配
-    * @example `*`
-    */ "ActionType"?: string;
-    "Filter"?: string[];
+     * 查询资源时的筛选条件列表。
+     */
+    "Filter"?: {
+        /**
+         * 指定过滤条件Key，当前只支持过滤镜像ID。取值范围：
+         * -  imageId：过滤条件为镜像ID。
+         * -  filter：过滤条件为镜像ID。
+         * @example `imageId`
+         */
+        Key: string;
+        /**
+         * 指定过滤条件Value。
+         * @example `m-o6w3gy99qf89rkga****`
+         */
+        Value: string;
+    }[];
 }
-export { DescribeImageSupportInstanceTypesRequest };

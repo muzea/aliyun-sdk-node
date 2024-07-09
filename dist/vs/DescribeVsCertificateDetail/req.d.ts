@@ -1,7 +1,7 @@
-interface DescribeVsCertificateDetailRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
-    "ShowLog"?: string;
+export interface DescribeVsCertificateDetailRequest {
+    /**
+     * 证书名称
+     * @example `cert-539xxxx`
+     */
     "CertName": string;
 }
-export { DescribeVsCertificateDetailRequest };

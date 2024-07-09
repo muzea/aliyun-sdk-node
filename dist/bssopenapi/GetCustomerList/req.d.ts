@@ -1,4 +1,2 @@
-interface GetCustomerListRequest {
-    "RegionId"?: string;
+export interface GetCustomerListRequest {
 }
-export { GetCustomerListRequest };

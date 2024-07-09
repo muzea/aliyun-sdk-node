@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/live.DeleteLiveRecordVodConfigResponse
 export interface DeleteLiveRecordVodConfigResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example ` 40A4F36D-A7CC-473A-88E7-154F92242566`
+     */
+    RequestId: string;
 }
-

@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/smartag.DowngradeSmartAccessGatewayResponse
 export interface DowngradeSmartAccessGatewayResponse {
-	RequestId: string;
-	OrderId: string;
+    /**
+     * 请求ID。
+     * @example `A6B9EB0F-57DB-4843-A372-04678ABF490E`
+     */
+    RequestId: string;
+    /**
+     * 订单ID。
+     * @example `20337777855****`
+     */
+    OrderId: string;
 }
-

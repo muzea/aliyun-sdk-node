@@ -1,3 +1,0 @@
-interface DescribeNewProjectEipMonitorDataResponse {
-}
-export { DescribeNewProjectEipMonitorDataResponse };

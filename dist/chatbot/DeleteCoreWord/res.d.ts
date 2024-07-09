@@ -1,3 +1,0 @@
-interface DeleteCoreWordResponse {
-}
-export { DeleteCoreWordResponse };

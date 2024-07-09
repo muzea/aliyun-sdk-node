@@ -1,3 +1,0 @@
-interface ChangeJobPriorityResponse {
-}
-export { ChangeJobPriorityResponse };

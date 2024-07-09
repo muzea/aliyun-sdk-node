@@ -1,4 +1,2 @@
-interface CheckScdnServiceRequest {
-    "RegionId"?: string;
+export interface CheckScdnServiceRequest {
 }
-export { CheckScdnServiceRequest };

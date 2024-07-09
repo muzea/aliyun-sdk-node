@@ -1,5 +1,2 @@
-interface DescribeUserDcdnIpaStatusRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeUserDcdnIpaStatusRequest {
 }
-export { DescribeUserDcdnIpaStatusRequest };

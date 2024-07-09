@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rtc.StartMPUTaskResponse
 export interface StartMPUTaskResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `760bad53276431c499e30dc36f6b26be`
+     */
+    RequestId: string;
 }
-

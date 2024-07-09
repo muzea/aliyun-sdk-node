@@ -1,4 +1,2 @@
-interface QueryServicePackAndPriceRequest {
-    "RegionId": string;
+export interface QueryServicePackAndPriceRequest {
 }
-export { QueryServicePackAndPriceRequest };

@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/scdn.RefreshScdnObjectCachesResponse
 export interface RefreshScdnObjectCachesResponse {
-	RequestId: string;
-	RefreshTaskId: string;
+    /**
+     * 刷新返回的任务ID，多个任务ID用逗号（半角）分隔
+     * @example `704222904`
+     */
+    RefreshTaskId: string;
+    /**
+     * 请求ID
+     * @example `D61E4801-EAFF-4A63-AAE1-FBF6CE1CFD1C`
+     */
+    RequestId: string;
 }
-

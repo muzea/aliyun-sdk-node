@@ -1,4 +1,2 @@
-interface DescribeEdasContainersRequest {
-    "RegionId"?: string;
+export interface DescribeEdasContainersRequest {
 }
-export { DescribeEdasContainersRequest };

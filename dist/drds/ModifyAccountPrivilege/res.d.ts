@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.ModifyAccountPrivilegeResponse
 export interface ModifyAccountPrivilegeResponse {
-	RequestId: string;
-	Success: boolean;
+    /**
+     * 请求是否成功。
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 请求ID。
+     * @example `73559800-3c8c-11ec-bd40-99cfcff3fe1e`
+     */
+    RequestId: string;
 }
-

@@ -1,27 +1,28 @@
-interface DescribeDomainTopUrlVisitRequest {
-    "RegionId"?: string;
+export interface DescribeDomainTopUrlVisitRequest {
     /**
-    * 只支持单个域名查询。
-    * 如果该参数为空，默认返回所有加速域名合并后数据。
-    * @example `test.test.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 待查询的域名。
+     * @example `example.com`
+     */
+    "DomainName": string;
     /**
-    * 开始获取数据的时间点。
-    * - 格式为：YYYY-MM-DDThh:mm:ssZ。
-    * - 查询某天的数据，建议传YYYY-MM-DDT16:00:00Z。
-    * - 不写默认读取过去24小时数据。
-    * @example `2018-10-03T16:00:00Z`
-    */ "StartTime"?: string;
+     * 开始获取数据的时间点。
+     * 日期格式按照ISO8601表示法，并使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。
+     * 查询某天的数据，建议传参格式为yyyy-MM-ddT16:00:00Z。
+     * @example `2019-10-04T00:00:00Z`
+     */
+    "StartTime"?: string;
     /**
-    * 获取数据结束时间点。
-    * - 结束时间需大于起始时间。
-    * - 日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
-    * @example `2018-10-03T16:00:00Z`
-    */ "EndTime"?: string;
+     * 获取数据结束时间点。
+     * 日期格式按照ISO8601表示法，并使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。
+     * > 结束时间需大于开始时间，并且结束时间和开始时间相差不超过7天。
+     * @example `2019-10-04T16:00:00Z`
+     */
+    "EndTime"?: string;
     /**
-    * 排序方式，支持**traf**和**pv**，默认**pv**。
-    * @example `pv`
-    */ "SortBy"?: string;
+     * 排序方式，默认值为**pv**。取值：
+     * - **traf**：流量。
+     * - **pv**：访问量。
+     * @example `pv`
+     */
+    "SortBy"?: string;
 }
-export { DescribeDomainTopUrlVisitRequest };

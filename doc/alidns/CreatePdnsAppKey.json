@@ -1,0 +1,1 @@
+{"summary":"创建公共DNS AppKey","methods":["get","post"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"readAndWrite","deprecated":false,"parameters":[{"name":"Lang","in":"query","schema":{"type":"string","required":false}}],"responses":{"200":{"schema":{"type":"object","properties":{"RequestId":{"type":"string"}}}}},"responseDemo":""}

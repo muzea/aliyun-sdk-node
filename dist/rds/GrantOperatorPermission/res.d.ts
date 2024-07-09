@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.GrantOperatorPermissionResponse
 export interface GrantOperatorPermissionResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `842B73C8-5776-4BD9-9872-69C8C46DD7D3`
+     */
+    RequestId: string;
 }
-

@@ -1,9 +1,17 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/edas.AuthorizeResourceGroupResponse
 export interface AuthorizeResourceGroupResponse {
-	Code: number;
-	Message: string;
-	RequestId: string;
+    /**
+     * 接口状态或POP错误码
+     * @example `200`
+     */
+    Code: number;
+    /**
+     * 信息
+     * @example `success`
+     */
+    Message: string;
+    /**
+     * 请求ID
+     * @example `57609587-DFA2-**********`
+     */
+    RequestId: string;
 }
-

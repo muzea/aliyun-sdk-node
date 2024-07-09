@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/push.CheckDeviceResponse
 export interface CheckDeviceResponse {
-	RequestId: string;
-	Available: boolean;
+    /**
+     * 是否可用。
+     * @example `true`
+     */
+    Available: boolean;
+    /**
+     * 请求ID。
+     * @example `9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC`
+     */
+    RequestId: string;
 }
-

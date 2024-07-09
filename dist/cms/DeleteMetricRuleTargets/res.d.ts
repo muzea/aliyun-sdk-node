@@ -1,21 +1,36 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.TargetIds
-export interface TargetIds {
-	TargetId: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.FailIds
-export interface FailIds {
-	TargetIds: TargetIds;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cms.DeleteMetricRuleTargetsResponse
 export interface DeleteMetricRuleTargetsResponse {
-	Success: boolean;
-	Code: string;
-	Message: string;
-	RequestId: string;
-	FailIds: FailIds;
+    /**
+     * 状态码。
+     * > 200表示成功。
+     * @example `200`
+     */
+    Code: string;
+    /**
+     * 错误信息。
+     * @example `The Request is not authorization.`
+     */
+    Message: string;
+    /**
+     * 请求ID。
+     * @example `786E92D2-AC66-4250-B76F-F1E2FCDDBA1C`
+     */
+    RequestId: string;
+    /**
+     * 操作是否成功。取值：
+     * - true：成功。
+     * - false：失败。
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 删除失败的目标ID列表。
+     */
+    FailIds: {
+        TargetIds: {
+            /**
+             * 删除失败的目标ID。
+             */
+            TargetId: string[];
+        };
+    };
 }
-

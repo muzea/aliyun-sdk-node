@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ens.RebootInstanceResponse
 export interface RebootInstanceResponse {
-	RequestId: string;
-	Code: number;
+    /**
+     * 返回的业务码，正常成功为0。
+     * @example `0`
+     */
+    Code: number;
+    /**
+     * 请求ID。
+     * @example `473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E`
+     */
+    RequestId: string;
 }
-

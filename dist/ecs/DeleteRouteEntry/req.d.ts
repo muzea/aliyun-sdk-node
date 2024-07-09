@@ -1,9 +1,10 @@
-interface DeleteRouteEntryRequest {
+export interface DeleteRouteEntryRequest {
     "RegionId"?: string;
-    "DestinationCidrBlock": string;
-    "NextHopList"?: string[];
-    "OwnerId"?: number;
     "RouteTableId": string;
+    "DestinationCidrBlock": string;
     "NextHopId"?: string;
+    "NextHopList"?: {
+        NextHopId: string;
+        NextHopType: string;
+    }[];
 }
-export { DeleteRouteEntryRequest };

@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.BindOutputBucketResponse
 export interface BindOutputBucketResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `D0F80646-90D4-402F-9D56-CEFEAA6BCC9B`
+     */
+    RequestId: string;
 }
-

@@ -1,9 +1,17 @@
-const { hostConfig } = require('../dist');
+const { hostConfig } = require("../dist");
 
-const api = hostConfig({ accessKeyId: '', accessKeySecret: '' });
-
-api.ecs.DescribeInstances({
-  RegionId: 'ap-southeast-1',
-}).then(res => {
-  console.log(res.Instances.Instance[0]);
+const api = hostConfig({
+  accessKeyId: "",
+  accessKeySecret: "",
 });
+
+api.ecs
+  .DescribeInstances({
+    RegionId: "cn-qingdao",
+  })
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((res) => {
+    console.error(res);
+  });

@@ -1,3 +1,0 @@
-interface ModifyClusterResponse {
-}
-export { ModifyClusterResponse };

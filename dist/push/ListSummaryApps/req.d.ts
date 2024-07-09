@@ -1,4 +1,2 @@
-interface ListSummaryAppsRequest {
-    "RegionId"?: string;
+export interface ListSummaryAppsRequest {
 }
-export { ListSummaryAppsRequest };

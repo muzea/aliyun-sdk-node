@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.CreateInstanceAccountResponse
 export interface CreateInstanceAccountResponse {
-	RequestId: string;
-	Success: boolean;
+    /**
+     * 请求是否成功。
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 请求ID。
+     * @example `FF13E47D-4E38-4A5A-BA68-4E610EVF56DC`
+     */
+    RequestId: string;
 }
-

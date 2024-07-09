@@ -1,5 +1,7 @@
-interface DescribeBackupTimesRequest {
-    "RegionId"?: string;
+export interface DescribeBackupTimesRequest {
+    /**
+     * 实例ID。
+     * @example `drdshbga71nn****`
+     */
     "DrdsInstanceId": string;
 }
-export { DescribeBackupTimesRequest };

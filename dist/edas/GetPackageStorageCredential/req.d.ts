@@ -1,4 +1,2 @@
-interface GetPackageStorageCredentialRequest {
-    "RegionId"?: string;
+export interface GetPackageStorageCredentialRequest {
 }
-export { GetPackageStorageCredentialRequest };

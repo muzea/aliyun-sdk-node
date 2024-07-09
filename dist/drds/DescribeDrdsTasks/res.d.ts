@@ -1,36 +1,34 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.Task
-export interface Task {
-	TaskType: number;
-	Label: string;
-	Id: number;
-	TargetId: number;
-	ParentJobId: string;
-	TaskStatus: number;
-	ShowProgress: boolean;
-	GmtCreate: number;
-	TaskPhase: string;
-	ErrMsg: string;
-	ExpandType: string;
-	State: string;
-	Content: string;
-	AllowCancel: boolean;
-	TaskName: string;
-	Progress: number;
-	ProgressDescription: string;
-	TaskDetail: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.TasksInDescribeDrdsTasks
-export interface TasksInDescribeDrdsTasks {
-	Task: Task[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.DescribeDrdsTasksResponse
 export interface DescribeDrdsTasksResponse {
-	RequestId: string;
-	Success: boolean;
-	Tasks: TasksInDescribeDrdsTasks;
+    /**
+     * 是否成功。
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 请求ID。
+     * @example `CD412DF7-F21D-44CE-88FF-ED24917174A8`
+     */
+    RequestId: string;
+    Tasks: {
+        /**
+         * 任务列表。
+         */
+        Task: {
+            /**
+             * 任务状态。
+             * @example `FAILED`
+             */
+            State: string;
+            /**
+             * 任务内容。
+             * @example `upgrade_instance`
+             */
+            Content: string;
+            /**
+             * 任务ID。
+             * @example `64148`
+             */
+            Id: number;
+        }[];
+    };
 }
-

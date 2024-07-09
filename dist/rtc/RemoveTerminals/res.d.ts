@@ -1,20 +1,31 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rtc.Terminal
-export interface Terminal {
-	Id: string;
-	Code: number;
-	Message: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rtc.Terminals
-export interface Terminals {
-	Terminal: Terminal[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rtc.RemoveTerminalsResponse
 export interface RemoveTerminalsResponse {
-	RequestId: string;
-	Terminals: Terminals;
+    /**
+     * 请求ID。
+     * @example `16A96B9A-F203-4EC5-8E43-CB92E68F4CD8`
+     */
+    RequestId: string;
+    Terminals: {
+        /**
+         * 用户ID信息列表。
+         */
+        Terminal: {
+            /**
+             * 状态码，成功返回0，失败返回错误码描述。
+             * @example `0`
+             */
+            Code: number;
+            /**
+             * 删除终端操作结果。取值：
+             * - Success：成功。
+             * - Failed：失败。
+             * @example `Success`
+             */
+            Message: string;
+            /**
+             * 用户ID。
+             * @example `1811****`
+             */
+            Id: string;
+        }[];
+    };
 }
-

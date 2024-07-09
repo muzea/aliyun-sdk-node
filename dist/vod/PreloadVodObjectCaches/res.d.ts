@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vod.PreloadVodObjectCachesResponse
 export interface PreloadVodObjectCachesResponse {
-	RequestId: string;
-	PreloadTaskId: string;
+    /**
+     * 预热返回的任务ID。多个任务ID用半角逗号（,）分隔。
+     * @example `9524****`
+     */
+    PreloadTaskId: string;
+    /**
+     * 请求ID。
+     * @example `E5BD4B50-7A02-493A-*****-97B9024B4135`
+     */
+    RequestId: string;
 }
-

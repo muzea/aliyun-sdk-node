@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cloudapi.DeleteApiStageVariableResponse
 export interface DeleteApiStageVariableResponse {
-	RequestId: string;
+    /**
+     * 请求唯一标识
+     * @example `03442A3D-3B7D-434C-8A95-A5FEB969B529`
+     */
+    RequestId: string;
 }
-

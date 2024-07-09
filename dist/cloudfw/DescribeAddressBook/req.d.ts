@@ -1,38 +1,43 @@
-interface DescribeAddressBookRequest {
-    "RegionId"?: string;
+export interface DescribeAddressBookRequest {
     /**
-    * 访问者源IP地址。
-    * @example `1.2.3.4`
-    */ "SourceIp"?: string;
+     * 请求消息的语言类型。取值：
+     * - **zh**（默认）：中文。
+     * - **en**：英文。
+     * @example `zh`
+     */
+    "Lang"?: string;
     /**
-    * 指定请求和接收消息的语言类型。
-    * - **zh**：中文
-    * - **en**：英文
-    * @example `zh`
-    */ "Lang"?: string;
+     * 分页查询时，设置当前页面的页码。
+     * 默认值为1，表示返回第1页数据。
+     * @example `1`
+     */
+    "CurrentPage"?: string;
     /**
-    * 指定返回结果的当前页码。默认值为1。
-    * @example `1`
-    */ "CurrentPage"?: string;
+     * 分页查询时，设置每页包含的地址簿的数量。
+     * 默认值为10，表示每页包含10条结果。最大值为50。
+     * @example `10`
+     */
+    "PageSize"?: string;
     /**
-    * 指定列表每页显示数据条数。可设置值最大为50。
-    * @example `50`
-    */ "PageSize"?: string;
+     * 搜索条件，输入待查询地址簿信息。
+     * @example `192.0.XX.XX`
+     */
+    "Query"?: string;
     /**
-    * 搜索条件，指定待搜索地址簿信息。
-    * @example `1.2.3.0`
-    */ "Query"?: string;
+     * 地址簿的类型。取值：
+     * - **ip**：IP地址簿。
+     * - **domain**：域名地址簿。
+     * - **port**：端口地址簿。
+     * - **tag**：ECS标签地址簿。
+     * - **allCloud**：云服务地址簿。
+     * - **threat**：威胁情报地址簿。
+     * > 不设置该参数表示查询IP地址簿和ECS标签地址簿。
+     * @example `ip`
+     */
+    "GroupType"?: string;
     /**
-    * 待查询地址簿类型, 可选值包括：
-    * - **ip**：IP地址簿
-    * - **domain**：域名地址簿
-    * - **port**：端口地址簿
-    * - **tag**：ECS标签地址簿
-    * @example `ip`
-    */ "GroupType"?: string;
-    /**
-    * 查询包含指定端口的地址簿, 仅当**GroupType**为**port**时有效。
-    * @example `80`
-    */ "ContainPort"?: string;
+     * 查询包含指定端口的地址簿。仅当**GroupType**参数的值为**port**时，该参数才会作为本次查询的条件。
+     * @example `80`
+     */
+    "ContainPort"?: string;
 }
-export { DescribeAddressBookRequest };

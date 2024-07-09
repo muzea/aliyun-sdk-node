@@ -1,4 +1,4 @@
-interface CreateForwardEntryRequest {
+export interface CreateForwardEntryRequest {
     "RegionId": string;
     "ForwardTableId": string;
     "ExternalIp": string;
@@ -6,6 +6,4 @@ interface CreateForwardEntryRequest {
     "InternalIp": string;
     "InternalPort": string;
     "IpProtocol": string;
-    "OwnerId"?: number;
 }
-export { CreateForwardEntryRequest };

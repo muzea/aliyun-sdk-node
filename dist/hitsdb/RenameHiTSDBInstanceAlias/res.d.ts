@@ -1,3 +1,0 @@
-interface RenameHiTSDBInstanceAliasResponse {
-}
-export { RenameHiTSDBInstanceAliasResponse };

@@ -1,3 +1,0 @@
-interface CreateImageResponse {
-}
-export { CreateImageResponse };

@@ -1,3 +1,0 @@
-interface CreateDialogResponse {
-}
-export { CreateDialogResponse };

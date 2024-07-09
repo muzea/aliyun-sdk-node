@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/live.DeleteLiveAppRecordConfigResponse
 export interface DeleteLiveAppRecordConfigResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `6EBD1AC4-C34D-4AE1-963E-B688A228BE31`
+     */
+    RequestId: string;
 }
-

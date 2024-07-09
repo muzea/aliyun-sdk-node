@@ -1,3 +1,0 @@
-interface CreateAppKeyResponse {
-}
-export { CreateAppKeyResponse };

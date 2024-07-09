@@ -1,3 +1,0 @@
-interface UpdateAccountPasswordResponse {
-}
-export { UpdateAccountPasswordResponse };

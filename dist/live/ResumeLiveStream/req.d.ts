@@ -1,21 +1,22 @@
-interface ResumeLiveStreamRequest {
-    "RegionId"?: string;
+export interface ResumeLiveStreamRequest {
     /**
-    * 用于指定主播推流还是客户端拉流，目前支持“publisher”（主播推送）。
-    * @example `publisher`
-    */ "LiveStreamType": string;
+     * 推流域名。
+     * @example `demo.aliyundoc.com`
+     */
+    "DomainName": string;
     /**
-    * 应用名称。
-    * @example `testApp`
-    */ "AppName": string;
+     * 用于指定主播推流或客户端播流。目前支持：**publisher**（主播推流）。
+     * @example `publisher`
+     */
+    "LiveStreamType": string;
     /**
-    * 流名称。
-    * @example `testStream`
-    */ "StreamName": string;
+     * 推流所属应用名称。可以填为*，表示所有AppName（即不限制AppName）。
+     * @example `liveApp****`
+     */
+    "AppName": string;
     /**
-    * 您的加速域名。
-    * @example `www.yourdomain.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 推流名称。
+     * @example `liveStream****`
+     */
+    "StreamName": string;
 }
-export { ResumeLiveStreamRequest };

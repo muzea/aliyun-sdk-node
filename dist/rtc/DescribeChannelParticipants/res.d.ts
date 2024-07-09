@@ -1,16 +1,25 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rtc.UserListInDescribeChannelParticipants
-export interface UserListInDescribeChannelParticipants {
-	User: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rtc.DescribeChannelParticipantsResponse
 export interface DescribeChannelParticipantsResponse {
-	RequestId: string;
-	Timestamp: number;
-	TotalNum: number;
-	TotalPage: number;
-	UserList: UserListInDescribeChannelParticipants;
+    /**
+     * 返回分页数。
+     * @example `1`
+     */
+    TotalPage: number;
+    /**
+     * 请求ID。
+     * @example `6159ba01-6687-4fb2-a831-f0cd8d188648`
+     */
+    RequestId: string;
+    /**
+     * 返回结果时间，使用UNIX时间戳表示，单位：秒。
+     * @example `1557909133`
+     */
+    Timestamp: number;
+    /**
+     * 返回结果数。
+     * @example `3`
+     */
+    TotalNum: number;
+    UserList: {
+        User: string[];
+    };
 }
-

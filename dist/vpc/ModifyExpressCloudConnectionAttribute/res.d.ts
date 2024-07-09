@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.ModifyExpressCloudConnectionAttributeResponse
 export interface ModifyExpressCloudConnectionAttributeResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `E6385514-B0CC-48E3-B9F9-F7BFF64460A2`
+     */
+    RequestId: string;
 }
-

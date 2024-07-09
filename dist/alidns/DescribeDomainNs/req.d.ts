@@ -1,7 +1,12 @@
-interface DescribeDomainNsRequest {
-    "RegionId"?: string;
-    "DomainName": string;
+export interface DescribeDomainNsRequest {
+    /**
+     * 语言。
+     * @example `en`
+     */
     "Lang"?: string;
-    "UserClientIp"?: string;
+    /**
+     * 域名名称。
+     * @example `dns-example.top`
+     */
+    "DomainName": string;
 }
-export { DescribeDomainNsRequest };

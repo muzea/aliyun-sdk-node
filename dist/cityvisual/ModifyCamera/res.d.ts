@@ -1,3 +1,0 @@
-interface ModifyCameraResponse {
-}
-export { ModifyCameraResponse };

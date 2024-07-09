@@ -1,11 +1,12 @@
-interface RebalanceInstancesRequest {
+export interface RebalanceInstancesRequest {
+    /**
+     * 伸缩组的ID。
+     * @example `asg-bp18p2yfxow2dloq****`
+     */
+    "ScalingGroupId": string;
+    /**
+     * 伸缩组所属的地域ID。
+     * @example `cn-hangzhou`
+     */
     "RegionId"?: string;
-    /**
-    * 伸缩组的ID。
-    * @example `AG6CQdPU8OKdwLjgZcJ****`
-    */ "ScalingGroupId": string;
-    /**
-    * @example `123456123456`
-    */ "OwnerId"?: number;
 }
-export { RebalanceInstancesRequest };

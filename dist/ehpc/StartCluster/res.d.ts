@@ -1,7 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ehpc.StartClusterResponse
 export interface StartClusterResponse {
-	RequestId: string;
+    /**
+     * 任务ID。
+     * @example `76E1ADE7-D15A-457F-AAFD-06C5A5F0****`
+     */
+    TaskId: string;
+    /**
+     * 请求ID。
+     * @example `76E1ADE7-D15A-457F-AAFD-06C5A5F0****`
+     */
+    RequestId: string;
 }
-

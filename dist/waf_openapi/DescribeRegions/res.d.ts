@@ -1,3 +1,0 @@
-interface DescribeRegionsResponse {
-}
-export { DescribeRegionsResponse };

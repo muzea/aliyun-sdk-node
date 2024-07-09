@@ -1,10 +1,22 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/edas.DeleteClusterMemberResponse
 export interface DeleteClusterMemberResponse {
-	Code: number;
-	Message: string;
-	Data: boolean;
-	RequestId: string;
+    /**
+     * Code码
+     * @example `200`
+     */
+    Code: number;
+    /**
+     * 信息
+     * @example `success`
+     */
+    Message: string;
+    /**
+     * 是否成功
+     * @example `true`
+     */
+    Data: boolean;
+    /**
+     * 请求唯一ID
+     * @example `b197-40ab-9155-7ca7`
+     */
+    RequestId: string;
 }
-

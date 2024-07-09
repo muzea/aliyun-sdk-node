@@ -1,0 +1,2 @@
+export interface GetDomainQuotaRequest {
+}

@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dm.DeleteIpfilterByEdmIdResponse
 export interface DeleteIpfilterByEdmIdResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `E3DFF97B-00CF-5333-8125-3D6819471984`
+     */
+    RequestId: string;
 }
-

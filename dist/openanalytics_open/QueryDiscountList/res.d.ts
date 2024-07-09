@@ -1,3 +1,0 @@
-interface QueryDiscountListResponse {
-}
-export { QueryDiscountListResponse };

@@ -1,3 +1,1 @@
-interface PutBucketWebsiteResponse {
-}
-export { PutBucketWebsiteResponse };
+export type PutBucketWebsiteResponse = any;

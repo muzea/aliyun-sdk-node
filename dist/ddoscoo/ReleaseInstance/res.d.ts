@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ddoscoo.ReleaseInstanceResponse
 export interface ReleaseInstanceResponse {
-	RequestId: string;
+    /**
+     * 本次调用请求的ID，是由阿里云为该请求生成的唯一标识符，可用于排查和定位问题。
+     * @example `06FFAF5F-CD3E-4886-A849-AAB40DFF6515`
+     */
+    RequestId: string;
 }
-

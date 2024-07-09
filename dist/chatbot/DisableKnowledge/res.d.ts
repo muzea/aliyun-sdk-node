@@ -1,3 +1,0 @@
-interface DisableKnowledgeResponse {
-}
-export { DisableKnowledgeResponse };

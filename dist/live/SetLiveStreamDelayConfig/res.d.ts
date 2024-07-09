@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/live.SetLiveStreamDelayConfigResponse
 export interface SetLiveStreamDelayConfigResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `4C747C97-7ECD-4C61-8A92-67AD806331FF`
+     */
+    RequestId: string;
 }
-

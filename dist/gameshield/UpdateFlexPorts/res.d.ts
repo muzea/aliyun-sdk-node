@@ -1,3 +1,0 @@
-interface UpdateFlexPortsResponse {
-}
-export { UpdateFlexPortsResponse };

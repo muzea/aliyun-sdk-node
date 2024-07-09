@@ -1,21 +1,41 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.EcsSecurityGroupRelation
-export interface EcsSecurityGroupRelation {
-	RegionId: string;
-	SecurityGroupId: string;
-	NetworkType: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.ItemsInDescribeSecurityGroupConfiguration
-export interface ItemsInDescribeSecurityGroupConfiguration {
-	EcsSecurityGroupRelation: EcsSecurityGroupRelation[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.DescribeSecurityGroupConfigurationResponse
 export interface DescribeSecurityGroupConfigurationResponse {
-	RequestId: string;
-	DBInstanceName: string;
-	Items: ItemsInDescribeSecurityGroupConfiguration;
+    /**
+     * 实例ID。
+     * @example `rm-uf6wjk****`
+     */
+    DBInstanceName: string;
+    /**
+     * 请求ID。
+     * @example `87BDAE8C-ACB0-4A26-BBCC-7D1DD31D630D`
+     */
+    RequestId: string;
+    Items: {
+        /**
+         * 关联的安全组信息列表。
+         */
+        EcsSecurityGroupRelation: {
+            /**
+             * ECS安全组的网络类型。返回值：
+             * * **Classic**：经典网络。
+             * * **VPC**：专有网络。
+             * @example `VPC`
+             */
+            NetworkType: string;
+            /**
+             * ECS安全组ID。
+             * @example `sg-****`
+             */
+            SecurityGroupId: string;
+            /**
+             * 地域ID。
+             * @example `cn-hangzhou`
+             */
+            RegionId: string;
+            /**
+             * 安全组名称。
+             * @example `security-group-emraccess`
+             */
+            SecurityGroupName: string;
+        }[];
+    };
 }
-

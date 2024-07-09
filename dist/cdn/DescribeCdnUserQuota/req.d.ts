@@ -1,5 +1,2 @@
-interface DescribeCdnUserQuotaRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeCdnUserQuotaRequest {
 }
-export { DescribeCdnUserQuotaRequest };

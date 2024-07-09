@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cdn.DeleteUserUsageDataExportTaskResponse
 export interface DeleteUserUsageDataExportTaskResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `0AEDAF20-4DDF-4165-8750-47FF9C1929C9`
+     */
+    RequestId: string;
 }
-

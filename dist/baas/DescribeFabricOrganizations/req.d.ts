@@ -1,11 +1,22 @@
-interface DescribeFabricOrganizationsRequest {
+export interface DescribeFabricOrganizationsRequest {
     /**
-    * 地域
-    * @example `cn-hangzhou`
-    */ "RegionId"?: string;
+     * 位置
+     * @example `cn-hangzhou`
+     */
+    "Location"?: string;
     /**
-    * 位置
-    * @example `cn-hangzhou`
-    */ "Location"?: string;
+     * 标签列表
+     */
+    "Tag"?: {
+        /**
+         * 标签键
+         * @example `key1`
+         */
+        Key: string;
+        /**
+         * 标签值
+         * @example `value1`
+         */
+        Value: string;
+    }[];
 }
-export { DescribeFabricOrganizationsRequest };

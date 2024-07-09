@@ -1,14 +1,18 @@
-interface RemoveTerminalsRequest {
-    "RegionId"?: string;
+export interface RemoveTerminalsRequest {
     /**
-    * 应用ID，通过控制台开通创建。
-    * @example `yourAppId`
-    */ "AppId": string;
-    /**
-    * 频道ID，加入的频道。
-    * @example `yourChannelId`
-    */ "ChannelId": string;
+     * 用户ID列表。
+     * @example `1811xxxx`
+     */
     "TerminalIds": string[];
-    "OwnerId"?: number;
+    /**
+     * 应用ID，仅支持传单个ID。
+     * 可通过控制台创建和查询。
+     * @example `yourAppId`
+     */
+    "AppId": string;
+    /**
+     * 已加入的频道ID，仅支持传单个ID。
+     * @example `yourChannelId`
+     */
+    "ChannelId": string;
 }
-export { RemoveTerminalsRequest };

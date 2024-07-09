@@ -1,12 +1,12 @@
-interface DescribeMetricRuleCountRequest {
-    "RegionId"?: string;
+export interface DescribeMetricRuleCountRequest {
     /**
-    * 产品的数据命名空间，可查询DescribeMetricMetaList接口或参考[预设监控项参考](~~28619~~)。
-    * @example `acs_ecs_dashboard`
-    */ "Namespace"?: string;
+     * 云服务的命名空间。详情请参见[云产品监控项](~~163515~~)。
+     * @example `acs_ecs_dashboard`
+     */
+    "Namespace"?: string;
     /**
-    * 监控项名称。可查询DescribeMetricMetaList接口或参考[预设监控项参考](~~28619~~)。
-    * @example `cpu_total`
-    */ "MetricName"?: string;
+     * 监控项名称。详情请参见[云产品监控项](~~163515~~)。
+     * @example `cpu_total`
+     */
+    "MetricName"?: string;
 }
-export { DescribeMetricRuleCountRequest };

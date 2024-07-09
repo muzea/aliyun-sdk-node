@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.CreateIPv6TranslatorEntryResponse
 export interface CreateIPv6TranslatorEntryResponse {
-	RequestId: string;
-	Ipv6TranslatorEntryId: string;
+    /**
+     * IPv6转换服务的实例ID。
+     * @example `ipv6transentry-xxxxxxxx`
+     */
+    Ipv6TranslatorEntryId: string;
+    /**
+     * 请求ID。
+     * @example `DCE5D25-FFC9-492A-8371-12A4E0EE2E05`
+     */
+    RequestId: string;
 }
-

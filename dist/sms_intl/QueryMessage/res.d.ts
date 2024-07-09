@@ -1,3 +1,0 @@
-interface QueryMessageResponse {
-}
-export { QueryMessageResponse };

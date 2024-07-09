@@ -1,4 +1,2 @@
-interface GetCallerIdentityRequest {
-    "RegionId"?: string;
+export interface GetCallerIdentityRequest {
 }
-export { GetCallerIdentityRequest };

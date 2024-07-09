@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vod.DeleteVodTemplateResponse
 export interface DeleteVodTemplateResponse {
-	RequestId: string;
-	VodTemplateId: string;
+    /**
+     * 截图模板ID。
+     * @example `f5b228fe6930e*****d6bf55bd87789`
+     */
+    VodTemplateId: string;
+    /**
+     * 请求ID。
+     * @example `25818875-5F78-4A*****F6-D7393642CA58`
+     */
+    RequestId: string;
 }
-

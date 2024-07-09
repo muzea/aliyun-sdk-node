@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/domain.VerifyContactFieldResponse
 export interface VerifyContactFieldResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `ABAC3BAC-FCFA-4DAE-B47C-FA4105CB07C6`
+     */
+    RequestId: string;
 }
-

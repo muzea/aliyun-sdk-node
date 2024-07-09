@@ -1,16 +1,14 @@
-interface CreateVirtualBorderRouterRequest {
+export interface CreateVirtualBorderRouterRequest {
     "RegionId": string;
     "PhysicalConnectionId": string;
-    "VlanId": number;
-    "ClientToken"?: string;
     "VbrOwnerId"?: number;
+    "VlanId": number;
     "CircuitCode"?: string;
     "LocalGatewayIp"?: string;
     "PeerGatewayIp"?: string;
     "PeeringSubnetMask"?: string;
     "Description"?: string;
     "Name"?: string;
-    "OwnerId"?: number;
+    "ClientToken": string;
     "UserCidr"?: string;
 }
-export { CreateVirtualBorderRouterRequest };

@@ -1,3 +1,1 @@
-interface PutBucketRefererResponse {
-}
-export { PutBucketRefererResponse };
+export type PutBucketRefererResponse = any;

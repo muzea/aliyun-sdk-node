@@ -1,5 +1,2 @@
-interface DescribeLimitationRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeLimitationRequest {
 }
-export { DescribeLimitationRequest };

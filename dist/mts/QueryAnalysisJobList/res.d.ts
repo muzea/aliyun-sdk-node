@@ -1,198 +1,424 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.NonExistAnalysisJobIds
-export interface NonExistAnalysisJobIds {
-	String: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.QualityControl
-export interface QualityControl {
-	MethodStreaming: string;
-	RateQuality: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Crop
-export interface Crop {
-	Height: string;
-	Width: string;
-	Top: string;
-	Left: string;
-	Mode: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.PropertiesControl
-export interface PropertiesControl {
-	Deinterlace: string;
-	Crop: Crop;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AnalysisConfig
-export interface AnalysisConfig {
-	QualityControl: QualityControl;
-	PropertiesControl: PropertiesControl;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.InputFile
-export interface InputFile {
-	Bucket: string;
-	Object: string;
-	Location: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.MNSMessageResult
-export interface MNSMessageResult {
-	MessageId: string;
-	ErrorMessage: string;
-	ErrorCode: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Gif
-export interface Gif {
-	FinalDelay: string;
-	Loop: string;
-	IsCustomPalette: string;
-	DitherMode: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Webp
-export interface Webp {
-	Loop: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Segment
-export interface Segment {
-	Duration: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.MuxConfig
-export interface MuxConfig {
-	Gif: Gif;
-	Webp: Webp;
-	Segment: Segment;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Volume
-export interface Volume {
-	Level: string;
-	Method: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Audio
-export interface Audio {
-	Qscale: string;
-	Samplerate: string;
-	Profile: string;
-	Bitrate: string;
-	Remove: string;
-	Codec: string;
-	Channels: string;
-	Volume: Volume;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TransConfig
-export interface TransConfig {
-	IsCheckResoFail: string;
-	AdjDarMethod: string;
-	IsCheckAudioBitrate: string;
-	Duration: string;
-	IsCheckReso: string;
-	IsCheckAudioBitrateFail: string;
-	IsCheckVideoBitrate: string;
-	TransMode: string;
-	IsCheckVideoBitrateFail: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.BitrateBnd
-export interface BitrateBnd {
-	Min: string;
-	Max: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Video
-export interface Video {
-	Height: string;
-	Preset: string;
-	MaxFps: string;
-	Gop: string;
-	Qscale: string;
-	LongShortMode: string;
-	Profile: string;
-	Fps: string;
-	Bitrate: string;
-	Bufsize: string;
-	PixFmt: string;
-	Remove: string;
-	Crop: string;
-	Crf: string;
-	ScanMode: string;
-	Width: string;
-	ResoPriority: string;
-	Codec: string;
-	Maxrate: string;
-	Degrain: string;
-	Pad: string;
-	BitrateBnd: BitrateBnd;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Container
-export interface Container {
-	Format: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.Template
-export interface Template {
-	TemplateId: string;
-	Name: string;
-	Terrorism: string;
-	Logo: string;
-	Contraband: string;
-	Qrcode: string;
-	Abuse: string;
-	Id: string;
-	Live: string;
-	Spam: string;
-	Ad: string;
-	State: string;
-	Porn: string;
-	Politics: string;
-	MuxConfig: MuxConfig;
-	Audio: Audio;
-	TransConfig: TransConfig;
-	Video: Video;
-	Container: Container;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.TemplateListInQueryAnalysisJobList
-export interface TemplateListInQueryAnalysisJobList {
-	Template: Template[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AnalysisJob
-export interface AnalysisJob {
-	Message: string;
-	Code: string;
-	CreationTime: string;
-	UserData: string;
-	Priority: string;
-	State: string;
-	PipelineId: string;
-	Percent: number;
-	Id: string;
-	AnalysisConfig: AnalysisConfig;
-	InputFile: InputFile;
-	MNSMessageResult: MNSMessageResult;
-	TemplateList: TemplateListInQueryAnalysisJobList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.AnalysisJobList
-export interface AnalysisJobList {
-	AnalysisJob: AnalysisJob[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.QueryAnalysisJobListResponse
 export interface QueryAnalysisJobListResponse {
-	RequestId: string;
-	NonExistAnalysisJobIds: NonExistAnalysisJobIds;
-	AnalysisJobList: AnalysisJobList;
+    /**
+     * 请求ID。
+     * @example `5CA6E020-4102-4FFF-AA56-5ED7ECD811A1`
+     */
+    RequestId: string;
+    AnalysisJobList: {
+        /**
+         * 模板分析作业列表。
+         */
+        AnalysisJob: {
+            /**
+             * 作业添加时间。
+             * @example `2014-01-10T12:00:00Z`
+             */
+            CreationTime: string;
+            /**
+             * 转码进度。
+             * @example `86`
+             */
+            Percent: number;
+            /**
+             * 作业状态。
+             * - **Submitted**：已提交。
+             * - **Analyzing**：分析中。
+             * - **Success**：成功。
+             * - **Fail**：失败。
+             * @example `Success`
+             */
+            State: string;
+            /**
+             * 作业配置。
+             */
+            AnalysisConfig: {
+                /**
+                 * 输出质量控制。
+                 */
+                QualityControl: {
+                    /**
+                     * 播放方式。
+                     * - **network**：在线。
+                     * - **local**：本地。
+                     * - 默认值：**network**。
+                     * @example `network`
+                     */
+                    MethodStreaming: string;
+                    /**
+                     * 输出质量等级。默认值：**25**。
+                     * @example `25`
+                     */
+                    RateQuality: string;
+                };
+                /**
+                 * 属性控制。
+                 */
+                PropertiesControl: {
+                    /**
+                     * 强制扫描模式判定。
+                     * - **Auto**：自动。
+                     * - **Force**：强制做deinterlace。
+                     * - **None**：强制不做deinterlace。
+                     * @example `Auto`
+                     */
+                    Deinterlace: string;
+                    /**
+                     * 视频裁切配置。
+                     */
+                    Crop: {
+                        /**
+                         * 裁切上边距。
+                         * > 如果Mode为Auto或None，则此值失效。
+                         * @example `8`
+                         */
+                        Top: string;
+                        /**
+                         * 裁切后宽。
+                         * > 如果Mode为Auto或None，则此值失效。
+                         * @example `8`
+                         */
+                        Width: string;
+                        /**
+                         * 裁切后高。
+                         * > 如果Mode为Auto或None，则此值失效。
+                         * @example `8`
+                         */
+                        Height: string;
+                        /**
+                         * 裁切左边距。
+                         * > 如果Mode为Auto或None，则此值失效。
+                         * @example `8`
+                         */
+                        Left: string;
+                        /**
+                         * 裁切方式。取值：
+                         * - **Auto**：自动。
+                         * - **Force**：强制。
+                         * - **None**：强制不做。
+                         * - 如Crop不是空JSON{}，则此值必填。
+                         * @example `Auto`
+                         */
+                        Mode: string;
+                    };
+                };
+            };
+            /**
+             * 分析失败时错误信息。
+             * @example `The resource operated \"PipelineId\" cannot be found`
+             */
+            Message: string;
+            /**
+             * 任务在其对应管道内的优先级。
+             * - 取值范围：**\[1,10\]**。10为最高优先级。
+             * - 默认值：**10**。
+             * @example `8`
+             */
+            Priority: string;
+            /**
+             * MNS通知用户作业完成的结果。
+             */
+            MNSMessageResult: {
+                /**
+                 * 成功时消息ID。分析失败时不返回此参数。
+                 * @example `3ca84a39a9024f19853b21be9cf9****`
+                 */
+                MessageId: string;
+                /**
+                 * 失败时错误信息。分析成功时不返回此参数。
+                 * @example `The resource operated \"PipelineId\" cannot be found`
+                 */
+                ErrorMessage: string;
+                /**
+                 * 失败时错误码。分析成功时不返回此参数。
+                 * @example `InvalidParameter.ResourceNotFound`
+                 */
+                ErrorCode: string;
+            };
+            TemplateList: {
+                /**
+                 * 作业输出的预置模板列表。
+                 */
+                Template: {
+                    /**
+                     * 视频编解码配置。
+                     */
+                    Video: {
+                        /**
+                         * 缓冲区大小。
+                         * - 单位：Kb。
+                         * - 默认值：**6000**。
+                         * @example `6000`
+                         */
+                        Bufsize: string;
+                        /**
+                         * 独立去噪算法强度。
+                         * @example `5`
+                         */
+                        Degrain: string;
+                        /**
+                         * 视频平均码率范围。
+                         */
+                        BitrateBnd: {
+                            /**
+                             * 总码率上限。单位：Kbps。
+                             * @example `1500`
+                             */
+                            Max: string;
+                            /**
+                             * 总码率下限。单位：Kbps。
+                             * @example `800`
+                             */
+                            Min: string;
+                        };
+                        /**
+                         * 视频颜色格式。包含yuv420p，yuvj420p等标准颜色格式。
+                         * @example `yuv420p`
+                         */
+                        PixFmt: string;
+                        /**
+                         * 编解码格式。支持H.264、H.265。 默认值：**H.264**。
+                         * @example `H.264`
+                         */
+                        Codec: string;
+                        /**
+                         * 视频高。
+                         * - 单位：px。
+                         * - 默认值：**视频原始高度**。
+                         * @example `720`
+                         */
+                        Height: string;
+                        /**
+                         * 视频质量控制度。
+                         * @example `15`
+                         */
+                        Qscale: string;
+                        /**
+                         * 视频平均码率。单位：Kbps。
+                         * @example `1000`
+                         */
+                        Bitrate: string;
+                        /**
+                         * 视频码率峰值。
+                         * - 取值范围：**\[10,50000\]**。
+                         * - 单位：Kbps。
+                         * @example `2000`
+                         */
+                        Maxrate: string;
+                        /**
+                         * 编码级别。
+                         * - **baseline**：针对移动设备。
+                         * - **main**：针对标准分辨率设备。
+                         * - **high**：针对高分辨率设备。
+                         * - 默认值：**high**。
+                         * @example `high`
+                         */
+                        Profile: string;
+                        /**
+                         * 码率-质量控制因子。
+                         * - 默认值：编码格式为H264，默认值为**23**。编码格式为H265，默认值为**26**。
+                         * - 如果设置了Crf，则Bitrate的设置失效。
+                         * @example `26`
+                         */
+                        Crf: string;
+                        /**
+                         * 关键帧间最大帧数。默认值：**250**。
+                         * @example `250`
+                         */
+                        Gop: string;
+                        /**
+                         * 视频宽。
+                         * - 单位：px。
+                         * - 默认值：**视频原始宽度**。
+                         * @example `1280`
+                         */
+                        Width: string;
+                        /**
+                         * 帧率。
+                         * - 当输入文件帧率超过60时取60。
+                         * - 默认值：取**输入文件帧率**。
+                         * @example `25`
+                         */
+                        Fps: string;
+                        /**
+                         * 视频算法器预置。支持veryfast（超快）、fast（快）、medium（中等）、slow（慢）、slower（超慢）。 默认值：**medium**。
+                         * @example `medium`
+                         */
+                        Preset: string;
+                        /**
+                         * 扫描模式。取值：
+                         * - **interlaced**：交叉扫描。
+                         * - **progressive**：顺序扫描。
+                         * @example `interlaced`
+                         */
+                        ScanMode: string;
+                    };
+                    /**
+                     * 转码通用配置。
+                     */
+                    TransConfig: {
+                        /**
+                         * 转码模式。默认值：**onepass**。可选范围：
+                         * - **onepass**
+                         * - **twopass**
+                         * - **CBR**
+                         * @example `onepass`
+                         */
+                        TransMode: string;
+                    };
+                    /**
+                     * 模板的状态。
+                     * - **Normal**：正常。
+                     * - **Deleted**：已删除。
+                     * @example `Normal`
+                     */
+                    State: string;
+                    /**
+                     * 转码封包配置。
+                     */
+                    MuxConfig: {
+                        /**
+                         * gif格式。
+                         */
+                        Gif: {
+                            /**
+                             * gif的loop间隔，单位为百分之一秒，比如500代表间隔为5秒。
+                             * @example `0`
+                             */
+                            FinalDelay: string;
+                            /**
+                             * gif与webp循环次数，默认不循环。
+                             * @example `0`
+                             */
+                            Loop: string;
+                        };
+                        /**
+                         * 切片配置。
+                         */
+                        Segment: {
+                            /**
+                             * 分片时长。单位：秒。
+                             * @example `10`
+                             */
+                            Duration: string;
+                        };
+                    };
+                    /**
+                     * 模板名称。
+                     * @example `FLV-UD`
+                     */
+                    Name: string;
+                    /**
+                     * 音频编解码配置。
+                     */
+                    Audio: {
+                        /**
+                         * 音频编码预置。当**Codec**为**aac**时可取值：
+                         * - **aac_low**
+                         * - **aac_he**
+                         * - **aac_he_v2**
+                         * - **aac_ld**
+                         * - **aac_eld**
+                         * @example `aac_low`
+                         */
+                        Profile: string;
+                        /**
+                         * 音频编解码格式。默认值：**aac**。可取值：
+                         * - **aac**
+                         * - **mp3**
+                         * - **vorbis**
+                         * - **flac**
+                         * @example `aac`
+                         */
+                        Codec: string;
+                        /**
+                         * 采样率。
+                         * - 单位：Hz。
+                         * - 默认值：**44100**。
+                         * @example `44100`
+                         */
+                        Samplerate: string;
+                        /**
+                         * 音频质量控制度。
+                         * @example `15`
+                         */
+                        Qscale: string;
+                        /**
+                         * 声道数。默认值：**2**。
+                         * @example `2`
+                         */
+                        Channels: string;
+                        /**
+                         * 输出文件的音频码率。
+                         * - 取值范围：**8~1000**。
+                         * - 单位：Kbps。
+                         * - 默认值：**128**。
+                         * @example `128`
+                         */
+                        Bitrate: string;
+                    };
+                    /**
+                     * 转码模板ID。
+                     * @example `S00000000-00****`
+                     */
+                    Id: string;
+                    /**
+                     * 容器。
+                     */
+                    Container: {
+                        /**
+                         * 容器格式。
+                         * @example `flv`
+                         */
+                        Format: string;
+                    };
+                }[];
+            };
+            /**
+             * 用户自定义数据。
+             * @example `testid-001`
+             */
+            UserData: string;
+            /**
+             * 分析失败时错误码。
+             * @example `InvalidParameter.ResourceNotFound`
+             */
+            Code: string;
+            /**
+             * 作业输入。
+             */
+            InputFile: {
+                /**
+                 * OSS的Object。
+                 * @example `example.flv`
+                 */
+                Object: string;
+                /**
+                 * OSS的服务区域。
+                 * @example `oss-cn-hangzhou`
+                 */
+                Location: string;
+                /**
+                 * 输入文件的OSS Bucket。
+                 * @example `example-bucket`
+                 */
+                Bucket: string;
+            };
+            /**
+             * 管道ID。
+             * @example `bb558c1cc25b45309aab5be44d19****`
+             */
+            PipelineId: string;
+            /**
+             * 模板分析作业ID。
+             * @example `57f6aa3f84824309bcba67231b406****`
+             */
+            Id: string;
+        }[];
+    };
+    NonExistAnalysisJobIds: {
+        /**
+         * 不存在的模板分析作业。
+         */
+        String: string[];
+    };
 }
-

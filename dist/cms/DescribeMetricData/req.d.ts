@@ -1,36 +1,73 @@
-interface DescribeMetricDataRequest {
-    "RegionId"?: string;
+export interface DescribeMetricDataRequest {
     /**
-    * 监控项名称。
-    * @example `cpu_idle`
-    */ "MetricName": string;
+     * 云产品的数据命名空间。
+     * 关于云产品的数据命名空间，请参见[云产品监控项](~~163515~~)。
+     * @example `acs_ecs_dashboard`
+     */
+    "Namespace": string;
     /**
-    * 时间间隔，统一用秒数来计算，例如 60, 300, 900。 如果不填写，则按照监控项默认的最小周期来查询数据。如果填写统计周期，则查询对应的统计数据 。
-    * @example `60`
-    */ "Period"?: string;
+     * 云产品的监控项名称。
+     * 关于云产品的监控项名称，请参见[云产品监控项](~~163515~~)。
+     * @example `cpu_idle`
+     */
+    "MetricName": string;
     /**
-    * 开始时间，可以传入距离1970年1月1日0点的毫秒数，也可以传入format时间格式数据，如2015-10-20 00:00:00。
-    * @example `2019-01-30 00:00:00`
-    */ "StartTime"?: string;
+     * 监控项的统计周期。
+     * 取值：15、60、900和3600。
+     * 单位：秒。
+     * > - 如果不设置统计周期，则按照注册监控项时申请的上报周期来查询监控数据。
+     * - 监控项（`MetricName`）的统计周期，请参见[云产品监控项](~~163515~~)。
+     * @example `60`
+     */
+    "Period"?: string;
     /**
-    * 结束时间，可以传入距离1970年1月1日 0点的毫秒数，也可以传入format时间格式数据，如2015-10-20 00:00:00。
-    * @example `2019-01-30 00:10:00`
-    */ "EndTime"?: string;
+     * 查询监控数据的开始时间。
+     * - 当您未设置`StartTime`和`EndTime`时，查询当前时间最近一个统计周期`Period`的监控数据。
+     * - 当您同时设置`StartTime`和`EndTime`时，查询指定时间段内距离`EndTime`最近一个统计周期`Period`的监控数据。具体如下：
+     *    - 当`Period`设置为15秒时，指定时间段必须小于或等于20分钟。例如：StartTime为2021-05-08 08:10:00，EndTime为2021-05-08 08:30:00，统计距离2021-05-08 08:30:00最近一个15秒的监控数据。
+     *    - 当`Period`设置为60秒或900秒时，指定时间段必须小于或等于2小时。例如：Period为60秒，StartTime为2021-05-08 08:00:00，EndTime为2021-05-08 10:00:00，统计距离2021-05-08 10:00:00最近一个60秒的监控数据。
+     *    - 当`Period`设置为3600秒时，指定时间段必须小于或等于2天。例如：StartTime为2021-05-08 08:00:00，EndTime为2021-05-10 08:00:00，统计距离2021-05-10 08:00:00最近一个3600秒的监控数据。
+     * 开始时间支持的格式：
+     * - Unix时间戳：从1970年1月1日开始所经过的毫秒数。
+     * - Format格式：YYYY-MM-DDThh:mm:ssZ。
+     * > - `StartTime`如果设置过早，则无效。
+     * - 建议您使用Unix时间戳，避免时区的问题。
+     * @example `1618368900000`
+     */
+    "StartTime"?: string;
     /**
-    * 用于查询指定资源的监控数据，是 key-value 形式的集合。常用的key-value集合为“instanceId：XXXXXX”。需要使用 JSON 字符串表示该 Map 对象，传入时请使用字符串，Dimensions字段必须按顺序传入。
-    * @example `[{"instanceId": "i-abcdefgh12****"}]`
-    */ "Dimensions"?: string;
+     * 查询监控数据的结束时间。
+     * - 当您未设置`StartTime`和`EndTime`时，查询当前时间最近一个统计周期`Period`的监控数据。
+     * - 当您同时设置`StartTime`和`EndTime`时，查询指定时间段内距离`EndTime`最近一个统计周期`Period`的监控数据。具体如下：
+     *    - 当`Period`设置为15秒时，指定时间段必须小于或等于20分钟。例如：StartTime为2021-05-08 08:10:00，EndTime为2021-05-08 08:30:00，统计距离2021-05-08 08:30:00最近一个15秒的监控数据。
+     *    - 当`Period`设置为60秒或900秒时，指定时间段必须小于或等于2小时。例如：Period为60秒，StartTime为2021-05-08 08:00:00，EndTime为2021-05-08 10:00:00，统计距离2021-05-08 10:00:00最近一个60秒的监控数据。
+     *    - 当`Period`设置为3600秒时，指定时间段必须小于或等于2天。例如：StartTime为2021-05-08 08:00:00，EndTime为2021-05-10 08:00:00，统计距离2021-05-10 08:00:00最近一个3600秒的监控数据。
+     * 结束时间支持的格式：
+     * - Unix时间戳：从1970年1月1日开始所经过的毫秒数。
+     * - Format格式：YYYY-MM-DDThh:mm:ssZ。
+     * > 建议您使用Unix时间戳，避免时区的问题。
+     *
+     * @example `1618368960000`
+     */
+    "EndTime"?: string;
     /**
-    * 对查询的现有结果进行实时计算的表达式，例如` {"groupby":["instanceId"]}`。
-    * @example `“{"groupby":["userId","instanceId"]}”`
-    */ "Express"?: string;
+     * 维度Map，用于查询指定资源的监控数据。
+     * 格式：key-value键值对形式的集合，常用的key-value集合为`instanceId:i-2ze2d6j5uhg20x47****`。
+     * > 单次请求最多支持批量查询50个实例。
+     * @example `[{"instanceId": "i-abcdefgh12****"}]`
+     */
+    "Dimensions"?: string;
     /**
-    * 每次查询大小，用于分页查询，默认值为1000。
-    * @example `1000`
-    */ "Length"?: string;
+     * 对查询出的现有结果进行实时计算的表达式。
+     * > 目前仅支持`groupby`（类似数据库`groupby`语句）。
+     * @example `{"groupby":["userId","instanceId"]}`
+     */
+    "Express"?: string;
     /**
-    * 命名空间，表明监控数据所属产品，通常为` acs_产品缩写_dashboard` 或者 `acs_产品缩写`。例如 “acs_ecs_dashboard”,"acs_slb_dashboard",“acs_rds_dashboard”等。具体请以调用DescribeProjectMeta接口查询结果为准。
-    * @example `acs_ecs_dashboard`
-    */ "Namespace": string;
+     * 每页显示的记录条数，用于分页查询。
+     * 默认值：1000。
+     * > 单次请求Length的最大值为1440。
+     * @example `1000`
+     */
+    "Length"?: string;
 }
-export { DescribeMetricDataRequest };

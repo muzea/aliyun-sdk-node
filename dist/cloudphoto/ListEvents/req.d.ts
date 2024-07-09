@@ -1,9 +1,0 @@
-interface ListEventsRequest {
-    "RegionId": string;
-    "State": string;
-    "StoreName": string;
-    "Direction"?: string;
-    "Size"?: number;
-    "Cursor"?: string;
-}
-export { ListEventsRequest };

@@ -1,0 +1,2 @@
+export interface DescribeWebLockExclusiveFileTypeRequest {
+}

@@ -1,6 +1,7 @@
-interface DescribeLiveDomainRealtimeLogDeliveryRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeLiveDomainRealtimeLogDeliveryRequest {
+    /**
+     * 播流域名。
+     * @example `example.com`
+     */
     "DomainName": string;
 }
-export { DescribeLiveDomainRealtimeLogDeliveryRequest };

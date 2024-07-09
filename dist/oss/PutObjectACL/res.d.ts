@@ -1,3 +1,1 @@
-interface PutObjectACLResponse {
-}
-export { PutObjectACLResponse };
+export type PutObjectAclResponse = any;

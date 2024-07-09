@@ -1,8 +1,7 @@
-interface DeleteFlowRequest {
-    "RegionId"?: string;
+export interface DeleteFlowRequest {
     /**
-    * 流程名称。
-    * @example `flow`
-    */ "Name": string;
+     * 要删除的流程名称。
+     * @example `my_flow_name`
+     */
+    "Name": string;
 }
-export { DeleteFlowRequest };

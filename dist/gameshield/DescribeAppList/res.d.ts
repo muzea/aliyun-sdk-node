@@ -1,3 +1,0 @@
-interface DescribeAppListResponse {
-}
-export { DescribeAppListResponse };

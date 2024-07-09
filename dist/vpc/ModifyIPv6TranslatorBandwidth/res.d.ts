@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.ModifyIPv6TranslatorBandwidthResponse
 export interface ModifyIPv6TranslatorBandwidthResponse {
-	RequestId: string;
-	OrderId: string;
+    /**
+     * 订单ID。
+     * @example `202304500950739`
+     */
+    OrderId: string;
+    /**
+     * 请求ID。
+     * @example `EF8198EE-8FC9-49C2-A22E-xxxx`
+     */
+    RequestId: string;
 }
-

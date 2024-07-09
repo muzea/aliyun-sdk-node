@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ehpc.DeleteQueueResponse
 export interface DeleteQueueResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `464E9919-D04F-4D1D-B375-15989492****`
+     */
+    RequestId: string;
 }
-

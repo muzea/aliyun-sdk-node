@@ -1,9 +1,6 @@
-interface DescribeLiveDomainBpsDataByTimeStampRequest {
-    "RegionId"?: string;
+export interface DescribeLiveDomainBpsDataByTimeStampRequest {
+    "DomainName": string;
     "TimePoint": string;
     "IspNames": string;
     "LocationNames": string;
-    "OwnerId"?: number;
-    "DomainName": string;
 }
-export { DescribeLiveDomainBpsDataByTimeStampRequest };

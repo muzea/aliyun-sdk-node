@@ -1,3 +1,0 @@
-interface DescribeDialogResponse {
-}
-export { DescribeDialogResponse };

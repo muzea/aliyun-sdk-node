@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/alidns.UpdateGtmMonitorResponse
 export interface UpdateGtmMonitorResponse {
-	RequestId: string;
+    /**
+     * 请求ID
+     * @example `6856BCF6-11D6-4D7E-AC53-FD579933522B`
+     */
+    RequestId: string;
 }
-

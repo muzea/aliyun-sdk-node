@@ -1,5 +1,2 @@
-interface DescribeRefreshQuotaRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeRefreshQuotaRequest {
 }
-export { DescribeRefreshQuotaRequest };

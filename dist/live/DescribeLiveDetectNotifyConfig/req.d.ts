@@ -1,9 +1,7 @@
-interface DescribeLiveDetectNotifyConfigRequest {
-    "RegionId"?: string;
+export interface DescribeLiveDetectNotifyConfigRequest {
     /**
-    * 用户域名。
-    * @example `www.yourdomain.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 主播流域名。
+     * @example `example.com`
+     */
+    "DomainName": string;
 }
-export { DescribeLiveDetectNotifyConfigRequest };

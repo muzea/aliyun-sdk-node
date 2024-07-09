@@ -1,19 +1,24 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/live.SnapshotDataInfo
-export interface SnapshotDataInfo {
-	Date: string;
-	Total: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/live.SnapshotDataInfos
-export interface SnapshotDataInfos {
-	SnapshotDataInfo: SnapshotDataInfo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/live.DescribeLiveDomainSnapshotDataResponse
 export interface DescribeLiveDomainSnapshotDataResponse {
-	RequestId: string;
-	SnapshotDataInfos: SnapshotDataInfos;
+    /**
+     * 请求ID。
+     * @example `B955107D-E658-4E77-B913-E0AC3D31693F`
+     */
+    RequestId: string;
+    SnapshotDataInfos: {
+        /**
+         * 直播截图张数的每日数据统计。
+         */
+        SnapshotDataInfo: {
+            /**
+             * 日期，具体到天。
+             * @example `20180209`
+             */
+            Date: string;
+            /**
+             * 单日截图总张数。
+             * @example `110`
+             */
+            Total: number;
+        }[];
+    };
 }
-

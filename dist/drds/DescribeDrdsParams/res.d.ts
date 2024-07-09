@@ -1,92 +1,72 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.ListItem
-export interface ListItem {
-	Engine: string;
-	UserVisible: boolean;
-	NeedRestart: boolean;
-	AccountType: number;
-	CheckItemContent: string;
-	SecurityIpList: string;
-	IsAccountTypeNotSupport: boolean;
-	ParamLevel: string;
-	IsNetTypeNotSupport: boolean;
-	MaxAccountCount: number;
-	Property: string;
-	IsInvalid: boolean;
-	SecurityIpListNotBlank: boolean;
-	MaxConnections: number;
-	ShardKey: string;
-	Progress: number;
-	IsAccountFull: boolean;
-	DbInstType: number;
-	Delay: number;
-	NetworkType: string;
-	VpcId: string;
-	CheckFailReason: string;
-	DBInstanceStorageType: string;
-	Type: string;
-	AdminPwd: string;
-	Port: number;
-	ParamEnglishName: string;
-	EngineVersion: string;
-	IsDbFull: boolean;
-	Table: string;
-	ParamDesc: string;
-	InstanceName: string;
-	DbInstanceStorage: number;
-	ParamDefaultValue: string;
-	Result: boolean;
-	TableName: string;
-	DbName: string;
-	AccountCount: number;
-	IsNetworkTypeNotSupport: boolean;
-	ParamType: string;
-	AzoneIdNotMatch: boolean;
-	DbInstanceMemory: number;
-	TargetTableName: string;
-	BroadcastType: string;
-	SupportUpgradeAccountType: number;
-	Region: string;
-	Category: string;
-	ReadWeight: number;
-	Expired: number;
-	InstanceDescription: string;
-	DbCount: number;
-	CheckItemName: string;
-	InstanceStorage: string;
-	VpcCloudDbInstanceId: string;
-	IsShard: boolean;
-	Stage: number;
-	InstanceId: string;
-	VswitchId: string;
-	UsingNatIp: boolean;
-	AdminUser: string;
-	ParamRanges: string;
-	ParamValue: string;
-	ParamVariableName: string;
-	LockMode: number;
-	Status: number;
-	AllowFullTableScan: boolean;
-	SourceTableName: string;
-	RegionName: string;
-	IsLocked: boolean;
-	ParamName: string;
-	SubDomain: string;
-	Broadcast: boolean;
-	InvalidReason: string;
-	CheckResult: string;
-	Avz: string;
-	ConnectUrl: string;
-	MaxDbCount: number;
-	ItemId: number;
-	InstanceNetType: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.DescribeDrdsParamsResponse
 export interface DescribeDrdsParamsResponse {
-	RequestId: string;
-	Success: boolean;
-	List: ListItem[];
+    /**
+     * 查询是否成功。
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 请求ID。
+     * @example `2F7F8080-9132-4279-85D0-B7E5C4305162`
+     */
+    RequestId: string;
+    /**
+     * 参数列表。
+     */
+    List: {
+        /**
+         * 参数默认值。
+         * @example `1000`
+         */
+        ParamDefaultValue: string;
+        /**
+         * 参数级别。
+         * @example `INSTANCE`
+         */
+        ParamLevel: string;
+        /**
+         * 参数名称。
+         * @example `慢SQL阈值`
+         */
+        ParamName: string;
+        /**
+         * 参数类型。
+         * @example `CONFIG`
+         */
+        ParamType: string;
+        /**
+         * 参数值。
+         * @example `1000`
+         */
+        ParamValue: string;
+        /**
+         * 是否需要重启。
+         * @example `true`
+         */
+        NeedRestart: boolean;
+        /**
+         * 参数值区间。
+         * @example `[1000-900000]`
+         */
+        ParamRanges: string;
+        /**
+         * 数据库名称。
+         * @example `drds_test`
+         */
+        DbName: string;
+        /**
+         * 参数英文名称。
+         * @example `SLOW_SQL_TIME`
+         */
+        ParamEnglishName: string;
+        /**
+         * 参数描述。
+         * @example `慢SQL阈值（单位：ms）`
+         */
+        ParamDesc: string;
+        /**
+         * 参数变量名称。
+         * @example `slowSqlTime`
+         */
+        ParamVariableName: string;
+    }[];
 }
-

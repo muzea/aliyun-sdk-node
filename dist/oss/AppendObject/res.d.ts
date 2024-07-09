@@ -1,3 +1,1 @@
-interface AppendObjectResponse {
-}
-export { AppendObjectResponse };
+export type AppendObjectResponse = any;

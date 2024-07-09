@@ -1,3 +1,0 @@
-interface DescribeFlexibleProtectionFlowResponse {
-}
-export { DescribeFlexibleProtectionFlowResponse };

@@ -1,3 +1,0 @@
-interface ModifyInstanceResponse {
-}
-export { ModifyInstanceResponse };

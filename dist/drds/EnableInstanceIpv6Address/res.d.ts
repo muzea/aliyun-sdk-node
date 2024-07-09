@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.EnableInstanceIpv6AddressResponse
 export interface EnableInstanceIpv6AddressResponse {
-	RequestId: string;
-	Data: boolean;
+    /**
+     * 请求结果。
+     * @example `true`
+     */
+    Data: boolean;
+    /**
+     * 请求ID。
+     * @example `7E9F7F16-05B5-42DA-94D6-E36402******`
+     */
+    RequestId: string;
 }
-

@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.CreateImageResponse
 export interface CreateImageResponse {
-	RequestId: string;
-	ImageId: string;
+    /**
+     * 镜像ID。
+     * @example `m-bp146shijn7hujku****`
+     */
+    ImageId: string;
+    /**
+     * 请求ID。
+     * @example `C8B26B44-0189-443E-9816-*******`
+     */
+    RequestId: string;
 }
-

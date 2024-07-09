@@ -1,3 +1,0 @@
-interface DescribeWebTechsResponse {
-}
-export { DescribeWebTechsResponse };

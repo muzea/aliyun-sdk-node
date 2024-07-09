@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dds.ModifyAuditPolicyResponse
 export interface ModifyAuditPolicyResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `DC04D812-F18D-4568-9B88-F260D9590116`
+     */
+    RequestId: string;
 }
-

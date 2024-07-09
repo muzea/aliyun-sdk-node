@@ -1,13 +1,13 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.ReservedInstanceIdSetsInPurchaseReservedInstancesOffering
-export interface ReservedInstanceIdSetsInPurchaseReservedInstancesOffering {
-	ReservedInstanceId: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.PurchaseReservedInstancesOfferingResponse
 export interface PurchaseReservedInstancesOfferingResponse {
-	RequestId: string;
-	ReservedInstanceIdSets: ReservedInstanceIdSetsInPurchaseReservedInstancesOffering;
+    /**
+     * 请求ID。
+     * @example `8C314443-AF0D-4766-9562-C83B7F1A3C8B`
+     */
+    RequestId: string;
+    ReservedInstanceIdSets: {
+        /**
+         * 预留实例券ID列表。
+         */
+        ReservedInstanceId: string[];
+    };
 }
-

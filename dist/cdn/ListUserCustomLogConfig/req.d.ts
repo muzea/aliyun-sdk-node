@@ -1,5 +1,2 @@
-interface ListUserCustomLogConfigRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface ListUserCustomLogConfigRequest {
 }
-export { ListUserCustomLogConfigRequest };

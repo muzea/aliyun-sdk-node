@@ -1,19 +1,24 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cbn.Region
-export interface Region {
-	RegionId: string;
-	LocalName: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cbn.Regions
-export interface Regions {
-	Region: Region[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cbn.DescribeChildInstanceRegionsResponse
 export interface DescribeChildInstanceRegionsResponse {
-	RequestId: string;
-	Regions: Regions;
+    /**
+     * 请求ID。
+     * @example `D5CEED59-36AA-47CC-9D81-16F71C46BD80`
+     */
+    RequestId: string;
+    Regions: {
+        /**
+         * 地域信息列表。
+         */
+        Region: {
+            /**
+             * 地域名称
+             * @example `华东 1`
+             */
+            LocalName: string;
+            /**
+             * 地域ID。
+             * @example `cn-hangzhou`
+             */
+            RegionId: string;
+        }[];
+    };
 }
-

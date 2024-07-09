@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.DeleteBackupResponse
 export interface DeleteBackupResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `37441409-FFD1-40AA-8EC5-9ECF5E2F7C29`
+     */
+    RequestId: string;
 }
-

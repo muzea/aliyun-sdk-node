@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.ModifyRouteEntryResponse
 export interface ModifyRouteEntryResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `861E6630-AEC0-4B2D-B214-6CB5E44B7F04`
+     */
+    RequestId: string;
 }
-

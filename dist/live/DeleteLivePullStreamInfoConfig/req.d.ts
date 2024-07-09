@@ -1,17 +1,17 @@
-interface DeleteLivePullStreamInfoConfigRequest {
-    "RegionId"?: string;
+export interface DeleteLivePullStreamInfoConfigRequest {
     /**
-    * 直播流所属应用名称。
-    * @example `testApp`
-    */ "AppName": string;
+     * 主播流域名。
+     * @example `example.com`
+     */
+    "DomainName": string;
     /**
-    * 直播流名。
-    * @example `testStream`
-    */ "StreamName": string;
+     * 播流所属应用名称。
+     * @example `liveApp****`
+     */
+    "AppName": string;
     /**
-    * 您的拉流域名。
-    * @example `www.yourdomain.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 播流名称。
+     * @example `liveStream****`
+     */
+    "StreamName": string;
 }
-export { DeleteLivePullStreamInfoConfigRequest };

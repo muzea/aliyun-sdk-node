@@ -1,17 +1,34 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.FailureTopicsInDeleteTopicRouteTable
-export interface FailureTopicsInDeleteTopicRouteTable {
-	Topic: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/iot.DeleteTopicRouteTableResponse
 export interface DeleteTopicRouteTableResponse {
-	RequestId: string;
-	Success: boolean;
-	Code: string;
-	IsAllSucceed: boolean;
-	ErrorMessage: string;
-	FailureTopics: FailureTopicsInDeleteTopicRouteTable;
+    /**
+     * 调用失败时，返回的错误码。更多信息，请参见[错误码](~~87387~~)。
+     * @example `iot.system.SystemException`
+     */
+    Code: string;
+    /**
+     * 调用失败时，返回的出错信息。
+     * @example `系统异常`
+     */
+    ErrorMessage: string;
+    /**
+     * 阿里云为该请求生成的唯一标识符。
+     * @example `FCC27691-9151-4B93-9622-9C90F30542EC`
+     */
+    RequestId: string;
+    /**
+     * 指定的Topic路由关系是否全部成功删除。
+     * - **true**：全部成功删除。
+     * - **false**：未全部成功删除。
+     * @example `true`
+     */
+    IsAllSucceed: boolean;
+    /**
+     * 是否调用成功。
+     * - **true**：调用成功。
+     * - **false**：调用失败。
+     * @example `true`
+     */
+    Success: boolean;
+    FailureTopics: {
+        Topic: any[];
+    };
 }
-

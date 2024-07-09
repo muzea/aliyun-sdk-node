@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cloudapi.SwitchApiResponse
 export interface SwitchApiResponse {
-	RequestId: string;
+    /**
+     * 请求ID
+     * @example `FB263467-7F5D-5A1B-88E8-06CB0228E0FE`
+     */
+    RequestId: string;
 }
-

@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cloudapi.ModifyApiResponse
 export interface ModifyApiResponse {
-	RequestId: string;
+    /**
+     * 请求ID
+     * @example `6C87A26A-6A18-4B8E-8099-705278381A2C`
+     */
+    RequestId: string;
 }
-

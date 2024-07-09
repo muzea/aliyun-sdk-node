@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.CreateDrdsDBResponse
 export interface CreateDrdsDBResponse {
-	RequestId: string;
-	Success: boolean;
+    /**
+     * 请求结果。
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 请求ID。
+     * @example `FF13E47D-4E38-4A5A-BA68-32A554AD45T6`
+     */
+    RequestId: string;
 }
-

@@ -1,10 +1,8 @@
-interface ModifyVpcAttributeRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface ModifyVpcAttributeRequest {
+    "VpcId": string;
     "Description"?: string;
     "VpcName"?: string;
     "CidrBlock"?: string;
-    "VpcId": string;
+    "RegionId"?: string;
     "UserCidr"?: string;
 }
-export { ModifyVpcAttributeRequest };

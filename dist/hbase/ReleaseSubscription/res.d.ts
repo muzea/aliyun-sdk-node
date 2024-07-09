@@ -1,3 +1,0 @@
-interface ReleaseSubscriptionResponse {
-}
-export { ReleaseSubscriptionResponse };

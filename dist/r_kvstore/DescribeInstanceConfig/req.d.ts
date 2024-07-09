@@ -1,6 +1,7 @@
-interface DescribeInstanceConfigRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeInstanceConfigRequest {
+    /**
+     * 实例ID，可调用[DescribeInstances](~~60933~~)获取。
+     * @example `r-bp1zxszhcgatnx****`
+     */
     "InstanceId": string;
 }
-export { DescribeInstanceConfigRequest };

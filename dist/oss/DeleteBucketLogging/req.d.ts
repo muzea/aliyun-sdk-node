@@ -1,5 +1,7 @@
-interface DeleteBucketLoggingRequest {
-    "BucketName": any;
-    "logging": any;
+export interface DeleteBucketLoggingRequest {
+    /**
+     * Bucket名称。
+     * @example `examplebucket`
+     */
+    "bucket": string;
 }
-export { DeleteBucketLoggingRequest };

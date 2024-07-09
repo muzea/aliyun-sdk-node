@@ -1,8 +1,37 @@
-interface QueryDeviceGroupByTagsRequest {
-    "RegionId"?: string;
+export interface QueryDeviceGroupByTagsRequest {
+    /**
+     * 实例ID。您可在物联网平台控制台的**实例概览**页面，查看当前实例的**ID**。
+     * ><notice>
+     * - 若有ID值，必须传入该ID值，否则调用会失败。
+     * - 若无<props="intl"><ph>**实例概览**页面或</ph></props>ID值，则无需传入。
+     * ></notice>
+     * 实例的更多信息，请参见[实例概述](~~356505~~)。
+     * @example `iot_instc_pu****_c*-v64********`
+     */
     "IotInstanceId"?: string;
-    "Tag"?: string[];
+    /**
+     * 指定显示查询结果的第几页。默认值是1。
+     * @example `1`
+     */
     "CurrentPage"?: number;
+    /**
+     * 指定每页显示的记录数。默认值是10。
+     * @example `10`
+     */
     "PageSize"?: number;
+    /**
+     * 标签列表。
+     */
+    "Tag"?: {
+        /**
+         * 分组标签值（value）。
+         * @example `tag`
+         */
+        TagValue: string;
+        /**
+         * 分组标签键（key）。
+         * @example `group`
+         */
+        TagKey: string;
+    }[];
 }
-export { QueryDeviceGroupByTagsRequest };

@@ -1,9 +1,17 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/edas.UpdateRoleResponse
 export interface UpdateRoleResponse {
-	Code: number;
-	Message: string;
-	RequestId: string;
+    /**
+     * 接口状态或POP错误码。
+     * @example `200`
+     */
+    Code: number;
+    /**
+     * 附加信息。
+     * @example `edit successfully`
+     */
+    Message: string;
+    /**
+     * 请求ID。
+     * @example `4823-bhjf-23u4-****`
+     */
+    RequestId: string;
 }
-

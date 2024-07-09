@@ -1,9 +1,17 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.SetBackupLocalResponse
 export interface SetBackupLocalResponse {
-	RequestId: string;
-	Result: string;
-	Success: boolean;
+    /**
+     * 请求ID
+     * @example `6F70CE62-5077-4B7B-95BC-4DAC45614DBE`
+     */
+    RequestId: string;
+    /**
+     * 操作返回结果
+     * @example `success`
+     */
+    Result: string;
+    /**
+     * api调用结果
+     * @example `true`
+     */
+    Success: boolean;
 }
-

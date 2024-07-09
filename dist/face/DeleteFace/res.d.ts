@@ -1,3 +1,0 @@
-interface DeleteFaceResponse {
-}
-export { DeleteFaceResponse };

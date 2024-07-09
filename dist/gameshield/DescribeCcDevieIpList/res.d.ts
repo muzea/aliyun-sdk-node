@@ -1,3 +1,0 @@
-interface DescribeCcDevieIpListResponse {
-}
-export { DescribeCcDevieIpListResponse };

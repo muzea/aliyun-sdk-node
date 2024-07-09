@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/live.CreateLiveRealTimeLogDeliveryResponse
 export interface CreateLiveRealTimeLogDeliveryResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `F32C57AA-7BF8-49AE-A2CC-9F42390F5A19`
+     */
+    RequestId: string;
 }
-

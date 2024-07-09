@@ -1,9 +1,7 @@
-interface DeleteLiveDomainRequest {
-    "RegionId"?: string;
+export interface DeleteLiveDomainRequest {
     /**
-    * 要删除的域名。
-    * @example `live.yourdomain.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 需要删除的推流或播流域名。
+     * @example `demo.aliyundoc.com`
+     */
+    "DomainName": string;
 }
-export { DeleteLiveDomainRequest };

@@ -1,3 +1,0 @@
-interface DescribeHiTSDBInstanceDataTtlResponse {
-}
-export { DescribeHiTSDBInstanceDataTtlResponse };

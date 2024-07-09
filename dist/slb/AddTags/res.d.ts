@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.AddTagsResponse
 export interface AddTagsResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `365F4154-92F6-4AE4-92F8-7FF34******`
+     */
+    RequestId: string;
 }
-

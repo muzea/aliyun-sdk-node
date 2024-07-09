@@ -1,3 +1,0 @@
-interface ApproveJoinCompanyResponse {
-}
-export { ApproveJoinCompanyResponse };

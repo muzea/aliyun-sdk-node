@@ -1,8 +1,7 @@
-interface UninstallMonitoringAgentRequest {
-    "RegionId"?: string;
+export interface UninstallMonitoringAgentRequest {
     /**
-    * 主机实例ID。
-    * @example `host-****`
-    */ "InstanceId": string;
+     * 非阿里云主机的实例ID。
+     * @example `host-****`
+     */
+    "InstanceId": string;
 }
-export { UninstallMonitoringAgentRequest };

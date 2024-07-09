@@ -1,19 +1,8 @@
-interface DescribeAntChainNodesResponse {
-    "code": string;
-    "data": {
-        "RequestId": string;
-        "Result": {
-            "endpoints": {
-                "port": string;
-                "ip": string;
-            }[];
-            "nodeState": number;
-            "publicKey": string;
-            "nodeType": number;
-            "nodeId": string;
-        }[];
-    };
-    "requestId": string;
-    "successResponse": boolean;
+export interface DescribeAntChainNodesResponse {
+    /**
+     * 请求ID
+     * @example `BA9738FE-F427-44FD-A1D9-EB4EFB43075A`
+     */
+    RequestId: string;
+    Result: any[];
 }
-export { DescribeAntChainNodesResponse };

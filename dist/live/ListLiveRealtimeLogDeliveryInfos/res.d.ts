@@ -1,20 +1,29 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/live.RealtimeLogDeliveryInfos
-export interface RealtimeLogDeliveryInfos {
-	Project: string;
-	Logstore: string;
-	Region: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/live.ContentInListLiveRealtimeLogDeliveryInfos
-export interface ContentInListLiveRealtimeLogDeliveryInfos {
-	RealtimeLogDeliveryInfos: RealtimeLogDeliveryInfos[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/live.ListLiveRealtimeLogDeliveryInfosResponse
 export interface ListLiveRealtimeLogDeliveryInfosResponse {
-	RequestId: string;
-	Content: ContentInListLiveRealtimeLogDeliveryInfos;
+    /**
+     * 请求ID。
+     * @example `95D5B69F-8AEC-419B-8F3A-612B35032B0D`
+     */
+    RequestId: string;
+    Content: {
+        /**
+         * 日志投递服务信息。
+         */
+        RealtimeLogDeliveryInfos: {
+            /**
+             * 实时投递SLS的LogStoreName。
+             * @example `logstore_example`
+             */
+            Logstore: string;
+            /**
+             * 实时投递SLS的ProjectName。
+             * @example `project_example`
+             */
+            Project: string;
+            /**
+             * 实时投递SLS的Region。
+             * @example `cn-hangzhou`
+             */
+            Region: string;
+        }[];
+    };
 }
-

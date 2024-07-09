@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/nas.ModifyAccessGroupResponse
 export interface ModifyAccessGroupResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `ED2AE737-9D50-4CA4-B0DA-31BD610C****`
+     */
+    RequestId: string;
 }
-

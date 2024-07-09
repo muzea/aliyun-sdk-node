@@ -1,13 +1,10 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.DbInstancesInDescribeRdsSuperAccountInstances
-export interface DbInstancesInDescribeRdsSuperAccountInstances {
-	DbInstance: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.DescribeRdsSuperAccountInstancesResponse
 export interface DescribeRdsSuperAccountInstancesResponse {
-	RequestId: string;
-	DbInstances: DbInstancesInDescribeRdsSuperAccountInstances;
+    /**
+     * 请求ID。
+     * @example `5D64DE5944A1E541E0******`
+     */
+    RequestId: string;
+    DbInstances: {
+        DbInstance: string[];
+    };
 }
-

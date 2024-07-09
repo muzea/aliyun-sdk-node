@@ -1,3 +1,0 @@
-interface DoIotServiceStatusControlResponse {
-}
-export { DoIotServiceStatusControlResponse };

@@ -1,3 +1,0 @@
-interface GetChangeLogResponse {
-}
-export { GetChangeLogResponse };

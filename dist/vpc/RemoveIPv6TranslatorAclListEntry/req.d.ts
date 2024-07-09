@@ -1,20 +1,23 @@
-interface RemoveIPv6TranslatorAclListEntryRequest {
+export interface RemoveIPv6TranslatorAclListEntryRequest {
     /**
-    * 访问控制策略组的地域。
-    * @example `cn-hangzhou`
-    */ "RegionId": string;
+     * 客户端Token，用于保证请求的幂等性。
+     * 从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。
+     * @example `123e4567-e89b-12d3-a456-426655440000`
+     */
+    "ClientToken"?: string;
     /**
-    * 访问控制策略条目所属的访问控制策略组ID。
-    * @example `ipv6transacl-bp1de2xxxx`
-    */ "AclId": string;
+     * 访问控制策略组的地域。
+     * @example `cn-hangzhou`
+     */
+    "RegionId": string;
     /**
-    * 要删除的访问控制策略条目ID。
-    * @example `ipv6transaclentry-bp105jrsxxxx`
-    */ "AclEntryId": string;
-    "OwnerId"?: number;
+     * 访问控制策略条目所属的访问控制策略组ID。
+     * @example `ipv6transacl-bp1de2****`
+     */
+    "AclId": string;
     /**
-    * 客户端token，用于保证请求的幂等性。 由客户端生成该参数值，要保证在不同请求间唯一，最大不值过64个 ASCII 字符。
-    * @example `sha123456`
-    */ "ClientToken"?: string;
+     * 要删除的访问控制策略条目ID。
+     * @example `ipv6transaclentry-bp105jrs****`
+     */
+    "AclEntryId": string;
 }
-export { RemoveIPv6TranslatorAclListEntryRequest };

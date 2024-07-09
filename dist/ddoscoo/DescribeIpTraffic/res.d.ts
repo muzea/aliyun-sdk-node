@@ -1,3 +1,0 @@
-interface DescribeIpTrafficResponse {
-}
-export { DescribeIpTrafficResponse };

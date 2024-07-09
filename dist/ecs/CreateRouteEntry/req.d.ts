@@ -1,11 +1,12 @@
-interface CreateRouteEntryRequest {
+export interface CreateRouteEntryRequest {
     "RegionId"?: string;
-    "DestinationCidrBlock": string;
-    "OwnerId"?: number;
     "RouteTableId": string;
+    "DestinationCidrBlock": string;
     "NextHopId"?: string;
     "ClientToken"?: string;
     "NextHopType"?: string;
-    "NextHopList"?: string[];
+    "NextHopList"?: {
+        NextHopId: string;
+        NextHopType: string;
+    }[];
 }
-export { CreateRouteEntryRequest };

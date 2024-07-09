@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dm.SingleSendMailResponse
 export interface SingleSendMailResponse {
-	RequestId: string;
-	EnvId: string;
+    /**
+     * 事件ID
+     * @example `600000xxxxxxxxxx642`
+     */
+    EnvId: string;
+    /**
+     * 请求ID
+     * @example `2D086F6-xxxx-xxxx-xxxx-006DED011A85`
+     */
+    RequestId: string;
 }
-

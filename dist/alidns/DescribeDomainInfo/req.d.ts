@@ -1,17 +1,18 @@
-interface DescribeDomainInfoRequest {
-    "RegionId"?: string;
+export interface DescribeDomainInfoRequest {
     /**
-    * 域名名称。
-    * @example `example.com`
-    */ "DomainName": string;
+     * 用户语言。
+     * @example `en`
+     */
+    "Lang"?: string;
     /**
-    * 用户语言。
-    * @example `en`
-    */ "Lang"?: string;
-    "UserClientIp"?: string;
+     * 域名名称。
+     * @example `dns-example.com`
+     */
+    "DomainName": string;
     /**
-    * 默认值为**false**，表示不需要细节属性。
-    * @example `false`
-    */ "NeedDetailAttributes"?: boolean;
+     * 默认值为**false**，表示不需要细节属性。
+     * 当值为**true**时，则返回以下数据：lineType、minTtl、recordLineTreeJson、recordLines、lineCode、lineDisplayName、lineName、regionLines、slaveDns。
+     * @example `true`
+     */
+    "NeedDetailAttributes"?: boolean;
 }
-export { DescribeDomainInfoRequest };

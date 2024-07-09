@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.ReleaseInstanceInternetAddressResponse
 export interface ReleaseInstanceInternetAddressResponse {
-	RequestId: string;
-	Data: boolean;
+    /**
+     * 当前API返回结果。
+     * @example `true`
+     */
+    Data: boolean;
+    /**
+     * 请求ID。
+     * @example `FD17CD3C-3355-49E8-9231-FE2DB0******`
+     */
+    RequestId: string;
 }
-

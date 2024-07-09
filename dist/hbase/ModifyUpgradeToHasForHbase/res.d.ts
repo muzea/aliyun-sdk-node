@@ -1,3 +1,0 @@
-interface ModifyUpgradeToHasForHbaseResponse {
-}
-export { ModifyUpgradeToHasForHbaseResponse };

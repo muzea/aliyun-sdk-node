@@ -1,3 +1,0 @@
-interface ResetMainPasswordResponse {
-}
-export { ResetMainPasswordResponse };

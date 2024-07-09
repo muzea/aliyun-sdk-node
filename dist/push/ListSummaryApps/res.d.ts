@@ -1,19 +1,24 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/push.SummaryAppInfo
-export interface SummaryAppInfo {
-	AppName: string;
-	AppKey: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/push.SummaryAppInfos
-export interface SummaryAppInfos {
-	SummaryAppInfo: SummaryAppInfo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/push.ListSummaryAppsResponse
 export interface ListSummaryAppsResponse {
-	RequestId: string;
-	SummaryAppInfos: SummaryAppInfos;
+    /**
+     * 请求ID。
+     * @example `9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC`
+     */
+    RequestId: string;
+    SummaryAppInfos: {
+        /**
+         * app详情，SummaryAppInfo组成的集合。
+         */
+        SummaryAppInfo: {
+            /**
+             * 应用的名称。
+             * @example `abc`
+             */
+            AppName: string;
+            /**
+             * AppKey信息。
+             * @example `23****07`
+             */
+            AppKey: number;
+        }[];
+    };
 }
-

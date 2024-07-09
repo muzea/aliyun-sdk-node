@@ -1,21 +1,28 @@
-interface ModifySmartAccessGatewayClientUserRequest {
+export interface ModifySmartAccessGatewayClientUserRequest {
     /**
-    * 智能接入网关APP实例地域。
-    * @example `cn-shanghai`
-    */ "RegionId": string;
+     * 智能接入网关App实例所属地域ID。
+     * @example `cn-shanghai`
+     */
+    "RegionId": string;
     /**
-    * 智能接入网关APP实例ID。
-    * @example `sag-kdhej*******8`
-    */ "SmartAGId": string;
+     * 智能接入网关App实例ID。
+     * @example `sag-rz2e23c0e78ema****`
+     */
+    "SmartAGId": string;
     /**
-    * 用户名，同一个智能接入网关APP实例下的用户名不可以重复。
-    * 用户名和密码相互依赖，若指定用户名则必须指定密码，反之，若指定密码则必须指定用户名。
-    * @example `doctest`
-    */ "UserName": string;
+     * 客户端的用户名。
+     * @example `username`
+     */
+    "UserName": string;
     /**
-    * 带宽，单位Kbps，最大2000Kbps。
-    * @example `2`
-    */ "Bandwidth": number;
-    "OwnerId"?: number;
+     * 客户端可使用的带宽。单位：Kbps。
+     * 取值范围：**1**~**20000**。
+     * @example `1`
+     */
+    "Bandwidth"?: number;
+    /**
+     * 客户端的邮箱地址。
+     * @example `username@example.com`
+     */
+    "Email"?: string;
 }
-export { ModifySmartAccessGatewayClientUserRequest };

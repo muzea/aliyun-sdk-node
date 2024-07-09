@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.ModifyDrdsInstanceDescriptionResponse
 export interface ModifyDrdsInstanceDescriptionResponse {
-	RequestId: string;
-	Success: boolean;
+    /**
+     * 请求结果。
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 请求ID。
+     * @example `C44CA24C-C7C4-4C0F-8AC9-1343F2******`
+     */
+    RequestId: string;
 }
-

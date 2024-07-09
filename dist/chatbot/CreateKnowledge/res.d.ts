@@ -1,3 +1,0 @@
-interface CreateKnowledgeResponse {
-}
-export { CreateKnowledgeResponse };

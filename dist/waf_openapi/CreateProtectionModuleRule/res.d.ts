@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/waf_openapi.CreateProtectionModuleRuleResponse
 export interface CreateProtectionModuleRuleResponse {
-	RequestId: string;
+    /**
+     * 本次请求的ID。
+     * @example `D7861F61-5B61-46CE-A47C-6B19****5EB0`
+     */
+    RequestId: string;
 }
-

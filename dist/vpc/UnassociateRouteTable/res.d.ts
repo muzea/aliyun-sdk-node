@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.UnassociateRouteTableResponse
 export interface UnassociateRouteTableResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `62172DD5-6BAC-45DF-8D44-xxxxxxx`
+     */
+    RequestId: string;
 }
-

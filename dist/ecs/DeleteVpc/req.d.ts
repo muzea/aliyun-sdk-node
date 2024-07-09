@@ -1,6 +1,4 @@
-interface DeleteVpcRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DeleteVpcRequest {
     "VpcId": string;
+    "RegionId"?: string;
 }
-export { DeleteVpcRequest };

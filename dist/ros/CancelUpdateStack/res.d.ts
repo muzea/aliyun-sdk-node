@@ -1,6 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ros.CancelUpdateStackResponse
 export interface CancelUpdateStackResponse {
+    /**
+     * 请求ID。
+     * @example `B288A0BE-D927-4888-B0F7-B35EF84B6E6F`
+     */
+    RequestId: string;
 }
-

@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/domain.CancelTaskResponse
 export interface CancelTaskResponse {
-	RequestId: string;
+    /**
+     * 唯一请求识别码。
+     * @example `010E55C9-C64C-4C85-9BB2-7C225ADA6C86`
+     */
+    RequestId: string;
 }
-

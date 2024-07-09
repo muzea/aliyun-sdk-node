@@ -1,16 +1,12 @@
-interface GetMainDomainNameRequest {
-    "RegionId"?: string;
+export interface GetMainDomainNameRequest {
     /**
-    * 字符串，最长不超过128个字符。
-    * @example `www.example.com`
-    */ "InputString": string;
+     * 用户语言。
+     * @example `en`
+     */
+    "Lang"?: string;
     /**
-    * 用户语言。
-    * @example `en`
-    */ "Lang"?: string;
-    /**
-    * 用户端IP。
-    * @example `1.1.1.1`
-    */ "UserClientIp"?: string;
+     * 字符串，最长不超过128个字符。
+     * @example `dns-example.top`
+     */
+    "InputString": string;
 }
-export { GetMainDomainNameRequest };

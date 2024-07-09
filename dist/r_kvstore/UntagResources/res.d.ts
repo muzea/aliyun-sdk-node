@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.UntagResourcesResponse
 export interface UntagResourcesResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `601B6F25-21E7-4484-99D5-3EF2625C****`
+     */
+    RequestId: string;
 }
-

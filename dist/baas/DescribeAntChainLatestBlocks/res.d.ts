@@ -1,21 +1,8 @@
-interface DescribeAntChainLatestBlocksResponse {
-    "code": string;
-    "data": {
-        "RequestId": string;
-        "Result": {
-            "blockHash": string;
-            "previousHash": string;
-            "size": number;
-            "createTime": number;
-            "transactionSize": number;
-            "alias": string;
-            "bizData": string;
-            "version": number;
-            "rootTxHash": string;
-            "height": number;
-        }[];
-    };
-    "requestId": string;
-    "successResponse": boolean;
+export interface DescribeAntChainLatestBlocksResponse {
+    /**
+     * 请求ID
+     * @example `B52C552F-DDE6-4779-9BA2-9DD455275528`
+     */
+    RequestId: string;
+    Result: any[];
 }
-export { DescribeAntChainLatestBlocksResponse };

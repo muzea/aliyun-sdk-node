@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/smartag.ActivateSmartAccessGatewayResponse
 export interface ActivateSmartAccessGatewayResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `E223E535-AE11-4158-B00F-DC107887A909`
+     */
+    RequestId: string;
 }
-

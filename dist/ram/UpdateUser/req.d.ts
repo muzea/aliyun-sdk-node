@@ -1,30 +1,38 @@
-interface UpdateUserRequest {
-    "RegionId"?: string;
+export interface UpdateUserRequest {
     /**
-    * 指定用户名。
-    * @example `zhangq****`
-    */ "UserName"?: string;
+     * RAM用户名称。
+     * @example `zhangq****`
+     */
+    "UserName"?: string;
     /**
-    * 指定新用户名。
-    * 格式：`^[a-zA-Z0-9\.@\-_]+$`。
-    * @example `xiaoq****`
-    */ "NewUserName"?: string;
+     * RAM用户的新名称。
+     * 长度为1~64个字符，可包含英文字母、数字、半角句号（.）、短划线（-）和下划线（_）。
+     * @example `xiaoq****`
+     */
+    "NewUserName"?: string;
     /**
-    * 指定新显示名称。
-    * @example `xiaoq****`
-    */ "NewDisplayName"?: string;
+     * RAM用户的新显示名称。
+     * 长度为1~128个字符。
+     * @example `xiaoq****`
+     */
+    "NewDisplayName"?: string;
     /**
-    * 指定RAM用户新手机号。
-    * 格式：国际区号-号码。
-    * @example `86-1860000****`
-    */ "NewMobilePhone"?: string;
+     * RAM用户的新手机号码。
+     * 格式：国际区号-号码。
+     * > 该参数仅适用于中国站。
+     * @example `86-1860000****`
+     */
+    "NewMobilePhone"?: string;
     /**
-    * 指定RAM用户的新邮箱。
-    * @example `xiaoq****@example.com`
-    */ "NewEmail"?: string;
+     * RAM用户的新电子邮箱。
+     * > 该参数仅适用于中国站。
+     * @example `xiaoq****@example.com`
+     */
+    "NewEmail"?: string;
     /**
-    * 指定新备注, 最大长度128个字符。
-    * @example `这是一位云计算工程师`
-    */ "NewComments"?: string;
+     * 新备注。
+     * 长度为1~128个字符。
+     * @example `This is a cloud computing engineer.`
+     */
+    "NewComments"?: string;
 }
-export { UpdateUserRequest };

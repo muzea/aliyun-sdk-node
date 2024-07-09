@@ -1,3 +1,0 @@
-interface CreateJobResponse {
-}
-export { CreateJobResponse };

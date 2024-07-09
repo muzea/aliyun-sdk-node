@@ -1,32 +1,42 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.HotDbList
-export interface HotDbList {
-	data: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.InstanceDb
-export interface InstanceDb {
-	InstanceName: string;
-	HotDbList: HotDbList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.ListInDescribeHotDbList
-export interface ListInDescribeHotDbList {
-	InstanceDb: InstanceDb[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.DataInDescribeHotDbList
-export interface DataInDescribeHotDbList {
-	RandomCode: string;
-	List: ListInDescribeHotDbList;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.DescribeHotDbListResponse
 export interface DescribeHotDbListResponse {
-	RequestId: string;
-	Success: boolean;
-	Msg: string;
-	Data: DataInDescribeHotDbList;
+    /**
+     * 信息。
+     * @example `msg`
+     */
+    Msg: string;
+    /**
+     * 请求ID。
+     * @example `0B6B7BDC-575D-4A77-A4F8-24B7EF******`
+     */
+    RequestId: string;
+    /**
+     * 请求是否成功。
+     * @example `true`
+     */
+    Success: boolean;
+    /**
+     * 结果。
+     */
+    Data: {
+        /**
+         * 随机数。
+         * @example `jzhz`
+         */
+        RandomCode: string;
+        List: {
+            /**
+             * 列表。
+             */
+            InstanceDb: {
+                /**
+                 * 实例名称。
+                 * @example `instanceName`
+                 */
+                InstanceName: string;
+                HotDbList: {
+                    data: string[];
+                };
+            }[];
+        };
+    };
 }
-

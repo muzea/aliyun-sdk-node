@@ -1,3 +1,0 @@
-interface DescribeHostsResponse {
-}
-export { DescribeHostsResponse };

@@ -1,22 +1,39 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/webplus.ConfigSetting
-export interface ConfigSetting {
-	PathName: string;
-	OptionName: string;
-	SettingValue: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/webplus.ConfigSettings
-export interface ConfigSettings {
-	ConfigSetting: ConfigSetting[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/webplus.DescribeConfigSettingsResponse
 export interface DescribeConfigSettingsResponse {
-	RequestId: string;
-	Code: string;
-	Message: string;
-	ConfigSettings: ConfigSettings;
+    ConfigSettings: {
+        /**
+         * 配置设置
+         */
+        ConfigSetting: {
+            /**
+             * 选项名称
+             * @example `intervalSeconds`
+             */
+            OptionName: string;
+            /**
+             * 路径名称
+             * @example `application.healthCheck`
+             */
+            PathName: string;
+            /**
+             * 配置设置值
+             * @example `3`
+             */
+            SettingValue: string;
+        }[];
+    };
+    /**
+     * 响应消息，若成功请求为success
+     * @example `success`
+     */
+    Message: string;
+    /**
+     * 请求ID
+     * @example `F4D6243F-67B6-4528-A3CA-A963E12*****`
+     */
+    RequestId: string;
+    /**
+     * 响应代码，若成功请求为OK
+     * @example `OK`
+     */
+    Code: string;
 }
-

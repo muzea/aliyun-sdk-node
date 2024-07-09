@@ -1,9 +1,7 @@
-interface DescribeDomainCustomLogConfigRequest {
-    "RegionId"?: string;
+export interface DescribeDomainCustomLogConfigRequest {
     /**
-    * 域名（只支持单个查询）。
-    * @example `www.yourdomain.com`
-    */ "DomainName": string;
-    "OwnerId"?: number;
+     * 域名，只支持单个查询。
+     * @example `example.com`
+     */
+    "DomainName": string;
 }
-export { DescribeDomainCustomLogConfigRequest };

@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/smartag.UpgradeSmartAccessGatewayResponse
 export interface UpgradeSmartAccessGatewayResponse {
-	RequestId: string;
-	OrderId: string;
+    /**
+     * 请求ID。
+     * @example `45F07029-1783-4B2D-B4CE-45B9EAA58440`
+     */
+    RequestId: string;
+    /**
+     * 订单ID。
+     * @example `203384676330296`
+     */
+    OrderId: string;
 }
-

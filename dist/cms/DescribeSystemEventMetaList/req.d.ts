@@ -1,4 +1,2 @@
-interface DescribeSystemEventMetaListRequest {
-    "RegionId"?: string;
+export interface DescribeSystemEventMetaListRequest {
 }
-export { DescribeSystemEventMetaListRequest };

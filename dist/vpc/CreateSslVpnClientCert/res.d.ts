@@ -1,9 +1,17 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.CreateSslVpnClientCertResponse
 export interface CreateSslVpnClientCertResponse {
-	RequestId: string;
-	Name: string;
-	SslVpnClientCertId: string;
+    /**
+     * 请求ID。
+     * @example `606998F0-B94D-48FE-8316-ACA81BB230DA`
+     */
+    RequestId: string;
+    /**
+     * SSL-VPN客户端证书的名称。
+     * @example `SslVpnClientCert`
+     */
+    Name: string;
+    /**
+     * SSL-VPN客户端证书的ID。
+     * @example `vsc-m5euof6s5jy8vs5kd****`
+     */
+    SslVpnClientCertId: string;
 }
-

@@ -1,3 +1,0 @@
-interface ModifyTransmitLineResponse {
-}
-export { ModifyTransmitLineResponse };

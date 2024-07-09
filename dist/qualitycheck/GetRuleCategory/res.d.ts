@@ -1,38 +1,44 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/qualitycheck.RuleCountInfo
-export interface RuleCountInfo {
-	Name: string;
-	RealViolationNumber: number;
-	Status: number;
-	TypeName: string;
-	CreateEmpid: string;
-	CreateTime: string;
-	HitRealViolationRate: number;
-	LastUpdateTime: string;
-	Select: boolean;
-	PreReviewNumber: number;
-	Rid: string;
-	CheckNumber: number;
-	ReviewNumber: number;
-	HitRate: number;
-	HitNumber: number;
-	LastUpdateEmpid: string;
-	Type: number;
-	IsDelete: number;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/qualitycheck.DataInGetRuleCategory
-export interface DataInGetRuleCategory {
-	RuleCountInfo: RuleCountInfo[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/qualitycheck.GetRuleCategoryResponse
 export interface GetRuleCategoryResponse {
-	RequestId: string;
-	Success: boolean;
-	Code: string;
-	Message: string;
-	Data: DataInGetRuleCategory;
+    /**
+     * 结果代码，**200**表示成功，若为别的值则表示失败，调用方可根据此字段判断失败原因。
+     * @example `200`
+     */
+    Code: string;
+    /**
+     * 出错时表示出错详情，成功时为successful。
+     * @example `successful`
+     */
+    Message: string;
+    /**
+     * 请求ID
+     * @example `F190ADE9-619A-447D-84E3-7E241A5C428E`
+     */
+    RequestId: string;
+    /**
+     * 请求是否成功，调用方可根据此字段来判断请求是否成功：true表示成功；false/null表示失败
+     * @example `true`
+     */
+    Success: boolean;
+    Data: {
+        /**
+         * 返回结果
+         */
+        RuleCountInfo: {
+            /**
+             * 规则类型type
+             * @example `22`
+             */
+            Type: number;
+            /**
+             * 规则类型的名称
+             * @example `客服组`
+             */
+            TypeName: string;
+            /**
+             * 选择情况
+             * @example `false`
+             */
+            Select: boolean;
+        }[];
+    };
 }
-

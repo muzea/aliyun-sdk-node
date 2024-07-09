@@ -1,13 +1,13 @@
-interface ChangePasswordRequest {
-    "RegionId"?: string;
+export interface ChangePasswordRequest {
     /**
-    * 旧密码。
-    * @example `12****`
-    */ "OldPassword"?: string;
+     * RAM用户的控制台登录旧密码。
+     * @example `12****`
+     */
+    "OldPassword"?: string;
     /**
-    * 指定密码，密码必须符合密码强度要求。
-    * 关于密码强度设置接口，请参考 [SetPasswordPolicy](~~28739~~)。
-    * @example `aw$2****`
-    */ "NewPassword"?: string;
+     * RAM用户的控制台登录新密码。
+     * 密码必须符合密码强度要求。更多信息，请参见[SetPasswordPolicy](~~28739~~)。
+     * @example `aw$2****`
+     */
+    "NewPassword"?: string;
 }
-export { ChangePasswordRequest };

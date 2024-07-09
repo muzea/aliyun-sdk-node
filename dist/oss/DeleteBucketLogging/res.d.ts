@@ -1,3 +1,1 @@
-interface DeleteBucketLoggingResponse {
-}
-export { DeleteBucketLoggingResponse };
+export type DeleteBucketLoggingResponse = any;

@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dds.RestartDBInstanceResponse
 export interface RestartDBInstanceResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `149C517D-B586-47BE-A107-8673E0ED77C6`
+     */
+    RequestId: string;
 }
-

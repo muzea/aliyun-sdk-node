@@ -1,3 +1,0 @@
-interface ActivatePerspectiveResponse {
-}
-export { ActivatePerspectiveResponse };

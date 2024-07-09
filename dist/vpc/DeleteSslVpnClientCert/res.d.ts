@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.DeleteSslVpnClientCertResponse
 export interface DeleteSslVpnClientCertResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `606998F0-B94D-48FE-8316-ACA81BB230DA`
+     */
+    RequestId: string;
 }
-

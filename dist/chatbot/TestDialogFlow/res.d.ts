@@ -1,3 +1,0 @@
-interface TestDialogFlowResponse {
-}
-export { TestDialogFlowResponse };

@@ -1,7 +1,12 @@
-interface GetMultimodeCmsUrlRequest {
-    "RegionId": string;
+export interface GetMultimodeCmsUrlRequest {
+    /**
+     * 集群Id。
+     * @example `hb-t4naqsay5gn******`
+     */
     "ClusterId": string;
-    "OwnerId"?: number;
-    "ZoneId"?: string;
+    /**
+     * 地域id。
+     * @example `cn-hangzhou`
+     */
+    "RegionId": string;
 }
-export { GetMultimodeCmsUrlRequest };

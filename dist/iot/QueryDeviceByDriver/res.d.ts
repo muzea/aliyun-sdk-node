@@ -1,3 +1,0 @@
-interface QueryDeviceByDriverResponse {
-}
-export { QueryDeviceByDriverResponse };

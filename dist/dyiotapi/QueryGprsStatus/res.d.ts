@@ -1,3 +1,0 @@
-interface QueryGprsStatusResponse {
-}
-export { QueryGprsStatusResponse };

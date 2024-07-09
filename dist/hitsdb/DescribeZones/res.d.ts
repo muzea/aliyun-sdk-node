@@ -1,3 +1,0 @@
-interface DescribeZonesResponse {
-}
-export { DescribeZonesResponse };

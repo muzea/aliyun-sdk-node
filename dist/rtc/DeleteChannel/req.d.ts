@@ -1,13 +1,12 @@
-interface DeleteChannelRequest {
-    "RegionId"?: string;
+export interface DeleteChannelRequest {
     /**
-    * 应用ID，通过控制台开通创建。
-    * @example `yourAppId`
-    */ "AppId": string;
+     * 应用ID，通过控制台创建和查询，仅支持传单个ID。
+     * @example `eo85****`
+     */
+    "AppId": string;
     /**
-    * 频道ID，加入的频道。
-    * @example `yourChannelId`
-    */ "ChannelId": string;
-    "OwnerId"?: number;
+     * 已入会的频道ID，仅支持传单个ID。
+     * @example `testid`
+     */
+    "ChannelId": string;
 }
-export { DeleteChannelRequest };

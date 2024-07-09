@@ -1,9 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/actiontrail.StopLoggingResponse
 export interface StopLoggingResponse {
-	RequestId: string;
-	Param: string;
-	Result: string;
+    /**
+     * 请求ID。
+     * @example `1C488B66-B819-4D14-8711-C4EAAA13AC01`
+     */
+    RequestId: string;
 }
-

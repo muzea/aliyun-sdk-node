@@ -1,8 +1,9 @@
-interface DescribeHaVipsRequest {
+export interface DescribeHaVipsRequest {
     "RegionId": string;
-    "Filter": string[];
-    "OwnerId"?: number;
     "PageNumber"?: number;
     "PageSize"?: number;
+    "Filter": {
+        Key: string;
+        Value: string[];
+    }[];
 }
-export { DescribeHaVipsRequest };

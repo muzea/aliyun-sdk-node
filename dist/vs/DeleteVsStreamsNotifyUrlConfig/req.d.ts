@@ -1,7 +1,7 @@
-interface DeleteVsStreamsNotifyUrlConfigRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
-    "ShowLog"?: string;
+export interface DeleteVsStreamsNotifyUrlConfigRequest {
+    /**
+     * 您的加速域名。
+     * @example `example.com`
+     */
     "DomainName": string;
 }
-export { DeleteVsStreamsNotifyUrlConfigRequest };

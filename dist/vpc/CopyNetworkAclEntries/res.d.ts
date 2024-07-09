@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.CopyNetworkAclEntriesResponse
 export interface CopyNetworkAclEntriesResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `6608E72F-F276-440F-ABEF-419971CEC4D1`
+     */
+    RequestId: string;
 }
-

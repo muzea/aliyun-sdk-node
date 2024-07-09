@@ -1,0 +1,12 @@
+export interface DeleteLiveFilesByIdResponse {
+    /**
+     * Id of the request
+     * @example `FE22D613-D3C6-4A58-87CA-F21FC85AA08E`
+     */
+    RequestId: string;
+    /**
+     * 返回结果。
+     * @example `true`
+     */
+    Result: boolean;
+}

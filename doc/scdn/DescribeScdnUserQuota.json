@@ -1,16 +1,1 @@
-{
-  "name": "DescribeScdnUserQuota",
-  "protocol": "HTTP|HTTPS",
-  "method": "POST|GET",
-  "path": "/",
-  "timeout": null,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Query",
-      "required": false
-    }
-  },
-  "res": {}
-}
+{"methods":["get","post"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"read","systemTags":{"operationType":"get"},"parameters":[],"responses":{"200":{"schema":{"type":"object","properties":{"BlockQuota":{"description":"封禁上限。","type":"integer","format":"int32","example":"20"},"RefreshUrlRemain":{"description":"当天剩余URL刷新数量。","type":"integer","format":"int32","example":"100"},"DomainQuota":{"description":"加速域名数上限。","type":"integer","format":"int32","example":"50"},"BlockRemain":{"description":"封禁余量。","type":"integer","format":"int32","example":"500"},"PreloadRemain":{"description":"当天剩余预热数量。","type":"integer","format":"int32","example":"300"},"RequestId":{"description":"请求ID。","type":"string","example":"BFFCDFAD-DACC-484E-9BE6-0AF3B3A0DD23"},"RefreshUrlQuota":{"description":"当天URL刷新数量上限。","type":"integer","format":"int32","example":"100"},"PreloadQuota":{"description":"当天预热数量上限。","type":"integer","format":"int32","example":"500"},"RefreshDirQuota":{"description":"当天路径刷新数量上限。","type":"integer","format":"int32","example":"100"},"RefreshDirRemain":{"description":"当天剩余目录刷新数量。","type":"integer","format":"int32","example":"100"}}}}},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"BlockQuota\\\": 20,\\n  \\\"RefreshUrlRemain\\\": 100,\\n  \\\"DomainQuota\\\": 50,\\n  \\\"BlockRemain\\\": 500,\\n  \\\"PreloadRemain\\\": 300,\\n  \\\"RequestId\\\": \\\"BFFCDFAD-DACC-484E-9BE6-0AF3B3A0DD23\\\",\\n  \\\"RefreshUrlQuota\\\": 100,\\n  \\\"PreloadQuota\\\": 500,\\n  \\\"RefreshDirQuota\\\": 100,\\n  \\\"RefreshDirRemain\\\": 100\\n}\",\"errorExample\":\"\"},{\"type\":\"xml\",\"example\":\"<PreloadRemain>100</PreloadRemain>\\n<RefreshUrlRemain>500</RefreshUrlRemain>\\n<DomainQuota>20</DomainQuota>\\n<RefreshDirRemain>300</RefreshDirRemain>\\n<RequestId>BFFCDFAD-DACC-484E-9BE6-0AF3B3A0DD23</RequestId>\\n<BlockRemain>100</BlockRemain>\\n<RefreshUrlQuota>1000</RefreshUrlQuota>\\n<BlockQuota>100</BlockQuota>\\n<PreloadQuota>300</PreloadQuota>\\n<RefreshDirQuota>500</RefreshDirQuota>\",\"errorExample\":\"\"}]","title":"查询用户资源上限及已使用情况","summary":"调用DescribeScdnUserQuota查询用户资源上限及已使用情况。","description":"**调用此接口可以查询到如下信息：**\n- 域名最大限制数量\n- 刷新、预热URL及目录的最大限制数量\n- 当日剩余刷新、预热URL及目录的次数","requestParamsDescription":" ","responseParamsDescription":" ","extraInfo":" "}

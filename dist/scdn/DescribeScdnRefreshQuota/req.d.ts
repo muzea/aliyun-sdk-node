@@ -1,4 +1,2 @@
-interface DescribeScdnRefreshQuotaRequest {
-    "RegionId"?: string;
+export interface DescribeScdnRefreshQuotaRequest {
 }
-export { DescribeScdnRefreshQuotaRequest };

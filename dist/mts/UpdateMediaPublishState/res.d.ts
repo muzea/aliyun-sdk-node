@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/mts.UpdateMediaPublishStateResponse
 export interface UpdateMediaPublishStateResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `91B6CAB9-034C-4E4E-A40B-E7F5C81E688C`
+     */
+    RequestId: string;
 }
-

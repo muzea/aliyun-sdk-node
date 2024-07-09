@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.AllocatePublicIpAddressResponse
 export interface AllocatePublicIpAddressResponse {
-	RequestId: string;
-	IpAddress: string;
+    /**
+     * 实例的公网IP地址。
+     * @example `112.124.**.**`
+     */
+    IpAddress: string;
+    /**
+     * 请求ID。
+     * @example `473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E`
+     */
+    RequestId: string;
 }
-

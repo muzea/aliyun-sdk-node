@@ -1,3 +1,0 @@
-interface DescribeRdsVSwitchsResponse {
-}
-export { DescribeRdsVSwitchsResponse };

@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cbn.UnassociateCenBandwidthPackageResponse
 export interface UnassociateCenBandwidthPackageResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `0C2EE7A8-74D4-4081-8236-CEBDE3BBCF50`
+     */
+    RequestId: string;
 }
-

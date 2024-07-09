@@ -1,17 +1,18 @@
-interface DescribeCenGeographicSpansRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeCenGeographicSpansRequest {
     /**
-    * 列表的页码，默认值为**1**。
-    * @example `1`
-    */ "PageNumber"?: number;
+     * 查询页码。默认值为**1**。
+     * @example `1`
+     */
+    "PageNumber"?: number;
     /**
-    * 分页查询时每页的行数，最大值为**50**，默认值为**10**。
-    * @example `10`
-    */ "PageSize"?: number;
+     * 分页查询时每页显示的条目数。默认值为**10**，取值范围：**1**~**50**。
+     * @example `10`
+     */
+    "PageSize"?: number;
     /**
-    * 互通区域。
-    * @example `china-china`
-    */ "GeographicSpanId"?: string;
+     * 互通区域ID。
+     * > 如果您不输入本参数，系统默认会帮您查询云企业网支持的所有互通区域信息。
+     * @example `china_asia-pacific`
+     */
+    "GeographicSpanId"?: string;
 }
-export { DescribeCenGeographicSpansRequest };

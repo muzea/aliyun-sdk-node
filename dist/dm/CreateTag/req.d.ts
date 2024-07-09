@@ -1,6 +1,12 @@
-interface CreateTagRequest {
-    "RegionId"?: string;
+export interface CreateTagRequest {
+    /**
+     * 标签名称
+     * @example `test`
+     */
     "TagName": string;
-    "OwnerId"?: number;
+    /**
+     * 标签描述
+     * @example `test description`
+     */
+    "TagDescription"?: string;
 }
-export { CreateTagRequest };

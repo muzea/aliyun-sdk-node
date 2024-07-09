@@ -1,3 +1,0 @@
-interface DetachStreamResponse {
-}
-export { DetachStreamResponse };

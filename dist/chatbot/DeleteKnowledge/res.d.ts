@@ -1,3 +1,0 @@
-interface DeleteKnowledgeResponse {
-}
-export { DeleteKnowledgeResponse };

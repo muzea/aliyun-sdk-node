@@ -1,3 +1,0 @@
-interface SendMessageToGlobeResponse {
-}
-export { SendMessageToGlobeResponse };

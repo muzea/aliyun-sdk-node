@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.ModifyHaVipAttributeResponse
 export interface ModifyHaVipAttributeResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `C44F62BE-9CE7-4277-B117-69243F3988BF`
+     */
+    RequestId: string;
 }
-

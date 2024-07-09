@@ -1,6 +1,14 @@
-interface AddMediaTagRequest {
-    "RegionId"?: string;
+export interface AddMediaTagRequest {
+    /**
+     * 需要添加标签的媒体文件的ID。
+     * > 媒体ID可以从[新增媒体](~~44458~~)的返回参数中获取，也可以登录媒体处理控制台，通过**媒体管理**>**媒体列表**找到目标文件，单击**管理**，从目标文件的基础信息页签获取。
+     * @example `3e6149d5a8c944c09b1a8d2dc3e4****`
+     */
     "MediaId": string;
+    /**
+     * 新增的媒体标签。不超过32个字节，UTF-8编码。
+     * > 仅支持添加单个标签。如需一次设置多个标签，可以通过[更新媒体-基本信息](~~44464~~)接口实现。
+     * @example `tag1`
+     */
     "Tag"?: string;
 }
-export { AddMediaTagRequest };

@@ -1,6 +1,7 @@
-interface DescribeAuditPolicyRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeAuditPolicyRequest {
+    /**
+     *  实例ID。
+     * @example `dds-bp12c5b040dc****`
+     */
     "DBInstanceId": string;
 }
-export { DescribeAuditPolicyRequest };

@@ -1,11 +1,12 @@
-interface DescribeNotificationConfigurationsRequest {
+export interface DescribeNotificationConfigurationsRequest {
+    /**
+     * 伸缩组的ID。
+     * @example `asg-bp1igpak5ft1flyp****`
+     */
+    "ScalingGroupId": string;
+    /**
+     * 伸缩组所属的地域ID。
+     * @example `cn-beijing`
+     */
     "RegionId"?: string;
-    /**
-    * 伸缩组的ID。
-    * @example `AG6CQdPU8OKdwLjgZcJ****`
-    */ "ScalingGroupId": string;
-    /**
-    * @example `123456123456`
-    */ "OwnerId"?: number;
 }
-export { DescribeNotificationConfigurationsRequest };

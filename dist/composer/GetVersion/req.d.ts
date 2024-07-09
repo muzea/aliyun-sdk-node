@@ -1,12 +1,12 @@
-interface GetVersionRequest {
-    "RegionId"?: string;
+export interface GetVersionRequest {
     /**
-    * 需要查询的工作流编排实例的 ID
-    * @example `lc-abcdefg`
-    */ "FlowId": string;
+     * 工作流ID
+     * @example `lc-uf6axpwfcw4ubx`
+     */
+    "FlowId": string;
     /**
-    * 需要查询的版本
-    * @example `10`
-    */ "VersionId": number;
+     * 版本ID
+     * @example `ve-uf6bwdtvid7o25`
+     */
+    "VersionId": string;
 }
-export { GetVersionRequest };

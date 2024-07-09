@@ -1,3 +1,0 @@
-interface QueryCdpOfferResponse {
-}
-export { QueryCdpOfferResponse };

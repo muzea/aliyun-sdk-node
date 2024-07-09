@@ -1,9 +1,15 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/dds.DescribeAuditPolicyResponse
 export interface DescribeAuditPolicyResponse {
-	RequestId: string;
-	LogAuditStatus: string;
-	StoragePeriod: number;
+    /**
+     * 请求ID。
+     * @example `111E7B16-0A87-4CBA-B271-F34AD61E099F`
+     */
+    RequestId: string;
+    /**
+     *  审计日志的状态。
+     * - Enable：开启。
+     * - Disabled：关闭。
+     * 默认为关闭状态。
+     * @example `Enable`
+     */
+    LogAuditStatus: string;
 }
-

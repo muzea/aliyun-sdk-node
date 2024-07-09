@@ -1,16 +1,1 @@
-{
-  "name": "DescribeRegions",
-  "protocol": "HTTPS|HTTP",
-  "method": "POST|GET",
-  "path": "/",
-  "timeout": 10000,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Query",
-      "required": false
-    }
-  },
-  "res": {}
-}
+{"summary":"查询操作审计支持的阿里云地域。","methods":["post","get"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"read","deprecated":false,"systemTags":{"operationType":"get"},"parameters":[{"name":"AcceptLanguage","in":"query","schema":{"description":"地域名称支持的语言，取值：  \n\n- zh-CN：中文。\n- en-US（默认值）：英文。","type":"string","required":false,"example":"en-US"}}],"responses":{"200":{"schema":{"type":"object","properties":{"RequestId":{"description":"请求ID。","type":"string","example":"ACA7C814-12BC-4D81-A0D2-72071C9D6D2C"},"Regions":{"type":"object","properties":{"Region":{"description":"地域列表。","type":"array","items":{"type":"object","properties":{"RegionId":{"title":"地域ID","description":"地域ID。","type":"string","example":"cn-hangzhou"},"RegionEndpoint":{"title":"地域链接地址","description":"接入地址。","type":"string","example":"actiontrail.cn-hangzhou.aliyuncs.com"},"LocalName":{"title":"地域名称","description":"地域名称。  \n\n> 当AcceptLanguage取值为zh-CN时，返回中文。当AcceptLanguage取值为en-US或不指定时，返回英文。","type":"string","example":"China (Hangzhou)"}}}}}}}}}},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"RequestId\\\": \\\"ACA7C814-12BC-4D81-A0D2-72071C9D6D2C\\\",\\n  \\\"Regions\\\": {\\n    \\\"Region\\\": [\\n      {\\n        \\\"RegionId\\\": \\\"cn-hangzhou\\\",\\n        \\\"RegionEndpoint\\\": \\\"actiontrail.cn-hangzhou.aliyuncs.com\\\",\\n        \\\"LocalName\\\": \\\"China (Hangzhou)\\\"\\n      }\\n    ]\\n  }\\n}\",\"errorExample\":\"\"},{\"type\":\"xml\",\"example\":\"\",\"errorExample\":\"\"}]","title":"查询可以使用的阿里云地域","description":"更多信息，请参见[地域和可用区](~~40654~~)。","requestParamsDescription":"关于公共请求参数的详情，请参见[公共参数](~~185885~~)。"}

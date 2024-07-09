@@ -1,6 +1,7 @@
-interface DescribeVodDomainDetailRequest {
-    "RegionId"?: string;
+export interface DescribeVodDomainDetailRequest {
+    /**
+     * 点播加速域名名称。
+     * @example `example.com`
+     */
     "DomainName": string;
-    "OwnerId"?: number;
 }
-export { DescribeVodDomainDetailRequest };

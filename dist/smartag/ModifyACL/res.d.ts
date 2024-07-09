@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/smartag.ModifyACLResponse
 export interface ModifyACLResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `076FD0BE-67D5-4338-A2A1-C54DE7D78B16`
+     */
+    RequestId: string;
 }
-

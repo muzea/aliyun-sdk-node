@@ -1,14 +1,13 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.DataInOnsDLQMessageResendById
-export interface DataInOnsDLQMessageResendById {
-	MsgId: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ons.OnsDLQMessageResendByIdResponse
 export interface OnsDLQMessageResendByIdResponse {
-	RequestId: string;
-	HelpUrl: string;
-	Data: DataInOnsDLQMessageResendById;
+    /**
+     * 公共参数，每个请求的ID都是唯一的，可用于排查和定位问题。
+     * @example `D94CC769-4DC3-4690-A868-9D0631B1****`
+     */
+    RequestId: string;
+    Data: {
+        /**
+         * 返回的消息列表。
+         */
+        MsgId: string[];
+    };
 }
-

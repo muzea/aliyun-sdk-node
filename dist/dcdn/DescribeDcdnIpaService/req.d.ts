@@ -1,5 +1,2 @@
-interface DescribeDcdnIpaServiceRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeDcdnIpaServiceRequest {
 }
-export { DescribeDcdnIpaServiceRequest };

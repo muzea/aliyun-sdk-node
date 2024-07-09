@@ -1,42 +1,57 @@
-interface DescribeSystemEventCountRequest {
-    "RegionId"?: string;
+export interface DescribeSystemEventCountRequest {
     /**
-    * 产品的名称缩写，具体都有哪些产品接入的系统事件监控，请调用：DescribeSystemEventMetaList接口。
-    * @example `oss`
-    */ "Product"?: string;
+     * 云服务名称。
+     * 调用DescribeSystemEventMetaList接口，获取返回参数`Product`的值，即可获得当前阿里云账号下所有事件的云服务名称。更多信息，请参见[DescribeSystemEventMetaList](~~114972~~)。
+     * @example `ECS`
+     */
+    "Product"?: string;
     /**
-    * 事件类型，不同的产品事件有不同的类型，调用：DescribeSystemEventMetaList接口获得产品以及产品的事件类型。
-    * @example `Exception`
-    */ "EventType"?: string;
+     * 事件类型。
+     * 调用DescribeSystemEventMetaList接口，获取返回参数`EventType`的值，即可获得当前阿里云账号下所有云服务的事件类型。更多信息，请参见[DescribeSystemEventMetaList](~~114972~~)。
+     * @example `StatusNotification`
+     */
+    "EventType"?: string;
     /**
-    * 事件的名称。
-    * @example `BucketIngressBandwidth`
-    */ "Name"?: string;
+     * 事件名称。
+     * 调用DescribeSystemEventMetaList接口，获取返回参数`Name`的值，即可获得当前阿里云账号下所有云服务的事件名称。更多信息，请参见[DescribeSystemEventMetaList](~~114972~~)。
+     * @example `Instance:StateChange`
+     */
+    "Name"?: string;
     /**
-    * 事件的级别， CRITICAL（严重), WARN(警告), INFO(信息)。
-    * @example `warn`
-    */ "Level"?: string;
+     * 事件级别。取值：
+     * - Critical：严重。
+     * - Warn：警告。
+     * - Info：信息。
+     * 调用DescribeSystemEventMetaList接口，获取返回参数`Level`的值，即可获得当前阿里云账号下所有云服务的事件级别。更多信息，请参见[DescribeSystemEventMetaList](~~114972~~)。
+     * @example `Info`
+     */
+    "Level"?: string;
     /**
-    * 状态，多个状态用英文逗号分隔。
-    * @example `normal`
-    */ "Status"?: string;
+     * 事件状态。
+     * 调用DescribeSystemEventMetaList接口，获取返回参数`Status`的值，即可获得当前阿里云账号下所有云服务的事件状态。更多信息，请参见[DescribeSystemEventMetaList](~~114972~~)。
+     * @example `Normal`
+     */
+    "Status"?: string;
     /**
-    * 应用分组ID。
-    * @example `12345`
-    */ "GroupId"?: string;
+     * 应用分组ID。
+     * @example `17285****`
+     */
+    "GroupId"?: string;
     /**
-    * 搜索事件内容包含的关键字，支持 and 或者 or。
-    * - 如果想要搜索事件内容中即包括a也包括b的结果，可以搜索 a and b；
-    * - 如果想要搜索事件内容中包括a或者b的结果，可以搜索 a or b。
-    * @example `cms`
-    */ "SearchKeywords"?: string;
+     * 搜索事件内容包含的关键字。取值：
+     * - 如果您需要搜索事件的内容中包括a和b，则可以搜索`a and b`。
+     * - 如果您需要搜索事件的内容中包括a或b，可以搜索`a or b`。
+     * @example `ECS`
+     */
+    "SearchKeywords"?: string;
     /**
-    * 开始时间，距离1970 年 1 月 1 日 0 点的毫秒数。
-    * @example `1552209685596`
-    */ "StartTime"?: string;
+     * 查询事件开始的时间戳。单位：毫秒。
+     * @example `1635993541000`
+     */
+    "StartTime"?: string;
     /**
-    * 结束时间，距离 1970 年 1 月 1 日 0 点的毫秒数。
-    * @example `1552220485596`
-    */ "EndTime"?: string;
+     * 查询事件结束的时间戳。单位：毫秒。
+     * @example `1635993921000`
+     */
+    "EndTime"?: string;
 }
-export { DescribeSystemEventCountRequest };

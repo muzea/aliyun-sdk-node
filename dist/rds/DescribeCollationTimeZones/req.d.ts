@@ -1,5 +1,2 @@
-interface DescribeCollationTimeZonesRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeCollationTimeZonesRequest {
 }
-export { DescribeCollationTimeZonesRequest };

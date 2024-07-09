@@ -1,3 +1,0 @@
-interface SparkRelateHBaseResponse {
-}
-export { SparkRelateHBaseResponse };

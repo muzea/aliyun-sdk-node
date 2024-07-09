@@ -1,3 +1,0 @@
-interface ExploreHiTSDBInstanceDeletionJobListResponse {
-}
-export { ExploreHiTSDBInstanceDeletionJobListResponse };

@@ -1,3 +1,0 @@
-interface ModifyAppResponse {
-}
-export { ModifyAppResponse };

@@ -1,3 +1,0 @@
-interface DescribeBizListResponse {
-}
-export { DescribeBizListResponse };

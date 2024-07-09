@@ -1,9 +1,7 @@
-interface DescribeLogicInstanceTopologyRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeLogicInstanceTopologyRequest {
     /**
-    * 目的实例的ID。
-    * @example `r-bp1xxxxxxxxxxxxx`
-    */ "InstanceId": string;
+     * 实例ID。
+     * @example `r-bp1zxszhcgatnx****`
+     */
+    "InstanceId": string;
 }
-export { DescribeLogicInstanceTopologyRequest };

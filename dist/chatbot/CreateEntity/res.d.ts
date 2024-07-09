@@ -1,3 +1,0 @@
-interface CreateEntityResponse {
-}
-export { CreateEntityResponse };

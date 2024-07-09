@@ -1,23 +1,44 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cloudapi.AppItem
-export interface AppItem {
-	AppId: number;
-	AppName: string;
-	Description: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cloudapi.AppsInDescribeApps
-export interface AppsInDescribeApps {
-	AppItem: AppItem[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cloudapi.DescribeAppsResponse
 export interface DescribeAppsResponse {
-	RequestId: string;
-	TotalCount: number;
-	PageSize: number;
-	PageNumber: number;
-	Apps: AppsInDescribeApps;
+    /**
+     * 返回指定的页码
+     * @example `1`
+     */
+    PageNumber: number;
+    /**
+     * 请求ID
+     * @example `CEF72CEB-54B6-4AE8-B225-F876FF7BZ015`
+     */
+    RequestId: string;
+    /**
+     * 返回指定的每页条数
+     * @example `10`
+     */
+    PageSize: number;
+    /**
+     * 返回结果的总条数
+     * @example `1`
+     */
+    TotalCount: number;
+    Apps: {
+        /**
+         * 由 AppItem 组成的数组格式，返回app的信息
+         */
+        AppItem: {
+            /**
+             * APP名称
+             * @example `CreateApptest`
+             */
+            AppName: string;
+            /**
+             * APP描述信息
+             * @example `App test`
+             */
+            Description: string;
+            /**
+             * APP编号
+             * @example `20112314518278`
+             */
+            AppId: number;
+        }[];
+    };
 }
-

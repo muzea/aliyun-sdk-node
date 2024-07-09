@@ -1,3 +1,0 @@
-interface DescribeSubscriptionPerformanceResponse {
-}
-export { DescribeSubscriptionPerformanceResponse };

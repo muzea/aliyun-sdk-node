@@ -1,4 +1,2 @@
-interface DescribeRootDomainRequest {
-    "RegionId"?: string;
+export interface DescribeRootDomainRequest {
 }
-export { DescribeRootDomainRequest };

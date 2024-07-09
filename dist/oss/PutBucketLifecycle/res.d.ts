@@ -1,3 +1,1 @@
-interface PutBucketLifecycleResponse {
-}
-export { PutBucketLifecycleResponse };
+export type PutBucketLifecycleResponse = any;

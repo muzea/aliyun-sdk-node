@@ -1,101 +1,140 @@
-interface DescribeLoadBalancersRequest {
+export interface DescribeLoadBalancersRequest {
     /**
-    * 负载均衡实例的地域。
-    * 您可以从[地域和可用区](~~40654~~)列表或通过调用[DescribeRegions](~~25609~~)接口查询地域ID。
-    * @example `cn-hangzhou`
-    */ "RegionId": string;
-    "OwnerId"?: number;
+     * 传统型负载均衡实例的地域ID。
+     * 您可以通过调用[DescribeRegions](~~27584~~)接口查询地域ID。
+     * @example `cn-hangzhou`
+     */
+    "RegionId": string;
     /**
-    * 添加的后端服务器（ECS实例）的ID。
-    * @example `vm-231`
-    */ "ServerId"?: string;
+     * 添加的后端服务器ID。
+     * @example `i-2zebcbq******`
+     */
+    "ServerId"?: string;
     /**
-    * IP版本，可以设置为ipv4或者ipv6。
-    * > 目前支持创建IPv6实例且实例类型必须为性能保障型实例的可用区如下：
-    * 华东1地域的E、F两个可用区、华北2地域的F、G两个可用区、华东2地域的所有可用区和华南1地域的D、E两个可用区。
-    * @example `ipv4`
-    */ "AddressIPVersion"?: string;
+     * IP版本，可以设置为**ipv4**或者**ipv6**。
+     * @example `ipv4`
+     */
+    "AddressIPVersion"?: string;
     /**
-    * 负载均衡实例状态：
-    * - inactive: 此状态的实例监听不会再转发流量。
-    * - active: 实例创建后，默认状态为active。
-    * - locked: 实例已经被锁定。
-    * @example `active`
-    */ "LoadBalancerStatus"?: string;
+     * 实例状态。取值：
+     * - **inactive**: 实例已停止，此状态的实例监听不会再转发流量。
+     * - **active**: 实例运行中，实例创建后，默认状态为**active**。
+     * - **locked**: 实例已锁定。当负载均衡实例到期后，但到期时间未超过7天时，负载均衡实例进入锁定状态。此种状态下，您不能对负载均衡实例进行任何操作，并且实例不再会进行流量转发，但会保留实例的IP和其它配置。
+     * @example `active`
+     */
+    "LoadBalancerStatus"?: string;
     /**
-    * 负载均衡实例ID。
-    * 支持多值查询，最多可输入10个ID，以逗号分隔。
-    * @example `lb-bp1b6c719dfa08exfuca5`
-    */ "LoadBalancerId"?: string;
+     * 传统型负载均衡实例ID。
+     * 支持多值查询，最多可输入10个ID，以半角逗号（,）分隔。
+     * @example `lb-bp1b6c719dfa****`
+     */
+    "LoadBalancerId"?: string;
     /**
-    * 负载均衡实例名称。
-    * 支持多值查询，最多可输入10个名称，以逗号分隔。
-    * @example `abc1`
-    */ "LoadBalancerName"?: string;
+     * 传统型负载均衡实例名称。
+     * 长度为1~80个英文或中文字符，必须以大小字母或中文开头，可包含数字、半角句号（.）、下划线（_）和短划线（-）。
+     * 支持多值查询，最多可输入10个名称，以半角逗号（,）分隔。
+     * @example `test`
+     */
+    "LoadBalancerName"?: string;
     /**
-    * 添加的后端服务器（ECS实例）的内网地址。
-    * 支持多值查询，以逗号分隔。
-    * @example `10.80.102.20`
-    */ "ServerIntranetAddress"?: string;
+     * 添加的后端服务器的内网地址。
+     * 支持多值查询，以半角逗号（,）分隔。
+     * @example `10.XX.XX.102`
+     */
+    "ServerIntranetAddress"?: string;
     /**
-    * 负载均衡实例的网络类型，取值：**intranet**或**internet**。
-    * @example `intranet`
-    */ "AddressType"?: string;
+     * 传统型负载均衡实例的网络类型。取值：
+     * * **internet**：创建公网负载均衡实例后，系统会分配一个公网IP地址，可以转发公网请求。
+     * * **intranet**：创建内网负载均衡实例后，系统会分配一个内网IP地址，仅可转发内网请求。
+     * @example `intranet`
+     */
+    "AddressType"?: string;
     /**
-    * 公网类型实例付费方式。取值：**paybybandwidth|paybytraffic**。
-    * @example `paybybandwidth`
-    */ "InternetChargeType"?: string;
+     * 公网计费方式。取值：
+     * - **paybybandwidth**：按带宽计费。
+     * - **paybytraffic**：按流量计费。
+     * <props="china">当**PayType**参数的值为**PrePay**时，只支持按带宽计费。当**InstanceChargeType**参数的值为**PayByCLCU**时，只支持按流量计费。</props>
+     * @example `paybytraffic`
+     */
+    "InternetChargeType"?: string;
     /**
-    * 负载均衡实例所属的VPC ID。
-    * @example `vpc-bp1aevy8sofi8mh1qc5cm`
-    */ "VpcId"?: string;
+     * 传统型负载均衡实例所属的VPC ID。
+     * @example `vpc-bp1aevy8sof****`
+     */
+    "VpcId"?: string;
     /**
-    * 负载均衡实例所属的VSwitch ID。
-    * @example `vsw-bp12mw1f8k3jgygk9bmlj`
-    */ "VSwitchId"?: string;
+     * 传统型负载均衡实例所属的交换机ID。
+     * @example `vsw-bp12mw1f8k3****`
+     */
+    "VSwitchId"?: string;
     /**
-    * 私网负载均衡实例的网络类型，取值：**vpc|classic**。
-    * - vpc：专有网络实例
-    * - classic：经典网络实例
-    * @example `vpc`
-    */ "NetworkType"?: string;
+     * 私网实例的网络类型。取值：
+     * - **vpc**：专有网络实例。
+     * - **classic**：经典网络实例。
+     * @example `vpc`
+     */
+    "NetworkType"?: string;
     /**
-    * 负载均衡实例的服务地址。
-    * @example `192.168.0.6`
-    */ "Address"?: string;
+     * 传统型负载均衡实例的服务地址。
+     * @example `192.168.XX.XX`
+     */
+    "Address"?: string;
     /**
-    * 负载均衡实例的主可用区ID。
-    * @example `cn-hangzhou-b`
-    */ "MasterZoneId"?: string;
+     * 负载均衡实例的主可用区ID。
+     * @example `cn-hangzhou-b`
+     */
+    "MasterZoneId"?: string;
     /**
-    * 负载均衡实例的备可用区ID。
-    * 目前对金融云用户暂时不支持多可用区功能。
-    * @example `cn-hangzhou-d`
-    */ "SlaveZoneId"?: string;
-    "access_key_id"?: string;
+     * 传统型负载均衡实例的备可用区ID。
+     * 目前对金融云用户暂时不支持多可用区功能。
+     * @example `cn-hangzhou-d`
+     */
+    "SlaveZoneId"?: string;
     /**
-    * 负载均衡实例绑定的Tag列表，其结构是一个json dictionary，包含TagKey和TagValue。
-    * 一次请求中，List中的元素最多有10个。
-    * @example `{"tagKey":"Key1","tagValue":"Value1"}`
-    */ "Tags"?: string;
+     * 传统型负载均衡实例绑定的标签列表，其结构是一个JSON dictionary，包含标签键和标签值。
+     * 一次请求中，绑定的标签列表中最多支持10个标签。
+     * @example `[{"tagKey":"Key1","tagValue":"Value1"}]`
+     */
+    "Tags"?: string;
     /**
-    * 负载均衡实例付费类型。
-    * 取值：**PayOnDemand|PrePay**。
-    * @example `PayOnDemand`
-    */ "PayType"?: string;
+     * 传统型负载均衡实例付费模式。取值：
+     * * **PayOnDemand**：按量付费。
+     * <props="china">- **PrePay**：包年包月。</props>
+     * @example `PayOnDemand`
+     */
+    "PayType"?: string;
     /**
-    * 企业资源组ID。
-    * @example `rg-acfmxazb4ph6aiy`
-    */ "ResourceGroupId"?: string;
+     * 企业资源组ID。
+     * @example `rg-acfmxazb4p****`
+     */
+    "ResourceGroupId"?: string;
     /**
-    * 分页查询时的页码。
-    * @example `1`
-    */ "PageNumber"?: number;
+     * 分页查询时的页码。
+     * @example `1`
+     */
+    "PageNumber"?: number;
     /**
-    * 分页查询时设置的每页行数。
-    * @example `50`
-    */ "PageSize"?: number;
-    "Tag"?: string[];
-    "Fuzzy"?: string;
+     * 分页查询时设置的每页行数。
+     * 取值范围：**1**~**100**。
+     * > 如果设置了**PageSize**，则需要同时设置**PageNumber**。
+     * @example `50`
+     */
+    "PageSize"?: number;
+    /**
+     * 标签列表。
+     */
+    "Tag"?: {
+        /**
+         * 资源的标签键。N的取值范围：**1~20**。一旦输入该值，则不允许为空字符串。
+         * 最多支持64个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。
+         * @example `FinanceDept`
+         */
+        Key: string;
+        /**
+         * 资源的标签值。N的取值范围：**1~20**。一旦输入该值，可以为空字符串。
+         * 最多支持128个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。
+         * @example `FinanceJoshua`
+         */
+        Value: string;
+    }[];
 }
-export { DescribeLoadBalancersRequest };

@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.CancelImportResponse
 export interface CancelImportResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `17F57FEE-EA4F-4337-8D2E-9C23CAA63D74`
+     */
+    RequestId: string;
 }
-

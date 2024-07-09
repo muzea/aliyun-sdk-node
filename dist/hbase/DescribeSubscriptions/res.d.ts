@@ -1,3 +1,0 @@
-interface DescribeSubscriptionsResponse {
-}
-export { DescribeSubscriptionsResponse };

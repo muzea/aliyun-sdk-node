@@ -1,3 +1,0 @@
-interface UpdateCcIDCBlockSwitchResponse {
-}
-export { UpdateCcIDCBlockSwitchResponse };

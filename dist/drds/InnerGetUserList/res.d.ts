@@ -1,3 +1,0 @@
-interface InnerGetUserListResponse {
-}
-export { InnerGetUserListResponse };

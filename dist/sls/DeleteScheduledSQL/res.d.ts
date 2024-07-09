@@ -1,0 +1,1 @@
+export type DeleteScheduledSQLResponse = any;

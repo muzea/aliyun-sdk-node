@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vod.SetDefaultAITemplateResponse
 export interface SetDefaultAITemplateResponse {
-	RequestId: string;
-	TemplateId: string;
+    /**
+     * AI模板ID。
+     * @example `1706a0063dd733f6a823ef32e0a5****`
+     */
+    TemplateId: string;
+    /**
+     * 请求ID。
+     * @example `8E70E3F8-E2EE-47BC-4677-379D6F28****`
+     */
+    RequestId: string;
 }
-

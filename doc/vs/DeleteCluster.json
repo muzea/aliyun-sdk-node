@@ -1,0 +1,1 @@
+{"methods":["post","get"],"schemes":["http","https"],"security":[{"AK":[]}],"systemTags":{},"parameters":[{"name":"ClusterId","in":"query","schema":{"type":"string","required":true}}],"responses":{"200":{"schema":{"type":"object","properties":{"RequestId":{"type":"string"}}}}},"errorCodes":{}}

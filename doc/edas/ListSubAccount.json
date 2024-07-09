@@ -1,16 +1,1 @@
-{
-  "name": "ListSubAccount",
-  "protocol": "HTTPS|HTTP",
-  "method": "POST",
-  "path": "/pop/v5/account/sub_account_list",
-  "timeout": 2000,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Query",
-      "required": false
-    }
-  },
-  "res": {}
-}
+{"path":"/pop/v5/account/sub_account_list","methods":["post"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"read","deprecated":false,"systemTags":{"operationType":"get"},"responses":{"200":{"schema":{"type":"object","properties":{"Code":{"description":"接口状态或POP错误码","type":"integer","format":"int32","example":"200"},"Message":{"description":"附加信息","type":"string","example":"message"},"RequestId":{"description":"请求ID","type":"string","example":"57609587-DFA2-41EC-****-*********"},"SubAccountList":{"type":"object","properties":{"SubAccount":{"description":"子账号和RAM用户列表","type":"array","items":{"type":"object","properties":{"SubEdasId":{"description":"子账号或RAM用户的EdasId","type":"string","example":"28382009411268****"},"SubUserId":{"description":"子账号或RAM用户的UserId","type":"string","example":"ram1@117274586608****"},"Email":{"description":"电子邮箱","type":"string","example":"email@aliyun.com"},"AdminUserId":{"description":"云账号的UserId","type":"string","example":"test@13624697***"},"AdminUserKp":{"description":"云账号的Kp（旧概念，实际上就是云账号的EdasId）","type":"string","example":"12456889****"},"AdminEdasId":{"description":"云账号的EdasId。","type":"string","example":"12456889****"},"SubUserKp":{"description":"子账号或RAM用户的Kp（旧概念，实际上就是子账号或RAM用户的EdasId）","type":"string","example":"28382009411268****"},"Phone":{"description":"联系方式","type":"string","example":"1373322****"}}}}}}}}}},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"Code\\\": 200,\\n  \\\"Message\\\": \\\"message\\\",\\n  \\\"RequestId\\\": \\\"57609587-DFA2-41EC-****-*********\\\",\\n  \\\"SubAccountList\\\": {\\n    \\\"SubAccount\\\": [\\n      {\\n        \\\"SubEdasId\\\": \\\"28382009411268****\\\",\\n        \\\"SubUserId\\\": \\\"ram1@117274586608****\\\",\\n        \\\"Email\\\": \\\"email@aliyun.com\\\",\\n        \\\"AdminUserId\\\": \\\"test@13624697***\\\",\\n        \\\"AdminUserKp\\\": \\\"12456889****\\\",\\n        \\\"AdminEdasId\\\": \\\"12456889****\\\",\\n        \\\"SubUserKp\\\": \\\"28382009411268****\\\",\\n        \\\"Phone\\\": \\\"1373322****\\\"\\n      }\\n    ]\\n  }\\n}\",\"errorExample\":\"\"},{\"type\":\"xml\",\"example\":\"<RequestId>57609587-DFA2-41EC-****-*********</RequestId>\\n<Message>message</Message>\\n<SubAccountList>\\n    <SubAccount>\\n        <AdminEdasId>12456889****</AdminEdasId>\\n        <AdminUserKp>12456889****</AdminUserKp>\\n        <Email>email@aliyun.com</Email>\\n        <SubEdasId>28382009411268****</SubEdasId>\\n        <Phone>1373322****</Phone>\\n        <AdminUserId>test@13624697***</AdminUserId>\\n        <SubUserId>ram1@117274586608****</SubUserId>\\n        <SubUserKp>28382009411268****</SubUserKp>\\n    </SubAccount>\\n</SubAccountList>\\n<Code>200</Code>\",\"errorExample\":\"\"}]","title":"获取子账号列表","summary":"获取子账号和RAM用户列表。","requestParamsDescription":" 无请求参数。","responseParamsDescription":" ","extraInfo":" ","parameters":[]}

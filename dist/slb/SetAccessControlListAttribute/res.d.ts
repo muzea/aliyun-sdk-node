@@ -1,8 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/slb.SetAccessControlListAttributeResponse
 export interface SetAccessControlListAttributeResponse {
-	RequestId: string;
-	AclId: string;
+    /**
+     * 请求ID。
+     * @example `988CB45E-1643-48C0-87B4-928DDF77EA49`
+     */
+    RequestId: string;
 }
-

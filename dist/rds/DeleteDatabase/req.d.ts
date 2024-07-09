@@ -1,13 +1,12 @@
-interface DeleteDatabaseRequest {
-    "RegionId"?: string;
+export interface DeleteDatabaseRequest {
     /**
-    * 实例ID。
-    * @example `rm-uf6wjk5xxxxxxx`
-    */ "DBInstanceId": string;
+     * 实例ID。可调用DescribeDBInstances获取。
+     * @example `rm-uf6wjk5****`
+     */
+    "DBInstanceId": string;
     /**
-    * 数据库名称。
-    * @example `testdb01`
-    */ "DBName": string;
-    "OwnerId"?: number;
+     * 数据库名称。
+     * @example `testdb01`
+     */
+    "DBName": string;
 }
-export { DeleteDatabaseRequest };

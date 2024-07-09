@@ -1,6 +1,12 @@
-interface RollbackInstanceVersionRequest {
-    "RegionId"?: string;
+export interface RollbackInstanceVersionRequest {
+    /**
+     * 实例ID。
+     * @example `drds************`
+     */
     "DrdsInstanceId": string;
-    "DrdsPassword"?: string;
+    /**
+     * 地域ID。
+     * @example `cn-hangzhou`
+     */
+    "RegionId"?: string;
 }
-export { RollbackInstanceVersionRequest };

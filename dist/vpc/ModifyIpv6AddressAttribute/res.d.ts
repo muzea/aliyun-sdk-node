@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.ModifyIpv6AddressAttributeResponse
 export interface ModifyIpv6AddressAttributeResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `D560AF68-4CE8-4A5C-B3FE-469F558094D0`
+     */
+    RequestId: string;
 }
-

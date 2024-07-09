@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cloudapi.ResetAppCodeResponse
 export interface ResetAppCodeResponse {
-	RequestId: string;
+    /**
+     * 本次请求的ID。
+     * @example `D1B18FFE-4A81-59D8-AA02-1817098977CD`
+     */
+    RequestId: string;
 }
-

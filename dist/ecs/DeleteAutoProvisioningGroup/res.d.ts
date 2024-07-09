@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.DeleteAutoProvisioningGroupResponse
 export interface DeleteAutoProvisioningGroupResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `B48A12CD-1295-4A38-A8F0-0E92C937****`
+     */
+    RequestId: string;
 }
-

@@ -1,14 +1,15 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/market.InstanceIdsInCreateOrder
-export interface InstanceIdsInCreateOrder {
-	InstanceId: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/market.CreateOrderResponse
 export interface CreateOrderResponse {
-	RequestId: string;
-	OrderId: string;
-	InstanceIds: InstanceIdsInCreateOrder;
+    /**
+     * 订单 ID
+     * @example `202********0117`
+     */
+    OrderId: string;
+    /**
+     * 请求 ID
+     * @example `4ca591b5-bc30-4fa7-aeaa-c4d0ec5d24ed`
+     */
+    RequestId: string;
+    InstanceIds: {
+        InstanceId: string[];
+    };
 }
-

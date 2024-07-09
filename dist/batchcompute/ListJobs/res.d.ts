@@ -1,3 +1,0 @@
-interface ListJobsResponse {
-}
-export { ListJobsResponse };

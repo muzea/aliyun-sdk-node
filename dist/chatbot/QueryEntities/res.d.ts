@@ -1,3 +1,0 @@
-interface QueryEntitiesResponse {
-}
-export { QueryEntitiesResponse };

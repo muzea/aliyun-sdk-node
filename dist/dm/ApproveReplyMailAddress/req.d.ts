@@ -1,6 +1,7 @@
-interface ApproveReplyMailAddressRequest {
-    "RegionId"?: string;
+export interface ApproveReplyMailAddressRequest {
+    /**
+     * 邮箱地址Ticket
+     * @example `ticket凭证`
+     */
     "Ticket": string;
-    "OwnerId"?: number;
 }
-export { ApproveReplyMailAddressRequest };

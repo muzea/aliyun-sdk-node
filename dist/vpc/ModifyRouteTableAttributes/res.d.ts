@@ -1,10 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/vpc.ModifyRouteTableAttributesResponse
 export interface ModifyRouteTableAttributesResponse {
-	RequestId: string;
-	Code: string;
-	Message: string;
-	Success: boolean;
+    /**
+     * 请求ID。
+     * @example `62172DD5-6BAC-45DF-8D44`
+     */
+    RequestId: string;
 }
-

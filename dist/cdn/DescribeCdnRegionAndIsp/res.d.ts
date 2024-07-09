@@ -1,31 +1,41 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cdn.Region
-export interface Region {
-	NameZh: string;
-	NameEn: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cdn.Regions
-export interface Regions {
-	Region: Region[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cdn.Isp
-export interface Isp {
-	NameZh: string;
-	NameEn: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cdn.Isps
-export interface Isps {
-	Isp: Isp[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cdn.DescribeCdnRegionAndIspResponse
 export interface DescribeCdnRegionAndIspResponse {
-	RequestId: string;
-	Regions: Regions;
-	Isps: Isps;
+    /**
+     * 请求ID。
+     * @example `2387C335-932C-4E1E-862C-1C4363B6DE72`
+     */
+    RequestId: string;
+    Regions: {
+        /**
+         * 地域列表。
+         */
+        Region: {
+            /**
+             * 英文名称。
+             * @example `liaoning`
+             */
+            NameEn: string;
+            /**
+             * 中文名称。
+             * @example `辽宁省`
+             */
+            NameZh: string;
+        }[];
+    };
+    Isps: {
+        /**
+         * 运营商列表。
+         */
+        Isp: {
+            /**
+             * 英文名称。
+             * @example `unicom`
+             */
+            NameEn: string;
+            /**
+             * 中文名称。
+             * @example `联通`
+             */
+            NameZh: string;
+        }[];
+    };
 }
-

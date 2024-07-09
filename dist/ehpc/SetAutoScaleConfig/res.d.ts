@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ehpc.SetAutoScaleConfigResponse
 export interface SetAutoScaleConfigResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `04F0F334-13358736C-A1D7-6C044FE7****`
+     */
+    RequestId: string;
 }
-

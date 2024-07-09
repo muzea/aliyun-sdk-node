@@ -1,3 +1,0 @@
-interface WordSegmentResponse {
-}
-export { WordSegmentResponse };

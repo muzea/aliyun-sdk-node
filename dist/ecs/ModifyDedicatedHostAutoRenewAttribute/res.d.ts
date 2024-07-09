@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.ModifyDedicatedHostAutoRenewAttributeResponse
 export interface ModifyDedicatedHostAutoRenewAttributeResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `2A4EA075-CB5B-41B7-B0EB-70D339F6****`
+     */
+    RequestId: string;
 }
-

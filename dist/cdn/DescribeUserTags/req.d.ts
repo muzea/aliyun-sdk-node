@@ -1,5 +1,2 @@
-interface DescribeUserTagsRequest {
-    "RegionId"?: string;
-    "OwnerId"?: number;
+export interface DescribeUserTagsRequest {
 }
-export { DescribeUserTagsRequest };

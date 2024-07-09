@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ram.DeleteGroupResponse
 export interface DeleteGroupResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `FCF40AB5-881C-A0F9-334C-B0AD423AA69D`
+     */
+    RequestId: string;
 }
-

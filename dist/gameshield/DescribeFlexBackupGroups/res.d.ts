@@ -1,3 +1,0 @@
-interface DescribeFlexBackupGroupsResponse {
-}
-export { DescribeFlexBackupGroupsResponse };

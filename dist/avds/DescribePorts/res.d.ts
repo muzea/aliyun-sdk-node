@@ -1,3 +1,0 @@
-interface DescribePortsResponse {
-}
-export { DescribePortsResponse };

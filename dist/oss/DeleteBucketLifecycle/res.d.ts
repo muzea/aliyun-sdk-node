@@ -1,3 +1,1 @@
-interface DeleteBucketLifecycleResponse {
-}
-export { DeleteBucketLifecycleResponse };
+export type DeleteBucketLifecycleResponse = any;

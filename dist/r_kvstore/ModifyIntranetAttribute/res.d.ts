@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.ModifyIntranetAttributeResponse
 export interface ModifyIntranetAttributeResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `97AC8948-D7E4-457E-BE03-850CF04E****`
+     */
+    RequestId: string;
 }
-

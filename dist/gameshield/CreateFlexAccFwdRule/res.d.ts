@@ -1,3 +1,0 @@
-interface CreateFlexAccFwdRuleResponse {
-}
-export { CreateFlexAccFwdRuleResponse };

@@ -1,9 +1,17 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/drds.SetBackupPolicyResponse
 export interface SetBackupPolicyResponse {
-	RequestId: string;
-	Result: string;
-	Success: boolean;
+    /**
+     * 请求ID。
+     * @example `A3140FC7-B78B-4D8E-B0C8-926D28******`
+     */
+    RequestId: string;
+    /**
+     * 备份策略是否设置成功。
+     * @example `success`
+     */
+    Result: string;
+    /**
+     * 请求结果。
+     * @example `true`
+     */
+    Success: boolean;
 }
-

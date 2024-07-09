@@ -1,3 +1,0 @@
-interface GetLabNodeResponse {
-}
-export { GetLabNodeResponse };

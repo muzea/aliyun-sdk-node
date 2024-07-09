@@ -1,3 +1,0 @@
-interface DeleteHiTSDBInstanceMetaResponse {
-}
-export { DeleteHiTSDBInstanceMetaResponse };

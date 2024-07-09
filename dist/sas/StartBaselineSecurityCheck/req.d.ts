@@ -1,18 +1,26 @@
-interface StartBaselineSecurityCheckRequest {
-    "RegionId"?: string;
+export interface StartBaselineSecurityCheckRequest {
     /**
-    * 访问者源IP。
-    * @example `1.1.1.1`
-    */ "SourceIp"?: string;
+     * 访问源的IP地址。
+     * @example `106.11.XX.XX`
+     */
+    "SourceIp"?: string;
     /**
-    * 调用参数返回的内容的语言种类。支持中文（CN）和英文（EN）。
-    * @example `cn`
-    */ "Lang"?: string;
+     * 请求和接收消息的语言类型。取值包括：
+     * - **zh**：中文
+     * - **en**：英文
+     * @example `zh`
+     */
+    "Lang"?: string;
+    /**
+     * 检查的任务类型。取值包括：
+     * - **check**：执行检测
+     * - **verify**：执行验证
+     * @example `verify`
+     */
+    "Type": string;
+    /**
+     * 检查项ID。
+     * > 执行云产品配置检查任务，需要提供检查项的ID，该ID可调用[DescribeRiskItemType](~~DescribeRiskItemType~~)接口获取。
+     */
     "ItemIds"?: number[];
-    "Assets"?: string[];
-    /**
-    * 任务类型。
-    * @example `check`
-    */ "Type"?: string;
 }
-export { StartBaselineSecurityCheckRequest };

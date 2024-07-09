@@ -1,16 +1,12 @@
-interface DescribeLiveDomainFrameRateAndBitRateDataRequest {
+export interface DescribeLiveDomainFrameRateAndBitRateDataRequest {
     /**
-    * 地域。
-    * @example `cn-hangzhou`
-    */ "RegionId"?: string;
+     * 推流域名。
+     * @example `demo.aliyundoc.com`
+     */
+    "DomainName": string;
     /**
-    * 查询时间点，UTC格式，如：2019-02-21T08:00:00Z。
-    * @example `2019-02-21T08:00:00Z`
-    */ "QueryTime": string;
-    "OwnerId"?: number;
-    /**
-    * 您的域名。
-    * @example `example.com`
-    */ "DomainName": string;
+     * 查询时间。格式为：<i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z（UTC时间）。
+     * @example `2019-02-21T08:00:00Z`
+     */
+    "QueryTime": string;
 }
-export { DescribeLiveDomainFrameRateAndBitRateDataRequest };

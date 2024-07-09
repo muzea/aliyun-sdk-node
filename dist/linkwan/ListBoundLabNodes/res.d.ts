@@ -1,3 +1,0 @@
-interface ListBoundLabNodesResponse {
-}
-export { ListBoundLabNodesResponse };

@@ -1,6 +1,7 @@
-interface FlushInstanceRequest {
-    "RegionId"?: string;
+export interface FlushInstanceRequest {
+    /**
+     * 实例ID。
+     * @example `r-bp1zxszhcgatnx****`
+     */
     "InstanceId": string;
-    "OwnerId"?: number;
 }
-export { FlushInstanceRequest };

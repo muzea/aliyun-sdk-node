@@ -1,3 +1,0 @@
-interface PollForTaskResponse {
-}
-export { PollForTaskResponse };

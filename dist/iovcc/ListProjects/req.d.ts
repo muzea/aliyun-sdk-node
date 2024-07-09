@@ -1,4 +1,2 @@
-interface ListProjectsRequest {
-    "RegionId"?: string;
+export interface ListProjectsRequest {
 }
-export { ListProjectsRequest };

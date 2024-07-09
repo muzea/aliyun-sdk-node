@@ -1,67 +1,37 @@
-import { CompareFacesRequest } from "./CompareFaces/req";
-import { CompareFacesResponse } from "./CompareFaces/res";
-import { CreateAuthKeyRequest } from "./CreateAuthKey/req";
-import { CreateAuthKeyResponse } from "./CreateAuthKey/res";
-import { CreateRPSDKRequest } from "./CreateRPSDK/req";
-import { CreateRPSDKResponse } from "./CreateRPSDK/res";
-import { CreateVerifySDKRequest } from "./CreateVerifySDK/req";
-import { CreateVerifySDKResponse } from "./CreateVerifySDK/res";
-import { CreateVerifySettingRequest } from "./CreateVerifySetting/req";
-import { CreateVerifySettingResponse } from "./CreateVerifySetting/res";
-import { DescribeDeviceInfoRequest } from "./DescribeDeviceInfo/req";
-import { DescribeDeviceInfoResponse } from "./DescribeDeviceInfo/res";
-import { DescribeFaceUsageRequest } from "./DescribeFaceUsage/req";
-import { DescribeFaceUsageResponse } from "./DescribeFaceUsage/res";
-import { DescribeOssUploadTokenRequest } from "./DescribeOssUploadToken/req";
-import { DescribeOssUploadTokenResponse } from "./DescribeOssUploadToken/res";
-import { DescribeRPSDKRequest } from "./DescribeRPSDK/req";
-import { DescribeRPSDKResponse } from "./DescribeRPSDK/res";
-import { DescribeUploadInfoRequest } from "./DescribeUploadInfo/req";
-import { DescribeUploadInfoResponse } from "./DescribeUploadInfo/res";
-import { DescribeUserStatusRequest } from "./DescribeUserStatus/req";
-import { DescribeUserStatusResponse } from "./DescribeUserStatus/res";
-import { DescribeVerifyRecordsRequest } from "./DescribeVerifyRecords/req";
-import { DescribeVerifyRecordsResponse } from "./DescribeVerifyRecords/res";
-import { DescribeVerifyResultRequest } from "./DescribeVerifyResult/req";
-import { DescribeVerifyResultResponse } from "./DescribeVerifyResult/res";
-import { DescribeVerifySDKRequest } from "./DescribeVerifySDK/req";
-import { DescribeVerifySDKResponse } from "./DescribeVerifySDK/res";
-import { DescribeVerifySettingRequest } from "./DescribeVerifySetting/req";
-import { DescribeVerifySettingResponse } from "./DescribeVerifySetting/res";
-import { DescribeVerifyTokenRequest } from "./DescribeVerifyToken/req";
-import { DescribeVerifyTokenResponse } from "./DescribeVerifyToken/res";
-import { DescribeVerifyUsageRequest } from "./DescribeVerifyUsage/req";
-import { DescribeVerifyUsageResponse } from "./DescribeVerifyUsage/res";
-import { DetectFaceAttributesRequest } from "./DetectFaceAttributes/req";
-import { DetectFaceAttributesResponse } from "./DetectFaceAttributes/res";
-import { ModifyDeviceInfoRequest } from "./ModifyDeviceInfo/req";
-import { ModifyDeviceInfoResponse } from "./ModifyDeviceInfo/res";
-import { UpdateVerifySettingRequest } from "./UpdateVerifySetting/req";
-import { UpdateVerifySettingResponse } from "./UpdateVerifySetting/res";
-import { VerifyMaterialRequest } from "./VerifyMaterial/req";
-import { VerifyMaterialResponse } from "./VerifyMaterial/res";
+import { DescribeSmartVerifyRequest } from "./DescribeSmartVerify/req";
+import { DescribeSmartVerifyResponse } from "./DescribeSmartVerify/res";
+import { ElementSmartVerifyRequest } from "./ElementSmartVerify/req";
+import { ElementSmartVerifyResponse } from "./ElementSmartVerify/res";
+import { InitSmartVerifyRequest } from "./InitSmartVerify/req";
+import { InitSmartVerifyResponse } from "./InitSmartVerify/res";
+import { ContrastSmartVerifyRequest } from "./ContrastSmartVerify/req";
+import { ContrastSmartVerifyResponse } from "./ContrastSmartVerify/res";
+import { VerifyBankElementRequest } from "./VerifyBankElement/req";
+import { VerifyBankElementResponse } from "./VerifyBankElement/res";
+import { DescribeSmsDetailRequest } from "./DescribeSmsDetail/req";
+import { DescribeSmsDetailResponse } from "./DescribeSmsDetail/res";
+import { SendSmsRequest } from "./SendSms/req";
+import { SendSmsResponse } from "./SendSms/res";
 
 interface CLOUDAUTH {
-    CompareFaces(query: CompareFacesRequest): Promise<CompareFacesResponse>;
-    CreateAuthKey(query: CreateAuthKeyRequest): Promise<CreateAuthKeyResponse>;
-    CreateRPSDK(query: CreateRPSDKRequest): Promise<CreateRPSDKResponse>;
-    CreateVerifySDK(query: CreateVerifySDKRequest): Promise<CreateVerifySDKResponse>;
-    CreateVerifySetting(query: CreateVerifySettingRequest): Promise<CreateVerifySettingResponse>;
-    DescribeDeviceInfo(query: DescribeDeviceInfoRequest): Promise<DescribeDeviceInfoResponse>;
-    DescribeFaceUsage(query: DescribeFaceUsageRequest): Promise<DescribeFaceUsageResponse>;
-    DescribeOssUploadToken(query: DescribeOssUploadTokenRequest): Promise<DescribeOssUploadTokenResponse>;
-    DescribeRPSDK(query: DescribeRPSDKRequest): Promise<DescribeRPSDKResponse>;
-    DescribeUploadInfo(query: DescribeUploadInfoRequest): Promise<DescribeUploadInfoResponse>;
-    DescribeUserStatus(query: DescribeUserStatusRequest): Promise<DescribeUserStatusResponse>;
-    DescribeVerifyRecords(query: DescribeVerifyRecordsRequest): Promise<DescribeVerifyRecordsResponse>;
-    DescribeVerifyResult(query: DescribeVerifyResultRequest): Promise<DescribeVerifyResultResponse>;
-    DescribeVerifySDK(query: DescribeVerifySDKRequest): Promise<DescribeVerifySDKResponse>;
-    DescribeVerifySetting(query: DescribeVerifySettingRequest): Promise<DescribeVerifySettingResponse>;
-    DescribeVerifyToken(query: DescribeVerifyTokenRequest): Promise<DescribeVerifyTokenResponse>;
-    DescribeVerifyUsage(query: DescribeVerifyUsageRequest): Promise<DescribeVerifyUsageResponse>;
-    DetectFaceAttributes(query: DetectFaceAttributesRequest): Promise<DetectFaceAttributesResponse>;
-    ModifyDeviceInfo(query: ModifyDeviceInfoRequest): Promise<ModifyDeviceInfoResponse>;
-    UpdateVerifySetting(query: UpdateVerifySettingRequest): Promise<UpdateVerifySettingResponse>;
-    VerifyMaterial(query: VerifyMaterialRequest): Promise<VerifyMaterialResponse>;
+    /**
+     * 查询增强版认证结果
+     */
+    DescribeSmartVerify(query: DescribeSmartVerifyRequest): Promise<DescribeSmartVerifyResponse>;
+    ElementSmartVerify(query: ElementSmartVerifyRequest): Promise<ElementSmartVerifyResponse>;
+    /**
+     * 发起增强版认证请求
+     */
+    InitSmartVerify(query: InitSmartVerifyRequest): Promise<InitSmartVerifyResponse>;
+    ContrastSmartVerify(query: ContrastSmartVerifyRequest): Promise<ContrastSmartVerifyResponse>;
+    VerifyBankElement(query: VerifyBankElementRequest): Promise<VerifyBankElementResponse>;
+    /**
+     * 查询闪信发送明细
+     */
+    DescribeSmsDetail(query: DescribeSmsDetailRequest): Promise<DescribeSmsDetailResponse>;
+    /**
+     * 发起发送闪信请求。单次请求最多可向1000个手机号码发送同样内容的闪信
+     */
+    SendSms(query: SendSmsRequest): Promise<SendSmsResponse>;
 }
 export default CLOUDAUTH;

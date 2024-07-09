@@ -1,16 +1,1 @@
-{
-  "name": "ListVpc",
-  "protocol": "HTTPS|HTTP",
-  "method": "GET",
-  "path": "/pop/v5/vpc_list",
-  "timeout": 10000,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Query",
-      "required": false
-    }
-  },
-  "res": {}
-}
+{"path":"/pop/v5/vpc_list","methods":["get"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"read","deprecated":false,"systemTags":{"operationType":"list"},"responses":{"200":{"schema":{"type":"object","properties":{"Code":{"description":"接口状态或POP错误码","type":"integer","format":"int32","example":"200"},"Message":{"description":"附加信息","type":"string","example":"success"},"RequestId":{"description":"请求ID","type":"string","example":"b197-40ab-9155-7ca7"},"VpcList":{"type":"object","properties":{"VpcEntity":{"description":"VPC列表","type":"array","items":{"type":"object","properties":{"VpcId":{"description":"VPC ID","type":"string","example":"vpc-wz9pcq3jofczwpujq****"},"VpcName":{"description":"VPC名称","type":"string","example":"edas-default-vpc4"},"Expired":{"description":"VPC的状态是否可用\n- true：可用\n- false：不可用","type":"boolean","example":"false"},"UserId":{"description":"用户ID","type":"string","example":"edas_****_test@aliyun-****.com"},"EcsNum":{"description":"关联的ECS实例数量","type":"integer","format":"int32","example":"0"},"RegionId":{"description":"所在地域","type":"string","example":"cn-shenzhen"}}}}}}}}}},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"Code\\\": 200,\\n  \\\"Message\\\": \\\"success\\\",\\n  \\\"RequestId\\\": \\\"b197-40ab-9155-7ca7\\\",\\n  \\\"VpcList\\\": {\\n    \\\"VpcEntity\\\": [\\n      {\\n        \\\"VpcId\\\": \\\"vpc-wz9pcq3jofczwpujq****\\\",\\n        \\\"VpcName\\\": \\\"edas-default-vpc4\\\",\\n        \\\"Expired\\\": false,\\n        \\\"UserId\\\": \\\"edas_****_test@aliyun-****.com\\\",\\n        \\\"EcsNum\\\": 0,\\n        \\\"RegionId\\\": \\\"cn-shenzhen\\\"\\n      }\\n    ]\\n  }\\n}\",\"errorExample\":\"\"},{\"type\":\"xml\",\"example\":\"<Message>success</Message>\\n<VpcList>\\n    <VpcEntity>\\n        <VpcName>public_auto_test_vpc_</VpcName>\\n        <Expired>false</Expired>\\n        <RegionId>cn-shenzhen</RegionId>\\n        <UserId>edas_****_test@aliyun-****.com</UserId>\\n        <EcsNum>2</EcsNum>\\n        <VpcId>vpc-wz90fbqjyyvxznxpy****</VpcId>\\n    </VpcEntity>\\n    <VpcEntity>\\n        <VpcName>edas-default-vpc2</VpcName>\\n        <Expired>false</Expired>\\n        <RegionId>cn-shenzhen</RegionId>\\n        <UserId>edas_****_test@aliyun-****.com</UserId>\\n        <EcsNum>8</EcsNum>\\n        <VpcId>vpc-wz90iikh8t4kdlwlj****</VpcId>\\n    </VpcEntity>\\n</VpcList>\\n<Code>200</Code>\",\"errorExample\":\"\"}]","title":"获取 VPC 列表","summary":"获取VPC列表，该接口适用于ECS集群和K8s集群。","requestParamsDescription":"无请求参数。","responseParamsDescription":" ","extraInfo":" ","parameters":[]}

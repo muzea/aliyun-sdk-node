@@ -1,3 +1,0 @@
-interface CreateDomainConfigResponse {
-}
-export { CreateDomainConfigResponse };

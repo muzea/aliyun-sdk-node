@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/live.EffectCasterUrgentResponse
 export interface EffectCasterUrgentResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `CF60DB6A-7FD6-426E-9288-122CC1A52FA7`
+     */
+    RequestId: string;
 }
-

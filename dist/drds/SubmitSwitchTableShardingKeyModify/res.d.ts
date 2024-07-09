@@ -1,3 +1,0 @@
-interface SubmitSwitchTableShardingKeyModifyResponse {
-}
-export { SubmitSwitchTableShardingKeyModifyResponse };

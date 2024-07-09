@@ -1,3 +1,0 @@
-interface UpdateFlexAccTcpPortsResponse {
-}
-export { UpdateFlexAccTcpPortsResponse };

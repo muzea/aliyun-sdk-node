@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/polardb.CreateDBClusterEndpointResponse
 export interface CreateDBClusterEndpointResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `CD35F3-F3-44CA-AFFF-BAF869******`
+     */
+    RequestId: string;
 }
-

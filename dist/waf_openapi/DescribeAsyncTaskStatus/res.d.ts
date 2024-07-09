@@ -1,3 +1,0 @@
-interface DescribeAsyncTaskStatusResponse {
-}
-export { DescribeAsyncTaskStatusResponse };

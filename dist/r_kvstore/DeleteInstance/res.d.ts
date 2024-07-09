@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/r_kvstore.DeleteInstanceResponse
 export interface DeleteInstanceResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `5D622714-AEDD-4609-9167-F5DDD3D190D2`
+     */
+    RequestId: string;
 }
-

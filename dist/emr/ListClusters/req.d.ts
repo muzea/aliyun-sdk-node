@@ -1,41 +1,52 @@
-interface ListClustersRequest {
+export interface ListClustersRequest {
     /**
-    * 地域ID。
-    * @example `cn-hangzhou`
-    */ "RegionId": string;
-    "ClusterTypeList"?: string[];
+     * 区域ID。
+     * @example `cn-hangzhou`
+     */
+    "RegionId": string;
     /**
-    * 集群创建类型。可选值：
-    * - ON-DEMAND。
-    * - MANUAL。
-    * @example `ON-DEMAND`
-    */ "CreateType"?: string;
+     * 标记当前开始读取的位置，置空表示从头开始。
+     * @example `eyJlY21OZXh0VG9rZW4iOiIxIiwidGFpaGFvTmV4dFRva2VuIjoiNTYiLCJ0YWloYW9OZXh0VG9rZW5JbnQiOjU2LCJlY21OZXh0VG9rZW5JbnQiOjF9`
+     */
+    "NextToken"?: string;
     /**
-    * 机器类型。
-    * @example `ECS`
-    */ "MachineType"?: string;
-    "StatusList"?: string[];
+     * 一次获取的最大记录数。取值范围：1~100。
+     * @example `20`
+     */
+    "MaxResults"?: number;
     /**
-    * 是否倒序排列。
-    * @example `false`
-    */ "IsDesc"?: boolean;
+     * 集群名称。
+     * @example `emrtest`
+     */
+    "ClusterName"?: string;
     /**
-    * 托管类型，标识集群是全托管还是半托管。枚举值：
-    * - HALF_MANAGED。
-    * - FULLY_MANAGED。
-    * @example `HALF_MANAGED`
-    */ "DepositType"?: string;
+     * 资源组ID。
+     * @example `rg-acfmzabjyop****`
+     */
+    "ResourceGroupId"?: string;
     /**
-    * 分页分数，从1开始。
-    * @example `1`
-    */ "PageNumber"?: number;
+     * 集群ID列表。数组元素个数N的取值范围：1~100。
+     * @example `rg-acfmzabjyop****`
+     */
+    "ClusterIds"?: string[];
     /**
-    * 分页大小。
-    * @example `10`
-    */ "PageSize"?: number;
+     * 集群类型列表。数组元素个数N的取值范围：1~100。
+     * @example `["c-b933c5aac8fe****"]`
+     */
+    "ClusterTypes"?: string[];
     /**
-    * 是否查询默认状态为初始化中、等待构建、空闲、运行中、释放中、创建失败的集群。
-    * @example `true`
-    */ "DefaultStatus"?: boolean;
+     * 集群状态数组。数组元素个数N的取值范围：1~100。
+     * @example `["HADOOP"]`
+     */
+    "ClusterStates"?: string[];
+    /**
+     * 付费类型。数据元素个数N的取值范围：1~2。
+     * @example `["ECS"]`
+     */
+    "PaymentTypes"?: string[];
+    /**
+     * 标签列表。数组元素个数N取值范围：1~20。
+     * @example `["PayAsYouGo"]`
+     */
+    "Tags"?: any[];
 }
-export { ListClustersRequest };

@@ -1,18 +1,15 @@
-interface DeleteSnapshotRequest {
-    "RegionId"?: string;
+export interface DeleteSnapshotRequest {
     /**
-    * 快照 ID。
-    * @example `s-snapshotid1`
-    */ "SnapshotId": string;
-    "SourceRegionId"?: string;
+     * 快照ID。
+     * @example `s-bp1c0doj0taqyzzl****`
+     */
+    "SnapshotId": string;
     /**
-    * RAM用户的虚拟账号ID。
-    * @example `155780923770`
-    */ "OwnerId"?: number;
-    /**
-    * 是否强制删除有磁盘关联的快照。
-    * > 删除后该磁盘无法重新初始化。
-    * @example `false`
-    */ "Force"?: boolean;
+     * 是否强制删除已经被用于创建云盘的快照。取值范围：
+     * - true：强制删除。强制删除后该磁盘无法重新初始化。
+     * - false：不强制删除。
+     * 默认值：false
+     * @example `false`
+     */
+    "Force"?: boolean;
 }
-export { DeleteSnapshotRequest };

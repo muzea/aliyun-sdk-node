@@ -1,6 +1,7 @@
-interface ListPrivilegesOfUserRequest {
-    "RegionId"?: string;
+export interface ListPrivilegesOfUserRequest {
+    /**
+     * 实例ID。
+     * @example `ccc-test`
+     */
     "InstanceId": string;
-    "UserId"?: string;
 }
-export { ListPrivilegesOfUserRequest };

@@ -1,3 +1,0 @@
-interface CreateCcCustomedRuleResponse {
-}
-export { CreateCcCustomedRuleResponse };

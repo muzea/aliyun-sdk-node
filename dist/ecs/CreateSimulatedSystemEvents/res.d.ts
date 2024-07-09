@@ -1,13 +1,13 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.EventIdSet
-export interface EventIdSet {
-	EventId: string[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/ecs.CreateSimulatedSystemEventsResponse
 export interface CreateSimulatedSystemEventsResponse {
-	RequestId: string;
-	EventIdSet: EventIdSet;
+    /**
+     * 请求ID。
+     * @example `473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E`
+     */
+    RequestId: string;
+    EventIdSet: {
+        /**
+         * 模拟事件ID（EventId）列表。
+         */
+        EventId: string[];
+    };
 }
-

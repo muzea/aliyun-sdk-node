@@ -1,3 +1,0 @@
-interface DisableDialogFlowResponse {
-}
-export { DisableDialogFlowResponse };

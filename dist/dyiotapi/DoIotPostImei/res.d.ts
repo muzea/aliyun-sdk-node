@@ -1,3 +1,0 @@
-interface DoIotPostImeiResponse {
-}
-export { DoIotPostImeiResponse };

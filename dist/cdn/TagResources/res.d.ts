@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/cdn.TagResourcesResponse
 export interface TagResourcesResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `97C68796-EB7F-4D41-9D5B-12B909D76508`
+     */
+    RequestId: string;
 }
-

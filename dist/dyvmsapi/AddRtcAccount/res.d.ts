@@ -1,3 +1,0 @@
-interface AddRtcAccountResponse {
-}
-export { AddRtcAccountResponse };

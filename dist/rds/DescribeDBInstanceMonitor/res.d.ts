@@ -1,8 +1,12 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/rds.DescribeDBInstanceMonitorResponse
 export interface DescribeDBInstanceMonitorResponse {
-	RequestId: string;
-	Period: string;
+    /**
+     * 监控的采集数据间隔，单位：秒。
+     * @example `60`
+     */
+    Period: string;
+    /**
+     * 请求ID。
+     * @example `30829FD4-1A84-4C2A-A625-2EADECB95CA3`
+     */
+    RequestId: string;
 }
-

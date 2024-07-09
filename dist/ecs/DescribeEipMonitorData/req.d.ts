@@ -1,9 +1,7 @@
-interface DescribeEipMonitorDataRequest {
+export interface DescribeEipMonitorDataRequest {
     "RegionId"?: string;
+    "AllocationId": string;
     "StartTime": string;
     "EndTime": string;
-    "OwnerId"?: number;
-    "AllocationId": string;
     "Period"?: number;
 }
-export { DescribeEipMonitorDataRequest };

@@ -1,23 +1,22 @@
-interface DescribeAntChainCertificateApplicationsRequest {
+export interface DescribeAntChainCertificateApplicationsRequest {
     /**
-    * 地域ID
-    * @example `cn-hangzhou`
-    */ "RegionId"?: string;
+     * 区块链ID
+     * @example `1q8B5R9p`
+     */
+    "AntChainId": string;
     /**
-    * 状态
-    * @example `1`
-    */ "Status": string;
+     * 状态
+     * @example `1`
+     */
+    "Status": string;
     /**
-    * 每页数量
-    * @example `20`
-    */ "PageSize": number;
+     * 每页数量
+     * @example `20`
+     */
+    "PageSize": number;
     /**
-    * 页面编号
-    * @example `1`
-    */ "PageNumber": number;
-    /**
-    * 区块链ID
-    * @example `1q8B5R9p`
-    */ "AntChainId": string;
+     * 页面编号
+     * @example `1`
+     */
+    "PageNumber": number;
 }
-export { DescribeAntChainCertificateApplicationsRequest };

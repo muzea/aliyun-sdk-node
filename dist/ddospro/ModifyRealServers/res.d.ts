@@ -1,3 +1,0 @@
-interface ModifyRealServersResponse {
-}
-export { ModifyRealServersResponse };

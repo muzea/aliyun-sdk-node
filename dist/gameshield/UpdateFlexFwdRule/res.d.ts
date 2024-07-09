@@ -1,3 +1,0 @@
-interface UpdateFlexFwdRuleResponse {
-}
-export { UpdateFlexFwdRuleResponse };

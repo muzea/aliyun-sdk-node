@@ -1,3 +1,0 @@
-interface GetWorkitemByIdResponse {
-}
-export { GetWorkitemByIdResponse };

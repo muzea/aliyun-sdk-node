@@ -1,7 +1,7 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/alidns.SetGtmAccessModeResponse
 export interface SetGtmAccessModeResponse {
-	RequestId: string;
+    /**
+     * 请求ID。
+     * @example `29D0F8F8-5499-4F6C-9FDC-1EE13BF55925`
+     */
+    RequestId: string;
 }
-

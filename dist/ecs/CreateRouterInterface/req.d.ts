@@ -1,4 +1,4 @@
-interface CreateRouterInterfaceRequest {
+export interface CreateRouterInterfaceRequest {
     "RegionId": string;
     "Role": string;
     "OppositeRegionId": string;
@@ -20,7 +20,5 @@ interface CreateRouterInterfaceRequest {
     "AutoPay"?: boolean;
     "PricingCycle"?: string;
     "ClientToken"?: string;
-    "OwnerId"?: number;
     "UserCidr"?: string;
 }
-export { CreateRouterInterfaceRequest };

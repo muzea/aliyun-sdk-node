@@ -1,19 +1,17 @@
-interface DescribeAntChainAccountsRequest {
+export interface DescribeAntChainAccountsRequest {
     /**
-    * 地域ID
-    * @example `cn-hangzhou`
-    */ "RegionId"?: string;
+     * 每页数量
+     * @example `10`
+     */
+    "PageSize": number;
     /**
-    * 区块链ID
-    * @example `pYogqb9v`
-    */ "AntChainId": string;
+     * 页面编号
+     * @example `1`
+     */
+    "PageNumber"?: number;
     /**
-    * 页面编号
-    * @example `1`
-    */ "PageNumber"?: number;
-    /**
-    * 每页数量
-    * @example `10`
-    */ "PageSize": number;
+     * 区块链ID
+     * @example `pYogqb9v`
+     */
+    "AntChainId": string;
 }
-export { DescribeAntChainAccountsRequest };

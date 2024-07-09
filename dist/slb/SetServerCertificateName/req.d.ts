@@ -1,20 +1,17 @@
-interface SetServerCertificateNameRequest {
+export interface SetServerCertificateNameRequest {
     /**
-    * 负载均衡实例的地域。
-    * 您可以通过调用[DescribeRegions](~~27584~~)接口查询地域ID。
-    * @example `cn-hangzhou`
-    */ "RegionId": string;
+     * 传统型负载均衡实例的地域。您可以通过调用[DescribeRegions](~~2401682~~) 接口查询地域ID。
+     * @example `cn-hangzhou`
+     */
+    "RegionId": string;
     /**
-    * 服务器证书ID。
-    * @example `139a00604ad-cn-east-hangzhou-01`
-    */ "ServerCertificateId": string;
+     * 服务器证书ID。
+     * @example `	123157xxxxxxx_166f8204689_1714763408_7099*******`
+     */
+    "ServerCertificateId": string;
     /**
-    * 服务器证书名称。
-    * 名称长度为 1~80 个英文或中文字符，必须以大小字母或中文开头，可包含数字，点号（.），下划线（_）和短横线（-）。
-    * @example `abc`
-    */ "ServerCertificateName": string;
-    "OwnerId"?: number;
-    "access_key_id"?: string;
-    "Tags"?: string;
+     * 要上传的非阿里云签发的服务器证书的名称。长度限制为1~80个字符，允许包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）和星号（*）。
+     * @example `mycert01`
+     */
+    "ServerCertificateName": string;
 }
-export { SetServerCertificateNameRequest };

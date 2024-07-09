@@ -1,0 +1,1 @@
+export type GroupUpdateNameResponse = any;

@@ -1,53 +1,54 @@
-// this file was automatically generated, DO NOT EDIT
-// structs
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/scdn.HttpCodeDataModule
-export interface HttpCodeDataModule {
-	Code: string;
-	Proportion: string;
-	Count: string;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/scdn.HttpCodeDataPerInterval
-export interface HttpCodeDataPerInterval {
-	HttpCodeDataModule: HttpCodeDataModule[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/scdn.DataModule
-export interface DataModule {
-	HttpAccValue: string;
-	BpsValue: string;
-	HttpQpsValue: string;
-	ByteHitRate: string;
-	HttpsTrafficValue: string;
-	AccValue: string;
-	Value: string;
-	TrafficValue: string;
-	TimeStamp: string;
-	QpsValue: string;
-	ReqHitRate: string;
-	HttpBpsValue: string;
-	HttpsQpsValue: string;
-	HttpsBpsValue: string;
-	HttpTrafficValue: string;
-	HttpsAccValue: string;
-	OriginBpsValue: string;
-	HttpsOriginBpsValue: string;
-	HttpOriginBpsValue: string;
-	HttpCodeDataPerInterval: HttpCodeDataPerInterval;
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/scdn.OriginBpsDataPerInterval
-export interface OriginBpsDataPerInterval {
-	DataModule: DataModule[];
-}
-
-// struct2ts:github.com/aliyun/alibaba-cloud-sdk-go/services/scdn.DescribeScdnDomainOriginBpsDataResponse
 export interface DescribeScdnDomainOriginBpsDataResponse {
-	RequestId: string;
-	DomainName: string;
-	StartTime: string;
-	EndTime: string;
-	DataInterval: string;
-	OriginBpsDataPerInterval: OriginBpsDataPerInterval;
+    /**
+     * 请求ID。
+     * @example `7CBCD6AD-B016-42E5-AE0B-B3731DE8F755`
+     */
+    RequestId: string;
+    /**
+     * 安全加速域名。
+     * @example `example.com`
+     */
+    DomainName: string;
+    /**
+     * 开始时间。
+     * @example `2017-12-10T20:00:00Z`
+     */
+    StartTime: string;
+    /**
+     * 结束时间。
+     * @example `2017-12-10T21:00:00Z`
+     */
+    EndTime: string;
+    /**
+     * 每条记录的时间间隔，以秒为单位。
+     * @example `300`
+     */
+    DataInterval: string;
+    OriginBpsDataPerInterval: {
+        /**
+         * 每个时间间隔的回源带宽数据。
+         */
+        DataModule: {
+            /**
+             * 时间片起始时刻。
+             * @example `2017-12-10T21:00:00Z`
+             */
+            TimeStamp: string;
+            /**
+             * 回源带宽数据。
+             * @example `200`
+             */
+            OriginBpsValue: string;
+            /**
+             * HTTP回源带宽数据。
+             * @example `100`
+             */
+            HttpOriginBpsValue: string;
+            /**
+             * HTTPS回源带宽数据。
+             * @example `100`
+             */
+            HttpsOriginBpsValue: string;
+        }[];
+    };
 }
-

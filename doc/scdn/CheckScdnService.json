@@ -1,16 +1,1 @@
-{
-  "name": "CheckScdnService",
-  "protocol": "HTTP|HTTPS",
-  "method": "POST|GET",
-  "path": "/",
-  "timeout": null,
-  "reqFormat": {
-    "RegionId": {
-      "name": "RegionId",
-      "type": "String",
-      "position": "Query",
-      "required": false
-    }
-  },
-  "res": {}
-}
+{"methods":["get","post"],"schemes":["http","https"],"security":[{"AK":[]}],"operationType":"read","systemTags":{},"parameters":[],"responses":{"200":{"schema":{"type":"object","properties":{"InDebt":{"description":"是否欠费。","type":"boolean","example":"false"},"OnService":{"description":"服务是否可用（不欠费）。","type":"boolean","example":"true"},"RequestId":{"description":"请求ID。","type":"string","example":"4F51E9C3-728F-4E35-952D-0ED87A06A8A1"},"InDebtOverdue":{"description":"是否欠费超期。","type":"boolean","example":"false"},"Enabled":{"description":"是否已开通SCDN服务。","type":"boolean","example":"true"}}}}},"errorCodes":{"400":[{"errorCode":"UnsupportedParameter","errorMessage":"There is unsupported parameters"}]},"responseDemo":"[{\"type\":\"json\",\"example\":\"{\\n  \\\"InDebt\\\": false,\\n  \\\"OnService\\\": true,\\n  \\\"RequestId\\\": \\\"4F51E9C3-728F-4E35-952D-0ED87A06A8A1\\\",\\n  \\\"InDebtOverdue\\\": false,\\n  \\\"Enabled\\\": true\\n}\",\"errorExample\":\"\"},{\"type\":\"xml\",\"example\":\"<CheckScdnServiceResponse>\\r\\n    <Enabled>true</Enabled>\\r\\n    <InDebtOverdue>false</InDebtOverdue>\\r\\n    <InDebt>false</InDebt>\\r\\n    <OnService>true</OnService>\\r\\n    <RequestId>4F51E9C3-728F-4E35-952D-0ED87A06A8A1</RequestId>\\r\\n</CheckScdnServiceResponse>\",\"errorExample\":\"\"}]","title":"查询SCDN是否开通或欠费","summary":"查询SCDN是否开通，是否欠费。","requestParamsDescription":" ","responseParamsDescription":" ","extraInfo":" "}

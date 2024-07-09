@@ -1,3 +1,0 @@
-interface DoIotUserStopResumeResponse {
-}
-export { DoIotUserStopResumeResponse };

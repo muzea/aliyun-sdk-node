@@ -1,4 +1,2 @@
-interface DescribeTasksRequest {
-    "RegionId"?: string;
+export interface DescribeTasksRequest {
 }
-export { DescribeTasksRequest };
