@@ -15,7 +15,7 @@ dependencies:
     specifier: ^1.4.8
     version: 1.4.8
   got:
-    specifier: '11'
+    specifier: '>=11.8.5'
     version: 11.8.6
 
 devDependencies:

@@ -1,6 +1,6 @@
 {
   "name": "@woodenfish/aliyun-sdk-node",
-  "version": "0.0.0-alpha3",
+  "version": "0.0.1",
   "main": "dist/index.js",
   "license": "MIT",
   "files": [
@@ -13,7 +13,7 @@
     "@alicloud/openapi-client": "^0.4.10",
     "@alicloud/openapi-util": "^0.3.2",
     "@alicloud/tea-util": "^1.4.8",
-    "got": "11"
+    "got": ">=11.8.5"
   },
   "devDependencies": {
     "@types/got": "^9.6.7",
