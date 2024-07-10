@@ -1,5 +1,6 @@
 {
   "name": "@woodenfish/aliyun-sdk-node",
+  "repository": "https://github.com/muzea/aliyun-sdk-node",
   "version": "0.0.1",
   "main": "dist/index.js",
   "license": "MIT",
